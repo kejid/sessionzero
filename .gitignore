@@ -1,0 +1,7 @@
+node_modules/
+.mcp.json
+.claude/
+package.json
+package-lock.json
+data/images.json
+data/reviews-research.md

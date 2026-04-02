@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTRPG Showcase 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Setup Overlay -->
+<div id="setup-overlay" class="setup-overlay">
+    <div class="setup-card">
+        <h1 data-i18n="setup_title">TTRPG Showcase</h1>
+        <p data-i18n="setup_subtitle">Настрой группу перед началом. Каждый игрок сможет голосовать за системы, которые хочет попробовать.</p>
+        <div class="setup-field">
+            <label data-i18n="setup_players_label">Количество игроков</label>
+            <select id="setup-count" onchange="updateSetupFields()">
+                <option value="2">2 игрока</option>
+                <option value="3">3 игрока</option>
+                <option value="4" selected>4 игрока</option>
+                <option value="5">5 игроков</option>
+                <option value="6">6 игроков</option>
+                <option value="7">7 игроков</option>
+                <option value="8">8 игроков</option>
+            </select>
+        </div>
+        <div class="setup-field">
+            <label data-i18n="setup_names_label">Имена</label>
+            <div id="setup-players" class="setup-players-list"></div>
+        </div>
+        <button class="setup-start-btn" id="setup-start" onclick="startApp()" data-i18n="setup_start">Начать</button>
+        <button class="setup-start-btn secondary" onclick="skipSetup()" data-i18n="setup_skip">Просто посмотреть без голосования</button>
+    </div>
+</div>
+
+<!-- Presentation exit button -->
+<button class="pres-exit" onclick="togglePresentation()" data-i18n="pres_menu"><i data-lucide="panel-left-open"></i> Меню</button>
+
+<!-- Presentation nav arrows -->
+<div class="pres-nav">
+    <button onclick="prevSystem()" title="Предыдущая (←)"><i data-lucide="chevron-left"></i></button>
+    <button onclick="nextSystem()" title="Следующая (→)"><i data-lucide="chevron-right"></i></button>
+</div>
+
+<button class="hamburger" onclick="toggleSidebar()"><i data-lucide="menu"></i></button>
+<div class="sidebar-backdrop" onclick="toggleSidebar()"></div>
+
+<nav class="sidebar">
+    <div class="sidebar-header" onclick="showPage('results')" style="cursor:pointer;">
+        <h1 data-i18n="nav_title">TTRPG SHOWCASE</h1>
+        <p data-i18n="nav_subtitle">Голосуй за системы, в которые хочешь сыграть</p>
+    </div>
+
+    <button class="results-btn" onclick="showPage('results')">
+        <i data-lucide="trophy"></i> <span data-i18n="btn_results">РЕЗУЛЬТАТЫ ГОЛОСОВАНИЯ</span>
+    </button>
+    <button class="catalog-btn" onclick="showPage('results')">
+        <i data-lucide="layout-grid"></i> <span data-i18n="btn_catalog">КАТАЛОГ СИСТЕМ</span>
+    </button>
+    <button class="pres-toggle" onclick="togglePresentation()">
+        <i data-lucide="presentation"></i> <span data-i18n="btn_presentation">Режим презентации</span>
+    </button>
+    <button class="reset-btn-sidebar reset-btn" onclick="resetPlayers()">
+        <i data-lucide="rotate-ccw"></i> <span data-i18n="btn_reset">Сбросить игроков и голоса</span>
+    </button>
+    <button class="setup-players-btn" onclick="enableVoting()">
+        <i data-lucide="users"></i> <span data-i18n="btn_setup_players">Настроить игроков и голосование</span>
+    </button>
+    <button class="pres-toggle" onclick="setLang(currentLang === 'ru' ? 'en' : 'ru')">
+        <i data-lucide="languages"></i> <span data-i18n="btn_lang">EN / RU</span>
+    </button>
+    <button class="pres-toggle" onclick="openSystemSelector()">
+        <i data-lucide="list-checks"></i> <span data-i18n="btn_manage_systems">Управление списком</span>
+    </button>
+
+    <div class="nav-group" id="nav-group-osr">
+        <div class="nav-group-title" data-i18n="nav_group_osr">The Odd & OSR</div>
+    </div>
+
+    <div class="nav-group" id="nav-group-fl">
+        <div class="nav-group-title" data-i18n="nav_group_fl">Free League (YZE)</div>
+    </div>
+
+    <div class="nav-group" id="nav-group-narrative">
+        <div class="nav-group-title" data-i18n="nav_group_narrative">Narrative & Surreal</div>
+    </div>
+
+    <div class="nav-group" id="nav-group-tactical">
+        <div class="nav-group-title" data-i18n="nav_group_tactical">Tactical & Modern</div>
+    </div>
+
+    <div class="nav-group" id="custom-nav-group" style="display:none;">
+        <div class="nav-group-title" data-i18n="nav_group_custom">Мои системы</div>
+    </div>
+
+    <div class="sidebar-bottom">
+        <button class="pres-toggle" onclick="openEditor()">
+            <i data-lucide="plus-circle"></i> <span data-i18n="btn_add_system">Добавить систему</span>
+        </button>
+    </div>
+</nav>
+
+<!-- Editor Overlay -->
+<div id="editor-overlay" class="editor-overlay hidden">
+    <div class="editor-card">
+        <h1 id="editor-heading" data-i18n="editor_title">Новая система</h1>
+        <input type="hidden" id="editor-id" value="">
+        <div class="setup-field">
+            <label data-i18n="editor_name">Название</label>
+            <input type="text" id="editor-name" placeholder="">
+        </div>
+        <div class="setup-field">
+            <label data-i18n="editor_publisher">Издатель</label>
+            <input type="text" id="editor-publisher" placeholder="">
+        </div>
+        <div class="setup-field">
+            <label data-i18n="editor_tagline">Тэглайн</label>
+            <input type="text" id="editor-tagline" placeholder="">
+        </div>
+        <div class="setup-field">
+            <label data-i18n="editor_description">Описание</label>
+            <textarea id="editor-description" class="editor-textarea"></textarea>
+        </div>
+        <div class="setup-field">
+            <label data-i18n="editor_setting">Сеттинг</label>
+            <textarea id="editor-setting" class="editor-textarea"></textarea>
+        </div>
+        <div class="setup-field">
+            <label data-i18n="editor_vignette">Пример за столом</label>
+            <textarea id="editor-vignette" class="editor-textarea"></textarea>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+            <div class="setup-field">
+                <label data-i18n="editor_dice">Кубики</label>
+                <input type="text" id="editor-dice" placeholder="d20 + d6">
+            </div>
+            <div class="setup-field">
+                <label data-i18n="editor_players">Игроки</label>
+                <input type="text" id="editor-players" placeholder="3-5">
+            </div>
+            <div class="setup-field">
+                <label data-i18n="editor_prep">Время на преп</label>
+                <input type="text" id="editor-prep" placeholder="~20 min">
+            </div>
+            <div class="setup-field">
+                <label data-i18n="editor_complexity">Сложность</label>
+                <select id="editor-complexity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3" selected>3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        </div>
+        <div class="setup-field">
+            <label data-i18n="editor_image">URL изображения</label>
+            <input type="text" id="editor-image" placeholder="https://...">
+        </div>
+        <div class="setup-field">
+            <label data-i18n="editor_tags">Плейстайл</label>
+            <div class="editor-tags-grid">
+                <label class="editor-tag-check"><input type="checkbox" value="exploration"> <span data-i18n="tag_exploration">Исследование</span></label>
+                <label class="editor-tag-check"><input type="checkbox" value="combat"> <span data-i18n="tag_combat">Боёвка</span></label>
+                <label class="editor-tag-check"><input type="checkbox" value="narrative"> <span data-i18n="tag_narrative">Нарратив</span></label>
+                <label class="editor-tag-check"><input type="checkbox" value="horror"> <span data-i18n="tag_horror">Хоррор</span></label>
+                <label class="editor-tag-check"><input type="checkbox" value="social"> <span data-i18n="tag_social">Социалка</span></label>
+                <label class="editor-tag-check"><input type="checkbox" value="mystery"> <span data-i18n="tag_mystery">Детектив</span></label>
+                <label class="editor-tag-check"><input type="checkbox" value="survival"> <span data-i18n="tag_survival">Выживание</span></label>
+                <label class="editor-tag-check"><input type="checkbox" value="tactical"> <span data-i18n="tag_tactical">Тактика</span></label>
+                <label class="editor-tag-check"><input type="checkbox" value="sandbox"> <span data-i18n="tag_sandbox">Песочница</span></label>
+                <label class="editor-tag-check"><input type="checkbox" value="worldbuilding"> <span data-i18n="tag_worldbuilding">Мироздание</span></label>
+            </div>
+        </div>
+        <div class="editor-btn-row">
+            <button class="setup-start-btn" onclick="saveCustomSystem()" data-i18n="editor_save">Сохранить</button>
+            <button class="setup-start-btn secondary" onclick="closeEditor()" data-i18n="editor_cancel">Отмена</button>
+        </div>
+        <button class="setup-start-btn danger" id="editor-delete-btn" onclick="deleteCustomSystemFromEditor()" style="display:none;" data-i18n="editor_delete">Удалить</button>
+    </div>
+</div>
+
+<!-- System Selector Modal -->
+<div id="sys-selector-overlay" class="sys-selector-overlay hidden">
+    <div class="sys-selector-card">
+        <h1 data-i18n="sys_selector_title">Управление списком</h1>
+        <p data-i18n="sys_selector_desc">Отметьте системы, которые хотите показать. Скрытые системы не отображаются в навигации и результатах.</p>
+        <div class="sys-selector-actions">
+            <button onclick="sysSelectAll()" data-i18n="sys_selector_all">Выбрать все</button>
+            <button onclick="sysDeselectAll()" data-i18n="sys_selector_none">Снять все</button>
+        </div>
+        <div id="sys-selector-list"></div>
+        <div class="sys-selector-footer">
+            <button class="setup-start-btn" onclick="saveSystemSelection()" data-i18n="sys_selector_save">Применить</button>
+            <button class="setup-start-btn secondary" onclick="closeSystemSelector()" data-i18n="sys_selector_cancel">Отмена</button>
+        </div>
+    </div>
+</div>
+
+<main class="main">
+
+<!-- RESULTS -->
+<section id="results" class="system-page active">
+    <div class="results-header">
+        <span class="section-title" id="results-title">Обзор систем</span>
+        <div class="view-toggle">
+            <button class="view-toggle-btn active" data-view="cards" onclick="setView('cards')"><i data-lucide="layout-grid"></i></button>
+            <button class="view-toggle-btn" data-view="list" onclick="setView('list')"><i data-lucide="list"></i></button>
+        </div>
+    </div>
+    <p class="tagline" id="results-subtitle">Нажми на карточку, чтобы узнать больше о системе.</p>
+    <div id="results-grid" class="results-grid"></div>
+</section>
+
+<div id="systems-container"></div>
+
+</main>
+
+<script src="i18n.js"></script>
+<script src="data/systems.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

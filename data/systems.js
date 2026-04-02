@@ -1,0 +1,1009 @@
+const SYSTEMS_JSON = {
+  "into-the-odd": {
+    "name": "Into the Odd",
+    "publisher": "Chris McDowell / Free League",
+    "tagline": "«Выживите в индустриальном кошмаре, где золото — единственный закон».",
+    "tagline_en": "\"Survive an industrial nightmare where gold is the only law.\"",
+    "dice": "d20 + d6",
+    "players": "2–5",
+    "prep": "~10 мин",
+    "complexity": 1,
+    "foundryStatus": "Community",
+    "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/into_the_odd-1440x720.jpg",
+    "description": "Ультра-минималистичная OSR-игра (Old School Renaissance — стиль, вдохновлённый ранними редакциями D&D), прародитель целого жанра. Правила — 48 страниц. Создание персонажа — 2 минуты. Три характеристики (Сила, Ловкость, Воля), горстка HP и странный предмет в кармане. Всё. Вы готовы умереть в подземелье под Бастионом — гигантским индустриальным мегаполисом, полным тайн, коллекторов и живых лабиринтов.",
+    "description_en": "An ultra-minimalist OSR game (Old School Renaissance — a style inspired by early editions of D&D), the progenitor of an entire genre. Rules — 48 pages. Character creation — 2 minutes. Three stats (Strength, Dexterity, Willpower), a handful of HP, and a strange item in your pocket. That's it. You're ready to die in the tunnels beneath Bastion — a vast industrial megalopolis full of secrets, sewers, and living labyrinths.",
+    "setting": "Бастион — сюрреалистичный город-государство, напоминающий викторианский Лондон, скрещённый с кошмарами. Под ним — Подземное Море, полное Арканумов (странных артефактов с непредсказуемыми свойствами). За городом — Железная Пустошь и Золотая Земля. Мир не объясняет себя. Он просто существует и ждёт, пока вы его исследуете.",
+    "setting_en": "Bastion — a surreal city-state resembling Victorian London crossed with nightmares. Beneath it lies the Underground Sea, teeming with Arcana (strange artifacts with unpredictable properties). Beyond the city — the Iron Wasteland and the Golden Land. The world doesn't explain itself. It simply exists and waits for you to explore it.",
+    "vignette": "Вы спускаетесь в коллектор под Бастионом. Впереди — гул. Ваш Арканум, стеклянный глаз, начинает вибрировать. Следопыт говорит: «Назад.» Но вы уже видите золото. Тварь бьёт — 1d8 урона. 4 — ваши 3 HP слетают, оставшийся 1 урон идёт в Силу. Спасбросок (бросок кубика на удачу, чтобы избежать беды) Силы... провал. Шрам: ваша левая рука теперь светится в темноте.",
+    "vignette_en": "You descend into the sewers beneath Bastion. Ahead — a hum. Your Arcanum, a glass eye, starts vibrating. The scout says: 'Go back.' But you've already spotted the gold. The creature strikes — 1d8 damage. 4 — your 3 HP are gone, the remaining 1 damage goes to Strength. Save (a dice roll to avoid disaster) against Strength... failed. Scar: your left hand now glows in the dark.",
+    "playstyleTags": ["explore", "survival", "sandbox"],
+    "mechanics": [
+      { "icon": "zap", "title": "Без бросков на попадание", "text": "Атаки всегда попадают. Кубик определяет только урон. Бои невероятно быстрые — решения важнее бросков." },
+      { "icon": "gem", "title": "Арканумы", "text": "Магии нет. Есть странные артефакты — каждый уникален, непредсказуем и может убить владельца быстрее врагов." },
+      { "icon": "skull", "title": "HP = Hit Protection", "text": "Когда HP на нуле, урон идет в Силу. Выживание при 0 Силы дарит Шрам — постоянное изменение персонажа." },
+      { "icon": "feather", "title": "Минимализм", "text": "Нет классов, нет уровней, нет навыков. Персонаж определяется тем, что он несёт и что пережил." }
+    ],
+    "mechanics_en": [
+      { "icon": "zap", "title": "No attack rolls", "text": "Attacks always hit. The die only determines damage. Combats are incredibly fast — decisions matter more than dice." },
+      { "icon": "gem", "title": "Arcana", "text": "No magic. Instead, strange artifacts — each unique, unpredictable, and capable of killing its owner faster than enemies." },
+      { "icon": "skull", "title": "HP = Hit Protection", "text": "When HP hits zero, damage goes to Strength. Surviving at 0 Strength earns a Scar — a permanent change to the character." },
+      { "icon": "feather", "title": "Minimalism", "text": "No classes, no levels, no skills. A character is defined by what they carry and what they've survived." }
+    ],
+    "quotes": [
+      { "text": "Into the Odd is the game that made me realize I don't need 300 pages of rules to have the best session of my life. We played for 4 hours and I prepped for 10 minutes.", "author": "u/bastioneer_23, r/osr" },
+      { "text": "The \"attacks always hit\" rule sounds weird until you play it. Then you realize combat becomes about positioning, retreating, and creative problem solving instead of \"I roll to hit... miss. Next.\"", "author": "u/dungeon_owl, r/rpg" }
+    ],
+    "gallery": [
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/ITO_standing-TM-1200x1200.jpg", "cap": "Обложка книги" }
+    ],
+    "gallery_en": [
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/ITO_standing-TM-1200x1200.jpg", "cap": "Book cover" }
+    ],
+    "resources": [
+      { "type": "link", "name": "Официальный сайт", "url": "https://freeleaguepublishing.com/games/into-the-odd/", "fmt": "Web" },
+      { "type": "sheet", "name": "Лист персонажа (fan)", "url": "https://gm-lazarus.itch.io/into-the-odd-character-sheet", "fmt": "PDF" }
+    ],
+    "resources_en": [
+      { "type": "link", "name": "Official website", "url": "https://freeleaguepublishing.com/games/into-the-odd/", "fmt": "Web" },
+      { "type": "sheet", "name": "Character sheet (fan)", "url": "https://gm-lazarus.itch.io/into-the-odd-character-sheet", "fmt": "PDF" }
+    ]
+  },
+  "electric-bastionland": {
+    "name": "Electric Bastionland",
+    "publisher": "Chris McDowell / Bastionland Press",
+    "tagline": "«У вас есть долг в миллион фунтов и очень мало времени».",
+    "tagline_en": "\"You owe a million pounds and time is running out.\"",
+    "dice": "d20 + d6",
+    "players": "2–5",
+    "prep": "~10 мин",
+    "complexity": 1,
+    "foundryStatus": "Community",
+    "heroImage": "https://modiphius.net/cdn/shop/products/ElectricBastionlandCover-2020Final.png?v=1619080563&width=1445",
+    "description": "Эволюция Into the Odd. Те же элегантные правила, но фокус — на городских приключениях в электрическую эпоху. Главная фишка — 100+ «Неудачных Профессий»: случайных предысторий, каждая из которых даёт уникальный стартовый набор проблем, связей и абсурдного снаряжения. Вы не герои — вы неудачники в долгах.",
+    "description_en": "The evolution of Into the Odd. Same elegant rules, but focused on urban adventures in an electric age. The standout feature — 100+ 'Failed Careers': random backgrounds, each providing a unique starter kit of problems, contacts, and absurd equipment. You're not heroes — you're losers in debt.",
+    "setting": "Электрический Бастион — город, разросшийся до масштабов континента. Трамваи, телефоны, подозрительные банки и Глубинные Страны внизу, полные сокровищ и ужасов. Атмосфера — если бы Терри Пратчетт писал weird fiction.",
+    "setting_en": "Electric Bastion — a city that has sprawled to continental scale. Trams, telephones, shady banks, and the Deep Country below, brimming with treasures and horrors. The vibe — as if Terry Pratchett wrote weird fiction.",
+    "vignette": "Ваш персонаж — Бывший Дрессировщик Уличных Крабов. Вы должны миллион фунтов. Краб по имени Генерал — единственное, что осталось от прошлой жизни. Банкир говорит: «Есть работа в Глубинных Странах. Вернётесь с артефактом — спишу десять тысяч.» Генерал щёлкает клешнёй. Вы соглашаетесь.",
+    "vignette_en": "Your character — a Former Street Crab Trainer. You owe a million pounds. A crab named General is the only thing left from your past life. The banker says: 'There's a job in the Deep Country. Bring back an artifact and I'll write off ten thousand.' General clicks his claw. You accept.",
+    "playstyleTags": ["explore", "social", "sandbox"],
+    "mechanics": [
+      { "icon": "user", "title": "100+ Неудачных профессий", "text": "«Дрессировщик уличных крабов», «Опальный аристократ», «Бывший астронавт». Каждая — готовый крючок для истории." },
+      { "icon": "coins", "title": "Механика Долга", "text": "Миллион фунтов долга. Вы идёте в подземелья не ради славы — коллекторы не ждут." },
+      { "icon": "lightbulb", "title": "Советы мастеру", "text": "Лучший GM-раздел в истории OSR. Философия «информация, выбор, последствия» на каждой странице." },
+      { "icon": "zap", "title": "Ядро ItO", "text": "Автопопадания, три характеристики, спасброски. Создание персонажа — 5 минут." }
+    ],
+    "mechanics_en": [
+      { "icon": "user", "title": "100+ Failed Careers", "text": "'Street Crab Trainer', 'Disgraced Aristocrat', 'Former Astronaut'. Each one is a ready-made story hook." },
+      { "icon": "coins", "title": "Debt mechanic", "text": "A million pounds in debt. You go into dungeons not for glory — the collectors won't wait." },
+      { "icon": "lightbulb", "title": "GM advice", "text": "The best GM section in OSR history. The philosophy of 'information, choice, consequences' on every page." },
+      { "icon": "zap", "title": "ItO core", "text": "Auto-hit attacks, three stats, saves. Character creation — 5 minutes." }
+    ],
+    "quotes": [
+      { "text": "Electric Bastionland is 50% RPG rulebook and 50% the best GM advice ever written. Seriously, the section on running the game changed how I GM everything.", "author": "u/oddity_collector, r/osr" },
+      { "text": "We generated characters and started playing in under 15 minutes. One player got \"Avant-Garde Hairdresser\" and it was immediately the best character concept we've ever had.", "author": "u/deep_country, r/rpg" }
+    ],
+    "gallery": [
+      { "src": "https://img.itch.zone/aW1hZ2UvNTk4NDYyLzMxNzkzMTkucG5n/original/MnG1LD.png", "cap": "Разворот с иллюстрациями" },
+      { "src": "https://img.itch.zone/aW1hZ2UvNTk4NDYyLzMxNzkyOTkucG5n/original/PQkILZ.png", "cap": "Персонажи Бастиона" },
+      { "src": "https://img.itch.zone/aW1hZ2UvNTk4NDYyLzMxNzkzMDEucG5n/original/HsUsO1.png", "cap": "Таблицы и арт" },
+      { "src": "https://img.itch.zone/aW1hZ2UvNTk4NDYyLzMxNzkzMDIucG5n/original/lbwRs4.png", "cap": "Чёрно-белая иллюстрация" }
+    ],
+    "gallery_en": [
+      { "src": "https://img.itch.zone/aW1hZ2UvNTk4NDYyLzMxNzkzMTkucG5n/original/MnG1LD.png", "cap": "Illustrated spread" },
+      { "src": "https://img.itch.zone/aW1hZ2UvNTk4NDYyLzMxNzkyOTkucG5n/original/PQkILZ.png", "cap": "Bastion characters" },
+      { "src": "https://img.itch.zone/aW1hZ2UvNTk4NDYyLzMxNzkzMDEucG5n/original/HsUsO1.png", "cap": "Tables and art" },
+      { "src": "https://img.itch.zone/aW1hZ2UvNTk4NDYyLzMxNzkzMDIucG5n/original/lbwRs4.png", "cap": "Black and white illustration" }
+    ],
+    "resources": [
+      { "type": "link", "name": "Официальный сайт", "url": "https://www.bastionland.com/", "fmt": "Web" },
+      { "type": "quickstart", "name": "Free Edition (42 стр.)", "url": "https://chrismcdee.itch.io/electric-bastionland-free-edition", "fmt": "PDF" },
+      { "type": "sheet", "name": "Лист персонажа", "url": "https://gm-lazarus.itch.io/electric-bastionland-character-sheet", "fmt": "PDF" }
+    ],
+    "resources_en": [
+      { "type": "link", "name": "Official website", "url": "https://www.bastionland.com/", "fmt": "Web" },
+      { "type": "quickstart", "name": "Free Edition (42 pp.)", "url": "https://chrismcdee.itch.io/electric-bastionland-free-edition", "fmt": "PDF" },
+      { "type": "sheet", "name": "Character sheet", "url": "https://gm-lazarus.itch.io/electric-bastionland-character-sheet", "fmt": "PDF" }
+    ]
+  },
+  "mythic-bastionland": {
+    "name": "Mythic Bastionland",
+    "publisher": "Chris McDowell / Bastionland Press",
+    "tagline": "«Рыцари мифа в мире, который помнит больше, чем рассказывает».",
+    "tagline_en": "\"Knights of myth in a world that remembers more than it tells.\"",
+    "dice": "d20 + d6",
+    "players": "2–5",
+    "prep": "~15 мин",
+    "complexity": 2,
+    "foundryStatus": "Community",
+    "heroImage": "https://lh7-rt.googleusercontent.com/docsz/AD_4nXcIlzbaMrweNWqQ5dyQ-73LBaVweIzXID4LnrkExRJpwlsC-DPnq4tyX_nudHSn03ahnTH4khvCid4HWgdfIxHy1dpWCWWp1TLnFilLwM-K8E5Tu477XUiGFQc62np7oGsWja4JCWwodWR3xNd2lez2ul3x=w640-h340?key=i4VM5_5nlqjf71HFbWPF6g",
+    "description": "Третья и самая масштабная игра на движке Into the Odd. Вы — рыцари-скитальцы, путешествующие по мифическим землям. Каждый рыцарь несёт свой Миф — личное предназначение, вплетённое в ткань мира. Мир генерируется процедурно прямо за столом: оракулы, таблицы и гексы (шестиугольные клетки карты) создают уникальную карту для каждой группы.",
+    "setting": "Тёмное артуровское фэнтези без эльфов и файерболлов. Туманные болота, каменные круги, забытые королевства. Мир — это смесь «Зелёного рыцаря», бретонских легенд и скандинавских саг. Монстры здесь — мифические существа, а не мешки с хитами.",
+    "vignette": "Новый гекс. Вы бросаете по таблице оракула — «Каменный круг. Внутри — рыцарь без лица, привязанный к дубу». Ваш Миф говорит: «Найди того, кто знает имя реки.» Это он? Вы спрашиваете рыцаря. Он отвечает голосом вашего отца. Сезон меняется — наступает зима, и мир вокруг реагирует.",
+    "playstyleTags": ["explore", "narrative", "sandbox"],
+    "mechanics": [
+      { "icon": "shield", "title": "Мифы рыцарей", "text": "Каждый рыцарь начинает с Мифа — личного предназначения. Это не квест от NPC, а часть самого персонажа." },
+      { "icon": "map-pin", "title": "Процедурный мир", "text": "Оракулы и таблицы создают мир прямо за столом. Каждый гекс — сюрприз для ведущего и игроков одновременно." },
+      { "icon": "crown", "title": "Сезонная структура", "text": "Кампания делится на сезоны. Между приключениями мир меняется — крестьяне строят, враги крепнут." },
+      { "icon": "dices", "title": "Ядро Into the Odd", "text": "Автопопадания, спасброски, минимум правил — в обёртке тёмного артуровского мифа." }
+    ],
+    "quotes": [
+      { "text": "Mythic Bastionland feels like what D&D would be if it was designed today by someone who actually read Le Morte d'Arthur instead of Lord of the Rings.", "author": "u/knight_errant, r/osr" },
+      { "text": "The procedural generation is incredible. I ran a 6-session campaign and never prepped more than 20 minutes. The oracles did the heavy lifting and the results were better than anything I could've planned.", "author": "u/hexcrawl_fan, r/rpg" }
+    ],
+    "gallery": [
+      { "src": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6a2f0bf6-1328-488d-a457-aa66a531ca55_1064x566.png", "cap": "Рыцари мифа" },
+      { "src": "https://lh7-rt.googleusercontent.com/docsz/AD_4nXcIlzbaMrweNWqQ5dyQ-73LBaVweIzXID4LnrkExRJpwlsC-DPnq4tyX_nudHSn03ahnTH4khvCid4HWgdfIxHy1dpWCWWp1TLnFilLwM-K8E5Tu477XUiGFQc62np7oGsWja4JCWwodWR3xNd2lez2ul3x=w640-h340", "cap": "Мифический мир" },
+      { "src": "https://img.itch.zone/aW1hZ2UvMjY0MjkzMi8xNjA1NzI2NS5wbmc=/original/M5VEoN.png", "cap": "Арт из книги" },
+      { "src": "https://img.itch.zone/aW1hZ2UvMzM4ODYxNy8yMDIyODgxNS5wbmc=/original/IQzFQ3.png", "cap": "Витраж и гобелен" },
+      { "src": "https://img.itch.zone/aW1hZ2UvMzM4ODYxNy8yMDIyODgwOC5wbmc=/original/GKDyIn.png", "cap": "Разворот книги" },
+      { "src": "https://img.itch.zone/aW1hZ2UvMzM4ODYxNy8yMDIyODgwNy5wbmc=/original/n%2BjtLe.png", "cap": "Мифические существа" },
+      { "src": "https://img.itch.zone/aW1hZ2UvMzM4ODYxNy8yMDIyODk1Mi5wbmc=/original/DrzoXq.png", "cap": "Рыцари и легенды" }
+    ],
+    "resources": [
+      { "type": "link", "name": "Официальный сайт", "url": "https://www.bastionland.com/", "fmt": "Web" },
+      { "type": "sheet", "name": "Лист персонажа", "url": "https://manadawnttg.itch.io/mythic-bastionland-character-sheet", "fmt": "PDF" }
+    ]
+  },
+  "cairn": {
+    "name": "Cairn",
+    "publisher": "Yochai Gal / NSR",
+    "tagline": "«Фольклорный хоррор без классов, уровней и ерунды».",
+    "dice": "d20 + d6/d8",
+    "players": "2–5",
+    "prep": "~5 мин",
+    "complexity": 1,
+    "foundryStatus": "Official",
+    "heroImage": "https://assetsio.gnwcdn.com/cairn-2e-box-set-art-trolls-tree-header.png?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp",
+    "description": "Бесплатная, открытая, ультралёгкая система для тёмного фольклорного фэнтези. Основана на Into the Odd и Knave. Правила — 20 страниц. Нет классов, нет уровней. Персонаж — это его снаряжение и решения. Cairn 2e добавила процедуры путешествий, инвентарь на слотах и расширенные правила wilderness exploration.",
+    "setting": "Вдохновлён славянскими и кельтскими сказками. Лес здесь — живой, голодный и не прощает легкомыслия. Деревни жмутся к опушке. В чаще — духи, ведьмы и существа, которые были здесь задолго до людей. Атмосфера — братья Гримм до того, как сказки стали детскими.",
+    "vignette": "В лесу — развилка. Факел занимает один слот, еда на два дня — ещё два. Вы уже несёте книгу заклинаний и верёвку. Места нет. Бросить факел — идти в темноте. Бросить еду — голодать. Слева тропа уходит к болоту, справа — дым. Спасбросок Воли, чтобы не побежать на запах еды. Провал — и вы уже в избе ведьмы.",
+    "playstyleTags": ["explore", "horror", "survival"],
+    "mechanics": [
+      { "icon": "feather", "title": "Без классов и уровней", "text": "Вы — то, что несёте. Нашли волшебный меч — вы воин. Нашли книгу заклинаний — вы маг. Потеряли всё — вы труп." },
+      { "icon": "mountain-snow", "title": "Инвентарь на слотах", "text": "Каждый предмет занимает слот. Факелы, еда, оружие — всё конкурирует за место. Тяжёлый выбор каждый раз." },
+      { "icon": "book-open", "title": "Открытая лицензия", "text": "Десятки хаков: Liminal Horror, Block Dodge Parry, Runecairn. Cairn — платформа для целой экосистемы игр." },
+      { "icon": "tree-pine", "title": "Процедуры леса", "text": "Таблицы событий, погоды, встреч. Лес оживает механически, а не только в воображении." }
+    ],
+    "quotes": [
+      { "text": "Cairn is the perfect \"I want to run dark fantasy but I don't want to read 400 pages\" game. Free, elegant, and every session feels like a Grimm fairy tale gone wrong.", "author": "u/forest_warden, r/osr" },
+      { "text": "My group switched from 5e to Cairn and we've never looked back. Sessions feel dangerous, meaningful, and we actually finish adventures instead of getting bogged down in rules arguments.", "author": "u/slot_inventory, r/rpg" }
+    ],
+    "gallery": [
+      { "src": "https://www.exaltedfuneral.com/cdn/shop/files/cairn-2e-boxed-set-boxed-set-2496979.webp?v=1764284291", "cap": "Коробочный набор Cairn 2e" },
+      { "src": "https://www.exaltedfuneral.com/cdn/shop/files/cairn-2e-boxed-set-boxed-set-3919238.webp?v=1764284291", "cap": "Содержимое набора" }
+    ],
+    "resources": [
+      { "type": "link", "name": "Официальный сайт", "url": "https://cairnrpg.com/", "fmt": "Web" },
+      { "type": "rules", "name": "Полные правила (SRD) — вся игра бесплатно!", "url": "https://cairnrpg.com/second-edition/", "fmt": "Web" },
+      { "type": "quickstart", "name": "Player's Guide", "url": "https://yochaigal.itch.io/cairn-players-guide", "fmt": "PDF" },
+      { "type": "quickstart", "name": "Warden's Guide", "url": "https://yochaigal.itch.io/cairn-wardens-guide", "fmt": "PDF" },
+      { "type": "sheet", "name": "Лист персонажа", "url": "https://better-legends.itch.io/cairn-2e-character-sheet", "fmt": "PDF" }
+    ]
+  },
+  "mork-borg": {
+    "name": "MÖRK BORG",
+    "publisher": "Ockult Örtmästare Games / Free League",
+    "tagline": "«Мир кончается. Книга должна сгореть».",
+    "dice": "d20 + d4–d10",
+    "players": "2–5",
+    "prep": "~5 мин",
+    "complexity": 1,
+    "foundryStatus": "Official + Community",
+    "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/herbmasters_crop-1440x720.jpg",
+    "heroStyle": "border: 2px solid var(--yellow);",
+    "description": "Арт-панк RPG про последние дни умирающего мира. Правила умещаются на нескольких страницах, но книга — произведение искусства: кислотные цвета, безумная вёрстка, атмосфера блэк-метала. Каждая сессия может стать последней — буквально, потому что мир кончается по расписанию.",
+    "setting": "Умирающий мир, которым правят два обезумевших Василиска. Пророчества предвещают конец. Каждое утро бросается кубик — и мир становится чуть ближе к гибели. Бесконечные болота, проклятые деревни, тёмные катакомбы и НЕТ надежды. Но есть добыча.",
+    "vignette": "Утро. Бросок Календаря Несчастий — единица. Шестое Несчастие: «Солнце больше не заходит. Тени исчезают. Без тени невозможно спать.» Ваш персонаж — Проклятый Скинлинг с d4 HP и ржавым мечом. В катакомбах скелет бьёт вас на 5 урона. Вы мертвы. Генерация нового персонажа — 3 минуты. Снова в бой.",
+    "playstyleTags": ["combat", "horror", "explore"],
+    "mechanics": [
+      { "icon": "calendar", "title": "Календарь Несчастий", "text": "Каждое утро — бросок. На 7-й Несчастии мир официально гибнет. Кампания окончена. Навсегда." },
+      { "icon": "paintbrush", "title": "Арт как геймплей", "text": "Книга — арт-объект. Йохан Нор создал визуальный язык, который стал жанром. Десятки хаков копируют этот стиль." },
+      { "icon": "shuffle", "title": "Случайность всего", "text": "Персонаж и снаряжение — случайны. Классы опциональны и могут быть выбраны. Мир не щадит никого." },
+      { "icon": "plug", "title": "Экосистема", "text": "Сотни дополнений от сообщества. Cy_Borg (киберпанк), Pirate Borg, Vast Grimm (космос) — всё на одном движке." }
+    ],
+    "quotes": [
+      { "text": "Mörk Borg is the only RPG book I've seen people buy just to look at, and then accidentally start playing because the vibe is that infectious.", "author": "u/blackmetal_dm, r/rpg" },
+      { "text": "Ran a 3-hour one-shot. Two TPKs. Everyone demanded we play again next week. This game just HITS different.", "author": "u/doom_dice, r/MorkBorg" }
+    ],
+    "gallery": [
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/MB_skeleton_kvad-1200x1200.jpg", "cap": "Скелет — интерьерный арт" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/MB_lich-1-1200x1200.jpg", "cap": "Лич" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/MB_02EN_Anthelia_kvad-1200x1200.jpg", "cap": "Антелия" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/MB_05EN_Basilisks_kvad-1200x1200.jpg", "cap": "Василиски" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/MB_06EN_Violence_kvad-1200x1200.jpg", "cap": "Violence" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/MB_07EN_Troll-Zombie_kvad-1200x1200.jpg", "cap": "Тролль-зомби" }
+    ],
+    "resources": [
+      { "type": "link", "name": "Официальный сайт", "url": "https://morkborg.com/", "fmt": "Web" },
+      { "type": "rules", "name": "Bare Bones Edition (76 стр. бесплатно!)", "url": "https://jnohr.itch.io/mrk-borg-free", "fmt": "PDF" },
+      { "type": "sheet", "name": "Официальные листы", "url": "https://morkborg.com/content/", "fmt": "PDF" },
+      { "type": "sheet", "name": "Fillable лист", "url": "https://polyhedralnonsense.com/2020/11/05/mork-borg-fillable-character-sheet/", "fmt": "PDF" }
+    ]
+  },
+  "shadowdark": {
+    "name": "Shadowdark",
+    "publisher": "Kelsey Dionne / The Arcane Library",
+    "tagline": "«Олдскульный данжен-кроул (исследование подземелий: комната за комнатой, ловушки и сокровища) в современной обёртке».",
+    "dice": "d20 + стандарт",
+    "players": "3–6",
+    "prep": "~15 мин",
+    "complexity": 2,
+    "foundryStatus": "Community",
+    "heroImage": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F43056a7c-c1fa-4daa-a806-99f84725fb2d_7659x2853.webp",
+    "description": "Мост между OSR и современными RPG. Использует знакомые d20-механики (атрибуты, AC, спасброски), но с летальностью и ощущением опасности старой школы. Самый успешный Kickstarter RPG за последние годы. Если D&D кажется раздутой — Shadowdark это лекарство.",
+    "setting": "Сеттинг-агностичная система. Любой фэнтези-мир подойдёт. Но дух игры — тёмные подземелья, где факел решает всё. Без света вы слепы, а в темноте живут вещи, которые видят прекрасно.",
+    "vignette": "Таймер факела на столе: 12 минут осталось. Вы на развилке — направо сундук, налево лестница вниз. Бросок на Ловкость, чтобы обезвредить ловушку на сундуке — d20 + модификатор, нужно 14 или выше. Выпало 9, провал. Ловушка срабатывает, d6 урона. Таймер тикает. Факел гаснет через три минуты. Вы бежите к лестнице — в темноту.",
+    "playstyleTags": ["explore", "combat", "survival"],
+    "mechanics": [
+      { "icon": "flame", "title": "Таймер факелов", "text": "Факел горит в РЕАЛЬНОМ ВРЕМЕНИ. Час реала = час в игре. Когда он гаснет — абсолютная тьма и паника." },
+      { "icon": "trending-up", "title": "Случайное повышение", "text": "Левел-ап в конце сессии по броску кубика. Случайный талант вместо запланированного билда." },
+      { "icon": "dices", "title": "D&D-совместимость", "text": "d20, AC, 6 атрибутов. Если играли в D&D — 80% правил уже знаете. Конвертация модулей тривиальна." },
+      { "icon": "skull", "title": "Лёгкость обучения", "text": "Новичок создаёт персонажа за 5 минут и начинает играть. Нет анализа-паралича 5e-билдов." }
+    ],
+    "quotes": [
+      { "text": "The real-time torch timer is a gimmick that shouldn't work. But it does. The moment the timer goes off and you're in total darkness, the whole table panics. Best mechanic I've seen in years.", "author": "u/torch_watcher, r/shadowdark" },
+      { "text": "Shadowdark is what happens when someone takes the best parts of 5e and OSR, cuts everything else, and makes a game that's actually fun to run AND play. I've converted my entire group.", "author": "u/dungeon_delver_99, r/rpg" }
+    ],
+    "gallery": [
+      { "src": "https://www.thearcanelibrary.com/cdn/shop/files/ShadowdarkRPGDigitalPDF5_1200x.jpg?v=1684273611", "cap": "Разворот книги" },
+      { "src": "https://www.thearcanelibrary.com/cdn/shop/files/ShadowdarkRPGDigitalPDF13_1200x.jpg?v=1684273502", "cap": "Интерьерный арт" },
+      { "src": "https://img.itch.zone/aW1nLzE1MDUyMDQwLnBuZw==/original/j6pJeS.png", "cap": "Арт персонажей" }
+    ],
+    "resources": [
+      { "type": "link", "name": "Официальный сайт", "url": "https://www.thearcanelibrary.com/pages/shadowdark", "fmt": "Web" },
+      { "type": "sheet", "name": "Официальный лист", "url": "https://www.thearcanelibrary.com/blogs/shadowdark-blog/shadowdark-rpg-character-sheet", "fmt": "PDF" },
+      { "type": "quickstart", "name": "Quickstart Set (136 стр.!)", "url": "https://www.thearcanelibrary.com/products/shadowdark-rpg-quickstart-set-pdf", "fmt": "PDF" }
+    ]
+  },
+  "alien": {
+    "name": "ALIEN RPG",
+    "publisher": "Free League / Year Zero Engine",
+    "tagline": "«В космосе никто не услышит ваш крик».",
+    "dice": "Пул d6 (горсть шестигранных кубиков)",
+    "players": "3–5",
+    "prep": "~20 мин",
+    "complexity": 3,
+    "foundryStatus": "Official контент",
+    "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/Jacksons-Star-Col-Price-3-1440x720.jpg",
+    "description": "Официальная RPG по вселенной «Чужого». Year Zero Engine с уникальной механикой стресса: чем больше паникуете, тем больше бросаете кубиков. Больше кубиков = выше шанс успеха, НО и выше шанс панической атаки. Два режима: кампания (долгая игра в космосе) и кинематографичный (ваншот-ужастик (приключение на одну сессию), как в фильмах).",
+    "setting": "2183 год. Корпорации колонизируют космос. Weyland-Yutani тянет щупальца к каждой обитаемой системе. За фасадом прогресса — рабочие-контрактники на забытых станциях, контрабандисты, колониальные морпехи и ксеноморфы, которые ждут в темноте. Лор охватывает все фильмы и расширяет вселенную.",
+    "vignette": "Стресс: 4. Вы слышите что-то в вентиляции. Бросаете на Наблюдательность — 3 обычных кубика и 4 кубика стресса. Два успеха! Но на кубике стресса — значок лицехвата. Паника. Бросаете по таблице... «Вы хватаете ближайшее оружие и наводите его на союзника.» За переборкой — шум. Ваш скрытый приказ гласит: «Принеси образец живым.»",
+    "playstyleTags": ["horror", "survival", "mystery"],
+    "mechanics": [
+      { "icon": "radiation", "title": "Механика стресса", "text": "Стресс даёт дополнительные кубики. Но значок лицехвата на кубике стресса = бросок паники (d6 + уровень стресса; результат 7+ запускает эффект по таблице). Таблица паники — от ступора до «вы стреляете в ближайшего»." },
+      { "icon": "drama", "title": "Кинематографичный режим", "text": "Готовые сценарии с предгенами (готовыми персонажами). У каждого персонажа — скрытая повестка. Предательство встроено в систему." },
+      { "icon": "user-x", "title": "Скрытые повестки", "text": "Каждый персонаж получает карту с тайной целью. «Принеси образец на корабль» или «Убедись, что никто не вернётся»." },
+      { "icon": "map", "title": "Кампейн-режим", "text": "Полноценная кампания: корабль, команда, исследование космоса. Alien, но в формате sandbox." }
+    ],
+    "quotes": [
+      { "text": "We ran Chariot of the Gods. By the end, two players were screaming at each other in-character about whether to blow the airlock. Nobody was acting. That stress mechanic is REAL.", "author": "u/xenomorph_gm, r/alienrpg" },
+      { "text": "Best licensed RPG ever made. It's not a cash grab — it genuinely captures the feel of the first two movies. The campaign mode is surprisingly deep too.", "author": "u/colonial_marine, r/rpg" }
+    ],
+    "gallery": [
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Alien_8.jpg", "cap": "Интерьерный арт" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/ALIEN-RPG-Colonial-Marines-Operations-Manual-1-2-green4-brighter-giant-1.jpg", "cap": "Colonial Marines" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Alien_21-1.jpg", "cap": "Сцена из книги" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/ALIEN-RPG-Colonial-Marines1_C-3-scaled.jpg", "cap": "Арт колониальных морпехов" }
+    ],
+    "resources": [
+      { "type": "link", "name": "Официальный сайт", "url": "https://freeleaguepublishing.com/games/alien/", "fmt": "Web" },
+      { "type": "sheet", "name": "Официальный лист", "url": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/ALIEN_Character-Sheet.pdf", "fmt": "PDF" },
+      { "type": "tool", "name": "Генератор персонажей", "url": "https://game-mother.com/cc.html", "fmt": "Web" }
+    ]
+  },
+  "blade-runner": {
+    "name": "Blade Runner",
+    "publisher": "Free League / Year Zero Engine",
+    "tagline": "«Детектив о морали, памяти и бесконечном дожде».",
+    "dice": "Пул d6–d12",
+    "players": "2–4",
+    "prep": "~25 мин",
+    "complexity": 3,
+    "foundryStatus": "Official",
+    "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/BLADE-RUNNER-RPG-Art-01-1440x720.jpg",
+    "description": "RPG-детектив в мире Blade Runner 2037. Вы — Blade Runners, детективы LAPD, расследующие дела, связанные с репликантами. Система заточена под расследования: анализ улик, допросы, моральные дилеммы. Не экшн-игра — нуарный процедурал.",
+    "setting": "Лос-Анджелес 2037 года. Неоновый дождь, гигантские голограммы, внеземные колонии. Репликанты нового поколения живут среди людей, и граница между «человеком» и «машиной» стёрта окончательно. Корпорации контролируют всё, а улицы полны отчаяния.",
+    "vignette": "Дневная смена. Вы допрашиваете свидетеля — женщину, которая клянётся, что видела, как её сосед заплакал маслом. Бросок Эмпатии: два шестигранника и один десятигранник. Успех — она лжёт. Вы проверяете её запястье. Серийный номер. Она — репликант. И вы понимаете, что у вас точно такой же шрам на том же месте.",
+    "playstyleTags": ["mystery", "narrative", "social"],
+    "mechanics": [
+      { "icon": "fingerprint", "title": "Система улик", "text": "Каждое дело — сеть улик, связей и свидетелей. Механика расследования структурирована, но не линейна." },
+      { "icon": "bot", "title": "Человечность", "text": "Механика Humanity. Как далеко вы зайдёте, чтобы остаться человеком? А если вы — репликант и не знаете об этом?" },
+      { "icon": "layout-grid", "title": "Шифт-система", "text": "Рабочие смены структурируют время. Каждая смена — ограниченное количество действий. Тайм-менеджмент как геймплей." },
+      { "icon": "handshake", "title": "Напарники", "text": "Человек + репликант в одном отделе. Встроенное напряжение между игроками с первой сессии." }
+    ],
+    "quotes": [
+      { "text": "This isn't a combat RPG with investigation bolted on. It's a genuine detective game. We spent an entire session analyzing a crime scene and it was the most engaged my players have ever been.", "author": "u/replicant_hunter, r/rpg" },
+      { "text": "The case files are incredible. They feel like you're reading a screenplay. And the \"am I human?\" reveal mechanic gave us the best RP moment we've ever had.", "author": "u/neon_rain, r/bladerunner" }
+    ],
+    "gallery": [
+      { "src": "https://newsite.freeleaguepublishing.com/wp-content/uploads/2023/08/BLADE-RUNNER-RPG-Art-03-edited.jpg", "cap": "Улицы Лос-Анджелеса" },
+      { "src": "https://newsite.freeleaguepublishing.com/wp-content/uploads/2023/08/BLADE-RUNNER-RPG-Art-04-edited.jpg", "cap": "Неоновый город" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/BLADE-RUNNER-RPG-Art-06.jpg", "cap": "Расследование" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/BLADE-RUNNER-RPG-Art-08-edited.jpg", "cap": "Blade Runner" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/BLADE-RUNNER-RPG-Art-13.jpg", "cap": "Сцена допроса" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/BLADE-RUNNER-RPG-Art-09-edited.jpg", "cap": "Город" }
+    ],
+    "resources": [
+      { "type": "link", "name": "Официальный сайт", "url": "https://freeleaguepublishing.com/games/blade-runner-rpg/", "fmt": "Web" },
+      { "type": "sheet", "name": "Официальный лист", "url": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/Blade_Runner_Character_Sheet_220811.pdf", "fmt": "PDF" }
+    ]
+  },
+  "vaesen": {
+    "name": "Vaesen",
+    "publisher": "Free League / Year Zero Engine",
+    "tagline": "«Мистический детектив в Скандинавии XIX века».",
+    "dice": "Пул d6",
+    "players": "3–5",
+    "prep": "~20 мин",
+    "complexity": 2,
+    "foundryStatus": "Official контент",
+    "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Vaesen_hero3-1440x720.jpg",
+    "description": "Вы — члены Общества, способные видеть сверхъестественное в мире, где остальные давно перестали верить. Каждое приключение — расследование: деревня обращается за помощью, вы изучаете мифологию существа, находите его слабость и проводите ритуал. Структура «монстр недели» работает идеально.",
+    "setting": "Скандинавия XIX века. Индустриализация наступает, старые боги забыты. Но в лесах и озёрах живут вэттиры — существа из скандинавского фольклора: тролли, ниссе, мюлинги, дракены. Они злы, потому что люди их забыли. Между расследованиями вы восстанавливаете замок — штаб-квартиру Общества.",
+    "vignette": "Деревня Норрбю. Дети пропадают по ночам. Вы нашли след — мокрые следы босых ног, ведущие к озеру. Бросок Учёности: 4 кубика — один успех. Вы вспоминаете: нёкк, водяной дух, заманивает музыкой. Его слабость — сталь, брошенная в воду с его именем. Но как узнать имя существа, которое забыли сто лет назад?",
+    "playstyleTags": ["mystery", "horror", "social"],
+    "mechanics": [
+      { "icon": "castle", "title": "Штаб-квартира", "text": "Замок Общества. Между приключениями — улучшайте его. Библиотека, лаборатория, конюшня — каждое даёт бонусы." },
+      { "icon": "book-x", "title": "Ритуалы изгнания", "text": "Монстров нельзя просто убить мечом. Нужно узнать их тайну и провести правильный ритуал. Знание = сила." },
+      { "icon": "users", "title": "Структура «Мистерия»", "text": "Каждый сценарий — готовая мистерия: деревня, проблема, существо, улики, ритуал. Идеально для эпизодической игры." },
+      { "icon": "heart-crack", "title": "Психологические условия", "text": "Встречи с вэттирами оставляют психологические шрамы. Страх, одержимость, ночные кошмары." }
+    ],
+    "quotes": [
+      { "text": "Vaesen is the perfect \"busy adult\" RPG. Self-contained mysteries, clear structure, beautiful art. My group with kids and jobs can actually finish a story arc in 2-3 sessions.", "author": "u/nordic_mystery, r/rpg" },
+      { "text": "The castle upgrade system between adventures is surprisingly addictive. My players care more about getting a new library wing than about leveling up their characters.", "author": "u/castle_keeper, r/FreeLeague" }
+    ],
+    "gallery": [
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/11/sjora.jpg", "cap": "Шьора — водный дух" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/VAE_ENG_cover-1200x1200.jpg", "cap": "Обложка" }
+    ],
+    "resources": [
+      { "type": "link", "name": "Официальный сайт", "url": "https://freeleaguepublishing.com/games/vaesen/", "fmt": "Web" },
+      { "type": "sheet", "name": "Официальный лист", "url": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Vaesen-Character-Sheet.pdf", "fmt": "PDF" }
+    ]
+  },
+  "forbidden-lands": {
+    "name": "Forbidden Lands",
+    "publisher": "Free League / Year Zero Engine",
+    "tagline": "«Земли, запечатанные Кровавым Туманом, наконец открыты».",
+    "dice": "Пул d6–d12",
+    "players": "3–5",
+    "prep": "~20 мин",
+    "complexity": 3,
+    "foundryStatus": "Official контент",
+    "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/Forbidden-Lands-cover-art_wide-1440x720.jpg",
+    "description": "Открытый гексплорейшн (исследование карты гекс за гексом, как в тумане войны) в тёмном фэнтези. 300 лет Кровавый Туман делал путешествия смертельными — люди жили в изолированных поселениях. Теперь туман рассеялся, и вы — первые, кто осмеливается исследовать забытые земли. Строите крепость, открываете карту, выживаете.",
+    "setting": "Мрачный мир, напоминающий «Ведьмака» и «Тёмные души». Разрушенные замки, забытые демоны, клановые конфликты. Каждый гекс — тайна: заброшенная деревня, логово демона или руины цивилизации, погибшей во время Кровавого Тумана.",
+    "vignette": "Ночёвка в руинах. Бросок на случайное событие — «Чужаки у лагеря.» Еда кончается, воды на один день. Мечник форсирует бросок на Выносливость — успех, но бонус снаряжения его меча падает на 1 (единица на кубике при форсировании). Чужаки предлагают обмен: провиант за вашу карту. Без карты вы заблудитесь. Без еды — не дойдёте до крепости.",
+    "playstyleTags": ["explore", "survival", "sandbox", "combat"],
+    "mechanics": [
+      { "icon": "castle", "title": "Строительство крепости", "text": "Находите руины — строите своё убежище. Каждая постройка даёт бонусы и меняет геополитику региона." },
+      { "icon": "compass", "title": "Гексплорейшн", "text": "Открытая карта с тайнами. Каждый гекс — случайная или запланированная локация. Мир раскрывается с каждым шагом." },
+      { "icon": "tent", "title": "Лагерь и ресурсы", "text": "Еда, вода, сон — отслеживается. Привал в опасных землях — мини-игра выживания." },
+      { "icon": "skull", "title": "Критические раны", "text": "Раны калечат навсегда. Потерянный глаз не вырастет. Бой — последний вариант, не первый." }
+    ],
+    "quotes": [
+      { "text": "Forbidden Lands is the only game where my players voluntarily avoided a fight because they remembered what happened last time someone got a critical wound. That's good design.", "author": "u/raven_gm, r/FreeLeague" },
+      { "text": "The stronghold building gives the campaign a home base that the players genuinely care about. When bandits attacked our keep, it felt personal in a way no other RPG has achieved.", "author": "u/hex_mapper, r/rpg" }
+    ],
+    "gallery": [
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/ForbiddenLands_drakorm_pergament_core_art-1.jpg", "cap": "Дракон — арт из книги" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/ForbiddenLands_TheBloodmarch_Landscape.jpg", "cap": "Кровавый Марш — ландшафт" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/ForbiddenLands_orch_pergament_kvadrat.jpg", "cap": "Орк" }
+    ],
+    "resources": [
+      { "type": "link", "name": "Официальный сайт", "url": "https://freeleaguepublishing.com/games/forbidden-lands/", "fmt": "Web" },
+      { "type": "sheet", "name": "Листы (ч/б)", "url": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/Forbidden_Lands_Sheets_BW.pdf", "fmt": "PDF" },
+      { "type": "sheet", "name": "Листы (цветные)", "url": "https://freeleaguepublishing.com/wp-content/uploads/2018/10/Forbidden_Lands_Sheets_Color.pdf", "fmt": "PDF" },
+      { "type": "quickstart", "name": "Quickstart (152 стр.! + приключение)", "url": "https://freeleaguepublishing.com/shop/forbidden-lands/free-quickstart-pdf/", "fmt": "PDF" },
+      { "type": "map", "name": "Легенды к карты", "url": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/Forbidden_Lands_Legends.pdf", "fmt": "PDF" }
+    ]
+  },
+  "twilight": {
+    "name": "Twilight: 2000",
+    "publisher": "Free League / Year Zero Engine",
+    "tagline": "«Третья мировая окончена. Вы проиграли. Теперь — выживайте».",
+    "dice": "Пул d6–d12",
+    "players": "3–5",
+    "prep": "~30 мин",
+    "complexity": 4,
+    "foundryStatus": "Official",
+    "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Twilight_2000_RPG_Combat_3000-1440x720.jpg",
+    "description": "Милитари-сэндбокс о выживании после ядерной войны. Вы — остатки разбитого подразделения NATO в Польше (или Швеции). Командование молчит, топливо кончается, патронов мало, а зима близко. Сможете ли вы добраться домой — или хотя бы выжить до весны?",
+    "setting": "Альтернативный 2000 год. Третья мировая война произошла. Ядерные удары уничтожили крупные города. Европа — зона хаоса: мародёры, дезертиры, местные военачальники. Польская зима, разрушенная инфраструктура и остатки цивилизации.",
+    "vignette": "У вас 12 патронов для M16, полбака дизеля в БТР и двое раненых. Деревня впереди контролируется местным полевым командиром. Он предлагает: бак дизеля за работу — зачистить мародёров на мосту. Бросок Убеждения на d10+d8 — провал. Он поднимает цену: дизель И ваш медпакет. Январь. До весны — три месяца.",
+    "playstyleTags": ["survival", "tactical", "sandbox", "social"],
+    "mechanics": [
+      { "icon": "crosshair", "title": "Реалистичный бой", "text": "Баллистика, укрытия, подавление. Одна пуля может убить. Бой — отчаянный, короткий и страшный." },
+      { "icon": "fuel", "title": "Экономика дефицита", "text": "Топливо, патроны, медикаменты — на вес золота. Каждый выстрел — решение: стоит ли цель патрона?" },
+      { "icon": "truck", "title": "Техника", "text": "Танки, БТР, грузовики — ваш дом на колёсах. Ремонт и модификация — отдельный слой геймплея." },
+      { "icon": "compass", "title": "Гексплорейшн", "text": "Открытая карта Польши с точками интереса, фракциями и случайными событиями. Куда идти — решаете вы." }
+    ],
+    "quotes": [
+      { "text": "We spent an entire session deciding whether to trade our last can of diesel for antibiotics. No combat, no dice rolls for most of it. Just pure, agonizing decision-making. Best session we've had.", "author": "u/cold_war_vet, r/twilight2000" },
+      { "text": "T2K makes you feel the weight of every bullet. My players went from \"I shoot everything\" to \"can we negotiate?\" in exactly one session. That's the game working as intended.", "author": "u/sandbox_soldier, r/rpg" }
+    ],
+    "gallery": [
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Twilight_2000_RPG_Factions.jpg", "cap": "Фракции" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/11/1.-Rules-Gear-intro.jpg", "cap": "Правила и снаряжение" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/11/travel-intro.jpg", "cap": "Путешествие" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Twilight_2000_RPG_Scenarios.jpg", "cap": "Сценарии" }
+    ],
+    "resources": [
+      { "type": "link", "name": "Официальный сайт", "url": "https://freeleaguepublishing.com/games/twilight-2000/", "fmt": "Web" },
+      { "type": "sheet", "name": "Листы персонажей", "url": "https://legacy.drivethrurpg.com/product/478574/Twilight-2000-4e-Character-Sheets-printable-and-formfillable", "fmt": "PDF" }
+    ]
+  },
+  "tales-loop": {
+    "name": "Tales from the Loop",
+    "publisher": "Free League / Year Zero Engine",
+    "tagline": "«Альтернативные 80-е. Роботы, динозавры и тайны, которые видят только дети».",
+    "dice": "Пул d6",
+    "players": "3–5",
+    "prep": "~20 мин",
+    "complexity": 2,
+    "foundryStatus": "Official контент",
+    "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/TalesfromtheLoop-1440x720.jpg",
+    "description": "Вы — подростки 10–15 лет в альтернативных 80-х, где гигантский подземный ускоритель частиц (Петля) создаёт аномалии. Роботы ходят по улицам, но взрослые не замечают странного. Главное правило: дети не умирают. Но теряют друзей, невинность и веру в безопасный мир.",
+    "setting": "Швеция или США 1980-х, альтернативная история. Правительство построило Петлю — подземный ускоритель. Побочные эффекты: автономные роботы, гравитационные аномалии, временные петли, динозавры в озере. Визуально — меланхоличные картины Симона Столенхага: роботы на фоне шведских лугов.",
+    "vignette": "Вам 13 лет. Робот на свалке за школой снова включился и зовёт кого-то по имени Эрик. Бросок Расследования — 3 кубика, ни одной шестёрки. Провал. Вы тратите очко Удачи и перебрасываете, но после школы мама требует, чтобы вы вернулись домой до темноты. Робот ждёт. Якорный Взрослый — учитель физики — что-то знает, но боится рассказать.",
+    "playstyleTags": ["mystery", "narrative", "social"],
+    "mechanics": [
+      { "icon": "baby", "title": "Дети не умирают", "text": "Главное правило. Система защищает от смерти, но не от страха, потерь и взросления." },
+      { "icon": "heart", "title": "Повседневная драма", "text": "Между тайнами — школа, родители, первая любовь. Эмоциональный якорь для приключений." },
+      { "icon": "home", "title": "Якорный взрослый", "text": "У каждого ребёнка — взрослый, к которому можно обратиться. Учитель, сосед, старший брат. Связь, которая спасает." },
+      { "icon": "atom", "title": "Тайны Петли", "text": "Каждая тайна — мини-сценарий: что-то странное происходит, дети расследуют, мир никогда не будет прежним." }
+    ],
+    "quotes": [
+      { "text": "Tales from the Loop made my table of hardened D&D players cry. Actual tears. Over a kid trying to save his robot dog. I've never seen anything like it.", "author": "u/loop_kid, r/rpg" },
+      { "text": "If Stranger Things was an RPG, this is it. But better, because it's YOUR kids and YOUR weird town and everything feels personal.", "author": "u/80s_nostalgia, r/FreeLeague" }
+    ],
+    "gallery": [
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/lokskeppt67_1920.jpg", "cap": "Столенхаг — пейзаж" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/talesfromtheloop2-scaled.jpg", "cap": "Арт из книги" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/talesfromtheloop3-scaled.jpg", "cap": "Робот и дети" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/talesfromtheloop4-scaled.jpg", "cap": "Зимний пейзаж" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/talesfromtheloop5-scaled.jpg", "cap": "Мальпарн" }
+    ],
+    "resources": [
+      { "type": "link", "name": "Официальный сайт", "url": "https://freeleaguepublishing.com/games/tales-from-the-loop/", "fmt": "Web" },
+      { "type": "sheet", "name": "Официальный лист", "url": "https://modiphius.net/products/tales-from-the-loop-character-sheet", "fmt": "PDF" }
+    ]
+  },
+  "dragonbane": {
+    "name": "Dragonbane",
+    "publisher": "Free League / Year Zero Engine",
+    "tagline": "«Классическое фэнтези без балласта. Лёгкое, как меч в руке мастера».",
+    "dice": "d20 + d6–d12",
+    "players": "3–5",
+    "prep": "~15 мин",
+    "complexity": 2,
+    "foundryStatus": "Official",
+    "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/drakarochdemoner_dark-1440x720.jpg",
+    "description": "Переосмысление классического шведского RPG «Drakar och Demoner» (1982). Лёгкая, быстрая фэнтези-система: бросай d20, попади ниже навыка. Бои на картах инициативы, магия с риском срыва, рост через провалы. «D&D, если бы его сделали шведы в 2023 году».",
+    "setting": "Мисгард — светлое фэнтези с тёмными нотками. Драконы, рыцари, подземелья — но с нордическим колоритом. Утиные людины, оркоподобные полуорки, классические эльфы и дварфы. Стартовый бокс включает готовый регион, карту и кампанию.",
+    "vignette": "Карты инициативы раздаются. Вы — утиный рыцарь с мечом и щитом. Ваша карта — 3, гоблин — 7. Вы бьёте первым! Бросок на Мечи: d20, нужно 13 или ниже. Выпало 1 — критический успех, он же «Дракон»! Двойной урон. Гоблин падает. Но маг пробует заклинание — провал, магический срыв. Бросок по таблице: его посох взрывается. Отмечаете галочку провала — навык вырастет в конце сессии.",
+    "playstyleTags": ["combat", "explore", "sandbox"],
+    "mechanics": [
+      { "icon": "swords", "title": "Карточная инициатива", "text": "Каждый раунд — новый порядок по картам. Тактика меняется на лету, бои не превращаются в рутину." },
+      { "icon": "wand-sparkles", "title": "Магия с риском", "text": "Заклинания требуют броска. Провал = магический срыв. Последствия могут быть хуже врага." },
+      { "icon": "dumbbell", "title": "Рост через провал", "text": "Навыки растут от провалов. Чем чаще ошибаетесь — тем быстрее учитесь. Элегантно." },
+      { "icon": "package-open", "title": "Лучший стартовый набор", "text": "Карты, фигурки, кубики, приключение — всё в коробке. Сел и играй за 20 минут." }
+    ],
+    "quotes": [
+      { "text": "Dragonbane is the fantasy RPG I've been waiting for. It has the simplicity of OSR, the production quality of 5e, and the design philosophy of Free League. It's my forever game now.", "author": "u/dragon_slayer_se, r/dragonbane" },
+      { "text": "The initiative card system is genius. Every round feels fresh. No more \"I go first, I always go first, boring.\" Also, duck people. DUCK PEOPLE.", "author": "u/quack_knight, r/rpg" }
+    ],
+    "gallery": [
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Drakar-och-Demoner_rollpersonen.jpg", "cap": "Персонажи" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Drakar-och-Demoner_best-2-scaled.jpg", "cap": "Бестиарий" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Drakar-och-Demoner_Magi-scaled.jpg", "cap": "Магия" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/11/DRAGONBANE-full-game.png", "cap": "Содержимое набора" }
+    ],
+    "resources": [
+      { "type": "link", "name": "Официальный сайт", "url": "https://freeleaguepublishing.com/games/dragonbane/", "fmt": "Web" },
+      { "type": "sheet", "name": "Официальный лист", "url": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/DB-Character-Sheet-v1.pdf", "fmt": "PDF" },
+      { "type": "quickstart", "name": "Quickstart Riddermound", "url": "https://freeleaguepublishing.com/shop/dragonbane/free-quickstart-pdf/", "fmt": "PDF" },
+      { "type": "quickstart", "name": "Quickstart The Sinking Tower", "url": "https://freeleaguepublishing.com/shop/dragonbane/free-quickstart-pdf-the-sinking-tower/", "fmt": "PDF" }
+    ]
+  },
+  "coriolis": {
+    "name": "Coriolis",
+    "publisher": "Free League / Year Zero Engine",
+    "tagline": "«Арабские Ночи в космосе. Торговля, молитва и Тьма Между Звёзд».",
+    "dice": "Пул d6",
+    "players": "3–5",
+    "prep": "~30 мин",
+    "complexity": 3,
+    "foundryStatus": "Official контент",
+    "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/coriolis_ship-1440x720.jpg",
+    "description": "Космическая опера с арабо-персидской эстетикой. Группа владеет космическим кораблём и путешествует по Третьему Горизонту — кластеру звёздных систем. Торговля, контрабанда, дипломатия, исследование — и Тьма Между Звёзд, которая проникает в реальность через молитвы Иконам.",
+    "setting": "Третий Горизонт — десятки звёздных систем, связанных порталами. Базары на орбитальных станциях, мечети рядом с доками, древние порталы неизвестного происхождения. Фракции: от религиозных орденов до мегакорпораций. Атмосфера — Firefly встречает «1001 ночь».",
+    "vignette": "Ваш корабль входит в систему Кua. Таможня требует досмотр — в трюме контрабанда. Бросок Манипуляции: 5 кубиков, ни одной шестёрки. «Молюсь Иконе Судьи,» — говорите вы. Перебрасываете — две шестёрки, успех! Но Мастер получает очко Тьмы. Позже, в тёмном коридоре станции, свет мигает. Что-то шепчет ваше имя. Тьма помнит.",
+    "playstyleTags": ["explore", "social", "mystery", "sandbox"],
+    "mechanics": [
+      { "icon": "hand", "title": "Молитва Иконам", "text": "Перебросить кубики? Помолитесь Иконам. Но Тьма получает очко влияния. Каждая молитва — сделка с неизвестным." },
+      { "icon": "rocket", "title": "Ваш корабль", "text": "Корабль — центр кампании. Модули, долги, экипаж, репутация. Это ваш дом в холодном космосе." },
+      { "icon": "users", "title": "Фракции", "text": "Десятки фракций с пересекающимися интересами. Каждое решение меняет баланс сил в секторе." },
+      { "icon": "moon", "title": "Тьма", "text": "Тьма Между Звёзд — метафизическая угроза. Чем больше вы используете Иконы, тем сильнее она становится." }
+    ],
+    "quotes": [
+      { "text": "Coriolis has the most unique sci-fi setting I've ever played in. It's not Star Wars, it's not Star Trek, it's something completely its own. The Arabic/Persian aesthetic makes everything feel fresh.", "author": "u/third_horizon, r/rpg" },
+      { "text": "The Darkness mechanic is so elegant. Players WANT to pray for rerolls, but they know every prayer makes the GM's job easier. It creates constant, beautiful tension.", "author": "u/icon_seeker, r/FreeLeague" }
+    ],
+    "gallery": [
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/coriolisweb.jpg", "cap": "Третий Горизонт" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/coriolis_Kapitelbild_7-scaled.jpg", "cap": "Глава из книги" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/coriolis__s63.jpg", "cap": "Станция" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/coriolis_vapenrustningar-scaled.jpg", "cap": "Оружие и броня" }
+    ],
+    "resources": [
+      { "type": "link", "name": "Официальный сайт", "url": "https://freeleaguepublishing.com/games/coriolis/", "fmt": "Web" },
+      { "type": "sheet", "name": "Лист персонажа", "url": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/cor_Character_Sheet.pdf", "fmt": "PDF" },
+      { "type": "sheet", "name": "Лист корабля", "url": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/cor_spaceship_Sheet.pdf", "fmt": "PDF" },
+      { "type": "map", "name": "Звёздная карта", "url": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/coriolis_large_map_3H.pdf", "fmt": "PDF" },
+      { "type": "quickstart", "name": "Quickstart The Great Dark", "url": "https://freeleaguepublishing.com/wp-content/uploads/2024/03/Coriolis_The_Great_Dark_Quickstart_v1.pdf", "fmt": "PDF" },
+      { "type": "quickstart", "name": "Quickstart Third Horizon", "url": "https://freeleaguepublishing.com/wp-content/uploads/2017/02/CORIOLIS_QUICKSTART.pdf", "fmt": "PDF" }
+    ]
+  },
+  "heart": {
+    "name": "Heart: The City Beneath",
+    "publisher": "Rowan Rook & Decard",
+    "tagline": "«Спускайтесь в живой подземный город, который исполняет желания — за чудовищную цену».",
+    "dice": "d10",
+    "players": "3–5",
+    "prep": "~20 мин",
+    "complexity": 3,
+    "foundryStatus": "Community",
+    "heroImage": "https://img.itch.zone/aW1nLzMyNTE2OTcuanBn/original/OSvRn%2F.jpg",
+    "description": "Нарративный (история и драма важнее точных правил) данжен-кроул наоборот. Вместо подъёма к сокровищам — спуск в Сердце, живой подземный мегаданжен, который реагирует на желания и страхи. Каждый класс имеет уникальную историю: от Зенита (входа) до Надира (финала). Персонаж буквально проходит нарративную арку.",
+    "setting": "Под городом Спайр (из одноимённой игры) бьётся Сердце — немыслимое пространство, меняющее реальность. Рынки из костей, библиотеки из снов, леса из мяса. Чем глубже спускаешься — тем безумнее становится мир и ты сам.",
+    "vignette": "Вы на Рынке Костей, третий ярус Сердца. Торговец продаёт воспоминания в стеклянных флаконах. Бросок d10 — 7, частичный успех. Вы получаете нужную карту, но берёте стресс на трек Эхо. Три отметки из пяти. Ещё одна — и Сердце заберёт ваш голос. Навсегда. Ваш Зенит: «Найти дорогу обратно.» Ваш Надир: «Забыть, зачем вы пришли.»",
+    "playstyleTags": ["narrative", "horror", "explore"],
+    "mechanics": [
+      { "icon": "heart-pulse", "title": "5 стресс-треков", "text": "Кровь, Разум, Эхо, Удача, Запасы. Каждый — путь к гибели или трансформации. Стресс распределяете вы." },
+      { "icon": "route", "title": "Зенит → Надир", "text": "У каждого класса — арка от входа до финала. Вы знаете, куда идёт история. Вопрос — какой ценой." },
+      { "icon": "bug", "title": "Живой данжен", "text": "Сердце — существо, не место. Оно меняется, реагирует, создаёт пространства из ваших страхов." },
+      { "icon": "drama", "title": "Нарратив первым", "text": "Броски решают не «попал/не попал», а «какую цену ты платишь». Фикшн определяет механику." }
+    ],
+    "quotes": [
+      { "text": "Heart is the most creative RPG I've ever read. A market made of bones where memories are currency? A forest of meat that grows from the walls? It's Annihilation meets Dark Souls.", "author": "u/deep_delver, r/rpg" },
+      { "text": "The Zenith/Nadir character arc system means every character has a built-in ending. My player's final session was the most emotionally intense RP moment I've ever witnessed.", "author": "u/spire_citizen, r/HeartRPG" }
+    ],
+    "gallery": [
+      { "src": "https://rowanrookanddecard.com/wp-content/uploads/2020/04/Heart-The-City-Beneath-RPG-COMBAT-scaled.jpg", "cap": "Бой в Сердце" },
+      { "src": "https://rowanrookanddecard.com/wp-content/uploads/2020/04/Heart-The-City-Beneath-RPG-ANGEL.webp", "cap": "Ангел" },
+      { "src": "https://rowanrookanddecard.com/wp-content/uploads/2021/10/Heart_Character_Sheet_Product_Photo_Front-600x600.png.webp", "cap": "Лист персонажа" },
+      { "src": "https://img.itch.zone/aW1nLzMyNTE2MzgucG5n/original/2W%2BgAK.png", "cap": "Обложка" }
+    ],
+    "resources": [
+      { "type": "link", "name": "Официальный сайт", "url": "https://rowanrookanddecard.com/product/heart-the-city-beneath-rpg/", "fmt": "Web" },
+      { "type": "quickstart", "name": "Quickstart (правила + приключение)", "url": "https://rowanrookanddecard.itch.io/heart-the-city-beneath-quickstart", "fmt": "PDF" }
+    ]
+  },
+  "triangle": {
+    "name": "Triangle Agency",
+    "publisher": "Haunted Table",
+    "tagline": "«SCP встречает X-Files. Вы — агенты, контролирующие аномальное».",
+    "dice": "Пул d4",
+    "players": "3–5",
+    "prep": "~25 мин",
+    "complexity": 2,
+    "foundryStatus": "Community",
+    "heroImage": "https://img.itch.zone/aW1nLzE2NTI3MDUyLmpwZw==/original/FIDchU.jpg",
+    "description": "RPG о спецагентах, работающих в секретном агентстве, которое сдерживает аномальные явления. Каждая миссия — выезд на аномалию: изучить, классифицировать, решить что делать. Генератор аномалий создаёт уникальные угрозы. Бюрократия агентства — враг не менее опасный.",
+    "setting": "Современный мир, но за фасадом реальности — аномалии. Агентство «Треугольник» — секретная организация, которая их сдерживает. Три доктрины: Сдержать, Уничтожить или Использовать. Каждая миссия — моральный выбор, и Агентство запоминает ваши решения.",
+    "vignette": "Аномалия: дверь в подвале жилого дома. Она открывается в комнату, которой нет в планах здания. Внутри — стул и записка: «Сядьте.» Бросок Исследования — 3d4, две тройки. Успех: записка написана почерком вашего директора. Доктрина? Сдержать — замуровать дверь. Использовать — сесть на стул. Уничтожить — сжечь дом. Отчёт нужен к утру.",
+    "playstyleTags": ["mystery", "horror", "social"],
+    "mechanics": [
+      { "icon": "eye", "title": "Генератор аномалий", "text": "Процедурная система создаёт уникальные аномалии для каждой миссии. Бесконечная реиграбельность." },
+      { "icon": "scale", "title": "Три доктрины", "text": "Сдержать, Уничтожить, Использовать. Каждое решение формирует репутацию группы в Агентстве." },
+      { "icon": "badge", "title": "Бюрократия", "text": "Отчёты, допуски, внутренняя политика. Агентство — не союзник, а инструмент, который может повернуться против вас." },
+      { "icon": "dices", "title": "Лёгкая механика", "text": "Пул d4, простые правила. Фокус — на расследовании и принятии решений, а не на тактике." }
+    ],
+    "quotes": [
+      { "text": "Triangle Agency scratches that SCP itch perfectly. The anomaly generator is brilliant — we've played 10 sessions and every mission felt completely different.", "author": "u/containment_breach, r/rpg" },
+      { "text": "The bureaucracy mechanics are hilarious and terrifying. Our best session was a debrief where we had to explain to management why we let an anomaly go. It felt like The Office meets X-Files.", "author": "u/classified_agent, r/rpg" }
+    ],
+    "gallery": [
+      { "src": "https://img.itch.zone/aW1nLzIzMTIyMTYzLmpwZw==/original/638fvX.jpg", "cap": "Промо-арт агентства" },
+      { "src": "https://img.itch.zone/aW1nLzIzMTIyMTQzLnBuZw==/original/yIrTaf.png", "cap": "Иллюстрация: агенты" },
+      { "src": "https://img.itch.zone/aW1nLzIzMTIxOTQ5LnBuZw==/original/%2F%2B9FZ8.png", "cap": "Разворот книги" },
+      { "src": "https://cdn.shopify.com/s/files/1/0581/0464/3719/files/lobby_sample.jpg", "cap": "Лобби агентства" },
+      { "src": "https://cdn.shopify.com/s/files/1/0581/0464/3719/files/Back_Endpaper__Agents_on_Break.jpg", "cap": "Агенты на перерыве" }
+    ],
+    "resources": [
+      { "type": "link", "name": "Официальный сайт", "url": "https://hauntedtable.itch.io/triangle-agency", "fmt": "Web" },
+      { "type": "sheet", "name": "Официальные листы", "url": "https://shop.hauntedtable.games/pages/resources", "fmt": "PDF" }
+    ]
+  },
+  "mothership": {
+    "name": "Mothership",
+    "publisher": "Tuesday Knight Games",
+    "tagline": "«Научно-фантастический хоррор, где ваш корабль — ваш гроб».",
+    "dice": "d100 (d%)",
+    "players": "3–5",
+    "prep": "~15 мин",
+    "complexity": 2,
+    "foundryStatus": "Community",
+    "heroImage": "https://www.tuesdayknightgames.com/cdn/shop/files/ms-new-header_13.jpg?v=1714335559&width=2400",
+    "description": "Sci-fi хоррор на процентных кубиках. Вы — рабочие, учёные и морпехи на космических кораблях, где всё идёт не так. Система стресса и паники делает каждую ситуацию непредсказуемой. Модульная структура: десятки блестящих сценариев от сообщества. Создание персонажа — 10 минут.",
+    "setting": "Далёкое будущее. Корпорации отправляют экипажи на заброшенные станции, в астероидные шахты и на мёртвые корабли. Что-то ждёт в темноте: инопланетные паразиты, сбойные ИИ, экзистенциальные аномалии. Эстетика — Alien встречает Event Horizon.",
+    "vignette": "Проверка стресса. Вы — Учёный, стресс: 3. Нужно открыть шлюз на мёртвой станции. Бросок Механики — d100 против 35. Выпало 42, провал. Стресс +1. Теперь 4. Проверка паники: d20 + стресс. Выпало 18 — итого 22. «Оцепенение: вы не можете двигаться один раунд.» Морпех кричит: «Давай!» А вы стоите, парализованные, глядя в темноту за шлюзом.",
+    "playstyleTags": ["horror", "survival", "explore"],
+    "mechanics": [
+      { "icon": "brain", "title": "Паника и стресс", "text": "Стресс копится. Переполнение → таблица паники. От заикания до «вы стреляете в ближайшего союзника»." },
+      { "icon": "wrench", "title": "4 класса", "text": "Водитель, Учёный, Андроид, Морпех. Каждый меняет динамику группы и подход к проблемам." },
+      { "icon": "file-text", "title": "Одностраничный лист", "text": "Создание — 10 минут. Идеально для ваншотов, конвенций и мини-кампаний." },
+      { "icon": "book", "title": "Модули", "text": "«A Pound of Flesh», «Gradient Descent», «Hull Breach» — каждый модуль сообщества — шедевр." }
+    ],
+    "quotes": [
+      { "text": "Mothership's panic table created the most cinematic moment I've ever seen in an RPG. One player panicked, shot another player, which caused THAT player to panic. Chain reaction of horror. We were dying laughing and terrified simultaneously.", "author": "u/hull_breach, r/mothershiprpg" },
+      { "text": "Gradient Descent is the best dungeon crawl module ever written for any system. I will die on this hill.", "author": "u/deep_scanner, r/osr" }
+    ],
+    "gallery": [
+      { "src": "https://www.tuesdayknightgames.com/cdn/shop/files/PSD-004.png?v=1713671746&width=1080", "cap": "Интерьерный арт" },
+      { "src": "https://www.tuesdayknightgames.com/cdn/shop/files/Mothership-PSG-armor-mockup.png?v=1713671968&width=1080", "cap": "Броня — справочник" },
+      { "src": "https://www.tuesdayknightgames.com/cdn/shop/files/Mothership-Character-Sheet-mockup.png?v=1713672259&width=1080", "cap": "Лист персонажа" },
+      { "src": "https://www.tuesdayknightgames.com/cdn/shop/files/CoreComponentSpread2024.jpg?v=1714488145&width=1080", "cap": "Содержимое набора" }
+    ],
+    "resources": [
+      { "type": "link", "name": "Официальный сайт", "url": "https://www.tuesdayknightgames.com/pages/mothership-rpg", "fmt": "Web" },
+      { "type": "sheet", "name": "Лист персонажа", "url": "https://cdn.shopify.com/s/files/1/0022/2727/3817/files/Mothership-Character-Sheet.pdf?v=1713672550", "fmt": "PDF" },
+      { "type": "sheet", "name": "Расширенный лист", "url": "https://cdn.shopify.com/s/files/1/0022/2727/3817/files/Mothership_1E_-_Advanced_Character_Sheet_Outlined.pdf?v=1713673196", "fmt": "PDF" },
+      { "type": "sheet", "name": "Манифест корабля", "url": "https://cdn.shopify.com/s/files/1/0022/2727/3817/files/Mothership-Ship-Manifest.pdf?v=1713672727", "fmt": "PDF" },
+      { "type": "tool", "name": "Ширма ведущего", "url": "https://cdn.shopify.com/s/files/1/0022/2727/3817/files/Mothership_Warden_s_Screen.pdf?v=1718223085", "fmt": "PDF" }
+    ]
+  },
+  "blades": {
+    "name": "Blades in the Dark",
+    "publisher": "John Harper / One Seven Design",
+    "tagline": "«Вы — банда отчаянных в тёмном городе, который никогда не спит».",
+    "dice": "Пул d6",
+    "players": "3–5",
+    "prep": "~10 мин",
+    "complexity": 3,
+    "foundryStatus": "Community",
+    "heroImage": "https://legendary-digital-network-assets.s3.amazonaws.com/geekandsundry/wp-content/uploads/2018/05/Vigilantes.jpg",
+    "description": "RPG про криминальную банду в тёмном индустриальном городе. Революционная система: никакого планирования операций заранее — вместо этого флешбэки во время дела. «Что-то идёт не так? Я УЖЕ подкупил охранника вчера». Между делами — фаза даунтайма (отдых между приключениями): лечение, тренировки, развитие базы.",
+    "setting": "Досквол — город, освещённый электрическими барьерами от призраков. Вокруг — мёртвые земли, населённые духами. Внутри — фракции, контролирующие районы: от Серых Плащей (полиция) до Духовных Стражей. Индустриальная готика, демоны и кровь на булыжниках.",
+    "vignette": "Вы в хранилище Серых Плащей. Замок — выше ваших навыков. «Флешбэк,» — говорит Вор. «Вчера я подкупил слесаря, он оставил дверь открытой.» Бросок — 4 на лучшем из двух d6. Частичный успех: дверь открыта, но слесарь оставил записку начальнику. Позиция: отчаянная. Эффект: обычный. Часы «Тревога» заполняются на 2 из 6.",
+    "playstyleTags": ["narrative", "social", "combat"],
+    "mechanics": [
+      { "icon": "clock", "title": "Флешбэки", "text": "Не планируйте заранее. Когда что-то идёт не так — заявите флешбэк: «Я уже подготовился к этому вчера»." },
+      { "icon": "building", "title": "Банда как персонаж", "text": "Репутация, территория, союзники, враги. Банда развивается вместе с игроками." },
+      { "icon": "settings", "title": "Позиция и Эффект", "text": "Каждый бросок: насколько опасно + насколько мощный результат. Две оси — бесконечная гибкость." },
+      { "icon": "moon", "title": "Даунтайм", "text": "Между делами: лечение, тренировки, развитие базы, длительные проекты. Отдельная мини-игра." }
+    ],
+    "quotes": [
+      { "text": "The flashback mechanic singlehandedly fixed my biggest RPG frustration: 2-hour planning sessions where nothing happens. Now we jump straight into the action and plan retroactively. GENIUS.", "author": "u/doskvol_scoundrel, r/bladesinthedark" },
+      { "text": "Blades changed how I think about RPG design. Position and Effect is the most elegant resolution mechanic I've seen. Every other game feels clunky after playing this.", "author": "u/narrative_gm, r/rpg" }
+    ],
+    "gallery": [],
+    "resources": [
+      { "type": "link", "name": "Официальный сайт", "url": "https://bladesinthedark.com/", "fmt": "Web" },
+      { "type": "rules", "name": "Полный SRD (вся игра бесплатно!)", "url": "https://bladesinthedark.com/greetings-scoundrel", "fmt": "Web" },
+      { "type": "sheet", "name": "Player's Kit (все листы)", "url": "https://bladesinthedark.com/sites/default/files/blades_playerkit_v8_2.pdf", "fmt": "PDF" },
+      { "type": "sheet", "name": "Чистый лист персонажа", "url": "https://bladesinthedark.com/sites/default/files/sheets/blades_sheets_v8_2_Blank_Character_Sheet.pdf", "fmt": "PDF" },
+      { "type": "sheet", "name": "Лист фракций", "url": "https://bladesinthedark.com/sites/default/files/sheets/blades_sheets_v8_2_Factions.pdf", "fmt": "PDF" }
+    ]
+  },
+  "wildsea": {
+    "name": "The Wildsea",
+    "publisher": "Mythworks / Felix Isaacs",
+    "tagline": "«Мир утонул в деревьях. Вы плывёте по кронам на бензопиле-корабле».",
+    "dice": "Пул d6",
+    "players": "3–5",
+    "prep": "~20 мин",
+    "complexity": 3,
+    "foundryStatus": "Community",
+    "heroImage": "https://img.itch.zone/aW1nLzgwNTI1NzYuanBn/original/jf%2BYt%2B.jpg",
+    "description": "Самый необычный сеттинг в индустрии. Цивилизация погибла под Зелёным Приливом — деревья выросли на километры, покрыв всё. «Океан» — это кроны деревьев. Корабли режут ветви пилами. Вы — команда одного такого корабля, исследующая дикоморье. Система на нарративных метках вместо числовых бонусов.",
+    "setting": "Дикоморье — бесконечные кроны, полные чудес. Города на ветвях, базары в дуплах, руины старого мира под корнями. Расы: люди-грибы, люди-пауки, живые кактусы, построенные из обломков роботы. Визуально — Миядзаки встречает Мёбиуса.",
+    "vignette": "Ваш корабль-пила застрял в сплетении лиан. Штурман — женщина-паук с меткой «Шёлковые руки» — пытается распутать такелаж. Бросок: 3 кубика, лучший результат — 4, частичный успех. Корабль свободен, но вы привлекли внимание гнезда ос размером с дом. Механик-кактус добавляет метку «Треснувший борт» на карточку корабля. Ремонт — только в ближайшем порту-дупле.",
+    "playstyleTags": ["explore", "narrative", "worldbuild"],
+    "mechanics": [
+      { "icon": "ship", "title": "Корабль-пила", "text": "Ваш корабль режет кроны пилами. Его модификации, команда и маршрут — центр игры." },
+      { "icon": "pen-tool", "title": "Нарративные метки", "text": "Вместо числовых бонусов — описательные теги. «Горящий меч», «Шрам от корня» — каждый влияет на механику." },
+      { "icon": "leaf", "title": "Безумные расы", "text": "Люди-грибы, люди-пауки, живые кактусы. Ни одного эльфа. Ни одного дварфа. Наконец-то." },
+      { "icon": "sprout", "title": "Живой мир", "text": "Лес растёт, мутирует, реагирует. Маршрут, пройденный месяц назад, может быть перекрыт новыми ветвями." }
+    ],
+    "quotes": [
+      { "text": "Wildsea has the most original setting in tabletop RPGs. Period. Sailing a chainsaw-ship across a sea of treetops with a crew of spider-people and sentient cacti? I'm in.", "author": "u/treetop_sailor, r/rpg" },
+      { "text": "The tag-based system feels weird at first if you're used to numbers, but once it clicks, it's incredibly freeing. \"I have 'burning sword'\" is more evocative than \"+2 fire damage.\"", "author": "u/wildkin_writer, r/WildseaRPG" }
+    ],
+    "gallery": [
+      { "src": "https://img.itch.zone/aW1hZ2UvMTMyNjI2My84MDUxMjgyLnBuZw==/original/tY0wGS.png", "cap": "Мир Дикоморья" },
+      { "src": "https://img.itch.zone/aW1hZ2UvMTMyNjI2My84MDUxMjgzLnBuZw==/original/Zti8Xd.png", "cap": "Персонажи и корабли" },
+      { "src": "https://img.itch.zone/aW1hZ2UvMTMyNjI2My84MDUxMjg0LnBuZw==/original/jzpDEX.png", "cap": "Существа дикого моря" },
+      { "src": "https://img.itch.zone/aW1hZ2UvMTMyNjI2My84MDUxMjg1LnBuZw==/original/FulxaS.png", "cap": "Правила и иллюстрации" },
+      { "src": "https://img.itch.zone/aW1hZ2UvMTMyNjI2My84MDUyMjYwLnBuZw==/original/4WEEWR.png", "cap": "Экипаж и снаряжение" }
+    ],
+    "resources": [
+      { "type": "link", "name": "Официальный сайт", "url": "https://felixisaacs.itch.io/thewildsea", "fmt": "Web" },
+      { "type": "rules", "name": "Free Basic Rules", "url": "https://felixisaacs.itch.io/the-wildsea-free-basic-rules", "fmt": "PDF" },
+      { "type": "quickstart", "name": "Приключение One-Armed Scissor", "url": "https://felixisaacs.itch.io/the-wildsea-one-armed-scissor", "fmt": "PDF" },
+      { "type": "tool", "name": "Цифровой лист (Charsmith)", "url": "https://wildsea.charsmith.com/", "fmt": "Web" }
+    ]
+  },
+  "delta-green": {
+    "name": "Delta Green",
+    "publisher": "Arc Dream Publishing",
+    "tagline": "«Ктулху работает на правительство. И вы тоже».",
+    "dice": "d100 (d%)",
+    "players": "3–5",
+    "prep": "~30 мин",
+    "complexity": 3,
+    "foundryStatus": "Official контент",
+    "heroImage": "https://www.delta-green.com/content/images/size/w1200/2024/08/TERROR.png",
+    "description": "Модерновый лавкрафтианский хоррор. Вы — федеральные агенты (ФБР, ЦРУ, АНБ, CDC), тайно борющиеся с космическим ужасом. Днём — бюрократия. Ночью — невозможные операции. Каждая миссия разрушает вашу личную жизнь: семью, друзей, рассудок. Механика отслеживает, как работа пожирает всё.",
+    "setting": "Современные США (или мир). За фасадом привычной реальности — инопланетные боги, культы, правительственные заговоры. Delta Green — нелегальная ячейка внутри спецслужб. Вы получаете SMS от неизвестного номера: «Ночная оперативка. Приезжайте по адресу...» И ваша жизнь никогда не будет прежней.",
+    "vignette": "Вы — агент ФБР. На месте преступления — символы, которых нет ни в одной базе. Бросок Оккультизма: d100, нужно ниже 40. Выпало 38 — успех. Вы узнаёте знак. И теряете 1d6 Рассудка. Дома жена спрашивает, почему вы не пришли на ужин. Бросок на Связи — провал. Связь «Семья» падает с 12 до 10. Телефон вибрирует: новая операция.",
+    "playstyleTags": ["horror", "mystery", "narrative"],
+    "mechanics": [
+      { "icon": "home", "title": "Связи и потери", "text": "У каждого агента — семья, друзья, хобби. Каждая миссия их разрушает. Механика отслеживает деградацию." },
+      { "icon": "brain", "title": "Рассудок", "text": "Модифицированная механика безумия. Сломанный рассудок меняет персонажа необратимо. Нет «лечения»." },
+      { "icon": "file-pen", "title": "Структура операций", "text": "Расследование → планирование → операция → последствия. Каждый сценарий — шедевр паранойи." },
+      { "icon": "shield-check", "title": "Федеральные агенты", "text": "Вы не авантюристы — вы профессионалы с удостоверением. Это меняет всю динамику расследований." }
+    ],
+    "quotes": [
+      { "text": "Delta Green's \"bonds\" system is the most devastating mechanic in any RPG. Watching your agent slowly lose his family because of the missions is heartbreaking. After 6 sessions my character had no bonds left. That hit harder than any monster.", "author": "u/case_officer, r/DeltaGreenRPG" },
+      { "text": "The published operations are insane quality. \"Night at the Opera\" alone has enough content for a year of play. Every scenario feels like a mini horror movie.", "author": "u/green_box, r/rpg" }
+    ],
+    "gallery": [
+      { "src": "https://www.delta-green.com/content/images/size/w720/2026/03/Army-spread.png", "cap": "Армия Третьего Глаза" },
+      { "src": "https://www.delta-green.com/content/images/size/w720/2026/03/1-THE-AGENT.png", "cap": "Агент" },
+      { "src": "https://www.delta-green.com/content/images/size/w720/2026/03/THE-STRANGE-SHIP-1.png", "cap": "Странный корабль" }
+    ],
+    "resources": [
+      { "type": "link", "name": "Официальный сайт", "url": "https://www.delta-green.com/", "fmt": "Web" },
+      { "type": "quickstart", "name": "Need to Know (бесплатный квикстарт, ENnie Award!)", "url": "https://www.drivethrurpg.com/en/product/175760/delta-green-need-to-know-free-starter-rulebook", "fmt": "PDF" },
+      { "type": "sheet", "name": "Briefing Documents (лист + правила)", "url": "https://drivethrurpg.com/product/184104/Delta-Green-Briefing-Documents", "fmt": "PDF" },
+      { "type": "sheet", "name": "Agent Dossiers", "url": "https://drivethrurpg.com/product/234148/Delta-Green-Agent-Dossiers", "fmt": "PDF" }
+    ]
+  },
+  "uvg": {
+    "name": "Ultraviolet Grasslands",
+    "publisher": "Luka Rejec / Exalted Funeral",
+    "tagline": "«Психоделический Шёлковый Путь через умирающие земли».",
+    "dice": "Любые (OSR)",
+    "players": "2–5",
+    "prep": "~15 мин",
+    "complexity": 2,
+    "foundryStatus": "Community (SDM)",
+    "heroImage": "https://i.kickstarter.com/assets/027/487/468/c840ff8095f7e5aae9da7674703ee23d_original.jpg?anim=false&fit=scale-down&origin=ugc&q=92&v=1576152739&width=700&sig=X%2BrPE6dOVBilH74rNZ87u15QrOZsGA%2FGuqIwGlDqdUI%3D",
+    "description": "Не совсем система — скорее мегамодуль-сеттинг для любой OSR-игры. Линейный маршрут через психоделические пустоши — «поинткроул» (путешествие от точки к точке по маршруту). Каждая неделя пути — новая безумная локация. Работает с Cairn, Into the Odd, D&D 5e — адаптируется под любой движок.",
+    "setting": "Вы ведёте торговый караван от Фиолетового Города через ультрафиолетовые степи к Чёрному Городу на краю мира. По пути: кошачьи люди на парусниках, живые горы, руины цивилизаций, которые играли с реальностью. Стиль — Мёбиус + «Жёлтая субмарина» + Dying Earth.",
+    "vignette": "Неделя 7 пути. Караван: два верблюда, наёмник-кошколюд, повозка с фиолетовыми кристаллами. Вы входите в Поющую Пустошь — воздух вибрирует, кристаллы начинают резонировать. Бросок Удачи — провал. Один верблюд сходит с ума от звука и убегает. Половина товара потеряна. Впереди — Стеклянная Ярмарка, где торгуют воспоминаниями.",
+    "playstyleTags": ["explore", "worldbuild", "survival"],
+    "mechanics": [
+      { "icon": "palette", "title": "Арт как контент", "text": "Лука Реец — художник. Каждая страница — произведение искусства. Стиль вдохновляет на игру сам по себе." },
+      { "icon": "package", "title": "Караванная экономика", "text": "Ресурсы, торговля, наёмники. Караван — ваш передвижной дом. Управление им — ключевой геймплей." },
+      { "icon": "route", "title": "Линейный маршрут", "text": "Карта — путь с точками интереса. Каждая неделя — новая локация. Простая структура, бесконечная глубина." },
+      { "icon": "plug", "title": "Системоагностик", "text": "Работает с любой OSR-системой. Cairn, ItO, даже 5e. UVG — контент, а не правила." }
+    ],
+    "quotes": [
+      { "text": "UVG is the most beautiful RPG book I own. Every page makes me want to run a session. Luka Rejec's art IS the game — it does more worldbuilding than 10 pages of lore text.", "author": "u/psychedelic_gm, r/osr" },
+      { "text": "We've been running UVG with Cairn for 20 sessions. Every week the group arrives at a new point and it's always something completely unexpected. The caravan management adds just enough crunch to ground the weirdness.", "author": "u/violet_city_trader, r/rpg" }
+    ],
+    "gallery": [
+      { "src": "https://i.kickstarter.com/assets/027/487/468/c840ff8095f7e5aae9da7674703ee23d_original.jpg?anim=false&fit=scale-down&origin=ugc&q=92&v=1576152739&width=700", "cap": "Kickstarter арт" },
+      { "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4u2A8fuE6SMEBsYZMJjVNW2EJ8oBkqz0RSQ&s", "cap": "Психоделический пейзаж" },
+      { "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzWazJyHA_IvXOKETmI7XSv--JCCXiGhudOw&s", "cap": "Караван" },
+      { "src": "https://www.exaltedfuneral.com/cdn/shop/files/uvg-2e-book-463900.jpg?v=1720802815", "cap": "Разворот книги" },
+      { "src": "https://www.exaltedfuneral.com/cdn/shop/files/uvg-2e-book-296196.jpg?v=1720802815", "cap": "Интерьерный арт" }
+    ],
+    "resources": [
+      { "type": "link", "name": "Официальный сайт", "url": "https://wizardthieffighter.itch.io/uvg2e", "fmt": "Web" },
+      { "type": "quickstart", "name": "Free Player Guide (70 стр.)", "url": "https://wizardthieffighter.itch.io/uvg-free-player-guide", "fmt": "PDF" },
+      { "type": "sheet", "name": "Character Sheets", "url": "https://dimfringes.itch.io/uvg-full-spectrum-character-sheets", "fmt": "PDF" }
+    ]
+  },
+  "microscope": {
+    "name": "Microscope",
+    "publisher": "Ben Robbins / Lame Mage",
+    "tagline": "«Создайте историю целой цивилизации за один вечер».",
+    "dice": "Не нужны",
+    "players": "2–5",
+    "prep": "0 мин",
+    "complexity": 1,
+    "foundryStatus": "Не нужен",
+    "heroImage": "https://img.itch.zone/aW1nLzgzOTE4NjkucG5n/original/hf%2BAZJ.png",
+    "heroImageStyle": "object-fit: contain; padding: 80px 120px; background: linear-gradient(135deg, #0f0e2e, #1e1b4b 40%, #312e81 70%, #1a1747);",
+    "description": "Не RPG в привычном смысле. Это инструмент для совместного создания истории. Без ведущего, без кубиков. Игроки создают эпохи, события внутри эпох и сцены внутри событий — в любом порядке. Масштаб: от тысячелетий до одного разговора. Идеально как Session Zero для любой кампании.",
+    "setting": "Любой! Вы создаёте его сами. Хотите — история галактической империи от рождения до краха. Хотите — история одной семьи через 500 лет. Хотите — история магии от открытия до запрета. Ограничение — только воображение.",
+    "vignette": "Кубиков нет. Мастера нет. Антон создаёт Эпоху: «Восстание машин.» Маша добавляет Событие внутри неё: «Последний человеческий город сдаётся.» Но потом Дима ставит Событие ДО этого: «Люди и машины подписывают мирный договор.» Значит, договор был нарушен? Кем? Маша создаёт Сцену, чтобы ответить на этот вопрос.",
+    "playstyleTags": ["worldbuild", "narrative", "social"],
+    "mechanics": [
+      { "icon": "history", "title": "Фрактальная история", "text": "Эпохи → События → Сцены. Зум от тысячелетий до одного диалога. Бесконечная глубина." },
+      { "icon": "ban", "title": "Без ведущего", "text": "Все равны. Каждый раунд кто-то задаёт фокус. Все строят историю вокруг него." },
+      { "icon": "shuffle", "title": "Нелинейность", "text": "Сначала финал, потом причина. Любой момент в любом порядке. Переворачивает восприятие нарратива." },
+      { "icon": "lightbulb", "title": "Session Zero", "text": "Идеально для создания мира перед кампанией. Создайте вселенную вместе, потом играйте в ней." }
+    ],
+    "quotes": [
+      { "text": "Microscope is the best session zero tool ever created. We used it to build our campaign world and the players are SO much more invested because they created the history themselves.", "author": "u/worldbuilder_gm, r/rpg" },
+      { "text": "Playing Microscope backwards — defining the end of a civilization first, then exploring why it happened — was the most mind-bending storytelling experience I've had at a table.", "author": "u/fractal_historian, r/rpg" }
+    ],
+    "gallery": [
+      { "src": "https://img.itch.zone/aW1hZ2UvNTEzMzI2LzgzOTE4NjIuanBlZw==/original/1pjWRk.jpeg", "cap": "Разворот книги" },
+      { "src": "https://img.itch.zone/aW1hZ2UvNTEzMzI2LzgzOTE4NjQuanBlZw==/original/O5Ehss.jpeg", "cap": "Страница правил" },
+      { "src": "https://img.itch.zone/aW1hZ2UvNTEzMzI2LzgzOTE3MjMuanBn/original/dVdzJT.jpg", "cap": "Пример игры" }
+    ],
+    "resources": [
+      { "type": "link", "name": "Официальный сайт", "url": "https://lamemage.com/microscope/", "fmt": "Web" }
+    ]
+  },
+  "one-ring": {
+    "name": "The One Ring",
+    "publisher": "Free League / Francesco Nepitello",
+    "tagline": "«Единственная игра, достойная Средиземья».",
+    "dice": "d12 + d6",
+    "players": "3–5",
+    "prep": "~25 мин",
+    "complexity": 3,
+    "foundryStatus": "Community",
+    "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/The_one_ring_tower-1440x720.jpg",
+    "description": "Не «D&D в Средиземье», а игра, созданная для передачи духа Толкина. Путешествие — полноценная механика, а не пропуск. Тень — метафизическая угроза, разрушающая героев изнутри. Советы в безопасных гаванях — отдельная фаза с социалкой и развитием. Игра про надежду, а не про убийство орков.",
+    "setting": "Средиземье между «Хоббитом» и «Властелином Колец» (~2946–2977 Т.Э.). Эриадор, Дикоземье, Ривенделл, Шир. Тень Саурона растёт. Хоббиты, гномы, эльфы, люди — каждая культура детально проработана и верна канону. Карты, NPC, локации — всё с любовью к первоисточнику.",
+    "vignette": "Фаза путешествия. Вы — хоббит-разведчик. Путь через Лихолесье: бросок Исследования, d12 + два d6. На кубике Судьбы — Око Саурона. Провал с осложнением: тропа заводит в паутину. Тень растёт — +1 к счётчику Тени. У вас 4 Надежды и 3 Тени. Ещё немного — и Отчаяние. Но впереди Ривенделл. Фаза Совета: отдых, песни, и Элронд, который расскажет о дороге на восток.",
+    "playstyleTags": ["explore", "narrative", "social"],
+    "mechanics": [
+      { "icon": "mountain-snow", "title": "Фаза путешествия", "text": "Роли: проводник, разведчик, охотник, наблюдатель. Путь — не пропуск, а полноценный геймплей." },
+      { "icon": "moon", "title": "Тень", "text": "Тьма проникает в сердце. Каждый героический поступок может обернуться Тенью — и герой станет злодеем." },
+      { "icon": "home", "title": "Советы в гаванях", "text": "Отдых в Ривенделле или Бэг-Энде. Общение с NPC, получение покровителей, восстановление." },
+      { "icon": "heart", "title": "Надежда и отчаяние", "text": "Ресурс Надежды тратится на героические поступки. Когда Надежда кончается — Отчаяние берёт верх." }
+    ],
+    "quotes": [
+      { "text": "The One Ring is the ONLY Tolkien RPG that actually feels like Tolkien. It's not about killing things. It's about the journey, the friendships, and standing up to darkness even when you're afraid. My group cried during our Rivendell fellowship phase.", "author": "u/shire_folk, r/TheOneRing" },
+      { "text": "The Shadow mechanic is a masterpiece. Watching a player's hobbit slowly succumb to weariness and despair was more dramatic than any dragon fight. This game GETS Tolkien.", "author": "u/middle_earth_gm, r/rpg" }
+    ],
+    "gallery": [
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/The_one_ring_Combat-edited-scaled.jpg", "cap": "Бой" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/The_one_ring_20_220-Ranger-Virtue-scaled.jpg", "cap": "Следопыт" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/The_one_ring_19_119_The-Nine-2-scaled.jpg", "cap": "Девять" },
+      { "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/the_one_ring_019_gandalf_frodo_FINAL-scaled.jpg", "cap": "Гендальф и Фродо" }
+    ],
+    "resources": [
+      { "type": "link", "name": "Официальный сайт", "url": "https://freeleaguepublishing.com/games/the-one-ring/", "fmt": "Web" },
+      { "type": "sheet", "name": "Официальный лист", "url": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/The-Lord-of-the-Rings-Roleplaying-character-sheet.pdf", "fmt": "PDF" }
+    ]
+  },
+  "outgunned": {
+    "name": "Outgunned",
+    "publisher": "Two Little Mice / Director's Cut",
+    "tagline": "Die Hard, John Wick, Ocean's Eleven — теперь это ваш фильм.",
+    "dice": "Пул d6",
+    "players": "3-5",
+    "prep": "~15 мин",
+    "complexity": 2,
+    "foundryStatus": "Community",
+    "heroImage": "https://www.belloflostsouls.net/wp-content/uploads/2023/05/Outgunned_Splash2.jpg",
+    "description": "Кинематографичная экшн-RPG, где вы играете героев боевиков. Система Director's Cut: бросаете пул d6, успех — это совпадения (пары, тройки, каре). Создание персонажа за минуты: Роль (Мускул, Мозг, Лицо) + Троп (Отставной коп, Шпион на пенсии, Хакер-подросток). Идеально для ваншотов и мини-кампаний.",
+    "setting": "Любой экшн-фильм. Модули под жанры: шпионский триллер (James Bond), полицейский боевик (Die Hard), ограбление (Ocean's Eleven), боевые искусства (John Wick). Action Flicks добавляют Ghostbusters, Indiana Jones, палп. Ваш стол — съёмочная площадка.",
+    "vignette": "Крыша небоскрёба. Вертолёт злодея взлетает. «Я прыгаю на шасси!» Бросок: 4 кубика. Две тройки — пара! Успех, вы цепляетесь. Heat растёт. Ведущий: «Пилот замечает вас и резко кренит машину.» Следующий игрок: «Стреляю в хвостовой ротор из окна соседнего здания.» Три шестёрки. Тройка! Эпический успех. Вертолёт теряет управление. Стол взрывается.",
+    "playstyleTags": ["combat", "narrative", "social"],
+    "mechanics": [
+      { "icon": "dices", "title": "Совпадения на d6", "text": "Пары, тройки, каре — каждое совпадение круче предыдущего. Push your luck: добавляй кубики, но рискуй провалом." },
+      { "icon": "flame", "title": "Heat (Накал)", "text": "Мера эскалации. Чем дальше — тем больше врагов, ближе дедлайн. Как саундтрек к кульминации." },
+      { "icon": "zap", "title": "Мгновенный старт", "text": "Создание персонажа — 5 минут. Роль + Троп = готовый герой. Сел и играй." },
+      { "icon": "drama", "title": "Action Flicks", "text": "Модули-жанры. Каждый меняет тон и добавляет уникальные механики под конкретный жанр боевика." }
+    ],
+    "quotes": [
+      { "text": "No other recent game captures the rhythm of an action film quite like this. The push-your-luck dice make every roll feel like a slow-motion explosion.", "author": "Geeknative" },
+      { "text": "We played a Die Hard scenario. One player jumped off the roof with a fire hose. He rolled three sixes. The table erupted. This is what Outgunned is for.", "author": "RPGnet" }
+    ],
+    "gallery": [
+      { "src": "https://www.drivethrurpg.com/images/18374/_product_images/449021/Car.jpeg", "cap": "Погоня — арт из книги" },
+      { "src": "https://i.pinimg.com/736x/c3/2f/d9/c32fd93ef75f374d83d3519ea822c128.jpg", "cap": "Экшн-сцена" },
+      { "src": "https://i0.wp.com/twolittlemice.net/wp-content/uploads/2024/01/DL_Hero_Sheets.jpg", "cap": "Листы героев" },
+      { "src": "https://i0.wp.com/twolittlemice.net/wp-content/uploads/2024/01/DL_Schede-Eroe-1.jpg", "cap": "Лист персонажа" }
+    ],
+    "resources": [
+      { "type": "link", "name": "Официальный сайт", "url": "https://twolittlemice.net/outgunned/", "fmt": "Web" },
+      { "type": "sheet", "name": "Листы героев (EN/IT)", "url": "https://legacy.drivethrurpg.com/product/501993/Outgunned--Outgunned-Adventure--Character-Sheets", "fmt": "PDF" },
+      { "type": "quickstart", "name": "Quickstart", "url": "https://i0.wp.com/twolittlemice.net/wp-content/uploads/2024/01/Download_QS_Site.jpg", "fmt": "PDF" }
+    ]
+  },
+  "l5r": {
+    "name": "Legend of the Five Rings 5e",
+    "publisher": "Edge Studio (formerly FFG)",
+    "tagline": "«Ваш меч остр, но ваши слова — острее. Один неверный жест — и клан падёт.»",
+    "dice": "Кастомные (Ring d6 + Skill d12)",
+    "players": "3–5",
+    "prep": "~30 мин",
+    "complexity": 4,
+    "foundryStatus": "Community",
+    "heroImage": "https://cdn.svc.asmodee.net/production-l5r/uploads/image-converter/2023/06/04_Image_L5R-1900x1040.webp",
+    "heroStyle": "background: linear-gradient(135deg, #7c1d1d, #1a1a2e, #1e3a5f);",
+    "description": "Самурайская драма с уникальной системой кастомных кубиков. Кольцевые кубики (d6) и кубики навыков (d12) используют специальные символы вместо цифр. Игрок выбирает подход к каждой проверке через одно из пяти Колец — Огонь, Вода, Земля, Воздух, Пустота — каждое даёт принципиально разный результат. Создание персонажа — через 20 вопросов о прошлом, клане и мотивации. Последний вопрос: «Как умрёт ваш персонаж?»",
+    "setting": "Рокуган — фэнтези-Япония: самураи, кланы, честь, долг. Семь Великих Кланов борются за власть при Императорском дворе. Мир основан на японской, китайской и корейской мифологии.",
+    "vignette": "Совет клана Журавля. Вы должны убедить даймё поддержать ваш план. Бросок Убеждения через Кольцо Огня — страстная речь. Два успеха, но на кубике — символ Раздора. Ваш голос дрожит. Раздор растёт до 5 — вы на грани. Ещё один Раздор — и маска слетит. Весь зал увидит ваш гнев. Для самурая это хуже смерти.",
+    "playstyleTags": ["social", "narrative", "combat"],
+    "mechanics": [
+      { "icon": "circle-dot", "title": "Система Колец", "text": "5 колец: Огонь, Вода, Земля, Воздух, Пустота — игрок выбирает через какое Кольцо подходить к проверке, каждое даёт разный результат." },
+      { "icon": "heart-crack", "title": "Раздор (Strife)", "text": "Эмоциональное напряжение копится при бросках. Переполнение → «снятие маски» — потеря контроля на публике. В обществе где честь = жизнь, показать эмоции = позор." },
+      { "icon": "file-pen", "title": "20 вопросов", "text": "Создание персонажа через 20 вопросов о его прошлом, клане, мотивации. Последний: «Как умрёт ваш персонаж?»" },
+      { "icon": "crown", "title": "Честь, Слава, Статус", "text": "Три отдельные шкалы репутации, каждая влияет на разные социальные ситуации." }
+    ],
+    "quotes": [
+      { "text": "The Strife mechanic is my favorite addition to any RPG. It mechanically represents the tension between duty and emotion that IS the core of samurai drama.", "author": "r/rpg" },
+      { "text": "The 20 Questions character creation is the best I've ever seen. By the time you're done, you know your character better than characters you've played for years.", "author": "r/l5r" }
+    ],
+    "gallery": [
+      { "src": "https://cdn.svc.asmodee.net/production-l5r/uploads/image-converter/2023/06/01a_Cover_Illustration-1900x1900.webp", "cap": "Обложка Core Rulebook" },
+      { "src": "https://cdn.svc.asmodee.net/production-l5r/uploads/image-converter/2023/06/04_Image_L5R-1900x1040.webp", "cap": "Самураи Рокугана" }
+    ],
+    "resources": [
+      { "type": "link", "name": "Официальный сайт", "url": "https://www.edge-studio.net/shares/legend-of-the-five-rings/", "fmt": "Web" }
+    ]
+  },
+  "draw-steel": {
+    "name": "Draw Steel",
+    "publisher": "MCDM Productions / Matt Colville",
+    "tagline": "«Каждый удар — кинематографичен. Промахов не существует. Вопрос лишь — насколько вы круты.»",
+    "dice": "2d10",
+    "players": "3–5",
+    "prep": "~25 мин",
+    "complexity": 3,
+    "foundryStatus": "Community",
+    "heroImage": "https://www.belloflostsouls.net/wp-content/uploads/2025/08/DrawSteel_Monsters_header.jpg",
+    "heroStyle": "background: linear-gradient(135deg, #4a1942, #1a1a2e, #0f3460);",
+    "description": "Героическое фэнтези нового типа. Не толкиновское, не днд-шное. Мир Ордена — место, где герои действительно меняют историю. Демоны, рыцари, политика и надежда. Тон: оптимистично-героический. Каждое действие ВСЕГДА что-то делает — кубики определяют СКОЛЬКО, а не ДА/НЕТ. Промахов не существует.",
+    "setting": "Героическое фэнтези нового типа. Не толкиновское, не днд-шное. Мир Ордена — место, где герои действительно меняют историю. Демоны, рыцари, политика и надежда. Тон: оптимистично-героический.",
+    "vignette": "Бой с некромантом. Ваш Тактик приказывает союзнику сместиться — бесплатное перемещение. Шедоу проскальзывает за спину врага. 2d10: 15, успех второго уровня! Критический удар + эффект «Ослепление». Некромант шатается. Ярость вашего Фьюри нарастает — каждая победа открывает новые способности. Следующий удар будет ЕЩЁ мощнее.",
+    "playstyleTags": ["combat", "narrative", "narrative"],
+    "mechanics": [
+      { "icon": "zap", "title": "Нет пустых ходов", "text": "Каждое действие ВСЕГДА что-то делает. Кубики определяют СКОЛЬКО, а не ДА/НЕТ. Промахов не существует." },
+      { "icon": "trophy", "title": "Victories", "text": "Накапливаются в бою и вне боя. Чем больше побед — тем мощнее способности. Снежный ком героизма." },
+      { "icon": "layout-grid", "title": "Тактический бой", "text": "Позиционирование, зоны контроля, реакции. Каждый класс играется по-разному." },
+      { "icon": "message-circle", "title": "Переговоры как механика", "text": "Не просто «бросок на Убеждение», а структурированная система с раундами, аргументами и ставками." }
+    ],
+    "quotes": [
+      { "text": "Draw Steel is what D&D 4e wanted to be but couldn't. Every class feels unique, every turn matters, and the \"no null results\" philosophy means combat never drags.", "author": "r/rpg" },
+      { "text": "Matt Colville spent $4.6M and years of design to answer one question: what if every single thing you do in combat felt awesome? He nailed it.", "author": "r/mattcolville" }
+    ],
+    "gallery": [
+      { "src": "https://www.rascal.news/content/images/2025/06/Thomas-2-.png", "cap": "Герои Draw Steel" },
+      { "src": "https://i.ytimg.com/vi/5n4w7DQhXGg/maxresdefault.jpg", "cap": "Тактический бой" },
+      { "src": "https://shop.mcdmproductions.com/cdn/shop/files/DrawSteel_Heroes_300x.png?v=1773949925", "cap": "Draw Steel: Heroes" },
+      { "src": "https://shop.mcdmproductions.com/cdn/shop/files/DrawSteel_Monsters_300x.png?v=1773949925", "cap": "Draw Steel: Monsters" }
+    ],
+    "resources": [
+      { "type": "link", "name": "Официальный сайт", "url": "https://www.mcdmproductions.com/draw-steel-resources", "fmt": "Web" }
+    ]
+  },
+  "nimble": {
+    "name": "Nimble 2e",
+    "publisher": "Nimble Co.",
+    "tagline": "«D&D 5e, но быстрее, проще и без бросков на попадание. Бой за 20 минут, а не за 2 часа.»",
+    "dice": "Только урон (d6-d12, взрыв.)",
+    "players": "3–6",
+    "prep": "~10 мин",
+    "complexity": 2,
+    "foundryStatus": "Нет",
+    "heroImage": "https://nimblerpg.com/cdn/shop/files/HeroesFullArt.jpg?v=1741803078&width=3840",
+    "heroStyle": "background: linear-gradient(135deg, #1a3a2a, #0f1a0f, #2d1b00);",
+    "description": "Сеттинг-агностик. Совместим с D&D 5e контентом — монстры, приключения, магические предметы конвертируются. Любой фэнтези-мир. Атаки всегда попадают: нет броска на попадание, бросается только урон. 1 = промах, всё остальное — попадание. Бои в 3 раза быстрее.",
+    "setting": "Сеттинг-агностик. Совместим с D&D 5e контентом (монстры, приключения, магические предметы конвертируются). Любой фэнтези-мир.",
+    "vignette": "Ваш ход: три действия. Первое — перемещение за колонну. Второе — удар мечом: d8 урона, выпало 8! Взрыв! Ещё d8 — 5. Итого 13 урона, огр шатается. Третье действие — «Рывок»: ещё одно перемещение, вы отступаете за укрытие. Следующий игрок — маг: три действия, три заклинания. Бой длится 20 минут, не 2 часа.",
+    "playstyleTags": ["combat", "explore", "combat"],
+    "mechanics": [
+      { "icon": "zap", "title": "Атаки всегда попадают", "text": "Нет броска на попадание. Бросается только урон. 1 = промах. Всё остальное — попадание. Бои в 3 раза быстрее." },
+      { "icon": "dumbbell", "title": "3 действия за ход", "text": "Вместо действие + бонусное + реакция — три «героических действия»: атака, перемещение, заклинание — в любой комбинации." },
+      { "icon": "dices", "title": "Взрывающиеся кубики", "text": "Максимум на кубике = бросай ещё и добавляй. d6 → 6 → ещё d6 → 4 = 10 урона!" },
+      { "icon": "swords", "title": "Легендарные монстры с фазами", "text": "Как в видеоиграх. Босс меняет способности при потере HP. Каждая фаза — новый бой." }
+    ],
+    "quotes": [
+      { "text": "Nimble fixed everything I hated about 5e combat in one elegant move: remove the attack roll. Now every turn something happens. My sessions went from 3-hour combats to 45-minute cinematic battles.", "author": "r/rpg" },
+      { "text": "The boss phase mechanic is stolen straight from video games and it works PERFECTLY at the table. When the dragon roared and entered Phase 2, my players genuinely panicked.", "author": "r/nimblerpg" }
+    ],
+    "gallery": [
+      { "src": "https://nimblerpg.com/cdn/shop/files/HeroesFullArt.jpg?v=1741803078&width=3840", "cap": "Герои Nimble" },
+      { "src": "https://nimblerpg.com/cdn/shop/files/Maw.jpg?v=1741832672&width=3840", "cap": "Легендарный монстр Maw" },
+      { "src": "https://nimblerpg.com/cdn/shop/files/GMScreenWrap1.jpg?v=1741797122", "cap": "Ширма мастера" },
+      { "src": "https://nimblerpg.com/cdn/shop/articles/dragonArtFullB.jpg?v=1770732852&width=300", "cap": "Дракон" }
+    ],
+    "resources": [
+      { "type": "link", "name": "Официальный сайт", "url": "https://nimblerpg.com/", "fmt": "Web" }
+    ]
+  }
+};
