@@ -11,18 +11,25 @@ const SYSTEM_GROUPS = {
     'tactical': ['draw-steel', 'nimble']
 };
 
-const TAG_CONFIG = {
-    explore:    { icon: 'compass',    label: 'Исследование' },
-    combat:     { icon: 'swords',     label: 'Бой' },
-    narrative:  { icon: 'book-open',  label: 'Нарратив' },
-    horror:     { icon: 'ghost',      label: 'Хоррор' },
-    social:     { icon: 'users',      label: 'Социалка' },
-    mystery:    { icon: 'search',     label: 'Расследование' },
-    survival:   { icon: 'skull',      label: 'Выживание' },
-    worldbuild: { icon: 'globe',      label: 'Worldbuilding' },
-    tactical:   { icon: 'crosshair',  label: 'Тактика' },
-    sandbox:    { icon: 'map',        label: 'Песочница' },
+const TAG_ICONS = {
+    explore: 'compass', combat: 'swords', narrative: 'book-open',
+    horror: 'ghost', social: 'users', mystery: 'search',
+    survival: 'skull', worldbuild: 'globe', tactical: 'crosshair', sandbox: 'map',
 };
+const TAG_I18N = {
+    explore: 'tag_exploration', combat: 'tag_combat', narrative: 'tag_narrative',
+    horror: 'tag_horror', social: 'tag_social', mystery: 'tag_mystery',
+    survival: 'tag_survival', worldbuild: 'tag_worldbuilding', tactical: 'tag_tactical', sandbox: 'tag_sandbox',
+};
+function tagLabel(tag) {
+    const key = TAG_I18N[tag] || 'tag_' + tag;
+    const val = t(key);
+    return val !== key ? val : tag;
+}
+// TAG_CONFIG proxy for backward compatibility
+const TAG_CONFIG = new Proxy({}, {
+    get(_, tag) { return { icon: TAG_ICONS[tag] || 'tag', label: tagLabel(tag) }; }
+});
 
 // ============ DEBOUNCED LUCIDE REFRESH ============
 let _lucideTimer;
