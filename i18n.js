@@ -203,9 +203,9 @@ function setLang(lang) {
 }
 
 function applyLang() {
-    // Highlight active lang button on setup screen
+    // Highlight active lang buttons
     document.querySelectorAll('.setup-lang-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.id === `setup-lang-${currentLang}`);
+        btn.classList.toggle('active', btn.id.endsWith(`-${currentLang}`));
     });
     // Update all elements with data-i18n attribute
     document.querySelectorAll('[data-i18n]').forEach(el => {

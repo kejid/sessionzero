@@ -200,6 +200,11 @@ body {
     color: #555;
     margin-top: 4px;
 }
+.sidebar-divider {
+    height: 1px;
+    background: var(--border-subtle);
+    margin: 6px 24px;
+}
 .nav-group { padding: 16px 0 8px; }
 .nav-group-title {
     padding: 0 24px 8px;
@@ -1191,6 +1196,18 @@ body.browse-mode .setup-players-btn { display: flex; }
     gap: 10px;
     margin-top: 16px;
 }
+.editor-btn-row .setup-start-btn {
+    flex: 1;
+    height: 48px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.editor-btn-row .setup-start-btn.secondary {
+    margin-top: 0;
+}
 
 /* System Selector Modal */
 .sys-selector-overlay {
@@ -1214,11 +1231,20 @@ body.browse-mode .setup-players-btn { display: flex; }
     max-width: 560px;
     width: 100%;
 }
+.sys-selector-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.sys-selector-header .setup-lang-toggle {
+    margin-bottom: 0;
+}
 .sys-selector-card h1 {
     font-family: 'Unbounded', sans-serif;
     font-size: 22px;
     color: var(--accent);
-    margin-bottom: 8px;
+    margin-bottom: 0;
 }
 .sys-selector-card p {
     font-size: 14px;
@@ -1304,7 +1330,7 @@ body.browse-mode .setup-players-btn { display: flex; }
 
 /* Sidebar bottom section */
 .sidebar-bottom {
-    padding: 8px 0 16px;
+    padding: 0;
 }
 
 /* =============================================

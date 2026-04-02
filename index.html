@@ -90,20 +90,29 @@
     <button class="catalog-btn" onclick="showPage('results')">
         <i data-lucide="layout-grid"></i> <span data-i18n="btn_catalog">КАТАЛОГ СИСТЕМ</span>
     </button>
-    <button class="pres-toggle" onclick="togglePresentation()">
-        <i data-lucide="presentation"></i> <span data-i18n="btn_presentation">Режим презентации</span>
+
+    <div class="sidebar-divider"></div>
+
+    <button class="pres-toggle" onclick="openSystemSelector()">
+        <i data-lucide="list-checks"></i> <span data-i18n="btn_manage_systems">Управление списком</span>
+    </button>
+    <button class="pres-toggle" onclick="openEditor()">
+        <i data-lucide="plus-circle"></i> <span data-i18n="btn_add_system">Добавить систему</span>
+    </button>
+
+    <div class="sidebar-divider"></div>
+
+    <button class="setup-players-btn" onclick="enableVoting()">
+        <i data-lucide="users"></i> <span data-i18n="btn_setup_players">Настроить игроков и голосование</span>
     </button>
     <button class="reset-btn-sidebar reset-btn" onclick="resetPlayers()">
         <i data-lucide="rotate-ccw"></i> <span data-i18n="btn_reset">Сбросить игроков и голоса</span>
     </button>
-    <button class="setup-players-btn" onclick="enableVoting()">
-        <i data-lucide="users"></i> <span data-i18n="btn_setup_players">Настроить игроков и голосование</span>
+    <button class="pres-toggle" onclick="togglePresentation()">
+        <i data-lucide="presentation"></i> <span data-i18n="btn_presentation">Режим презентации</span>
     </button>
     <button class="pres-toggle" onclick="setLang(currentLang === 'ru' ? 'en' : 'ru')">
         <i data-lucide="languages"></i> <span data-i18n="btn_lang">EN / RU</span>
-    </button>
-    <button class="pres-toggle" onclick="openSystemSelector()">
-        <i data-lucide="list-checks"></i> <span data-i18n="btn_manage_systems">Управление списком</span>
     </button>
 
     <div class="nav-group" id="nav-group-osr">
@@ -126,11 +135,6 @@
         <div class="nav-group-title" data-i18n="nav_group_custom">Мои системы</div>
     </div>
 
-    <div class="sidebar-bottom">
-        <button class="pres-toggle" onclick="openEditor()">
-            <i data-lucide="plus-circle"></i> <span data-i18n="btn_add_system">Добавить систему</span>
-        </button>
-    </div>
 </nav>
 
 <!-- Editor Overlay -->
@@ -216,7 +220,13 @@
 <!-- System Selector Modal -->
 <div id="sys-selector-overlay" class="sys-selector-overlay hidden">
     <div class="sys-selector-card">
-        <h1 data-i18n="sys_selector_title">Управление списком</h1>
+        <div class="sys-selector-header">
+            <h1 data-i18n="sys_selector_title">Управление списком</h1>
+            <div class="setup-lang-toggle">
+                <button onclick="setLang('en')" class="setup-lang-btn" id="sel-lang-en">EN</button>
+                <button onclick="setLang('ru')" class="setup-lang-btn" id="sel-lang-ru">RU</button>
+            </div>
+        </div>
         <p data-i18n="sys_selector_desc">Отметьте системы, которые хотите показать. Скрытые системы не отображаются в навигации и результатах.</p>
         <div class="sys-selector-actions">
             <button onclick="sysSelectAll()" data-i18n="sys_selector_all">Выбрать все</button>
