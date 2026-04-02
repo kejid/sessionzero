@@ -2,7 +2,9 @@
 
 Interactive presentation of 27 tabletop RPG systems. Explore, compare, and vote with your group on what to play next.
 
-**[Live Demo](#)** | **[Screenshot](#)**
+**[Live Demo](https://kejid.github.io/ttrpg-showcase/)**
+
+![TTRPG Showcase](https://raw.githubusercontent.com/kejid/ttrpg-showcase/master/screenshot.png)
 
 ## Features
 
