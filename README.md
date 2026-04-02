@@ -8,7 +8,7 @@
 
 ## Features
 
-- **27 systems** — OSR, Free League, narrative, tactical — with full bilingual content (RU/EN)
+- **Multiple systems** — OSR, Free League, narrative, tactical — with full bilingual content (RU/EN)
 - **Player voting** — set up players, vote on favorites, see ranked results
 - **Browse mode** — skip voting and just explore the catalog as card grid or list
 - **Presentation mode** — fullscreen slides with keyboard navigation (`F` to toggle, arrows to navigate)
