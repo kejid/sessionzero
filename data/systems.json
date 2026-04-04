@@ -1817,7 +1817,7 @@
     "prep": "~15 мин",
     "complexity": 2,
     "foundryStatus": "Community (SDM)",
-    "heroImage": "https://www.exaltedfuneral.com/cdn/shop/files/uvg-2e-book-610450.jpg",
+    "heroImage": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcbd0f960-e54b-438b-a2a2-4021279bba97_1600x900.jpeg",
     "description": "Не совсем система — скорее мегамодуль-сеттинг для любой OSR-игры. Линейный маршрут через психоделические пустоши — «поинткроул» (путешествие от точки к точке по маршруту). Каждая неделя пути — новая безумная локация. Работает с Cairn, Into the Odd, D&D 5e — адаптируется под любой движок.",
     "setting": "Вы ведёте торговый караван от Фиолетового Города через ультрафиолетовые степи к Чёрному Городу на краю мира. По пути: кошачьи люди на парусниках, живые горы, руины цивилизаций, которые играли с реальностью. Стиль — Мёбиус + «Жёлтая субмарина» + Dying Earth.",
     "vignette": "Неделя 7 пути. Караван: два верблюда, наёмник-кошколюд, повозка с фиолетовыми кристаллами. Вы входите в Поющую Пустошь — воздух вибрирует, кристаллы начинают резонировать. Бросок Удачи — провал. Один верблюд сходит с ума от звука и убегает. Половина товара потеряна. Впереди — Стеклянная Ярмарка, где торгуют воспоминаниями.",
@@ -2369,6 +2369,220 @@
         "type": "link",
         "name": "Официальный сайт",
         "url": "https://nimblerpg.com/",
+        "fmt": "Web"
+      }
+    ]
+  },
+  "star-wars-ffg": {
+    "name": "Star Wars RPG (FFG / Edge Studio)",
+    "publisher": "Fantasy Flight Games / Edge Studio (Asmodee)",
+    "tagline": "«Давным-давно, в далёкой-далёкой галактике… ваша история только начинается».",
+    "dice": "Нарративные кубики (Narrative Dice System)",
+    "players": "3–6",
+    "prep": "~30–60 мин",
+    "complexity": 3,
+    "foundryStatus": "Community",
+    "heroImage": "https://static0.srcdn.com/wordpress/wp-content/uploads/2021/01/Star-Wars-Tabletop-RPGs-Fantasy-Flight-Games-Force-And-Destiny.jpg",
+    "description": "Три полностью совместимых базовых книги — Edge of the Empire (2013), Age of Rebellion (2014) и Force and Destiny (2015) — охватывают все грани вселенной Звёздных войн. Сердце системы — уникальные нарративные кубики с символами вместо цифр. Каждый бросок разрешается по двум осям: Успех/Провал и Преимущество/Угроза. Можно добиться цели, но попасть в переплёт, или с треском провалиться — и всё равно обнаружить нечто полезное. Триумф и Отчаяние — редкие символы на кубиках Мастерства и Вызова — создают моменты кинематографического накала. Система поощряет совместное повествование: игроки не просто бросают кубики, а интерпретируют результат вместе с мастером, формируя историю на лету. Книги отличаются выдающимся качеством: 450+ страниц полноцветных иллюстраций, детально проработанных правил и обширного бестиария. Изначально издавалась Fantasy Flight Games, а с 2020 года поддерживается Edge Studio (дочерняя компания Asmodee).\n\n**Edge of the Empire** — книга для историй на задворках галактики. Контрабандисты, охотники за головами, наёмники, колонисты и техники. Уникальная механика — Обязательство (Obligation): у каждого персонажа есть долг, зависимость или тёмная тайна, которая может настигнуть в самый неподходящий момент. Перед каждой сессией мастер бросает d100 — и чьё-то прошлое стучится в дверь. Тон: «Хан Соло встречает Firefly».\n\n**Age of Rebellion** — война Альянса повстанцев против Галактической Империи. Солдаты, шпионы, командиры, дипломаты и пилоты. Уникальная механика — Долг (Duty): вклад персонажа в дело Восстания, от разведки до саботажа. По мере роста Долга группа получает доступ к ресурсам Альянса — кораблям, базам, подкреплениям. Тон: «Изгой-один» и «Звёздные войны: Повстанцы».\n\n**Force and Destiny** — история последних форсъюзеров в эпоху, когда джедаи уничтожены, а Империя охотится на всех, кто чувствует Силу. Стражи, мистики, воины, искатели и часовые. Уникальная механика — Моральность (Morality): числовая шкала от 0 до 100, определяющая положение персонажа между Светлой и Тёмной стороной Силы. Каждый сеанс использования Силы — искушение: тёмные очки Силы мощнее, но приближают к падению. Тон: «Странствующий рыцарь-джедай ищет утраченное знание».",
+    "setting": "Галактика Звёздных войн в эпоху Галактической гражданской войны — между Эпизодами IV и VI. Все три книги полностью совместимы: в одной партии могут сойтись контрабандист с Обязательством, повстанец с Долгом и падаван с Моральностью. Галактика охватывает тысячи миров — от экуменополиса Корусанта до пустынного Татуина, от ледяного Хота до лесных лун Эндора. Внешнее Кольцо — территория хаттов, пиратов и свободных торговцев. Ядерные Миры — под железной пятой Империи. А между ними — бесконечные возможности для приключений: заброшенные храмы джедаев, кантины на пыльных заставах, имперские тюремные баржи и астероидные поля, полные обломков войны.",
+    "vignette": "Корабль тряхнуло. «Имперский патруль», — буркнул пилот-родианец. Механик-тви'лечка собирает пул: два зелёных кубика Способности за свой навык Механики, один жёлтый кубик Мастерства за высокий Интеллект, и кубик Подъёма за недавно установленный ускоритель. Мастер добавляет два фиолетовых кубика Сложности и красный кубик Вызова — модификация двигателя в разгар погони не шутка. Бросок: два Успеха, одна Угроза и… Триумф. Двигатели взревели — корабль рванул вперёд, оставив TIE-истребители позади. Но Угроза означает, что перегрузка выбила систему жизнеобеспечения на нижней палубе. А Триумф? Пилот ухмыльнулся: «Мы только что побили рекорд Кесселя.» Корабль вошёл в гиперпространство — прямо перед носом звёздного разрушителя.",
+    "playstyleTags": [
+      "action",
+      "narrative",
+      "social",
+      "explore"
+    ],
+    "mechanics": [
+      {
+        "icon": "star",
+        "title": "Нарративные кубики",
+        "text": "Семь типов кубиков с символами. Успех + Угроза, Провал + Преимущество — каждый бросок создаёт многослойную историю, а не просто «попал/промахнулся»."
+      },
+      {
+        "icon": "compass",
+        "title": "Очки Судьбы",
+        "text": "Общий пул светлых и тёмных жетонов. Игроки тратят светлые для усиления бросков, мастер — тёмные. Баланс постоянно смещается, создавая напряжение."
+      },
+      {
+        "icon": "flame",
+        "title": "Обязательство / Долг / Моральность",
+        "text": "Каждая книга добавляет уникальную механику драмы: долги контрабандиста, служба повстанца или борьба форсъюзера между Светом и Тьмой."
+      },
+      {
+        "icon": "sword",
+        "title": "Таланты и специализации",
+        "text": "Древа талантов вместо уровней. Каждая карьера имеет несколько специализаций, и персонаж может брать деревья из других карьер, создавая уникальные комбинации."
+      }
+    ],
+    "quotes": [
+      {
+        "text": "The narrative dice system is pure genius. Elegant. Intuitive. Easy to learn, but requires practice and dedication to master. It encourages players to collaborate and contribute to the narrative, making it a more cooperative storytelling experience.",
+        "author": "u/GroggyGolem, r/swrpg"
+      },
+      {
+        "text": "I ran Edge of the Empire for two years. The moment that sold me was when a player failed a Piloting check but rolled three Advantages — so she crashed the speeder into the hangar bay door, but the explosion took out the guards on the other side. That's Star Wars.",
+        "author": "u/Kill_Welly, r/rpg"
+      },
+      {
+        "text": "The books are among the most gorgeous I have ever run a game from. The production quality is insane, and the art captures the feel of the original trilogy perfectly. Edge Studio has kept the line alive and I'm grateful.",
+        "author": "u/Ghostofman, r/swrpg"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "https://ttrpgfans.com/wp-content/uploads/2025/11/star-wars-rpg-reprints-1.png",
+        "cap": "Три базовых книги — Edge of the Empire, Age of Rebellion, Force and Destiny"
+      },
+      {
+        "src": "https://images.steamusercontent.com/ugc/448482024259167070/88E9804631FCAE71435C83D2A119769A7A167F11/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+        "cap": "Нарративные кубики — сердце системы"
+      },
+      {
+        "src": "https://www.belloflostsouls.net/wp-content/uploads/2017/07/swr10_art-1.jpg",
+        "cap": "Повстанцы в бою — арт из Age of Rebellion"
+      },
+      {
+        "src": "https://images-cdn.fantasyflightgames.com/filer_public/79/62/79625561-208b-4e9f-b7aa-ed7976cb3930/swe14_preview3.jpg",
+        "cap": "Авантюристы Внешнего Кольца — арт из Edge of the Empire"
+      }
+    ],
+    "resources": [
+      {
+        "type": "link",
+        "name": "Edge Studio — официальная страница",
+        "url": "https://www.edge-studio.net/shares/star-wars/",
+        "fmt": "Web"
+      },
+      {
+        "type": "sheet",
+        "name": "Лист персонажа (Edge of the Empire)",
+        "url": "https://images-cdn.fantasyflightgames.com/ffg_content/StarWarsRPG/edge-of-the-empire/support/edge-of-the-empire-character-sheet.pdf",
+        "fmt": "PDF"
+      },
+      {
+        "type": "tool",
+        "name": "OggDude's Character Generator",
+        "url": "https://myswrpg.com/oggdudes-character-generator-and-gm-tools/",
+        "fmt": "App"
+      },
+      {
+        "type": "tool",
+        "name": "RPG Sessions — онлайн-платформа и дайс-роллер",
+        "url": "https://rpgsessions.com/",
+        "fmt": "Web"
+      },
+      {
+        "type": "tool",
+        "name": "SkyJedi Dice Roller",
+        "url": "https://dice.skyjedi.com/",
+        "fmt": "Web"
+      },
+      {
+        "type": "link",
+        "name": "SWRPG Community — фан-портал",
+        "url": "https://www.swrpgcommunity.com/",
+        "fmt": "Web"
+      },
+      {
+        "type": "link",
+        "name": "Foundry VTT модуль",
+        "url": "https://foundryvtt.com/packages/starwarsffg",
+        "fmt": "Web"
+      }
+    ]
+  },
+  "call-of-cthulhu": {
+    "name": "Call of Cthulhu",
+    "publisher": "Chaosium Inc.",
+    "tagline": "«Тайны, которые лучше бы не раскрывать. Истина, от которой сходят с ума».",
+    "dice": "d100 (процентильная система)",
+    "players": "2–6",
+    "prep": "~30–60 мин",
+    "complexity": 3,
+    "foundryStatus": "Community + Official modules",
+    "heroImage": "https://www.tribality.com/wp-content/uploads/2019/04/richard-wright-cthulhu-museum1-1024x512.jpg",
+    "description": "Старейшая и самая знаменитая хоррор-RPG в мире, впервые изданная в 1981 году Сэнди Петерсеном. Седьмая редакция — современная, отполированная версия классики. Основа — процентильная система Basic Roleplaying (BRP): у каждого навыка есть значение в процентах, и чтобы преуспеть, нужно выбросить на d100 меньше этого числа. Просто, интуитивно, элегантно. Но суть игры — не в кубиках. Call of Cthulhu — это расследование. Вы не воины и не герои. Вы — обычные люди: частные детективы, профессора, журналисты — которые столкнулись с тем, чего не должно существовать. Каждая встреча с непостижимым оставляет шрамы: механика Рассудка (Sanity) отслеживает медленное сползание персонажа в безумие. В отличие от D&D, где персонажи становятся сильнее, в Call of Cthulhu они деградируют. Это не power fantasy — это греческая трагедия за игровым столом, и именно поэтому система живёт уже более 40 лет.",
+    "setting": "Классический сеттинг — Америка 1920-х годов, эпоха джаза, сухого закона и тайных культов. Газовые фонари, библиотеки Мискатоникского университета, туманные доки Инсмута. Но Call of Cthulhu не ограничена одной эпохой: официальные дополнения охватывают викторианскую Англию (Cthulhu by Gaslight), Древний Рим (Cthulhu Invictus), Средневековье (Cthulhu Dark Ages), современность и даже далёкое будущее. Ужас Лавкрафта вне времени — Великие Древние ждали миллиарды лет до появления человечества и будут ждать после. Мир полон тайных культов, запретных книг вроде Некрономикона и существ, один взгляд на которых ломает разум.",
+    "vignette": "Библиотека Мискатоникского университета, 2 часа ночи. Ваш профессор — д-р Элис Уоррен — листает дневник пропавшего коллеги. Бросок Library Use (65%) — 42, успех. Вы находите запись: «Маяк на мысе Кингспорт. Свет, который не должен гореть.» На маяке — символы, нарисованные кровью. Бросок Cthulhu Mythos — вы узнаёте знак Дагона. Проверка Рассудка: 1d6 потери. Вы выбрасываете 4. Рассудок падает с 55 до 51. Д-р Уоррен начинает слышать пение из-под пола. Хранитель (ведущий) говорит: «Ты понимаешь, что текст в дневнике — это не записи. Это молитва. И ты только что прочитала её вслух.»",
+    "playstyleTags": [
+      "mystery",
+      "horror",
+      "narrative",
+      "social"
+    ],
+    "mechanics": [
+      {
+        "icon": "brain",
+        "title": "Рассудок (Sanity)",
+        "text": "Уникальная механика безумия. Каждая встреча с потусторонним отнимает очки Рассудка. На нуле — персонаж безвозвратно сходит с ума. Это не ментальные хиты — это медленное, неизбежное сползание в безумие с фобиями, маниями и срывами."
+      },
+      {
+        "icon": "target",
+        "title": "Процентильная система (d100)",
+        "text": "Каждый навык — число от 1 до 99. Бросьте d100 ниже — успех. Половина значения — сложный успех, пятая часть — экстремальный. Никаких таблиц модификаторов — всё интуитивно понятно."
+      },
+      {
+        "icon": "eye",
+        "title": "Расследование",
+        "text": "Сердце игры — не бой, а поиск улик, опрос свидетелей, изучение древних текстов. Бой — крайняя мера и почти всегда плохая идея. Монстры Мифоса сильнее любого человека."
+      },
+      {
+        "icon": "book",
+        "title": "Pushed Rolls и Удача",
+        "text": "Провалили бросок? Можно «надавить» (pushed roll) — попробовать ещё раз, но при повторном провале последствия будут катастрофическими. Очки Удачи — невосполнимый ресурс для спасения в критический момент."
+      }
+    ],
+    "quotes": [
+      {
+        "text": "Call of Cthulhu is unequivocally the greatest role-playing game ever written. Unlike D&D, characters deteriorate over time rather than grow stronger — it has to be about something besides an adolescent power fantasy.",
+        "author": "Ben Riggs & Ken Hite, Nerdist"
+      },
+      {
+        "text": "Unifying everything to percentages and getting rid of the resistance table are things they needed to do for decades. The Luck mechanic is another dwindling resource like Sanity, but the player has more control.",
+        "author": "eyeheartawk & Committed Hero, EN World"
+      },
+      {
+        "text": "Basic Roleplaying has to be one of the simplest yet flexible core mechanics in RPGs. Roll this number, get under the number, and you've succeeded. The sanity system makes the horrors mean something much more than just monsters who can kill you.",
+        "author": "harunmushod, EN World"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "https://www.rpgtabletopgames.com/wp-content/uploads/call-of-cthulhu-rpg.jpg",
+        "cap": "Call of Cthulhu — базовый набор книг 7-й редакции"
+      },
+      {
+        "src": "https://www.tribality.com/wp-content/uploads/2019/04/richard-wright-cthulhu-museum1-1024x512.jpg",
+        "cap": "Музей ужасов — арт Ричарда Райта"
+      },
+      {
+        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ92RstGeZr_fhYgkNO2aiZjI6j4p-kjq6okQ&s",
+        "cap": "Столкновение с непостижимым"
+      }
+    ],
+    "resources": [
+      {
+        "type": "link",
+        "name": "Официальный сайт Chaosium",
+        "url": "https://www.chaosium.com/call-of-cthulhu-rules/",
+        "fmt": "Web"
+      },
+      {
+        "type": "link",
+        "name": "Quick-Start Rules (бесплатно)",
+        "url": "https://www.chaosium.com/content/FreePDFs/CoC/CHA23131%20Call%20of%20Cthulhu%207th%20Edition%20Quick-Start%20Rules.pdf",
+        "fmt": "PDF"
+      },
+      {
+        "type": "sheet",
+        "name": "Лист персонажа (официальный)",
+        "url": "https://www.chaosium.com/content/FreePDFs/CoC/Character%20Sheets/Character%20Sheet%20-%20base%20-%20Call%20of%20Cthulhu%207th%20Ed.pdf",
+        "fmt": "PDF"
+      },
+      {
+        "type": "tool",
+        "name": "The Dhole's House — онлайн-генератор персонажей",
+        "url": "https://www.dholeshouse.org/",
         "fmt": "Web"
       }
     ]
