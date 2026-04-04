@@ -1770,5 +1770,165 @@ const SYSTEMS_EN_JSON = {
       }
     ],
     "prep": "~10 min"
+  },
+  "star-wars-ffg": {
+    "tagline": "\"A long time ago in a galaxy far, far away... your story is just beginning.\"",
+    "description": "Three fully cross-compatible core rulebooks — Edge of the Empire (2013), Age of Rebellion (2014), and Force and Destiny (2015) — cover every facet of the Star Wars universe. At the heart of the system are unique narrative dice bearing symbols instead of numbers. Every roll resolves on two axes: Success/Failure and Advantage/Threat. You can achieve your goal but land in trouble, or fail spectacularly yet discover something useful. Triumph and Despair — rare symbols on Proficiency and Challenge dice — create moments of cinematic intensity. The system encourages collaborative storytelling: players don't just roll dice, they interpret the result together with the GM, shaping the story on the fly. The books boast outstanding production quality: 450+ pages of full-color illustrations, meticulously crafted rules, and an extensive bestiary. Originally published by Fantasy Flight Games, the line has been maintained by Edge Studio (an Asmodee subsidiary) since 2020.\n\n**Edge of the Empire** — the book for stories on the galaxy's fringe. Smugglers, bounty hunters, mercenaries, colonists, and technicians. Unique mechanic — Obligation: every character carries a debt, addiction, or dark secret that can catch up with them at the worst possible moment. Before each session the GM rolls d100 — and someone's past comes knocking. Tone: 'Han Solo meets Firefly.'\n\n**Age of Rebellion** — the Rebel Alliance's war against the Galactic Empire. Soldiers, spies, commanders, diplomats, and pilots. Unique mechanic — Duty: the character's contribution to the Rebellion, from recon to sabotage. As Duty grows, the group gains access to Alliance resources — ships, bases, reinforcements. Tone: 'Rogue One' and 'Star Wars Rebels.'\n\n**Force and Destiny** — the story of the last Force-sensitives in an era when the Jedi are destroyed and the Empire hunts anyone who can feel the Force. Guardians, mystics, warriors, seekers, and sentinels. Unique mechanic — Morality: a numeric scale from 0 to 100 determining where a character stands between Light and Dark. Every use of the Force is temptation: dark side pips are more powerful but bring you closer to falling. Tone: 'A wandering Jedi knight seeking lost knowledge.'",
+    "setting": "The Star Wars galaxy during the era of the Galactic Civil War — between Episodes IV and VI. All three books are fully compatible: a smuggler with Obligation, a rebel with Duty, and a padawan with Morality can share the same table. The galaxy spans thousands of worlds — from the ecumenopolis of Coruscant to the desert wastes of Tatooine, from the frozen plains of Hoth to the forest moons of Endor. The Outer Rim is the domain of Hutts, pirates, and free traders. The Core Worlds groan under the Empire's iron heel. And between them — endless possibilities for adventure: abandoned Jedi temples, cantinas on dusty outposts, Imperial prison barges, and asteroid fields full of war debris.",
+    "vignette": "The ship shuddered. 'Imperial patrol,' the Rodian pilot muttered. The Twi'lek mechanic assembles her pool: two green Ability dice for her Mechanics skill, one yellow Proficiency die for her high Intellect, plus a blue Boost die for the recently installed overdrive. The GM adds two purple Difficulty dice and a red Challenge die — modifying engines mid-chase is no joke. The roll: two Successes, one Threat, and... a Triumph. The engines roared — the ship surged forward, leaving the TIE fighters behind. But the Threat means the overload knocked out life support on the lower deck. And the Triumph? The pilot grinned: 'We just beat the Kessel Run record.' The ship jumped to hyperspace — right under the nose of a Star Destroyer.",
+    "mechanics": [
+      {
+        "icon": "star",
+        "title": "Narrative Dice",
+        "text": "Seven types of dice with symbols. Success + Threat, Failure + Advantage — every roll creates a layered story, not just 'hit or miss.'"
+      },
+      {
+        "icon": "compass",
+        "title": "Destiny Points",
+        "text": "A shared pool of light and dark tokens. Players spend light tokens to boost rolls, the GM spends dark ones. The balance constantly shifts, building tension."
+      },
+      {
+        "icon": "flame",
+        "title": "Obligation / Duty / Morality",
+        "text": "Each book adds a unique drama mechanic: a smuggler's debts, a rebel's service record, or a Force-user's struggle between the Light and Dark Side."
+      },
+      {
+        "icon": "sword",
+        "title": "Talents & Specializations",
+        "text": "Talent trees instead of levels. Each career has multiple specializations, and characters can buy into trees from other careers, creating unique combinations."
+      }
+    ],
+    "gallery": [
+      {
+        "src": "https://ttrpgfans.com/wp-content/uploads/2025/11/star-wars-rpg-reprints-1.png",
+        "cap": "Three core rulebooks — Edge of the Empire, Age of Rebellion, Force and Destiny"
+      },
+      {
+        "src": "https://images.steamusercontent.com/ugc/448482024259167070/88E9804631FCAE71435C83D2A119769A7A167F11/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+        "cap": "Narrative dice — the heart of the system"
+      },
+      {
+        "src": "https://www.belloflostsouls.net/wp-content/uploads/2017/07/swr10_art-1.jpg",
+        "cap": "Rebels in action — art from Age of Rebellion"
+      },
+      {
+        "src": "https://images-cdn.fantasyflightgames.com/filer_public/79/62/79625561-208b-4e9f-b7aa-ed7976cb3930/swe14_preview3.jpg",
+        "cap": "Outer Rim adventurers — art from Edge of the Empire"
+      }
+    ],
+    "resources": [
+      {
+        "type": "link",
+        "name": "Edge Studio — Official Page",
+        "url": "https://www.edge-studio.net/shares/star-wars/",
+        "fmt": "Web"
+      },
+      {
+        "type": "sheet",
+        "name": "Character Sheet (Edge of the Empire)",
+        "url": "https://images-cdn.fantasyflightgames.com/ffg_content/StarWarsRPG/edge-of-the-empire/support/edge-of-the-empire-character-sheet.pdf",
+        "fmt": "PDF"
+      },
+      {
+        "type": "tool",
+        "name": "OggDude's Character Generator",
+        "url": "https://myswrpg.com/oggdudes-character-generator-and-gm-tools/",
+        "fmt": "App"
+      },
+      {
+        "type": "tool",
+        "name": "RPG Sessions — Online Platform & Dice Roller",
+        "url": "https://rpgsessions.com/",
+        "fmt": "Web"
+      },
+      {
+        "type": "tool",
+        "name": "SkyJedi Dice Roller",
+        "url": "https://dice.skyjedi.com/",
+        "fmt": "Web"
+      },
+      {
+        "type": "link",
+        "name": "SWRPG Community — Fan Portal",
+        "url": "https://www.swrpgcommunity.com/",
+        "fmt": "Web"
+      },
+      {
+        "type": "link",
+        "name": "Foundry VTT Module",
+        "url": "https://foundryvtt.com/packages/starwarsffg",
+        "fmt": "Web"
+      }
+    ],
+    "prep": "~30–60 min"
+  },
+  "call-of-cthulhu": {
+    "tagline": "\"Mysteries best left unsolved. Truths that shatter the mind.\"",
+    "description": "The oldest and most renowned horror RPG in the world, first published in 1981 by Sandy Petersen. The 7th edition is the modern, polished version of this classic. The foundation is the percentile-based Basic Roleplaying (BRP) system: every skill has a percentage value, and to succeed you must roll under it on a d100. Simple, intuitive, elegant. But the heart of the game is not the dice. Call of Cthulhu is about investigation. You are not warriors or heroes. You are ordinary people — private detectives, professors, journalists — who have encountered something that should not exist. Every brush with the incomprehensible leaves scars: the Sanity mechanic tracks a character's slow descent into madness. Unlike D&D, where characters grow stronger, in Call of Cthulhu they deteriorate. This is not a power fantasy — it is a Greek tragedy at the gaming table, and that is exactly why the system has endured for over 40 years.",
+    "setting": "The classic setting is 1920s America — the jazz age, Prohibition, and secret cults. Gas lamps, the libraries of Miskatonic University, the fog-shrouded docks of Innsmouth. But Call of Cthulhu is not limited to a single era: official supplements cover Victorian England (Cthulhu by Gaslight), Ancient Rome (Cthulhu Invictus), the Middle Ages (Cthulhu Dark Ages), the modern day, and even the far future. Lovecraftian horror is timeless — the Great Old Ones waited billions of years before humanity appeared and will wait long after. The world is full of secret cults, forbidden tomes like the Necronomicon, and entities whose mere sight breaks the mind.",
+    "vignette": "Miskatonic University library, 2 AM. Your professor — Dr. Alice Warren — leafs through a missing colleague's journal. Library Use roll (65%) — 42, success. You find an entry: 'The lighthouse at Kingsport Head. The light that should not shine.' At the lighthouse — symbols drawn in blood. Cthulhu Mythos roll — you recognize the sign of Dagon. Sanity check: 1d6 loss. You roll 4. Sanity drops from 55 to 51. Dr. Warren begins to hear chanting from beneath the floor. The Keeper (GM) says: 'You realize the text in the journal isn't notes. It's a prayer. And you just read it aloud.'",
+    "mechanics": [
+      {
+        "icon": "brain",
+        "title": "Sanity",
+        "text": "A unique madness mechanic. Every encounter with the otherworldly costs Sanity points. At zero — the character is irreversibly insane. This is not mental HP — it is a slow, inevitable slide into madness with phobias, manias, and breakdowns."
+      },
+      {
+        "icon": "target",
+        "title": "Percentile system (d100)",
+        "text": "Every skill is a number from 1 to 99. Roll d100 under it — success. Half the value is a Hard success, one-fifth is an Extreme success. No modifier tables — everything is intuitive."
+      },
+      {
+        "icon": "eye",
+        "title": "Investigation",
+        "text": "The heart of the game is not combat but gathering clues, interviewing witnesses, and studying ancient texts. Fighting is a last resort and almost always a bad idea. Mythos creatures are stronger than any human."
+      },
+      {
+        "icon": "book",
+        "title": "Pushed Rolls & Luck",
+        "text": "Failed a roll? You can 'push' it — try again, but on a second failure the consequences are catastrophic. Luck points are a non-renewable resource for saving yourself at a critical moment."
+      }
+    ],
+    "gallery": [
+      {
+        "src": "https://www.rpgtabletopgames.com/wp-content/uploads/call-of-cthulhu-rpg.jpg",
+        "cap": "Call of Cthulhu — 7th edition core books"
+      },
+      {
+        "src": "https://www.tribality.com/wp-content/uploads/2019/04/richard-wright-cthulhu-museum1-1024x512.jpg",
+        "cap": "Museum of horrors — art by Richard Wright"
+      },
+      {
+        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ92RstGeZr_fhYgkNO2aiZjI6j4p-kjq6okQ&s",
+        "cap": "Facing the incomprehensible"
+      }
+    ],
+    "resources": [
+      {
+        "type": "link",
+        "name": "Official Chaosium website",
+        "url": "https://www.chaosium.com/call-of-cthulhu-rules/",
+        "fmt": "Web"
+      },
+      {
+        "type": "link",
+        "name": "Quick-Start Rules (free)",
+        "url": "https://www.chaosium.com/content/FreePDFs/CoC/CHA23131%20Call%20of%20Cthulhu%207th%20Edition%20Quick-Start%20Rules.pdf",
+        "fmt": "PDF"
+      },
+      {
+        "type": "sheet",
+        "name": "Character sheet (official)",
+        "url": "https://www.chaosium.com/content/FreePDFs/CoC/Character%20Sheets/Character%20Sheet%20-%20base%20-%20Call%20of%20Cthulhu%207th%20Ed.pdf",
+        "fmt": "PDF"
+      },
+      {
+        "type": "tool",
+        "name": "The Dhole's House — online character generator",
+        "url": "https://www.dholeshouse.org/",
+        "fmt": "Web"
+      }
+    ],
+    "prep": "~30–60 min"
   }
 };

@@ -7,14 +7,14 @@ const PLAYER_COLORS = ['#38bdf8','#4ade80','#c084fc','#fde047','#f87171','#fb923
 const SYSTEM_GROUPS = {
     'osr': ['into-the-odd', 'electric-bastionland', 'mythic-bastionland', 'cairn', 'mork-borg', 'shadowdark'],
     'fl': ['alien', 'blade-runner', 'vaesen', 'forbidden-lands', 'twilight', 'tales-loop', 'dragonbane', 'coriolis'],
-    'narrative': ['heart', 'triangle', 'mothership', 'blades', 'wildsea', 'delta-green', 'uvg', 'microscope', 'one-ring', 'outgunned', 'l5r'],
+    'narrative': ['heart', 'triangle', 'mothership', 'blades', 'wildsea', 'delta-green', 'uvg', 'microscope', 'one-ring', 'outgunned', 'l5r', 'star-wars-ffg', 'call-of-cthulhu'],
     'tactical': ['draw-steel', 'nimble']
 };
 
 const TAG_ICONS = {
     explore: 'compass', combat: 'swords', narrative: 'book-open',
     horror: 'ghost', social: 'users', mystery: 'search',
-    survival: 'skull', worldbuild: 'globe', tactical: 'crosshair', sandbox: 'map',
+    survival: 'skull', worldbuild: 'globe', tactical: 'crosshair', sandbox: 'map', action: 'zap',
 };
 const TAG_I18N = {
     explore: 'tag_exploration', combat: 'tag_combat', narrative: 'tag_narrative',
@@ -36,6 +36,12 @@ let _lucideTimer;
 function refreshIcons() {
     clearTimeout(_lucideTimer);
     _lucideTimer = setTimeout(() => lucide.createIcons(), 50);
+}
+
+// ============ MINI MARKDOWN ============
+function miniMd(s) {
+    if (!s) return '';
+    return s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\n\n/g, '<br><br>');
 }
 
 // ============ RESOURCE ICONS & LABELS ============
@@ -127,9 +133,9 @@ function renderSystemPage(id, sys) {
         </div>
     </div>
     <div class="section-title" data-i18n="section_system">Что это за система</div>
-    <div class="setting-block">${localField(sys, 'description')}</div>
+    <div class="setting-block">${miniMd(localField(sys, 'description'))}</div>
     <div class="section-title" data-i18n="section_setting">Сеттинг</div>
-    <div class="setting-block">${localField(sys, 'setting')}</div>
+    <div class="setting-block">${miniMd(localField(sys, 'setting'))}</div>
     ${vignetteHTML}
     <div class="section-title" data-i18n="section_playstyle">Плейстайл</div>
     <div class="playstyle-tags">${tagsHTML}</div>
@@ -689,8 +695,8 @@ function buildCustomSystemPage(sys) {
         (sys.prep ? '<div class="qs"><span class="qs-label" data-i18n="qs_prep">' + t('qs_prep') + '</span><span class="qs-value">' + sys.prep + '</span></div>' : '') +
         '<div class="qs"><span class="qs-label" data-i18n="qs_complexity">' + t('qs_complexity') + '</span><div class="complexity-bar">' + pips + '</div></div>' +
         '</div>' +
-        (sys.description ? '<div class="section-title" data-i18n="section_system">' + t('section_system') + '</div><div class="setting-block">' + sys.description + '</div>' : '') +
-        (sys.setting ? '<div class="section-title" data-i18n="section_setting">' + t('section_setting') + '</div><div class="setting-block">' + sys.setting + '</div>' : '') +
+        (sys.description ? '<div class="section-title" data-i18n="section_system">' + t('section_system') + '</div><div class="setting-block">' + miniMd(sys.description) + '</div>' : '') +
+        (sys.setting ? '<div class="section-title" data-i18n="section_setting">' + t('section_setting') + '</div><div class="setting-block">' + miniMd(sys.setting) + '</div>' : '') +
         (sys.vignette ? '<div class="section-title" data-i18n="section_vignette">' + t('section_vignette') + '</div><div class="setting-block" style="border-left:3px solid var(--accent);font-style:italic;">' + sys.vignette + '</div>' : '') +
         (tagsHTML ? '<div class="section-title" data-i18n="section_playstyle">' + t('section_playstyle') + '</div><div class="playstyle-tags">' + tagsHTML + '</div>' : '') +
         '<div class="vote-section" data-system="' + sys.id + '">' +
