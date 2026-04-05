@@ -573,9 +573,9 @@ window.addEventListener('popstate', (e) => {
         _dialogOpen = null;
         return;
     }
-    // Navigate to the page stored in history state
-    const pageId = (e.state && e.state.page) || 'results';
-    showPage(pageId, false);
+    // Ignore popstate without state (Safari fires this on initial load)
+    if (!e.state) return;
+    showPage(e.state.page || 'results', false);
 });
 
 function openEditor(editId) {
@@ -919,6 +919,8 @@ function initApp() {
 }
 
 // ============ BOOT ============
+// Disable browser scroll restoration — we handle it in showPage()
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 // Set initial history state so popstate can return to the start page
 history.replaceState({ page: 'results' }, '', window.location.hash || '#results');
 
