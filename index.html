@@ -79,6 +79,7 @@
 <div class="sidebar-backdrop" onclick="toggleSidebar()"></div>
 
 <nav class="sidebar">
+    <button class="sidebar-close" onclick="toggleSidebar()"><i data-lucide="x"></i></button>
     <div class="sidebar-header" onclick="showPage('results')" style="cursor:pointer;">
         <h1 data-i18n="nav_title">TTRPG SHOWCASE</h1>
         <p data-i18n="nav_subtitle">Голосуй за системы, в которые хочешь сыграть</p>
@@ -166,7 +167,7 @@
             <label data-i18n="editor_vignette">Пример за столом</label>
             <textarea id="editor-vignette" class="editor-textarea"></textarea>
         </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div class="editor-fields-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
             <div class="setup-field">
                 <label data-i18n="editor_dice">Кубики</label>
                 <input type="text" id="editor-dice" placeholder="d20 + d6">

@@ -546,6 +546,29 @@ const TAG_CSS_MAP = {
     worldbuilding: 'tag-worldbuild',
 };
 
+// ============ DIALOG HISTORY (back button closes dialogs) ============
+let _dialogOpen = null;
+
+function _openDialog(name) {
+    _dialogOpen = name;
+    history.pushState({ dialog: name }, '');
+}
+
+function _closeDialog(name) {
+    document.getElementById(name === 'editor' ? 'editor-overlay' : 'sys-selector-overlay').classList.add('hidden');
+    if (_dialogOpen === name) {
+        _dialogOpen = null;
+        if (history.state && history.state.dialog === name) history.back();
+    }
+}
+
+window.addEventListener('popstate', () => {
+    if (!_dialogOpen) return;
+    const id = _dialogOpen === 'editor' ? 'editor-overlay' : 'sys-selector-overlay';
+    document.getElementById(id).classList.add('hidden');
+    _dialogOpen = null;
+});
+
 function openEditor(editId) {
     const overlay = document.getElementById('editor-overlay');
     const heading = document.getElementById('editor-heading');
@@ -596,11 +619,10 @@ function openEditor(editId) {
     }
 
     overlay.classList.remove('hidden');
+    _openDialog('editor');
 }
 
-function closeEditor() {
-    document.getElementById('editor-overlay').classList.add('hidden');
-}
+function closeEditor() { _closeDialog('editor'); }
 
 function generateSlug(name) {
     return 'custom-' + name.toLowerCase().replace(/[^a-z0-9\u0400-\u04ff]+/gi, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
@@ -824,11 +846,10 @@ function openSystemSelector() {
     }
 
     overlay.classList.remove('hidden');
+    _openDialog('selector');
 }
 
-function closeSystemSelector() {
-    document.getElementById('sys-selector-overlay').classList.add('hidden');
-}
+function closeSystemSelector() { _closeDialog('selector'); }
 
 function sysSelectAll() {
     document.querySelectorAll('#sys-selector-list input[type="checkbox"]').forEach(cb => {
