@@ -340,8 +340,6 @@ function renderResults() {
 }
 
 // ============ NAVIGATION ============
-let _navByPopstate = false;
-
 function showPage(id, pushHistory = true) {
     document.querySelectorAll('.system-page').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
@@ -353,8 +351,7 @@ function showPage(id, pushHistory = true) {
     const navItem = document.querySelector(`.nav-item[data-page="${id}"]`);
     if (navItem) navItem.classList.add('active');
     if (id === 'results') renderResults();
-    // Push browser history so the back button navigates within the app
-    if (pushHistory && !_navByPopstate) {
+    if (pushHistory) {
         history.pushState({ page: id }, '', '#' + id);
     }
     // Auto-close sidebar on mobile after navigation
@@ -578,9 +575,7 @@ window.addEventListener('popstate', (e) => {
     }
     // Navigate to the page stored in history state
     const pageId = (e.state && e.state.page) || 'results';
-    _navByPopstate = true;
-    showPage(pageId);
-    _navByPopstate = false;
+    showPage(pageId, false);
 });
 
 function openEditor(editId) {
