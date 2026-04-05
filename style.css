@@ -1089,6 +1089,10 @@ body.browse-mode .setup-players-btn { display: flex; }
     .setup-card { padding: 28px 24px; }
     .setup-card h1 { font-size: 24px; }
     .setup-card p { margin-bottom: 20px; font-size: 14px; }
+    .setup-overlay { padding: 24px 12px; }
+    .setup-players-list { gap: 8px; }
+    .setup-field input { padding: 10px 14px; }
+    .setup-start-btn { padding: 14px; font-size: 15px; }
     .system-page { padding: 24px 16px; padding-top: 60px; }
     .hero-banner { height: 220px; border-radius: 12px; }
     .hero-overlay h2 { font-size: 28px; }
@@ -1133,6 +1137,18 @@ body.browse-mode .setup-players-btn { display: flex; }
     .editor-card { padding: 24px 20px; }
     .editor-fields-grid { grid-template-columns: 1fr !important; }
     .editor-tags-grid { grid-template-columns: 1fr; }
+
+    .setup-overlay { padding: 16px 8px; }
+    .setup-card { padding: 24px 18px; width: 100%; border-radius: 16px; }
+    .setup-card h1 { font-size: 20px; }
+    .setup-card p { font-size: 13px; margin-bottom: 16px; }
+    .setup-field label { font-size: 11px; letter-spacing: 1.5px; margin-bottom: 6px; }
+    .setup-field input, .setup-field select { padding: 10px 12px; font-size: 15px; }
+    .setup-players-list { gap: 6px; margin-bottom: 16px; }
+    .setup-player-row .player-num { min-width: 24px; height: 24px; font-size: 11px; }
+    .setup-start-btn { padding: 14px; font-size: 14px; border-radius: 10px; }
+    .setup-start-btn.secondary { margin-top: 8px; }
+    .setup-faq { margin-top: 14px; padding-top: 12px; }
 }
 
 /* Editor overlay */
