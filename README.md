@@ -8,7 +8,8 @@
 
 ## Features
 
-- **Multiple systems** — OSR, Free League, narrative, tactical — with full bilingual content (RU/EN)
+- **44 systems** — OSR, Free League, narrative, tactical, solo — with full bilingual content (RU/EN)
+- **Multiple grouping schemes** — browse by default groups, engine family, genre, or solo play
 - **Player voting** — set up players, vote on favorites, see ranked results
 - **Browse mode** — skip voting and just explore the catalog as card grid or list
 - **Presentation mode** — fullscreen slides with keyboard navigation (`F` to toggle, arrows to navigate)
@@ -27,28 +28,32 @@
 
 ## Systems
 
+44 systems across 4 grouping schemes. Default grouping:
+
 | Group | Systems |
 |-------|---------|
-| **The Odd & OSR** | Into the Odd, Electric Bastionland, Mythic Bastionland, Cairn, Mork Borg, Shadowdark |
-| **Free League (YZE)** | ALIEN RPG, Blade Runner, Vaesen, Forbidden Lands, Twilight: 2000, Tales from the Loop, Dragonbane, Coriolis |
-| **Narrative & Surreal** | Heart, Triangle Agency, Mothership, Blades in the Dark, The Wildsea, Delta Green, UVG, Microscope, The One Ring, Outgunned, Legend of the Five Rings |
-| **Tactical & Modern** | Draw Steel, Nimble |
+| **OSR** | Into the Odd, Electric Bastionland, Mythic Bastionland, Cairn, MORK BORG, CY_BORG, Pirate Borg, Shadowdark, Mausritter, Old-School Essentials, FIST |
+| **Free League (YZE)** | ALIEN RPG, Blade Runner, Vaesen, Forbidden Lands, Twilight: 2000, Tales from the Loop, Dragonbane, Coriolis, Death in Space |
+| **Narrative** | Heart, Spire, Triangle Agency, Mothership, Blades in the Dark, The Wildsea, Delta Green, UVG, Microscope, The One Ring, Outgunned, L5R 5e, Star Wars RPG (FFG), Call of Cthulhu, Ironsworn, Starforged, Thousand Year Old Vampire, The Wretched, Ker Nethalas, Koriko, Last Tea Shop |
+| **Tactical** | Draw Steel, Nimble 2e, Lancer |
+
+Also available: **By Engine** (Year Zero, PbtA/FitD, Into the Odd family, Borg, Resistance, etc.), **By Genre** (sci-fi, horror, dark fantasy, adventure, narrative-weird, tactical), and **Solo** (solo-compatible, solo-adventure, solo-journaling).
 
 ## Tech
 
 Zero dependencies. No build step. Plain HTML + CSS + JS.
 
 ```
-index.html          ~220 lines   (shell + overlays)
-app.js              ~880 lines   (logic, rendering)
-style.css          ~1300 lines   (styles + animations + responsive)
-i18n.js             ~290 lines   (RU/EN translations)
-data/systems.json   ~970 lines   (all system content)
-data/systems.js                  (JS wrapper for systems.json)
+index.html              ~285 lines   (shell + overlays)
+app.js                 ~1200 lines   (logic, rendering)
+style.css              ~1510 lines   (styles + animations + responsive)
+i18n.js                 ~310 lines   (RU/EN translations)
+data/systems/*.js         44 files   (one file per system)
+data/systems/_registry.js              (system registry + group builder)
 ```
 
 Fonts: [Unbounded](https://fonts.google.com/specimen/Unbounded) + [Manrope](https://fonts.google.com/specimen/Manrope) via Google Fonts.
-Icons: [Lucide](https://lucide.dev/) via CDN.
+Icons: [Lucide](https://lucide.dev/) (bundled locally).
 
 ## Quick Start
 
@@ -78,11 +83,10 @@ cp -r . /var/www/html/
 ## Make Your Own
 
 1. **Fork** this repo
-2. **Edit `data/systems.json`** — add/remove/modify systems. Each system has: name, publisher, tagline, description, setting, vignette, mechanics, quotes, gallery, resources
+2. **Add a file** in `data/systems/` — copy an existing system as a template. Each system calls `registerSystem(id, data)` with: name, publisher, tagline, description, setting, vignette, mechanics, quotes, gallery, resources, groups
 3. **Add `_en` fields** for English translations (optional)
-4. **Update `app.js`** — add your system ID to `SYSTEM_GROUPS`
-5. **Regenerate** `data/systems.js`: `echo "const SYSTEMS_JSON = $(cat data/systems.json);" > data/systems.js`
-6. **Deploy**
+4. **Rebuild the bundle**: `npm run bundle`
+5. **Deploy**
 
 You can also add systems directly in the app via the built-in editor (saved to localStorage).
 
