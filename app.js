@@ -4,12 +4,9 @@ const SYSTEM_NAMES = {};
 let SYSTEM_IDS = [];
 const PLAYER_COLORS = ['#38bdf8','#4ade80','#c084fc','#fde047','#f87171','#fb923c','#2dd4bf','#f472b6'];
 
-const SYSTEM_GROUPS = {
-    'osr': ['into-the-odd', 'electric-bastionland', 'mythic-bastionland', 'cairn', 'mork-borg', 'shadowdark'],
-    'fl': ['alien', 'blade-runner', 'vaesen', 'forbidden-lands', 'twilight', 'tales-loop', 'dragonbane', 'coriolis'],
-    'narrative': ['heart', 'triangle', 'mothership', 'blades', 'wildsea', 'delta-green', 'uvg', 'microscope', 'one-ring', 'outgunned', 'l5r', 'star-wars-ffg', 'call-of-cthulhu'],
-    'tactical': ['draw-steel', 'nimble']
-};
+// SYSTEM_GROUPS is built dynamically from per-system files via _registry.js
+let SYSTEM_GROUPS = {};
+let currentGrouping = localStorage.getItem('ttrpg-grouping') || 'default';
 
 const TAG_ICONS = {
     explore: 'compass', combat: 'swords', narrative: 'book-open',
@@ -44,20 +41,79 @@ function miniMd(s) {
     return s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\n\n/g, '<br><br>');
 }
 
+// ============ IMAGE PROXY ============
+// Uses wsrv.nl free image CDN for resizing, WebP conversion, and caching
+function imgProxy(url, opts) {
+    if (!url) return '';
+    var params = 'url=' + encodeURIComponent(url);
+    if (opts.w) params += '&w=' + opts.w;
+    if (opts.h) params += '&h=' + opts.h;
+    if (opts.fit) params += '&fit=' + opts.fit;
+    params += '&output=webp&q=80';
+    return 'https://wsrv.nl/?' + params;
+}
+
+function heroThumb(url) { return imgProxy(url, { w: 400, h: 200, fit: 'cover' }); }
+function heroFull(url) { return imgProxy(url, { w: 1200, h: 600, fit: 'cover' }); }
+function galleryThumb(url) { return imgProxy(url, { w: 300, h: 300, fit: 'cover' }); }
+
 // ============ RESOURCE ICONS & LABELS ============
 const RES_ICONS = { link: 'external-link', sheet: 'file-text', quickstart: 'book-open', rules: 'scroll-text', map: 'map', tool: 'wrench' };
 let RES_LABELS = { link: 'Сайт', sheet: 'Лист', quickstart: 'Quickstart', rules: 'Правила', map: 'Карта', tool: 'Инструмент' };
 
 // ============ LOAD SYSTEMS DATA ============
-function loadSystems() {
-    SYSTEMS_DATA = typeof SYSTEMS_JSON !== 'undefined' ? JSON.parse(JSON.stringify(SYSTEMS_JSON)) : {};
-    const enData = typeof SYSTEMS_EN_JSON !== 'undefined' ? SYSTEMS_EN_JSON : {};
+function mergeTranslated(baseArr, transArr) {
+    return (baseArr || []).map(function(item, i) {
+        return Object.assign({}, item, (transArr && transArr[i]) || {});
+    });
+}
 
-    for (const [id, sys] of Object.entries(SYSTEMS_DATA)) {
-        SYSTEM_NAMES[id] = sys.name;
-        if (enData[id]) {
-            sys._en = enData[id];
+function loadSystems() {
+    // Build SYSTEM_GROUPS from registry for current grouping scheme
+    const allGroups = typeof SYSTEM_GROUPS_ALL !== 'undefined' ? SYSTEM_GROUPS_ALL : {};
+    const groupsRaw = allGroups[currentGrouping] || allGroups['default'] || {};
+    SYSTEM_GROUPS = {};
+    for (const [group, entries] of Object.entries(groupsRaw)) {
+        entries.sort(function(a, b) { return a.order - b.order; });
+        SYSTEM_GROUPS[group] = entries.map(function(e) { return e.id; });
+    }
+
+    // Build SYSTEMS_DATA from registry
+    const registry = typeof SYSTEMS_REGISTRY !== 'undefined' ? SYSTEMS_REGISTRY : {};
+    SYSTEMS_DATA = {};
+
+    for (const [id, raw] of Object.entries(registry)) {
+        const lang = currentLang === 'en' ? (raw.en || raw.ru || {}) : (raw.ru || {});
+        const sys = {};
+
+        // Copy shared fields
+        for (const key of Object.keys(raw)) {
+            if (key !== 'ru' && key !== 'en') sys[key] = raw[key];
         }
+
+        // Overlay translated top-level text fields
+        for (const key of Object.keys(lang)) {
+            if (key !== 'mechanics' && key !== 'gallery' && key !== 'resources') {
+                sys[key] = lang[key];
+            }
+        }
+
+        // Merge array translations
+        sys.mechanics = mergeTranslated(raw.mechanics, lang.mechanics);
+        sys.gallery = mergeTranslated(raw.gallery, lang.gallery);
+        sys.resources = mergeTranslated(raw.resources, lang.resources);
+
+        // Store _en for localField() compatibility
+        if (raw.en) {
+            const enMerged = Object.assign({}, raw.en);
+            enMerged.mechanics = mergeTranslated(raw.mechanics, raw.en.mechanics);
+            enMerged.gallery = mergeTranslated(raw.gallery, raw.en.gallery);
+            enMerged.resources = mergeTranslated(raw.resources, raw.en.resources);
+            sys._en = enMerged;
+        }
+
+        SYSTEMS_DATA[id] = sys;
+        SYSTEM_NAMES[id] = raw.name;
     }
     SYSTEM_IDS = Object.keys(SYSTEMS_DATA);
 
@@ -85,7 +141,7 @@ function buildComplexityBar(level) {
 function buildHeroBanner(id, sys) {
     const style = sys.heroStyle ? ` style="${sys.heroStyle}"` : '';
     const imgStyle = sys.heroImageStyle ? ` style="${sys.heroImageStyle}"` : '';
-    const img = sys.heroImage ? `<img src="${sys.heroImage}" alt=""${imgStyle} onerror="this.style.display='none'">` : '';
+    const img = sys.heroImage ? `<img src="${heroFull(sys.heroImage)}" alt=""${imgStyle} loading="lazy" decoding="async" onerror="this.style.display='none'">` : '';
     return `<div class="hero-banner"${style}>${img}<div class="hero-overlay"><div class="meta">${sys.publisher || ''}</div><h2>${sys.name}</h2></div></div>`;
 }
 
@@ -145,17 +201,50 @@ function renderSystemPage(id, sys) {
 </section>`;
 }
 
+const _renderedSystems = new Set();
+
 function renderAllSystems() {
+    // Clear previously rendered pages
     const container = document.getElementById('systems-container');
-    container.innerHTML = Object.entries(SYSTEMS_DATA).map(([id, sys]) =>
-        renderSystemPage(id, sys)
-    ).join('');
+    container.innerHTML = '';
+    _renderedSystems.clear();
+}
+
+function ensureSystemRendered(id) {
+    if (_renderedSystems.has(id)) return;
+    const sys = SYSTEMS_DATA[id];
+    if (!sys) return;
+    const container = document.getElementById('systems-container');
+    container.insertAdjacentHTML('beforeend', renderSystemPage(id, sys));
+    _renderedSystems.add(id);
+    // Render gallery and resources for this system
+    const section = container.querySelector(`.vote-section[data-system="${id}"]`);
+    if (section) {
+        renderGalleryFor(id, section);
+        renderResourcesFor(id, section);
+    }
+    refreshIcons();
 }
 
 function renderNavItems() {
+    // Remove old dynamic nav groups (keep custom-nav-group)
+    document.querySelectorAll('.nav-group.dynamic-group').forEach(el => el.remove());
+
+    const navContainer = document.querySelector('.nav-systems');
+    const customGroup = document.getElementById('custom-nav-group');
+
     for (const [group, ids] of Object.entries(SYSTEM_GROUPS)) {
-        const container = document.getElementById(`nav-group-${group}`);
-        if (!container) continue;
+        const groupDiv = document.createElement('div');
+        groupDiv.className = 'nav-group dynamic-group';
+        groupDiv.id = `nav-group-${group}`;
+
+        const titleDiv = document.createElement('div');
+        titleDiv.className = 'nav-group-title';
+        const i18nKey = 'nav_group_' + group;
+        titleDiv.setAttribute('data-i18n', i18nKey);
+        titleDiv.textContent = t(i18nKey);
+        groupDiv.appendChild(titleDiv);
+
         ids.forEach(id => {
             if (!SYSTEMS_DATA[id]) return;
             const item = document.createElement('div');
@@ -163,9 +252,24 @@ function renderNavItems() {
             item.dataset.page = id;
             item.onclick = () => showPage(id);
             item.innerHTML = `${SYSTEMS_DATA[id].name} <span class="nav-votes"></span>`;
-            container.appendChild(item);
+            groupDiv.appendChild(item);
         });
+
+        navContainer.insertBefore(groupDiv, customGroup);
     }
+}
+
+function setGrouping(scheme) {
+    currentGrouping = scheme;
+    localStorage.setItem('ttrpg-grouping', scheme);
+    loadSystems();
+    updateNavVotes();
+    applySystemVisibility();
+    // Update toggle buttons
+    document.querySelectorAll('.grouping-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.grouping === scheme);
+    });
+    refreshIcons();
 }
 
 // ============ STATE ============
@@ -318,11 +422,11 @@ function renderResults() {
                 <span class="result-card-vote-count">${s.count}</span>
                 ${s.voters.map(v => `<span class="result-voter-chip" style="background:${v.color}20;color:${v.color}">${v.name}</span>`).join('')}
             </div>` : '';
-        const isCustom = customSystems.some(cs => cs.id === s.id);
+        const isCustom = !!CustomSystems.find(s.id);
         const badgeHTML = isCustom ? '<span class="custom-badge"><i data-lucide="user"></i></span>' : '';
         return `<div class="result-card" onclick="showPage('${s.id}')">
             ${badgeHTML}
-            <img class="result-card-img" src="${s.heroImg}" alt="" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#1a1a2e,#0f3460)'">
+            <img class="result-card-img" src="${heroThumb(s.heroImg)}" alt="" loading="lazy" decoding="async" onerror="this.style.background='linear-gradient(135deg,#1a1a2e,#0f3460)'">
             <div class="result-card-body">
                 <div class="result-card-name">${s.name}</div>
                 <div class="result-card-tagline">${s.tagline}</div>
@@ -335,13 +439,24 @@ function renderResults() {
 }
 
 // ============ NAVIGATION ============
+function openSidebar() {
+    document.querySelector('.sidebar').classList.add('open');
+    document.querySelector('.sidebar-backdrop').classList.add('open');
+}
+function closeSidebar() {
+    document.querySelector('.sidebar').classList.remove('open');
+    document.querySelector('.sidebar-backdrop').classList.remove('open');
+}
+
 function showPage(id, pushHistory = true) {
     document.querySelectorAll('.system-page').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+    // Lazy-render system page on demand
+    if (id !== 'results') ensureSystemRendered(id);
     const page = document.getElementById(id);
     if (page) {
         page.classList.add('active');
-        document.querySelector('.main').scrollTop = 0;
+        document.querySelector('.main').scrollTo({ top: 0, behavior: 'instant' });
     }
     const navItem = document.querySelector(`.nav-item[data-page="${id}"]`);
     if (navItem) navItem.classList.add('active');
@@ -350,15 +465,11 @@ function showPage(id, pushHistory = true) {
         history.pushState({ page: id }, '', '#' + id);
     }
     // Auto-close sidebar on mobile after navigation
-    if (window.innerWidth <= 768) {
-        document.querySelector('.sidebar').classList.remove('open');
-        document.querySelector('.sidebar-backdrop').classList.remove('open');
-    }
+    if (window.innerWidth <= 768) closeSidebar();
 }
 
 function toggleSidebar() {
-    document.querySelector('.sidebar').classList.toggle('open');
-    document.querySelector('.sidebar-backdrop').classList.toggle('open');
+    document.querySelector('.sidebar').classList.contains('open') ? closeSidebar() : openSidebar();
 }
 
 function getCurrentSystemIndex() {
@@ -421,31 +532,34 @@ document.addEventListener('keydown', e => {
 let _lbImages = [];
 let _lbIndex = 0;
 
-function renderGalleries() {
-    document.querySelectorAll('.vote-section').forEach(section => {
-        const systemId = section.dataset.system;
-        const sysData = SYSTEMS_DATA[systemId];
-        const images = sysData ? localField(sysData, 'gallery', []) : null;
-        if (!images || images.length === 0) return;
-        if (section.parentElement.querySelector('.gallery')) return;
-        const galleryHTML = `
-            <div class="section-title" data-i18n="section_gallery">${t('section_gallery')}</div>
-            <div class="gallery">
-                <div class="gallery-grid">
-                    ${images.map((img, i) => `
-                        <div class="gallery-item" onclick="openLightbox('${systemId}', ${i})">
-                            <img src="${img.src}" alt="${img.cap}" loading="lazy" onerror="this.parentElement.style.display='none'">
-                            <div class="gallery-overlay">
-                                <div>
-                                    <div class="gallery-caption">${img.cap}</div>
-                                </div>
+function renderGalleryFor(systemId, section) {
+    const sysData = SYSTEMS_DATA[systemId];
+    const images = sysData ? localField(sysData, 'gallery', []) : null;
+    if (!images || images.length === 0) return;
+    if (section.parentElement.querySelector('.gallery')) return;
+    const galleryHTML = `
+        <div class="section-title" data-i18n="section_gallery">${t('section_gallery')}</div>
+        <div class="gallery">
+            <div class="gallery-grid">
+                ${images.map((img, i) => `
+                    <div class="gallery-item" onclick="openLightbox('${systemId}', ${i})">
+                        <img src="${galleryThumb(img.src)}" alt="${img.cap}" loading="lazy" decoding="async" onerror="this.parentElement.style.display='none'">
+                        <div class="gallery-overlay">
+                            <div>
+                                <div class="gallery-caption">${img.cap}</div>
                             </div>
                         </div>
-                    `).join('')}
-                </div>
+                    </div>
+                `).join('')}
             </div>
-        `;
-        section.insertAdjacentHTML('beforebegin', galleryHTML);
+        </div>
+    `;
+    section.insertAdjacentHTML('beforebegin', galleryHTML);
+}
+
+function renderGalleries() {
+    document.querySelectorAll('.vote-section').forEach(section => {
+        renderGalleryFor(section.dataset.system, section);
     });
 }
 
@@ -501,11 +615,9 @@ document.addEventListener('keydown', e => {
 });
 
 // ============ RESOURCES RENDERER ============
-function renderResources() {
-    document.querySelectorAll('.vote-section').forEach(section => {
-        const id = section.dataset.system;
-        const sysData = SYSTEMS_DATA[id];
-        const res = sysData ? localField(sysData, 'resources', []) : null;
+function renderResourcesFor(id, section) {
+    const sysData = SYSTEMS_DATA[id];
+    const res = sysData ? localField(sysData, 'resources', []) : null;
         if (!res || res.length === 0) return;
         if (section.parentElement.querySelector('.resources-section')) return;
         const html = `
@@ -524,12 +636,65 @@ function renderResources() {
             </div>
         `;
         section.insertAdjacentHTML('beforebegin', html);
+}
+
+function renderResources() {
+    document.querySelectorAll('.vote-section').forEach(section => {
+        renderResourcesFor(section.dataset.system, section);
     });
     refreshIcons();
 }
 
 // ============ CUSTOM SYSTEMS ============
-let customSystems = JSON.parse(localStorage.getItem('ttrpg-custom') || '[]');
+// ============ CUSTOM SYSTEMS MANAGER ============
+const CustomSystems = {
+    _list: JSON.parse(localStorage.getItem('ttrpg-custom') || '[]'),
+
+    get all() { return this._list; },
+    get length() { return this._list.length; },
+
+    find(id) { return this._list.find(s => s.id === id); },
+
+    _save() { localStorage.setItem('ttrpg-custom', JSON.stringify(this._list)); },
+
+    _register(sys) {
+        SYSTEM_NAMES[sys.id] = sys.name;
+        if (!SYSTEM_IDS.includes(sys.id)) SYSTEM_IDS.push(sys.id);
+    },
+
+    _unregister(id) {
+        delete SYSTEM_NAMES[id];
+        const idx = SYSTEM_IDS.indexOf(id);
+        if (idx !== -1) SYSTEM_IDS.splice(idx, 1);
+    },
+
+    add(sysData) {
+        this._list.push(sysData);
+        this._save();
+        this._register(sysData);
+    },
+
+    update(id, sysData) {
+        const idx = this._list.findIndex(s => s.id === id);
+        if (idx !== -1) this._list[idx] = sysData;
+        this._save();
+        this._register(sysData);
+    },
+
+    remove(id) {
+        this._list = this._list.filter(s => s.id !== id);
+        this._save();
+        this._unregister(id);
+        delete votes[id];
+        localStorage.setItem('ttrpg-votes', JSON.stringify(votes));
+    },
+
+    loadAll() {
+        this._list.forEach(sys => this._register(sys));
+    }
+};
+// Backward compat
+let customSystems = CustomSystems._list;
 
 const TAG_CSS_MAP = {
     exploration: 'tag-explore',
@@ -544,16 +709,23 @@ const TAG_CSS_MAP = {
     worldbuilding: 'tag-worldbuild',
 };
 
-// ============ DIALOG HISTORY (back button closes dialogs) ============
+// ============ DIALOG MANAGEMENT ============
+const DIALOGS = {
+    editor: 'editor-overlay',
+    selector: 'sys-selector-overlay'
+};
 let _dialogOpen = null;
 
-function _openDialog(name) {
+function openDialog(name) {
+    var el = document.getElementById(DIALOGS[name]);
+    if (el) el.classList.remove('hidden');
     _dialogOpen = name;
     history.pushState({ dialog: name }, '');
 }
 
-function _closeDialog(name) {
-    document.getElementById(name === 'editor' ? 'editor-overlay' : 'sys-selector-overlay').classList.add('hidden');
+function closeDialog(name) {
+    var el = document.getElementById(DIALOGS[name]);
+    if (el) el.classList.add('hidden');
     if (_dialogOpen === name) {
         _dialogOpen = null;
         if (history.state && history.state.dialog === name) history.back();
@@ -563,8 +735,8 @@ function _closeDialog(name) {
 window.addEventListener('popstate', (e) => {
     // Close dialog if one is open
     if (_dialogOpen) {
-        const id = _dialogOpen === 'editor' ? 'editor-overlay' : 'sys-selector-overlay';
-        document.getElementById(id).classList.add('hidden');
+        var el = document.getElementById(DIALOGS[_dialogOpen]);
+        if (el) el.classList.add('hidden');
         _dialogOpen = null;
         return;
     }
@@ -573,41 +745,45 @@ window.addEventListener('popstate', (e) => {
     showPage(e.state.page || 'results', false);
 });
 
+function setFormFields(prefix, fields) {
+    for (var key in fields) {
+        var el = document.getElementById(prefix + '-' + key);
+        if (el) el.value = fields[key] || '';
+    }
+}
+
+function getFormFields(prefix, keys) {
+    var result = {};
+    keys.forEach(function(key) {
+        var el = document.getElementById(prefix + '-' + key);
+        result[key] = el ? el.value.trim() : '';
+    });
+    return result;
+}
+
 function openEditor(editId) {
     const overlay = document.getElementById('editor-overlay');
     const heading = document.getElementById('editor-heading');
     const deleteBtn = document.getElementById('editor-delete-btn');
 
     // Reset form
-    document.getElementById('editor-id').value = '';
-    document.getElementById('editor-name').value = '';
-    document.getElementById('editor-publisher').value = '';
-    document.getElementById('editor-tagline').value = '';
-    document.getElementById('editor-description').value = '';
-    document.getElementById('editor-setting').value = '';
-    document.getElementById('editor-vignette').value = '';
-    document.getElementById('editor-dice').value = '';
-    document.getElementById('editor-players').value = '';
-    document.getElementById('editor-prep').value = '';
-    document.getElementById('editor-complexity').value = '3';
-    document.getElementById('editor-image').value = '';
+    setFormFields('editor', {
+        id: '', name: '', publisher: '', tagline: '', description: '',
+        setting: '', vignette: '', dice: '', players: '', prep: '',
+        complexity: '3', image: ''
+    });
     document.querySelectorAll('.editor-tag-check input').forEach(cb => cb.checked = false);
 
     if (editId) {
-        const sys = customSystems.find(s => s.id === editId);
+        const sys = CustomSystems.find(editId);
         if (sys) {
-            document.getElementById('editor-id').value = sys.id;
-            document.getElementById('editor-name').value = sys.name || '';
-            document.getElementById('editor-publisher').value = sys.publisher || '';
-            document.getElementById('editor-tagline').value = sys.tagline || '';
-            document.getElementById('editor-description').value = sys.description || '';
-            document.getElementById('editor-setting').value = sys.setting || '';
-            document.getElementById('editor-vignette').value = sys.vignette || '';
-            document.getElementById('editor-dice').value = sys.dice || '';
-            document.getElementById('editor-players').value = sys.players || '';
-            document.getElementById('editor-prep').value = sys.prep || '';
-            document.getElementById('editor-complexity').value = String(sys.complexity || 3);
-            document.getElementById('editor-image').value = sys.image || '';
+            setFormFields('editor', {
+                id: sys.id, name: sys.name, publisher: sys.publisher,
+                tagline: sys.tagline, description: sys.description,
+                setting: sys.setting, vignette: sys.vignette,
+                dice: sys.dice, players: sys.players, prep: sys.prep,
+                complexity: String(sys.complexity || 3), image: sys.image
+            });
             (sys.tags || []).forEach(tag => {
                 const cb = document.querySelector(`.editor-tag-check input[value="${tag}"]`);
                 if (cb) cb.checked = true;
@@ -622,25 +798,29 @@ function openEditor(editId) {
         deleteBtn.style.display = 'none';
     }
 
-    overlay.classList.remove('hidden');
-    _openDialog('editor');
+    openDialog('editor');
 }
 
-function closeEditor() { _closeDialog('editor'); }
+function closeEditor() { closeDialog('editor'); }
 
 function generateSlug(name) {
     return 'custom-' + name.toLowerCase().replace(/[^a-z0-9\u0400-\u04ff]+/gi, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
 }
 
 function saveCustomSystem() {
-    const name = document.getElementById('editor-name').value.trim();
-    if (!name) { document.getElementById('editor-name').focus(); return; }
+    const fields = getFormFields('editor', [
+        'id', 'name', 'publisher', 'tagline', 'description',
+        'setting', 'vignette', 'dice', 'players', 'prep',
+        'complexity', 'image'
+    ]);
 
-    const existingId = document.getElementById('editor-id').value;
-    let id = existingId || generateSlug(name);
+    if (!fields.name) { document.getElementById('editor-name').focus(); return; }
+
+    const existingId = fields.id;
+    let id = existingId || generateSlug(fields.name);
 
     // Ensure unique ID for new systems
-    if (!existingId && (SYSTEM_NAMES[id] || customSystems.some(s => s.id === id))) {
+    if (!existingId && (SYSTEM_NAMES[id] || CustomSystems.find(id))) {
         id = id + '-' + Date.now();
     }
 
@@ -649,33 +829,27 @@ function saveCustomSystem() {
 
     const sysData = {
         id: id,
-        name: name,
-        publisher: document.getElementById('editor-publisher').value.trim(),
-        tagline: document.getElementById('editor-tagline').value.trim(),
-        description: document.getElementById('editor-description').value.trim(),
-        setting: document.getElementById('editor-setting').value.trim(),
-        vignette: document.getElementById('editor-vignette').value.trim(),
-        dice: document.getElementById('editor-dice').value.trim(),
-        players: document.getElementById('editor-players').value.trim(),
-        prep: document.getElementById('editor-prep').value.trim(),
-        complexity: parseInt(document.getElementById('editor-complexity').value),
-        image: document.getElementById('editor-image').value.trim(),
+        name: fields.name,
+        publisher: fields.publisher,
+        tagline: fields.tagline,
+        description: fields.description,
+        setting: fields.setting,
+        vignette: fields.vignette,
+        dice: fields.dice,
+        players: fields.players,
+        prep: fields.prep,
+        complexity: parseInt(fields.complexity) || 3,
+        image: fields.image,
         tags: tags,
     };
 
     if (existingId) {
-        const idx = customSystems.findIndex(s => s.id === existingId);
-        if (idx !== -1) customSystems[idx] = sysData;
+        CustomSystems.update(existingId, sysData);
         document.getElementById(existingId)?.remove();
         document.querySelector(`.nav-item[data-page="${existingId}"]`)?.remove();
     } else {
-        customSystems.push(sysData);
+        CustomSystems.add(sysData);
     }
-
-    localStorage.setItem('ttrpg-custom', JSON.stringify(customSystems));
-
-    SYSTEM_NAMES[id] = name;
-    if (!SYSTEM_IDS.includes(id)) SYSTEM_IDS.push(id);
 
     buildCustomSystemPage(sysData);
     buildCustomNavItem(sysData);
@@ -749,22 +923,15 @@ function buildCustomNavItem(sys) {
 
 function showCustomNavGroup() {
     const group = document.getElementById('custom-nav-group');
-    group.style.display = customSystems.length > 0 ? '' : 'none';
+    group.style.display = CustomSystems.length > 0 ? '' : 'none';
 }
 
 function deleteCustomSystem(id) {
-    customSystems = customSystems.filter(s => s.id !== id);
-    localStorage.setItem('ttrpg-custom', JSON.stringify(customSystems));
+    CustomSystems.remove(id);
+    customSystems = CustomSystems._list;
 
     document.getElementById(id)?.remove();
     document.querySelector('.nav-item[data-page="' + id + '"]')?.remove();
-
-    delete SYSTEM_NAMES[id];
-    const idx = SYSTEM_IDS.indexOf(id);
-    if (idx !== -1) SYSTEM_IDS.splice(idx, 1);
-
-    delete votes[id];
-    localStorage.setItem('ttrpg-votes', JSON.stringify(votes));
 
     showCustomNavGroup();
     renderResults();
@@ -780,9 +947,9 @@ function deleteCustomSystemFromEditor() {
 }
 
 function renderCustomSystems() {
-    customSystems.forEach(sys => {
-        SYSTEM_NAMES[sys.id] = sys.name;
-        if (!SYSTEM_IDS.includes(sys.id)) SYSTEM_IDS.push(sys.id);
+    CustomSystems.loadAll();
+    customSystems = CustomSystems._list;
+    CustomSystems.all.forEach(sys => {
         buildCustomSystemPage(sys);
         buildCustomNavItem(sys);
     });
@@ -794,32 +961,62 @@ function renderCustomSystems() {
 let hiddenSystems = JSON.parse(localStorage.getItem('ttrpg-hidden-systems') || '[]');
 
 // Nav group definitions for the selector UI
-const NAV_GROUPS = [
-    { key: 'nav_group_osr', ids: SYSTEM_GROUPS.osr },
-    { key: 'nav_group_fl', ids: SYSTEM_GROUPS.fl },
-    { key: 'nav_group_narrative', ids: SYSTEM_GROUPS.narrative },
-    { key: 'nav_group_tactical', ids: SYSTEM_GROUPS.tactical },
-];
+function getNavGroups(scheme) {
+    var src = scheme ? buildGroupsForScheme(scheme) : SYSTEM_GROUPS;
+    return Object.entries(src).map(function(entry) {
+        return { key: 'nav_group_' + entry[0], ids: entry[1] };
+    });
+}
 
-function openSystemSelector() {
-    const overlay = document.getElementById('sys-selector-overlay');
-    const list = document.getElementById('sys-selector-list');
+function buildGroupsForScheme(scheme) {
+    var allGroups = typeof SYSTEM_GROUPS_ALL !== 'undefined' ? SYSTEM_GROUPS_ALL : {};
+    var raw = allGroups[scheme] || allGroups['default'] || {};
+    var result = {};
+    for (var group in raw) {
+        var entries = raw[group].slice().sort(function(a, b) { return a.order - b.order; });
+        result[group] = entries.map(function(e) { return e.id; });
+    }
+    return result;
+}
+
+let _selectorGrouping = null;
+
+function setSelectorGrouping(scheme) {
+    _selectorGrouping = scheme;
+    document.querySelectorAll('#selector-grouping-toggle .grouping-btn').forEach(function(btn) {
+        btn.classList.toggle('active', btn.dataset.grouping === scheme);
+    });
+    rebuildSelectorList();
+    refreshIcons();
+}
+
+function rebuildSelectorList() {
+    var list = document.getElementById('sys-selector-list');
+    // Save current checked state
+    var checked = {};
+    list.querySelectorAll('input[data-sys-id]').forEach(function(cb) {
+        checked[cb.dataset.sysId] = cb.checked;
+    });
+
     list.innerHTML = '';
+    var groups = getNavGroups(_selectorGrouping || currentGrouping);
 
-    NAV_GROUPS.forEach(group => {
-        const title = document.createElement('div');
+    groups.forEach(function(group) {
+        var title = document.createElement('div');
         title.className = 'sys-selector-group-title';
         title.textContent = t(group.key);
         list.appendChild(title);
 
-        const container = document.createElement('div');
+        var container = document.createElement('div');
         container.className = 'sys-selector-list';
-        group.ids.forEach(id => {
-            const name = SYSTEM_NAMES[id] || id;
-            const isHidden = hiddenSystems.includes(id);
-            const item = document.createElement('label');
-            item.className = 'sys-selector-item' + (isHidden ? ' disabled-sys' : '');
-            item.innerHTML = '<input type="checkbox" data-sys-id="' + id + '"' + (!isHidden ? ' checked' : '') + '> ' + name;
+        group.ids.forEach(function(id) {
+            var name = SYSTEM_NAMES[id] || id;
+            var isHidden = hiddenSystems.includes(id);
+            // Use saved state if exists, otherwise use hidden state
+            var isChecked = (id in checked) ? checked[id] : !isHidden;
+            var item = document.createElement('label');
+            item.className = 'sys-selector-item' + (!isChecked ? ' disabled-sys' : '');
+            item.innerHTML = '<input type="checkbox" data-sys-id="' + id + '"' + (isChecked ? ' checked' : '') + '> ' + name;
             item.querySelector('input').addEventListener('change', function() {
                 item.classList.toggle('disabled-sys', !this.checked);
             });
@@ -829,19 +1026,20 @@ function openSystemSelector() {
     });
 
     // Custom systems
-    if (customSystems.length > 0) {
-        const title = document.createElement('div');
+    if (CustomSystems.length > 0) {
+        var title = document.createElement('div');
         title.className = 'sys-selector-group-title';
         title.textContent = t('nav_group_custom');
         list.appendChild(title);
 
-        const container = document.createElement('div');
+        var container = document.createElement('div');
         container.className = 'sys-selector-list';
-        customSystems.forEach(sys => {
-            const isHidden = hiddenSystems.includes(sys.id);
-            const item = document.createElement('label');
-            item.className = 'sys-selector-item' + (isHidden ? ' disabled-sys' : '');
-            item.innerHTML = '<input type="checkbox" data-sys-id="' + sys.id + '"' + (!isHidden ? ' checked' : '') + '> ' + sys.name;
+        CustomSystems.all.forEach(function(sys) {
+            var isHidden = hiddenSystems.includes(sys.id);
+            var isChecked = (sys.id in checked) ? checked[sys.id] : !isHidden;
+            var item = document.createElement('label');
+            item.className = 'sys-selector-item' + (!isChecked ? ' disabled-sys' : '');
+            item.innerHTML = '<input type="checkbox" data-sys-id="' + sys.id + '"' + (isChecked ? ' checked' : '') + '> ' + sys.name;
             item.querySelector('input').addEventListener('change', function() {
                 item.classList.toggle('disabled-sys', !this.checked);
             });
@@ -849,12 +1047,18 @@ function openSystemSelector() {
         });
         list.appendChild(container);
     }
-
-    overlay.classList.remove('hidden');
-    _openDialog('selector');
 }
 
-function closeSystemSelector() { _closeDialog('selector'); }
+function openSystemSelector() {
+    _selectorGrouping = currentGrouping;
+    document.querySelectorAll('#selector-grouping-toggle .grouping-btn').forEach(function(btn) {
+        btn.classList.toggle('active', btn.dataset.grouping === currentGrouping);
+    });
+    rebuildSelectorList();
+    openDialog('selector');
+}
+
+function closeSystemSelector() { closeDialog('selector'); }
 
 // Close dialogs on backdrop click
 document.getElementById('editor-overlay').addEventListener('click', e => {
@@ -904,8 +1108,40 @@ function applySystemVisibility() {
     });
 }
 
+// ============ LANGUAGE CHANGE HANDLER ============
+document.addEventListener('langchange', function() {
+    var activePage = document.querySelector('.system-page.active');
+    var activeId = activePage ? activePage.id : null;
+
+    // Reload data with new language, clear all rendered pages
+    loadSystems();
+    if (typeof renderResults === 'function') renderResults();
+
+    // Re-render active system page if any
+    if (activeId && activeId !== 'results') {
+        ensureSystemRendered(activeId);
+        var restored = document.getElementById(activeId);
+        if (restored) restored.classList.add('active');
+    }
+
+    translateI18nElements();
+
+    if (PLAYERS) {
+        document.querySelectorAll('.vote-section').forEach(function(section) {
+            renderVoteButtons(section.dataset.system);
+        });
+    }
+
+    applySystemVisibility();
+    refreshIcons();
+});
+
 // ============ INIT ============
 function initApp() {
+    // Set active grouping button
+    document.querySelectorAll('.grouping-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.grouping === currentGrouping);
+    });
     renderCustomSystems();
     document.querySelectorAll('.vote-section').forEach(section => {
         renderVoteButtons(section.dataset.system);
@@ -929,8 +1165,6 @@ if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 history.replaceState({ page: 'results' }, '', window.location.hash || '#results');
 
 loadSystems();
-renderGalleries();
-renderResources();
 
 const isBrowseMode = localStorage.getItem('ttrpg-browse') === 'true';
 if (PLAYERS) {

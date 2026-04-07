@@ -19,9 +19,10 @@
     <meta name="twitter:description" content="Browse tabletop RPGs, compare mechanics, vote with your group.">
     <meta name="twitter:image" content="https://raw.githubusercontent.com/kejid/ttrpg-showcase/master/og-image.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script defer src="https://unpkg.com/lucide@0.474.0/dist/umd/lucide.js"></script>
 </head>
 <body>
 
@@ -116,24 +117,22 @@
         <i data-lucide="languages"></i> <span data-i18n="btn_lang">EN / RU</span>
     </button>
 
-    <div class="nav-group" id="nav-group-osr">
-        <div class="nav-group-title" data-i18n="nav_group_osr">The Odd & OSR</div>
+    <div class="grouping-toggle">
+        <button class="grouping-btn active" data-grouping="default" onclick="setGrouping('default')">
+            <i data-lucide="layout-grid"></i> <span data-i18n="grouping_default">Default</span>
+        </button>
+        <button class="grouping-btn" data-grouping="family" onclick="setGrouping('family')">
+            <i data-lucide="git-branch"></i> <span data-i18n="grouping_family">Family</span>
+        </button>
+        <button class="grouping-btn" data-grouping="genre" onclick="setGrouping('genre')">
+            <i data-lucide="tags"></i> <span data-i18n="grouping_genre">Genre</span>
+        </button>
     </div>
 
-    <div class="nav-group" id="nav-group-fl">
-        <div class="nav-group-title" data-i18n="nav_group_fl">Free League (YZE)</div>
-    </div>
-
-    <div class="nav-group" id="nav-group-narrative">
-        <div class="nav-group-title" data-i18n="nav_group_narrative">Narrative & Surreal</div>
-    </div>
-
-    <div class="nav-group" id="nav-group-tactical">
-        <div class="nav-group-title" data-i18n="nav_group_tactical">Tactical & Modern</div>
-    </div>
-
-    <div class="nav-group" id="custom-nav-group" style="display:none;">
-        <div class="nav-group-title" data-i18n="nav_group_custom">Мои системы</div>
+    <div class="nav-systems">
+        <div class="nav-group" id="custom-nav-group" style="display:none;">
+            <div class="nav-group-title" data-i18n="nav_group_custom">My Systems</div>
+        </div>
     </div>
 
 </nav>
@@ -229,6 +228,17 @@
             </div>
         </div>
         <p data-i18n="sys_selector_desc">Отметьте системы, которые хотите показать. Скрытые системы не отображаются в навигации и результатах.</p>
+        <div class="grouping-toggle" id="selector-grouping-toggle">
+            <button class="grouping-btn active" data-grouping="default" onclick="setSelectorGrouping('default')">
+                <i data-lucide="layout-grid"></i> <span data-i18n="grouping_default">Default</span>
+            </button>
+            <button class="grouping-btn" data-grouping="family" onclick="setSelectorGrouping('family')">
+                <i data-lucide="git-branch"></i> <span data-i18n="grouping_family">By Engine</span>
+            </button>
+            <button class="grouping-btn" data-grouping="genre" onclick="setSelectorGrouping('genre')">
+                <i data-lucide="tags"></i> <span data-i18n="grouping_genre">By Genre</span>
+            </button>
+        </div>
         <div class="sys-selector-actions">
             <button onclick="sysSelectAll()" data-i18n="sys_selector_all">Выбрать все</button>
             <button onclick="sysDeselectAll()" data-i18n="sys_selector_none">Снять все</button>
@@ -261,8 +271,7 @@
 </main>
 
 <script src="i18n.js"></script>
-<script src="data/systems.js"></script>
-<script src="data/systems-en.js"></script>
+<script src="data/systems-bundle.js"></script>
 <script src="app.js"></script>
 <script data-goatcounter="https://kejid.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>

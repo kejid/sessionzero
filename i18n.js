@@ -18,6 +18,21 @@ const LANG = {
     nav_group_fl: 'Free League (YZE)',
     nav_group_narrative: 'Narrative & Surreal',
     nav_group_tactical: 'Tactical & Modern',
+    nav_group_borg: '*BORG',
+    nav_group_resistance: 'Resistance (RRD)',
+    'nav_group_into-the-odd': 'Семейство Into the Odd',
+    'nav_group_year-zero': 'Year Zero Engine',
+    'nav_group_osr-classic': 'Классический OSR',
+    'nav_group_pbta-fitd': 'PbtA / FitD',
+    nav_group_standalone: 'Отдельные системы',
+    'nav_group_dark-fantasy': 'Тёмное фэнтези',
+    'nav_group_sci-fi': 'Научная фантастика',
+    nav_group_horror: 'Хоррор и оккультизм',
+    'nav_group_narrative-weird': 'Нарратив и Weird',
+    nav_group_adventure: 'Приключения',
+    grouping_default: 'Стандарт',
+    grouping_family: 'По движку',
+    grouping_genre: 'По жанру',
     btn_results: 'РЕЗУЛЬТАТЫ ГОЛОСОВАНИЯ',
     btn_catalog: 'КАТАЛОГ СИСТЕМ',
     btn_presentation: 'Режим презентации',
@@ -113,6 +128,21 @@ const LANG = {
     nav_group_fl: 'Free League (YZE)',
     nav_group_narrative: 'Narrative & Surreal',
     nav_group_tactical: 'Tactical & Modern',
+    nav_group_borg: '*BORG',
+    nav_group_resistance: 'Resistance (RRD)',
+    'nav_group_into-the-odd': 'Into the Odd Family',
+    'nav_group_year-zero': 'Year Zero Engine',
+    'nav_group_osr-classic': 'Classic OSR',
+    'nav_group_pbta-fitd': 'PbtA / FitD',
+    nav_group_standalone: 'Standalone',
+    'nav_group_dark-fantasy': 'Dark Fantasy',
+    'nav_group_sci-fi': 'Sci-Fi',
+    nav_group_horror: 'Horror & Occult',
+    'nav_group_narrative-weird': 'Narrative & Weird',
+    nav_group_adventure: 'Adventure',
+    grouping_default: 'Default',
+    grouping_family: 'By Engine',
+    grouping_genre: 'By Genre',
     btn_results: 'VOTING RESULTS',
     btn_catalog: 'SYSTEM CATALOG',
     btn_presentation: 'Presentation mode',
@@ -201,6 +231,7 @@ function t(key) {
 function setLang(lang) {
     currentLang = lang;
     localStorage.setItem('ttrpg-lang', lang);
+    if (typeof loadSystems === 'function') loadSystems();
     applyLang();
 }
 
@@ -253,18 +284,6 @@ function applyLang() {
         }
     }
 
-    // Re-render dynamic sections that use t()
-    if (typeof renderResults === 'function') {
-        const resultsPage = document.getElementById('results');
-        if (resultsPage) renderResults();
-    }
-
-    // Re-render galleries and resources (they use t() for section titles)
-    // Remove existing dynamically-added gallery/resource titles and sections, then re-render
-    document.querySelectorAll('.gallery-section-title, .resources-section-title').forEach(el => {
-        el.remove();
-    });
-
     // Update RES_LABELS to use current language
     if (typeof RES_LABELS !== 'undefined') {
         RES_LABELS.link = t('res_link');
@@ -275,47 +294,6 @@ function applyLang() {
         RES_LABELS.tool = t('res_tool');
     }
 
-    // Re-render resources and galleries (remove and re-add)
-    document.querySelectorAll('.resources-section').forEach(el => {
-        // Remove the section-title before it too
-        const prev = el.previousElementSibling;
-        if (prev && prev.classList.contains('section-title')) prev.remove();
-        el.remove();
-    });
-    document.querySelectorAll('.gallery').forEach(el => {
-        const prev = el.previousElementSibling;
-        if (prev && prev.classList.contains('section-title')) prev.remove();
-        el.remove();
-    });
-    // Re-render system pages with localized content
-    if (typeof renderAllSystems === 'function' && typeof SYSTEMS_DATA !== 'undefined' && Object.keys(SYSTEMS_DATA).length > 0) {
-        // Save current active page
-        const activePage = document.querySelector('.system-page.active');
-        const activeId = activePage ? activePage.id : null;
-
-        renderAllSystems();
-        if (typeof renderGalleries === 'function') renderGalleries();
-        if (typeof renderResources === 'function') renderResources();
-
-        translateI18nElements();
-
-        // Re-render vote buttons if players exist
-        if (typeof PLAYERS !== 'undefined' && PLAYERS && typeof renderVoteButtons === 'function') {
-            document.querySelectorAll('.vote-section').forEach(section => {
-                renderVoteButtons(section.dataset.system);
-            });
-        }
-
-        // Restore active page
-        if (activeId) {
-            const restored = document.getElementById(activeId);
-            if (restored) restored.classList.add('active');
-        }
-
-        // Re-apply system visibility
-        if (typeof applySystemVisibility === 'function') applySystemVisibility();
-    }
-
-    if (typeof refreshIcons === 'function') refreshIcons();
-    else lucide.createIcons();
+    // Notify app.js to re-render with new language
+    document.dispatchEvent(new Event('langchange'));
 }
