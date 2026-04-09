@@ -15,6 +15,7 @@ registerSystem("starforged", {
     "narrative",
     "sandbox"
   ],
+  "settingTags": ["space"],
   "heroImage": "https://cdn.shopify.com/s/files/1/0712/0329/1447/files/starforged-sunset.jpg?v=1725559572",
   "gallery": [
     {

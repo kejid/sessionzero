@@ -16,6 +16,7 @@ registerSystem("death-in-space", {
     "explore",
     "sandbox"
   ],
+  "settingTags": ["space"],
   "gallery": [
     {
       "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/D1_hori-1440x720.jpg"

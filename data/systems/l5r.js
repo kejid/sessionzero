@@ -17,6 +17,7 @@ registerSystem("l5r", {
     "narrative",
     "combat"
   ],
+  "settingTags": ["fantasy", "historical"],
   "gallery": [
     {
       "src": "https://cdn.svc.asmodee.net/production-l5r/uploads/image-converter/2023/06/01a_Cover_Illustration-1900x1900.webp"

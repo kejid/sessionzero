@@ -17,6 +17,7 @@ registerSystem("thousand-year-old-vampire", {
     "horror",
     "mystery"
   ],
+  "settingTags": ["historical", "urban-fantasy"],
   "gallery": [
     {
       "src": "https://img.itch.zone/aW1hZ2UvNTgyMDAwLzMwNjY0NDcucG5n/347x500/UYjcQP.png"

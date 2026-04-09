@@ -16,6 +16,7 @@ registerSystem("alien", {
     "survival",
     "mystery"
   ],
+  "settingTags": ["space"],
   "gallery": [
     {
       "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Alien_8.jpg"

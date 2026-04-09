@@ -17,6 +17,7 @@ registerSystem("shadowdark", {
     "combat",
     "survival"
   ],
+  "settingTags": ["fantasy"],
   "gallery": [
     {
       "src": "https://www.thearcanelibrary.com/cdn/shop/files/ShadowdarkRPGDigitalPDF5_1200x.jpg?v=1684273611"

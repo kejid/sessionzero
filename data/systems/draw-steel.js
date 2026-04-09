@@ -17,6 +17,7 @@ registerSystem("draw-steel", {
     "narrative",
     "narrative"
   ],
+  "settingTags": ["fantasy"],
   "gallery": [
     {
       "src": "https://www.rascal.news/content/images/2025/06/Thomas-2-.png"

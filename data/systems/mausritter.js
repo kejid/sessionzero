@@ -16,6 +16,7 @@ registerSystem("mausritter", {
     "survival",
     "sandbox"
   ],
+  "settingTags": ["fantasy"],
   "gallery": [
     {
       "src": "https://img.itch.zone/aW1nLzQ1Nzc4OTYucG5n/original/Dnexgj.png"

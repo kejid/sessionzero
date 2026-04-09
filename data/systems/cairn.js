@@ -17,6 +17,7 @@ registerSystem("cairn", {
     "horror",
     "survival"
   ],
+  "settingTags": ["fantasy"],
   "gallery": [
     {
       "src": "https://www.exaltedfuneral.com/cdn/shop/files/cairn-2e-boxed-set-boxed-set-2496979.webp?v=1764284291"

@@ -16,6 +16,7 @@ registerSystem("wildsea", {
     "narrative",
     "worldbuild"
   ],
+  "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
       "src": "https://img.itch.zone/aW1hZ2UvMTMyNjI2My84MDUxMjgyLnBuZw==/original/tY0wGS.png"

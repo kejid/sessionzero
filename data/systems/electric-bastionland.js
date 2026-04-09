@@ -16,6 +16,7 @@ registerSystem("electric-bastionland", {
     "social",
     "sandbox"
   ],
+  "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
       "src": "https://img.itch.zone/aW1hZ2UvNTk4NDYyLzMxNzkzMTkucG5n/original/MnG1LD.png"

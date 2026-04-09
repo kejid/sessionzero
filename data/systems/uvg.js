@@ -16,6 +16,7 @@ registerSystem("uvg", {
     "worldbuild",
     "survival"
   ],
+  "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
       "src": "https://i.kickstarter.com/assets/027/487/468/c840ff8095f7e5aae9da7674703ee23d_original.jpg?anim=false&fit=scale-down&origin=ugc&q=92&v=1576152739&width=700"

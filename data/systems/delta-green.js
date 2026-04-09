@@ -16,6 +16,7 @@ registerSystem("delta-green", {
     "mystery",
     "narrative"
   ],
+  "settingTags": ["modern", "weird"],
   "gallery": [
     {
       "src": "https://www.delta-green.com/content/images/size/w720/2026/03/Army-spread.png"

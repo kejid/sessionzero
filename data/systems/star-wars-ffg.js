@@ -17,6 +17,7 @@ registerSystem("star-wars-ffg", {
     "social",
     "explore"
   ],
+  "settingTags": ["space"],
   "gallery": [
     {
       "src": "https://ttrpgfans.com/wp-content/uploads/2025/11/star-wars-rpg-reprints-1.png"

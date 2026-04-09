@@ -17,6 +17,7 @@ registerSystem("twilight", {
     "sandbox",
     "social"
   ],
+  "settingTags": ["modern", "postapoc"],
   "gallery": [
     {
       "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Twilight_2000_RPG_Factions.jpg"

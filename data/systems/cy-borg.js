@@ -16,6 +16,7 @@ registerSystem("cy-borg", {
     "survival",
     "action"
   ],
+  "settingTags": ["cyberpunk", "postapoc"],
   "gallery": [
     {
       "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/CBcovermockup_small_038aec50-b06d-43ce-8712-c9077b0211b5-1200x1200-1-1200x1200.jpg"

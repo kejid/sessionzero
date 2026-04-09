@@ -16,6 +16,7 @@ registerSystem("into-the-odd", {
     "survival",
     "sandbox"
   ],
+  "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
       "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/ITO_standing-TM-1200x1200.jpg"

@@ -18,6 +18,7 @@ registerSystem("call-of-cthulhu", {
     "narrative",
     "social"
   ],
+  "settingTags": ["historical", "weird"],
   "gallery": [
     {
       "src": "https://www.rpgtabletopgames.com/wp-content/uploads/call-of-cthulhu-rpg.jpg"

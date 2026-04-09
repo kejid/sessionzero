@@ -18,6 +18,7 @@ registerSystem("mork-borg", {
     "horror",
     "explore"
   ],
+  "settingTags": ["fantasy", "weird", "postapoc"],
   "gallery": [
     {
       "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/MB_skeleton_kvad-1200x1200.jpg"

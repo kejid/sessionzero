@@ -16,6 +16,7 @@ registerSystem("the-wretched", {
     "survival",
     "narrative"
   ],
+  "settingTags": ["space"],
   "gallery": [
     {
       "src": "https://img.itch.zone/aW1hZ2UvNjE0MjgzLzMyNjgzODkucG5n/347x500/1hYOtq.png"

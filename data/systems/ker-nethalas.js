@@ -16,6 +16,7 @@ registerSystem("ker-nethalas", {
     "explore",
     "survival"
   ],
+  "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
       "src": "https://img.itch.zone/aW1hZ2UvMjUxNTI2MS8yNjA3NzA4MC5qcGc=/347x500/c4RF8Y.jpg"

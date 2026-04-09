@@ -18,6 +18,7 @@ registerSystem("forbidden-lands", {
     "sandbox",
     "combat"
   ],
+  "settingTags": ["fantasy"],
   "gallery": [
     {
       "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/ForbiddenLands_drakorm_pergament_core_art-1.jpg"

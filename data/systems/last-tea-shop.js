@@ -17,6 +17,7 @@ registerSystem("last-tea-shop", {
     "mystery",
     "social"
   ],
+  "settingTags": ["weird"],
   "gallery": [
     {
       "src": "https://img.itch.zone/aW1hZ2UvMTE2NzU4MC83NjkwNjc1LnBuZw==/347x500/KWkPXM.png"

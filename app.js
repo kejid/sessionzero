@@ -20,8 +20,18 @@ const TAG_I18N = {
     survival: 'tag_survival', worldbuild: 'tag_worldbuilding', tactical: 'tag_tactical', sandbox: 'tag_sandbox',
     solo: 'tag_solo',
 };
+const SETTING_TAG_ICONS = {
+    space: 'rocket', fantasy: 'castle', cyberpunk: 'cpu',
+    modern: 'building-2', postapoc: 'radiation', historical: 'landmark',
+    weird: 'sparkles', 'urban-fantasy': 'building',
+};
+const SETTING_TAG_I18N = {
+    space: 'tag_space', fantasy: 'tag_fantasy', cyberpunk: 'tag_cyberpunk',
+    modern: 'tag_modern', postapoc: 'tag_postapoc', historical: 'tag_historical',
+    weird: 'tag_weird', 'urban-fantasy': 'tag_urban_fantasy',
+};
 function tagLabel(tag) {
-    const key = TAG_I18N[tag] || 'tag_' + tag;
+    const key = TAG_I18N[tag] || SETTING_TAG_I18N[tag] || 'tag_' + tag;
     const val = t(key);
     return val !== key ? val : tag;
 }
@@ -29,6 +39,19 @@ function tagLabel(tag) {
 const TAG_CONFIG = new Proxy({}, {
     get(_, tag) { return { icon: TAG_ICONS[tag] || 'tag', label: tagLabel(tag) }; }
 });
+const SETTING_TAG_CONFIG = new Proxy({}, {
+    get(_, tag) { return { icon: SETTING_TAG_ICONS[tag] || 'map-pin', label: tagLabel(tag) }; }
+});
+
+// Returns normalized tag arrays for any system (official or custom).
+// Official systems use playstyleTags/settingTags; custom systems use tags/settingTags.
+function getSystemTags(id) {
+    const sysData = SYSTEMS_DATA[id];
+    if (sysData) return { tagKeys: sysData.playstyleTags || [], settingKeys: sysData.settingTags || [] };
+    const custom = CustomSystems.find(id);
+    if (custom) return { tagKeys: custom.tags || [], settingKeys: custom.settingTags || [] };
+    return { tagKeys: [], settingKeys: [] };
+}
 
 // ============ DEBOUNCED LUCIDE REFRESH ============
 let _lucideTimer;
@@ -156,6 +179,10 @@ function renderSystemPage(id, sys) {
         const cfg = TAG_CONFIG[tag] || { icon: 'tag', label: tag };
         return `<span class="playstyle-tag tag-${tag}"><i data-lucide="${cfg.icon}"></i> ${cfg.label}</span>`;
     }).join('');
+    const settingTagsHTML = (sys.settingTags || []).map(tag => {
+        const cfg = SETTING_TAG_CONFIG[tag] || { icon: 'map-pin', label: tag };
+        return `<span class="playstyle-tag setting-tag"><i data-lucide="${cfg.icon}"></i> ${cfg.label}</span>`;
+    }).join('');
 
     const mechanics = localField(sys, 'mechanics', []);
     const mechanicsHTML = mechanics.map(m => {
@@ -191,7 +218,7 @@ function renderSystemPage(id, sys) {
     <div class="setting-block">${miniMd(localField(sys, 'setting'))}</div>
     ${vignetteHTML}
     <div class="section-title" data-i18n="section_playstyle">${t('section_playstyle')}</div>
-    <div class="playstyle-tags">${tagsHTML}</div>
+    <div class="playstyle-tags">${tagsHTML}${settingTagsHTML}</div>
     <div class="section-title" data-i18n="section_mechanics">${t('section_mechanics')}</div>
     <div class="grid">${mechanicsHTML}</div>
     <div class="section-title" data-i18n="section_reviews">${t('section_reviews')}</div>
@@ -280,6 +307,10 @@ function setGrouping(scheme) {
 // ============ STATE ============
 let PLAYERS = JSON.parse(localStorage.getItem('ttrpg-players') || 'null');
 let votes = JSON.parse(localStorage.getItem('ttrpg-votes') || '{}');
+let vetoes = JSON.parse(localStorage.getItem('ttrpg-vetoes') || '{}');
+let deferred = JSON.parse(localStorage.getItem('ttrpg-deferred') || '[]');
+let manualOrder = JSON.parse(localStorage.getItem('ttrpg-order') || '[]');
+let tagFilter = new Set(JSON.parse(localStorage.getItem('ttrpg-tag-filter') || '[]'));
 
 // ============ SETUP SCREEN ============
 function updateSetupFields() {
@@ -322,9 +353,15 @@ function startApp() {
 function resetPlayers() {
     localStorage.removeItem('ttrpg-players');
     localStorage.removeItem('ttrpg-votes');
+    localStorage.removeItem('ttrpg-vetoes');
+    localStorage.removeItem('ttrpg-deferred');
+    localStorage.removeItem('ttrpg-order');
     localStorage.removeItem('ttrpg-browse');
     PLAYERS = null;
     votes = {};
+    vetoes = {};
+    deferred = [];
+    manualOrder = [];
     location.reload();
 }
 
@@ -356,12 +393,66 @@ function setView(view) {
 function toggleVote(systemId, playerId) {
     if (!votes[systemId]) votes[systemId] = [];
     const idx = votes[systemId].indexOf(playerId);
+    let added = false;
     if (idx === -1) {
         votes[systemId].push(playerId);
+        added = true;
+        // Remove veto if voting for
+        if (vetoes[systemId]) {
+            const vi = vetoes[systemId].indexOf(playerId);
+            if (vi !== -1) vetoes[systemId].splice(vi, 1);
+            localStorage.setItem('ttrpg-vetoes', JSON.stringify(vetoes));
+        }
     } else {
         votes[systemId].splice(idx, 1);
     }
     localStorage.setItem('ttrpg-votes', JSON.stringify(votes));
+    renderVoteButtons(systemId);
+    updateNavVotes();
+    if (document.getElementById('results').classList.contains('active')) renderResults();
+
+    // Unanimous celebration: triggered when last player upvotes a system in a group
+    if (added && PLAYERS && PLAYERS.length >= 2 && votes[systemId].length === PLAYERS.length) {
+        celebrateUnanimous(systemId);
+    }
+}
+
+function celebrateUnanimous(systemId) {
+    const page = document.getElementById(systemId);
+    if (!page) return;
+    page.classList.add('unanimous-celebrate');
+    setTimeout(() => page.classList.remove('unanimous-celebrate'), 2000);
+    // Confetti emoji burst
+    const burst = document.createElement('div');
+    burst.className = 'unanimous-burst';
+    const symbols = ['\u2728', '\ud83c\udf89', '\u2b50', '\ud83c\udfb2', '\ud83d\udd25'];
+    for (let i = 0; i < 18; i++) {
+        const span = document.createElement('span');
+        span.textContent = symbols[i % symbols.length];
+        span.style.left = Math.random() * 100 + '%';
+        span.style.animationDelay = (Math.random() * 0.3) + 's';
+        span.style.animationDuration = (1.2 + Math.random() * 0.8) + 's';
+        burst.appendChild(span);
+    }
+    document.body.appendChild(burst);
+    setTimeout(() => burst.remove(), 2200);
+}
+
+function toggleVeto(systemId, playerId) {
+    if (!vetoes[systemId]) vetoes[systemId] = [];
+    const idx = vetoes[systemId].indexOf(playerId);
+    if (idx === -1) {
+        vetoes[systemId].push(playerId);
+        // Remove upvote if vetoing
+        if (votes[systemId]) {
+            const vi = votes[systemId].indexOf(playerId);
+            if (vi !== -1) votes[systemId].splice(vi, 1);
+            localStorage.setItem('ttrpg-votes', JSON.stringify(votes));
+        }
+    } else {
+        vetoes[systemId].splice(idx, 1);
+    }
+    localStorage.setItem('ttrpg-vetoes', JSON.stringify(vetoes));
     renderVoteButtons(systemId);
     updateNavVotes();
     if (document.getElementById('results').classList.contains('active')) renderResults();
@@ -372,14 +463,21 @@ function renderVoteButtons(systemId) {
     if (!section || !PLAYERS) return;
     const container = section.querySelector('.vote-players');
     const systemVotes = votes[systemId] || [];
+    const systemVetoes = vetoes[systemId] || [];
     const sysName = SYSTEM_NAMES[systemId] || systemId;
     container.innerHTML = PLAYERS.map(p => {
         const voted = systemVotes.includes(p.id);
-        return `<button class="vote-btn ${voted ? 'voted' : ''}" onclick="toggleVote('${systemId}', '${p.id}')" aria-label="${p.name}: ${voted ? 'voted' : 'vote'} ${sysName}" style="${voted ? `border-color:${p.color};color:${p.color};background:${p.color}15` : ''}">
-            <i data-lucide="thumbs-up"></i>
-            <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${p.color};flex-shrink:0"></span>
-            ${p.name}
-        </button>`;
+        const vetoed = systemVetoes.includes(p.id);
+        return `<div class="vote-player-group">
+            <button class="vote-btn ${voted ? 'voted' : ''}" onclick="toggleVote('${systemId}', '${p.id}')" aria-label="${p.name}: ${voted ? 'voted' : 'vote'} ${sysName}" style="${voted ? `border-color:${p.color};color:${p.color};background:${p.color}15` : ''}">
+                <i data-lucide="thumbs-up"></i>
+                <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${p.color};flex-shrink:0"></span>
+                ${p.name}
+            </button>
+            <button class="vote-btn veto-btn ${vetoed ? 'vetoed' : ''}" onclick="toggleVeto('${systemId}', '${p.id}')" aria-label="${p.name}: veto ${sysName}" title="${t('veto_title')}">
+                <i data-lucide="thumbs-down"></i>
+            </button>
+        </div>`;
     }).join('');
     refreshIcons();
 }
@@ -387,10 +485,243 @@ function renderVoteButtons(systemId) {
 function updateNavVotes() {
     document.querySelectorAll('.nav-item[data-page]').forEach(item => {
         const page = item.dataset.page;
-        const count = (votes[page] || []).length;
+        const upCount = (votes[page] || []).length;
+        const downCount = (vetoes[page] || []).length;
         const badge = item.querySelector('.nav-votes');
-        if (badge) badge.textContent = count > 0 ? `${count} \u2665` : '';
+        if (badge) {
+            let text = '';
+            if (upCount > 0) text += `${upCount} \u2665`;
+            if (downCount > 0) text += `${text ? ' ' : ''}${downCount} \u2717`;
+            badge.textContent = text;
+        }
     });
+}
+
+function toggleDeferred(id, e) {
+    e.stopPropagation();
+    const idx = deferred.indexOf(id);
+    if (idx === -1) deferred.push(id);
+    else deferred.splice(idx, 1);
+    localStorage.setItem('ttrpg-deferred', JSON.stringify(deferred));
+
+    // Update card in-place
+    const card = document.querySelector(`[data-system-id="${id}"]`);
+    if (card) {
+        const isDef = deferred.includes(id);
+        card.classList.toggle('result-card-deferred', isDef);
+        const deferBtn = card.querySelector('.rc-defer-btn');
+        if (deferBtn) {
+            deferBtn.classList.toggle('active', isDef);
+            deferBtn.title = isDef ? t('status_play_now') : t('status_play_later');
+        }
+    }
+}
+
+function moveSystem(id, dir, e) {
+    e.stopPropagation();
+    if (!manualOrder.length) initManualOrder();
+    const idx = manualOrder.indexOf(id);
+    const swapIdx = idx + dir;
+    if (swapIdx < 0 || swapIdx >= manualOrder.length) return;
+
+    const grid = document.getElementById('results-grid');
+    const cardA = grid.querySelector(`[data-system-id="${manualOrder[idx]}"]`);
+    const cardB = grid.querySelector(`[data-system-id="${manualOrder[swapIdx]}"]`);
+    if (!cardA || !cardB) return;
+
+    // Capture positions for FLIP
+    const rectA = cardA.getBoundingClientRect();
+    const rectB = cardB.getBoundingClientRect();
+
+    // Swap in manualOrder
+    [manualOrder[idx], manualOrder[swapIdx]] = [manualOrder[swapIdx], manualOrder[idx]];
+    localStorage.setItem('ttrpg-order', JSON.stringify(manualOrder));
+
+    // Swap DOM nodes
+    if (dir === 1) cardB.after(cardA); // moving down: put A after B
+    else cardB.before(cardA);          // moving up: put A before B
+
+    // Update positions and arrows
+    updateCardsAfterReorder(grid);
+
+    // FLIP animate the two swapped cards
+    flipAnimate(cardA, rectA);
+    flipAnimate(cardB, rectB);
+}
+
+function flipAnimate(el, oldRect) {
+    const newRect = el.getBoundingClientRect();
+    const dx = oldRect.left - newRect.left;
+    const dy = oldRect.top - newRect.top;
+    if (dx === 0 && dy === 0) return;
+    el.style.transform = `translate(${dx}px, ${dy}px)`;
+    el.style.transition = 'none';
+    requestAnimationFrame(() => {
+        el.style.transition = 'transform 0.25s ease';
+        el.style.transform = '';
+        el.addEventListener('transitionend', () => { el.style.transition = ''; }, { once: true });
+    });
+}
+
+function updateCardsAfterReorder(grid) {
+    const cards = Array.from(grid.querySelectorAll('.result-card[data-system-id]'));
+    cards.forEach((card, idx) => {
+        const posEl = card.querySelector('.result-card-pos');
+        if (posEl) posEl.textContent = idx + 1;
+        const upBtn = card.querySelector('.rc-move-up');
+        const downBtn = card.querySelector('.rc-move-down');
+        if (upBtn) upBtn.classList.toggle('rc-hidden', idx === 0);
+        if (downBtn) downBtn.classList.toggle('rc-hidden', idx === cards.length - 1);
+    });
+}
+
+function initManualOrder() {
+    const systems = SYSTEM_IDS.filter(id => !hiddenSystems.includes(id)).map(id => ({
+        id,
+        score: (votes[id] || []).length - (vetoes[id] || []).length
+    }));
+    systems.sort((a, b) => b.score - a.score);
+    manualOrder = systems.map(s => s.id);
+    localStorage.setItem('ttrpg-order', JSON.stringify(manualOrder));
+}
+
+function sortSystems(systems, browseMode) {
+    if (browseMode || !PLAYERS) return systems;
+    if (manualOrder.length) {
+        systems.sort((a, b) => {
+            let ia = manualOrder.indexOf(a.id);
+            let ib = manualOrder.indexOf(b.id);
+            if (ia === -1) ia = 9999;
+            if (ib === -1) ib = 9999;
+            return ia - ib;
+        });
+    } else {
+        systems.sort((a, b) => b.score - a.score);
+    }
+    return systems;
+}
+
+function exportResults() {
+    const browseMode = document.body.classList.contains('browse-mode');
+    let systems = SYSTEM_IDS.filter(id => !hiddenSystems.includes(id)).map(id => ({
+        id, name: SYSTEM_NAMES[id],
+        ...getSystemTags(id),
+        count: (votes[id] || []).length,
+        vetoCount: (vetoes[id] || []).length,
+        score: (votes[id] || []).length - (vetoes[id] || []).length,
+        voters: PLAYERS ? (votes[id] || []).map(vid => PLAYERS.find(p => p.id === vid)).filter(Boolean) : [],
+        vetoers: PLAYERS ? (vetoes[id] || []).map(vid => PLAYERS.find(p => p.id === vid)).filter(Boolean) : []
+    }));
+    if (tagFilter.size > 0) {
+        systems = systems.filter(s =>
+            s.tagKeys.some(k => tagFilter.has(k)) ||
+            s.settingKeys.some(k => tagFilter.has(k))
+        );
+    }
+    sortSystems(systems, browseMode);
+    let lines = [];
+    lines.push(t('export_header'));
+    lines.push('');
+    let num = 1;
+    if (!browseMode && PLAYERS) {
+        systems.forEach(s => {
+            const isDef = deferred.includes(s.id);
+            let info = isDef ? `\u23f3 ${s.name}` : s.name;
+            const parts = [];
+            if (s.count > 0) parts.push(`+${s.count}`);
+            if (s.vetoCount > 0) parts.push(`\u2212${s.vetoCount}`);
+            if (parts.length) info += ` (${parts.join(' / ')})`;
+            if (s.voters.length) info += ` \u2014 ${s.voters.map(v => v.name).join(', ')}`;
+            if (isDef) info += ` \u2014 ${t('status_play_later').toLowerCase()}`;
+            lines.push(`${num++}. ${info}`);
+        });
+    } else {
+        systems.forEach(s => {
+            lines.push(`${num++}. ${s.name}`);
+        });
+    }
+    const text = lines.join('\n');
+    const textarea = document.getElementById('export-text');
+    textarea.value = text;
+    document.getElementById('export-overlay').classList.remove('hidden');
+}
+
+function copyExport() {
+    const textarea = document.getElementById('export-text');
+    navigator.clipboard.writeText(textarea.value).then(() => {
+        const btn = document.getElementById('export-copy-btn');
+        const orig = btn.textContent;
+        btn.textContent = t('copied');
+        setTimeout(() => { btn.textContent = orig; }, 1500);
+    });
+}
+
+function closeExport() {
+    document.getElementById('export-overlay').classList.add('hidden');
+}
+
+function toggleTagFilter(tag) {
+    if (tagFilter.has(tag)) tagFilter.delete(tag);
+    else tagFilter.add(tag);
+    localStorage.setItem('ttrpg-tag-filter', JSON.stringify([...tagFilter]));
+    renderResults();
+}
+
+function clearTagFilter() {
+    tagFilter.clear();
+    localStorage.setItem('ttrpg-tag-filter', '[]');
+    renderResults();
+}
+
+function renderTagFilter(allSystems) {
+    const panel = document.getElementById('results-tag-filter');
+    if (!panel) return;
+    // Collect tag counts split by category — uses already-resolved tag keys from allSystems
+    // (which handles both official and custom systems)
+    const playCounts = {};
+    const setCounts = {};
+    allSystems.forEach(s => {
+        (s.tagKeys || []).forEach(k => { playCounts[k] = (playCounts[k] || 0) + 1; });
+        (s.settingKeys || []).forEach(k => { setCounts[k] = (setCounts[k] || 0) + 1; });
+    });
+    const sortedPlay = Object.keys(playCounts).sort((a, b) => playCounts[b] - playCounts[a]);
+    const sortedSet = Object.keys(setCounts).sort((a, b) => setCounts[b] - setCounts[a]);
+    const totalCount = allSystems.length;
+
+    let html = `<div class="tag-filter-title" data-i18n="tag_filter_title">${t('tag_filter_title')}</div>`;
+    html += `<button class="tag-filter-btn ${tagFilter.size === 0 ? 'active' : ''}" onclick="clearTagFilter()">
+        <span class="tag-filter-label" data-i18n="tag_filter_all">${t('tag_filter_all')}</span>
+        <span class="tag-filter-count">${totalCount}</span>
+    </button>`;
+
+    if (sortedPlay.length > 0) {
+        html += `<div class="tag-filter-section" data-i18n="tag_filter_playstyle">${t('tag_filter_playstyle')}</div>`;
+        sortedPlay.forEach(tag => {
+            const cfg = TAG_CONFIG[tag];
+            const isActive = tagFilter.has(tag);
+            html += `<button class="tag-filter-btn ${isActive ? 'active' : ''}" onclick="toggleTagFilter('${tag}')">
+                <i data-lucide="${cfg.icon}"></i>
+                <span class="tag-filter-label">${cfg.label}</span>
+                <span class="tag-filter-count">${playCounts[tag]}</span>
+            </button>`;
+        });
+    }
+
+    if (sortedSet.length > 0) {
+        html += `<div class="tag-filter-section" data-i18n="tag_filter_setting">${t('tag_filter_setting')}</div>`;
+        sortedSet.forEach(tag => {
+            const cfg = SETTING_TAG_CONFIG[tag];
+            const isActive = tagFilter.has(tag);
+            html += `<button class="tag-filter-btn setting ${isActive ? 'active' : ''}" onclick="toggleTagFilter('${tag}')">
+                <i data-lucide="${cfg.icon}"></i>
+                <span class="tag-filter-label">${cfg.label}</span>
+                <span class="tag-filter-count">${setCounts[tag]}</span>
+            </button>`;
+        });
+    }
+
+    panel.innerHTML = html;
+    refreshIcons();
 }
 
 function renderResults() {
@@ -402,35 +733,77 @@ function renderResults() {
     if (subtitle) subtitle.textContent = browseMode
         ? t('results_subtitle_browse')
         : t('results_subtitle_vote');
-    const systems = SYSTEM_IDS.filter(id => !hiddenSystems.includes(id)).map(id => {
+    const allSystems = SYSTEM_IDS.filter(id => !hiddenSystems.includes(id)).map(id => {
         const sysData = SYSTEMS_DATA[id];
+        const customSys = sysData ? null : CustomSystems.find(id);
         const page = document.getElementById(id);
-        const heroImg = sysData ? sysData.heroImage : (page?.querySelector('.hero-banner img')?.src || '');
-        const tagline = sysData ? localField(sysData, 'tagline') : (page?.querySelector('.tagline')?.textContent || '');
-        const tags = sysData ? (sysData.playstyleTags || []).map(tag => {
+        const heroImg = sysData ? sysData.heroImage : (customSys?.image || page?.querySelector('.hero-banner img')?.src || '');
+        const tagline = sysData ? localField(sysData, 'tagline') : (customSys?.tagline || page?.querySelector('.tagline')?.textContent || '');
+        const { tagKeys, settingKeys } = getSystemTags(id);
+        const tags = tagKeys.map(tag => {
             const cfg = TAG_CONFIG[tag];
             return cfg ? cfg.label : tag;
-        }) : Array.from(page?.querySelectorAll('.playstyle-tag') || []).map(t => t.textContent.trim());
+        });
         return {
-            id, name: SYSTEM_NAMES[id], heroImg, tagline, tags,
+            id, name: SYSTEM_NAMES[id], heroImg, tagline, tags, tagKeys, settingKeys,
             voters: PLAYERS ? (votes[id] || []).map(vid => PLAYERS.find(p => p.id === vid)).filter(Boolean) : [],
-            count: (votes[id] || []).length
+            vetoers: PLAYERS ? (vetoes[id] || []).map(vid => PLAYERS.find(p => p.id === vid)).filter(Boolean) : [],
+            count: (votes[id] || []).length,
+            vetoCount: (vetoes[id] || []).length,
+            score: (votes[id] || []).length - (vetoes[id] || []).length
         };
     });
-    if (!browseMode && PLAYERS) systems.sort((a, b) => b.count - a.count);
 
-    grid.classList.toggle('list-view', currentView === 'list');
-    document.querySelectorAll('.view-toggle-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.view === currentView));
+    // Render tag filter sidebar (uses unfiltered system list for stable counts)
+    renderTagFilter(allSystems);
 
-    grid.innerHTML = systems.map(s => {
-        const votesHTML = !browseMode && PLAYERS && s.count > 0 ? `
+    // Apply tag filter (OR semantics: system shown if it matches ANY selected tag from EITHER category)
+    const systems = tagFilter.size === 0
+        ? allSystems
+        : allSystems.filter(s =>
+            s.tagKeys.some(k => tagFilter.has(k)) ||
+            s.settingKeys.some(k => tagFilter.has(k))
+        );
+
+    sortSystems(systems, browseMode);
+
+    const votingMode = !browseMode && PLAYERS;
+    // Force list view in voting mode
+    const effectiveView = votingMode ? 'list' : currentView;
+    grid.classList.toggle('list-view', effectiveView === 'list');
+    document.querySelectorAll('.view-toggle-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.view === effectiveView);
+        btn.style.display = votingMode ? 'none' : '';
+    });
+    // No section split — deferred is just a visual marker
+
+    // Global position counter for numbering across sections
+    let posNum = 0;
+
+    function renderCard(s, idx, total) {
+        posNum++;
+        const hasVotes = s.count > 0 || s.vetoCount > 0;
+        const votesHTML = votingMode && hasVotes ? `
             <div class="result-card-votes">
-                <span class="result-card-vote-count">${s.count}</span>
+                ${s.count > 0 ? `<span class="result-card-vote-count">+${s.count}</span>` : ''}
                 ${s.voters.map(v => `<span class="result-voter-chip" style="background:${v.color}20;color:${v.color}">${v.name}</span>`).join('')}
+                ${s.vetoCount > 0 ? `<span class="result-card-veto-count">\u2212${s.vetoCount}</span>` : ''}
+                ${s.vetoers.map(v => `<span class="result-voter-chip result-vetoer-chip" style="background:${v.color}20;color:${v.color}">${v.name}</span>`).join('')}
             </div>` : '';
         const isCustom = !!CustomSystems.find(s.id);
         const badgeHTML = isCustom ? '<span class="custom-badge"><i data-lucide="user"></i></span>' : '';
-        return `<div class="result-card" onclick="showPage('${s.id}')">
+        const isDef = deferred.includes(s.id);
+        const actionsHTML = votingMode ? `
+            <div class="result-card-actions">
+                <button class="rc-action-btn rc-move-up ${idx <= 0 ? 'rc-hidden' : ''}" onclick="moveSystem('${s.id}', -1, event)" title="${t('move_up')}"><i data-lucide="chevron-up"></i></button>
+                <button class="rc-action-btn rc-move-down ${idx >= total - 1 ? 'rc-hidden' : ''}" onclick="moveSystem('${s.id}', 1, event)" title="${t('move_down')}"><i data-lucide="chevron-down"></i></button>
+                <button class="rc-action-btn rc-defer-btn ${isDef ? 'active' : ''}" onclick="toggleDeferred('${s.id}', event)" title="${isDef ? t('status_play_now') : t('status_play_later')}"><i data-lucide="clock"></i></button>
+            </div>` : '';
+        const posHTML = votingMode ? `<div class="result-card-pos">${posNum}</div>` : '';
+        const dragAttrs = votingMode ? `draggable="true" data-system-id="${s.id}"` : '';
+        const leftColHTML = votingMode ? `<div class="result-card-left">${posHTML}${actionsHTML}</div>` : posHTML;
+        return `<div class="result-card ${isDef ? 'result-card-deferred' : ''}" ${dragAttrs} onclick="if(typeof _didDrag!=='undefined'&&_didDrag){_didDrag=false;return}showPage('${s.id}')">
+            ${leftColHTML}
             ${badgeHTML}
             <img class="result-card-img" src="${heroThumb(s.heroImg)}" alt="" loading="lazy" decoding="async" onerror="this.style.background='linear-gradient(135deg,#1a1a2e,#0f3460)'">
             <div class="result-card-body">
@@ -440,8 +813,146 @@ function renderResults() {
                 ${votesHTML}
             </div>
         </div>`;
-    }).join('');
+    }
+
+    const html = systems.map((s, i) => renderCard(s, i, systems.length)).join('');
+
+    grid.innerHTML = html;
     refreshIcons();
+    if (votingMode) initDragAndDrop(grid);
+}
+
+// ============ DRAG AND DROP ============
+let _dragId = null;
+let _didDrag = false;
+
+function initDragAndDrop(grid) {
+    // Per-card listeners only for dragstart/dragend (need to know source)
+    grid.querySelectorAll('.result-card[draggable]').forEach(card => {
+        card.addEventListener('dragstart', onDragStart);
+        card.addEventListener('dragend', onDragEnd);
+    });
+    // Grid-level listeners — both dragenter AND dragover MUST preventDefault for drop to fire
+    grid.addEventListener('dragenter', onGridDragEnter);
+    grid.addEventListener('dragover', onGridDragOver);
+    grid.addEventListener('drop', onGridDrop);
+    grid.addEventListener('dragleave', onGridDragLeave);
+}
+
+function onGridDragEnter(e) {
+    e.preventDefault();
+}
+
+function findTargetCard(clientX, clientY) {
+    // Returns the topmost result-card under the cursor that is NOT the source
+    const elements = document.elementsFromPoint(clientX, clientY);
+    for (const el of elements) {
+        const card = el.closest && el.closest('.result-card[data-system-id]');
+        if (card && card.dataset.systemId !== _dragId) return card;
+    }
+    return null;
+}
+
+function onDragStart(e) {
+    _dragId = this.dataset.systemId;
+    _didDrag = true;
+    this.classList.add('dragging');
+    e.dataTransfer.effectAllowed = 'move';
+    e.dataTransfer.setData('text/plain', _dragId);
+    setTimeout(() => this.style.opacity = '0.4', 0);
+}
+
+function onDragEnd(e) {
+    this.classList.remove('dragging');
+    this.style.opacity = '';
+    document.querySelectorAll('.result-card.drag-over').forEach(c => c.classList.remove('drag-over'));
+    _dragId = null;
+    setTimeout(() => { _didDrag = false; }, 0);
+}
+
+function onGridDragOver(e) {
+    if (!_dragId) return;
+    e.preventDefault();
+    e.dataTransfer.dropEffect = 'move';
+    const target = findTargetCard(e.clientX, e.clientY);
+    document.querySelectorAll('.result-card.drag-over').forEach(c => {
+        if (c !== target) c.classList.remove('drag-over');
+    });
+    if (target) target.classList.add('drag-over');
+}
+
+function onGridDragLeave(e) {
+    // Only clear if leaving the grid entirely
+    if (e.target === e.currentTarget) {
+        document.querySelectorAll('.result-card.drag-over').forEach(c => c.classList.remove('drag-over'));
+    }
+}
+
+function onGridDrop(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    document.querySelectorAll('.result-card.drag-over').forEach(c => c.classList.remove('drag-over'));
+
+    const fromId = _dragId;
+    if (!fromId) return;
+
+    const grid = document.getElementById('results-grid');
+    const fromCard = grid.querySelector(`[data-system-id="${fromId}"]`);
+    if (!fromCard) return;
+
+    // Find target card under cursor (excluding source)
+    const toCard = findTargetCard(e.clientX, e.clientY);
+    if (!toCard) return;
+
+    // Determine direction: if source is BEFORE target in DOM → dragging DOWN → insert AFTER target
+    // If source is AFTER target → dragging UP → insert BEFORE target
+    // This ensures any drop on a different card produces a real move (no no-ops).
+    const cards = Array.from(grid.querySelectorAll('.result-card[data-system-id]'));
+    const fromIdx = cards.indexOf(fromCard);
+    const toIdx = cards.indexOf(toCard);
+    if (fromIdx === -1 || toIdx === -1) return;
+    const draggingDown = fromIdx < toIdx;
+
+    // Capture FLIP positions BEFORE moving
+    const firstRects = {};
+    cards.forEach(c => { firstRects[c.dataset.systemId] = c.getBoundingClientRect(); });
+
+    // Reset source visual so FLIP animation works
+    fromCard.style.opacity = '';
+    fromCard.classList.remove('dragging');
+
+    // Move DOM node
+    if (draggingDown) toCard.after(fromCard);
+    else toCard.before(fromCard);
+
+    // Derive new manualOrder directly from DOM
+    manualOrder = Array.from(grid.querySelectorAll('.result-card[data-system-id]'))
+        .map(c => c.dataset.systemId);
+    localStorage.setItem('ttrpg-order', JSON.stringify(manualOrder));
+
+    // Update position numbers and arrow visibility
+    updateCardsAfterReorder(grid);
+
+    // FLIP animate all affected cards
+    cards.forEach(c => {
+        const oldR = firstRects[c.dataset.systemId];
+        if (oldR) flipAnimate(c, oldR);
+    });
+}
+
+// ============ NAV SEARCH ============
+function filterNav(query) {
+    const q = query.toLowerCase().trim();
+    document.querySelectorAll('.nav-systems .nav-group').forEach(group => {
+        let anyVisible = false;
+        group.querySelectorAll('.nav-item').forEach(item => {
+            const name = item.textContent.toLowerCase();
+            const show = !q || name.includes(q);
+            item.style.display = show ? '' : 'none';
+            if (show) anyVisible = true;
+        });
+        group.style.display = anyVisible ? '' : 'none';
+    });
 }
 
 // ============ NAVIGATION ============
@@ -473,8 +984,23 @@ function showPage(id, pushHistory = true) {
     if (pushHistory) {
         history.pushState({ page: id }, '', '#' + id);
     }
+    updatePresCounter();
     // Auto-close sidebar on mobile after navigation
     if (window.innerWidth <= 768) closeSidebar();
+}
+
+function updatePresCounter() {
+    const el = document.getElementById('pres-counter');
+    if (!el) return;
+    const visible = getVisibleSystemIds();
+    const active = document.querySelector('.system-page.active');
+    if (!active || active.id === 'results' || !visible.length) {
+        el.textContent = '';
+        return;
+    }
+    const idx = visible.indexOf(active.id);
+    if (idx === -1) { el.textContent = ''; return; }
+    el.textContent = `${idx + 1} / ${visible.length}`;
 }
 
 function toggleSidebar() {
@@ -512,6 +1038,7 @@ function prevSystem() {
 // ============ PRESENTATION MODE ============
 function togglePresentation() {
     document.body.classList.toggle('presentation');
+    updatePresCounter();
 }
 
 document.addEventListener('keydown', e => {
@@ -520,6 +1047,12 @@ document.addEventListener('keydown', e => {
     const sysSelector = document.getElementById('sys-selector-overlay');
     if (sysSelector && !sysSelector.classList.contains('hidden')) {
         if (e.key === 'Escape') closeSystemSelector();
+        return;
+    }
+    // Close export on Escape
+    const exportOverlay = document.getElementById('export-overlay');
+    if (exportOverlay && !exportOverlay.classList.contains('hidden')) {
+        if (e.key === 'Escape') closeExport();
         return;
     }
     // Close editor on Escape
@@ -589,7 +1122,8 @@ function renderLightbox() {
     lb.innerHTML = `
         <div class="lightbox-backdrop" onclick="closeLightbox()"></div>
         <div class="lightbox-content">
-            <img src="${img.src}" alt="${img.cap}">
+            <img src="${img.src}" alt="${img.cap}" onload="this.dataset.loaded='1'">
+            <div class="lightbox-spinner"></div>
             <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
             ${_lbImages.length > 1 ? `
                 <button class="lightbox-nav prev" onclick="event.stopPropagation(); lbPrev()">&#8249;</button>
@@ -695,7 +1229,9 @@ const CustomSystems = {
         this._save();
         this._unregister(id);
         delete votes[id];
+        delete vetoes[id];
         localStorage.setItem('ttrpg-votes', JSON.stringify(votes));
+        localStorage.setItem('ttrpg-vetoes', JSON.stringify(vetoes));
     },
 
     loadAll() {
@@ -794,7 +1330,11 @@ function openEditor(editId) {
                 complexity: String(sys.complexity || 3), image: sys.image
             });
             (sys.tags || []).forEach(tag => {
-                const cb = document.querySelector(`.editor-tag-check input[value="${tag}"]`);
+                const cb = document.querySelector(`.editor-tag-check input[value="${tag}"]:not([data-cat="setting"])`);
+                if (cb) cb.checked = true;
+            });
+            (sys.settingTags || []).forEach(tag => {
+                const cb = document.querySelector(`.editor-tag-check input[data-cat="setting"][value="${tag}"]`);
                 if (cb) cb.checked = true;
             });
             heading.textContent = t('editor_title_edit');
@@ -834,7 +1374,11 @@ function saveCustomSystem() {
     }
 
     const tags = [];
-    document.querySelectorAll('.editor-tag-check input:checked').forEach(cb => tags.push(cb.value));
+    const settingTags = [];
+    document.querySelectorAll('.editor-tag-check input:checked').forEach(cb => {
+        if (cb.dataset.cat === 'setting') settingTags.push(cb.value);
+        else tags.push(cb.value);
+    });
 
     const sysData = {
         id: id,
@@ -850,6 +1394,7 @@ function saveCustomSystem() {
         complexity: parseInt(fields.complexity) || 3,
         image: fields.image,
         tags: tags,
+        settingTags: settingTags,
     };
 
     if (existingId) {
@@ -883,6 +1428,11 @@ function buildCustomSystemPage(sys) {
         const label = t('tag_' + tag) || tag;
         return '<span class="playstyle-tag ' + cssClass + '">' + label + '</span>';
     }).join('');
+    const settingTagsHTML = (sys.settingTags || []).map(tag => {
+        const cfg = SETTING_TAG_CONFIG[tag] || { icon: 'map-pin', label: tag };
+        return '<span class="playstyle-tag setting-tag"><i data-lucide="' + cfg.icon + '"></i> ' + cfg.label + '</span>';
+    }).join('');
+    const allTagsHTML = tagsHTML + settingTagsHTML;
 
     const customHeroSys = {
         name: sys.name,
@@ -907,7 +1457,7 @@ function buildCustomSystemPage(sys) {
         (sys.description ? '<div class="section-title" data-i18n="section_system">' + t('section_system') + '</div><div class="setting-block">' + miniMd(sys.description) + '</div>' : '') +
         (sys.setting ? '<div class="section-title" data-i18n="section_setting">' + t('section_setting') + '</div><div class="setting-block">' + miniMd(sys.setting) + '</div>' : '') +
         (sys.vignette ? '<div class="section-title" data-i18n="section_vignette">' + t('section_vignette') + '</div><div class="setting-block" style="border-left:3px solid var(--accent);font-style:italic;">' + sys.vignette + '</div>' : '') +
-        (tagsHTML ? '<div class="section-title" data-i18n="section_playstyle">' + t('section_playstyle') + '</div><div class="playstyle-tags">' + tagsHTML + '</div>' : '') +
+        (allTagsHTML ? '<div class="section-title" data-i18n="section_playstyle">' + t('section_playstyle') + '</div><div class="playstyle-tags">' + allTagsHTML + '</div>' : '') +
         '<div class="vote-section" data-system="' + sys.id + '">' +
         '<div class="vote-title" data-i18n="vote_title"><i data-lucide="thumbs-up"></i> ' + t('vote_title') + '</div>' +
         '<div class="vote-players"></div>' +
@@ -999,6 +1549,84 @@ function setSelectorGrouping(scheme) {
     refreshIcons();
 }
 
+// Manage Systems modal: tag filter (in-memory, not persisted)
+let _selectorTagFilter = new Set();
+
+function toggleSelectorTagFilter(tag) {
+    if (_selectorTagFilter.has(tag)) _selectorTagFilter.delete(tag);
+    else _selectorTagFilter.add(tag);
+    renderSelectorTagFilter();
+    rebuildSelectorList();
+}
+
+function clearSelectorTagFilter() {
+    _selectorTagFilter.clear();
+    renderSelectorTagFilter();
+    rebuildSelectorList();
+}
+
+function renderSelectorTagFilter() {
+    const panel = document.getElementById('sys-selector-tag-filter');
+    if (!panel) return;
+    // Collect available tag keys from all systems (official + custom)
+    const playCounts = {};
+    const setCounts = {};
+    const allIds = SYSTEM_IDS.concat(CustomSystems.all.map(s => s.id));
+    const seen = new Set();
+    allIds.forEach(id => {
+        if (seen.has(id)) return;
+        seen.add(id);
+        const { tagKeys, settingKeys } = getSystemTags(id);
+        tagKeys.forEach(k => { playCounts[k] = (playCounts[k] || 0) + 1; });
+        settingKeys.forEach(k => { setCounts[k] = (setCounts[k] || 0) + 1; });
+    });
+    const sortedPlay = Object.keys(playCounts).sort((a, b) => playCounts[b] - playCounts[a]);
+    const sortedSet = Object.keys(setCounts).sort((a, b) => setCounts[b] - setCounts[a]);
+
+    let html = `<button class="tag-filter-btn ${_selectorTagFilter.size === 0 ? 'active' : ''}" onclick="clearSelectorTagFilter()">
+        <span class="tag-filter-label" data-i18n="tag_filter_all">${t('tag_filter_all')}</span>
+    </button>`;
+    if (sortedPlay.length > 0) {
+        html += `<div class="tag-filter-section" data-i18n="tag_filter_playstyle">${t('tag_filter_playstyle')}</div>`;
+        sortedPlay.forEach(tag => {
+            const cfg = TAG_CONFIG[tag];
+            const isActive = _selectorTagFilter.has(tag);
+            html += `<button class="tag-filter-btn ${isActive ? 'active' : ''}" onclick="toggleSelectorTagFilter('${tag}')">
+                <i data-lucide="${cfg.icon}"></i>
+                <span class="tag-filter-label">${cfg.label}</span>
+                <span class="tag-filter-count">${playCounts[tag]}</span>
+            </button>`;
+        });
+    }
+    if (sortedSet.length > 0) {
+        html += `<div class="tag-filter-section" data-i18n="tag_filter_setting">${t('tag_filter_setting')}</div>`;
+        sortedSet.forEach(tag => {
+            const cfg = SETTING_TAG_CONFIG[tag];
+            const isActive = _selectorTagFilter.has(tag);
+            html += `<button class="tag-filter-btn setting ${isActive ? 'active' : ''}" onclick="toggleSelectorTagFilter('${tag}')">
+                <i data-lucide="${cfg.icon}"></i>
+                <span class="tag-filter-label">${cfg.label}</span>
+                <span class="tag-filter-count">${setCounts[tag]}</span>
+            </button>`;
+        });
+    }
+    panel.innerHTML = html;
+
+    // Update summary badge in the details summary
+    const sumEl = document.getElementById('sys-selector-tag-summary');
+    if (sumEl) {
+        sumEl.textContent = _selectorTagFilter.size > 0 ? `(${_selectorTagFilter.size})` : '';
+    }
+    refreshIcons();
+}
+
+function systemMatchesTagFilter(id) {
+    if (_selectorTagFilter.size === 0) return true;
+    const { tagKeys, settingKeys } = getSystemTags(id);
+    return tagKeys.some(k => _selectorTagFilter.has(k)) ||
+           settingKeys.some(k => _selectorTagFilter.has(k));
+}
+
 function attachGroupToggle(title) {
     title.addEventListener('click', function() {
         var next = title.nextElementSibling;
@@ -1014,6 +1642,32 @@ function attachGroupToggle(title) {
     });
 }
 
+function buildTagIconsHTML(id) {
+    const { tagKeys, settingKeys } = getSystemTags(id);
+    let html = '';
+    tagKeys.forEach(k => {
+        const cfg = TAG_CONFIG[k];
+        html += `<i class="sys-tag-icon" data-lucide="${cfg.icon}" title="${cfg.label}"></i>`;
+    });
+    settingKeys.forEach(k => {
+        const cfg = SETTING_TAG_CONFIG[k];
+        html += `<i class="sys-tag-icon setting" data-lucide="${cfg.icon}" title="${cfg.label}"></i>`;
+    });
+    return html ? `<span class="sys-tag-icons">${html}</span>` : '';
+}
+
+function buildSelectorItem(id, name, isChecked) {
+    const item = document.createElement('label');
+    item.className = 'sys-selector-item' + (!isChecked ? ' disabled-sys' : '');
+    item.innerHTML = '<input type="checkbox" data-sys-id="' + id + '"' + (isChecked ? ' checked' : '') + '>'
+        + '<span class="sys-name">' + name + '</span>'
+        + buildTagIconsHTML(id);
+    item.querySelector('input').addEventListener('change', function() {
+        item.classList.toggle('disabled-sys', !this.checked);
+    });
+    return item;
+}
+
 function rebuildSelectorList() {
     var list = document.getElementById('sys-selector-list');
     // Save current checked state
@@ -1026,6 +1680,9 @@ function rebuildSelectorList() {
     var groups = getNavGroups(_selectorGrouping || currentGrouping);
 
     groups.forEach(function(group) {
+        var visibleIds = group.ids.filter(systemMatchesTagFilter);
+        if (visibleIds.length === 0) return;
+
         var title = document.createElement('div');
         title.className = 'sys-selector-group-title';
         title.innerHTML = '<input type="checkbox" checked class="group-toggle-cb"> ' + t(group.key);
@@ -1034,52 +1691,45 @@ function rebuildSelectorList() {
 
         var container = document.createElement('div');
         container.className = 'sys-selector-list';
-        group.ids.forEach(function(id) {
+        visibleIds.forEach(function(id) {
             var name = SYSTEM_NAMES[id] || id;
             var isHidden = hiddenSystems.includes(id);
-            // Use saved state if exists, otherwise use hidden state
             var isChecked = (id in checked) ? checked[id] : !isHidden;
-            var item = document.createElement('label');
-            item.className = 'sys-selector-item' + (!isChecked ? ' disabled-sys' : '');
-            item.innerHTML = '<input type="checkbox" data-sys-id="' + id + '"' + (isChecked ? ' checked' : '') + '> ' + name;
-            item.querySelector('input').addEventListener('change', function() {
-                item.classList.toggle('disabled-sys', !this.checked);
-            });
-            container.appendChild(item);
+            container.appendChild(buildSelectorItem(id, name, isChecked));
         });
         list.appendChild(container);
     });
 
     // Custom systems
     if (CustomSystems.length > 0) {
-        var title = document.createElement('div');
-        title.className = 'sys-selector-group-title';
-        title.innerHTML = '<input type="checkbox" checked class="group-toggle-cb"> ' + t('nav_group_custom');
-        attachGroupToggle(title);
-        list.appendChild(title);
+        var visibleCustom = CustomSystems.all.filter(function(sys) { return systemMatchesTagFilter(sys.id); });
+        if (visibleCustom.length > 0) {
+            var title = document.createElement('div');
+            title.className = 'sys-selector-group-title';
+            title.innerHTML = '<input type="checkbox" checked class="group-toggle-cb"> ' + t('nav_group_custom');
+            attachGroupToggle(title);
+            list.appendChild(title);
 
-        var container = document.createElement('div');
-        container.className = 'sys-selector-list';
-        CustomSystems.all.forEach(function(sys) {
-            var isHidden = hiddenSystems.includes(sys.id);
-            var isChecked = (sys.id in checked) ? checked[sys.id] : !isHidden;
-            var item = document.createElement('label');
-            item.className = 'sys-selector-item' + (!isChecked ? ' disabled-sys' : '');
-            item.innerHTML = '<input type="checkbox" data-sys-id="' + sys.id + '"' + (isChecked ? ' checked' : '') + '> ' + sys.name;
-            item.querySelector('input').addEventListener('change', function() {
-                item.classList.toggle('disabled-sys', !this.checked);
+            var container = document.createElement('div');
+            container.className = 'sys-selector-list';
+            visibleCustom.forEach(function(sys) {
+                var isHidden = hiddenSystems.includes(sys.id);
+                var isChecked = (sys.id in checked) ? checked[sys.id] : !isHidden;
+                container.appendChild(buildSelectorItem(sys.id, sys.name, isChecked));
             });
-            container.appendChild(item);
-        });
-        list.appendChild(container);
+            list.appendChild(container);
+        }
     }
+    refreshIcons();
 }
 
 function openSystemSelector() {
     _selectorGrouping = currentGrouping;
+    _selectorTagFilter.clear();
     document.querySelectorAll('#selector-grouping-toggle .grouping-btn').forEach(function(btn) {
         btn.classList.toggle('active', btn.dataset.grouping === currentGrouping);
     });
+    renderSelectorTagFilter();
     rebuildSelectorList();
     openDialog('selector');
 }
@@ -1109,12 +1759,19 @@ function sysDeselectAll() {
 }
 
 function saveSystemSelection() {
-    hiddenSystems = [];
-    document.querySelectorAll('#sys-selector-list input[type="checkbox"]').forEach(cb => {
-        if (!cb.checked) {
-            hiddenSystems.push(cb.dataset.sysId);
-        }
+    // Visible (rendered) checkboxes are authoritative for systems matching the filter.
+    // Systems filtered out keep their previous hidden state — preserves filter+save UX.
+    const visibleIds = new Set();
+    const newHidden = new Set();
+    document.querySelectorAll('#sys-selector-list input[data-sys-id]').forEach(cb => {
+        visibleIds.add(cb.dataset.sysId);
+        if (!cb.checked) newHidden.add(cb.dataset.sysId);
     });
+    // Carry over previous state for filtered-out systems
+    hiddenSystems.forEach(id => {
+        if (!visibleIds.has(id)) newHidden.add(id);
+    });
+    hiddenSystems = [...newHidden];
     localStorage.setItem('ttrpg-hidden-systems', JSON.stringify(hiddenSystems));
     applySystemVisibility();
     closeSystemSelector();

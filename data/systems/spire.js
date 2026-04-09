@@ -16,6 +16,7 @@ registerSystem("spire", {
     "social",
     "mystery"
   ],
+  "settingTags": ["urban-fantasy"],
   "gallery": [
     {
       "src": "https://rowanrookanddecard.com/wp-content/uploads/2018/09/Necropolis2-1.jpg"

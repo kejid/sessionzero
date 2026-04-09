@@ -17,6 +17,7 @@ registerSystem("coriolis", {
     "mystery",
     "sandbox"
   ],
+  "settingTags": ["space"],
   "gallery": [
     {
       "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/coriolisweb.jpg"

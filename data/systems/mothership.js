@@ -17,6 +17,7 @@ registerSystem("mothership", {
     "survival",
     "explore"
   ],
+  "settingTags": ["space"],
   "gallery": [
     {
       "src": "https://www.tuesdayknightgames.com/cdn/shop/files/PSD-004.png?v=1713671746&width=1080"

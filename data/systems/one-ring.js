@@ -17,6 +17,7 @@ registerSystem("one-ring", {
     "narrative",
     "social"
   ],
+  "settingTags": ["fantasy"],
   "gallery": [
     {
       "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/The_one_ring_Combat-edited-scaled.jpg"

@@ -16,6 +16,7 @@ registerSystem("tales-loop", {
     "narrative",
     "social"
   ],
+  "settingTags": ["modern", "weird"],
   "gallery": [
     {
       "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/lokskeppt67_1920.jpg"

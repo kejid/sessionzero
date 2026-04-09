@@ -17,6 +17,7 @@ registerSystem("nimble", {
     "explore",
     "combat"
   ],
+  "settingTags": ["fantasy"],
   "gallery": [
     {
       "src": "https://nimblerpg.com/cdn/shop/files/HeroesFullArt.jpg?v=1741803078&width=3840"

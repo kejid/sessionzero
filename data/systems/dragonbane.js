@@ -17,6 +17,7 @@ registerSystem("dragonbane", {
     "explore",
     "sandbox"
   ],
+  "settingTags": ["fantasy"],
   "gallery": [
     {
       "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Drakar-och-Demoner_rollpersonen.jpg"

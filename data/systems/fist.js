@@ -16,6 +16,7 @@ registerSystem("fist", {
     "survival",
     "sandbox"
   ],
+  "settingTags": ["modern", "historical"],
   "gallery": [
     {
       "src": "https://img.itch.zone/aW1nLzMxMjI4NzUucG5n/original/zku5yb.png"

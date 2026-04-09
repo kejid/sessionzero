@@ -16,6 +16,7 @@ registerSystem("lancer", {
     "combat",
     "narrative"
   ],
+  "settingTags": ["space"],
   "gallery": [
     {
       "src": "https://img.itch.zone/aW1nLzI3MzE0ODYuanBn/original/PF05J1.jpg"

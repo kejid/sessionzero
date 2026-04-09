@@ -16,6 +16,7 @@ registerSystem("blades", {
     "social",
     "combat"
   ],
+  "settingTags": ["urban-fantasy"],
   "gallery": [],
   "resources": [
     {

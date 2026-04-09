@@ -17,6 +17,7 @@ registerSystem("koriko", {
     "mystery",
     "social"
   ],
+  "settingTags": ["urban-fantasy"],
   "gallery": [
     {
       "src": "https://img.itch.zone/aW1hZ2UvMjEzNjgwOS8xMjU5NzE4NC5wbmc=/347x500/RbMZ%2Fd.png"

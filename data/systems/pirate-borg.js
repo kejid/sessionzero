@@ -16,6 +16,7 @@ registerSystem("pirate-borg", {
     "survival",
     "sandbox"
   ],
+  "settingTags": ["historical", "fantasy"],
   "gallery": [
     {
       "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/pirateborg-1440x720.jpg"

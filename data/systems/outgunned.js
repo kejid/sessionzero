@@ -16,6 +16,7 @@ registerSystem("outgunned", {
     "narrative",
     "social"
   ],
+  "settingTags": ["modern"],
   "gallery": [
     {
       "src": "https://www.drivethrurpg.com/images/18374/_product_images/449021/Car.jpeg"

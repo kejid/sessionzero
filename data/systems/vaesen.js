@@ -16,6 +16,7 @@ registerSystem("vaesen", {
     "horror",
     "social"
   ],
+  "settingTags": ["historical", "urban-fantasy"],
   "gallery": [
     {
       "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/11/sjora.jpg"

@@ -16,6 +16,7 @@ registerSystem("heart", {
     "horror",
     "explore"
   ],
+  "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
       "src": "https://rowanrookanddecard.com/wp-content/uploads/2020/04/Heart-The-City-Beneath-RPG-COMBAT-scaled.jpg"

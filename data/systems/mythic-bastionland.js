@@ -16,6 +16,7 @@ registerSystem("mythic-bastionland", {
     "narrative",
     "sandbox"
   ],
+  "settingTags": ["fantasy"],
   "gallery": [
     {
       "src": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6a2f0bf6-1328-488d-a457-aa66a531ca55_1064x566.png"

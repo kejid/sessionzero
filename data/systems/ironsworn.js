@@ -17,6 +17,7 @@ registerSystem("ironsworn", {
     "narrative",
     "combat"
   ],
+  "settingTags": ["fantasy"],
   "gallery": [
     {
       "src": "https://img.itch.zone/aW1hZ2UvMzU5NzA3LzE3OTgxMTQucG5n/347x500/4T0Q8w.png"

@@ -34,6 +34,7 @@ registerSystem("alien", {
     "survival",
     "mystery"
   ],
+  "settingTags": ["space"],
   "gallery": [
     {
       "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Alien_8.jpg"
@@ -208,6 +209,7 @@ registerSystem("blade-runner", {
     "narrative",
     "social"
   ],
+  "settingTags": ["cyberpunk"],
   "gallery": [
     {
       "src": "https://newsite.freeleaguepublishing.com/wp-content/uploads/2023/08/BLADE-RUNNER-RPG-Art-03-edited.jpg"
@@ -389,6 +391,7 @@ registerSystem("blades", {
     "social",
     "combat"
   ],
+  "settingTags": ["urban-fantasy"],
   "gallery": [],
   "resources": [
     {
@@ -547,6 +550,7 @@ registerSystem("cairn", {
     "horror",
     "survival"
   ],
+  "settingTags": ["fantasy"],
   "gallery": [
     {
       "src": "https://www.exaltedfuneral.com/cdn/shop/files/cairn-2e-boxed-set-boxed-set-2496979.webp?v=1764284291"
@@ -727,6 +731,7 @@ registerSystem("call-of-cthulhu", {
     "narrative",
     "social"
   ],
+  "settingTags": ["historical", "weird"],
   "gallery": [
     {
       "src": "https://www.rpgtabletopgames.com/wp-content/uploads/call-of-cthulhu-rpg.jpg"
@@ -908,6 +913,7 @@ registerSystem("coriolis", {
     "mystery",
     "sandbox"
   ],
+  "settingTags": ["space"],
   "gallery": [
     {
       "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/coriolisweb.jpg"
@@ -1115,6 +1121,7 @@ registerSystem("cy-borg", {
     "survival",
     "action"
   ],
+  "settingTags": ["cyberpunk", "postapoc"],
   "gallery": [
     {
       "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/CBcovermockup_small_038aec50-b06d-43ce-8712-c9077b0211b5-1200x1200-1-1200x1200.jpg"
@@ -1271,6 +1278,7 @@ registerSystem("death-in-space", {
     "explore",
     "sandbox"
   ],
+  "settingTags": ["space"],
   "gallery": [
     {
       "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/D1_hori-1440x720.jpg"
@@ -1420,6 +1428,7 @@ registerSystem("delta-green", {
     "mystery",
     "narrative"
   ],
+  "settingTags": ["modern", "weird"],
   "gallery": [
     {
       "src": "https://www.delta-green.com/content/images/size/w720/2026/03/Army-spread.png"
@@ -1597,6 +1606,7 @@ registerSystem("dragonbane", {
     "explore",
     "sandbox"
   ],
+  "settingTags": ["fantasy"],
   "gallery": [
     {
       "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Drakar-och-Demoner_rollpersonen.jpg"
@@ -1783,6 +1793,7 @@ registerSystem("draw-steel", {
     "narrative",
     "narrative"
   ],
+  "settingTags": ["fantasy"],
   "gallery": [
     {
       "src": "https://www.rascal.news/content/images/2025/06/Thomas-2-.png"
@@ -1935,6 +1946,7 @@ registerSystem("electric-bastionland", {
     "social",
     "sandbox"
   ],
+  "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
       "src": "https://img.itch.zone/aW1hZ2UvNTk4NDYyLzMxNzkzMTkucG5n/original/MnG1LD.png"
@@ -2109,6 +2121,7 @@ registerSystem("fist", {
     "survival",
     "sandbox"
   ],
+  "settingTags": ["modern", "historical"],
   "gallery": [
     {
       "src": "https://img.itch.zone/aW1nLzMxMjI4NzUucG5n/original/zku5yb.png"
@@ -2258,6 +2271,7 @@ registerSystem("forbidden-lands", {
     "sandbox",
     "combat"
   ],
+  "settingTags": ["fantasy"],
   "gallery": [
     {
       "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/ForbiddenLands_drakorm_pergament_core_art-1.jpg"
@@ -2445,6 +2459,7 @@ registerSystem("heart", {
     "horror",
     "explore"
   ],
+  "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
       "src": "https://rowanrookanddecard.com/wp-content/uploads/2020/04/Heart-The-City-Beneath-RPG-COMBAT-scaled.jpg"
@@ -2608,6 +2623,7 @@ registerSystem("into-the-odd", {
     "survival",
     "sandbox"
   ],
+  "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
       "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/ITO_standing-TM-1200x1200.jpg"
@@ -2745,6 +2761,7 @@ registerSystem("ironsworn", {
     "narrative",
     "combat"
   ],
+  "settingTags": ["fantasy"],
   "gallery": [
     {
       "src": "https://img.itch.zone/aW1hZ2UvMzU5NzA3LzE3OTgxMTQucG5n/347x500/4T0Q8w.png"
@@ -2932,6 +2949,7 @@ registerSystem("ker-nethalas", {
     "explore",
     "survival"
   ],
+  "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
       "src": "https://img.itch.zone/aW1hZ2UvMjUxNTI2MS8yNjA3NzA4MC5qcGc=/347x500/c4RF8Y.jpg"
@@ -3118,6 +3136,7 @@ registerSystem("koriko", {
     "mystery",
     "social"
   ],
+  "settingTags": ["urban-fantasy"],
   "gallery": [
     {
       "src": "https://img.itch.zone/aW1hZ2UvMjEzNjgwOS8xMjU5NzE4NC5wbmc=/347x500/RbMZ%2Fd.png"
@@ -3264,6 +3283,7 @@ registerSystem("l5r", {
     "narrative",
     "combat"
   ],
+  "settingTags": ["fantasy", "historical"],
   "gallery": [
     {
       "src": "https://cdn.svc.asmodee.net/production-l5r/uploads/image-converter/2023/06/01a_Cover_Illustration-1900x1900.webp"
@@ -3398,6 +3418,7 @@ registerSystem("lancer", {
     "combat",
     "narrative"
   ],
+  "settingTags": ["space"],
   "gallery": [
     {
       "src": "https://img.itch.zone/aW1nLzI3MzE0ODYuanBn/original/PF05J1.jpg"
@@ -3546,6 +3567,7 @@ registerSystem("last-tea-shop", {
     "mystery",
     "social"
   ],
+  "settingTags": ["weird"],
   "gallery": [
     {
       "src": "https://img.itch.zone/aW1hZ2UvMTE2NzU4MC83NjkwNjc1LnBuZw==/347x500/KWkPXM.png"
@@ -3691,6 +3713,7 @@ registerSystem("mausritter", {
     "survival",
     "sandbox"
   ],
+  "settingTags": ["fantasy"],
   "gallery": [
     {
       "src": "https://img.itch.zone/aW1nLzQ1Nzc4OTYucG5n/original/Dnexgj.png"
@@ -3984,6 +4007,7 @@ registerSystem("mork-borg", {
     "horror",
     "explore"
   ],
+  "settingTags": ["fantasy", "weird", "postapoc"],
   "gallery": [
     {
       "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/MB_skeleton_kvad-1200x1200.jpg"
@@ -4188,6 +4212,7 @@ registerSystem("mothership", {
     "survival",
     "explore"
   ],
+  "settingTags": ["space"],
   "gallery": [
     {
       "src": "https://www.tuesdayknightgames.com/cdn/shop/files/PSD-004.png?v=1713671746&width=1080"
@@ -4384,6 +4409,7 @@ registerSystem("mythic-bastionland", {
     "narrative",
     "sandbox"
   ],
+  "settingTags": ["fantasy"],
   "gallery": [
     {
       "src": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6a2f0bf6-1328-488d-a457-aa66a531ca55_1064x566.png"
@@ -4575,6 +4601,7 @@ registerSystem("nimble", {
     "explore",
     "combat"
   ],
+  "settingTags": ["fantasy"],
   "gallery": [
     {
       "src": "https://nimblerpg.com/cdn/shop/files/HeroesFullArt.jpg?v=1741803078&width=3840"
@@ -4728,6 +4755,7 @@ registerSystem("one-ring", {
     "narrative",
     "social"
   ],
+  "settingTags": ["fantasy"],
   "gallery": [
     {
       "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/The_one_ring_Combat-edited-scaled.jpg"
@@ -4892,6 +4920,7 @@ registerSystem("ose", {
     "sandbox",
     "combat"
   ],
+  "settingTags": ["fantasy"],
   "gallery": [
     {
       "src": "https://necroticgnome.com/cdn/shop/files/AFM_Cover_-_C_2022_David_Hoskins_13c53e3d-e120-43b0-8085-87d125f9aa7b.jpg?v=1669315843&width=3200"
@@ -5039,6 +5068,7 @@ registerSystem("outgunned", {
     "narrative",
     "social"
   ],
+  "settingTags": ["modern"],
   "gallery": [
     {
       "src": "https://www.drivethrurpg.com/images/18374/_product_images/449021/Car.jpeg"
@@ -5213,6 +5243,7 @@ registerSystem("pirate-borg", {
     "survival",
     "sandbox"
   ],
+  "settingTags": ["historical", "fantasy"],
   "gallery": [
     {
       "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/pirateborg-1440x720.jpg"
@@ -5341,6 +5372,7 @@ registerSystem("shadowdark", {
     "combat",
     "survival"
   ],
+  "settingTags": ["fantasy"],
   "gallery": [
     {
       "src": "https://www.thearcanelibrary.com/cdn/shop/files/ShadowdarkRPGDigitalPDF5_1200x.jpg?v=1684273611"
@@ -5506,6 +5538,7 @@ registerSystem("spire", {
     "social",
     "mystery"
   ],
+  "settingTags": ["urban-fantasy"],
   "gallery": [
     {
       "src": "https://rowanrookanddecard.com/wp-content/uploads/2018/09/Necropolis2-1.jpg"
@@ -5672,6 +5705,7 @@ registerSystem("star-wars-ffg", {
     "social",
     "explore"
   ],
+  "settingTags": ["space"],
   "gallery": [
     {
       "src": "https://ttrpgfans.com/wp-content/uploads/2025/11/star-wars-rpg-reprints-1.png"
@@ -5893,6 +5927,7 @@ registerSystem("starforged", {
     "narrative",
     "sandbox"
   ],
+  "settingTags": ["space"],
   "heroImage": "https://cdn.shopify.com/s/files/1/0712/0329/1447/files/starforged-sunset.jpg?v=1725559572",
   "gallery": [
     {
@@ -6044,6 +6079,7 @@ registerSystem("tales-loop", {
     "narrative",
     "social"
   ],
+  "settingTags": ["modern", "weird"],
   "gallery": [
     {
       "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/lokskeppt67_1920.jpg"
@@ -6216,6 +6252,7 @@ registerSystem("the-wretched", {
     "survival",
     "narrative"
   ],
+  "settingTags": ["space"],
   "gallery": [
     {
       "src": "https://img.itch.zone/aW1hZ2UvNjE0MjgzLzMyNjgzODkucG5n/347x500/1hYOtq.png"
@@ -6382,6 +6419,7 @@ registerSystem("thousand-year-old-vampire", {
     "horror",
     "mystery"
   ],
+  "settingTags": ["historical", "urban-fantasy"],
   "gallery": [
     {
       "src": "https://img.itch.zone/aW1hZ2UvNTgyMDAwLzMwNjY0NDcucG5n/347x500/UYjcQP.png"
@@ -6688,6 +6726,7 @@ registerSystem("twilight", {
     "sandbox",
     "social"
   ],
+  "settingTags": ["modern", "postapoc"],
   "gallery": [
     {
       "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Twilight_2000_RPG_Factions.jpg"
@@ -6851,6 +6890,7 @@ registerSystem("uvg", {
     "worldbuild",
     "survival"
   ],
+  "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
       "src": "https://i.kickstarter.com/assets/027/487/468/c840ff8095f7e5aae9da7674703ee23d_original.jpg?anim=false&fit=scale-down&origin=ugc&q=92&v=1576152739&width=700"
@@ -7034,6 +7074,7 @@ registerSystem("vaesen", {
     "horror",
     "social"
   ],
+  "settingTags": ["historical", "urban-fantasy"],
   "gallery": [
     {
       "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/11/sjora.jpg"
@@ -7179,6 +7220,7 @@ registerSystem("wildsea", {
     "narrative",
     "worldbuild"
   ],
+  "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
       "src": "https://img.itch.zone/aW1hZ2UvMTMyNjI2My84MDUxMjgyLnBuZw==/original/tY0wGS.png"

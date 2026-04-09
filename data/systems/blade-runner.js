@@ -16,6 +16,7 @@ registerSystem("blade-runner", {
     "narrative",
     "social"
   ],
+  "settingTags": ["cyberpunk"],
   "gallery": [
     {
       "src": "https://newsite.freeleaguepublishing.com/wp-content/uploads/2023/08/BLADE-RUNNER-RPG-Art-03-edited.jpg"
