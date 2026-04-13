@@ -141,6 +141,7 @@ function loadSystems() {
         SYSTEM_NAMES[id] = raw.name;
     }
     SYSTEM_IDS = Object.keys(SYSTEMS_DATA);
+    CustomSystems.loadAll();
 
     renderAllSystems();
     renderNavItems();
@@ -1545,7 +1546,6 @@ function deleteCustomSystemFromEditor() {
 }
 
 function renderCustomSystems() {
-    CustomSystems.loadAll();
     customSystems = CustomSystems._list;
     CustomSystems.all.forEach(sys => {
         buildCustomSystemPage(sys);
