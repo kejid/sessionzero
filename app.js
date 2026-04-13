@@ -1350,6 +1350,7 @@ function openEditor(editId) {
     const overlay = document.getElementById('editor-overlay');
     const heading = document.getElementById('editor-heading');
     const deleteBtn = document.getElementById('editor-delete-btn');
+    const submitBtn = document.getElementById('editor-submit-btn');
 
     // Reset form
     setFormFields('editor', {
@@ -1380,11 +1381,13 @@ function openEditor(editId) {
             heading.textContent = t('editor_title_edit');
             heading.setAttribute('data-i18n', 'editor_title_edit');
             deleteBtn.style.display = 'block';
+            submitBtn.style.display = 'block';
         }
     } else {
         heading.textContent = t('editor_title');
         heading.setAttribute('data-i18n', 'editor_title');
         deleteBtn.style.display = 'none';
+        submitBtn.style.display = 'none';
     }
 
     openDialog('editor');
@@ -1543,6 +1546,38 @@ function deleteCustomSystemFromEditor() {
     if (!id) return;
     closeEditor();
     deleteCustomSystem(id);
+}
+
+async function submitCustomSystem() {
+    const id = document.getElementById('editor-id').value;
+    if (!id) { alert(t('editor_submit_save_first')); return; }
+
+    const sys = CustomSystems.find(id);
+    if (!sys) return;
+
+    const btn = document.getElementById('editor-submit-btn');
+    const original = btn.textContent;
+    btn.textContent = t('editor_submit_sending');
+    btn.disabled = true;
+
+    try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                access_key: '23fd8c3c-3ebc-4a65-a73e-373385fb9c0b',
+                subject: 'TTRPG System Suggestion: ' + sys.name,
+                from_name: 'TTRPG Showcase',
+                system_json: JSON.stringify(sys, null, 2)
+            })
+        });
+        const data = await res.json();
+        btn.textContent = res.ok ? t('editor_submit_ok') : t('editor_submit_fail');
+    } catch (e) {
+        btn.textContent = t('editor_submit_fail');
+    }
+
+    setTimeout(() => { btn.textContent = original; btn.disabled = false; }, 2000);
 }
 
 function renderCustomSystems() {
