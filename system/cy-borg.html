@@ -28,8 +28,9 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap"></noscript>
+<link rel="stylesheet" href="/style.min.css">
 <script defer src="/lib/lucide.min.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"CY_BORG","alternativeHeadline":"\"A nano-infested doomsday RPG about cybernetic misfits and punks raging against a relentless corporate hell.\"","description":"The cyberpunk spiritual successor to MÖRK BORG — same furious art-punk DNA, same brutal lethality, now drowning in neon death smog. CY_BORG takes…","inLanguage":"en","genre":"Tabletop role-playing game","publisher":{"@type":"Organization","name":"Stockholm Kartell / Free League"},"url":"https://sessionzero.games/system/cy-borg.html","image":"https://sessionzero.games/og/cy-borg.jpg","author":{"@type":"Person","name":"Kejid","url":"https://github.com/kejid"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Session Zero","item":"https://sessionzero.games/"},{"@type":"ListItem","position":2,"name":"CY_BORG","item":"https://sessionzero.games/system/cy-borg.html"}]}</script>
@@ -44,7 +45,7 @@
 </header>
 <main class="static-main">
   <article class="system-page static active">
-    <div class="hero-banner"><img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F09%2FCY_BORG-Banner1-1440x384.jpg&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="CY_BORG hero art" loading="eager" decoding="async"><div class="hero-overlay"><div class="meta">Stockholm Kartell / Free League</div><h1>CY_BORG</h1></div></div>
+    <div class="hero-banner"><img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F09%2FCY_BORG-Banner1-1440x384.jpg&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="CY_BORG hero art" loading="eager" decoding="async" fetchpriority="high"><div class="hero-overlay"><div class="meta">Stockholm Kartell / Free League</div><h1>CY_BORG</h1></div></div>
     <p class="tagline">"A nano-infested doomsday RPG about cybernetic misfits and punks raging against a relentless corporate hell."</p>
     <div class="quick-stats">
         <div class="qs"><span class="qs-label">Dice</span><span class="qs-value">d20 + d6</span></div>
@@ -71,19 +72,19 @@
         <div class="gallery-grid">
             
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F09%2FCBcovermockup_small_038aec50-b06d-43ce-8712-c9077b0211b5-1200x1200-1-1200x1200.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Cover" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F09%2FCBcovermockup_small_038aec50-b06d-43ce-8712-c9077b0211b5-1200x1200-1-1200x1200.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Cover" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Cover</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F09%2FCY_BORG_20-21-1536x1536.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Rules spread" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F09%2FCY_BORG_20-21-1536x1536.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Rules spread" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Rules spread</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F09%2FCY_BORG_50-51-1536x1536.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Art and mechanics" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F09%2FCY_BORG_50-51-1536x1536.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Art and mechanics" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Art and mechanics</div></div>
                     </div>
@@ -121,13 +122,13 @@
     <div class="section-title">Similar systems</div>
     <div class="similar-systems-grid">
         <a href="/system/mork-borg.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/mork-borg.jpg" alt="MÖRK BORG hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/mork-borg.jpg" alt="MÖRK BORG hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">MÖRK BORG</span>
           </a><a href="/system/pirate-borg.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/pirate-borg.jpg" alt="Pirate Borg hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/pirate-borg.jpg" alt="Pirate Borg hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Pirate Borg</span>
           </a><a href="/system/cairn.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/cairn.jpg" alt="Cairn hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/cairn.jpg" alt="Cairn hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Cairn</span>
           </a>
     </div>

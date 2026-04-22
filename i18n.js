@@ -14,6 +14,15 @@ const LANG = {
     setup_faq_4: 'Или просто просмотрите каталог без голосования',
     nav_title: 'SESSION ZERO',
     nav_subtitle: 'Помогите группе выбрать следующую игру',
+    aria_open_menu: 'Открыть меню',
+    aria_close_menu: 'Закрыть меню',
+    aria_prev_system: 'Предыдущая система',
+    aria_next_system: 'Следующая система',
+    aria_view_cards: 'Вид карточками',
+    aria_view_list: 'Вид списком',
+    aria_move_up: 'Переместить выше',
+    aria_move_down: 'Переместить ниже',
+    aria_defer: 'Отложить на потом',
     nav_group_osr: 'The Odd & OSR',
     nav_group_fl: 'Free League (YZE)',
     nav_group_narrative: 'Narrative & Surreal',
@@ -160,6 +169,15 @@ const LANG = {
     setup_faq_4: 'Or just browse the catalog without voting',
     nav_title: 'SESSION ZERO',
     nav_subtitle: 'Help your group pick your next game',
+    aria_open_menu: 'Open menu',
+    aria_close_menu: 'Close menu',
+    aria_prev_system: 'Previous system',
+    aria_next_system: 'Next system',
+    aria_view_cards: 'Card view',
+    aria_view_list: 'List view',
+    aria_move_up: 'Move up',
+    aria_move_down: 'Move down',
+    aria_defer: 'Play later',
     nav_group_osr: 'The Odd & OSR',
     nav_group_fl: 'Free League (YZE)',
     nav_group_narrative: 'Narrative & Surreal',
@@ -294,7 +312,7 @@ const LANG = {
   }
 };
 
-let currentLang = localStorage.getItem('ttrpg-lang') || 'en';
+let currentLang = localStorage.getItem('ttrpg-lang') || ((navigator.language || '').toLowerCase().startsWith('ru') ? 'ru' : 'en');
 
 function t(key) {
     return (LANG[currentLang] && LANG[currentLang][key]) || (LANG['ru'] && LANG['ru'][key]) || key;
@@ -330,6 +348,9 @@ function translateI18nElements(root) {
     });
     (root || document).querySelectorAll('[data-i18n-placeholder]').forEach(el => {
         el.placeholder = t(el.getAttribute('data-i18n-placeholder'));
+    });
+    (root || document).querySelectorAll('[data-i18n-aria]').forEach(el => {
+        el.setAttribute('aria-label', t(el.getAttribute('data-i18n-aria')));
     });
 }
 

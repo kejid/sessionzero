@@ -28,8 +28,9 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap"></noscript>
+<link rel="stylesheet" href="/style.min.css">
 <script defer src="/lib/lucide.min.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Shadowdark","alternativeHeadline":"\"Old-school dungeon crawling in a modern wrapper.\"","description":"A bridge between OSR and modern RPGs. Uses familiar d20 mechanics (attributes, AC, saves) but with old-school lethality and sense of danger. The most…","inLanguage":"en","genre":"Tabletop role-playing game","publisher":{"@type":"Organization","name":"Kelsey Dionne / The Arcane Library"},"url":"https://sessionzero.games/system/shadowdark.html","image":"https://sessionzero.games/og/shadowdark.jpg","author":{"@type":"Person","name":"Kejid","url":"https://github.com/kejid"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Session Zero","item":"https://sessionzero.games/"},{"@type":"ListItem","position":2,"name":"Shadowdark","item":"https://sessionzero.games/system/shadowdark.html"}]}</script>
@@ -44,7 +45,7 @@
 </header>
 <main class="static-main">
   <article class="system-page static active">
-    <div class="hero-banner"><img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.rpgtabletopgames.com%2Fwp-content%2Fuploads%2Fshadowdark-780x400.jpg&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="Shadowdark hero art" loading="eager" decoding="async"><div class="hero-overlay"><div class="meta">Kelsey Dionne / The Arcane Library</div><h1>Shadowdark</h1></div></div>
+    <div class="hero-banner"><img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.rpgtabletopgames.com%2Fwp-content%2Fuploads%2Fshadowdark-780x400.jpg&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="Shadowdark hero art" loading="eager" decoding="async" fetchpriority="high"><div class="hero-overlay"><div class="meta">Kelsey Dionne / The Arcane Library</div><h1>Shadowdark</h1></div></div>
     <p class="tagline">"Old-school dungeon crawling in a modern wrapper."</p>
     <div class="quick-stats">
         <div class="qs"><span class="qs-label">Dice</span><span class="qs-value">d20 + стандарт</span></div>
@@ -71,19 +72,19 @@
         <div class="gallery-grid">
             
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.thearcanelibrary.com%2Fcdn%2Fshop%2Ffiles%2FShadowdarkRPGDigitalPDF5_1200x.jpg%3Fv%3D1684273611&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Book spread" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.thearcanelibrary.com%2Fcdn%2Fshop%2Ffiles%2FShadowdarkRPGDigitalPDF5_1200x.jpg%3Fv%3D1684273611&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Book spread" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Book spread</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.thearcanelibrary.com%2Fcdn%2Fshop%2Ffiles%2FShadowdarkRPGDigitalPDF13_1200x.jpg%3Fv%3D1684273502&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Interior art" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.thearcanelibrary.com%2Fcdn%2Fshop%2Ffiles%2FShadowdarkRPGDigitalPDF13_1200x.jpg%3Fv%3D1684273502&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Interior art" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Interior art</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1nLzE1MDUyMDQwLnBuZw%3D%3D%2Foriginal%2Fj6pJeS.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Character art" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1nLzE1MDUyMDQwLnBuZw%3D%3D%2Foriginal%2Fj6pJeS.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Character art" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Character art</div></div>
                     </div>
@@ -121,13 +122,13 @@
     <div class="section-title">Similar systems</div>
     <div class="similar-systems-grid">
         <a href="/system/ose.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/ose.jpg" alt="Old-School Essentials hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/ose.jpg" alt="Old-School Essentials hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Old-School Essentials</span>
           </a><a href="/system/fist.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/fist.jpg" alt="FIST hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/fist.jpg" alt="FIST hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">FIST</span>
           </a><a href="/system/mork-borg.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/mork-borg.jpg" alt="MÖRK BORG hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/mork-borg.jpg" alt="MÖRK BORG hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">MÖRK BORG</span>
           </a>
     </div>

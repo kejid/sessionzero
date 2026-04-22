@@ -4,7 +4,10 @@
     "test": "npx playwright test",
     "bundle:js": "bash -c 'cat data/systems/_registry.js data/systems/[!_]*.js > data/systems-bundle.js'",
     "bundle:pages": "node scripts/generate-pages.js",
-    "bundle": "npm run bundle:js && npm run bundle:pages",
+    "minify:css": "npx --yes esbuild@latest style.css --minify --outfile=style.min.css --loader:.css=css --log-level=warning",
+    "minify:js": "npx --yes esbuild@latest app.js --minify --outfile=app.min.js --log-level=warning",
+    "minify": "npm run minify:css && npm run minify:js",
+    "bundle": "npm run bundle:js && npm run bundle:pages && npm run minify",
     "og:generate": "python scripts/generate-og.py"
   },
   "devDependencies": {

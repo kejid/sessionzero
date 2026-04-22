@@ -28,8 +28,9 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap"></noscript>
+<link rel="stylesheet" href="/style.min.css">
 <script defer src="/lib/lucide.min.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Triangle Agency","alternativeHeadline":"«SCP встречает X-Files. Вы — агенты, контролирующие аномальное».","description":"RPG о спецагентах, работающих в секретном агентстве, которое сдерживает аномальные явления. Каждая миссия — выезд на аномалию: изучить, классифицировать,…","inLanguage":"ru","genre":"Настольная ролевая игра","publisher":{"@type":"Organization","name":"Haunted Table"},"url":"https://sessionzero.games/ru/system/triangle.html","image":"https://sessionzero.games/og/ru/triangle.jpg","author":{"@type":"Person","name":"Kejid","url":"https://github.com/kejid"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Session Zero","item":"https://sessionzero.games/"},{"@type":"ListItem","position":2,"name":"Triangle Agency","item":"https://sessionzero.games/ru/system/triangle.html"}]}</script>
@@ -44,7 +45,7 @@
 </header>
 <main class="static-main">
   <article class="system-page static active">
-    <div class="hero-banner"><img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1nLzE2NTI3MDUyLmpwZw%3D%3D%2Foriginal%2FFIDchU.jpg&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="Triangle Agency hero art" loading="eager" decoding="async"><div class="hero-overlay"><div class="meta">Haunted Table</div><h1>Triangle Agency</h1></div></div>
+    <div class="hero-banner"><img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1nLzE2NTI3MDUyLmpwZw%3D%3D%2Foriginal%2FFIDchU.jpg&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="Triangle Agency hero art" loading="eager" decoding="async" fetchpriority="high"><div class="hero-overlay"><div class="meta">Haunted Table</div><h1>Triangle Agency</h1></div></div>
     <p class="tagline">«SCP встречает X-Files. Вы — агенты, контролирующие аномальное».</p>
     <div class="quick-stats">
         <div class="qs"><span class="qs-label">Кубики</span><span class="qs-value">Пул d4</span></div>
@@ -71,31 +72,31 @@
         <div class="gallery-grid">
             
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1nLzIzMTIyMTYzLmpwZw%3D%3D%2Foriginal%2F638fvX.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Промо-арт агентства" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1nLzIzMTIyMTYzLmpwZw%3D%3D%2Foriginal%2F638fvX.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Промо-арт агентства" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Промо-арт агентства</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1nLzIzMTIyMTQzLnBuZw%3D%3D%2Foriginal%2FyIrTaf.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Иллюстрация: агенты" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1nLzIzMTIyMTQzLnBuZw%3D%3D%2Foriginal%2FyIrTaf.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Иллюстрация: агенты" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Иллюстрация: агенты</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1nLzIzMTIxOTQ5LnBuZw%3D%3D%2Foriginal%2F%252F%252B9FZ8.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Разворот книги" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1nLzIzMTIxOTQ5LnBuZw%3D%3D%2Foriginal%2F%252F%252B9FZ8.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Разворот книги" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Разворот книги</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0581%2F0464%2F3719%2Ffiles%2Flobby_sample.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Лобби агентства" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0581%2F0464%2F3719%2Ffiles%2Flobby_sample.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Лобби агентства" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Лобби агентства</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0581%2F0464%2F3719%2Ffiles%2FBack_Endpaper__Agents_on_Break.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Агенты на перерыве" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0581%2F0464%2F3719%2Ffiles%2FBack_Endpaper__Agents_on_Break.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Агенты на перерыве" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Агенты на перерыве</div></div>
                     </div>
@@ -126,13 +127,13 @@
     <div class="section-title">Похожие системы</div>
     <div class="similar-systems-grid">
         <a href="/ru/system/mothership.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/mothership.jpg" alt="Mothership hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/mothership.jpg" alt="Mothership hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Mothership</span>
           </a><a href="/ru/system/delta-green.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/delta-green.jpg" alt="Delta Green hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/delta-green.jpg" alt="Delta Green hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Delta Green</span>
           </a><a href="/ru/system/uvg.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/uvg.jpg" alt="Ultraviolet Grasslands hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/uvg.jpg" alt="Ultraviolet Grasslands hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Ultraviolet Grasslands</span>
           </a>
     </div>

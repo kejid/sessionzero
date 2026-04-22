@@ -28,8 +28,9 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap"></noscript>
+<link rel="stylesheet" href="/style.min.css">
 <script defer src="/lib/lucide.min.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"MÖRK BORG","alternativeHeadline":"«Мир кончается. Книга должна сгореть».","description":"Арт-панк RPG про последние дни умирающего мира. Правила умещаются на нескольких страницах, но книга — произведение искусства: кислотные цвета, безумная…","inLanguage":"ru","genre":"Настольная ролевая игра","publisher":{"@type":"Organization","name":"Ockult Örtmästare Games / Free League"},"url":"https://sessionzero.games/ru/system/mork-borg.html","image":"https://sessionzero.games/og/ru/mork-borg.jpg","author":{"@type":"Person","name":"Kejid","url":"https://github.com/kejid"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Session Zero","item":"https://sessionzero.games/"},{"@type":"ListItem","position":2,"name":"MÖRK BORG","item":"https://sessionzero.games/ru/system/mork-borg.html"}]}</script>
@@ -44,7 +45,7 @@
 </header>
 <main class="static-main">
   <article class="system-page static active">
-    <div class="hero-banner" style="border: 2px solid var(--yellow);"><img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F08%2Fherbmasters_crop-1440x720.jpg&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="MÖRK BORG hero art" loading="eager" decoding="async"><div class="hero-overlay"><div class="meta">Ockult Örtmästare Games / Free League</div><h1>MÖRK BORG</h1></div></div>
+    <div class="hero-banner" style="border: 2px solid var(--yellow);"><img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F08%2Fherbmasters_crop-1440x720.jpg&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="MÖRK BORG hero art" loading="eager" decoding="async" fetchpriority="high"><div class="hero-overlay"><div class="meta">Ockult Örtmästare Games / Free League</div><h1>MÖRK BORG</h1></div></div>
     <p class="tagline">«Мир кончается. Книга должна сгореть».</p>
     <div class="quick-stats">
         <div class="qs"><span class="qs-label">Кубики</span><span class="qs-value">d20 + d4–d10</span></div>
@@ -71,37 +72,37 @@
         <div class="gallery-grid">
             
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F08%2FMB_skeleton_kvad-1200x1200.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Скелет — интерьерный арт" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F08%2FMB_skeleton_kvad-1200x1200.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Скелет — интерьерный арт" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Скелет — интерьерный арт</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F08%2FMB_lich-1-1200x1200.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Лич" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F08%2FMB_lich-1-1200x1200.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Лич" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Лич</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F08%2FMB_02EN_Anthelia_kvad-1200x1200.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Антелия" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F08%2FMB_02EN_Anthelia_kvad-1200x1200.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Антелия" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Антелия</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F08%2FMB_05EN_Basilisks_kvad-1200x1200.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Василиски" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F08%2FMB_05EN_Basilisks_kvad-1200x1200.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Василиски" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Василиски</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F08%2FMB_06EN_Violence_kvad-1200x1200.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Violence" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F08%2FMB_06EN_Violence_kvad-1200x1200.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Violence" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Violence</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F08%2FMB_07EN_Troll-Zombie_kvad-1200x1200.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Тролль-зомби" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F08%2FMB_07EN_Troll-Zombie_kvad-1200x1200.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Тролль-зомби" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Тролль-зомби</div></div>
                     </div>
@@ -146,13 +147,13 @@
     <div class="section-title">Похожие системы</div>
     <div class="similar-systems-grid">
         <a href="/ru/system/cy-borg.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/cy-borg.jpg" alt="CY_BORG hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/cy-borg.jpg" alt="CY_BORG hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">CY_BORG</span>
           </a><a href="/ru/system/pirate-borg.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/pirate-borg.jpg" alt="Pirate Borg hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/pirate-borg.jpg" alt="Pirate Borg hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Pirate Borg</span>
           </a><a href="/ru/system/cairn.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/cairn.jpg" alt="Cairn hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/cairn.jpg" alt="Cairn hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Cairn</span>
           </a>
     </div>

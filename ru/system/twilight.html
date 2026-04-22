@@ -28,8 +28,9 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap"></noscript>
+<link rel="stylesheet" href="/style.min.css">
 <script defer src="/lib/lucide.min.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Twilight: 2000","alternativeHeadline":"«Третья мировая окончена. Вы проиграли. Теперь — выживайте».","description":"Милитари-сэндбокс о выживании после ядерной войны. Вы — остатки разбитого подразделения NATO в Польше (или Швеции). Командование молчит, топливо…","inLanguage":"ru","genre":"Настольная ролевая игра","publisher":{"@type":"Organization","name":"Free League / Year Zero Engine"},"url":"https://sessionzero.games/ru/system/twilight.html","image":"https://sessionzero.games/og/ru/twilight.jpg","author":{"@type":"Person","name":"Kejid","url":"https://github.com/kejid"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Session Zero","item":"https://sessionzero.games/"},{"@type":"ListItem","position":2,"name":"Twilight: 2000","item":"https://sessionzero.games/ru/system/twilight.html"}]}</script>
@@ -44,7 +45,7 @@
 </header>
 <main class="static-main">
   <article class="system-page static active">
-    <div class="hero-banner"><img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F08%2FTwilight_2000_RPG_Combat_3000-1440x720.jpg&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="Twilight: 2000 hero art" loading="eager" decoding="async"><div class="hero-overlay"><div class="meta">Free League / Year Zero Engine</div><h1>Twilight: 2000</h1></div></div>
+    <div class="hero-banner"><img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F08%2FTwilight_2000_RPG_Combat_3000-1440x720.jpg&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="Twilight: 2000 hero art" loading="eager" decoding="async" fetchpriority="high"><div class="hero-overlay"><div class="meta">Free League / Year Zero Engine</div><h1>Twilight: 2000</h1></div></div>
     <p class="tagline">«Третья мировая окончена. Вы проиграли. Теперь — выживайте».</p>
     <div class="quick-stats">
         <div class="qs"><span class="qs-label">Кубики</span><span class="qs-value">Пул d6–d12</span></div>
@@ -71,25 +72,25 @@
         <div class="gallery-grid">
             
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F08%2FTwilight_2000_RPG_Factions.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Фракции" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F08%2FTwilight_2000_RPG_Factions.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Фракции" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Фракции</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F11%2F1.-Rules-Gear-intro.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Правила и снаряжение" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F11%2F1.-Rules-Gear-intro.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Правила и снаряжение" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Правила и снаряжение</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F11%2Ftravel-intro.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Путешествие" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F11%2Ftravel-intro.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Путешествие" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Путешествие</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F08%2FTwilight_2000_RPG_Scenarios.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Сценарии" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Ffreeleaguepublishing.com%2Fwp-content%2Fuploads%2F2023%2F08%2FTwilight_2000_RPG_Scenarios.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Сценарии" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Сценарии</div></div>
                     </div>
@@ -120,13 +121,13 @@
     <div class="section-title">Похожие системы</div>
     <div class="similar-systems-grid">
         <a href="/ru/system/alien.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/alien.jpg" alt="ALIEN RPG hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/alien.jpg" alt="ALIEN RPG hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">ALIEN RPG</span>
           </a><a href="/ru/system/blade-runner.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/blade-runner.jpg" alt="Blade Runner hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/blade-runner.jpg" alt="Blade Runner hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Blade Runner</span>
           </a><a href="/ru/system/vaesen.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/vaesen.jpg" alt="Vaesen hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/vaesen.jpg" alt="Vaesen hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Vaesen</span>
           </a>
     </div>

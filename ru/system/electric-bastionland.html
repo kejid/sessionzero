@@ -28,8 +28,9 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap"></noscript>
+<link rel="stylesheet" href="/style.min.css">
 <script defer src="/lib/lucide.min.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Electric Bastionland","alternativeHeadline":"«У вас есть долг в миллион фунтов и очень мало времени».","description":"Эволюция Into the Odd. Те же элегантные правила, но фокус — на городских приключениях в электрическую эпоху. Главная фишка — 100+ «Неудачных Профессий»:…","inLanguage":"ru","genre":"Настольная ролевая игра","publisher":{"@type":"Organization","name":"Chris McDowell / Bastionland Press"},"url":"https://sessionzero.games/ru/system/electric-bastionland.html","image":"https://sessionzero.games/og/ru/electric-bastionland.jpg","author":{"@type":"Person","name":"Kejid","url":"https://github.com/kejid"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Session Zero","item":"https://sessionzero.games/"},{"@type":"ListItem","position":2,"name":"Electric Bastionland","item":"https://sessionzero.games/ru/system/electric-bastionland.html"}]}</script>
@@ -44,7 +45,7 @@
 </header>
 <main class="static-main">
   <article class="system-page static active">
-    <div class="hero-banner"><img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.cursedink.es%2Fwp-content%2Fuploads%2F2023%2F11%2F2023-11-29_18h32_11-1400x700.png&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="Electric Bastionland hero art" loading="eager" decoding="async"><div class="hero-overlay"><div class="meta">Chris McDowell / Bastionland Press</div><h1>Electric Bastionland</h1></div></div>
+    <div class="hero-banner"><img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.cursedink.es%2Fwp-content%2Fuploads%2F2023%2F11%2F2023-11-29_18h32_11-1400x700.png&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="Electric Bastionland hero art" loading="eager" decoding="async" fetchpriority="high"><div class="hero-overlay"><div class="meta">Chris McDowell / Bastionland Press</div><h1>Electric Bastionland</h1></div></div>
     <p class="tagline">«У вас есть долг в миллион фунтов и очень мало времени».</p>
     <div class="quick-stats">
         <div class="qs"><span class="qs-label">Кубики</span><span class="qs-value">d20 + d6</span></div>
@@ -71,25 +72,25 @@
         <div class="gallery-grid">
             
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1hZ2UvNTk4NDYyLzMxNzkzMTkucG5n%2Foriginal%2FMnG1LD.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Разворот с иллюстрациями" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1hZ2UvNTk4NDYyLzMxNzkzMTkucG5n%2Foriginal%2FMnG1LD.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Разворот с иллюстрациями" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Разворот с иллюстрациями</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1hZ2UvNTk4NDYyLzMxNzkyOTkucG5n%2Foriginal%2FPQkILZ.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Персонажи Бастиона" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1hZ2UvNTk4NDYyLzMxNzkyOTkucG5n%2Foriginal%2FPQkILZ.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Персонажи Бастиона" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Персонажи Бастиона</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1hZ2UvNTk4NDYyLzMxNzkzMDEucG5n%2Foriginal%2FHsUsO1.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Таблицы и арт" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1hZ2UvNTk4NDYyLzMxNzkzMDEucG5n%2Foriginal%2FHsUsO1.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Таблицы и арт" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Таблицы и арт</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1hZ2UvNTk4NDYyLzMxNzkzMDIucG5n%2Foriginal%2FlbwRs4.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Чёрно-белая иллюстрация" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1hZ2UvNTk4NDYyLzMxNzkzMDIucG5n%2Foriginal%2FlbwRs4.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Чёрно-белая иллюстрация" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Чёрно-белая иллюстрация</div></div>
                     </div>
@@ -127,13 +128,13 @@
     <div class="section-title">Похожие системы</div>
     <div class="similar-systems-grid">
         <a href="/ru/system/into-the-odd.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/into-the-odd.jpg" alt="Into the Odd hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/into-the-odd.jpg" alt="Into the Odd hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Into the Odd</span>
           </a><a href="/ru/system/mythic-bastionland.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/mythic-bastionland.jpg" alt="Mythic Bastionland hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/mythic-bastionland.jpg" alt="Mythic Bastionland hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Mythic Bastionland</span>
           </a><a href="/ru/system/cairn.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/cairn.jpg" alt="Cairn hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/cairn.jpg" alt="Cairn hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Cairn</span>
           </a>
     </div>
