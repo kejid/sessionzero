@@ -74,6 +74,7 @@ registerSystem("blade-runner", {
     }
   ],
   "ru": {
+    "tagShort": "Нуар-детектив с репликантами",
     "tagline": "«Детектив о морали, памяти и бесконечном дожде».",
     "description": "RPG-детектив в мире Blade Runner 2037. Вы — Blade Runners, детективы LAPD, расследующие дела, связанные с репликантами. Система заточена под расследования: анализ улик, допросы, моральные дилеммы. Не экшн-игра — нуарный процедурал.",
     "setting": "Лос-Анджелес 2037 года. Неоновый дождь, гигантские голограммы, внеземные колонии. Репликанты нового поколения живут среди людей, и граница между «человеком» и «машиной» стёрта окончательно. Корпорации контролируют всё, а улицы полны отчаяния.",
@@ -127,6 +128,7 @@ registerSystem("blade-runner", {
     ]
   },
   "en": {
+    "tagShort": "neo-noir detective RPG",
     "tagline": "\"A detective story about morality, memory, and endless rain.\"",
     "description": "A detective RPG set in the world of Blade Runner 2037. You are Blade Runners, LAPD detectives investigating cases involving replicants. The system is designed for investigations: analyzing evidence, interrogations, moral dilemmas. Not an action game — a noir procedural.",
     "setting": "Los Angeles, 2037. Neon rain, colossal holograms, off-world colonies. New generation replicants live among humans, and the line between 'human' and 'machine' has been erased entirely. Corporations control everything, and the streets overflow with despair.",

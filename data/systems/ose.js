@@ -65,6 +65,7 @@ registerSystem("ose", {
     }
   ],
   "ru": {
+    "tagShort": "Ретроклон B/X D&D 1981",
     "tagline": "«Подземелью всё равно, какова ваша предыстория. Оно смотрит только на ваш факел.»",
     "description": "Old-School Essentials — эталонный клон B/X D&D 1981 года. Гэвин Норман переорганизовал правила с такой точностью, что любое правило находится за секунды. Лучшая версия блестяще простой игры.",
     "setting": "Сеттинг-агностичная система. Подразумеваемый мир — опасная местность с подземельями, коррумпированными городами и руинами павших империй. Персонажи — охотники за сокровищами, не герои.",
@@ -106,6 +107,7 @@ registerSystem("ose", {
     ]
   },
   "en": {
+    "tagShort": "B/X D&D retroclone OSR",
     "tagline": "\"The dungeon doesn't care about your backstory. It cares about your torch.\"",
     "description": "Old-School Essentials is the gold-standard retroclone of the 1981 B/X Dungeons & Dragons rules. Designer Gavin Norman took those rules and made them even clearer: reorganized, cross-referenced, and laid out so precisely that any rule you need is findable in seconds. This is not a nostalgia trip. It's the best version of a brilliantly simple game that was already perfect.",
     "setting": "OSE is setting-agnostic — the rules support any flavor of fantasy, from sword-and-sorcery pulp to dark fairy tales to gonzo science-fantasy. The implied world is a dangerous wilderness dotted with crumbling dungeons, corrupt city-states, and ruins of fallen empires. Player characters are treasure-hunters first and heroes second, if ever.",

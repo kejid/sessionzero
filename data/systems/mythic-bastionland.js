@@ -77,6 +77,7 @@ registerSystem("mythic-bastionland", {
     }
   ],
   "ru": {
+    "tagShort": "Мифический рыцарский RPG",
     "tagline": "«Рыцари мифа в мире, который помнит больше, чем рассказывает».",
     "description": "Третья и самая масштабная игра на движке Into the Odd. Вы — рыцари-скитальцы, путешествующие по мифическим землям. Каждый рыцарь несёт свой Миф — личное предназначение, вплетённое в ткань мира. Мир генерируется процедурно прямо за столом: оракулы, таблицы и гексы (шестиугольные клетки карты) создают уникальную карту для каждой группы.",
     "setting": "Тёмное артуровское фэнтези без эльфов и файерболлов. Туманные болота, каменные круги, забытые королевства. Мир — это смесь «Зелёного рыцаря», бретонских легенд и скандинавских саг. Монстры здесь — мифические существа, а не мешки с хитами.",
@@ -133,6 +134,7 @@ registerSystem("mythic-bastionland", {
     ]
   },
   "en": {
+    "tagShort": "mythic Arthurian RPG",
     "tagline": "\"Knights of myth in a world that remembers more than it tells.\"",
     "description": "The third and most ambitious game built on the Into the Odd engine. You are wandering knights traveling through mythic lands. Each knight carries their own Myth — a personal destiny woven into the fabric of the world. The world is procedurally generated right at the table: oracles, tables, and hexes create a unique map for each group.",
     "setting": "Dark Arthurian fantasy without elves or fireballs. Misty bogs, stone circles, forgotten kingdoms. The world is a blend of The Green Knight, Breton legends, and Norse sagas. Monsters here are mythic creatures, not bags of hit points.",

@@ -70,6 +70,7 @@ registerSystem("spire", {
     }
   ],
   "ru": {
+    "tagShort": "Восстание дроу RPG",
     "tagline": "«Вы — тёмные эльфы. Вы живёте в самом низу города высотой с милю. Вы собираетесь его снести.»",
     "description": "Фэнтези-панк RPG о революции, тайных операциях и цене отчаяния. Вы — дроу, члены запрещённого Министерства, поклявшегося свергнуть оккупантов-аэльфир. Не история о героях — история о том, как далеко вы зайдёте.",
     "setting": "Спайр — город-миля, построенный дроу и захваченный аэльфир. Ярусы громоздятся: ледяные высоты Амаранта, задымленный Завод, трущобный Красный Ряд — и под всем кровоточащая прореха в реальности, Сердце.",
@@ -117,6 +118,7 @@ registerSystem("spire", {
     ]
   },
   "en": {
+    "tagShort": "drow rebellion RPG",
     "tagline": "\"You are dark elves. You live at the bottom of a mile-high city. You are going to tear it down.\"",
     "description": "A fantasy-punk RPG of revolution, subterfuge, and desperate consequence. You play as drow — dark elves living under the boot of aelfir occupation in the towering city of Spire — members of the Ministry, a forbidden paramilitary cult devoted to the violent overthrow of their oppressors. This is not a game about heroes; it's a game about how far you'll go, and what the city takes from you in return.",
     "setting": "Spire is a mile-tall city built by the drow and seized by the aelfir two hundred years ago. Its districts stack one atop another: the frozen aristocratic heights of Amaranth, the smoke-choked industrial Works, the lawless squalor of Red Row down-Spire, and — beneath it all — the bleeding hole in reality known as the Heart (the subject of its companion game).",

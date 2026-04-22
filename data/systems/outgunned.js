@@ -73,6 +73,7 @@ registerSystem("outgunned", {
     }
   ],
   "ru": {
+    "tagShort": "Кинематографичная экшн-RPG",
     "tagline": "Die Hard, John Wick, Ocean's Eleven — теперь это ваш фильм.",
     "description": "Кинематографичная экшн-RPG, где вы играете героев боевиков. Система Director's Cut: бросаете пул d6, успех — это совпадения (пары, тройки, каре). Создание персонажа за минуты: Роль (Мускул, Мозг, Лицо) + Троп (Отставной коп, Шпион на пенсии, Хакер-подросток). Идеально для ваншотов и мини-кампаний.",
     "setting": "Любой экшн-фильм. Модули под жанры: шпионский триллер (James Bond), полицейский боевик (Die Hard), ограбление (Ocean's Eleven), боевые искусства (John Wick). Action Flicks добавляют Ghostbusters, Indiana Jones, палп. Ваш стол — съёмочная площадка.",
@@ -123,6 +124,7 @@ registerSystem("outgunned", {
     ]
   },
   "en": {
+    "tagShort": "Die Hard cinematic action RPG",
     "tagline": "Die Hard, John Wick, Ocean's Eleven — now it's your movie.",
     "description": "A cinematic action RPG where you play action movie heroes. The Director's Cut system: roll a d6 pool, successes are matches (pairs, triples, four-of-a-kind). Character creation in minutes: Role (Muscle, Brain, Face) + Trope (Retired Cop, Spy on Sabbatical, Teenage Hacker). Perfect for one-shots and mini-campaigns.",
     "setting": "Any action movie. Genre modules: spy thriller (James Bond), cop action (Die Hard), heist (Ocean's Eleven), martial arts (John Wick). Action Flicks add Ghostbusters, Indiana Jones, pulp. Your table is a film set.",

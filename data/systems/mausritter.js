@@ -64,6 +64,7 @@ registerSystem("mausritter", {
     }
   ],
   "ru": {
+    "tagShort": "OSR-приключения мышат",
     "tagline": "«Храбрая маленькая мышь. Мир огромен, жесток и полон чудес.»",
     "description": "Mausritter — OSR-игра о приключениях мышей на движке Into the Odd. Правила на двух страницах, персонаж за три минуты — и при этом одна из самых атмосферных игр в жанре.",
     "setting": "Нет фиксированной карты — только инструментарий: руины людских строений, мышиные деревушки, соборные стропила с совами-чародеями, садовые стены с котами-тиранами. Капля дождя — опасность, спичечный коробок — комната.",
@@ -105,6 +106,7 @@ registerSystem("mausritter", {
     ]
   },
   "en": {
+    "tagShort": "OSR mouse adventure RPG",
     "tagline": "\"Brave little mouse. The world is vast and cruel and full of wonder.\"",
     "description": "Mausritter is a sword-and-whiskers OSR adventure game built on the engine of Into the Odd. You play mice — small, fragile, clever — navigating a world that is ancient, indifferent, and enormous. Rules fit on two pages; character creation takes three minutes; and somehow, none of that stops it from being one of the most imaginative games in the genre.",
     "setting": "There is no fixed map, only a toolbox: hex-crawl wilderness, crumbling human ruins, underground mouse settlements, cathedral rafters haunted by owl-sorcerers, and garden walls patrolled by cat-tyrants. The scale is everything — a single raindrop is a hazard, a matchbox is a room, a boot is a dungeon.",

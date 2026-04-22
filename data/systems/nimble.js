@@ -64,6 +64,7 @@ registerSystem("nimble", {
     }
   ],
   "ru": {
+    "tagShort": "Быстрая альтернатива D&D 5e",
     "tagline": "«D&D 5e, но быстрее, проще и без бросков на попадание. Бой за 20 минут, а не за 2 часа.»",
     "description": "Сеттинг-агностик. Совместим с D&D 5e контентом — монстры, приключения, магические предметы конвертируются. Любой фэнтези-мир. Атаки всегда попадают: нет броска на попадание, бросается только урон. 1 = промах, всё остальное — попадание. Бои в 3 раза быстрее.",
     "setting": "Сеттинг-агностик. Совместим с D&D 5e контентом (монстры, приключения, магические предметы конвертируются). Любой фэнтези-мир.",
@@ -108,6 +109,7 @@ registerSystem("nimble", {
     ]
   },
   "en": {
+    "tagShort": "fast D&D 5e-compatible RPG",
     "tagline": "\"D&D 5e, but faster, simpler, and no attack rolls. Combat in 20 minutes, not 2 hours.\"",
     "description": "Setting-agnostic. Compatible with D&D 5e content — monsters, adventures, magic items all convert. Any fantasy world. Attacks always hit: no attack roll, only damage is rolled. 1 = miss, everything else = hit. Combat is 3 times faster.",
     "setting": "Setting-agnostic. Compatible with D&D 5e content (monsters, adventures, magic items convert). Any fantasy world.",

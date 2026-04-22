@@ -62,6 +62,7 @@ registerSystem("vaesen", {
     }
   ],
   "ru": {
+    "tagShort": "Скандинавская готика XIX века",
     "tagline": "«Мистический детектив в Скандинавии XIX века».",
     "description": "Вы — члены Общества, способные видеть сверхъестественное в мире, где остальные давно перестали верить. Каждое приключение — расследование: деревня обращается за помощью, вы изучаете мифологию существа, находите его слабость и проводите ритуал. Структура «монстр недели» работает идеально.",
     "setting": "Скандинавия XIX века. Индустриализация наступает, старые боги забыты. Но в лесах и озёрах живут вэттиры — существа из скандинавского фольклора: тролли, ниссе, мюлинги, дракены. Они злы, потому что люди их забыли. Между расследованиями вы восстанавливаете замок — штаб-квартиру Общества.",
@@ -103,6 +104,7 @@ registerSystem("vaesen", {
     ]
   },
   "en": {
+    "tagShort": "Nordic gothic mystery RPG",
     "tagline": "\"Supernatural mystery in 19th-century Scandinavia.\"",
     "description": "You are members of the Society, able to see the supernatural in a world where everyone else has long stopped believing. Every adventure is an investigation: a village asks for help, you research the creature's mythology, find its weakness, and perform a ritual. The 'monster of the week' structure works perfectly.",
     "setting": "19th-century Scandinavia. Industrialization advances, the old gods are forgotten. But in forests and lakes dwell vaesen — creatures from Scandinavian folklore: trolls, nisse, mylings, drakes. They are angry because humans have forgotten them. Between investigations, you restore a castle — the Society's headquarters.",

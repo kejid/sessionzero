@@ -70,6 +70,7 @@ registerSystem("triangle", {
     }
   ],
   "ru": {
+    "tagShort": "RPG про агентов аномалий",
     "tagline": "«SCP встречает X-Files. Вы — агенты, контролирующие аномальное».",
     "description": "RPG о спецагентах, работающих в секретном агентстве, которое сдерживает аномальные явления. Каждая миссия — выезд на аномалию: изучить, классифицировать, решить что делать. Генератор аномалий создаёт уникальные угрозы. Бюрократия агентства — враг не менее опасный.",
     "setting": "Современный мир, но за фасадом реальности — аномалии. Агентство «Треугольник» — секретная организация, которая их сдерживает. Три доктрины: Сдержать, Уничтожить или Использовать. Каждая миссия — моральный выбор, и Агентство запоминает ваши решения.",
@@ -120,6 +121,7 @@ registerSystem("triangle", {
     ]
   },
   "en": {
+    "tagShort": "SCP-meets-X-Files agent RPG",
     "tagline": "\"SCP meets X-Files. You are agents containing the anomalous.\"",
     "description": "An RPG about special agents working for a secret agency that contains anomalous phenomena. Every mission is a field response to an anomaly: study it, classify it, decide what to do. The anomaly generator creates unique threats. Agency bureaucracy is an equally dangerous enemy.",
     "setting": "The modern world, but behind the facade of reality — anomalies. The Triangle Agency is a secret organization that contains them. Three doctrines: Contain, Destroy, or Exploit. Every mission is a moral choice, and the Agency remembers your decisions.",

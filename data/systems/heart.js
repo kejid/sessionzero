@@ -68,6 +68,7 @@ registerSystem("heart", {
     }
   ],
   "ru": {
+    "tagShort": "Нарративный спуск",
     "tagline": "«Спускайтесь в живой подземный город, который исполняет желания — за чудовищную цену».",
     "description": "Нарративный (история и драма важнее точных правил) данжен-кроул наоборот. Вместо подъёма к сокровищам — спуск в Сердце, живой подземный мегаданжен, который реагирует на желания и страхи. Каждый класс имеет уникальную историю: от Зенита (входа) до Надира (финала). Персонаж буквально проходит нарративную арку.",
     "setting": "Под городом Спайр (из одноимённой игры) бьётся Сердце — немыслимое пространство, меняющее реальность. Рынки из костей, библиотеки из снов, леса из мяса. Чем глубже спускаешься — тем безумнее становится мир и ты сам.",
@@ -115,6 +116,7 @@ registerSystem("heart", {
     ]
   },
   "en": {
+    "tagShort": "weird descent RPG",
     "tagline": "\"Descend into a living underground city that grants wishes — for a monstrous price.\"",
     "description": "A narrative dungeon crawl in reverse. Instead of climbing toward treasure — a descent into the Heart, a living underground megadungeon that responds to desires and fears. Each class has a unique story arc: from Zenith (entry) to Nadir (finale). Characters literally progress through a narrative arc.",
     "setting": "Beneath the city of Spire beats the Heart — an inconceivable space that warps reality. Markets of bone, libraries of dreams, forests of flesh. The deeper you descend, the more insane the world — and you — become.",

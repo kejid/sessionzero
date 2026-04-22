@@ -65,6 +65,7 @@ registerSystem("starforged", {
   ],
   "quotes": [{"text": "The oracles don't just tell you what happens — they hand you a weird detail and trust you to build the world around it. I've ended up in situations I never would have invented on my own.", "author": "u/void_cartographer, r/solorpg"}, {"text": "For developing a story with structure that still manages to surprise me, nothing beats this. It's become my favorite solo tabletop system, full stop.", "author": "popcult.blog, solo RPG review series"}],
   "ru": {
+    "tagShort": "Соло sci-fi PbtA RPG",
     "tagline": "«Поклянитесь на железе. Выживите в кузнице звёзд.»",
     "description": "**Ironsworn: Starforged** — научно-фантастическая RPG для одного игрока, пары или небольшой группы без ведущего. Вы — скиталец на краю обитаемого пространства, известного как Кузница: туманность, где звёзды молоды и яростны, а человечество разбросано по горстке хрупких поселений. Не нужна подготовка, не нужен ведущий: мощные оракулы, двигатель нарративных ходов и прогресс-треки ведут историю вперёд сами. Система Клятв на железе превращает каждое данное обещание в ставку, а его выполнение — в катарсис. ENNIE-лауреат, Kickstarter-хит 2022 года.",
     "setting": "Несколько столетий назад последние корабли беженцев покинули умирающую Старую Галактику и нырнули в туманность Кузница — густое облако молодых звёзд, где законы физики чуть другие, а Предшественники оставили в руинах свои загадочные артефакты. Сегодня человечество разделено: сотни изолированных секторов, каждый со своей историей, верованиями и бедами. Корабли бороздят Пустоту. На планетах-прецурсорах прячутся смертоносные чужие формы жизни. Ваш герой — один из немногих, кто берёт на себя миссии, от которых зависит судьба общин.",
@@ -107,6 +108,7 @@ registerSystem("starforged", {
     ]
   },
   "en": {
+    "tagShort": "solo sci-fi PbtA RPG",
     "tagline": "\"Swear iron vows. Survive the Forge.\"",
     "description": "**Ironsworn: Starforged** is a sci-fi RPG for one player, a duo, or a small group — with no GM required. You are a spacefarer on the edge of inhabited space inside the Forge: a turbulent nebula of young stars where humanity clings to a handful of fragile settlements. Zero prep, zero game master: powerful oracle tables, a fiction-first move engine, and progress tracks propel the story forward on their own. The iron vow system turns every sworn promise into a dramatic stake, and its fulfillment into catharsis. ENNIE award winner and Kickstarter hit of 2022.",
     "setting": "Centuries ago, the last refugee ships fled a dying galaxy and plunged into the Forge — a dense nebula of young, fierce stars where the Precursors left behind ruins of inscrutable purpose. Today humanity is fragmented: hundreds of isolated sectors, each with its own history, beliefs, and crises. Ships cross the Void between them. Precursor worlds hide lethal alien life. Your character is one of the rare few who takes on missions that determine the fate of whole communities — alone, if necessary.",

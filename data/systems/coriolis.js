@@ -89,6 +89,7 @@ registerSystem("coriolis", {
     }
   ],
   "ru": {
+    "tagShort": "Арабо-персидская космоопера",
     "tagline": "«Арабские Ночи в космосе. Торговля, молитва и Тьма Между Звёзд».",
     "description": "Космическая опера с арабо-персидской эстетикой. Группа владеет космическим кораблём и путешествует по Третьему Горизонту — кластеру звёздных систем. Торговля, контрабанда, дипломатия, исследование — и Тьма Между Звёзд, которая проникает в реальность через молитвы Иконам.",
     "setting": "Третий Горизонт — десятки звёздных систем, связанных порталами. Базары на орбитальных станциях, мечети рядом с доками, древние порталы неизвестного происхождения. Фракции: от религиозных орденов до мегакорпораций. Атмосфера — Firefly встречает «1001 ночь».",
@@ -148,6 +149,7 @@ registerSystem("coriolis", {
     ]
   },
   "en": {
+    "tagShort": "Arabian-Persian space opera",
     "tagline": "\"Arabian Nights in space. Trade, prayer, and the Darkness Between the Stars.\"",
     "description": "A space opera with Arab-Persian aesthetics. The group owns a spaceship and travels the Third Horizon — a cluster of star systems. Trade, smuggling, diplomacy, exploration — and the Darkness Between the Stars, which seeps into reality through prayers to the Icons.",
     "setting": "The Third Horizon — dozens of star systems connected by portals. Bazaars on orbital stations, mosques next to docks, ancient portals of unknown origin. Factions range from religious orders to megacorporations. The atmosphere — Firefly meets One Thousand and One Nights.",

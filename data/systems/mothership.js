@@ -84,6 +84,7 @@ registerSystem("mothership", {
     }
   ],
   "ru": {
+    "tagShort": "Sci-fi хоррор на процентах",
     "tagline": "«Научно-фантастический хоррор, где ваш корабль — ваш гроб».",
     "description": "Sci-fi хоррор на процентных кубиках. Вы — рабочие, учёные и морпехи на космических кораблях, где всё идёт не так. Система стресса и паники делает каждую ситуацию непредсказуемой. Модульная структура: десятки блестящих сценариев от сообщества. Создание персонажа — 10 минут.",
     "setting": "Далёкое будущее. Корпорации отправляют экипажи на заброшенные станции, в астероидные шахты и на мёртвые корабли. Что-то ждёт в темноте: инопланетные паразиты, сбойные ИИ, экзистенциальные аномалии. Эстетика — Alien встречает Event Horizon.",
@@ -140,6 +141,7 @@ registerSystem("mothership", {
     ]
   },
   "en": {
+    "tagShort": "Alien-style sci-fi horror RPG",
     "tagline": "\"Sci-fi horror where your ship is your coffin.\"",
     "description": "Sci-fi horror on percentile dice. You are workers, scientists, and marines on spaceships where everything goes wrong. The stress and panic system makes every situation unpredictable. Modular structure: dozens of brilliant community scenarios. Character creation — 10 minutes.",
     "setting": "The far future. Corporations send crews to abandoned stations, asteroid mines, and dead ships. Something waits in the dark: alien parasites, malfunctioning AIs, existential anomalies. The aesthetic — Alien meets Event Horizon.",

@@ -71,6 +71,7 @@ registerSystem("tales-loop", {
     }
   ],
   "ru": {
+    "tagShort": "Альт-80-е, мистика",
     "tagline": "«Альтернативные 80-е. Роботы, динозавры и тайны, которые видят только дети».",
     "description": "Вы — подростки 10–15 лет в альтернативных 80-х, где гигантский подземный ускоритель частиц (Петля) создаёт аномалии. Роботы ходят по улицам, но взрослые не замечают странного. Главное правило: дети не умирают. Но теряют друзей, невинность и веру в безопасный мир.",
     "setting": "Швеция или США 1980-х, альтернативная история. Правительство построило Петлю — подземный ускоритель. Побочные эффекты: автономные роботы, гравитационные аномалии, временные петли, динозавры в озере. Визуально — меланхоличные картины Симона Столенхага: роботы на фоне шведских лугов.",
@@ -121,6 +122,7 @@ registerSystem("tales-loop", {
     ]
   },
   "en": {
+    "tagShort": "kids '80s mystery RPG",
     "tagline": "\"Alternate '80s. Robots, dinosaurs, and mysteries only kids can see.\"",
     "description": "You are teenagers aged 10-15 in an alternate 1980s, where a giant underground particle accelerator (the Loop) creates anomalies. Robots walk the streets, but adults don't notice the strange. The core rule: kids don't die. But they lose friends, innocence, and faith in a safe world.",
     "setting": "1980s Sweden or USA, alternate history. The government built the Loop — an underground accelerator. Side effects: autonomous robots, gravitational anomalies, time loops, dinosaurs in the lake. Visually — Simon Stalenhag's melancholic paintings: robots against Swedish meadows.",

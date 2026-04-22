@@ -75,6 +75,7 @@ registerSystem("delta-green", {
     }
   ],
   "ru": {
+    "tagShort": "Современный Ктулху-хоррор RPG",
     "tagline": "«Ктулху работает на правительство. И вы тоже».",
     "description": "Модерновый лавкрафтианский хоррор. Вы — федеральные агенты (ФБР, ЦРУ, АНБ, CDC), тайно борющиеся с космическим ужасом. Днём — бюрократия. Ночью — невозможные операции. Каждая миссия разрушает вашу личную жизнь: семью, друзей, рассудок. Механика отслеживает, как работа пожирает всё.",
     "setting": "Современные США (или мир). За фасадом привычной реальности — инопланетные боги, культы, правительственные заговоры. Delta Green — нелегальная ячейка внутри спецслужб. Вы получаете SMS от неизвестного номера: «Ночная оперативка. Приезжайте по адресу...» И ваша жизнь никогда не будет прежней.",
@@ -125,6 +126,7 @@ registerSystem("delta-green", {
     ]
   },
   "en": {
+    "tagShort": "modern Lovecraftian agency RPG",
     "tagline": "\"Cthulhu works for the government. And so do you.\"",
     "description": "Modern Lovecraftian horror. You are federal agents (FBI, CIA, NSA, CDC) secretly fighting cosmic horror. By day — bureaucracy. By night — impossible operations. Every mission destroys your personal life: family, friends, sanity. The mechanics track how the job devours everything.",
     "setting": "Modern-day USA (or the world). Behind the facade of everyday reality — alien gods, cults, government conspiracies. Delta Green is an illegal cell within the intelligence agencies. You get a text from an unknown number: 'Night op. Report to this address...' And your life will never be the same.",
