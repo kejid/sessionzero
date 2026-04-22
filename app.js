@@ -259,6 +259,15 @@ function ensureSystemRendered(id) {
     refreshIcons();
 }
 
+// Intercepts clicks on sidebar <a href="/system/...">. Lets middle-click / cmd-click /
+// ctrl-click / shift-click through for new-tab behavior; otherwise preventDefault and
+// keep the SPA navigation path.
+function handleNavClick(e, id) {
+    if (e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    showPage(id);
+}
+
 function renderNavItems() {
     // Remove old dynamic nav groups (keep custom-nav-group)
     document.querySelectorAll('.nav-group.dynamic-group').forEach(el => el.remove());
@@ -280,10 +289,21 @@ function renderNavItems() {
 
         ids.forEach(id => {
             if (!SYSTEMS_DATA[id]) return;
-            const item = document.createElement('div');
-            item.className = 'nav-item';
+            // Custom (user-added) systems have no static page — keep them as div.
+            // Official systems get a real <a href> so Googlebot crawls deep links.
+            const isCustom = CustomSystems && CustomSystems.find && CustomSystems.find(id);
+            let item;
+            if (isCustom) {
+                item = document.createElement('div');
+                item.className = 'nav-item';
+                item.onclick = () => showPage(id);
+            } else {
+                item = document.createElement('a');
+                item.className = 'nav-item nav-system-link';
+                item.href = '/system/' + id + '.html';
+                item.onclick = (e) => handleNavClick(e, id);
+            }
             item.dataset.page = id;
-            item.onclick = () => showPage(id);
             item.innerHTML = `${SYSTEMS_DATA[id].name} <span class="nav-votes"></span>`;
             groupDiv.appendChild(item);
         });
