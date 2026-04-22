@@ -117,7 +117,7 @@ registerSystem("twilight", {
     ]
   },
   "en": {
-    "tagShort": "post-WW3 survival sandbox RPG",
+    "tagShort": "post-WW3 survival RPG",
     "tagline": "\"World War III is over. You lost. Now — survive.\"",
     "description": "A military sandbox about surviving after nuclear war. You are the remnants of a shattered NATO unit in Poland (or Sweden). Command is silent, fuel is running out, ammo is scarce, and winter is coming. Can you make it home — or at least survive until spring?",
     "setting": "An alternate year 2000. World War III happened. Nuclear strikes destroyed major cities. Europe is a zone of chaos: marauders, deserters, local warlords. Polish winter, ruined infrastructure, and the remnants of civilization.",

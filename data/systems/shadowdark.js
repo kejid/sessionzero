@@ -119,7 +119,7 @@ registerSystem("shadowdark", {
     ]
   },
   "en": {
-    "tagShort": "modern OSR with real-time torches",
+    "tagShort": "OSR with real-time torches",
     "tagline": "\"Old-school dungeon crawling in a modern wrapper.\"",
     "description": "A bridge between OSR and modern RPGs. Uses familiar d20 mechanics (attributes, AC, saves) but with old-school lethality and sense of danger. The most successful RPG Kickstarter in recent years. If D&D feels bloated — Shadowdark is the cure.",
     "setting": "A setting-agnostic system. Any fantasy world will do. But the spirit of the game is dark dungeons where the torch decides everything. Without light you're blind, and in the darkness dwell things that see perfectly.",
