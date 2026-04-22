@@ -3,7 +3,11 @@
 Cinematic poster style: hero image as background with dark gradient,
 system name + publisher overlaid, "SESSION ZERO" badge in corner.
 
-Output: og/<system-id>.png at 1200x630.
+Output:
+  default:           og/<system-id>.jpg  + og/home.jpg   (EN copy)
+  --lang=ru:         og/ru/<system-id>.jpg + og/ru/home.jpg  (RU copy)
+
+Positional args (after any --lang=... flag) restrict to specific IDs or "home".
 """
 import json
 import re
@@ -15,7 +19,8 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 ROOT = Path(__file__).resolve().parent.parent
 SYSTEMS_DIR = ROOT / "data" / "systems"
-OUT_DIR = ROOT / "og"
+OUT_DIR_EN = ROOT / "og"
+OUT_DIR_RU = ROOT / "og" / "ru"
 CACHE_DIR = ROOT / ".cache" / "og-source"
 FONTS_DIR = ROOT / ".cache" / "fonts"
 
@@ -30,6 +35,21 @@ UA = "Mozilla/5.0 (compatible; SessionZeroOGBot/1.0; +https://sessionzero.games)
 
 PAD_X, PAD_BOTTOM = 64, 72
 BADGE_PAD = 40
+
+
+# Per-language copy. Brand badge "SESSION ZERO" and URL stay English.
+COPY = {
+    "en": {
+        "sub": "Group voting tool · sessionzero.games",
+        "home_pretitle": "TTRPG GROUP VOTING TOOL",
+        "home_tagline": "Pick what to play with your group →",
+    },
+    "ru": {
+        "sub": "Инструмент группового выбора · sessionzero.games",
+        "home_pretitle": "ГРУППОВОЕ ГОЛОСОВАНИЕ TTRPG",
+        "home_tagline": "Выберите во что играть всей группой →",
+    },
+}
 
 
 def parse_system(path: Path) -> dict | None:
@@ -171,13 +191,13 @@ def draw_badge(img: Image.Image):
     img.alpha_composite(badge, (W - BADGE_PAD - box_w, BADGE_PAD))
 
 
-def draw_text_block(img: Image.Image, name: str, publisher: str):
+def draw_text_block(img: Image.Image, name: str, publisher: str, lang: str):
     """img is RGBA."""
     draw = ImageDraw.Draw(img)
     max_w = W - PAD_X * 2
 
     pub_text = (publisher or "").upper()
-    sub_text = "Group voting tool · sessionzero.games"
+    sub_text = COPY[lang]["sub"]
     pub_font = load_font(FONTS_DIR / "Unbounded-Bold.ttf", 20)
     sub_font = load_font(FONTS_DIR / "Unbounded-Bold.ttf", 17)
     name_font = fit_font(FONTS_DIR / "Unbounded-Black.ttf", name,
@@ -194,16 +214,16 @@ def draw_text_block(img: Image.Image, name: str, publisher: str):
     draw_top(draw, PAD_X, sub_y, sub_text, sub_font, ACCENT, spacing=1)
 
 
-def make_homepage_og() -> Image.Image:
+def make_homepage_og(lang: str) -> Image.Image:
     """Branded homepage OG with no hero — text on dark with accent glow."""
     bg = Image.new("RGBA", (W, H), BG_DARK + (255,))
     bg.alpha_composite(radial_glow(W, H, ACCENT, cx=int(W * 0.78),
                                    cy=int(H * 0.32), max_r=720, max_alpha=34))
     bg.alpha_composite(vertical_gradient(W, H, top_alpha=20, bottom_alpha=120))
 
-    pretitle = "TTRPG GROUP VOTING TOOL"
+    pretitle = COPY[lang]["home_pretitle"]
     name = "SESSION ZERO"
-    tagline = "Pick what to play with your group."
+    tagline = COPY[lang]["home_tagline"]
     url = "sessionzero.games"
 
     max_w = W - PAD_X * 2
@@ -229,7 +249,7 @@ def make_homepage_og() -> Image.Image:
     return bg
 
 
-def make_og(system: dict) -> Image.Image:
+def make_og(system: dict, lang: str) -> Image.Image:
     hero_url = system.get("heroImage") or ""
     hero = fetch_image(hero_url) if hero_url else None
     if hero is None:
@@ -243,7 +263,7 @@ def make_og(system: dict) -> Image.Image:
     bg = make_background(hero)
     draw_badge(bg)
     draw_text_block(bg, system.get("name", system["_id"]),
-                    system.get("publisher", ""))
+                    system.get("publisher", ""), lang)
     return bg
 
 
@@ -252,15 +272,16 @@ def save_jpeg(img: Image.Image, out: Path):
     print(f"   wrote {out.relative_to(ROOT)} ({out.stat().st_size // 1024} KB)")
 
 
-def main(only: list[str] | None = None):
-    OUT_DIR.mkdir(exist_ok=True)
+def main(lang: str, only: list[str] | None = None):
+    out_dir = OUT_DIR_RU if lang == "ru" else OUT_DIR_EN
+    out_dir.mkdir(parents=True, exist_ok=True)
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
     ok, fail = 0, 0
     if not only or "home" in only:
-        print("-> home")
+        print(f"-> home ({lang})")
         try:
-            save_jpeg(make_homepage_og(), OUT_DIR / "home.jpg")
+            save_jpeg(make_homepage_og(lang), out_dir / "home.jpg")
             ok += 1
         except Exception as e:
             print(f"   FAILED: {e}")
@@ -277,9 +298,9 @@ def main(only: list[str] | None = None):
         sid = sys_data["_id"]
         if only and sid not in only:
             continue
-        print(f"-> {sid}")
+        print(f"-> {sid} ({lang})")
         try:
-            save_jpeg(make_og(sys_data), OUT_DIR / f"{sid}.jpg")
+            save_jpeg(make_og(sys_data, lang), out_dir / f"{sid}.jpg")
             ok += 1
         except Exception as e:
             print(f"   FAILED: {e}")
@@ -288,5 +309,19 @@ def main(only: list[str] | None = None):
 
 
 if __name__ == "__main__":
-    only = sys.argv[1:] if len(sys.argv) > 1 else None
-    main(only)
+    lang = "en"
+    args = []
+    for a in sys.argv[1:]:
+        if a.startswith("--lang="):
+            lang = a.split("=", 1)[1].strip().lower()
+            if lang not in COPY:
+                print(f"Unknown lang: {lang}. Use en or ru.")
+                sys.exit(2)
+        elif a in ("--lang", "-l"):
+            # Not supported form-split, stay strict.
+            print("Use --lang=<en|ru>, not split form.")
+            sys.exit(2)
+        else:
+            args.append(a)
+    only = args if args else None
+    main(lang, only)
