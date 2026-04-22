@@ -98,91 +98,135 @@ def vertical_gradient(w: int, h: int, top_alpha: int, bottom_alpha: int) -> Imag
 
 
 def make_background(hero: Image.Image | None) -> Image.Image:
+    """Returns RGBA background ready for overlays."""
     if hero is None:
-        bg = Image.new("RGB", (W, H), BG_DARK)
+        bg = Image.new("RGBA", (W, H), BG_DARK + (255,))
         for y in range(H):
             v = int(8 + 18 * (y / H))
-            ImageDraw.Draw(bg).line([(0, y), (W, y)], fill=(v, v, v + 4))
+            ImageDraw.Draw(bg).line([(0, y), (W, y)], fill=(v, v, v + 4, 255))
         return bg
-    bg = fit_cover(hero, W, H).filter(ImageFilter.GaussianBlur(radius=2))
-    bg = bg.convert("RGBA")
-    grad = vertical_gradient(W, H, top_alpha=70, bottom_alpha=220)
-    bg.alpha_composite(grad)
-    side = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    bg = fit_cover(hero, W, H).filter(ImageFilter.GaussianBlur(radius=2)).convert("RGBA")
+    bg.alpha_composite(vertical_gradient(W, H, top_alpha=70, bottom_alpha=220))
+    fade_w = int(W * 0.55)
+    side = Image.new("RGBA", (fade_w, H), (0, 0, 0, 0))
     sd = ImageDraw.Draw(side)
-    for x in range(int(W * 0.55)):
-        a = int(120 * (1 - x / (W * 0.55)))
-        sd.line([(x, 0), (x, H)], fill=(0, 0, 0, a))
+    for x in range(fade_w):
+        sd.line([(x, 0), (x, H)], fill=(0, 0, 0, int(120 * (1 - x / fade_w))))
     bg.alpha_composite(side)
-    return bg.convert("RGB")
+    return bg
 
 
 def load_font(path: Path, size: int) -> ImageFont.FreeTypeFont:
     return ImageFont.truetype(str(path), size)
 
 
-def fit_text(draw, text: str, font_path: Path, max_size: int, min_size: int,
-             max_width: int) -> tuple[ImageFont.FreeTypeFont, int]:
-    size = max_size
-    while size > min_size:
+def fit_font(font_path: Path, text: str, max_size: int, min_size: int,
+             max_width: int) -> ImageFont.FreeTypeFont:
+    for size in range(max_size, min_size, -4):
         f = load_font(font_path, size)
-        bbox = draw.textbbox((0, 0), text, font=f)
-        if bbox[2] - bbox[0] <= max_width:
-            return f, size
-        size -= 4
-    return load_font(font_path, min_size), min_size
+        if f.getlength(text) <= max_width:
+            return f
+    return load_font(font_path, min_size)
+
+
+def text_h(draw: ImageDraw.ImageDraw, text: str,
+           font: ImageFont.FreeTypeFont) -> int:
+    bbox = draw.textbbox((0, 0), text, font=font)
+    return bbox[3] - bbox[1]
+
+
+def draw_top(draw: ImageDraw.ImageDraw, x: int, top_y: int, text: str,
+             font: ImageFont.FreeTypeFont, fill: tuple, **kw):
+    """Draw text aligned so its rendered top edge sits at top_y."""
+    bbox = draw.textbbox((0, 0), text, font=font)
+    draw.text((x, top_y - bbox[1]), text, font=font, fill=fill, **kw)
+
+
+def radial_glow(w: int, h: int, color: tuple, cx: int, cy: int,
+                max_r: int, max_alpha: int) -> Image.Image:
+    """RGBA layer with a radial alpha falloff from (cx, cy)."""
+    layer = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    d = ImageDraw.Draw(layer)
+    for r in range(max_r, 0, -8):
+        a = int(max_alpha * (1 - r / max_r) ** 1.6)
+        d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=color + (a,))
+    return layer
 
 
 def draw_badge(img: Image.Image):
-    draw = ImageDraw.Draw(img)
-    f = load_font(FONTS_DIR / "Unbounded-Bold.ttf", 18)
+    """img is RGBA."""
     text = "SESSION ZERO"
-    bbox = draw.textbbox((0, 0), text, font=f, spacing=4)
-    tw = bbox[2] - bbox[0]
-    th = bbox[3] - bbox[1]
-    pad_h, pad_v = 18, 10
-    box_w = tw + pad_h * 2
-    box_h = th + pad_v * 2 + 4
-    x0 = W - BADGE_PAD - box_w
-    y0 = BADGE_PAD
-    overlay = Image.new("RGBA", img.size, (0, 0, 0, 0))
-    od = ImageDraw.Draw(overlay)
-    od.rounded_rectangle((x0, y0, x0 + box_w, y0 + box_h), radius=6,
-                         fill=(56, 189, 248, 38),
-                         outline=(56, 189, 248, 200), width=2)
-    img.paste(Image.alpha_composite(img.convert("RGBA"), overlay).convert("RGB"))
-    draw = ImageDraw.Draw(img)
-    draw.text((x0 + pad_h, y0 + pad_v - 2), text, font=f, fill=ACCENT, spacing=4)
+    f = load_font(FONTS_DIR / "Unbounded-Bold.ttf", 18)
+    pad_h, pad_v = 18, 12
+    bbox = ImageDraw.Draw(img).textbbox((0, 0), text, font=f)
+    box_w = (bbox[2] - bbox[0]) + pad_h * 2
+    box_h = (bbox[3] - bbox[1]) + pad_v * 2
+
+    badge = Image.new("RGBA", (box_w, box_h), (0, 0, 0, 0))
+    bd = ImageDraw.Draw(badge)
+    bd.rounded_rectangle((0, 0, box_w - 1, box_h - 1), radius=6,
+                         fill=(0, 0, 0, 175),
+                         outline=ACCENT + (220,), width=2)
+    draw_top(bd, pad_h, pad_v, text, f, ACCENT)
+    img.alpha_composite(badge, (W - BADGE_PAD - box_w, BADGE_PAD))
 
 
 def draw_text_block(img: Image.Image, name: str, publisher: str):
+    """img is RGBA."""
     draw = ImageDraw.Draw(img)
     max_w = W - PAD_X * 2
 
-    pub_font = load_font(FONTS_DIR / "Unbounded-Bold.ttf", 20)
     pub_text = (publisher or "").upper()
-    pub_bbox = draw.textbbox((0, 0), pub_text, font=pub_font)
-    pub_h = pub_bbox[3] - pub_bbox[1]
+    sub_text = "Group voting tool · sessionzero.games"
+    pub_font = load_font(FONTS_DIR / "Unbounded-Bold.ttf", 20)
+    sub_font = load_font(FONTS_DIR / "Unbounded-Bold.ttf", 17)
+    name_font = fit_font(FONTS_DIR / "Unbounded-Black.ttf", name,
+                         max_size=104, min_size=56, max_width=max_w)
 
-    name_font, name_size = fit_text(draw, name, FONTS_DIR / "Unbounded-Black.ttf",
-                                    max_size=104, min_size=56, max_width=max_w)
-    name_bbox = draw.textbbox((0, 0), name, font=name_font)
-    name_h = name_bbox[3] - name_bbox[1]
+    sub_y = H - PAD_BOTTOM - text_h(draw, sub_text, sub_font)
+    name_y = sub_y - text_h(draw, name, name_font) - 16
+    pub_y = name_y - text_h(draw, pub_text, pub_font) - 18
+    bar_y = pub_y - 18
 
-    bar_y_offset = 18
-    name_y = H - PAD_BOTTOM - name_h
-    pub_y = name_y - pub_h - bar_y_offset
+    draw.rectangle((PAD_X, bar_y, PAD_X + 56, bar_y + 4), fill=ACCENT)
+    draw_top(draw, PAD_X, pub_y, pub_text, pub_font, DIM, spacing=2)
+    draw_top(draw, PAD_X, name_y, name, name_font, WHITE)
+    draw_top(draw, PAD_X, sub_y, sub_text, sub_font, ACCENT, spacing=1)
 
-    bar_w = 56
-    bar_h = 4
-    bar_x = PAD_X
-    bar_y = pub_y - bar_h - 14
-    draw.rectangle((bar_x, bar_y, bar_x + bar_w, bar_y + bar_h), fill=ACCENT)
 
-    draw.text((PAD_X, pub_y - pub_bbox[1]), pub_text, font=pub_font,
-              fill=DIM, spacing=2)
-    draw.text((PAD_X, name_y - name_bbox[1]), name, font=name_font,
-              fill=WHITE)
+def make_homepage_og() -> Image.Image:
+    """Branded homepage OG with no hero — text on dark with accent glow."""
+    bg = Image.new("RGBA", (W, H), BG_DARK + (255,))
+    bg.alpha_composite(radial_glow(W, H, ACCENT, cx=int(W * 0.78),
+                                   cy=int(H * 0.32), max_r=720, max_alpha=34))
+    bg.alpha_composite(vertical_gradient(W, H, top_alpha=20, bottom_alpha=120))
+
+    pretitle = "TTRPG GROUP VOTING TOOL"
+    name = "SESSION ZERO"
+    tagline = "Pick what to play with your group."
+    url = "sessionzero.games"
+
+    max_w = W - PAD_X * 2
+    draw = ImageDraw.Draw(bg)
+    pretitle_font = load_font(FONTS_DIR / "Unbounded-Bold.ttf", 22)
+    name_font = fit_font(FONTS_DIR / "Unbounded-Black.ttf", name,
+                         max_size=120, min_size=64, max_width=max_w)
+    tag_font = load_font(FONTS_DIR / "Unbounded-Bold.ttf", 26)
+    url_font = load_font(FONTS_DIR / "Unbounded-Bold.ttf", 18)
+
+    tag_y = H - PAD_BOTTOM - text_h(draw, tagline, tag_font)
+    name_y = tag_y - text_h(draw, name, name_font) - 22
+    pt_y = name_y - text_h(draw, pretitle, pretitle_font) - 18
+    bar_y = pt_y - 18
+
+    draw.rectangle((PAD_X, bar_y, PAD_X + 56, bar_y + 4), fill=ACCENT)
+    draw_top(draw, PAD_X, pt_y, pretitle, pretitle_font, ACCENT, spacing=2)
+    draw_top(draw, PAD_X, name_y, name, name_font, WHITE)
+    draw_top(draw, PAD_X, tag_y, tagline, tag_font, DIM)
+
+    url_x = W - BADGE_PAD - int(url_font.getlength(url))
+    draw_top(draw, url_x, BADGE_PAD, url, url_font, ACCENT)
+    return bg
 
 
 def make_og(system: dict) -> Image.Image:
@@ -203,11 +247,29 @@ def make_og(system: dict) -> Image.Image:
     return bg
 
 
+def save_jpeg(img: Image.Image, out: Path):
+    img.convert("RGB").save(out, "JPEG", quality=85, optimize=True, progressive=True)
+    print(f"   wrote {out.relative_to(ROOT)} ({out.stat().st_size // 1024} KB)")
+
+
 def main(only: list[str] | None = None):
     OUT_DIR.mkdir(exist_ok=True)
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
-    files = sorted(p for p in SYSTEMS_DIR.glob("*.js") if not p.name.startswith("_"))
+
     ok, fail = 0, 0
+    if not only or "home" in only:
+        print("-> home")
+        try:
+            save_jpeg(make_homepage_og(), OUT_DIR / "home.jpg")
+            ok += 1
+        except Exception as e:
+            print(f"   FAILED: {e}")
+            fail += 1
+        if only and set(only) <= {"home"}:
+            print(f"\nDone: {ok} ok, {fail} failed")
+            return
+
+    files = sorted(p for p in SYSTEMS_DIR.glob("*.js") if not p.name.startswith("_"))
     for path in files:
         sys_data = parse_system(path)
         if not sys_data:
@@ -217,15 +279,10 @@ def main(only: list[str] | None = None):
             continue
         print(f"-> {sid}")
         try:
-            img = make_og(sys_data)
-            out = OUT_DIR / f"{sid}.jpg"
-            img.save(out, "JPEG", quality=85, optimize=True, progressive=True)
-            print(f"   wrote {out.relative_to(ROOT)} ({out.stat().st_size // 1024} KB)")
+            save_jpeg(make_og(sys_data), OUT_DIR / f"{sid}.jpg")
             ok += 1
         except Exception as e:
-            import traceback
             print(f"   FAILED: {e}")
-            traceback.print_exc()
             fail += 1
     print(f"\nDone: {ok} ok, {fail} failed")
 

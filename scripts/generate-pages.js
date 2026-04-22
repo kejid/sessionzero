@@ -24,7 +24,8 @@ const ABOUT_RU = path.join(OUT_RU, 'about.html');
 
 const SITE = 'https://sessionzero.games';
 const TODAY = '2026-04-22';
-const FALLBACK_OG = SITE + '/og-image.png';
+const HOMEPAGE_OG = SITE + '/og/home.jpg';
+const HOMEPAGE_OG_ALT = 'Session Zero — TTRPG group voting tool';
 
 // ---------- 1. Load systems via vm sandbox ----------
 const SYSTEMS = {};
@@ -435,11 +436,16 @@ function renderSystemPage(id, sys, lang) {
 <meta property="og:title" content="${escapeHtml(title)}">
 <meta property="og:description" content="${escapeHtml(metaDesc)}">
 <meta property="og:image" content="${escapeHtml(ogImage)}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="${escapeHtml(name)} — TTRPG on Session Zero">
 <meta property="og:locale" content="${lang === 'ru' ? 'ru_RU' : 'en_US'}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${escapeHtml(title)}">
 <meta name="twitter:description" content="${escapeHtml(metaDesc)}">
 <meta name="twitter:image" content="${escapeHtml(ogImage)}">
+<meta name="twitter:image:alt" content="${escapeHtml(name)} — TTRPG on Session Zero">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -596,12 +602,17 @@ function renderAbout(lang) {
 <meta property="og:url" content="${escapeHtml(canonical)}">
 <meta property="og:title" content="${escapeHtml(title)}">
 <meta property="og:description" content="${escapeHtml(desc)}">
-<meta property="og:image" content="${escapeHtml(FALLBACK_OG)}">
+<meta property="og:image" content="${escapeHtml(HOMEPAGE_OG)}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="${escapeHtml(HOMEPAGE_OG_ALT)}">
 <meta property="og:locale" content="${lang === 'ru' ? 'ru_RU' : 'en_US'}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${escapeHtml(title)}">
 <meta name="twitter:description" content="${escapeHtml(desc)}">
-<meta name="twitter:image" content="${escapeHtml(FALLBACK_OG)}">
+<meta name="twitter:image" content="${escapeHtml(HOMEPAGE_OG)}">
+<meta name="twitter:image:alt" content="${escapeHtml(HOMEPAGE_OG_ALT)}">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
