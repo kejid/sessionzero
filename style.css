@@ -2115,3 +2115,19 @@ a.nav-item.nav-system-link.active { color: var(--accent); }
     .similar-systems-grid { grid-template-columns: 1fr; }
 }
 
+/* Author credit line — E-E-A-T author signal on static system pages */
+.author-credit {
+    color: var(--dim);
+    font-size: 13px;
+    font-style: italic;
+    text-align: left;
+    margin: 1rem 0 0;
+}
+.author-credit a {
+    color: var(--accent);
+    text-decoration: none;
+}
+.author-credit a:hover {
+    text-decoration: underline;
+}
+

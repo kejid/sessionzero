@@ -178,6 +178,7 @@ const STR = {
     about_title: 'About — Session Zero',
     about_meta_desc: 'Can\'t agree on what TTRPG to play next? Session Zero is a free tool that lets your group vote together and see a shortlist. 44 systems, no signup, bilingual.',
     article_genre: 'Tabletop role-playing game',
+    author_credit: 'Written and curated by <a href="https://github.com/kejid" target="_blank" rel="noopener">Kejid</a> — TTRPG player &amp; GM',
   },
   ru: {
     section_system: 'Что это за система',
@@ -205,6 +206,7 @@ const STR = {
     about_title: 'О проекте — Session Zero',
     about_meta_desc: 'Не можете договориться, во что играть следующей кампанией? Session Zero — бесплатный инструмент для группового голосования с шортлистом. 44 системы, без регистрации, билингв.',
     article_genre: 'Настольная ролевая игра',
+    author_credit: 'Написано и курируется <a href="https://github.com/kejid" target="_blank" rel="noopener">Kejid</a> — игрок и ГМ в TTRPG',
   },
 };
 
@@ -297,7 +299,9 @@ function renderSystemPage(id, sys, lang) {
   const enUrl = `${SITE}/system/${id}.html`;
   const ruUrl = `${SITE}/ru/system/${id}.html`;
 
-  const ogImage = `${SITE}/og/${id}.jpg`;
+  const ogImage = lang === 'ru'
+    ? `${SITE}/og/ru/${id}.jpg`
+    : `${SITE}/og/${id}.jpg`;
   const metaDescSource = description || tagline || name;
   const metaDesc = truncate(metaDescSource, 155);
 
@@ -395,6 +399,11 @@ function renderSystemPage(id, sys, lang) {
     'publisher': publisher ? { '@type': 'Organization', 'name': publisher } : undefined,
     'url': canonical,
     'image': ogImage,
+    'author': {
+      '@type': 'Person',
+      'name': 'Kejid',
+      'url': 'https://github.com/kejid',
+    },
   };
   // Strip undefined fields (JSON.stringify skips them anyway, but let's be tidy)
   Object.keys(jsonLdArticle).forEach(k => jsonLdArticle[k] === undefined && delete jsonLdArticle[k]);
@@ -490,6 +499,7 @@ function renderSystemPage(id, sys, lang) {
     <div class="reddit-quotes">${quotesHTML}</div>` : ''}
     ${galleryHTML}
     ${resourcesHTML}
+    <p class="author-credit">${S.author_credit}</p>
     ${similarHTML}
     <div class="vote-cta">
       <a href="/#${escapeHtml(id)}" class="vote-cta-btn">${escBody(S.vote_cta(name))}</a>
@@ -516,6 +526,7 @@ function renderAbout(lang) {
   const ruUrl = `${SITE}/ru/about.html`;
   const title = S.about_title;
   const desc = S.about_meta_desc;
+  const ogImage = lang === 'ru' ? `${SITE}/og/ru/home.jpg` : HOMEPAGE_OG;
 
   const bodyEn = `
     <h1>About Session Zero</h1>
@@ -605,7 +616,7 @@ function renderAbout(lang) {
 <meta property="og:url" content="${escapeHtml(canonical)}">
 <meta property="og:title" content="${escapeHtml(title)}">
 <meta property="og:description" content="${escapeHtml(desc)}">
-<meta property="og:image" content="${escapeHtml(HOMEPAGE_OG)}">
+<meta property="og:image" content="${escapeHtml(ogImage)}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:type" content="image/jpeg">
@@ -614,7 +625,7 @@ function renderAbout(lang) {
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${escapeHtml(title)}">
 <meta name="twitter:description" content="${escapeHtml(desc)}">
-<meta name="twitter:image" content="${escapeHtml(HOMEPAGE_OG)}">
+<meta name="twitter:image" content="${escapeHtml(ogImage)}">
 <meta name="twitter:image:alt" content="${escapeHtml(HOMEPAGE_OG_ALT)}">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -647,25 +658,44 @@ function renderAbout(lang) {
 }
 
 // ---------- 6. Sitemap ----------
+function mtimeIso(filePath) {
+  try {
+    return fs.statSync(filePath).mtime.toISOString().slice(0, 10);
+  } catch (e) {
+    return TODAY;
+  }
+}
+
 function renderSitemap() {
   const urls = [];
-  urls.push({ loc: `${SITE}/`, priority: '1.0', changefreq: 'weekly', alts: null });
+  const homeMtime = mtimeIso(path.join(ROOT, 'index.html'));
+  const aboutMtime = mtimeIso(path.join(ROOT, 'scripts', 'generate-pages.js'));
+
+  urls.push({
+    loc: `${SITE}/`, priority: '1.0', changefreq: 'weekly',
+    alts: null, lastmod: homeMtime,
+  });
   urls.push({
     loc: `${SITE}/about.html`, priority: '0.6', changefreq: 'monthly',
     alts: { en: `${SITE}/about.html`, ru: `${SITE}/ru/about.html` },
+    lastmod: aboutMtime,
   });
   urls.push({
     loc: `${SITE}/ru/about.html`, priority: '0.6', changefreq: 'monthly',
     alts: { en: `${SITE}/about.html`, ru: `${SITE}/ru/about.html` },
+    lastmod: aboutMtime,
   });
   for (const id of ids) {
+    const sysMtime = mtimeIso(path.join(DATA_DIR, `${id}.js`));
     urls.push({
       loc: `${SITE}/system/${id}.html`, priority: '0.8', changefreq: 'monthly',
       alts: { en: `${SITE}/system/${id}.html`, ru: `${SITE}/ru/system/${id}.html` },
+      lastmod: sysMtime,
     });
     urls.push({
       loc: `${SITE}/ru/system/${id}.html`, priority: '0.8', changefreq: 'monthly',
       alts: { en: `${SITE}/system/${id}.html`, ru: `${SITE}/ru/system/${id}.html` },
+      lastmod: sysMtime,
     });
   }
   // Home gets the same hreflang set as before (en/ru both point to root)
@@ -677,7 +707,7 @@ function renderSitemap() {
   for (const u of urls) {
     out.push('  <url>');
     out.push(`    <loc>${u.loc}</loc>`);
-    out.push(`    <lastmod>${TODAY}</lastmod>`);
+    out.push(`    <lastmod>${u.lastmod || TODAY}</lastmod>`);
     out.push(`    <changefreq>${u.changefreq}</changefreq>`);
     out.push(`    <priority>${u.priority}</priority>`);
     if (u.alts) {
