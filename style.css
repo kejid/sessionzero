@@ -2074,3 +2074,44 @@ a.nav-item.nav-system-link.active { color: var(--accent); }
     body.static-page .vote-cta { padding: 20px; }
 }
 
+/* ---------- Similar systems (static system pages) ---------- */
+.similar-systems-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+.similar-system-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.similar-system-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+.similar-system-card img {
+    width: 100%;
+    aspect-ratio: 16 / 8;
+    object-fit: cover;
+    display: block;
+    background: var(--bg-subtle);
+}
+.similar-system-name {
+    display: block;
+    text-align: center;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 15px;
+    padding: 12px 10px;
+}
+@media (max-width: 600px) {
+    .similar-systems-grid { grid-template-columns: 1fr; }
+}
+
