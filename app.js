@@ -394,9 +394,18 @@ function skipSetup() {
 }
 
 function enableVoting() {
+    // Open setup overlay in-place so the user can (re)configure players.
+    // We don't reload: the overlay HTML is now hidden by default, so a reload
+    // would put the visitor back on the catalog instead of the setup screen.
     localStorage.removeItem('ttrpg-browse');
     document.body.classList.remove('browse-mode');
-    location.reload();
+    const overlay = document.getElementById('setup-overlay');
+    if (overlay) {
+        updateSetupFields();
+        if (typeof applyLang === 'function') applyLang();
+        overlay.classList.remove('hidden');
+        refreshIcons();
+    }
 }
 
 let currentView = localStorage.getItem('ttrpg-view') || 'cards';
@@ -1949,7 +1958,10 @@ if (PLAYERS) {
     document.body.classList.add('browse-mode');
     initApp();
 } else {
-    updateSetupFields();
-    applyLang();
+    // First-time visitor: overlay stays hidden (SEO: no intrusive interstitial).
+    // Land directly on the catalog in browse mode; overlay opens via the
+    // sidebar "Настроить игроков и голосование" button (enableVoting()).
+    document.body.classList.add('browse-mode');
+    initApp();
 }
 refreshIcons();

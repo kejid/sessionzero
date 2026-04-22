@@ -111,6 +111,44 @@ function imgProxy(url, w, h, fit) {
 const heroFull = url => imgProxy(url, 1200, 600, 'cover');
 const galleryThumb = url => imgProxy(url, 300, 300, 'cover');
 
+// Pick up to `count` systems similar to `id`, using groups.family first,
+// falling back to groups.genre, then groups.default. Excludes the source
+// system. Order within a bucket follows the `order` field on the group,
+// then alphabetical by id for stability.
+function pickSimilar(id, allSystems, count = 3) {
+  const src = allSystems[id];
+  if (!src || !src.groups) return [];
+
+  const pickBy = (groupKey) => {
+    const g = src.groups[groupKey];
+    if (!g || !g.key) return [];
+    const matches = [];
+    for (const otherId of Object.keys(allSystems)) {
+      if (otherId === id) continue;
+      const other = allSystems[otherId];
+      const og = other.groups && other.groups[groupKey];
+      if (og && og.key === g.key) {
+        matches.push({ id: otherId, order: Number(og.order) || 999 });
+      }
+    }
+    matches.sort((a, b) => a.order - b.order || a.id.localeCompare(b.id));
+    return matches.map(m => m.id);
+  };
+
+  const out = [];
+  const seen = new Set();
+  for (const key of ['family', 'genre', 'default']) {
+    if (out.length >= count) break;
+    for (const candidateId of pickBy(key)) {
+      if (out.length >= count) break;
+      if (seen.has(candidateId)) continue;
+      seen.add(candidateId);
+      out.push(candidateId);
+    }
+  }
+  return out.slice(0, count);
+}
+
 // ---------- 3. Localized UI strings ----------
 const STR = {
   en: {
@@ -122,6 +160,7 @@ const STR = {
     section_reviews: 'What people say',
     section_gallery: 'Art & materials',
     section_resources: 'Free resources',
+    section_similar: 'Similar systems',
     qs_dice: 'Dice',
     qs_players: 'Players',
     qs_prep: 'Prep',
@@ -148,6 +187,7 @@ const STR = {
     section_reviews: 'Что говорят на Reddit',
     section_gallery: 'Арт и материалы',
     section_resources: 'Бесплатные материалы',
+    section_similar: 'Похожие системы',
     qs_dice: 'Кубики',
     qs_players: 'Игроки',
     qs_prep: 'Преп',
@@ -302,6 +342,26 @@ function renderSystemPage(id, sys, lang) {
         </div>
     </div>` : '';
 
+  // Similar systems block — 3 nearby systems by family → genre → default.
+  const similarIds = pickSimilar(id, SYSTEMS, 3);
+  const similarHTML = similarIds.length ? `
+    <div class="section-title">${escBody(S.section_similar)}</div>
+    <div class="similar-systems-grid">
+        ${similarIds.map(sid => {
+          const ssys = SYSTEMS[sid];
+          const sname = ssys.name || sid;
+          const sHref = lang === 'en'
+            ? `/system/${sid}.html`
+            : `/ru/system/${sid}.html`;
+          const sOg = `${SITE}/og/${sid}.jpg`;
+          const sAlt = `${sname} hero art`;
+          return `<a href="${escapeHtml(sHref)}" class="similar-system-card">
+            <img src="${escapeHtml(sOg)}" alt="${escapeHtml(sAlt)}" loading="lazy" decoding="async">
+            <span class="similar-system-name">${escBody(sname)}</span>
+          </a>`;
+        }).join('')}
+    </div>` : '';
+
   const resourcesHTML = resources.length ? `
     <div class="section-title">${escBody(S.section_resources)}</div>
     <div class="resources-section" style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px;">
@@ -421,6 +481,7 @@ function renderSystemPage(id, sys, lang) {
     <div class="reddit-quotes">${quotesHTML}</div>` : ''}
     ${galleryHTML}
     ${resourcesHTML}
+    ${similarHTML}
     <div class="vote-cta">
       <a href="/#${escapeHtml(id)}" class="vote-cta-btn">${escBody(S.vote_cta(name))}</a>
       <p class="vote-cta-sub">${escBody(S.vote_cta_sub)}</p>
