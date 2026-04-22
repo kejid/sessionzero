@@ -6,7 +6,9 @@
     "bundle:pages": "node scripts/generate-pages.js",
     "minify:css": "npx --yes esbuild@latest style.css --minify --outfile=style.min.css --loader:.css=css --log-level=warning",
     "minify:js": "npx --yes esbuild@latest app.js --minify --outfile=app.min.js --log-level=warning",
-    "minify": "npm run minify:css && npm run minify:js",
+    "minify:i18n": "npx --yes esbuild@latest i18n.js --minify --charset=utf8 --outfile=i18n.min.js --log-level=warning",
+    "minify:bundle": "npx --yes esbuild@latest data/systems-bundle.js --minify --charset=utf8 --outfile=data/systems-bundle.min.js --log-level=warning",
+    "minify": "npm run minify:css && npm run minify:js && npm run minify:i18n && npm run minify:bundle",
     "bundle": "npm run bundle:js && npm run bundle:pages && npm run minify",
     "og:generate": "python scripts/generate-og.py"
   },
