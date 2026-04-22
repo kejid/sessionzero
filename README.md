@@ -1,10 +1,10 @@
-# TTRPG Showcase
+# Session Zero
 
-> Browse tabletop RPG systems, compare mechanics, vote with your group, pick what to play next.
+> Help your tabletop RPG group decide what to play next. Browse systems, vote together, get a shortlist.
 
-**[Live Demo](https://kejid.github.io/ttrpg-showcase/)** · Bilingual (EN/RU) · Zero dependencies · Forkable
+**[Live Demo](https://sessionzero.games/)** · Bilingual (EN/RU) · Zero dependencies · Forkable
 
-![TTRPG Showcase](https://raw.githubusercontent.com/kejid/ttrpg-showcase/master/screenshot.png)
+![Session Zero](https://raw.githubusercontent.com/kejid/sessionzero/master/screenshot.png)
 
 ## Features
 
