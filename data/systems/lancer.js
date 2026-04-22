@@ -64,6 +64,7 @@ registerSystem("lancer", {
     }
   ],
   "ru": {
+    "tagShort": "Тактический sci-fi мех-RPG",
     "tagline": "«В галактике много пилотов, но ты — один.»",
     "description": "LANCER — научно-фантастическая тактическая RPG о пилотах мехов, сражающихся за лучшее будущее на переднем крае постдефицитной утопии. Глубокая модульная тактика боёв на мехах + лёгкие нарративные правила.",
     "setting": "Через десять тысяч лет человечество выстроило Союз — посткапиталистическое межзвёздное правительство. Золотой век реален для Ядра; для фронтира — обещание, написанное выхлопом мехов и огнём рельсотронов.",
@@ -105,6 +106,7 @@ registerSystem("lancer", {
     ]
   },
   "en": {
+    "tagShort": "tactical sci-fi mech combat RPG",
     "tagline": "\"There are many pilots in the galaxy, but only one of you.\"",
     "description": "LANCER is a science fiction tactical RPG about mech pilots — lancers — who fight for a better future on the bleeding edge of a post-scarcity utopia still being born. It blends gritty, deeply customizable mech combat with rules-light narrative roleplay, giving equal weight to what you do in the cockpit and who you are outside it.",
     "setting": "Ten thousand years from now, humanity survived ecological collapse, spread to the stars, and built Union — a communal, post-capital interstellar government working toward a genuine utopia. The golden age is real for the Galactic Core; for the frontier worlds, it is still a promise written in mech exhaust and railgun fire. Megacorporate manufacturers supply the frames that lancers ride into a galaxy where the work of liberation is never quite finished.",

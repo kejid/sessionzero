@@ -58,6 +58,7 @@ registerSystem("l5r", {
     }
   ],
   "ru": {
+    "tagShort": "Самурайская RPG",
     "tagline": "«Ваш меч остр, но ваши слова — острее. Один неверный жест — и клан падёт.»",
     "description": "Самурайская драма с уникальной системой кастомных кубиков. Кольцевые кубики (d6) и кубики навыков (d12) используют специальные символы вместо цифр. Игрок выбирает подход к каждой проверке через одно из пяти Колец — Огонь, Вода, Земля, Воздух, Пустота — каждое даёт принципиально разный результат. Создание персонажа — через 20 вопросов о прошлом, клане и мотивации. Последний вопрос: «Как умрёт ваш персонаж?»",
     "setting": "Рокуган — фэнтези-Япония: самураи, кланы, честь, долг. Семь Великих Кланов борются за власть при Императорском дворе. Мир основан на японской, китайской и корейской мифологии.",
@@ -96,6 +97,7 @@ registerSystem("l5r", {
     ]
   },
   "en": {
+    "tagShort": "samurai RPG",
     "tagline": "\"Your blade is sharp, but your words are sharper. One wrong gesture — and your clan falls.\"",
     "description": "A samurai drama with a unique custom dice system. Ring dice (d6) and skill dice (d12) use special symbols instead of numbers. The player chooses their approach to each check through one of five Rings — Fire, Water, Earth, Air, Void — each yielding a fundamentally different result. Character creation through 20 questions about background, clan, and motivation. The last question: 'How will your character die?'",
     "setting": "Rokugan — fantasy Japan: samurai, clans, honor, duty. Seven Great Clans vie for power at the Imperial Court. The world draws from Japanese, Chinese, and Korean mythology.",

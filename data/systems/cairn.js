@@ -78,6 +78,7 @@ registerSystem("cairn", {
     }
   ],
   "ru": {
+    "tagShort": "Ультралёгкая фолк-хоррор OSR",
     "tagline": "«Фольклорный хоррор без классов, уровней и ерунды».",
     "description": "Бесплатная, открытая, ультралёгкая система для тёмного фольклорного фэнтези. Основана на Into the Odd и Knave. Правила — 20 страниц. Нет классов, нет уровней. Персонаж — это его снаряжение и решения. Cairn 2e добавила процедуры путешествий, инвентарь на слотах и расширенные правила wilderness exploration.",
     "setting": "Вдохновлён славянскими и кельтскими сказками. Лес здесь — живой, голодный и не прощает легкомыслия. Деревни жмутся к опушке. В чаще — духи, ведьмы и существа, которые были здесь задолго до людей. Атмосфера — братья Гримм до того, как сказки стали детскими.",
@@ -128,6 +129,7 @@ registerSystem("cairn", {
     ]
   },
   "en": {
+    "tagShort": "ultralight folk-horror OSR",
     "tagline": "\"Folk horror without classes, levels, or nonsense.\"",
     "description": "A free, open, ultra-light system for dark folkloric fantasy. Built on Into the Odd and Knave. Rules — 20 pages. No classes, no levels. A character is their gear and their choices. Cairn 2e added travel procedures, slot-based inventory, and expanded wilderness exploration rules.",
     "setting": "Inspired by Slavic and Celtic fairy tales. The forest here is alive, hungry, and unforgiving. Villages huddle at the tree line. Deep within — spirits, witches, and creatures that were here long before humans. The atmosphere — Brothers Grimm before the tales were sanitized for children.",

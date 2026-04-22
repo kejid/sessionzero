@@ -59,6 +59,7 @@ registerSystem("into-the-odd", {
     }
   ],
   "ru": {
+    "tagShort": "Минималистичная OSR-классика",
     "tagline": "«Выживите в индустриальном кошмаре, где золото — единственный закон».",
     "description": "Ультра-минималистичная OSR-игра (Old School Renaissance — стиль, вдохновлённый ранними редакциями D&D), прародитель целого жанра. Правила — 48 страниц. Создание персонажа — 2 минуты. Три характеристики (Сила, Ловкость, Воля), горстка HP и странный предмет в кармане. Всё. Вы готовы умереть в подземелье под Бастионом — гигантским индустриальным мегаполисом, полным тайн, коллекторов и живых лабиринтов.",
     "setting": "Бастион — сюрреалистичный город-государство, напоминающий викторианский Лондон, скрещённый с кошмарами. Под ним — Подземное Море, полное Арканумов (странных артефактов с непредсказуемыми свойствами). За городом — Железная Пустошь и Золотая Земля. Мир не объясняет себя. Он просто существует и ждёт, пока вы его исследуете.",
@@ -97,6 +98,7 @@ registerSystem("into-the-odd", {
     ]
   },
   "en": {
+    "tagShort": "minimalist industrial OSR",
     "tagline": "\"Survive an industrial nightmare where gold is the only law.\"",
     "description": "An ultra-minimalist OSR game (Old School Renaissance — a style inspired by early editions of D&D), the progenitor of an entire genre. Rules — 48 pages. Character creation — 2 minutes. Three stats (Strength, Dexterity, Willpower), a handful of HP, and a strange item in your pocket. That's it. You're ready to die in the tunnels beneath Bastion — a vast industrial megalopolis full of secrets, sewers, and living labyrinths.",
     "setting": "Bastion — a surreal city-state resembling Victorian London crossed with nightmares. Beneath it lies the Underground Sea, teeming with Arcana (strange artifacts with unpredictable properties). Beyond the city — the Iron Wasteland and the Golden Land. The world doesn't explain itself. It simply exists and waits for you to explore it.",

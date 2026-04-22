@@ -50,6 +50,7 @@ registerSystem("pirate-borg", {
   ],
   "quotes": [{"text": "One character got turned into a chicken, contracted a disease, and promptly exploded while his friend tried to carry him to safety. Funniest sequence in 20 years of TTRPGs.", "author": "Geek to Geek Media review"}, {"text": "The bestiary goes from mundane but deadly to things that should have stayed at the bottom of the ocean, and somehow it all holds together as a coherent, rum-soaked nightmare.", "author": "Rolling Boxcars, rollingboxcars.com"}],
   "ru": {
+    "tagShort": "Проклятые пираты арт-панк RPG",
     "tagline": "«Ваша сабля и пистоль не спасут вас от орд скелетов, Кракена и даже собственной команды.»",
     "description": "PIRATE BORG — прогнившая, лёгкая на правила и тяжёлая на искусство RPG, выросшая из art-punk движка Mörk Borg и пересаженная на проклятые Карибы, пропитанные ромом, порохом и нежитью. Восемь классов, правила морских сражений, 18 кораблей и 80+ монстров.",
     "setting": "Тёмные Карибы: колониальный архипелаг, сломленный в день солнцестояния, когда из моря поднялось то, что назвали Скверной. Плоты, набитые голодными зомби, дрейфуют по волнам; проклятые галеоны рыщут по торговым путям; в глубинах ворочается Кракен.",
@@ -88,6 +89,7 @@ registerSystem("pirate-borg", {
     ]
   },
   "en": {
+    "tagShort": "cursed pirate art-punk RPG",
     "tagline": "\"Your cutlass and flintlock won't save you from the hordes of skeletons, the Kraken, or even your own crew.\"",
     "description": "PIRATE BORG is a scurvy-ridden, rules-light, art-heavy RPG built on the doom art-punk engine of Mörk Borg — transplanted to a cursed Caribbean soaked in rum, gunpowder, and undead horror. Eight character classes, naval combat rules, 18 vessels, and 80+ monsters fit into 168 gorgeous, chaotic pages.",
     "setting": "The Dark Caribbean: a colonial-era archipelago that broke during a solstice when something called the Scourge rose from the sea. Rafts overflowing with flesh-hungry zombies drift on the waves; cursed galleons crewed by skeletons prowl the shipping lanes; the Kraken stirs in the deep. Port towns cling to survival behind cannon walls.",

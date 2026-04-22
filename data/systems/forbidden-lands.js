@@ -82,6 +82,7 @@ registerSystem("forbidden-lands", {
     }
   ],
   "ru": {
+    "tagShort": "Тёмное фэнтези гексплорейшн",
     "tagline": "«Земли, запечатанные Кровавым Туманом, наконец открыты».",
     "description": "Открытый гексплорейшн (исследование карты гекс за гексом, как в тумане войны) в тёмном фэнтези. 300 лет Кровавый Туман делал путешествия смертельными — люди жили в изолированных поселениях. Теперь туман рассеялся, и вы — первые, кто осмеливается исследовать забытые земли. Строите крепость, открываете карту, выживаете.",
     "setting": "Мрачный мир, напоминающий «Ведьмака» и «Тёмные души». Разрушенные замки, забытые демоны, клановые конфликты. Каждый гекс — тайна: заброшенная деревня, логово демона или руины цивилизации, погибшей во время Кровавого Тумана.",
@@ -135,6 +136,7 @@ registerSystem("forbidden-lands", {
     ]
   },
   "en": {
+    "tagShort": "dark-fantasy hexcrawl RPG",
     "tagline": "\"The lands sealed by the Blood Mist are finally open.\"",
     "description": "Open-world hexploration (exploring the map hex by hex, like fog of war) in dark fantasy. For 300 years the Blood Mist made travel deadly — people lived in isolated settlements. Now the mist has cleared, and you are the first to dare explore the forgotten lands. Build a stronghold, uncover the map, survive.",
     "setting": "A grim world evoking The Witcher and Dark Souls. Ruined castles, forgotten demons, clan conflicts. Every hex holds a secret: an abandoned village, a demon's lair, or ruins of a civilization that perished during the Blood Mist.",

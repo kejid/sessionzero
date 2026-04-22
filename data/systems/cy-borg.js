@@ -61,6 +61,7 @@ registerSystem("cy-borg", {
   ],
   "quotes": [{"text": "Whether you've got an unstoppable killer or a frail gearhead, you'll have a blast running them face first into the meat grinder of Cy. The city wants you dead, and that makes it irresistible.", "author": "Bloody Disgusting review"}, {"text": "Whereas I wouldn't run Mork Borg as anything but a one-off, Cy_Borg holds up to long-form play. The setting is thin enough that you fill it with your own neon-soaked paranoia.", "author": "TTRPG Factory, ttrpgfactory.com"}],
   "ru": {
+    "tagShort": "Нео-панк киберпанк RPG",
     "tagline": "«RPG о конце света, нано-заражённых киберпанках и ярости против безжалостного корпоративного ада.»",
     "description": "Духовный наследник MÖRK BORG в жанре киберпанка — та же злая арт-панковая энергетика, та же жестокая смертность, только вместо тёмного фэнтези — неоновый смог и корпоративный ад. CY_BORG берёт всё, что сделало Мёрк Борг культом, и пропускает через хромированную мясорубку. Ты скорее всего умрёшь. Городу всё равно. Реклама продолжает мигать.",
     "setting": "Мегаполис Cy, год 20X3. Инцидент уже произошёл, и с тех пор стало только хуже. Четырнадцать мегакорпораций владеют небом, землёй и всем, что между ними. Трущобы гниют в тени небоскрёбных лесов. Неоновые соборы рекламируют товары, которые персонажам не по карману. Бактерии из открытого космоса захватили человеческие нанороботы. Апокалипсис отслеживается через Ужасные Заголовки: семь новостей, каждая хуже предыдущей, и когда выйдет седьмая — город будет стёрт.",
@@ -108,6 +109,7 @@ registerSystem("cy-borg", {
     ]
   },
   "en": {
+    "tagShort": "neon doom-punk cyberpunk RPG",
     "tagline": "\"A nano-infested doomsday RPG about cybernetic misfits and punks raging against a relentless corporate hell.\"",
     "description": "The cyberpunk spiritual successor to MÖRK BORG — same furious art-punk DNA, same brutal lethality, now drowning in neon death smog. CY_BORG takes everything Mörk Borg perfected and smashes it through a chrome-plated, corpo-owned meat grinder. You will probably die. The city doesn't care. The ads keep playing regardless.",
     "setting": "Megacity Cy, year 20X3. The Incident happened and things have only gotten worse since. Fourteen megacorps own the sky, the ground, and everything between. Slums rot beneath scraper-forests of towers. Neon cathedrals advertise products your character can't afford. Bacteria from outer space have hijacked human nanorobotics and nobody has a fix. The apocalypse is tracked in Miserable Headlines — seven headlines, each worse than the last, and when the seventh drops, the city's data is purged. The world is always ending. It just hasn't finished yet.",

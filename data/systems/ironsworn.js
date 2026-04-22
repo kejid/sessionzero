@@ -81,6 +81,7 @@ registerSystem("ironsworn", {
     }
   ],
   "ru": {
+    "tagShort": "Бесплатное соло-фэнтези PbtA",
     "tagline": "«Один игрок. Один мир. Клятвы, которые нельзя нарушить.»",
     "description": "Железная Клятва — это THE соло-RPG тёмного фэнтези. Бесплатная, полная, без компромиссов. Играйте одни, вдвоём с ведущим или кооперативно без GM вообще. Вдохновлена Powered by the Apocalypse: ходы, не правила — нарратив на первом месте. Оракулы генерируют мир, угрозы и неожиданные повороты прямо за столом. Никакого препа. Только клятвы, ставки и железо.",
     "setting": "Железные Земли — мрачный, враждебный север. Не героическое фэнтези с драконами и трактирами — тут люди выживают на краю выжженного мира. Кланы, обиды, тёмные леса, забытые руины. Вдохновение: скандинавский миф, кельтская меланхолия и ощущение осаждённой крепости. Каждый квест — это не «спаси мир», это «выживи. Выполни клятву. Умри с достоинством.»",
@@ -134,6 +135,7 @@ registerSystem("ironsworn", {
     ]
   },
   "en": {
+    "tagShort": "free solo PbtA dark fantasy",
     "tagline": "\"One player. One world. Vows that cannot be broken.\"",
     "description": "Ironsworn is THE dark fantasy solo RPG. Free, complete, uncompromising. Play alone, co-op with a GM, or fully GM-less — the same rules support all three modes. Inspired by Powered by the Apocalypse: moves, not rules — narrative always first. Oracles generate the world, threats, and unexpected twists right at the table. Zero prep. Just vows, stakes, and iron.",
     "setting": "The Ironlands — a grim, hostile north. Not heroic fantasy with dragons and taverns — here people cling to survival at the edge of a scorched world. Clans, feuds, dark forests, forgotten ruins. Inspiration: Norse myth, Celtic melancholy, and the feeling of a besieged frontier. Every quest isn't 'save the world' — it's 'survive. Fulfill the vow. Die with honor.'",

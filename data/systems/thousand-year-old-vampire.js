@@ -63,6 +63,7 @@ registerSystem("thousand-year-old-vampire", {
     }
   ],
   "ru": {
+    "tagShort": "Соло-дневник вампира",
     "tagline": "«Одна тысяча лет одиночества, потерь и крови.»",
     "description": "Игра для одного человека, в которой вы ведёте дневник бессмертного вампира — от момента утраты смертности до неизбежного конца. Нет ведущего, нет другого игрока, только вы, кубики и страницы всё более угасающей памяти. Это не приключение. Это хроника забвения.\n\nИгра получила золотые Ennie Awards 2020 за лучшие правила и лучшее производство, а также была признана лучшей настольной игрой на IndieCade. Физическое издание — дайджест в твёрдой обложке с фольгой и лентами — само по себе произведение искусства.",
     "setting": "Нет фиксированного сеттинга — есть только время. Вы выбираете историческую эпоху для рождения вашего вампира: Древний Рим, средневековая Флоренция, колониальная Индия, Лондон эпохи пара. Потом столетия сдвигаются, люди вокруг умирают, цивилизации рушатся, а вы всё ещё здесь — но помните всё меньше и меньше.",
@@ -98,6 +99,7 @@ registerSystem("thousand-year-old-vampire", {
     ]
   },
   "en": {
+    "tagShort": "solo journaling RPG",
     "tagline": "\"A thousand years of loneliness, loss, and blood.\"",
     "description": "A solo roleplaying game in which you chronicle the centuries of a vampire's existence — from the moment mortality ends to inevitable destruction. No GM, no other players, only you, two dice, and the pages of a memory that keeps fading. This is not an adventure. It is a chronicle of forgetting.\n\nWinner of Gold ENNIE Awards 2020 for Best Rules and Best Production Values, and IndieCade Tabletop Design Award. The physical edition — a digest hardcover with foil, ribbons, and hand-aged design — is itself an artifact.",
     "setting": "There is no fixed setting — only time. You choose the historical era of your vampire's birth: ancient Rome, Renaissance Florence, colonial India, Victorian London. Then the centuries turn, the people around you die, civilizations rise and collapse, and you are still here — remembering less and less.",

@@ -57,6 +57,7 @@ registerSystem("last-tea-shop", {
   ],
   "quotes": [{"text": "On the second visitor, I fell into the world completely. A messenger who failed to deliver her final message. A beekeeper, untimely victim of a coup. I cried some happy tears near the end.", "author": "itch.io commenter on Last Tea Shop"}, {"text": "Combined with the soundtrack I had to tear up multiple times. It's gentle, but deeply reflective. One of my favorite games now.", "author": "itch.io commenter on Last Tea Shop"}],
   "ru": {
+    "tagShort": "Соло-журнал у границы миров",
     "tagline": "«Ты варишь чай. Они мертвы. У них остался последний час.»",
     "description": "Last Tea Shop — камерная соло-дневниковая игра о чайной лавке на границе между миром живых и миром мёртвых. К тебе приходят недавно умершие — солдат, маяковщик, странница — каждый за последней чашкой перед долгим путём. Ты слушаешь. Ты завариваешь чай. Ты записываешь их истории. Классическая версия — одна страница, бесплатно навсегда. Полная редакция — 16-страничный зин с расширенными таблицами, новыми посетителями и иллюстрациями Stoneshore.",
     "setting": "Пограничье — туманное место, где время тянется, как запах жасминового чая. Твоя лавка стоит там, где заканчиваются пути живых и начинается дорога в Земли Мёртвых. Сюда не приходят случайно. Каждый посетитель нашёл тебя, потому что ему или ей нужно поговорить. И когда придёт Завуалированная — последний гость — твоя история тоже подойдёт к концу.",
@@ -101,6 +102,7 @@ registerSystem("last-tea-shop", {
     ]
   },
   "en": {
+    "tagShort": "solo afterlife journal RPG",
     "tagline": "\"You brew tea. They are dead. They have one last hour.\"",
     "description": "Last Tea Shop is an intimate solo journaling game about a tea stall on the border between the living and the dead. The recently departed find their way to you — a soldier, a lighthouse keeper, a wanderer — each one seeking a last cup before the long journey. You listen. You brew. You write down what they say. The classic version is one page and free forever. The complete edition is a 16-page zine with expanded tables, new visitor types, and illustrations by Stoneshore that are quiet and haunting in exactly the right way.",
     "setting": "The borderlands are a misty place where time moves like steam from a clay pot. Your stall stands where the roads of the living end and the path into the Lands of the Dead begins. Nobody arrives by accident. Each visitor found you because they need to talk — about regret, love, an old promise, a light they forgot to leave on. And when the Veiled One finally comes, your own story draws to a close.",

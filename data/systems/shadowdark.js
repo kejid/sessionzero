@@ -71,6 +71,7 @@ registerSystem("shadowdark", {
     }
   ],
   "ru": {
+    "tagShort": "Современный OSR с факелами",
     "tagline": "«Олдскульный данжен-кроул (исследование подземелий: комната за комнатой, ловушки и сокровища) в современной обёртке».",
     "description": "Мост между OSR и современными RPG. Использует знакомые d20-механики (атрибуты, AC, спасброски), но с летальностью и ощущением опасности старой школы. Самый успешный Kickstarter RPG за последние годы. Если D&D кажется раздутой — Shadowdark это лекарство.",
     "setting": "Сеттинг-агностичная система. Любой фэнтези-мир подойдёт. Но дух игры — тёмные подземелья, где факел решает всё. Без света вы слепы, а в темноте живут вещи, которые видят прекрасно.",
@@ -118,6 +119,7 @@ registerSystem("shadowdark", {
     ]
   },
   "en": {
+    "tagShort": "modern OSR with real-time torches",
     "tagline": "\"Old-school dungeon crawling in a modern wrapper.\"",
     "description": "A bridge between OSR and modern RPGs. Uses familiar d20 mechanics (attributes, AC, saves) but with old-school lethality and sense of danger. The most successful RPG Kickstarter in recent years. If D&D feels bloated — Shadowdark is the cure.",
     "setting": "A setting-agnostic system. Any fantasy world will do. But the spirit of the game is dark dungeons where the torch decides everything. Without light you're blind, and in the darkness dwell things that see perfectly.",

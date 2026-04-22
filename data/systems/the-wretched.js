@@ -70,6 +70,7 @@ registerSystem("the-wretched", {
     }
   ],
   "ru": {
+    "tagShort": "Соло Дженга-хоррор в космосе",
     "tagline": "«Ты последний. Корабль умирает. Запись ведётся.»",
     "description": "Сольная RPG в жанре хоррор о выживании в открытом космосе, сыгранная с колодой карт, башней Дженга и микрофоном. Вы — единственный выживший экипаж межзвёздного спасательного корабля «The Wretched». Двигатели мертвы. Чужой выброшен в шлюз, но это не спасло вас. Каждый день вы вытягиваете карты, вытаскиваете блоки из башни и говорите в микрофон — пока не замолчите навсегда. Признана одной из лучших игр 2020 года по версии Tabletop Gaming Magazine.",
     "setting": "Ближний будущий космос. Корабль «The Wretched» дрейфует в межзвёздном пространстве после отказа двигателей. Нет связи. Нет помощи. Существо уничтожило экипаж по одному. Теперь оно мертво или притворяется мёртвым — а вы один, в тишине, среди систем жизнеобеспечения, которые медленно гаснут одна за другой. Вдохновение: «Чужой» Ридли Скотта, Джон Карпентер, Nine Inch Nails.",
@@ -117,6 +118,7 @@ registerSystem("the-wretched", {
     ]
   },
   "en": {
+    "tagShort": "solo space-horror Jenga RPG",
     "tagline": "\"You are the last one. The ship is dying. The log is running.\"",
     "description": "A solo horror RPG about survival in deep space, played with a deck of cards, a tumbling block tower, and a microphone. You are the sole surviving crew member of the intergalactic salvage ship The Wretched. Engines dead. The creature was vented out an airlock — but it didn't save you. Each day you draw cards, pull blocks from the tower, and speak into a microphone — until you don't. Named one of Tabletop Gaming Magazine's Best Games of 2020.",
     "setting": "The near-future void. The salvage ship The Wretched drifts between stars following catastrophic engine failure. No signal. No rescue. The creature slaughtered the crew one by one. Now it is dead — or pretending to be — and you are alone in the silence as the life support systems wink out, one by one. Inspired by Ridley Scott's Alien, John Carpenter, and the music of Nine Inch Nails.",

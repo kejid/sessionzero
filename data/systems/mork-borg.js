@@ -86,6 +86,7 @@ registerSystem("mork-borg", {
     }
   ],
   "ru": {
+    "tagShort": "Doom-metal арт-панк фэнтези",
     "tagline": "«Мир кончается. Книга должна сгореть».",
     "description": "Арт-панк RPG про последние дни умирающего мира. Правила умещаются на нескольких страницах, но книга — произведение искусства: кислотные цвета, безумная вёрстка, атмосфера блэк-метала. Каждая сессия может стать последней — буквально, потому что мир кончается по расписанию.",
     "setting": "Умирающий мир, которым правят два обезумевших Василиска. Пророчества предвещают конец. Каждое утро бросается кубик — и мир становится чуть ближе к гибели. Бесконечные болота, проклятые деревни, тёмные катакомбы и НЕТ надежды. Но есть добыча.",
@@ -145,6 +146,7 @@ registerSystem("mork-borg", {
     ]
   },
   "en": {
+    "tagShort": "doom-metal art-punk fantasy RPG",
     "tagline": "\"The world is ending. The book should burn.\"",
     "description": "An art-punk RPG about the final days of a dying world. The rules fit on a few pages, but the book is a work of art: acid colors, deranged layout, black metal atmosphere. Every session could be your last — literally, because the world ends on a schedule.",
     "setting": "A dying world ruled by two maddened Basilisks. Prophecies foretell the end. Every morning a die is rolled — and the world inches closer to oblivion. Endless swamps, cursed villages, dark catacombs, and NO hope. But there is loot.",

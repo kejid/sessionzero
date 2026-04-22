@@ -279,6 +279,7 @@ function renderSystemPage(id, sys, lang) {
   const S = STR[lang];
   const name = sys.name || id;
   const tagline = pickLang(sys, 'tagline', lang);
+  const tagShort = pickLang(sys, 'tagShort', lang, '');
   const description = pickLang(sys, 'description', lang);
   const setting = pickLang(sys, 'setting', lang);
   const vignette = pickLang(sys, 'vignette', lang, null);
@@ -300,7 +301,9 @@ function renderSystemPage(id, sys, lang) {
   const metaDescSource = description || tagline || name;
   const metaDesc = truncate(metaDescSource, 155);
 
-  const title = `${name} — Session Zero`;
+  const title = tagShort
+    ? `${name} — ${tagShort} | Session Zero`
+    : `${name} — Session Zero`;
 
   // Playstyle + setting tags
   const playTags = (sys.playstyleTags || []).map(tag => {

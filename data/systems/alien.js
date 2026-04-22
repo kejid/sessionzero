@@ -73,6 +73,7 @@ registerSystem("alien", {
     }
   ],
   "ru": {
+    "tagShort": "Sci-fi хоррор по «Чужому»",
     "tagline": "«В космосе никто не услышит ваш крик».",
     "description": "Официальная RPG по вселенной «Чужого». Year Zero Engine с уникальной механикой стресса: чем больше паникуете, тем больше бросаете кубиков. Больше кубиков = выше шанс успеха, НО и выше шанс панической атаки. Два режима: кампания (долгая игра в космосе) и кинематографичный (ваншот-ужастик (приключение на одну сессию), как в фильмах).",
     "setting": "2183 год. Корпорации колонизируют космос. Weyland-Yutani тянет щупальца к каждой обитаемой системе. За фасадом прогресса — рабочие-контрактники на забытых станциях, контрабандисты, колониальные морпехи и ксеноморфы, которые ждут в темноте. Лор охватывает все фильмы и расширяет вселенную.",
@@ -123,6 +124,7 @@ registerSystem("alien", {
     ]
   },
   "en": {
+    "tagShort": "Year Zero sci-fi horror RPG",
     "tagline": "\"In space no one can hear you scream.\"",
     "description": "The official RPG set in the Alien universe. Year Zero Engine with a unique stress mechanic: the more you panic, the more dice you roll. More dice = higher chance of success, BUT also higher chance of a panic attack. Two modes: campaign (long-form space game) and cinematic (one-shot horror, just like the movies).",
     "setting": "Year 2183. Corporations colonize space. Weyland-Yutani extends its tentacles to every inhabited system. Behind the facade of progress — contract workers on forgotten stations, smugglers, colonial marines, and xenomorphs waiting in the dark. The lore covers all the films and expands the universe.",

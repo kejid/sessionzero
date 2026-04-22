@@ -76,6 +76,7 @@ registerSystem("uvg", {
     }
   ],
   "ru": {
+    "tagShort": "Психоделический OSR",
     "tagline": "«Психоделический Шёлковый Путь через умирающие земли».",
     "description": "Не совсем система — скорее мегамодуль-сеттинг для любой OSR-игры. Линейный маршрут через психоделические пустоши — «поинткроул» (путешествие от точки к точке по маршруту). Каждая неделя пути — новая безумная локация. Работает с Cairn, Into the Odd, D&D 5e — адаптируется под любой движок.",
     "setting": "Вы ведёте торговый караван от Фиолетового Города через ультрафиолетовые степи к Чёрному Городу на краю мира. По пути: кошачьи люди на парусниках, живые горы, руины цивилизаций, которые играли с реальностью. Стиль — Мёбиус + «Жёлтая субмарина» + Dying Earth.",
@@ -129,6 +130,7 @@ registerSystem("uvg", {
     ]
   },
   "en": {
+    "tagShort": "psychedelic OSR",
     "tagline": "\"A psychedelic Silk Road through dying lands.\"",
     "description": "Not quite a system — more of a mega-module setting for any OSR game. A linear route through psychedelic wastelands — a 'pointcrawl' (traveling point to point along a route). Every week of travel brings a new wild location. Works with Cairn, Into the Odd, D&D 5e — adapts to any engine.",
     "setting": "You lead a trade caravan from the Violet City through ultraviolet steppes to the Black City at the edge of the world. Along the way: cat-people on sailboats, living mountains, ruins of civilizations that toyed with reality. Style — Moebius + Yellow Submarine + Dying Earth.",

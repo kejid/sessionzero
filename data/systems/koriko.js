@@ -57,6 +57,7 @@ registerSystem("koriko", {
   ],
   "quotes": [{"text": "I was playing. Not merely responding to prompts... Playing. Like, a game. With choice and strategy. That was the moment Koriko clicked for me.", "author": "Cannibal Halfling Gaming, Solitaire Storytelling series"}, {"text": "This singlehandedly got me into solo TTRPGs, and it remains one of my favorites of all time. Writing letters home from your witch just breaks you open in the best way.", "author": "itch.io commenter on Koriko"}],
   "ru": {
+    "tagShort": "Соло-журнал ведьмы",
     "tagline": "«Ты — молодая ведьма. Незнакомый город. Год, который изменит тебя навсегда.»",
     "description": "Koriko — соло-дневниковая игра о взрослении через магию и одиночество. Вдохновлённая «Ведьминой службой доставки» Хаяо Миядзаки, она предлагает провести целый год вместе со своей ведьмой: семь томов, каждый по 1–2 часа, каждый — новая глава её жизни в Корико. Колода таро формирует события и знакомства. Башня из 21 кубика d6 решает, что происходит, когда она рискует. И ведётся дневник — живой, личный, твой.",
     "setting": "Город Корико — шумный, тёплый, совершенно чужой. Твоя ведьма приехала сюда одна, без наставника, без карты. Булочные с привидениями, рынки, где продают зелья рядом с оливковым маслом, крыши с видом на море, вечеринки, на которые тебя позвали и которые тебя пугают. Год пройдёт — что останется?",
@@ -101,6 +102,7 @@ registerSystem("koriko", {
     ]
   },
   "en": {
+    "tagShort": "solo witch RPG",
     "tagline": "\"You are a young witch. An unfamiliar city. A year that will change you forever.\"",
     "description": "Koriko is a solo journaling game about coming of age through magic and solitude. Inspired by Kiki's Delivery Service — both Miyazaki's film and Eiko Kadono's novel — it asks you to spend a whole year alongside your witch: seven volumes, each one or two hours, each a new chapter of her life in the city of Koriko. A tarot deck shapes her encounters and crises. A tower of 21 d6 dice decides what happens when she dares to take a risk. And through it all, you keep a journal — alive, personal, and entirely your own.",
     "setting": "Koriko is a city that hums and buzzes and doesn't care that you just arrived. Your witch came alone — no mentor, no map, no plan. There are bakeries haunted by friendly ghosts, markets selling love potions next to olive oil, rooftops with sea views, parties you've been invited to and parties that terrify you. By the end of the year, what will still be standing?",

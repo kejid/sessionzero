@@ -64,6 +64,7 @@ registerSystem("draw-steel", {
     }
   ],
   "ru": {
+    "tagShort": "Тактическое героическое фэнтези",
     "tagline": "«Каждый удар — кинематографичен. Промахов не существует. Вопрос лишь — насколько вы круты.»",
     "description": "Героическое фэнтези нового типа. Не толкиновское, не днд-шное. Мир Ордена — место, где герои действительно меняют историю. Демоны, рыцари, политика и надежда. Тон: оптимистично-героический. Каждое действие ВСЕГДА что-то делает — кубики определяют СКОЛЬКО, а не ДА/НЕТ. Промахов не существует.",
     "setting": "Героическое фэнтези нового типа. Не толкиновское, не днд-шное. Мир Ордена — место, где герои действительно меняют историю. Демоны, рыцари, политика и надежда. Тон: оптимистично-героический.",
@@ -108,6 +109,7 @@ registerSystem("draw-steel", {
     ]
   },
   "en": {
+    "tagShort": "tactical heroic fantasy RPG",
     "tagline": "\"Every strike is cinematic. Misses don't exist. The only question is — how awesome are you.\"",
     "description": "Heroic fantasy of a new kind. Not Tolkien-esque, not D&D-esque. The world of the Order is a place where heroes truly change history. Demons, knights, politics, and hope. Tone: optimistically heroic. Every action ALWAYS does something — dice determine HOW MUCH, not YES/NO. There are no misses.",
     "setting": "A new kind of heroic fantasy. Not Tolkien, not D&D. The world of the Order is a place where heroes truly shape history. Demons, knights, politics, and hope. Tone: optimistically heroic.",

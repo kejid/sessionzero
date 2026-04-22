@@ -64,6 +64,7 @@ registerSystem("fist", {
     }
   ],
   "ru": {
+    "tagShort": "Паранормальные наёмники Хол.войны",
     "tagline": "«Вы — расходный наёмник. Задание невыполнимо. Вы всё равно соглашаетесь.»",
     "description": "FIST — компактная TTRPG о паранормальных наёмниках Холодной войны. Механика 2d6, нишa между OSR и нарративными инди-играми. 216 черт и 36 ролей = 23 000+ уникальных билдов.",
     "setting": "Примерно 1977 год. Сверхдержавы балансируют на грани, но настоящая война страннее — засекреченные базы со щупальцами, оккультные программы и враждебная структура Cyclops.",
@@ -105,6 +106,7 @@ registerSystem("fist", {
     ]
   },
   "en": {
+    "tagShort": "paranormal Cold War merc RPG",
     "tagline": "\"You are a disposable gun for hire. The mission is impossible. You take it anyway.\"",
     "description": "FIST (Freelance Infantry Strike Team) is a lean, punchy TTRPG about paranormal mercenaries navigating the shadowy underbelly of the Cold War. Built on a 2d6 spine descended from World of Dungeons, it lives in a rare sweet spot between OSR rulings-over-rules and narrative-forward indie design. Character creation takes ten minutes and spits out an astronaut werewolf, a cannibalistic weaponsmith, or a bullet-time wizard.",
     "setting": "It's 1977, more or less. The superpowers are locked in nuclear détente, but the real war is stranger — eldritch compounds, disastrous science experiments, occult weapons programs, and the rival paramilitary Cyclops, who have more resources and fewer scruples than FIST ever will. The world is built at the table through the Intelligence Matrix, a battery of d66 tables that produce missions, NPCs, locations, and rewards.",

@@ -81,6 +81,7 @@ registerSystem("wildsea", {
     }
   ],
   "ru": {
+    "tagShort": "Корабли по кронам RPG",
     "tagline": "«Мир утонул в деревьях. Вы плывёте по кронам на бензопиле-корабле».",
     "description": "Самый необычный сеттинг в индустрии. Цивилизация погибла под Зелёным Приливом — деревья выросли на километры, покрыв всё. «Океан» — это кроны деревьев. Корабли режут ветви пилами. Вы — команда одного такого корабля, исследующая дикоморье. Система на нарративных метках вместо числовых бонусов.",
     "setting": "Дикоморье — бесконечные кроны, полные чудес. Города на ветвях, базары в дуплах, руины старого мира под корнями. Расы: люди-грибы, люди-пауки, живые кактусы, построенные из обломков роботы. Визуально — Миядзаки встречает Мёбиуса.",
@@ -137,6 +138,7 @@ registerSystem("wildsea", {
     ]
   },
   "en": {
+    "tagShort": "weird treetop sailing RPG",
     "tagline": "\"The world drowned in trees. You sail the canopy on a chainsaw-ship.\"",
     "description": "The most unusual setting in the industry. Civilization perished under the Green Tide — trees grew for miles, covering everything. The 'ocean' is the treetop canopy. Ships cut through branches with saws. You are the crew of one such ship, exploring the Wildsea. The system uses narrative tags instead of numerical bonuses.",
     "setting": "The Wildsea — endless canopies full of wonders. Cities on branches, bazaars in hollows, ruins of the old world beneath the roots. Peoples: fungus-folk, spider-folk, living cacti, robots built from salvage. Visually — Miyazaki meets Moebius.",

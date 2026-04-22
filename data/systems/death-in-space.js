@@ -60,6 +60,7 @@ registerSystem("death-in-space", {
   ],
   "quotes": [{"text": "Your characters are scroungers on the edge. Then the Void starts pulling at the cracks in your mind, and suddenly survival is the least of your problems.", "author": "Gaming Trend review"}, {"text": "It feels like the universe has already left to beat traffic, and you're the ones left holding a wrench and a dwindling oxygen supply. Blue-collar apocalypse done right.", "author": "u/heat_death_salvager, r/osr"}],
   "ru": {
+    "tagShort": "Грязный sci-fi survival RPG",
     "tagline": "«Добро пожаловать в коллапсирующую вселенную. Ваш экипаж — единственная семья.»",
     "description": "Death in Space — мрачная, рабочая sci-fi RPG о людях, которые пытаются выжить во вселенной, которая активно разваливается. Гнетущий промышленный ужас 80-х: Alien, Outland, Mad Max — перенесённые в пустоту между умирающими звёздами.",
     "setting": "Система Тенебрис — разорённый войной рубеж рухнувших правительств и мёртвых корпораций. Каждая машина починена и перечинена. Таинственный Статик пронизывает электронику — шёпот на краю известного космоса. Пустота меняет людей.",
@@ -104,6 +105,7 @@ registerSystem("death-in-space", {
     ]
   },
   "en": {
+    "tagShort": "grimy blue-collar sci-fi RPG",
     "tagline": "\"Welcome to a collapsing universe. Your crew is your only family.\"",
     "description": "Death in Space is a grimy, blue-collar sci-fi RPG about people trying to survive — and maybe turn a profit — in a universe that is actively falling apart. Created by Stockholm Kartell and published by Free League, it channels the gritty industrial dread of early 80s science fiction: Alien, Outland, and the original Mad Max transplanted into the void between dying stars.",
     "setting": "The Tenebris system is a war-torn frontier of collapsed interplanetary governments and dead corporations, where every machine is repaired, re-repaired, and held together with tape and desperation. A mysterious Static permeates all electronics — a signal between channels, a whisper at the edge of known space — and prolonged exposure to the void changes people in ways medicine cannot explain.",

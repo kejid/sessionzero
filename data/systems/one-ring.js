@@ -69,6 +69,7 @@ registerSystem("one-ring", {
     }
   ],
   "ru": {
+    "tagShort": "RPG по Средиземью Толкина",
     "tagline": "«Единственная игра, достойная Средиземья».",
     "description": "Не «D&D в Средиземье», а игра, созданная для передачи духа Толкина. Путешествие — полноценная механика, а не пропуск. Тень — метафизическая угроза, разрушающая героев изнутри. Советы в безопасных гаванях — отдельная фаза с социалкой и развитием. Игра про надежду, а не про убийство орков.",
     "setting": "Средиземье между «Хоббитом» и «Властелином Колец» (~2946–2977 Т.Э.). Эриадор, Дикоземье, Ривенделл, Шир. Тень Саурона растёт. Хоббиты, гномы, эльфы, люди — каждая культура детально проработана и верна канону. Карты, NPC, локации — всё с любовью к первоисточнику.",
@@ -116,6 +117,7 @@ registerSystem("one-ring", {
     ]
   },
   "en": {
+    "tagShort": "Middle-earth Tolkien RPG",
     "tagline": "\"The only game worthy of Middle-earth.\"",
     "description": "Not 'D&D in Middle-earth,' but a game designed to convey the spirit of Tolkien. Travel is a full mechanic, not a skip. Shadow is a metaphysical threat that destroys heroes from within. Councils in safe havens are a separate phase with social interaction and development. A game about hope, not about killing orcs.",
     "setting": "Middle-earth between The Hobbit and The Lord of the Rings (~2946-2977 T.A.). Eriador, the Wilderland, Rivendell, the Shire. Sauron's Shadow grows. Hobbits, dwarves, elves, men — every culture is meticulously detailed and true to canon. Maps, NPCs, locations — all crafted with love for the source.",

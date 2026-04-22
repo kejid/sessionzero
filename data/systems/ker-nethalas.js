@@ -78,6 +78,7 @@ registerSystem("ker-nethalas", {
     }
   ],
   "ru": {
+    "tagShort": "Соло-данжен в некрополе",
     "tagline": "«Ты выжил на казни. Но некрополь только начинается.»",
     "description": "Сольный подземный crawl в мрачном тёмном фэнтези, построенный с нуля для одного игрока. Вы пришли в себя в недрах Кер-Неталаса — бесконечного некрополя давно погибшей империи некромантов. Систему d100 используется для всего: боя, исследования, магии, крафта. 20 Мастерств, 100 способностей, случайная генерация подземелий, система рассудка и усталости. Аналог Diablo II или Nethack, реализованный вживую за столом.",
     "setting": "Кер-Нетелас — Полночный Трон, колоссальный некрополь Вэлорианского Вознесения, давно уничтоженной империи некромантов. В глубине, по преданию, стоит сам Полночный Трон — чёрный базальтовый постамент, где правители-некроманты когда-то сидели, повелевая легионами мёртвых. Вдохновение — Англия XVII века и Испания эпохи инквизиции, переосмыслённые в тёмное фэнтези, где мертвецы не успокаиваются, а тьма не рассеивается.",
@@ -131,6 +132,7 @@ registerSystem("ker-nethalas", {
     ]
   },
   "en": {
+    "tagShort": "solo necropolis crawler",
     "tagline": "\"You survived the execution. The necropolis is just beginning.\"",
     "description": "A solo dungeon crawler built from the ground up for a single player, set in a dark fantasy necropolis. You regain consciousness deep within Ker Nethalas — the endless underground realm of a long-dead necromancer empire. A d100 system resolves everything: combat, exploration, magic, crafting. 20 Masteries, 100 abilities, procedural dungeon generation, sanity and exhaustion systems. Think Diablo II or Nethack, realized at the tabletop.",
     "setting": "Ker Nethalas — the Midnight Throne — is the colossal necropolis of the Vaelorian Ascendancy, a necromancer empire lost to history. At its heart, legend holds, stands the Midnight Throne itself: a great black dais where the ancient rulers once sat, channeling the essence of death and commanding legions of undead. Inspired by 17th-century England and the height of the Spanish Inquisition, reimagined as dark fantasy where the dead never rest and the darkness never lifts.",

@@ -60,6 +60,7 @@ registerSystem("microscope", {
     }
   ],
   "ru": {
+    "tagShort": "GMless игра-история без кубиков",
     "tagline": "«Создайте историю целой цивилизации за один вечер».",
     "description": "Не RPG в привычном смысле. Это инструмент для совместного создания истории. Без ведущего, без кубиков. Игроки создают эпохи, события внутри эпох и сцены внутри событий — в любом порядке. Масштаб: от тысячелетий до одного разговора. Идеально как Session Zero для любой кампании.",
     "setting": "Любой! Вы создаёте его сами. Хотите — история галактической империи от рождения до краха. Хотите — история одной семьи через 500 лет. Хотите — история магии от открытия до запрета. Ограничение — только воображение.",
@@ -101,6 +102,7 @@ registerSystem("microscope", {
     ]
   },
   "en": {
+    "tagShort": "GMless history-building game",
     "tagline": "\"Create the history of an entire civilization in a single evening.\"",
     "description": "Not an RPG in the traditional sense. It's a collaborative history-building tool. No GM, no dice. Players create eras, events within eras, and scenes within events — in any order. Scale: from millennia to a single conversation. Perfect as a Session Zero for any campaign.",
     "setting": "Any! You create it yourselves. Want the history of a galactic empire from birth to collapse? A family's story across 500 years? The history of magic from discovery to prohibition? The only limit is imagination.",

@@ -70,6 +70,7 @@ registerSystem("blades", {
     }
   ],
   "ru": {
+    "tagShort": "Криминальная FitD-RPG",
     "tagline": "«Вы — банда отчаянных в тёмном городе, который никогда не спит».",
     "description": "RPG про криминальную банду в тёмном индустриальном городе. Революционная система: никакого планирования операций заранее — вместо этого флешбэки во время дела. «Что-то идёт не так? Я УЖЕ подкупил охранника вчера». Между делами — фаза даунтайма (отдых между приключениями): лечение, тренировки, развитие базы.",
     "setting": "Досквол — город, освещённый электрическими барьерами от призраков. Вокруг — мёртвые земли, населённые духами. Внутри — фракции, контролирующие районы: от Серых Плащей (полиция) до Духовных Стражей. Индустриальная готика, демоны и кровь на булыжниках.",
@@ -113,6 +114,7 @@ registerSystem("blades", {
     ]
   },
   "en": {
+    "tagShort": "FitD heist & crime RPG",
     "tagline": "\"You're a gang of scoundrels in a dark city that never sleeps.\"",
     "description": "An RPG about a criminal gang in a dark industrial city. A revolutionary system: no planning operations in advance — instead, flashbacks during the job. 'Something goes wrong? I ALREADY bribed the guard yesterday.' Between jobs — a downtime phase: healing, training, upgrading your lair.",
     "setting": "Doskvol — a city lit by electric barriers against ghosts. Beyond — dead lands inhabited by spirits. Within — factions controlling districts: from the Bluecoats (police) to the Spirit Wardens. Industrial gothic, demons, and blood on the cobblestones.",
