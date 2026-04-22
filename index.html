@@ -3,27 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TTRPG Showcase — Tabletop RPG Systems</title>
-    <meta name="description" content="Browse tabletop RPG systems, compare mechanics, vote with your group, pick what to play next. Bilingual EN/RU.">
+    <title>Session Zero — Pick your next TTRPG together</title>
+    <meta name="description" content="Help your tabletop RPG group decide what to play next. Browse 45+ systems, vote together, get a shortlist.">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kejid.github.io/ttrpg-showcase/">
-    <meta property="og:title" content="TTRPG Showcase — Tabletop RPG Systems">
-    <meta property="og:description" content="Browse tabletop RPGs, compare mechanics, vote with your group, pick what to play next.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/kejid/ttrpg-showcase/master/og-image.png">
+    <meta property="og:url" content="https://sessionzero.games/">
+    <meta property="og:title" content="Session Zero — Pick your next TTRPG together">
+    <meta property="og:description" content="Help your tabletop RPG group pick what to play next — browse systems, vote together, get a shortlist.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/kejid/sessionzero/master/og-image.png">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="TTRPG Showcase — Tabletop RPG Systems">
-    <meta name="twitter:description" content="Browse tabletop RPGs, compare mechanics, vote with your group.">
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/kejid/ttrpg-showcase/master/og-image.png">
+    <meta name="twitter:title" content="Session Zero — Pick your next TTRPG together">
+    <meta name="twitter:description" content="Help your tabletop RPG group pick what to play next — browse systems, vote together, get a shortlist.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/kejid/sessionzero/master/og-image.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script defer src="lib/lucide.min.js"></script>
+    <link rel="canonical" href="https://sessionzero.games/">
+    <link rel="alternate" hreflang="en" href="https://sessionzero.games/">
+    <link rel="alternate" hreflang="ru" href="https://sessionzero.games/">
+    <link rel="alternate" hreflang="x-default" href="https://sessionzero.games/">
+    <meta name="robots" content="index, follow">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="ru_RU">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Session Zero",
+      "url": "https://sessionzero.games/",
+      "description": "Help your tabletop RPG group decide what to play next.",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any (web-based)",
+      "offers": { "@type": "Offer", "price": "0" },
+      "inLanguage": ["en", "ru"]
+    }
+    </script>
 </head>
 <body>
 
@@ -34,7 +54,7 @@
             <button onclick="setLang('en')" class="setup-lang-btn" id="setup-lang-en">EN</button>
             <button onclick="setLang('ru')" class="setup-lang-btn" id="setup-lang-ru">RU</button>
         </div>
-        <h1 data-i18n="setup_title">TTRPG Showcase</h1>
+        <h1 data-i18n="setup_title">Session Zero</h1>
         <p data-i18n="setup_subtitle">Настрой группу перед началом. Каждый игрок сможет голосовать за системы, которые хочет попробовать.</p>
         <div class="setup-field">
             <label data-i18n="setup_players_label">Количество игроков</label>
@@ -86,7 +106,7 @@
 <nav class="sidebar">
     <button class="sidebar-close" onclick="toggleSidebar()"><i data-lucide="x"></i></button>
     <div class="sidebar-header" onclick="showPage('results')" style="cursor:pointer;">
-        <h1 data-i18n="nav_title">TTRPG SHOWCASE</h1>
+        <h1 data-i18n="nav_title">SESSION ZERO</h1>
         <p data-i18n="nav_subtitle">Голосуй за системы, в которые хочешь сыграть</p>
     </div>
 

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Session Zero</title>
+    <meta name="description" content="Page not found. Head back to Session Zero to pick your next TTRPG with your group.">
+    <link rel="canonical" href="https://sessionzero.games/">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="robots" content="noindex, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sessionzero.games/">
+    <meta property="og:title" content="404 — Session Zero">
+    <meta property="og:description" content="Page not found. Head back to Session Zero to pick your next TTRPG with your group.">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: #050505;
+            color: #f1f5f9;
+            font-family: 'Manrope', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            text-align: center;
+        }
+        .notfound-wrap {
+            max-width: 560px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .notfound-code {
+            font-family: 'Unbounded', sans-serif;
+            font-weight: 900;
+            font-size: clamp(96px, 20vw, 180px);
+            line-height: 1;
+            color: #38bdf8;
+            letter-spacing: -0.04em;
+        }
+        .notfound-msg {
+            font-size: 18px;
+            color: #94a3b8;
+            margin-bottom: 8px;
+        }
+        .notfound-back {
+            display: inline-block;
+            padding: 12px 22px;
+            border: 1px solid rgba(56,189,248,0.4);
+            background: rgba(56,189,248,0.12);
+            color: #f1f5f9;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.2s, border-color 0.2s;
+        }
+        .notfound-back:hover {
+            background: rgba(56,189,248,0.22);
+            border-color: #38bdf8;
+        }
+    </style>
+</head>
+<body>
+    <main class="notfound-wrap">
+        <div class="notfound-code">404</div>
+        <p class="notfound-msg">Page not found.</p>
+        <a class="notfound-back" href="/">Back to Session Zero &rarr;</a>
+    </main>
+</body>
+</html>

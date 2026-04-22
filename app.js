@@ -167,7 +167,7 @@ function buildComplexityBar(level) {
 function buildHeroBanner(id, sys) {
     const style = sys.heroStyle ? ` style="${sys.heroStyle}"` : '';
     const imgStyle = sys.heroImageStyle ? ` style="${sys.heroImageStyle}"` : '';
-    const img = sys.heroImage ? `<img src="${heroFull(sys.heroImage)}" alt=""${imgStyle} loading="lazy" decoding="async" onerror="this.style.opacity='0'">` : '';
+    const img = sys.heroImage ? `<img src="${heroFull(sys.heroImage)}" alt="${sys.name} hero art"${imgStyle} loading="lazy" decoding="async" onerror="this.style.opacity='0'">` : '';
     return `<div class="hero-banner"${style}>${img}<div class="hero-overlay"><div class="meta">${sys.publisher || ''}</div><h2>${sys.name}</h2></div></div>`;
 }
 
@@ -845,7 +845,7 @@ function renderResults() {
         return `<div class="result-card ${isDef ? 'result-card-deferred' : ''}" ${dragAttrs} onclick="if(typeof _didDrag!=='undefined'&&_didDrag){_didDrag=false;return}showPage('${s.id}')">
             ${leftColHTML}
             ${badgeHTML}
-            <img class="result-card-img" src="${heroThumb(s.heroImg)}" alt="" loading="lazy" decoding="async" onerror="this.style.background='linear-gradient(135deg,#1a1a2e,#0f3460)'">
+            <img class="result-card-img" src="${heroThumb(s.heroImg)}" alt="${s.name}" loading="lazy" decoding="async" onerror="this.style.background='linear-gradient(135deg,#1a1a2e,#0f3460)'">
             <div class="result-card-body">
                 <div class="result-card-name">${s.name}</div>
                 <div class="result-card-tagline">${s.tagline}</div>
@@ -1563,8 +1563,8 @@ async function submitCustomSystemById(id) {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 access_key: '23fd8c3c-3ebc-4a65-a73e-373385fb9c0b',
-                subject: 'TTRPG System Suggestion: ' + sys.name,
-                from_name: 'TTRPG Showcase',
+                subject: 'Session Zero — System Suggestion: ' + sys.name,
+                from_name: 'Session Zero',
                 system_json: JSON.stringify(sys, null, 2)
             })
         });
