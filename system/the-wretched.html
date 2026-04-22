@@ -28,8 +28,9 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap"></noscript>
+<link rel="stylesheet" href="/style.min.css">
 <script defer src="/lib/lucide.min.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"The Wretched","alternativeHeadline":"\"You are the last one. The ship is dying. The log is running.\"","description":"A solo horror RPG about survival in deep space, played with a deck of cards, a tumbling block tower, and a microphone. You are the sole surviving crew…","inLanguage":"en","genre":"Tabletop role-playing game","publisher":{"@type":"Organization","name":"Loot The Room / Chris Bissette"},"url":"https://sessionzero.games/system/the-wretched.html","image":"https://sessionzero.games/og/the-wretched.jpg","author":{"@type":"Person","name":"Kejid","url":"https://github.com/kejid"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Session Zero","item":"https://sessionzero.games/"},{"@type":"ListItem","position":2,"name":"The Wretched","item":"https://sessionzero.games/system/the-wretched.html"}]}</script>
@@ -44,7 +45,7 @@
 </header>
 <main class="static-main">
   <article class="system-page static active">
-    <div class="hero-banner"><img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1nLzMyNjgzOTMucG5n%2Foriginal%2FkYEj5R.png&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="The Wretched hero art" loading="eager" decoding="async"><div class="hero-overlay"><div class="meta">Loot The Room / Chris Bissette</div><h1>The Wretched</h1></div></div>
+    <div class="hero-banner"><img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1nLzMyNjgzOTMucG5n%2Foriginal%2FkYEj5R.png&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="The Wretched hero art" loading="eager" decoding="async" fetchpriority="high"><div class="hero-overlay"><div class="meta">Loot The Room / Chris Bissette</div><h1>The Wretched</h1></div></div>
     <p class="tagline">"You are the last one. The ship is dying. The log is running."</p>
     <div class="quick-stats">
         <div class="qs"><span class="qs-label">Dice</span><span class="qs-value">d6 + playing cards + Jenga tower</span></div>
@@ -71,19 +72,19 @@
         <div class="gallery-grid">
             
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1hZ2UvNjE0MjgzLzMyNjgzODkucG5n%2F347x500%2F1hYOtq.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Cover — The Wretched" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1hZ2UvNjE0MjgzLzMyNjgzODkucG5n%2F347x500%2F1hYOtq.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Cover — The Wretched" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Cover — The Wretched</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1hZ2UvNjE0MjgzLzQzMTYyMzEuanBn%2F347x500%2Fp6tHSn.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="The card oracle" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1hZ2UvNjE0MjgzLzQzMTYyMzEuanBn%2F347x500%2Fp6tHSn.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="The card oracle" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">The card oracle</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1hZ2UvNjE0MjgzLzQzMTYyMzIuanBn%2F347x500%2FsjWRTo.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Rules spread" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1hZ2UvNjE0MjgzLzQzMTYyMzIuanBn%2F347x500%2FsjWRTo.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Rules spread" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Rules spread</div></div>
                     </div>
@@ -121,13 +122,13 @@
     <div class="section-title">Similar systems</div>
     <div class="similar-systems-grid">
         <a href="/system/mothership.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/mothership.jpg" alt="Mothership hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/mothership.jpg" alt="Mothership hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Mothership</span>
           </a><a href="/system/triangle.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/triangle.jpg" alt="Triangle Agency hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/triangle.jpg" alt="Triangle Agency hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Triangle Agency</span>
           </a><a href="/system/delta-green.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/delta-green.jpg" alt="Delta Green hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/delta-green.jpg" alt="Delta Green hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Delta Green</span>
           </a>
     </div>

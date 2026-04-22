@@ -27,8 +27,9 @@
     <meta name="twitter:image:alt" content="Session Zero — TTRPG group voting tool">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap"></noscript>
+    <link rel="stylesheet" href="style.min.css">
     <script defer src="lib/lucide.min.js"></script>
     <link rel="canonical" href="https://sessionzero.games/">
     <link rel="alternate" hreflang="en" href="https://sessionzero.games/">
@@ -99,28 +100,28 @@
 
 <!-- Presentation nav arrows -->
 <div class="pres-nav">
-    <button onclick="prevSystem()" title="Предыдущая (←)"><i data-lucide="chevron-left"></i></button>
-    <button onclick="nextSystem()" title="Следующая (→)"><i data-lucide="chevron-right"></i></button>
+    <button onclick="prevSystem()" title="Предыдущая (←)" aria-label="Предыдущая система" data-i18n-aria="aria_prev_system"><i data-lucide="chevron-left" aria-hidden="true"></i></button>
+    <button onclick="nextSystem()" title="Следующая (→)" aria-label="Следующая система" data-i18n-aria="aria_next_system"><i data-lucide="chevron-right" aria-hidden="true"></i></button>
 </div>
 
 <!-- Presentation slide counter -->
 <div class="pres-counter" id="pres-counter"></div>
 
-<button class="hamburger" onclick="toggleSidebar()"><i data-lucide="menu"></i></button>
+<button class="hamburger" aria-label="Открыть меню" data-i18n-aria="aria_open_menu" onclick="toggleSidebar()"><i data-lucide="menu" aria-hidden="true"></i></button>
 <div class="sidebar-backdrop" onclick="toggleSidebar()"></div>
 
 <nav class="sidebar">
-    <button class="sidebar-close" onclick="toggleSidebar()"><i data-lucide="x"></i></button>
+    <button class="sidebar-close" aria-label="Закрыть меню" data-i18n-aria="aria_close_menu" onclick="toggleSidebar()"><i data-lucide="x" aria-hidden="true"></i></button>
     <div class="sidebar-header" onclick="showPage('results')" style="cursor:pointer;">
         <h1 data-i18n="nav_title">SESSION ZERO</h1>
         <p data-i18n="nav_subtitle">Голосуй за системы, в которые хочешь сыграть</p>
     </div>
 
     <button class="results-btn" onclick="showPage('results')">
-        <i data-lucide="trophy"></i> <span data-i18n="btn_results">РЕЗУЛЬТАТЫ ГОЛОСОВАНИЯ</span>
+        <i data-lucide="trophy" aria-hidden="true"></i><span data-i18n="btn_results">РЕЗУЛЬТАТЫ ГОЛОСОВАНИЯ</span>
     </button>
     <button class="catalog-btn" onclick="showPage('results')">
-        <i data-lucide="layout-grid"></i> <span data-i18n="btn_catalog">КАТАЛОГ СИСТЕМ</span>
+        <i data-lucide="layout-grid" aria-hidden="true"></i><span data-i18n="btn_catalog">КАТАЛОГ СИСТЕМ</span>
     </button>
 
     <div class="sidebar-divider"></div>
@@ -137,14 +138,17 @@
     <button class="setup-players-btn" onclick="enableVoting()">
         <i data-lucide="users"></i> <span data-i18n="btn_setup_players">Настроить игроков и голосование</span>
     </button>
-    <button class="reset-btn-sidebar reset-btn" onclick="resetPlayers()">
-        <i data-lucide="rotate-ccw"></i> <span data-i18n="btn_reset">Сбросить игроков и голоса</span>
-    </button>
     <button class="pres-toggle" onclick="togglePresentation()">
         <i data-lucide="presentation"></i> <span data-i18n="btn_presentation">Режим презентации</span>
     </button>
     <button class="pres-toggle" onclick="setLang(currentLang === 'ru' ? 'en' : 'ru')">
         <i data-lucide="languages"></i> <span data-i18n="btn_lang">EN / RU</span>
+    </button>
+
+    <div class="sidebar-divider"></div>
+
+    <button class="reset-btn-sidebar reset-btn" onclick="resetPlayers()">
+        <i data-lucide="rotate-ccw" aria-hidden="true"></i> <span data-i18n="btn_reset">Сбросить игроков и голоса</span>
     </button>
 
     <div class="grouping-toggle">
@@ -320,8 +324,8 @@
     <div class="results-header">
         <span class="section-title" id="results-title">Обзор систем</span>
         <div class="view-toggle">
-            <button class="view-toggle-btn active" data-view="cards" onclick="setView('cards')"><i data-lucide="layout-grid"></i></button>
-            <button class="view-toggle-btn" data-view="list" onclick="setView('list')"><i data-lucide="list"></i></button>
+            <button class="view-toggle-btn active" data-view="cards" onclick="setView('cards')" aria-label="Вид карточками" data-i18n-aria="aria_view_cards"><i data-lucide="layout-grid" aria-hidden="true"></i></button>
+            <button class="view-toggle-btn" data-view="list" onclick="setView('list')" aria-label="Вид списком" data-i18n-aria="aria_view_list"><i data-lucide="list" aria-hidden="true"></i></button>
             <button class="export-btn" onclick="exportResults()" title="Export"><i data-lucide="clipboard-copy"></i> <span data-i18n="btn_export">Экспорт</span></button>
         </div>
     </div>
@@ -350,7 +354,7 @@
 
 <script src="i18n.js"></script>
 <script src="data/systems-bundle.js"></script>
-<script src="app.js"></script>
+<script src="app.min.js"></script>
 <script data-goatcounter="https://kejid.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 </body>

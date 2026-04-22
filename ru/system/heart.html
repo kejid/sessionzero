@@ -28,8 +28,9 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap"></noscript>
+<link rel="stylesheet" href="/style.min.css">
 <script defer src="/lib/lucide.min.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Heart: The City Beneath","alternativeHeadline":"«Спускайтесь в живой подземный город, который исполняет желания — за чудовищную цену».","description":"Нарративный (история и драма важнее точных правил) данжен-кроул наоборот. Вместо подъёма к сокровищам — спуск в Сердце, живой подземный мегаданжен,…","inLanguage":"ru","genre":"Настольная ролевая игра","publisher":{"@type":"Organization","name":"Rowan Rook & Decard"},"url":"https://sessionzero.games/ru/system/heart.html","image":"https://sessionzero.games/og/ru/heart.jpg","author":{"@type":"Person","name":"Kejid","url":"https://github.com/kejid"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Session Zero","item":"https://sessionzero.games/"},{"@type":"ListItem","position":2,"name":"Heart: The City Beneath","item":"https://sessionzero.games/ru/system/heart.html"}]}</script>
@@ -44,7 +45,7 @@
 </header>
 <main class="static-main">
   <article class="system-page static active">
-    <div class="hero-banner"><img src="https://wsrv.nl/?url=https%3A%2F%2Frowanrookanddecard.com%2Fwp-content%2Fuploads%2F2020%2F07%2FTHE-WORLD-OF-HEART-scaled-e1595931454162.jpg&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="Heart: The City Beneath hero art" loading="eager" decoding="async"><div class="hero-overlay"><div class="meta">Rowan Rook &amp; Decard</div><h1>Heart: The City Beneath</h1></div></div>
+    <div class="hero-banner"><img src="https://wsrv.nl/?url=https%3A%2F%2Frowanrookanddecard.com%2Fwp-content%2Fuploads%2F2020%2F07%2FTHE-WORLD-OF-HEART-scaled-e1595931454162.jpg&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="Heart: The City Beneath hero art" loading="eager" decoding="async" fetchpriority="high"><div class="hero-overlay"><div class="meta">Rowan Rook &amp; Decard</div><h1>Heart: The City Beneath</h1></div></div>
     <p class="tagline">«Спускайтесь в живой подземный город, который исполняет желания — за чудовищную цену».</p>
     <div class="quick-stats">
         <div class="qs"><span class="qs-label">Кубики</span><span class="qs-value">d10</span></div>
@@ -71,25 +72,25 @@
         <div class="gallery-grid">
             
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Frowanrookanddecard.com%2Fwp-content%2Fuploads%2F2020%2F04%2FHeart-The-City-Beneath-RPG-COMBAT-scaled.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Бой в Сердце" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Frowanrookanddecard.com%2Fwp-content%2Fuploads%2F2020%2F04%2FHeart-The-City-Beneath-RPG-COMBAT-scaled.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Бой в Сердце" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Бой в Сердце</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Frowanrookanddecard.com%2Fwp-content%2Fuploads%2F2020%2F04%2FHeart-The-City-Beneath-RPG-ANGEL.webp&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Ангел" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Frowanrookanddecard.com%2Fwp-content%2Fuploads%2F2020%2F04%2FHeart-The-City-Beneath-RPG-ANGEL.webp&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Ангел" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Ангел</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Frowanrookanddecard.com%2Fwp-content%2Fuploads%2F2021%2F10%2FHeart_Character_Sheet_Product_Photo_Front-600x600.png.webp&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Лист персонажа" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Frowanrookanddecard.com%2Fwp-content%2Fuploads%2F2021%2F10%2FHeart_Character_Sheet_Product_Photo_Front-600x600.png.webp&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Лист персонажа" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Лист персонажа</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1nLzMyNTE2MzgucG5n%2Foriginal%2F2W%252BgAK.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Обложка" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1nLzMyNTE2MzgucG5n%2Foriginal%2F2W%252BgAK.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Обложка" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Обложка</div></div>
                     </div>
@@ -120,13 +121,13 @@
     <div class="section-title">Похожие системы</div>
     <div class="similar-systems-grid">
         <a href="/ru/system/spire.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/spire.jpg" alt="Spire: The City Must Fall hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/spire.jpg" alt="Spire: The City Must Fall hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Spire: The City Must Fall</span>
           </a><a href="/ru/system/delta-green.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/delta-green.jpg" alt="Delta Green hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/delta-green.jpg" alt="Delta Green hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Delta Green</span>
           </a><a href="/ru/system/call-of-cthulhu.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/call-of-cthulhu.jpg" alt="Call of Cthulhu hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/call-of-cthulhu.jpg" alt="Call of Cthulhu hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Call of Cthulhu</span>
           </a>
     </div>

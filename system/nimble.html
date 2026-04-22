@@ -28,8 +28,9 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap"></noscript>
+<link rel="stylesheet" href="/style.min.css">
 <script defer src="/lib/lucide.min.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Nimble 2e","alternativeHeadline":"\"D&D 5e, but faster, simpler, and no attack rolls. Combat in 20 minutes, not 2 hours.\"","description":"Setting-agnostic. Compatible with D&D 5e content — monsters, adventures, magic items all convert. Any fantasy world. Attacks always hit: no attack roll,…","inLanguage":"en","genre":"Tabletop role-playing game","publisher":{"@type":"Organization","name":"Nimble Co."},"url":"https://sessionzero.games/system/nimble.html","image":"https://sessionzero.games/og/nimble.jpg","author":{"@type":"Person","name":"Kejid","url":"https://github.com/kejid"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Session Zero","item":"https://sessionzero.games/"},{"@type":"ListItem","position":2,"name":"Nimble 2e","item":"https://sessionzero.games/system/nimble.html"}]}</script>
@@ -44,7 +45,7 @@
 </header>
 <main class="static-main">
   <article class="system-page static active">
-    <div class="hero-banner" style="background: linear-gradient(135deg, #1a3a2a, #0f1a0f, #2d1b00);"><img src="https://wsrv.nl/?url=https%3A%2F%2Fnimblerpg.com%2Fcdn%2Fshop%2Ffiles%2FHeroesFullArt.jpg%3Fv%3D1741803078%26width%3D3840&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="Nimble 2e hero art" loading="eager" decoding="async"><div class="hero-overlay"><div class="meta">Nimble Co.</div><h1>Nimble 2e</h1></div></div>
+    <div class="hero-banner" style="background: linear-gradient(135deg, #1a3a2a, #0f1a0f, #2d1b00);"><img src="https://wsrv.nl/?url=https%3A%2F%2Fnimblerpg.com%2Fcdn%2Fshop%2Ffiles%2FHeroesFullArt.jpg%3Fv%3D1741803078%26width%3D3840&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="Nimble 2e hero art" loading="eager" decoding="async" fetchpriority="high"><div class="hero-overlay"><div class="meta">Nimble Co.</div><h1>Nimble 2e</h1></div></div>
     <p class="tagline">"D&amp;D 5e, but faster, simpler, and no attack rolls. Combat in 20 minutes, not 2 hours."</p>
     <div class="quick-stats">
         <div class="qs"><span class="qs-label">Dice</span><span class="qs-value">Только урон (d6-d12, взрыв.)</span></div>
@@ -71,25 +72,25 @@
         <div class="gallery-grid">
             
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fnimblerpg.com%2Fcdn%2Fshop%2Ffiles%2FHeroesFullArt.jpg%3Fv%3D1741803078%26width%3D3840&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Nimble heroes" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fnimblerpg.com%2Fcdn%2Fshop%2Ffiles%2FHeroesFullArt.jpg%3Fv%3D1741803078%26width%3D3840&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Nimble heroes" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Nimble heroes</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fnimblerpg.com%2Fcdn%2Fshop%2Ffiles%2FMaw.jpg%3Fv%3D1741832672%26width%3D3840&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Legendary monster Maw" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fnimblerpg.com%2Fcdn%2Fshop%2Ffiles%2FMaw.jpg%3Fv%3D1741832672%26width%3D3840&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Legendary monster Maw" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Legendary monster Maw</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fnimblerpg.com%2Fcdn%2Fshop%2Ffiles%2FGMScreenWrap1.jpg%3Fv%3D1741797122&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="GM screen" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fnimblerpg.com%2Fcdn%2Fshop%2Ffiles%2FGMScreenWrap1.jpg%3Fv%3D1741797122&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="GM screen" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">GM screen</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fnimblerpg.com%2Fcdn%2Fshop%2Farticles%2FdragonArtFullB.jpg%3Fv%3D1770732852%26width%3D300&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Dragon" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fnimblerpg.com%2Fcdn%2Fshop%2Farticles%2FdragonArtFullB.jpg%3Fv%3D1770732852%26width%3D300&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Dragon" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Dragon</div></div>
                     </div>
@@ -113,13 +114,13 @@
     <div class="section-title">Similar systems</div>
     <div class="similar-systems-grid">
         <a href="/system/mothership.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/mothership.jpg" alt="Mothership hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/mothership.jpg" alt="Mothership hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Mothership</span>
           </a><a href="/system/triangle.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/triangle.jpg" alt="Triangle Agency hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/triangle.jpg" alt="Triangle Agency hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Triangle Agency</span>
           </a><a href="/system/delta-green.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/delta-green.jpg" alt="Delta Green hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/delta-green.jpg" alt="Delta Green hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Delta Green</span>
           </a>
     </div>

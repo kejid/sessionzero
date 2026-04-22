@@ -28,8 +28,9 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap"></noscript>
+<link rel="stylesheet" href="/style.min.css">
 <script defer src="/lib/lucide.min.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Spire: The City Must Fall","alternativeHeadline":"\"You are dark elves. You live at the bottom of a mile-high city. You are going to tear it down.\"","description":"A fantasy-punk RPG of revolution, subterfuge, and desperate consequence. You play as drow — dark elves living under the boot of aelfir occupation in the…","inLanguage":"en","genre":"Tabletop role-playing game","publisher":{"@type":"Organization","name":"Rowan, Rook & Decard"},"url":"https://sessionzero.games/system/spire.html","image":"https://sessionzero.games/og/spire.jpg","author":{"@type":"Person","name":"Kejid","url":"https://github.com/kejid"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Session Zero","item":"https://sessionzero.games/"},{"@type":"ListItem","position":2,"name":"Spire: The City Must Fall","item":"https://sessionzero.games/system/spire.html"}]}</script>
@@ -44,7 +45,7 @@
 </header>
 <main class="static-main">
   <article class="system-page static active">
-    <div class="hero-banner"><img src="https://wsrv.nl/?url=https%3A%2F%2Frowanrookanddecard.com%2Fwp-content%2Fuploads%2F2018%2F09%2FNecropolis2-1.jpg&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="Spire: The City Must Fall hero art" loading="eager" decoding="async"><div class="hero-overlay"><div class="meta">Rowan, Rook &amp; Decard</div><h1>Spire: The City Must Fall</h1></div></div>
+    <div class="hero-banner"><img src="https://wsrv.nl/?url=https%3A%2F%2Frowanrookanddecard.com%2Fwp-content%2Fuploads%2F2018%2F09%2FNecropolis2-1.jpg&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="Spire: The City Must Fall hero art" loading="eager" decoding="async" fetchpriority="high"><div class="hero-overlay"><div class="meta">Rowan, Rook &amp; Decard</div><h1>Spire: The City Must Fall</h1></div></div>
     <p class="tagline">"You are dark elves. You live at the bottom of a mile-high city. You are going to tear it down."</p>
     <div class="quick-stats">
         <div class="qs"><span class="qs-label">Dice</span><span class="qs-value">d10</span></div>
@@ -71,19 +72,19 @@
         <div class="gallery-grid">
             
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Frowanrookanddecard.com%2Fwp-content%2Fuploads%2F2018%2F09%2FNecropolis2-1.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="The Necropolis of Spire" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Frowanrookanddecard.com%2Fwp-content%2Fuploads%2F2018%2F09%2FNecropolis2-1.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="The Necropolis of Spire" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">The Necropolis of Spire</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Frowanrookanddecard.com%2Fwp-content%2Fuploads%2F2018%2F01%2FSpire-1.2.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="The mile-high city" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Frowanrookanddecard.com%2Fwp-content%2Fuploads%2F2018%2F01%2FSpire-1.2.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="The mile-high city" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">The mile-high city</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Frowanrookanddecard.com%2Fwp-content%2Fuploads%2F2018%2F09%2FCombat_Example2.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Combat example" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Frowanrookanddecard.com%2Fwp-content%2Fuploads%2F2018%2F09%2FCombat_Example2.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Combat example" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Combat example</div></div>
                     </div>
@@ -121,13 +122,13 @@
     <div class="section-title">Similar systems</div>
     <div class="similar-systems-grid">
         <a href="/system/heart.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/heart.jpg" alt="Heart: The City Beneath hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/heart.jpg" alt="Heart: The City Beneath hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Heart: The City Beneath</span>
           </a><a href="/system/blades.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/blades.jpg" alt="Blades in the Dark hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/blades.jpg" alt="Blades in the Dark hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Blades in the Dark</span>
           </a><a href="/system/wildsea.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/wildsea.jpg" alt="The Wildsea hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/wildsea.jpg" alt="The Wildsea hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">The Wildsea</span>
           </a>
     </div>

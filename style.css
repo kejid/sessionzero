@@ -414,6 +414,10 @@ body:not(.presentation) .pres-counter { display: none; }
 
 /* Results button */
 .results-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     margin: 12px 24px;
     padding: 12px;
     background: linear-gradient(135deg, var(--accent), var(--purple));
@@ -431,7 +435,7 @@ body:not(.presentation) .pres-counter { display: none; }
 
 /* Reset button — sidebar */
 .reset-btn-sidebar {
-    margin: 8px 24px;
+    margin: 12px 24px 8px;
     padding: 10px;
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(248,113,113,0.3);
@@ -1440,6 +1444,7 @@ body.browse-mode .setup-players-btn { display: flex; }
 /* Mobile breakpoint */
 @media (max-width: 768px) {
     .hamburger { display: flex; }
+    body.sidebar-open .hamburger { display: none; }
     .sidebar-close { display: flex; }
 
     .sidebar {

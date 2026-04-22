@@ -342,7 +342,7 @@ function renderSystemPage(id, sys, lang) {
         <div class="gallery-grid">
             ${gallery.filter(g => g && g.src).map(img => `
                 <div class="gallery-item static">
-                    <img src="${escapeHtml(galleryThumb(img.src))}" alt="${escapeHtml(img.cap || name)}" loading="lazy" decoding="async">
+                    <img src="${escapeHtml(galleryThumb(img.src))}" alt="${escapeHtml(img.cap || name)}" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">${escBody(img.cap || '')}</div></div>
                     </div>
@@ -364,7 +364,7 @@ function renderSystemPage(id, sys, lang) {
           const sOg = `${SITE}/og/${sid}.jpg`;
           const sAlt = `${sname} hero art`;
           return `<a href="${escapeHtml(sHref)}" class="similar-system-card">
-            <img src="${escapeHtml(sOg)}" alt="${escapeHtml(sAlt)}" loading="lazy" decoding="async">
+            <img src="${escapeHtml(sOg)}" alt="${escapeHtml(sAlt)}" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">${escBody(sname)}</span>
           </a>`;
         }).join('')}
@@ -421,7 +421,7 @@ function renderSystemPage(id, sys, lang) {
   const heroStyle = sys.heroStyle ? ` style="${escapeHtml(sys.heroStyle)}"` : '';
   const imgStyle = sys.heroImageStyle ? ` style="${escapeHtml(sys.heroImageStyle)}"` : '';
   const heroImg = sys.heroImage
-    ? `<img src="${escapeHtml(heroFull(sys.heroImage))}" alt="${escapeHtml(name + ' hero art')}"${imgStyle} loading="eager" decoding="async">`
+    ? `<img src="${escapeHtml(heroFull(sys.heroImage))}" alt="${escapeHtml(name + ' hero art')}"${imgStyle} loading="eager" decoding="async" fetchpriority="high">`
     : '';
 
   const enHref = `/system/${id}.html`;
@@ -461,8 +461,9 @@ function renderSystemPage(id, sys, lang) {
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap"></noscript>
+<link rel="stylesheet" href="/style.min.css">
 <script defer src="/lib/lucide.min.js"></script>
 <script type="application/ld+json">${JSON.stringify(jsonLdArticle)}</script>
 <script type="application/ld+json">${JSON.stringify(jsonLdBreadcrumb)}</script>
@@ -630,8 +631,9 @@ function renderAbout(lang) {
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap"></noscript>
+<link rel="stylesheet" href="/style.min.css">
 <script defer src="/lib/lucide.min.js"></script>
 <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 </head>

@@ -28,8 +28,9 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap"></noscript>
+<link rel="stylesheet" href="/style.min.css">
 <script defer src="/lib/lucide.min.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Ironsworn: Starforged","alternativeHeadline":"«Поклянитесь на железе. Выживите в кузнице звёзд.»","description":"**Ironsworn: Starforged** — научно-фантастическая RPG для одного игрока, пары или небольшой группы без ведущего. Вы — скиталец на краю обитаемого…","inLanguage":"ru","genre":"Настольная ролевая игра","publisher":{"@type":"Organization","name":"Tomkin Press"},"url":"https://sessionzero.games/ru/system/starforged.html","image":"https://sessionzero.games/og/ru/starforged.jpg","author":{"@type":"Person","name":"Kejid","url":"https://github.com/kejid"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Session Zero","item":"https://sessionzero.games/"},{"@type":"ListItem","position":2,"name":"Ironsworn: Starforged","item":"https://sessionzero.games/ru/system/starforged.html"}]}</script>
@@ -44,7 +45,7 @@
 </header>
 <main class="static-main">
   <article class="system-page static active">
-    <div class="hero-banner"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0712%2F0329%2F1447%2Ffiles%2Fstarforged-sunset.jpg%3Fv%3D1725559572&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="Ironsworn: Starforged hero art" loading="eager" decoding="async"><div class="hero-overlay"><div class="meta">Tomkin Press</div><h1>Ironsworn: Starforged</h1></div></div>
+    <div class="hero-banner"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0712%2F0329%2F1447%2Ffiles%2Fstarforged-sunset.jpg%3Fv%3D1725559572&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="Ironsworn: Starforged hero art" loading="eager" decoding="async" fetchpriority="high"><div class="hero-overlay"><div class="meta">Tomkin Press</div><h1>Ironsworn: Starforged</h1></div></div>
     <p class="tagline">«Поклянитесь на железе. Выживите в кузнице звёзд.»</p>
     <div class="quick-stats">
         <div class="qs"><span class="qs-label">Кубики</span><span class="qs-value">d6 + 2d10</span></div>
@@ -71,31 +72,31 @@
         <div class="gallery-grid">
             
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1nLzg1MjM5MjQuanBn%2Foriginal%2F3NcS3p.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Обложка Starforged" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1nLzg1MjM5MjQuanBn%2Foriginal%2F3NcS3p.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Обложка Starforged" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Обложка Starforged</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0712%2F0329%2F1447%2Ffiles%2Fstarforged-sunset.jpg%3Fv%3D1725559572&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Закат на чужой планете" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0712%2F0329%2F1447%2Ffiles%2Fstarforged-sunset.jpg%3Fv%3D1725559572&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Закат на чужой планете" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Закат на чужой планете</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fassetsio.gnwcdn.com%2Fstarforged-ironsworn-ship-alien-art.png%3Fwidth%3D690%26quality%3D85%26format%3Djpg%26dpr%3D3%26auto%3Dwebp&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Корабль в глубинах космоса" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fassetsio.gnwcdn.com%2Fstarforged-ironsworn-ship-alien-art.png%3Fwidth%3D690%26quality%3D85%26format%3Djpg%26dpr%3D3%26auto%3Dwebp&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Корабль в глубинах космоса" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Корабль в глубинах космоса</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1hZ2UvMTQzMzQxNy84OTAzMzYwLnBuZw%3D%3D%2Foriginal%2FkWJNFl.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Оракулы и прогресс-треки" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1hZ2UvMTQzMzQxNy84OTAzMzYwLnBuZw%3D%3D%2Foriginal%2FkWJNFl.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Оракулы и прогресс-треки" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Оракулы и прогресс-треки</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1hZ2UvMTQzMzQxNy84OTAzMzYxLnBuZw%3D%3D%2Foriginal%2F3VZ%252BAO.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Карты активов" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1hZ2UvMTQzMzQxNy84OTAzMzYxLnBuZw%3D%3D%2Foriginal%2F3VZ%252BAO.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Карты активов" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Карты активов</div></div>
                     </div>
@@ -140,13 +141,13 @@
     <div class="section-title">Похожие системы</div>
     <div class="similar-systems-grid">
         <a href="/ru/system/mothership.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/mothership.jpg" alt="Mothership hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/mothership.jpg" alt="Mothership hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Mothership</span>
           </a><a href="/ru/system/triangle.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/triangle.jpg" alt="Triangle Agency hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/triangle.jpg" alt="Triangle Agency hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Triangle Agency</span>
           </a><a href="/ru/system/delta-green.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/delta-green.jpg" alt="Delta Green hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/delta-green.jpg" alt="Delta Green hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Delta Green</span>
           </a>
     </div>

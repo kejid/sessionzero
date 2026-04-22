@@ -28,8 +28,9 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap"></noscript>
+<link rel="stylesheet" href="/style.min.css">
 <script defer src="/lib/lucide.min.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Call of Cthulhu","alternativeHeadline":"«Тайны, которые лучше бы не раскрывать. Истина, от которой сходят с ума».","description":"Старейшая и самая знаменитая хоррор-RPG в мире, впервые изданная в 1981 году Сэнди Петерсеном. Седьмая редакция — современная, отполированная версия…","inLanguage":"ru","genre":"Настольная ролевая игра","publisher":{"@type":"Organization","name":"Chaosium Inc."},"url":"https://sessionzero.games/ru/system/call-of-cthulhu.html","image":"https://sessionzero.games/og/ru/call-of-cthulhu.jpg","author":{"@type":"Person","name":"Kejid","url":"https://github.com/kejid"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Session Zero","item":"https://sessionzero.games/"},{"@type":"ListItem","position":2,"name":"Call of Cthulhu","item":"https://sessionzero.games/ru/system/call-of-cthulhu.html"}]}</script>
@@ -44,7 +45,7 @@
 </header>
 <main class="static-main">
   <article class="system-page static active">
-    <div class="hero-banner"><img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.tribality.com%2Fwp-content%2Fuploads%2F2019%2F04%2Frichard-wright-cthulhu-museum1-1024x512.jpg&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="Call of Cthulhu hero art" loading="eager" decoding="async"><div class="hero-overlay"><div class="meta">Chaosium Inc.</div><h1>Call of Cthulhu</h1></div></div>
+    <div class="hero-banner"><img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.tribality.com%2Fwp-content%2Fuploads%2F2019%2F04%2Frichard-wright-cthulhu-museum1-1024x512.jpg&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="Call of Cthulhu hero art" loading="eager" decoding="async" fetchpriority="high"><div class="hero-overlay"><div class="meta">Chaosium Inc.</div><h1>Call of Cthulhu</h1></div></div>
     <p class="tagline">«Тайны, которые лучше бы не раскрывать. Истина, от которой сходят с ума».</p>
     <div class="quick-stats">
         <div class="qs"><span class="qs-label">Кубики</span><span class="qs-value">d100 (процентильная система)</span></div>
@@ -71,19 +72,19 @@
         <div class="gallery-grid">
             
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.rpgtabletopgames.com%2Fwp-content%2Fuploads%2Fcall-of-cthulhu-rpg.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Call of Cthulhu — базовый набор книг 7-й редакции" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.rpgtabletopgames.com%2Fwp-content%2Fuploads%2Fcall-of-cthulhu-rpg.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Call of Cthulhu — базовый набор книг 7-й редакции" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Call of Cthulhu — базовый набор книг 7-й редакции</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.tribality.com%2Fwp-content%2Fuploads%2F2019%2F04%2Frichard-wright-cthulhu-museum1-1024x512.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Музей ужасов — арт Ричарда Райта" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.tribality.com%2Fwp-content%2Fuploads%2F2019%2F04%2Frichard-wright-cthulhu-museum1-1024x512.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Музей ужасов — арт Ричарда Райта" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Музей ужасов — арт Ричарда Райта</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcQ92RstGeZr_fhYgkNO2aiZjI6j4p-kjq6okQ%26s&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Столкновение с непостижимым" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcQ92RstGeZr_fhYgkNO2aiZjI6j4p-kjq6okQ%26s&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Столкновение с непостижимым" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Столкновение с непостижимым</div></div>
                     </div>
@@ -128,13 +129,13 @@
     <div class="section-title">Похожие системы</div>
     <div class="similar-systems-grid">
         <a href="/ru/system/mothership.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/mothership.jpg" alt="Mothership hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/mothership.jpg" alt="Mothership hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Mothership</span>
           </a><a href="/ru/system/triangle.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/triangle.jpg" alt="Triangle Agency hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/triangle.jpg" alt="Triangle Agency hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Triangle Agency</span>
           </a><a href="/ru/system/delta-green.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/delta-green.jpg" alt="Delta Green hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/delta-green.jpg" alt="Delta Green hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Delta Green</span>
           </a>
     </div>

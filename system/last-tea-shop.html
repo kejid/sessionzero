@@ -28,8 +28,9 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap"></noscript>
+<link rel="stylesheet" href="/style.min.css">
 <script defer src="/lib/lucide.min.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Last Tea Shop","alternativeHeadline":"\"You brew tea. They are dead. They have one last hour.\"","description":"Last Tea Shop is an intimate solo journaling game about a tea stall on the border between the living and the dead. The recently departed find their way…","inLanguage":"en","genre":"Tabletop role-playing game","publisher":{"@type":"Organization","name":"Spring Villager"},"url":"https://sessionzero.games/system/last-tea-shop.html","image":"https://sessionzero.games/og/last-tea-shop.jpg","author":{"@type":"Person","name":"Kejid","url":"https://github.com/kejid"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Session Zero","item":"https://sessionzero.games/"},{"@type":"ListItem","position":2,"name":"Last Tea Shop","item":"https://sessionzero.games/system/last-tea-shop.html"}]}</script>
@@ -44,7 +45,7 @@
 </header>
 <main class="static-main">
   <article class="system-page static active">
-    <div class="hero-banner"><img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1nLzY4MzMyNTcuanBn%2Foriginal%2FNOvzui.jpg&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="Last Tea Shop hero art" style="object-fit: cover; object-position: center; background: linear-gradient(135deg, #0d1b2a, #1b3a4b 40%, #2d6a7f 70%, #0d1b2a);" loading="eager" decoding="async"><div class="hero-overlay"><div class="meta">Spring Villager</div><h1>Last Tea Shop</h1></div></div>
+    <div class="hero-banner"><img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1nLzY4MzMyNTcuanBn%2Foriginal%2FNOvzui.jpg&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="Last Tea Shop hero art" style="object-fit: cover; object-position: center; background: linear-gradient(135deg, #0d1b2a, #1b3a4b 40%, #2d6a7f 70%, #0d1b2a);" loading="eager" decoding="async" fetchpriority="high"><div class="hero-overlay"><div class="meta">Spring Villager</div><h1>Last Tea Shop</h1></div></div>
     <p class="tagline">"You brew tea. They are dead. They have one last hour."</p>
     <div class="quick-stats">
         <div class="qs"><span class="qs-label">Dice</span><span class="qs-value">1–2d6</span></div>
@@ -71,19 +72,19 @@
         <div class="gallery-grid">
             
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1hZ2UvMTE2NzU4MC83NjkwNjc1LnBuZw%3D%3D%2F347x500%2FKWkPXM.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Zine cover" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1hZ2UvMTE2NzU4MC83NjkwNjc1LnBuZw%3D%3D%2F347x500%2FKWkPXM.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Zine cover" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Zine cover</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1hZ2UvMTE2NzU4MC83Njg0MzA3LnBuZw%3D%3D%2F347x500%2FfubDRC.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Interior — Stoneshore illustration" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1hZ2UvMTE2NzU4MC83Njg0MzA3LnBuZw%3D%3D%2F347x500%2FfubDRC.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Interior — Stoneshore illustration" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Interior — Stoneshore illustration</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1hZ2UvMTE2NzU4MC83Njg0MzA1LnBuZw%3D%3D%2F347x500%2FXSOA2A.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Rules page" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1hZ2UvMTE2NzU4MC83Njg0MzA1LnBuZw%3D%3D%2F347x500%2FXSOA2A.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Rules page" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Rules page</div></div>
                     </div>
@@ -114,13 +115,13 @@
     <div class="section-title">Similar systems</div>
     <div class="similar-systems-grid">
         <a href="/system/mothership.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/mothership.jpg" alt="Mothership hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/mothership.jpg" alt="Mothership hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Mothership</span>
           </a><a href="/system/triangle.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/triangle.jpg" alt="Triangle Agency hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/triangle.jpg" alt="Triangle Agency hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Triangle Agency</span>
           </a><a href="/system/delta-green.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/delta-green.jpg" alt="Delta Green hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/delta-green.jpg" alt="Delta Green hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Delta Green</span>
           </a>
     </div>

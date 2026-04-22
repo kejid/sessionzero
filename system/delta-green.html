@@ -28,8 +28,9 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap"></noscript>
+<link rel="stylesheet" href="/style.min.css">
 <script defer src="/lib/lucide.min.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Delta Green","alternativeHeadline":"\"Cthulhu works for the government. And so do you.\"","description":"Modern Lovecraftian horror. You are federal agents (FBI, CIA, NSA, CDC) secretly fighting cosmic horror. By day — bureaucracy. By night — impossible…","inLanguage":"en","genre":"Tabletop role-playing game","publisher":{"@type":"Organization","name":"Arc Dream Publishing"},"url":"https://sessionzero.games/system/delta-green.html","image":"https://sessionzero.games/og/delta-green.jpg","author":{"@type":"Person","name":"Kejid","url":"https://github.com/kejid"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Session Zero","item":"https://sessionzero.games/"},{"@type":"ListItem","position":2,"name":"Delta Green","item":"https://sessionzero.games/system/delta-green.html"}]}</script>
@@ -44,7 +45,7 @@
 </header>
 <main class="static-main">
   <article class="system-page static active">
-    <div class="hero-banner"><img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.delta-green.com%2Fcontent%2Fimages%2Fsize%2Fw1200%2F2024%2F08%2FTERROR.png&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="Delta Green hero art" loading="eager" decoding="async"><div class="hero-overlay"><div class="meta">Arc Dream Publishing</div><h1>Delta Green</h1></div></div>
+    <div class="hero-banner"><img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.delta-green.com%2Fcontent%2Fimages%2Fsize%2Fw1200%2F2024%2F08%2FTERROR.png&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="Delta Green hero art" loading="eager" decoding="async" fetchpriority="high"><div class="hero-overlay"><div class="meta">Arc Dream Publishing</div><h1>Delta Green</h1></div></div>
     <p class="tagline">"Cthulhu works for the government. And so do you."</p>
     <div class="quick-stats">
         <div class="qs"><span class="qs-label">Dice</span><span class="qs-value">d100 (d%)</span></div>
@@ -71,19 +72,19 @@
         <div class="gallery-grid">
             
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.delta-green.com%2Fcontent%2Fimages%2Fsize%2Fw720%2F2026%2F03%2FArmy-spread.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Army of the Third Eye" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.delta-green.com%2Fcontent%2Fimages%2Fsize%2Fw720%2F2026%2F03%2FArmy-spread.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Army of the Third Eye" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Army of the Third Eye</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.delta-green.com%2Fcontent%2Fimages%2Fsize%2Fw720%2F2026%2F03%2F1-THE-AGENT.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="The Agent" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.delta-green.com%2Fcontent%2Fimages%2Fsize%2Fw720%2F2026%2F03%2F1-THE-AGENT.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="The Agent" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">The Agent</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.delta-green.com%2Fcontent%2Fimages%2Fsize%2Fw720%2F2026%2F03%2FTHE-STRANGE-SHIP-1.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="The Strange Ship" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.delta-green.com%2Fcontent%2Fimages%2Fsize%2Fw720%2F2026%2F03%2FTHE-STRANGE-SHIP-1.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="The Strange Ship" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">The Strange Ship</div></div>
                     </div>
@@ -128,13 +129,13 @@
     <div class="section-title">Similar systems</div>
     <div class="similar-systems-grid">
         <a href="/system/mothership.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/mothership.jpg" alt="Mothership hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/mothership.jpg" alt="Mothership hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Mothership</span>
           </a><a href="/system/triangle.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/triangle.jpg" alt="Triangle Agency hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/triangle.jpg" alt="Triangle Agency hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Triangle Agency</span>
           </a><a href="/system/uvg.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/uvg.jpg" alt="Ultraviolet Grasslands hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/uvg.jpg" alt="Ultraviolet Grasslands hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Ultraviolet Grasslands</span>
           </a>
     </div>

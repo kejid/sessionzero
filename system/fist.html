@@ -28,8 +28,9 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap"></noscript>
+<link rel="stylesheet" href="/style.min.css">
 <script defer src="/lib/lucide.min.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"FIST","alternativeHeadline":"\"You are a disposable gun for hire. The mission is impossible. You take it anyway.\"","description":"FIST (Freelance Infantry Strike Team) is a lean, punchy TTRPG about paranormal mercenaries navigating the shadowy underbelly of the Cold War. Built on a…","inLanguage":"en","genre":"Tabletop role-playing game","publisher":{"@type":"Organization","name":"B. Everett Dutton / CLAYMORE"},"url":"https://sessionzero.games/system/fist.html","image":"https://sessionzero.games/og/fist.jpg","author":{"@type":"Person","name":"Kejid","url":"https://github.com/kejid"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Session Zero","item":"https://sessionzero.games/"},{"@type":"ListItem","position":2,"name":"FIST","item":"https://sessionzero.games/system/fist.html"}]}</script>
@@ -44,7 +45,7 @@
 </header>
 <main class="static-main">
   <article class="system-page static active">
-    <div class="hero-banner"><img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1nLzMxMjI4NzUucG5n%2Foriginal%2Fzku5yb.png&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="FIST hero art" loading="eager" decoding="async"><div class="hero-overlay"><div class="meta">B. Everett Dutton / CLAYMORE</div><h1>FIST</h1></div></div>
+    <div class="hero-banner"><img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1nLzMxMjI4NzUucG5n%2Foriginal%2Fzku5yb.png&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="FIST hero art" loading="eager" decoding="async" fetchpriority="high"><div class="hero-overlay"><div class="meta">B. Everett Dutton / CLAYMORE</div><h1>FIST</h1></div></div>
     <p class="tagline">"You are a disposable gun for hire. The mission is impossible. You take it anyway."</p>
     <div class="quick-stats">
         <div class="qs"><span class="qs-label">Dice</span><span class="qs-value">2d6</span></div>
@@ -71,7 +72,7 @@
         <div class="gallery-grid">
             
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1nLzMxMjI4NzUucG5n%2Foriginal%2Fzku5yb.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="FIST: Ultra Edition cover" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fimg.itch.zone%2FaW1nLzMxMjI4NzUucG5n%2Foriginal%2Fzku5yb.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="FIST: Ultra Edition cover" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">FIST: Ultra Edition cover</div></div>
                     </div>
@@ -109,13 +110,13 @@
     <div class="section-title">Similar systems</div>
     <div class="similar-systems-grid">
         <a href="/system/shadowdark.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/shadowdark.jpg" alt="Shadowdark hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/shadowdark.jpg" alt="Shadowdark hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Shadowdark</span>
           </a><a href="/system/ose.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/ose.jpg" alt="Old-School Essentials hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/ose.jpg" alt="Old-School Essentials hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Old-School Essentials</span>
           </a><a href="/system/into-the-odd.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/into-the-odd.jpg" alt="Into the Odd hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/into-the-odd.jpg" alt="Into the Odd hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Into the Odd</span>
           </a>
     </div>

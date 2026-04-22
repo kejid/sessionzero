@@ -864,9 +864,9 @@ function renderResults() {
         const isDef = deferred.includes(s.id);
         const actionsHTML = votingMode ? `
             <div class="result-card-actions">
-                <button class="rc-action-btn rc-move-up ${idx <= 0 ? 'rc-hidden' : ''}" onclick="moveSystem('${s.id}', -1, event)" title="${t('move_up')}"><i data-lucide="chevron-up"></i></button>
-                <button class="rc-action-btn rc-move-down ${idx >= total - 1 ? 'rc-hidden' : ''}" onclick="moveSystem('${s.id}', 1, event)" title="${t('move_down')}"><i data-lucide="chevron-down"></i></button>
-                <button class="rc-action-btn rc-defer-btn ${isDef ? 'active' : ''}" onclick="toggleDeferred('${s.id}', event)" title="${isDef ? t('status_play_now') : t('status_play_later')}"><i data-lucide="clock"></i></button>
+                <button class="rc-action-btn rc-move-up ${idx <= 0 ? 'rc-hidden' : ''}" onclick="moveSystem('${s.id}', -1, event)" title="${t('move_up')}" aria-label="${t('aria_move_up')}"><i data-lucide="chevron-up" aria-hidden="true"></i></button>
+                <button class="rc-action-btn rc-move-down ${idx >= total - 1 ? 'rc-hidden' : ''}" onclick="moveSystem('${s.id}', 1, event)" title="${t('move_down')}" aria-label="${t('aria_move_down')}"><i data-lucide="chevron-down" aria-hidden="true"></i></button>
+                <button class="rc-action-btn rc-defer-btn ${isDef ? 'active' : ''}" onclick="toggleDeferred('${s.id}', event)" title="${isDef ? t('status_play_now') : t('status_play_later')}" aria-label="${t('aria_defer')}"><i data-lucide="clock" aria-hidden="true"></i></button>
             </div>` : '';
         const posHTML = votingMode ? `<div class="result-card-pos">${posNum}</div>` : '';
         const dragAttrs = votingMode ? `draggable="true" data-system-id="${s.id}"` : '';
@@ -1028,10 +1028,14 @@ function filterNav(query) {
 function openSidebar() {
     document.querySelector('.sidebar').classList.add('open');
     document.querySelector('.sidebar-backdrop').classList.add('open');
+    document.body.classList.add('sidebar-open');
+    document.querySelector('.sidebar-close')?.focus();
 }
 function closeSidebar() {
     document.querySelector('.sidebar').classList.remove('open');
     document.querySelector('.sidebar-backdrop').classList.remove('open');
+    document.body.classList.remove('sidebar-open');
+    document.querySelector('.hamburger')?.focus();
 }
 
 function showPage(id, pushHistory = true) {
@@ -1129,6 +1133,20 @@ document.addEventListener('keydown', e => {
     if (editorOverlay && !editorOverlay.classList.contains('hidden')) {
         if (e.key === 'Escape') closeEditor();
         return;
+    }
+    // Mobile sidebar: Escape closes, Tab traps focus inside drawer
+    if (document.body.classList.contains('sidebar-open')) {
+        if (e.key === 'Escape') { closeSidebar(); return; }
+        if (e.key === 'Tab') {
+            const sidebar = document.querySelector('.sidebar');
+            const focusables = sidebar.querySelectorAll('button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])');
+            if (!focusables.length) return;
+            const first = focusables[0];
+            const last = focusables[focusables.length - 1];
+            if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+            else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+            return;
+        }
     }
     if (e.key === 'ArrowRight' || e.key === 'PageDown') { e.preventDefault(); nextSystem(); }
     if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); prevSystem(); }

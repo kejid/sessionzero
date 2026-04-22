@@ -28,8 +28,9 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap"></noscript>
+<link rel="stylesheet" href="/style.min.css">
 <script defer src="/lib/lucide.min.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Draw Steel","alternativeHeadline":"\"Every strike is cinematic. Misses don't exist. The only question is — how awesome are you.\"","description":"Heroic fantasy of a new kind. Not Tolkien-esque, not D&D-esque. The world of the Order is a place where heroes truly change history. Demons, knights,…","inLanguage":"en","genre":"Tabletop role-playing game","publisher":{"@type":"Organization","name":"MCDM Productions / Matt Colville"},"url":"https://sessionzero.games/system/draw-steel.html","image":"https://sessionzero.games/og/draw-steel.jpg","author":{"@type":"Person","name":"Kejid","url":"https://github.com/kejid"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Session Zero","item":"https://sessionzero.games/"},{"@type":"ListItem","position":2,"name":"Draw Steel","item":"https://sessionzero.games/system/draw-steel.html"}]}</script>
@@ -44,7 +45,7 @@
 </header>
 <main class="static-main">
   <article class="system-page static active">
-    <div class="hero-banner" style="background: linear-gradient(135deg, #4a1942, #1a1a2e, #0f3460);"><img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.belloflostsouls.net%2Fwp-content%2Fuploads%2F2025%2F08%2FDrawSteel_Monsters_header.jpg&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="Draw Steel hero art" loading="eager" decoding="async"><div class="hero-overlay"><div class="meta">MCDM Productions / Matt Colville</div><h1>Draw Steel</h1></div></div>
+    <div class="hero-banner" style="background: linear-gradient(135deg, #4a1942, #1a1a2e, #0f3460);"><img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.belloflostsouls.net%2Fwp-content%2Fuploads%2F2025%2F08%2FDrawSteel_Monsters_header.jpg&amp;w=1200&amp;h=600&amp;fit=cover&amp;output=webp&amp;q=80" alt="Draw Steel hero art" loading="eager" decoding="async" fetchpriority="high"><div class="hero-overlay"><div class="meta">MCDM Productions / Matt Colville</div><h1>Draw Steel</h1></div></div>
     <p class="tagline">"Every strike is cinematic. Misses don't exist. The only question is — how awesome are you."</p>
     <div class="quick-stats">
         <div class="qs"><span class="qs-label">Dice</span><span class="qs-value">2d10</span></div>
@@ -71,25 +72,25 @@
         <div class="gallery-grid">
             
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.rascal.news%2Fcontent%2Fimages%2F2025%2F06%2FThomas-2-.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Draw Steel heroes" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.rascal.news%2Fcontent%2Fimages%2F2025%2F06%2FThomas-2-.png&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Draw Steel heroes" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Draw Steel heroes</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fi.ytimg.com%2Fvi%2F5n4w7DQhXGg%2Fmaxresdefault.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Tactical combat" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fi.ytimg.com%2Fvi%2F5n4w7DQhXGg%2Fmaxresdefault.jpg&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Tactical combat" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Tactical combat</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fshop.mcdmproductions.com%2Fcdn%2Fshop%2Ffiles%2FDrawSteel_Heroes_300x.png%3Fv%3D1773949925&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Draw Steel: Heroes" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fshop.mcdmproductions.com%2Fcdn%2Fshop%2Ffiles%2FDrawSteel_Heroes_300x.png%3Fv%3D1773949925&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Draw Steel: Heroes" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Draw Steel: Heroes</div></div>
                     </div>
                 </div>
                 <div class="gallery-item static">
-                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fshop.mcdmproductions.com%2Fcdn%2Fshop%2Ffiles%2FDrawSteel_Monsters_300x.png%3Fv%3D1773949925&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Draw Steel: Monsters" loading="lazy" decoding="async">
+                    <img src="https://wsrv.nl/?url=https%3A%2F%2Fshop.mcdmproductions.com%2Fcdn%2Fshop%2Ffiles%2FDrawSteel_Monsters_300x.png%3Fv%3D1773949925&amp;w=300&amp;h=300&amp;fit=cover&amp;output=webp&amp;q=80" alt="Draw Steel: Monsters" loading="lazy" decoding="async" fetchpriority="low">
                     <div class="gallery-overlay">
                         <div><div class="gallery-caption">Draw Steel: Monsters</div></div>
                     </div>
@@ -113,13 +114,13 @@
     <div class="section-title">Similar systems</div>
     <div class="similar-systems-grid">
         <a href="/system/mothership.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/mothership.jpg" alt="Mothership hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/mothership.jpg" alt="Mothership hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Mothership</span>
           </a><a href="/system/triangle.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/triangle.jpg" alt="Triangle Agency hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/triangle.jpg" alt="Triangle Agency hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Triangle Agency</span>
           </a><a href="/system/delta-green.html" class="similar-system-card">
-            <img src="https://sessionzero.games/og/delta-green.jpg" alt="Delta Green hero art" loading="lazy" decoding="async">
+            <img src="https://sessionzero.games/og/delta-green.jpg" alt="Delta Green hero art" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">Delta Green</span>
           </a>
     </div>
