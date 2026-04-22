@@ -2,7 +2,9 @@
   "scripts": {
     "start": "npx serve . -l 3000",
     "test": "npx playwright test",
-    "bundle": "bash -c 'cat data/systems/_registry.js data/systems/[!_]*.js > data/systems-bundle.js'"
+    "bundle:js": "bash -c 'cat data/systems/_registry.js data/systems/[!_]*.js > data/systems-bundle.js'",
+    "bundle:pages": "node scripts/generate-pages.js",
+    "bundle": "npm run bundle:js && npm run bundle:pages"
   },
   "devDependencies": {
     "@playwright/test": "^1.59.1",
