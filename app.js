@@ -30,6 +30,11 @@ const SETTING_TAG_I18N = {
     modern: 'tag_modern', postapoc: 'tag_postapoc', historical: 'tag_historical',
     weird: 'tag_weird', 'urban-fantasy': 'tag_urban_fantasy',
 };
+
+function track(event) {
+    window.goatcounter?.count?.({ path: event, event: true });
+}
+
 function tagLabel(tag) {
     const key = TAG_I18N[tag] || SETTING_TAG_I18N[tag] || 'tag_' + tag;
     const val = t(key);
@@ -369,6 +374,7 @@ function startApp() {
     localStorage.setItem('ttrpg-players', JSON.stringify(PLAYERS));
     document.getElementById('setup-overlay').classList.add('hidden');
     initApp();
+    track('start-session');
 }
 
 function resetPlayers() {
@@ -391,6 +397,7 @@ function skipSetup() {
     document.getElementById('setup-overlay').classList.add('hidden');
     document.body.classList.add('browse-mode');
     initApp();
+    track('skip-setup');
 }
 
 function enableVoting() {
@@ -406,6 +413,7 @@ function enableVoting() {
         overlay.classList.remove('hidden');
         refreshIcons();
     }
+    track('enable-voting');
 }
 
 let currentView = localStorage.getItem('ttrpg-view') || 'cards';
@@ -674,6 +682,7 @@ function exportResults() {
     const textarea = document.getElementById('export-text');
     textarea.value = text;
     document.getElementById('export-overlay').classList.remove('hidden');
+    track(browseMode ? 'export-browse' : 'export-vote');
 }
 
 function copyExport() {
@@ -683,6 +692,7 @@ function copyExport() {
         const orig = btn.textContent;
         btn.textContent = t('copied');
         setTimeout(() => { btn.textContent = orig; }, 1500);
+        track('copy-export');
     });
 }
 
