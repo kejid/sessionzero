@@ -136,7 +136,7 @@ const STR = {
     lang_en: 'EN',
     lang_ru: 'RU',
     about_title: 'About — Session Zero',
-    about_meta_desc: 'Session Zero is a free tool that helps your tabletop RPG group decide what to play next. Browse systems, vote together, agree on a shortlist.',
+    about_meta_desc: 'Can\'t agree on what TTRPG to play next? Session Zero is a free tool that lets your group vote together and see a shortlist. 44 systems, no signup, bilingual.',
     article_genre: 'Tabletop role-playing game',
   },
   ru: {
@@ -162,7 +162,7 @@ const STR = {
     lang_en: 'EN',
     lang_ru: 'RU',
     about_title: 'О проекте — Session Zero',
-    about_meta_desc: 'Session Zero — бесплатный инструмент, который помогает вашей TTRPG-группе выбрать, во что играть дальше. Смотрите системы, голосуйте вместе, договаривайтесь о шортлисте.',
+    about_meta_desc: 'Не можете договориться, во что играть следующей кампанией? Session Zero — бесплатный инструмент для группового голосования с шортлистом. 44 системы, без регистрации, билингв.',
     article_genre: 'Настольная ролевая игра',
   },
 };
@@ -255,7 +255,7 @@ function renderSystemPage(id, sys, lang) {
   const enUrl = `${SITE}/system/${id}.html`;
   const ruUrl = `${SITE}/ru/system/${id}.html`;
 
-  const ogImage = sys.heroImage ? heroFull(sys.heroImage) : FALLBACK_OG;
+  const ogImage = `${SITE}/og/${id}.jpg`;
   const metaDescSource = description || tagline || name;
   const metaDesc = truncate(metaDescSource, 155);
 
@@ -452,7 +452,7 @@ function renderAbout(lang) {
     <p class="tagline">A small tool that helps your tabletop RPG group decide what to play next.</p>
 
     <div class="section-title">What is Session Zero?</div>
-    <div class="setting-block"><p>Session Zero is a free, browser-based tool that helps a tabletop RPG group agree on the next game. Browse a curated catalog of 44+ systems — OSR, PbtA, FitD, narrative, solo, sci-fi, horror, weird — read human-written summaries, then vote together. The tool shows you which systems every player is actually excited about, and which ones got vetoed. No accounts, no data collection: everything lives in your browser.</p></div>
+    <div class="setting-block"><p>Session Zero solves a specific problem: your TTRPG group can't agree on what to play next. One player wants D&amp;D 5e, another wants something weird, the GM wants prep-light. Session Zero compresses that discussion into a structured vote. Each player browses human-written summaries of 44+ systems (OSR, PbtA, FitD, narrative, solo, sci-fi, horror, weird), marks the ones they'd actually be excited about, and the group sees a shortlist together. No accounts, no data collection — everything lives in your browser.</p></div>
 
     <div class="section-title">The problem</div>
     <div class="setting-block"><p>Picking a new game as a group is the single biggest reason campaigns die before session one. One player wants D&amp;D 5e, another wants something weird, the GM wants prep-light. The conversation drags across three Discord channels for two weeks and then the group just... plays D&amp;D again, or doesn't play at all. Session Zero collapses that conversation into ten minutes of structured voting.</p></div>
@@ -472,7 +472,7 @@ function renderAbout(lang) {
     <div class="setting-block"><p>Goals: keep the catalog curated (not comprehensive — Wargamer does that better), add comparison articles for specific use cases (solo, small groups, OSR vs PbtA), and keep everything free and ad-free. If you want to support the project, <a href="https://github.com/kejid/sessionzero" target="_blank" rel="noopener">star the repo</a> or tell a group you play with.</p></div>
 
     <div class="vote-cta">
-      <a href="/" class="vote-cta-btn">Browse the catalog →</a>
+      <a href="/" class="vote-cta-btn">Start your group's session zero →</a>
     </div>
   `;
 
@@ -481,7 +481,7 @@ function renderAbout(lang) {
     <p class="tagline">Небольшой инструмент, который помогает вашей TTRPG-группе выбрать, во что играть дальше.</p>
 
     <div class="section-title">Что такое Session Zero?</div>
-    <div class="setting-block"><p>Session Zero — это бесплатный веб-инструмент, который помогает настольно-ролевой группе договориться, во что играть. Каталог из 44+ систем: OSR, PbtA, FitD, нарративные, соло, sci-fi, хоррор, странное. Каждая система описана человеком, с цитатами игроков с Reddit и ссылками на бесплатные материалы. Аккаунты не нужны, всё хранится в вашем браузере.</p></div>
+    <div class="setting-block"><p>Session Zero решает конкретную проблему: ваша TTRPG-группа не может договориться, во что играть следующей кампанией. Один хочет D&amp;D 5e, второй — что-то необычное, ГМ хочет минимум препа. Session Zero сжимает это в структурированное голосование: каждый игрок смотрит описания 44+ систем (OSR, PbtA, FitD, нарративные, соло, sci-fi, хоррор, странное), отмечает те, в которые реально хочет сыграть, и группа видит общий шортлист. Без регистраций, без сбора данных — всё хранится в вашем браузере.</p></div>
 
     <div class="section-title">Проблема</div>
     <div class="setting-block"><p>Выбор новой системы — главная причина, по которой кампании разваливаются ещё до первой сессии. Один хочет D&amp;D 5e, второй — что-то необычное, ГМ хочет минимум препа. Дискуссия растягивается на две недели, а потом группа всё равно играет в D&amp;D — или не играет вообще. Session Zero сжимает всё это в десять минут структурированного голосования.</p></div>
@@ -501,7 +501,7 @@ function renderAbout(lang) {
     <div class="setting-block"><p>Цели: держать каталог курированным (не список-всех-систем — Wargamer делает это лучше), добавлять статьи-сравнения для конкретных задач (соло, маленькие группы, OSR vs PbtA), держать всё бесплатным и без рекламы. Если хочется поддержать — <a href="https://github.com/kejid/sessionzero" target="_blank" rel="noopener">поставьте звёзду</a> или расскажите своей группе.</p></div>
 
     <div class="vote-cta">
-      <a href="/" class="vote-cta-btn">К каталогу →</a>
+      <a href="/" class="vote-cta-btn">Начать Session Zero с группой →</a>
     </div>
   `;
 

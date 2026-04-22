@@ -7,3 +7,6 @@ data/images.json
 data/reviews-research.md
 docs/
 test-results/
+.cache/
+__pycache__/
+data/systems-bundle.js'
