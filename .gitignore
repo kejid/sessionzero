@@ -10,3 +10,4 @@ test-results/
 .cache/
 __pycache__/
 data/systems-bundle.js'
+data/rpg-wiki-gamerec.json
