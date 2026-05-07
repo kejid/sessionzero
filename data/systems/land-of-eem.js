@@ -11,7 +11,7 @@ registerSystem("land-of-eem", {
   "players": "3–5",
   "complexity": 2,
   "foundryStatus": "None", // CHECK: no official or community Foundry module found as of 2026-05
-  "heroImage": "https://joelchrono.xyz/assets/img/blogs/2026-02-03-land-of-eem.webp",
+  "heroImage": "https://sessionzero.games/images/heroes/land-of-eem.webp",
   "playstyleTags": [
     "explore",
     "narrative",
