@@ -59,13 +59,11 @@ registerSystem("one-ring", {
     }
   ],
   "quotes": [
+
+    // VERIFIED-AT: https://freeleaguepublishing.com/games/the-one-ring/ (press blurb credited to Tabletop Gaming Magazine)
     {
-      "text": "The One Ring is the ONLY Tolkien RPG that actually feels like Tolkien. It's not about killing things. It's about the journey, the friendships, and standing up to darkness even when you're afraid. My group cried during our Rivendell fellowship phase.",
-      "author": "u/shire_folk, r/TheOneRing"
-    },
-    {
-      "text": "The Shadow mechanic is a masterpiece. Watching a player's hobbit slowly succumb to weariness and despair was more dramatic than any dragon fight. This game GETS Tolkien.",
-      "author": "u/middle_earth_gm, r/rpg"
+      "text": "Must play. A staggeringly beautiful adaptation of Middle-earth.",
+      "author": "Tabletop Gaming Magazine"
     }
   ],
   "ru": {
@@ -114,6 +112,10 @@ registerSystem("one-ring", {
       {
         "name": "Официальный лист"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Обязательно сыграть. Ошеломляюще красивая адаптация Средиземья." }
     ]
   },
   "en": {

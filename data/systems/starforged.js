@@ -1,7 +1,7 @@
 registerSystem("starforged", {
   "groups": {
     "default": { "key": "narrative", "order": 16 },
-    "family": { "key": "standalone", "order": 11 },
+    "family": { "key": "standalone", "order": 11.5 },
     "genre": { "key": "sci-fi", "order": 10 },
     "solo": { "key": "solo-adventure", "order": 2 }
   },
@@ -63,7 +63,10 @@ registerSystem("starforged", {
     { "icon": "anchor" },
     { "icon": "feather" }
   ],
-  "quotes": [{"text": "The oracles don't just tell you what happens — they hand you a weird detail and trust you to build the world around it. I've ended up in situations I never would have invented on my own.", "author": "u/void_cartographer, r/solorpg"}, {"text": "For developing a story with structure that still manages to surprise me, nothing beats this. It's become my favorite solo tabletop system, full stop.", "author": "popcult.blog, solo RPG review series"}],
+  "quotes": [
+    // VERIFIED-AT: https://www.enworld.org/threads/a-review-of-ironsworn-starforged.688914/
+    {"text": "Ironsworn: Starforged is an excellent follow up to the original and is highly recommended for sci-fi fans who want to explore the final frontier without the need for a GM.", "author": "Rob Wieland, EN World"}
+  ],
   "ru": {
     "tagShort": "Соло sci-fi PbtA RPG",
     "tagline": "«Поклянитесь на железе. Выживите в кузнице звёзд.»",
@@ -105,6 +108,10 @@ registerSystem("starforged", {
       { "name": "Бесплатная PDF (itch.io)" },
       { "name": "Листы и плейкит" },
       { "name": "Генератор оракулов" }
+    ]
+  ,
+    "quotes": [
+      { "text": "Ironsworn: Starforged — отличное продолжение оригинала и горячо рекомендована sci-fi-фанатам, что хотят исследовать последний фронтир без ведущего." }
     ]
   },
   "en": {

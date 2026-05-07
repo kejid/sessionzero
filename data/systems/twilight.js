@@ -59,13 +59,11 @@ registerSystem("twilight", {
     }
   ],
   "quotes": [
+
     {
-      "text": "We spent an entire session deciding whether to trade our last can of diesel for antibiotics. No combat, no dice rolls for most of it. Just pure, agonizing decision-making. Best session we've had.",
-      "author": "u/cold_war_vet, r/twilight2000"
-    },
-    {
-      "text": "T2K makes you feel the weight of every bullet. My players went from \"I shoot everything\" to \"can we negotiate?\" in exactly one session. That's the game working as intended.",
-      "author": "u/sandbox_soldier, r/rpg"
+      // VERIFIED-AT: https://cannibalhalflinggaming.com/2021/11/17/twilight2000-review/
+      "text": "Free League took something old and legitimately distilled many of the things we liked about it originally, while removing a lot of the cruft that made it a product of the 1980s.",
+      "author": "Aaron Marks, Cannibal Halfling Gaming"
     }
   ],
   "ru": {
@@ -114,6 +112,10 @@ registerSystem("twilight", {
       {
         "name": "Листы персонажей"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Free League взяла что-то старое и честно переплавила многое из того, что нам в этом нравилось изначально, попутно вычистив весь мусор, делавший её продуктом 1980-х." }
     ]
   },
   "en": {

@@ -60,13 +60,12 @@ registerSystem("triangle", {
     }
   ],
   "quotes": [
+
+
+    // VERIFIED-AT: https://www.polygon.com/tabletop-games/492549/triangle-agency-ttrpg-review-impressions-normal-briefcase/
     {
-      "text": "Triangle Agency scratches that SCP itch perfectly. The anomaly generator is brilliant — we've played 10 sessions and every mission felt completely different.",
-      "author": "u/containment_breach, r/rpg"
-    },
-    {
-      "text": "The bureaucracy mechanics are hilarious and terrifying. Our best session was a debrief where we had to explain to management why we let an anomaly go. It felt like The Office meets X-Files.",
-      "author": "u/classified_agent, r/rpg"
+      "text": "The punchline-per-page ratio is astronomical.",
+      "author": "Rowan Zeoli, Polygon"
     }
   ],
   "ru": {
@@ -118,6 +117,10 @@ registerSystem("triangle", {
       {
         "name": "Официальные листы"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Соотношение шуток на страницу — астрономическое." }
     ]
   },
   "en": {

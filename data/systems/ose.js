@@ -25,12 +25,14 @@ registerSystem("ose", {
   ],
   "quotes": [
     {
-      "text": "I ran this for a 5e group as a 'one-shot' in February. We're now 14 sessions into a Dolmenwood campaign. The reaction roll system alone changed how I GM forever.",
-      "author": "u/moldvay_revival, r/osr"
+      // VERIFIED-AT: https://unwinnable.com/2020/02/10/old-school-essentials/
+      "text": "This is about as perfect a set of old school rules as we've encountered – light, fast, streamlined, concise and polished to gleaming.",
+      "author": "Stu Horvath, Unwinnable (Vintage RPG, Feb 2020)"
     },
     {
-      "text": "The layout is the product. I can find any rule mid-session in seconds. It sounds like a small thing until you've wasted 10 minutes hunting through a 400-page hardcover mid-fight.",
-      "author": "u/BX_forever, r/rpg"
+      // VERIFIED-AT: https://therewillbe.games/articles-ttrpg-reviews/8556-play-matt-old-school-essentials-review
+      "text": "As a dungeon master, it's a dream come true: fewer rules to juggle, easier to find the ones I do forget.",
+      "author": "Matt Thrower, There Will Be Games"
     }
   ],
   "resources": [
@@ -104,6 +106,11 @@ registerSystem("ose", {
       {
         "name": "Basic Rules — бесплатный PDF"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Это, пожалуй, самый совершенный набор олдскульных правил, который нам встречался — лёгкий, быстрый, выверенный, лаконичный и отполированный до блеска." },
+      { "text": "Для мастера это сбывшаяся мечта: меньше правил жонглировать, и забытое легче отыскать." }
     ]
   },
   "en": {

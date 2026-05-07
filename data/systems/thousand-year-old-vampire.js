@@ -1,7 +1,7 @@
 registerSystem("thousand-year-old-vampire", {
   "groups": {
     "default": { "key": "narrative", "order": 17 },
-    "family": { "key": "standalone", "order": 12 },
+    "family": { "key": "standalone", "order": 12.5 },
     "genre": { "key": "narrative-weird", "order": 7 },
     "solo": { "key": "solo-journaling", "order": 1 }
   },
@@ -53,13 +53,15 @@ registerSystem("thousand-year-old-vampire", {
     { "icon": "skull" }
   ],
   "quotes": [
+    // VERIFIED-AT: https://thousandyearoldvampire.com/products/thousand-year-old-vampire
     {
-      "text": "I've played hundreds of TTRPGs. TYOV is the only one that made me genuinely mourn a fictional person I invented myself. When I lost the memory of my mortal wife, I had to stop and sit with it for a moment.",
-      "author": "u/inkandbone_gm, r/Solo_Roleplaying"
+      "text": "One of the most critically acclaimed solo journaling games ever made...",
+      "author": "Charlie L Hall, Polygon"
     },
+    // VERIFIED-AT: https://www.meeplelikeus.co.uk/thousand-year-old-vampire-2020/
     {
-      "text": "The genius is that forgetting is the mechanic. You don't just read about your vampire losing their humanity — you actually lose the notes. Those memories are gone. It's the most elegant horror design I've seen.",
-      "author": "u/design_dark, r/rpg"
+      "text": "Most important are your memory slots, and it's here where Thousand Year Old Vampire becomes a genuinely poignant experience.",
+      "author": "Michael Heron, Meeple Like Us"
     }
   ],
   "ru": {
@@ -96,6 +98,11 @@ registerSystem("thousand-year-old-vampire", {
       { "name": "Официальный сайт" },
       { "name": "Itch.io (PDF, $15)" },
       { "name": "Купить PDF" }
+    ]
+  ,
+    "quotes": [
+      { "text": "Одна из самых высоко оценённых критикой соло-дневниковых игр всех времён…" },
+      { "text": "Главное — слоты памяти; именно здесь Thousand Year Old Vampire превращается в по-настоящему пронзительный опыт." }
     ]
   },
   "en": {

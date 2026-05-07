@@ -23,13 +23,15 @@ registerSystem("fist", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://claymorerpgs.itch.io/fist
     {
-      "text": "Character creation is just: roll two traits, combine them, suddenly you ARE an amnesiac beekeeper who punches so hard reality cracks. We were ready to play in 10 minutes.",
-      "author": "u/wetwork_wednesday, r/rpg"
+      "text": "FIST is legitimately one of the most fun things I've brought to my table. It's PbtA that plays like OSR, and it's Metal Gear by way of Hellboy.",
+      "author": "Richard Kelly, Sprinting Owl"
     },
+    // VERIFIED-AT: https://claymorerpgs.itch.io/fist
     {
-      "text": "Ran a one-shot with zero prep using only the Intel Matrix tables. The mission basically wrote itself. One player survived. We talked about it for a week.",
-      "author": "u/coldwar_cryptid, r/solorpg"
+      "text": "With FIST, you can sit down, roll some dice, and have a fun, flavorful character in five minutes flat. You might get them killed five minutes later, but if so? Rinse, repeat, and you're back in the game.",
+      "author": "Jess Levine, I Have the High Ground"
     }
   ],
   "resources": [
@@ -103,6 +105,11 @@ registerSystem("fist", {
       {
         "name": "Бесплатный квикстарт"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "FIST — без шуток, одно из самых весёлых, что я приносил за стол. PbtA, играющаяся как OSR, и Metal Gear, увиденный глазами Хеллбоя." },
+      { "text": "С FIST можно сесть, бросить кубики и через пять минут получить колоритного персонажа. Через ещё пять — он, возможно, погибнет, но это не страшно: повтор, и ты снова в игре." }
     ]
   },
   "en": {

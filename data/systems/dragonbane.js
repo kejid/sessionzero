@@ -69,13 +69,12 @@ registerSystem("dragonbane", {
     }
   ],
   "quotes": [
+
+
+    // VERIFIED-AT: https://screenrant.com/dragonbane-review-ttrpg-tabletop-rpg/ (2023-08-03)
     {
-      "text": "Dragonbane is the fantasy RPG I've been waiting for. It has the simplicity of OSR, the production quality of 5e, and the design philosophy of Free League. It's my forever game now.",
-      "author": "u/dragon_slayer_se, r/dragonbane"
-    },
-    {
-      "text": "The initiative card system is genius. Every round feels fresh. No more \"I go first, I always go first, boring.\" Also, duck people. DUCK PEOPLE.",
-      "author": "u/quack_knight, r/rpg"
+      "text": "Of the many TTRPGs played this year, Dragonbane stands out as one of the best.",
+      "author": "Austin King, Screen Rant"
     }
   ],
   "ru": {
@@ -130,6 +129,10 @@ registerSystem("dragonbane", {
       {
         "name": "Quickstart The Sinking Tower"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Из многих TTRPG, что я сыграл в этом году, Dragonbane выделяется как одна из лучших." }
     ]
   },
   "en": {

@@ -63,13 +63,15 @@ registerSystem("alien", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://www.wargamer.com/alien-rpg/evolved-review
     {
-      "text": "We ran Chariot of the Gods. By the end, two players were screaming at each other in-character about whether to blow the airlock. Nobody was acting. That stress mechanic is REAL.",
-      "author": "u/xenomorph_gm, r/alienrpg"
+      "text": "Stealth mode is by far my favorite part of the Alien RPG. It's the height of the game's tension and the closest we get to the cinematic horror of the Alien movies.",
+      "author": "Mollie Russell, Wargamer"
     },
+    // VERIFIED-AT: https://www.geeknative.com/69383/space-is-hell-a-review-of-free-league-publishings-alien-rpg/
     {
-      "text": "Best licensed RPG ever made. It's not a cash grab — it genuinely captures the feel of the first two movies. The campaign mode is surprisingly deep too.",
-      "author": "u/colonial_marine, r/rpg"
+      "text": "Stress is essential in Alien. You don't count bullets or uncinematic concerns like that, but once your character is stressed enough they'll stop firing their gun and, well, start to be cannon fodder.",
+      "author": "Andrew Girdwood, Geek Native"
     }
   ],
   "ru": {
@@ -121,6 +123,11 @@ registerSystem("alien", {
       {
         "name": "Генератор персонажей"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Режим скрытности — мой любимый элемент Alien RPG. Это пик напряжения, и ближайшее, что в TTRPG приближается к кинематографичному ужасу фильмов про Чужого." },
+      { "text": "Стресс — сердцевина Alien. Патроны и подобные некинематографичные мелочи здесь не считают, но если персонаж достаточно напряжён — он перестанет стрелять и превратится в пушечное мясо." }
     ]
   },
   "en": {

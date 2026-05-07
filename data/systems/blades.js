@@ -60,13 +60,15 @@ registerSystem("blades", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://www.shutupandsitdown.com/rpg-review-blades-in-the-dark/
     {
-      "text": "The flashback mechanic singlehandedly fixed my biggest RPG frustration: 2-hour planning sessions where nothing happens. Now we jump straight into the action and plan retroactively. GENIUS.",
-      "author": "u/doskvol_scoundrel, r/bladesinthedark"
+      "text": "Imagine a Georgian George Clooney walking everybody through an Oceans 11-style heist, revealing bits of the plan as obstacles come up.",
+      "author": "Quinns, Shut Up & Sit Down"
     },
+    // VERIFIED-AT: https://www.meeplelikeus.co.uk/blades-in-the-dark-2016/
     {
-      "text": "Blades changed how I think about RPG design. Position and Effect is the most elegant resolution mechanic I've seen. Every other game feels clunky after playing this.",
-      "author": "u/narrative_gm, r/rpg"
+      "text": "Blades in the Dark is an extraordinary system – a work of proper genius – and a worthy recipient of the third five star rating we've ever given out for the site.",
+      "author": "Michael Heron, Meeple Like Us"
     }
   ],
   "ru": {
@@ -111,6 +113,11 @@ registerSystem("blades", {
       {
         "name": "Лист фракций"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Представь Джорджа Клуни в эпоху Регентства, который ведёт команду через ограбление в стиле «11 друзей Оушена», раскрывая части плана по мере того, как возникают препятствия." },
+      { "text": "Blades in the Dark — выдающаяся система, настоящая гениальность, и достойная обладательница третьей в истории сайта оценки в пять звёзд." }
     ]
   },
   "en": {

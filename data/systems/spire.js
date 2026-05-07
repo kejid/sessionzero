@@ -29,13 +29,15 @@ registerSystem("spire", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://www.enworld.org/threads/it%E2%80%99s-hard-to-be-a-saint-in-the-city-of-spire.705023/
     {
-      "text": "A PC got her reputation track filled in session 3. The Fallout meant an aelfir magistrate now has her description. She's been running a double life ever since. No other game creates consequences like this.",
-      "author": "u/downspire_ministry, r/rpg"
+      "text": "A moody game in a dark city full of spies, revolutionaries and strange magic.",
+      "author": "Rob Wieland, EN World"
     },
+    // VERIFIED-AT: https://gnomestew.com/spire-the-city-must-fall-review/
     {
-      "text": "The setting is doing things I've never seen in a fantasy RPG. It's about occupation and resistance and the cost of being the villain in someone else's story. Heavy, brilliant, completely unlike D&D.",
-      "author": "u/carrion_priest_77, r/narrativerpg"
+      "text": "The mechanics of stress and fallout are both familiar and combined in a new and exciting fashion, and I think that even people that are a little burned out on fantasy may want to keep an eye on these mechanics and how they managed to promote and resolve story elements.",
+      "author": "Jared Rascher, Gnome Stew"
     }
   ],
   "resources": [
@@ -115,6 +117,11 @@ registerSystem("spire", {
       {
         "name": "Лист персонажа"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Атмосферная игра в тёмном городе, кишащем шпионами, революционерами и странной магией." },
+      { "text": "Механика стресса и последствий и знакома, и собрана новым, увлекательным образом — стоит присмотреться даже тем, кто немного выгорел на фэнтези: ради того, как через эту механику двигаются и разрешаются сюжетные элементы." }
     ]
   },
   "en": {

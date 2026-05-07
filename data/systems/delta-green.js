@@ -65,13 +65,12 @@ registerSystem("delta-green", {
     }
   ],
   "quotes": [
+
+
+    // VERIFIED-AT: https://www.enworld.org/threads/the-agents-handbook-reintroduces-us-to-the-worlds-of-delta-green.663899/
     {
-      "text": "Delta Green's \"bonds\" system is the most devastating mechanic in any RPG. Watching your agent slowly lose his family because of the missions is heartbreaking. After 6 sessions my character had no bonds left. That hit harder than any monster.",
-      "author": "u/case_officer, r/DeltaGreenRPG"
-    },
-    {
-      "text": "The published operations are insane quality. \"Night at the Opera\" alone has enough content for a year of play. Every scenario feels like a mini horror movie.",
-      "author": "u/green_box, r/rpg"
+      "text": "It is the King (in Yellow) of Lovecraftian role-playing.",
+      "author": "Christopher Helton, EN World (2016)"
     }
   ],
   "ru": {
@@ -123,6 +122,10 @@ registerSystem("delta-green", {
       {
         "name": "Agent Dossiers"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Это Король (в Жёлтом) лавкрафтовских ролевых игр." }
     ]
   },
   "en": {

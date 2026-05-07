@@ -67,12 +67,14 @@ registerSystem("uvg", {
   ],
   "quotes": [
     {
-      "text": "UVG is the most beautiful RPG book I own. Every page makes me want to run a session. Luka Rejec's art IS the game — it does more worldbuilding than 10 pages of lore text.",
-      "author": "u/psychedelic_gm, r/osr"
+      // VERIFIED-AT: https://coinsandscrolls.blogspot.com/2019/10/osr-review-ultraviolet-grasslands.html
+      "text": "It's a gamebook, not a novel or a tasteful heap of prose. It is a finely crafted tool to create stories.",
+      "author": "Skerples, Coins and Scrolls"
     },
     {
-      "text": "We've been running UVG with Cairn for 20 sessions. Every week the group arrives at a new point and it's always something completely unexpected. The caravan management adds just enough crunch to ground the weirdness.",
-      "author": "u/violet_city_trader, r/rpg"
+      // VERIFIED-AT: https://moltensulfur.com/post/the-hidden-treasure-of-bahadur-shah-ultraviolet-grasslands-review/
+      "text": "Ultraviolet Grasslands is a phenomenal RPG. My players had enormous fun with it, and I had enormous fun running it.",
+      "author": "Tristan Zimmerman, Molten Sulfur Blog"
     }
   ],
   "ru": {
@@ -127,6 +129,11 @@ registerSystem("uvg", {
       {
         "name": "Character Sheets"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Это игровая книга, а не роман и не элегантная куча прозы. Это тонко сработанный инструмент для создания историй." },
+      { "text": "Ultraviolet Grasslands — феноменальная RPG. Игроки получили море удовольствия, и я как мастер получил его не меньше." }
     ]
   },
   "en": {

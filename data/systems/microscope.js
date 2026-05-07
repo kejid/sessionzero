@@ -50,13 +50,15 @@ registerSystem("microscope", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://matthewjconstantine.com/2020/06/08/tabletop-rpg-review-microscope/
     {
-      "text": "Microscope is the best session zero tool ever created. We used it to build our campaign world and the players are SO much more invested because they created the history themselves.",
-      "author": "u/worldbuilder_gm, r/rpg"
+      "text": "If you're a writer or a frequent game master for RPGs, I think it deserves a place in your library.",
+      "author": "Matthew J. Constantine, matthewjconstantine.com"
     },
+    // VERIFIED-AT: https://kathylbrown.com/microscope-by-ben-robbins-a-game-review/
     {
-      "text": "Playing Microscope backwards — defining the end of a civilization first, then exploring why it happened — was the most mind-bending storytelling experience I've had at a table.",
-      "author": "u/fractal_historian, r/rpg"
+      "text": "Microscope is one of my favorite collaborative storytelling games.",
+      "author": "Kathy L. Brown, kathylbrown.com"
     }
   ],
   "ru": {
@@ -99,6 +101,11 @@ registerSystem("microscope", {
       {
         "name": "Официальный сайт"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Если вы писатель или часто водите RPG, ей точно место на вашей полке." },
+      { "text": "Microscope — одна из моих любимых игр про совместное сочинительство." }
     ]
   },
   "en": {

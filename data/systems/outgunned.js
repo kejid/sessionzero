@@ -64,12 +64,14 @@ registerSystem("outgunned", {
   ],
   "quotes": [
     {
-      "text": "No other recent game captures the rhythm of an action film quite like this. The push-your-luck dice make every roll feel like a slow-motion explosion.",
-      "author": "Geeknative"
+      "text": "Outgunned is the best cinematic action RPG since Feng Shui.",
+      "author": "Rob Wieland, EN World"
+      // VERIFIED-AT: https://www.enworld.org/threads/outgunned-brings-a-little-dice-dice-bang-bang-to-your-table.706056/
     },
     {
-      "text": "We played a Die Hard scenario. One player jumped off the roof with a fire hose. He rolled three sixes. The table erupted. This is what Outgunned is for.",
-      "author": "RPGnet"
+      "text": "Outgunned keeps the promise of a TTRPG system that lets you create games like action movies.",
+      "author": "Andrew Girdwood, Geek Native"
+      // VERIFIED-AT: https://www.geeknative.com/166783/be-rewarded-for-being-awesome-a-review-of-outgunned/
     }
   ],
   "ru": {
@@ -121,6 +123,11 @@ registerSystem("outgunned", {
       {
         "name": "Quickstart"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Outgunned — лучшая кинематографичная боевиковая RPG со времён Feng Shui." },
+      { "text": "Outgunned держит обещание: TTRPG-система, в которой получаются игры, как боевики." }
     ]
   },
   "en": {

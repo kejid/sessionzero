@@ -74,13 +74,11 @@ registerSystem("mothership", {
     }
   ],
   "quotes": [
+
+    // VERIFIED-AT: https://www.tabletopgaming.co.uk/features/mothership-rpg-review/
     {
-      "text": "Mothership's panic table created the most cinematic moment I've ever seen in an RPG. One player panicked, shot another player, which caused THAT player to panic. Chain reaction of horror. We were dying laughing and terrified simultaneously.",
-      "author": "u/hull_breach, r/mothershiprpg"
-    },
-    {
-      "text": "Gradient Descent is the best dungeon crawl module ever written for any system. I will die on this hill.",
-      "author": "u/deep_scanner, r/osr"
+      "text": "The genre defining Mothership RPG might just be the absolute best way to die alone in space with your friends.",
+      "author": "Chris Lowry, Tabletop Gaming"
     }
   ],
   "ru": {
@@ -138,6 +136,10 @@ registerSystem("mothership", {
       {
         "name": "Ширма ведущего"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Жанрообразующая Mothership RPG — пожалуй, лучший способ умереть в одиночестве в космосе вместе с друзьями." }
     ]
   },
   "en": {

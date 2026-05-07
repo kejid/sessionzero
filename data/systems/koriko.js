@@ -1,7 +1,7 @@
 registerSystem("koriko", {
   "groups": {
-    "default": { "key": "narrative", "order": 19 },
-    "family": { "key": "standalone", "order": 14 },
+    "default": { "key": "narrative", "order": 19.5 },
+    "family": { "key": "standalone", "order": 14.5 },
     "genre": { "key": "narrative-weird", "order": 8 },
     "solo": { "key": "solo-journaling", "order": 3 }
   },
@@ -55,7 +55,10 @@ registerSystem("koriko", {
       "icon": "feather"
     }
   ],
-  "quotes": [{"text": "I was playing. Not merely responding to prompts... Playing. Like, a game. With choice and strategy. That was the moment Koriko clicked for me.", "author": "Cannibal Halfling Gaming, Solitaire Storytelling series"}, {"text": "This singlehandedly got me into solo TTRPGs, and it remains one of my favorites of all time. Writing letters home from your witch just breaks you open in the best way.", "author": "itch.io commenter on Koriko"}],
+  "quotes": [
+    // VERIFIED-AT: https://www.destructoid.com/koriko-a-magical-year-impressions/
+    {"text": "Koriko confidently guides new players and experienced solo role-players alike", "author": "Eleanor Hingley, Destructoid"}
+  ],
   "ru": {
     "tagShort": "Соло-журнал ведьмы",
     "tagline": "«Ты — молодая ведьма. Незнакомый город. Год, который изменит тебя навсегда.»",
@@ -99,6 +102,10 @@ registerSystem("koriko", {
       {
         "name": "Официальный сайт Mousehole Press"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Koriko уверенно ведёт за руку и новичков, и опытных соло-ролевиков." }
     ]
   },
   "en": {

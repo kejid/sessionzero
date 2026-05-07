@@ -61,13 +61,15 @@ registerSystem("shadowdark", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://www.enworld.org/threads/plenty-of-time-to-die-a-shadowdark-review.697134/
     {
-      "text": "The real-time torch timer is a gimmick that shouldn't work. But it does. The moment the timer goes off and you're in total darkness, the whole table panics. Best mechanic I've seen in years.",
-      "author": "u/torch_watcher, r/shadowdark"
+      "text": "Shadowdark cuts most of the fat of other versions of D&D, leaving a lean, mean dungeon crawling machine.",
+      "author": "Rob Wieland, EN World"
     },
+    // VERIFIED-AT: https://www.wargamer.com/dnd-like-shadowdark-western-reaches
     {
-      "text": "Shadowdark is what happens when someone takes the best parts of 5e and OSR, cuts everything else, and makes a game that's actually fun to run AND play. I've converted my entire group.",
-      "author": "u/dungeon_delver_99, r/rpg"
+      "text": "It's not the only OSR game, but it's certainly one of the most successful, striking a good balance of ease of play and thematic depth.",
+      "author": "Timothy Linward, Wargamer"
     }
   ],
   "ru": {
@@ -116,6 +118,11 @@ registerSystem("shadowdark", {
       {
         "name": "Quickstart Set (136 стр.!)"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Shadowdark срезает почти весь жир с других версий D&D, оставляя поджарую и злую машину для подземельных вылазок." },
+      { "text": "Это не единственная OSR-игра, но определённо одна из самых успешных — она удачно сочетает простоту игры и тематическую глубину." }
     ]
   },
   "en": {

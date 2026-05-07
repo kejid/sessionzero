@@ -48,13 +48,20 @@ registerSystem("l5r", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://www.tabletopgaming.co.uk/reviews/legend-of-the-five-rings-rpg-review/
     {
-      "text": "The Strife mechanic is my favorite addition to any RPG. It mechanically represents the tension between duty and emotion that IS the core of samurai drama.",
-      "author": "r/rpg"
+      "text": "This latest incarnation of Legend of the Five Rings is a shining example of how an RPG can commit so deeply to a setting and playstyle that it's impossible to imagine one existing without the other.",
+      "author": "Richard Jansen-Parkes, Tabletop Gaming"
     },
+    // VERIFIED-AT: https://www.strangeassembly.com/2018/review-legend-of-the-five-rings-fifth-edition-by-fantasy-flight-games
     {
-      "text": "The 20 Questions character creation is the best I've ever seen. By the time you're done, you know your character better than characters you've played for years.",
-      "author": "r/l5r"
+      "text": "Combining that with the elemental ring approach really sells me on the new edition of the L5R roleplaying game.",
+      "author": "Strange Assembly"
+    },
+    // VERIFIED-AT: https://cannibalhalflinggaming.com/2018/08/30/legend-of-the-five-rings-beginner-game-review/
+    {
+      "text": "It teaches the system well, it gives a good introduction to the setting and society, and there are plenty of interesting encounters and chances for the players to shine.",
+      "author": "Seamus Conneely, Cannibal Halfling Gaming"
     }
   ],
   "ru": {
@@ -94,6 +101,12 @@ registerSystem("l5r", {
       {
         "name": "Официальный сайт"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Свежее воплощение Legend of the Five Rings — яркий пример того, как RPG может настолько глубоко вписаться в сеттинг и стиль игры, что одно невозможно представить без другого." },
+      { "text": "В сочетании с подходом колец стихий это окончательно убеждает меня в новом издании L5R." },
+      { "text": "Хорошо обучает системе, аккуратно знакомит с сеттингом и обществом, и в нём достаточно интересных встреч и поводов игрокам блеснуть." }
     ]
   },
   "en": {

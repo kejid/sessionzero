@@ -67,13 +67,11 @@ registerSystem("mythic-bastionland", {
     }
   ],
   "quotes": [
+
     {
-      "text": "Mythic Bastionland feels like what D&D would be if it was designed today by someone who actually read Le Morte d'Arthur instead of Lord of the Rings.",
-      "author": "u/knight_errant, r/osr"
-    },
-    {
-      "text": "The procedural generation is incredible. I ran a 6-session campaign and never prepped more than 20 minutes. The oracles did the heavy lifting and the results were better than anything I could've planned.",
-      "author": "u/hexcrawl_fan, r/rpg"
+      // VERIFIED-AT: https://giantbrain.co.uk/2025/08/09/mythic-bastionland-first-read/
+      "text": "It is an incredibly thoughtful and well designed product that feels like it is begging you to play it.",
+      "author": "Iain McAllister, The Giant Brain"
     }
   ],
   "ru": {
@@ -131,6 +129,10 @@ registerSystem("mythic-bastionland", {
       {
         "name": "Лист персонажа"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Невероятно продуманный и грамотно спроектированный продукт, который буквально умоляет в него играть." }
     ]
   },
   "en": {

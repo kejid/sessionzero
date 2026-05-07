@@ -76,13 +76,15 @@ registerSystem("mork-borg", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://www.theguardian.com/music/2020/aug/11/mork-borg-swedish-metal-role-playing-game
     {
-      "text": "Mörk Borg is the only RPG book I've seen people buy just to look at, and then accidentally start playing because the vibe is that infectious.",
-      "author": "u/blackmetal_dm, r/rpg"
+      "text": "A headbanger of a game that is the latest example of the fertile cross-pollination between tabletop role-playing and extreme metal: a love letter to the hellraising imagery, lyrics, and album art of metal.",
+      "author": "Pearse Anderson, The Guardian"
     },
+    // VERIFIED-AT: https://www.dicebreaker.com/categories/roleplaying-game/news/grimdark-tabletop-rpg-mork-borg-doom-metal
     {
-      "text": "Ran a 3-hour one-shot. Two TPKs. Everyone demanded we play again next week. This game just HITS different.",
-      "author": "u/doom_dice, r/MorkBorg"
+      "text": "A pitch-black apocalyptic fantasy RPG.",
+      "author": "Sara Elsam, Dicebreaker"
     }
   ],
   "ru": {
@@ -143,6 +145,11 @@ registerSystem("mork-borg", {
       {
         "name": "Fillable лист"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Игра-хедбенгер, последнее свидетельство плодотворного перекрёстного опыления настольных RPG и экстремального метала: любовное письмо к адскому визуальному ряду, текстам и обложкам металлических альбомов." },
+      { "text": "Беспросветно чёрная апокалиптическая фэнтези-RPG." }
     ]
   },
   "en": {

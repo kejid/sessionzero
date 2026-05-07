@@ -68,13 +68,11 @@ registerSystem("cairn", {
     }
   ],
   "quotes": [
+
+    // VERIFIED-AT: https://therpggazette.wordpress.com/2025/10/08/a-review-of-cairn-first-edition-hemingway-with-dice/
     {
-      "text": "Cairn is the perfect \"I want to run dark fantasy but I don't want to read 400 pages\" game. Free, elegant, and every session feels like a Grimm fairy tale gone wrong.",
-      "author": "u/forest_warden, r/osr"
-    },
-    {
-      "text": "My group switched from 5e to Cairn and we've never looked back. Sessions feel dangerous, meaningful, and we actually finish adventures instead of getting bogged down in rules arguments.",
-      "author": "u/slot_inventory, r/rpg"
+      "text": "Cairn is an 18-page pamphlet that condenses the OSR ethos into something lean, elegant, and surprisingly evocative.",
+      "author": "Serban Ionita, The RPG Gazette"
     }
   ],
   "ru": {
@@ -126,6 +124,10 @@ registerSystem("cairn", {
       {
         "name": "Лист персонажа"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Cairn — 18-страничная брошюра, в которой OSR-этос сжат до чего-то лаконичного, элегантного и неожиданно атмосферного." }
     ]
   },
   "en": {

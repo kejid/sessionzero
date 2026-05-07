@@ -55,12 +55,14 @@ registerSystem("draw-steel", {
   ],
   "quotes": [
     {
-      "text": "Draw Steel is what D&D 4e wanted to be but couldn't. Every class feels unique, every turn matters, and the \"no null results\" philosophy means combat never drags.",
-      "author": "r/rpg"
+      "text": "Draw Steel takes a look at current heroic fantasy and works hard to strip out everything that doesn't make sense or slows things down.",
+      "author": "Chas Turner, Gaming Trend"
+      // VERIFIED-AT: https://gamingtrend.com/reviews/draw-steel-heroes-review/
     },
     {
-      "text": "Matt Colville spent $4.6M and years of design to answer one question: what if every single thing you do in combat felt awesome? He nailed it.",
-      "author": "r/mattcolville"
+      "text": "Draw Steel is one of the fastest growing tabletop games in recent memory, and it's all thanks to its dedicated fanbase.",
+      "author": "Gab Hernandez, Wargamer"
+      // VERIFIED-AT: https://www.wargamer.com/draw-steel-the-kiln-class
     }
   ],
   "ru": {
@@ -106,6 +108,11 @@ registerSystem("draw-steel", {
       {
         "name": "Официальный сайт"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Draw Steel смотрит на современное героическое фэнтези и кропотливо вычищает всё, что не имеет смысла или замедляет игру." },
+      { "text": "Draw Steel — одна из самых быстрорастущих настольных игр последних лет, и всё благодаря её преданной фанбазе." }
     ]
   },
   "en": {

@@ -68,13 +68,15 @@ registerSystem("ker-nethalas", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://solo.technoskald.me/thoughts-on-ker-nethalas
     {
-      "text": "Ker Nethalas feels like an analog Diablo II played alone at midnight. The opposed combat checks keep you permanently on edge, and the random dungeon generation means every session is genuinely unknown territory. I've died 11 times. I can't stop.",
-      "author": "u/veldonia_survivor, r/solorpg"
+      "text": "In this first run, a solo zombie ('Flesh Eater') grappled my character, eventually crushing me to death because I couldn't break free of its grasp.",
+      "author": "Solo Skald"
     },
+    // VERIFIED-AT: https://solorpg.net/2025/03/18/learning-ker-nethalas/
     {
-      "text": "This game nails the analog roguelike feel better than anything I've played. Managing torches, food, and sanity while mapping out the necropolis room by room scratches an itch I didn't know I had.",
-      "author": "u/midnight_cartographer, BoardGameGeek"
+      "text": "Ker Nethalas is a solo RPG mega dungeon that you generate as you go.",
+      "author": "tgenedavis, Solo RPG"
     }
   ],
   "ru": {
@@ -129,6 +131,11 @@ registerSystem("ker-nethalas", {
       {
         "name": "DriveThruRPG"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "В первом же забеге одинокий зомби («Пожиратель Плоти») схватил моего персонажа в захват и в итоге раздавил насмерть — я не смог из этого выкрутиться." },
+      { "text": "Ker Nethalas — соло-RPG в формате мегаподземелья, которое ты генерируешь на ходу." }
     ]
   },
   "en": {

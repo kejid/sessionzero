@@ -63,13 +63,11 @@ registerSystem("electric-bastionland", {
     }
   ],
   "quotes": [
+
+    // VERIFIED-AT: https://cannibalhalflinggaming.com/2020/12/09/electric-bastionland-review/
     {
-      "text": "Electric Bastionland is 50% RPG rulebook and 50% the best GM advice ever written. Seriously, the section on running the game changed how I GM everything.",
-      "author": "u/oddity_collector, r/osr"
-    },
-    {
-      "text": "We generated characters and started playing in under 15 minutes. One player got \"Avant-Garde Hairdresser\" and it was immediately the best character concept we've ever had.",
-      "author": "u/deep_country, r/rpg"
+      "text": "What would it look like if a game were simulating tropes rather than physics, but of a setting rather than a storyline? It would look an awful lot like Electric Bastionland.",
+      "author": "Aaron Marks, Cannibal Halfling Gaming"
     }
   ],
   "ru": {
@@ -121,6 +119,10 @@ registerSystem("electric-bastionland", {
       {
         "name": "Лист персонажа"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Как выглядела бы игра, симулирующая не физику, а тропы — причём тропы сеттинга, а не сюжета? Очень похоже на Electric Bastionland." }
     ]
   },
   "en": {

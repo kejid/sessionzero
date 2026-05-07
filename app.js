@@ -132,6 +132,7 @@ function loadSystems() {
         sys.mechanics = mergeTranslated(raw.mechanics, lang.mechanics);
         sys.gallery = mergeTranslated(raw.gallery, lang.gallery);
         sys.resources = mergeTranslated(raw.resources, lang.resources);
+        sys.quotes = mergeTranslated(raw.quotes, lang.quotes);
 
         // Store _en for localField() compatibility
         if (raw.en) {
@@ -1515,6 +1516,17 @@ function saveCustomSystem() {
     refreshIcons();
     closeEditor();
     showPage(id);
+
+    if (!existingId) showToast(t('toast_local_only'));
+}
+
+function showToast(msg, ms) {
+    const el = document.getElementById('toast');
+    if (!el) return;
+    el.textContent = msg;
+    el.classList.remove('hidden');
+    clearTimeout(showToast._t);
+    showToast._t = setTimeout(() => el.classList.add('hidden'), ms || 5000);
 }
 
 function buildCustomSystemPage(sys) {
