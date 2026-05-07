@@ -81,13 +81,15 @@ registerSystem("alien", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://www.wargamer.com/alien-rpg/evolved-review
     {
-      "text": "We ran Chariot of the Gods. By the end, two players were screaming at each other in-character about whether to blow the airlock. Nobody was acting. That stress mechanic is REAL.",
-      "author": "u/xenomorph_gm, r/alienrpg"
+      "text": "Stealth mode is by far my favorite part of the Alien RPG. It's the height of the game's tension and the closest we get to the cinematic horror of the Alien movies.",
+      "author": "Mollie Russell, Wargamer"
     },
+    // VERIFIED-AT: https://www.geeknative.com/69383/space-is-hell-a-review-of-free-league-publishings-alien-rpg/
     {
-      "text": "Best licensed RPG ever made. It's not a cash grab — it genuinely captures the feel of the first two movies. The campaign mode is surprisingly deep too.",
-      "author": "u/colonial_marine, r/rpg"
+      "text": "Stress is essential in Alien. You don't count bullets or uncinematic concerns like that, but once your character is stressed enough they'll stop firing their gun and, well, start to be cannon fodder.",
+      "author": "Andrew Girdwood, Geek Native"
     }
   ],
   "ru": {
@@ -139,6 +141,11 @@ registerSystem("alien", {
       {
         "name": "Генератор персонажей"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Режим скрытности — мой любимый элемент Alien RPG. Это пик напряжения, и ближайшее, что в TTRPG приближается к кинематографичному ужасу фильмов про Чужого." },
+      { "text": "Стресс — сердцевина Alien. Патроны и подобные некинематографичные мелочи здесь не считают, но если персонаж достаточно напряжён — он перестанет стрелять и превратится в пушечное мясо." }
     ]
   },
   "en": {
@@ -259,13 +266,15 @@ registerSystem("blade-runner", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://www.wargamer.com/blade-runner-the-roleplaying-game/review
     {
-      "text": "This isn't a combat RPG with investigation bolted on. It's a genuine detective game. We spent an entire session analyzing a crime scene and it was the most engaged my players have ever been.",
-      "author": "u/replicant_hunter, r/rpg"
+      "text": "I don't like to use the word 'perfect' often, but I'm going there now. The Blade Runner RPG captures the themes and feel of the source material perfectly.",
+      "author": "Mollie Russell, Wargamer"
     },
+    // VERIFIED-AT: https://cannibalhalflinggaming.com/2022/12/21/blade-runner-review/
     {
-      "text": "The case files are incredible. They feel like you're reading a screenplay. And the \"am I human?\" reveal mechanic gave us the best RP moment we've ever had.",
-      "author": "u/neon_rain, r/bladerunner"
+      "text": "Blade Runner is a well-executed RPG, it is exactly Blade Runner the RPG and not one thing more.",
+      "author": "Aaron Marks, Cannibal Halfling Gaming"
     }
   ],
   "ru": {
@@ -320,6 +329,11 @@ registerSystem("blade-runner", {
       {
         "name": "Официальный лист"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Я редко использую слово «идеально», но здесь иначе никак. Blade Runner RPG идеально передаёт темы и атмосферу первоисточника." },
+      { "text": "Blade Runner — отлично сделанная RPG: ровно настолько Blade Runner, насколько нужно, и ни на грамм больше." }
     ]
   },
   "en": {
@@ -439,13 +453,15 @@ registerSystem("blades", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://www.shutupandsitdown.com/rpg-review-blades-in-the-dark/
     {
-      "text": "The flashback mechanic singlehandedly fixed my biggest RPG frustration: 2-hour planning sessions where nothing happens. Now we jump straight into the action and plan retroactively. GENIUS.",
-      "author": "u/doskvol_scoundrel, r/bladesinthedark"
+      "text": "Imagine a Georgian George Clooney walking everybody through an Oceans 11-style heist, revealing bits of the plan as obstacles come up.",
+      "author": "Quinns, Shut Up & Sit Down"
     },
+    // VERIFIED-AT: https://www.meeplelikeus.co.uk/blades-in-the-dark-2016/
     {
-      "text": "Blades changed how I think about RPG design. Position and Effect is the most elegant resolution mechanic I've seen. Every other game feels clunky after playing this.",
-      "author": "u/narrative_gm, r/rpg"
+      "text": "Blades in the Dark is an extraordinary system – a work of proper genius – and a worthy recipient of the third five star rating we've ever given out for the site.",
+      "author": "Michael Heron, Meeple Like Us"
     }
   ],
   "ru": {
@@ -490,6 +506,11 @@ registerSystem("blades", {
       {
         "name": "Лист фракций"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Представь Джорджа Клуни в эпоху Регентства, который ведёт команду через ограбление в стиле «11 друзей Оушена», раскрывая части плана по мере того, как возникают препятствия." },
+      { "text": "Blades in the Dark — выдающаяся система, настоящая гениальность, и достойная обладательница третьей в истории сайта оценки в пять звёзд." }
     ]
   },
   "en": {
@@ -607,13 +628,11 @@ registerSystem("cairn", {
     }
   ],
   "quotes": [
+
+    // VERIFIED-AT: https://therpggazette.wordpress.com/2025/10/08/a-review-of-cairn-first-edition-hemingway-with-dice/
     {
-      "text": "Cairn is the perfect \"I want to run dark fantasy but I don't want to read 400 pages\" game. Free, elegant, and every session feels like a Grimm fairy tale gone wrong.",
-      "author": "u/forest_warden, r/osr"
-    },
-    {
-      "text": "My group switched from 5e to Cairn and we've never looked back. Sessions feel dangerous, meaningful, and we actually finish adventures instead of getting bogged down in rules arguments.",
-      "author": "u/slot_inventory, r/rpg"
+      "text": "Cairn is an 18-page pamphlet that condenses the OSR ethos into something lean, elegant, and surprisingly evocative.",
+      "author": "Serban Ionita, The RPG Gazette"
     }
   ],
   "ru": {
@@ -665,6 +684,10 @@ registerSystem("cairn", {
       {
         "name": "Лист персонажа"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Cairn — 18-страничная брошюра, в которой OSR-этос сжат до чего-то лаконичного, элегантного и неожиданно атмосферного." }
     ]
   },
   "en": {
@@ -788,17 +811,20 @@ registerSystem("call-of-cthulhu", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://nerdist.com/article/the-best-rpg-of-all-time-is-call-of-cthulhu/
     {
-      "text": "Call of Cthulhu is unequivocally the greatest role-playing game ever written. Unlike D&D, characters deteriorate over time rather than grow stronger — it has to be about something besides an adolescent power fantasy.",
-      "author": "Ben Riggs & Ken Hite, Nerdist"
+      "text": "Call of Cthulhu is unequivocally the greatest role-playing game ever written.",
+      "author": "Ben Riggs, Nerdist"
     },
+    // VERIFIED-AT: https://www.wargamer.com/best-horror-rpg-games
     {
-      "text": "Unifying everything to percentages and getting rid of the resistance table are things they needed to do for decades. The Luck mechanic is another dwindling resource like Sanity, but the player has more control.",
-      "author": "eyeheartawk & Committed Hero, EN World"
+      "text": "Call of Cthulhu is one of, if not the most popular RPG that isn't called Dungeons and Dragons.",
+      "author": "Gab Hernandez, Wargamer"
     },
+    // VERIFIED-AT: https://www.wargamer.com/call-of-cthulhu-rpg/scouts-against-cthulhu
     {
-      "text": "Basic Roleplaying has to be one of the simplest yet flexible core mechanics in RPGs. Roll this number, get under the number, and you've succeeded. The sanity system makes the horrors mean something much more than just monsters who can kill you.",
-      "author": "harunmushod, EN World"
+      "text": "Its adventures are novel and genuinely exciting. It's versatile enough to cover any place on earth, at any time, with any cast of characters.",
+      "author": "Mollie Russell, Wargamer"
     }
   ],
   "ru": {
@@ -850,6 +876,12 @@ registerSystem("call-of-cthulhu", {
       {
         "name": "The Dhole's House — онлайн-генератор персонажей"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Call of Cthulhu — без всяких оговорок величайшая ролевая игра, когда-либо написанная." },
+      { "text": "Call of Cthulhu — одна из самых популярных RPG, что не называется Dungeons & Dragons. А может, и единственная такая." },
+      { "text": "Её приключения свежи и по-настоящему увлекательны. Система универсальна настолько, что охватывает любое место на земле, в любое время, с любым составом персонажей." }
     ]
   },
   "en": {
@@ -985,13 +1017,15 @@ registerSystem("coriolis", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://spritesanddice.com/reviews/review-coriolis/
     {
-      "text": "Coriolis has the most unique sci-fi setting I've ever played in. It's not Star Wars, it's not Star Trek, it's something completely its own. The Arabic/Persian aesthetic makes everything feel fresh.",
-      "author": "u/third_horizon, r/rpg"
+      "text": "Coriolis may just be one of the best systems I've ever seen if you're looking to make your players' starship their command center, their home, and even a character in their journey.",
+      "author": "Adam Factor, Sprites and Dice"
     },
+    // VERIFIED-AT: https://www.strangeassembly.com/2019/review-coriolis-the-third-horizon
     {
-      "text": "The Darkness mechanic is so elegant. Players WANT to pray for rerolls, but they know every prayer makes the GM's job easier. It creates constant, beautiful tension.",
-      "author": "u/icon_seeker, r/FreeLeague"
+      "text": "Coriolis feels like a lot of Firefly, but with a Middle Eastern styling instead of the Old West.",
+      "author": "Strange Assembly review"
     }
   ],
   "ru": {
@@ -1052,6 +1086,11 @@ registerSystem("coriolis", {
       {
         "name": "Quickstart Third Horizon"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Coriolis — пожалуй, одна из лучших систем, что я видел, если вам нужно сделать звездолёт игроков их командным центром, домом и даже персонажем их путешествия." },
+      { "text": "Coriolis ощущается как «Светлячок», но с ближневосточной стилизацией вместо Дикого Запада." }
     ]
   },
   "en": {
@@ -1176,7 +1215,13 @@ registerSystem("cy-borg", {
       "icon": "zap"
     }
   ],
-  "quotes": [{"text": "Whether you've got an unstoppable killer or a frail gearhead, you'll have a blast running them face first into the meat grinder of Cy. The city wants you dead, and that makes it irresistible.", "author": "Bloody Disgusting review"}, {"text": "Whereas I wouldn't run Mork Borg as anything but a one-off, Cy_Borg holds up to long-form play. The setting is thin enough that you fill it with your own neon-soaked paranoia.", "author": "TTRPG Factory, ttrpgfactory.com"}],
+  "quotes": [
+    // VERIFIED-AT: https://www.wargamer.com/cy-borg/review
+    {
+      "text": "Cy_Borg is like Blade Runner if someone had let David Cronenberg get his hands on it.",
+      "author": "Mollie Russell, Wargamer"
+    }
+  ],
   "ru": {
     "tagShort": "Нео-панк киберпанк RPG",
     "tagline": "«RPG о конце света, нано-заражённых киберпанках и ярости против безжалостного корпоративного ада.»",
@@ -1223,6 +1268,10 @@ registerSystem("cy-borg", {
       {
         "name": "Листы персонажа"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Cy_Borg — это «Бегущий по лезвию», если бы за него взялся Дэвид Кроненберг." }
     ]
   },
   "en": {
@@ -1276,10 +1325,10 @@ registerSystem("cy-borg", {
 });
 registerSystem("daggerheart", {
   "groups": {
-    "default": { "key": "narrative", "order": 99 },
-    "family": { "key": "standalone", "order": 99 },
-    "genre": { "key": "adventure", "order": 99 },
-    "solo": { "key": "solo-compatible", "order": 99 }
+    "default": { "key": "narrative", "order": 21 },
+    "family": { "key": "standalone", "order": 16 },
+    "genre": { "key": "adventure", "order": 11 },
+    "solo": { "key": "solo-compatible", "order": 9 }
   },
   "name": "Daggerheart",
   "publisher": "Darrington Press",
@@ -1344,23 +1393,19 @@ registerSystem("daggerheart", {
       "icon": "heart"
     }
   ],
-  // SYNTH: quotes synthesized from review summaries — Reddit fetch was blocked. Swap for verbatim r/daggerheart quotes when possible.
   "quotes": [
+    // VERIFIED-AT: 2026-05-07 — https://www.enworld.org/threads/daggerheart-review-the-duality-of-robust-combat-mechanics-and-freeform-narrative.713471/
     {
-      "text": "Every roll has a hook. Hope or Fear, the narrative moves — and somehow even my failures feel like they belong in the story.",
-      "author": "Composite review (r/daggerheart sentiment) — SYNTH, replace with verbatim quote"
-    },
-    {
-      "text": "First system in years that made me leave the table thinking 'I want more of this.' The duality dice spiked the tension every single check.",
-      "author": "Composite review (r/rpg sentiment) — SYNTH, replace with verbatim quote"
+      "text": "The narrative system is built around a more freeform collaboration between players and GM, where the story grows without much impediment from rules.",
+      "author": "Christian Hoffer, EN World"
     }
   ],
   "ru": {
-    "tagShort": "Фэнтези от создателей Critical Role",
+    "tagShort": "Фэнтези от Darrington Press (Critical Role)",
     "tagline": "«Каждый бросок — это поворот сюжета. Надежда или Страх — выбирай свою судьбу».",
     "description": "Нарративное героическое фэнтези от Darrington Press — издательского крыла Critical Role. В основе — два d12: кубик Надежды и кубик Страха. Сумма решает успех, а тот, что выпал больше, диктует тон сцены: триумф или цена. Карточная система классов и происхождений собирает героя как колоду, бой ощущается кинематографично, а ГМ копит Страх, чтобы развернуть сцену в самый драматичный момент.",
-    "setting": "Базовый мир — высокое фэнтези с нотками Критроли: древние королевства, павшие империи, магия как наследие. Кампания-фреймы (Age of Umbra, Sablewood и др.) задают тон — от мрачного дарк-фэнтези до светлой сказки. Можно играть в стандартном сеттинге или взять только систему и натянуть её на свой мир.",
-    "vignette": "ГМ описывает разлом в полу храма — оттуда тянет холодом и шёпотом. Ваш бард делает проверку Присутствия: бросаете d12 Надежды и d12 Страха. 9 и 11 — успех с перевесом Страха. Заклинание срабатывает, тени отступают, но кубик Страха выше: ГМ кладёт жетон Страха в свою копилку и тихо улыбается. Где-то в темноте что-то услышало вашу песню. Вы получаете жетон Надежды за следующий ход — но знаете: за углом ждёт цена.",
+    "setting": "Базовый мир — высокое фэнтези с нотками Критроли: древние королевства, павшие империи, магия как наследие. Сюжетные рамки (Age of Umbra, Sablewood и др.) задают тон — от мрачного дарк-фэнтези до светлой сказки. Можно играть в стандартном сеттинге или взять только систему и натянуть её на свой мир.",
+    "vignette": "ГМ описывает разлом в полу храма — оттуда тянет холодом и шёпотом. Ваш бард делает проверку Присутствия: бросаете d12 Надежды и d12 Страха. 9 и 11 = 20, выше DC 12 — успех с перевесом Страха. Заклинание срабатывает, тени отступают, но кубик Страха выше: ГМ кладёт жетон Страха в свою копилку и тихо улыбается. Где-то в темноте что-то услышало вашу песню. Вы получаете жетон Надежды за следующий ход — но знаете: за углом ждёт цена.",
     "prep": "~30 мин",
     "mechanics": [
       {
@@ -1376,7 +1421,7 @@ registerSystem("daggerheart", {
         "text": "Без жёстких раундов — ГМ передаёт «прожектор» от игрока к игроку, пока сцена не выдохнется. Действие льётся, а не считается."
       },
       {
-        "title": "Stress и урон",
+        "title": "Стресс и урон",
         "text": "HP, Stress, броня — три полосы. Стресс копится от страха и колдовства, броня смягчает удар. Падение — не смерть, а выбор последствий."
       }
     ],
@@ -1408,13 +1453,17 @@ registerSystem("daggerheart", {
         "name": "Quickstart-приключение"
       }
     ]
+  ,
+    "quotes": [
+      { "text": "Нарративная система построена вокруг свободной коллаборации игроков и ГМ-а, где история растёт почти без помех со стороны правил." }
+    ]
   },
   "en": {
-    "tagShort": "Narrative fantasy from Critical Role",
+    "tagShort": "Narrative fantasy by Darrington Press (Critical Role)",
     "tagline": "\"Every roll is a story beat. Hope or Fear — pick your fate.\"",
     "description": "A narrative heroic fantasy by Darrington Press, the publishing arm of Critical Role. At its core: two d12s — a Hope die and a Fear die. The sum decides success; whichever rolled higher sets the tone — triumph or cost. A card-based class and ancestry system builds your hero like a deck, combat feels cinematic, and the GM banks Fear to twist the scene at the most dramatic moment.",
     "setting": "The default world is high fantasy with Critical Role flavor: ancient kingdoms, fallen empires, magic-as-legacy. Campaign Frames (Age of Umbra, Sablewood, and more) set the dial — from grim dark-fantasy to bright storybook. Run the in-house setting, or rip the system out and bolt it onto your own world.",
-    "vignette": "The GM describes a fissure in the temple floor — cold air and whispers leak out. Your bard makes a Presence check: roll d12 Hope and d12 Fear. 9 and 11 — success with Fear. The spell works, the shadows recoil, but the Fear die was higher: the GM drops a Fear token into her stash and smiles quietly. Something in the dark heard your song. You bank a Hope token for next turn — but you know there's a price waiting around the corner.",
+    "vignette": "The GM describes a fissure in the temple floor — cold air and whispers leak out. Your bard makes a Presence check: roll d12 Hope and d12 Fear. 9 and 11 = 20, beats DC 12 — success with Fear. The spell works, the shadows recoil, but the Fear die was higher: the GM drops a Fear token into her stash and smiles quietly. Something in the dark heard your song. You bank a Hope token for next turn — but you know there's a price waiting around the corner.",
     "prep": "~30 min",
     "mechanics": [
       {
@@ -1524,7 +1573,10 @@ registerSystem("death-in-space", {
       "icon": "radio"
     }
   ],
-  "quotes": [{"text": "Your characters are scroungers on the edge. Then the Void starts pulling at the cracks in your mind, and suddenly survival is the least of your problems.", "author": "Gaming Trend review"}, {"text": "It feels like the universe has already left to beat traffic, and you're the ones left holding a wrench and a dwindling oxygen supply. Blue-collar apocalypse done right.", "author": "u/heat_death_salvager, r/osr"}],
+  "quotes": [
+    // VERIFIED-AT: https://www.enworld.org/threads/a-review-of-death-in-space.688213/
+    {"text": "Death In Space is a dark game that stands out from contemporaries by embracing a rules-lite system and injecting weirdness into its setting.", "author": "Rob Wieland, EN World"}
+  ],
   "ru": {
     "tagShort": "Грязный sci-fi survival RPG",
     "tagline": "«Добро пожаловать в коллапсирующую вселенную. Ваш экипаж — единственная семья.»",
@@ -1568,6 +1620,10 @@ registerSystem("death-in-space", {
       {
         "name": "Лист персонажа"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Death In Space — мрачная игра, которая выделяется среди современниц лёгкими правилами и щедрой дозой странностей в сеттинге." }
     ]
   },
   "en": {
@@ -1683,13 +1739,12 @@ registerSystem("delta-green", {
     }
   ],
   "quotes": [
+
+
+    // VERIFIED-AT: https://www.enworld.org/threads/the-agents-handbook-reintroduces-us-to-the-worlds-of-delta-green.663899/
     {
-      "text": "Delta Green's \"bonds\" system is the most devastating mechanic in any RPG. Watching your agent slowly lose his family because of the missions is heartbreaking. After 6 sessions my character had no bonds left. That hit harder than any monster.",
-      "author": "u/case_officer, r/DeltaGreenRPG"
-    },
-    {
-      "text": "The published operations are insane quality. \"Night at the Opera\" alone has enough content for a year of play. Every scenario feels like a mini horror movie.",
-      "author": "u/green_box, r/rpg"
+      "text": "It is the King (in Yellow) of Lovecraftian role-playing.",
+      "author": "Christopher Helton, EN World (2016)"
     }
   ],
   "ru": {
@@ -1741,6 +1796,10 @@ registerSystem("delta-green", {
       {
         "name": "Agent Dossiers"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Это Король (в Жёлтом) лавкрафтовских ролевых игр." }
     ]
   },
   "en": {
@@ -1866,13 +1925,12 @@ registerSystem("dragonbane", {
     }
   ],
   "quotes": [
+
+
+    // VERIFIED-AT: https://screenrant.com/dragonbane-review-ttrpg-tabletop-rpg/ (2023-08-03)
     {
-      "text": "Dragonbane is the fantasy RPG I've been waiting for. It has the simplicity of OSR, the production quality of 5e, and the design philosophy of Free League. It's my forever game now.",
-      "author": "u/dragon_slayer_se, r/dragonbane"
-    },
-    {
-      "text": "The initiative card system is genius. Every round feels fresh. No more \"I go first, I always go first, boring.\" Also, duck people. DUCK PEOPLE.",
-      "author": "u/quack_knight, r/rpg"
+      "text": "Of the many TTRPGs played this year, Dragonbane stands out as one of the best.",
+      "author": "Austin King, Screen Rant"
     }
   ],
   "ru": {
@@ -1927,6 +1985,10 @@ registerSystem("dragonbane", {
       {
         "name": "Quickstart The Sinking Tower"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Из многих TTRPG, что я сыграл в этом году, Dragonbane выделяется как одна из лучших." }
     ]
   },
   "en": {
@@ -2041,12 +2103,14 @@ registerSystem("draw-steel", {
   ],
   "quotes": [
     {
-      "text": "Draw Steel is what D&D 4e wanted to be but couldn't. Every class feels unique, every turn matters, and the \"no null results\" philosophy means combat never drags.",
-      "author": "r/rpg"
+      "text": "Draw Steel takes a look at current heroic fantasy and works hard to strip out everything that doesn't make sense or slows things down.",
+      "author": "Chas Turner, Gaming Trend"
+      // VERIFIED-AT: https://gamingtrend.com/reviews/draw-steel-heroes-review/
     },
     {
-      "text": "Matt Colville spent $4.6M and years of design to answer one question: what if every single thing you do in combat felt awesome? He nailed it.",
-      "author": "r/mattcolville"
+      "text": "Draw Steel is one of the fastest growing tabletop games in recent memory, and it's all thanks to its dedicated fanbase.",
+      "author": "Gab Hernandez, Wargamer"
+      // VERIFIED-AT: https://www.wargamer.com/draw-steel-the-kiln-class
     }
   ],
   "ru": {
@@ -2092,6 +2156,11 @@ registerSystem("draw-steel", {
       {
         "name": "Официальный сайт"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Draw Steel смотрит на современное героическое фэнтези и кропотливо вычищает всё, что не имеет смысла или замедляет игру." },
+      { "text": "Draw Steel — одна из самых быстрорастущих настольных игр последних лет, и всё благодаря её преданной фанбазе." }
     ]
   },
   "en": {
@@ -2205,13 +2274,11 @@ registerSystem("electric-bastionland", {
     }
   ],
   "quotes": [
+
+    // VERIFIED-AT: https://cannibalhalflinggaming.com/2020/12/09/electric-bastionland-review/
     {
-      "text": "Electric Bastionland is 50% RPG rulebook and 50% the best GM advice ever written. Seriously, the section on running the game changed how I GM everything.",
-      "author": "u/oddity_collector, r/osr"
-    },
-    {
-      "text": "We generated characters and started playing in under 15 minutes. One player got \"Avant-Garde Hairdresser\" and it was immediately the best character concept we've ever had.",
-      "author": "u/deep_country, r/rpg"
+      "text": "What would it look like if a game were simulating tropes rather than physics, but of a setting rather than a storyline? It would look an awful lot like Electric Bastionland.",
+      "author": "Aaron Marks, Cannibal Halfling Gaming"
     }
   ],
   "ru": {
@@ -2263,6 +2330,10 @@ registerSystem("electric-bastionland", {
       {
         "name": "Лист персонажа"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Как выглядела бы игра, симулирующая не физику, а тропы — причём тропы сеттинга, а не сюжета? Очень похоже на Electric Bastionland." }
     ]
   },
   "en": {
@@ -2319,18 +2390,18 @@ registerSystem("electric-bastionland", {
 });
 registerSystem("fabula-ultima", {
   "groups": {
-    "default": { "key": "narrative", "order": 99 },
-    "family": { "key": "standalone", "order": 99 },
-    "genre": { "key": "adventure", "order": 99 },
-    "solo": { "key": "solo-compatible", "order": 99 }
+    "default": { "key": "narrative", "order": 22 },
+    "family": { "key": "standalone", "order": 17 },
+    "genre": { "key": "adventure", "order": 12 },
+    "solo": { "key": "solo-compatible", "order": 10 }
   },
   "name": "Fabula Ultima",
-  "publisher": "Need Games / Rooster Games",
+  "publisher": "Need Games",
   "dice": "2 attribute dice (d6–d12)",
   "players": "3–5",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://need.games/wp-content/uploads/2024/02/fu-spread-mockup-1.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/fabula-ultima.jpg",
   "playstyleTags": [
     "narrative",
     "combat",
@@ -2388,22 +2459,23 @@ registerSystem("fabula-ultima", {
     }
   ],
   "quotes": [
-    // SYNTH: Reddit blocked by WebFetch; quotes stylized from common community sentiment in r/FabulaUltima and r/rpg threads.
+    // VERIFIED-AT: https://www.enworld.org/threads/fabula-ultima-offers-a-good-beginning-to-a-final-fantasy.698180/
     {
-      "text": "We built the world together at session zero — drew the map, picked which kingdom was magitech and which one wasn't, named the villain. Three sessions in, my fighter is already crying about a Bond. This game just hits different.",
-      "author": "Composite review (r/FabulaUltima sentiment) — SYNTH, replace with verbatim quote"
+      "text": "Characters in these games are often hailed for their emotional attachment to each other and the rules emulate this with Bonds.",
+      "author": "Rob Wieland, EN World"
     },
+    // VERIFIED-AT: https://www.wargamer.com/fabula-ultima/celebration-edition-final-fantasy-art
     {
-      "text": "Spent a Fabula Point to declare that yes, actually, my old mentor runs this airship. The GM grinned and rolled with it. It's the closest a tabletop has ever felt to a Final Fantasy cutscene.",
-      "author": "Composite review (r/rpg sentiment) — SYNTH, replace with verbatim quote"
+      "text": "This tabletop system, which took home an Ennie in 2023, is inspired by classic Japanese console RPGs like Final Fantasy and Dragon Quest.",
+      "author": "Matt Bassil, Wargamer"
     }
   ],
   "ru": {
     "tagShort": "Настольный JRPG в духе Final Fantasy",
     "tagline": "«Final Fantasy, Chrono Trigger и Suikoden — за вашим столом, с кубиками вместо геймпада».",
-    "description": "Итальянская TTJRPG (Tabletop JRPG) от Эмануэле Галлетто (2022, EN-релиз — Need Games). Проверки — два атрибутных кубика (d6–d12), классы вроде Guardian, Mage, Rogue, Loremaster, Tinkerer, Spiritist собираются как мульти-классовая JRPG-партия. Fabula Points позволяют игрокам переписывать сцены, Bonds между героями — буквальная механическая сила. Лауреат Gold ENnie 2023 за Best Game.",
+    "description": "Итальянская TTJRPG (Tabletop JRPG) от Эмануэле Галлетто (2022, EN-релиз — Need Games). Проверки — два атрибутных кубика (d6–d12), классы вроде Guardian, Mage, Rogue, Loremaster, Tinkerer, Spiritist собираются как мульти-классовая JRPG-партия. Fabula Points позволяют игрокам переписывать сцены, Bonds между героями — буквальная механическая сила. Лауреат ENnie 2023 за Best Game и Product of the Year.",
     "setting": "Мира до игры не существует. На session zero вся партия вместе рисует карту, решает соотношение магии и технологии, придумывает королевства, фракции, угрозы и легенды. Получается коллаборативный JRPG-мир — где-то между светлым Suikoden, горько-сладким Chrono Trigger и магитех-дилеммой Final Fantasy VII. А потом вы играете героев, которые этот мир спасают.",
-    "vignette": "Турновый бой, как в классических JRPG. Ваш Spiritist бросает d8 (Insight) + d10 (Willpower) — двойка не прошла. Тратите Fabula Point, ссылаетесь на Bond с Guardian-подругой («я обещала её защитить») — перебрасываете, попадание, эмоциональный финишер. На следующей сцене Tinkerer-инженер заявляет: «А давайте железная дорога между королевствами уже есть». Мастер кивает, тратится ещё один Fabula Point — и мир становится чуть-чуть больше. Природа против магитеха, найденная семья, аниме-эмоции на максимум.",
+    "vignette": "Пошаговый бой, как в классических JRPG. Ваш Spiritist бросает d8 (Insight) + d10 (Willpower) — двойка не прошла. Тратите Fabula Point, ссылаетесь на Bond с Guardian-подругой («я обещала её защитить») — перебрасываете, попадание, эмоциональный финишер. На следующей сцене Tinkerer-инженер заявляет: «А давайте железная дорога между королевствами уже есть». Мастер кивает, тратится ещё один Fabula Point — и мир становится чуть-чуть больше. Природа против магитеха, найденная семья, аниме-эмоции на максимум.",
     "prep": "~30 мин",
     "mechanics": [
       {
@@ -2420,7 +2492,7 @@ registerSystem("fabula-ultima", {
       },
       {
         "title": "JRPG-классы",
-        "text": "Guardian, Mage, Rogue, Loremaster, Tinkerer, Spiritist и другие — мультиклассятся свободно. Бой пошаговый, с MP, статусами, слабостями стихий. Чистый Final Fantasy."
+        "text": "Guardian, Mage, Rogue, Loremaster, Tinkerer, Spiritist и другие — мультиклассятся свободно. Бой пошаговый, с MP, статусами, слабостями стихий. Чистый JRPG: Final Fantasy, Suikoden, Chrono Trigger."
       }
     ],
     "gallery": [
@@ -2451,11 +2523,16 @@ registerSystem("fabula-ultima", {
         "name": "Project FU (Foundry VTT)"
       }
     ]
+  ,
+    "quotes": [
+      { "text": "Персонажей таких игр часто хвалят за эмоциональную привязанность друг к другу — и правила воспроизводят это через Узы." },
+      { "text": "Эта настольная система, забравшая ENnie в 2023-м, вдохновлена классикой японских консольных RPG вроде Final Fantasy и Dragon Quest." }
+    ]
   },
   "en": {
     "tagShort": "Tabletop JRPG in the spirit of Final Fantasy",
     "tagline": "\"Final Fantasy, Chrono Trigger, and Suikoden — at your table, with dice instead of a controller.\"",
-    "description": "An Italian TTJRPG (Tabletop JRPG) by Emanuele Galletto (2022, EN release by Need Games). Checks use two attribute dice (d6–d12); classes like Guardian, Mage, Rogue, Loremaster, Tinkerer, Spiritist multiclass into a JRPG party. Fabula Points let players rewrite scenes, Bonds between heroes are literal mechanical power. Winner of Gold ENnie 2023 for Best Game.",
+    "description": "An Italian TTJRPG (Tabletop JRPG) by Emanuele Galletto (2022, EN release by Need Games). Checks use two attribute dice (d6–d12); classes like Guardian, Mage, Rogue, Loremaster, Tinkerer, Spiritist multiclass into a JRPG party. Fabula Points let players rewrite scenes, Bonds between heroes are literal mechanical power. Winner of 2023 ENnies for Best Game and Product of the Year.",
     "setting": "The world doesn't exist before play. At session zero the whole table draws the map together, decides the balance of magic vs. technology, invents kingdoms, factions, threats, and legends. The result is a collaborative JRPG world — somewhere between bright Suikoden, bittersweet Chrono Trigger, and the magitech dilemma of Final Fantasy VII. Then you play the heroes who save it.",
     "vignette": "Turn-based combat, like classic JRPGs. Your Spiritist rolls d8 (Insight) + d10 (Willpower) — a 2, miss. You spend a Fabula Point, invoke a Bond with the Guardian (\"I swore to protect her\"), reroll, hit, deliver an emotional finisher. Next scene, the Tinkerer declares: \"Actually, there's already a railway between the kingdoms.\" The GM nods, another Fabula Point burns — and the world grows a little. Nature vs. magitech, found family, anime emotion at maximum.",
     "prep": "~30 min",
@@ -2474,7 +2551,7 @@ registerSystem("fabula-ultima", {
       },
       {
         "title": "JRPG classes",
-        "text": "Guardian, Mage, Rogue, Loremaster, Tinkerer, Spiritist and more — multiclass freely. Combat is turn-based with MP, statuses, elemental weaknesses. Pure Final Fantasy."
+        "text": "Guardian, Mage, Rogue, Loremaster, Tinkerer, Spiritist and more — multiclass freely. Combat is turn-based with MP, statuses, elemental weaknesses. Pure JRPG: Final Fantasy, Suikoden, Chrono Trigger."
       }
     ],
     "gallery": [
@@ -2532,13 +2609,15 @@ registerSystem("fist", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://claymorerpgs.itch.io/fist
     {
-      "text": "Character creation is just: roll two traits, combine them, suddenly you ARE an amnesiac beekeeper who punches so hard reality cracks. We were ready to play in 10 minutes.",
-      "author": "u/wetwork_wednesday, r/rpg"
+      "text": "FIST is legitimately one of the most fun things I've brought to my table. It's PbtA that plays like OSR, and it's Metal Gear by way of Hellboy.",
+      "author": "Richard Kelly, Sprinting Owl"
     },
+    // VERIFIED-AT: https://claymorerpgs.itch.io/fist
     {
-      "text": "Ran a one-shot with zero prep using only the Intel Matrix tables. The mission basically wrote itself. One player survived. We talked about it for a week.",
-      "author": "u/coldwar_cryptid, r/solorpg"
+      "text": "With FIST, you can sit down, roll some dice, and have a fun, flavorful character in five minutes flat. You might get them killed five minutes later, but if so? Rinse, repeat, and you're back in the game.",
+      "author": "Jess Levine, I Have the High Ground"
     }
   ],
   "resources": [
@@ -2612,6 +2691,11 @@ registerSystem("fist", {
       {
         "name": "Бесплатный квикстарт"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "FIST — без шуток, одно из самых весёлых, что я приносил за стол. PbtA, играющаяся как OSR, и Metal Gear, увиденный глазами Хеллбоя." },
+      { "text": "С FIST можно сесть, бросить кубики и через пять минут получить колоритного персонажа. Через ещё пять — он, возможно, погибнет, но это не страшно: повтор, и ты снова в игре." }
     ]
   },
   "en": {
@@ -2732,12 +2816,14 @@ registerSystem("forbidden-lands", {
   ],
   "quotes": [
     {
-      "text": "Forbidden Lands is the only game where my players voluntarily avoided a fight because they remembered what happened last time someone got a critical wound. That's good design.",
-      "author": "u/raven_gm, r/FreeLeague"
+      // VERIFIED-AT: https://www.tabletopgaming.co.uk/reviews/forbidden-lands-rpg-review/
+      "text": "It's like someone took hazy childhood memories of a classic D&D game and mixed them with a dash of bleak Scandinavian darkness.",
+      "author": "Richard Jansen-Parkes, Tabletop Gaming"
     },
     {
-      "text": "The stronghold building gives the campaign a home base that the players genuinely care about. When bandits attacked our keep, it felt personal in a way no other RPG has achieved.",
-      "author": "u/hex_mapper, r/rpg"
+      // VERIFIED-AT: https://droplowest.com/2019/02/11/review-forbidden-lands/
+      "text": "It truly brings something new to the dark fantasy genre. And these days that's really something to celebrate.",
+      "author": "R.M. Jansen-Parkes, Drop Lowest"
     }
   ],
   "ru": {
@@ -2792,6 +2878,11 @@ registerSystem("forbidden-lands", {
       {
         "name": "Легенды к карты"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Как будто кто-то взял туманные детские воспоминания о классической D&D и добавил щепотку мрачной скандинавской тьмы." },
+      { "text": "Игра по-настоящему привносит в жанр тёмного фэнтези что-то новое. А в наши дни это уже само по себе повод для радости." }
     ]
   },
   "en": {
@@ -2909,13 +3000,11 @@ registerSystem("heart", {
     }
   ],
   "quotes": [
+
+    // VERIFIED-AT: https://www.wargamer.com/heart-the-city-beneath/tabletop-rpg-fixes-travel-dnd
     {
-      "text": "Heart is the most creative RPG I've ever read. A market made of bones where memories are currency? A forest of meat that grows from the walls? It's Annihilation meets Dark Souls.",
-      "author": "u/deep_delver, r/rpg"
-    },
-    {
-      "text": "The Zenith/Nadir character arc system means every character has a built-in ending. My player's final session was the most emotionally intense RP moment I've ever witnessed.",
-      "author": "u/spire_citizen, r/HeartRPG"
+      "text": "Heart: The City Beneath — my group's current indie TTRPG du jour — deals with this like no other game I've played, and it's hugely refreshing.",
+      "author": "Alex Evans, Wargamer"
     }
   ],
   "ru": {
@@ -2964,6 +3053,10 @@ registerSystem("heart", {
       {
         "name": "Quickstart (правила + приключение)"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Heart: The City Beneath — текущий инди-фаворит нашей группы — решает это как ни одна другая игра, что я водил. Дико свежо." }
     ]
   },
   "en": {
@@ -3066,13 +3159,12 @@ registerSystem("into-the-odd", {
     }
   ],
   "quotes": [
+
+
+    // VERIFIED-AT: https://coinsandscrolls.blogspot.com/2019/11/osr-troika-vs-electric-bastionland.html
     {
-      "text": "Into the Odd is the game that made me realize I don't need 300 pages of rules to have the best session of my life. We played for 4 hours and I prepped for 10 minutes.",
-      "author": "u/bastioneer_23, r/osr"
-    },
-    {
-      "text": "The \"attacks always hit\" rule sounds weird until you play it. Then you realize combat becomes about positioning, retreating, and creative problem solving instead of \"I roll to hit... miss. Next.\"",
-      "author": "u/dungeon_owl, r/rpg"
+      "text": "Both seem to be great for one shots, convention games, OSR intros, or games where rapidly generating a new and evocative character is the goal.",
+      "author": "Skerples, Coins and Scrolls (2019)"
     }
   ],
   "ru": {
@@ -3112,6 +3204,10 @@ registerSystem("into-the-odd", {
       {
         "name": "Лист персонажа (fan)"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Обе отлично подходят для ваншотов, конвенционных игр, знакомства с OSR или партий, где цель — быстро собрать колоритного персонажа." }
     ]
   },
   "en": {
@@ -3227,13 +3323,15 @@ registerSystem("ironsworn", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://tomkinpress.com/pages/ironsworn
     {
-      "text": "Ironsworn is the game that made me realize I didn't need a group to scratch my RPG itch. Three months of solo play and it's produced the most emotionally resonant campaign I've ever run — and I've been playing TTRPGs for 20 years.",
-      "author": "u/lone_delver, r/solorpg"
+      "text": "Ironsworn advanced the art of solo adventure game design by leaps and bounds, bringing innovative techniques and systems to the form and helping to introduce solo rpgs to a new generation of players. It's a masterpiece.",
+      "author": "John Harper, designer of Blades in the Dark"
     },
+    // VERIFIED-AT: https://tomkinpress.com/pages/ironsworn
     {
-      "text": "The Vow system is genius. Instead of 'do a quest', you literally swear an iron oath and the game mechanically tracks whether you're honoring it or failing. Consequences feel EARNED.",
-      "author": "u/narrative_ironist, r/ironsworn"
+      "text": "Ironsworn is one of the smartest, best designed, TTRPGs I've ever played, and more than that I think it's an incredible tool for writers and creatives.",
+      "author": "Mara Holmes, streamer and author"
     }
   ],
   "ru": {
@@ -3288,6 +3386,11 @@ registerSystem("ironsworn", {
       {
         "name": "Онлайн-оракул и трекер"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Ironsworn продвинула искусство дизайна соло-приключений на световые годы вперёд, принесла в формат новые техники и системы и познакомила с соло-RPG новое поколение игроков. Это шедевр." },
+      { "text": "Ironsworn — одна из самых умных и грамотно спроектированных TTRPG, что я водил. Более того, это потрясающий инструмент для писателей и творческих людей." }
     ]
   },
   "en": {
@@ -3415,13 +3518,15 @@ registerSystem("ker-nethalas", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://solo.technoskald.me/thoughts-on-ker-nethalas
     {
-      "text": "Ker Nethalas feels like an analog Diablo II played alone at midnight. The opposed combat checks keep you permanently on edge, and the random dungeon generation means every session is genuinely unknown territory. I've died 11 times. I can't stop.",
-      "author": "u/veldonia_survivor, r/solorpg"
+      "text": "In this first run, a solo zombie ('Flesh Eater') grappled my character, eventually crushing me to death because I couldn't break free of its grasp.",
+      "author": "Solo Skald"
     },
+    // VERIFIED-AT: https://solorpg.net/2025/03/18/learning-ker-nethalas/
     {
-      "text": "This game nails the analog roguelike feel better than anything I've played. Managing torches, food, and sanity while mapping out the necropolis room by room scratches an itch I didn't know I had.",
-      "author": "u/midnight_cartographer, BoardGameGeek"
+      "text": "Ker Nethalas is a solo RPG mega dungeon that you generate as you go.",
+      "author": "tgenedavis, Solo RPG"
     }
   ],
   "ru": {
@@ -3476,6 +3581,11 @@ registerSystem("ker-nethalas", {
       {
         "name": "DriveThruRPG"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "В первом же забеге одинокий зомби («Пожиратель Плоти») схватил моего персонажа в захват и в итоге раздавил насмерть — я не смог из этого выкрутиться." },
+      { "text": "Ker Nethalas — соло-RPG в формате мегаподземелья, которое ты генерируешь на ходу." }
     ]
   },
   "en": {
@@ -3535,8 +3645,8 @@ registerSystem("ker-nethalas", {
 });
 registerSystem("koriko", {
   "groups": {
-    "default": { "key": "narrative", "order": 19 },
-    "family": { "key": "standalone", "order": 14 },
+    "default": { "key": "narrative", "order": 19.5 },
+    "family": { "key": "standalone", "order": 14.5 },
     "genre": { "key": "narrative-weird", "order": 8 },
     "solo": { "key": "solo-journaling", "order": 3 }
   },
@@ -3590,7 +3700,10 @@ registerSystem("koriko", {
       "icon": "feather"
     }
   ],
-  "quotes": [{"text": "I was playing. Not merely responding to prompts... Playing. Like, a game. With choice and strategy. That was the moment Koriko clicked for me.", "author": "Cannibal Halfling Gaming, Solitaire Storytelling series"}, {"text": "This singlehandedly got me into solo TTRPGs, and it remains one of my favorites of all time. Writing letters home from your witch just breaks you open in the best way.", "author": "itch.io commenter on Koriko"}],
+  "quotes": [
+    // VERIFIED-AT: https://www.destructoid.com/koriko-a-magical-year-impressions/
+    {"text": "Koriko confidently guides new players and experienced solo role-players alike", "author": "Eleanor Hingley, Destructoid"}
+  ],
   "ru": {
     "tagShort": "Соло-журнал ведьмы",
     "tagline": "«Ты — молодая ведьма. Незнакомый город. Год, который изменит тебя навсегда.»",
@@ -3634,6 +3747,10 @@ registerSystem("koriko", {
       {
         "name": "Официальный сайт Mousehole Press"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Koriko уверенно ведёт за руку и новичков, и опытных соло-ролевиков." }
     ]
   },
   "en": {
@@ -3732,13 +3849,20 @@ registerSystem("l5r", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://www.tabletopgaming.co.uk/reviews/legend-of-the-five-rings-rpg-review/
     {
-      "text": "The Strife mechanic is my favorite addition to any RPG. It mechanically represents the tension between duty and emotion that IS the core of samurai drama.",
-      "author": "r/rpg"
+      "text": "This latest incarnation of Legend of the Five Rings is a shining example of how an RPG can commit so deeply to a setting and playstyle that it's impossible to imagine one existing without the other.",
+      "author": "Richard Jansen-Parkes, Tabletop Gaming"
     },
+    // VERIFIED-AT: https://www.strangeassembly.com/2018/review-legend-of-the-five-rings-fifth-edition-by-fantasy-flight-games
     {
-      "text": "The 20 Questions character creation is the best I've ever seen. By the time you're done, you know your character better than characters you've played for years.",
-      "author": "r/l5r"
+      "text": "Combining that with the elemental ring approach really sells me on the new edition of the L5R roleplaying game.",
+      "author": "Strange Assembly"
+    },
+    // VERIFIED-AT: https://cannibalhalflinggaming.com/2018/08/30/legend-of-the-five-rings-beginner-game-review/
+    {
+      "text": "It teaches the system well, it gives a good introduction to the setting and society, and there are plenty of interesting encounters and chances for the players to shine.",
+      "author": "Seamus Conneely, Cannibal Halfling Gaming"
     }
   ],
   "ru": {
@@ -3778,6 +3902,12 @@ registerSystem("l5r", {
       {
         "name": "Официальный сайт"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Свежее воплощение Legend of the Five Rings — яркий пример того, как RPG может настолько глубоко вписаться в сеттинг и стиль игры, что одно невозможно представить без другого." },
+      { "text": "В сочетании с подходом колец стихий это окончательно убеждает меня в новом издании L5R." },
+      { "text": "Хорошо обучает системе, аккуратно знакомит с сеттингом и обществом, и в нём достаточно интересных встреч и поводов игрокам блеснуть." }
     ]
   },
   "en": {
@@ -3845,13 +3975,15 @@ registerSystem("lancer", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://www.geeknative.com/70479/review-lancer-rpg/
     {
-      "text": "The mech-building alone is worth the price. I spent two hours in COMP/CON before session one just theorycrafting builds. Then combat hit and every single choice mattered.",
-      "author": "u/ironclad_actual, r/rpg"
+      "text": "It feels like an actual mech skirmish game that's genuinely merged with an indie RPG.",
+      "author": "Andrew Girdwood, Geek Native"
     },
+    // VERIFIED-AT: https://www.cbr.com/lancer-mech-ttrpg/
     {
-      "text": "Lancer is the rare tactical game where the narrative stuff isn't a chore between fights — our pilot RP has been just as good as the grid combat. Two games in one, both excellent.",
-      "author": "u/NHP_Cascade, r/lancer"
+      "text": "The leveling in Lancer is where the game's unique system of completely modular mech design shines.",
+      "author": "Zachary Pilon, CBR"
     }
   ],
   "resources": [
@@ -3926,6 +4058,11 @@ registerSystem("lancer", {
         "name": "Приложение COMP/CON"
       }
     ]
+  ,
+    "quotes": [
+      { "text": "Ощущается как настоящая варгеймовая стычка мехов, по-настоящему сросшаяся с инди-RPG." },
+      { "text": "Прокачка в Lancer — это то, где раскрывается уникальная система полностью модульного дизайна мехов." }
+    ]
   },
   "en": {
     "tagShort": "tactical sci-fi mech combat RPG",
@@ -3972,10 +4109,10 @@ registerSystem("lancer", {
 });
 registerSystem("land-of-eem", {
   "groups": {
-    "default": { "key": "narrative", "order": 99 },
-    "family": { "key": "standalone", "order": 99 },
-    "genre": { "key": "adventure", "order": 99 },
-    "solo": { "key": "solo-compatible", "order": 99 }
+    "default": { "key": "narrative", "order": 23 },
+    "family": { "key": "standalone", "order": 21 },
+    "genre": { "key": "adventure", "order": 13 },
+    "solo": { "key": "solo-compatible", "order": 11 }
   },
   "name": "Land of Eem",
   "publisher": "Exalted Funeral / Ben Costa & James Parks",
@@ -3983,7 +4120,7 @@ registerSystem("land-of-eem", {
   "players": "3–5",
   "complexity": 2,
   "foundryStatus": "None", // CHECK: no official or community Foundry module found as of 2026-05
-  "heroImage": "https://www.exaltedfuneral.com/cdn/shop/files/Kickstarter-Hero-Image-01v5.png?v=1750521207&width=2400",
+  "heroImage": "https://joelchrono.xyz/assets/img/blogs/2026-02-03-land-of-eem.webp",
   "playstyleTags": [
     "explore",
     "narrative",
@@ -4042,12 +4179,14 @@ registerSystem("land-of-eem", {
   ],
   "quotes": [
     {
-      "text": "Lord of the Rings meets the Muppets — and somehow the mechanics actually hold up. Courage vs Dread instead of HP makes every fight feel like a comic-book showdown, not a math problem.", // SYNTH: paraphrase of common review framing (Dicebreaker tagline + recurring forum sentiment)
-      "author": "r/rpg discussion"
+      // VERIFIED-AT: https://www.dicebreaker.com/games/land-of-eem/news/land-of-eem-rpg-crowdfunding-lotr-muppets (Matt Jarvis, 2022-06-14)
+      "text": "Whimsical fantasy RPG Land of Eem is like Lord of the Rings with Muppets, and it looks as great as that sounds.",
+      "author": "Matt Jarvis, Dicebreaker"
     },
     {
-      "text": "My table has a Gelatinous Goo bard, a turtle knight-errant, and a skeleton rascal. Three sessions in and nobody has rolled initiative for combat — we keep talking our way out. The d12 'yes-and / no-but' table is doing the work of three GM screens.", // SYNTH: composite of typical actual-play impressions; no verified Reddit handle
-      "author": "Land of Eem actual-play thread"
+      // VERIFIED-AT: https://www.polygon.com/tabletop-games/508125/land-of-eem-muppets-lotr-ttrpg-preview-impresisons (Rowan Zeoli, 2025-01-13)
+      "text": "Land of Eem is great in the same way the best cartoons are: wrapping serious themes in a goofy bow that rewards curiosity and social connections.",
+      "author": "Rowan Zeoli, Polygon"
     }
   ],
   "ru": {
@@ -4102,6 +4241,11 @@ registerSystem("land-of-eem", {
       {
         "name": "Листы персонажей"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Уютная фэнтези-RPG Land of Eem — это «Властелин колец», встретивший «Маппет-шоу», и выглядит она ровно настолько круто, как звучит." },
+      { "text": "Land of Eem прекрасна в том же смысле, что и лучшие мультфильмы: серьёзные темы заворачиваются в дурашливую обёртку, поощряющую любопытство и социальные связи." }
     ]
   },
   "en": {
@@ -4216,7 +4360,10 @@ registerSystem("last-tea-shop", {
       "icon": "feather"
     }
   ],
-  "quotes": [{"text": "On the second visitor, I fell into the world completely. A messenger who failed to deliver her final message. A beekeeper, untimely victim of a coup. I cried some happy tears near the end.", "author": "itch.io commenter on Last Tea Shop"}, {"text": "Combined with the soundtrack I had to tear up multiple times. It's gentle, but deeply reflective. One of my favorite games now.", "author": "itch.io commenter on Last Tea Shop"}],
+  "quotes": [
+    // VERIFIED-AT: https://cannibalhalflinggaming.com/2022/01/17/solitaire-storytelling-last-tea-house/
+    {"text": "The settings, the ingredients, the recipes, the weather and the emotions, the variety of visitors, they pack a lot of flavor into a single page.", "author": "Seamus Conneely, Cannibal Halfling Gaming"}
+  ],
   "ru": {
     "tagShort": "Соло-журнал у границы миров",
     "tagline": "«Ты варишь чай. Они мертвы. У них остался последний час.»",
@@ -4260,6 +4407,10 @@ registerSystem("last-tea-shop", {
       {
         "name": "Полная редакция — зин (itch.io)"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Сеттинги, ингредиенты, рецепты, погода и эмоции, разнообразие посетителей — всё это вмещает уйму атмосферы в одну страницу." }
     ]
   },
   "en": {
@@ -4333,13 +4484,12 @@ registerSystem("mausritter", {
     }
   ],
   "quotes": [
+
+
+    // VERIFIED-AT: https://www.wargamer.com/dnd/mausritter-srd-rules (Gab Hernandez, Wargamer, updated 2025-06-22)
     {
-      "text": "The card inventory is the best physical design in any RPG I've played. When my mouse was Hungry AND carrying a spell stone, that slot decision felt genuinely agonizing.",
-      "author": "u/grainfield_delver, r/osr"
-    },
-    {
-      "text": "Introduced my 8-year-old niece and my grognard dad to this at the same table. Both loved it. I don't know how Isaac Williams did that but it's real.",
-      "author": "u/tinywhiskers, r/rpg"
+      "text": "Mausritter offers players a very simple, slick, and classic RPG experience in a teensy, squeaky package.",
+      "author": "Gab Hernandez, Wargamer"
     }
   ],
   "resources": [
@@ -4413,6 +4563,10 @@ registerSystem("mausritter", {
       {
         "name": "Лист персонажа"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Mausritter предлагает игрокам очень простой, гладкий и классический RPG-опыт в крошечной пищащей упаковке." }
     ]
   },
   "en": {
@@ -4510,13 +4664,15 @@ registerSystem("microscope", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://matthewjconstantine.com/2020/06/08/tabletop-rpg-review-microscope/
     {
-      "text": "Microscope is the best session zero tool ever created. We used it to build our campaign world and the players are SO much more invested because they created the history themselves.",
-      "author": "u/worldbuilder_gm, r/rpg"
+      "text": "If you're a writer or a frequent game master for RPGs, I think it deserves a place in your library.",
+      "author": "Matthew J. Constantine, matthewjconstantine.com"
     },
+    // VERIFIED-AT: https://kathylbrown.com/microscope-by-ben-robbins-a-game-review/
     {
-      "text": "Playing Microscope backwards — defining the end of a civilization first, then exploring why it happened — was the most mind-bending storytelling experience I've had at a table.",
-      "author": "u/fractal_historian, r/rpg"
+      "text": "Microscope is one of my favorite collaborative storytelling games.",
+      "author": "Kathy L. Brown, kathylbrown.com"
     }
   ],
   "ru": {
@@ -4559,6 +4715,11 @@ registerSystem("microscope", {
       {
         "name": "Официальный сайт"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Если вы писатель или часто водите RPG, ей точно место на вашей полке." },
+      { "text": "Microscope — одна из моих любимых игр про совместное сочинительство." }
     ]
   },
   "en": {
@@ -4682,13 +4843,15 @@ registerSystem("mork-borg", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://www.theguardian.com/music/2020/aug/11/mork-borg-swedish-metal-role-playing-game
     {
-      "text": "Mörk Borg is the only RPG book I've seen people buy just to look at, and then accidentally start playing because the vibe is that infectious.",
-      "author": "u/blackmetal_dm, r/rpg"
+      "text": "A headbanger of a game that is the latest example of the fertile cross-pollination between tabletop role-playing and extreme metal: a love letter to the hellraising imagery, lyrics, and album art of metal.",
+      "author": "Pearse Anderson, The Guardian"
     },
+    // VERIFIED-AT: https://www.dicebreaker.com/categories/roleplaying-game/news/grimdark-tabletop-rpg-mork-borg-doom-metal
     {
-      "text": "Ran a 3-hour one-shot. Two TPKs. Everyone demanded we play again next week. This game just HITS different.",
-      "author": "u/doom_dice, r/MorkBorg"
+      "text": "A pitch-black apocalyptic fantasy RPG.",
+      "author": "Sara Elsam, Dicebreaker"
     }
   ],
   "ru": {
@@ -4749,6 +4912,11 @@ registerSystem("mork-borg", {
       {
         "name": "Fillable лист"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Игра-хедбенгер, последнее свидетельство плодотворного перекрёстного опыления настольных RPG и экстремального метала: любовное письмо к адскому визуальному ряду, текстам и обложкам металлических альбомов." },
+      { "text": "Беспросветно чёрная апокалиптическая фэнтези-RPG." }
     ]
   },
   "en": {
@@ -4888,13 +5056,11 @@ registerSystem("mothership", {
     }
   ],
   "quotes": [
+
+    // VERIFIED-AT: https://www.tabletopgaming.co.uk/features/mothership-rpg-review/
     {
-      "text": "Mothership's panic table created the most cinematic moment I've ever seen in an RPG. One player panicked, shot another player, which caused THAT player to panic. Chain reaction of horror. We were dying laughing and terrified simultaneously.",
-      "author": "u/hull_breach, r/mothershiprpg"
-    },
-    {
-      "text": "Gradient Descent is the best dungeon crawl module ever written for any system. I will die on this hill.",
-      "author": "u/deep_scanner, r/osr"
+      "text": "The genre defining Mothership RPG might just be the absolute best way to die alone in space with your friends.",
+      "author": "Chris Lowry, Tabletop Gaming"
     }
   ],
   "ru": {
@@ -4952,6 +5118,10 @@ registerSystem("mothership", {
       {
         "name": "Ширма ведущего"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Жанрообразующая Mothership RPG — пожалуй, лучший способ умереть в одиночестве в космосе вместе с друзьями." }
     ]
   },
   "en": {
@@ -5014,10 +5184,10 @@ registerSystem("mothership", {
 });
 registerSystem("mutant-year-zero", {
   "groups": {
-    "default": { "key": "fl", "order": 99 },
-    "family": { "key": "year-zero", "order": 99 },
-    "genre": { "key": "sci-fi", "order": 99 },
-    "solo": { "key": "solo-compatible", "order": 99 }
+    "default": { "key": "fl", "order": 10 },
+    "family": { "key": "year-zero", "order": 10 },
+    "genre": { "key": "sci-fi", "order": 6 },
+    "solo": { "key": "solo-compatible", "order": 15 }
   },
   "name": "Mutant: Year Zero",
   "publisher": "Free League / Year Zero Engine",
@@ -5093,22 +5263,17 @@ registerSystem("mutant-year-zero", {
     }
   ],
   "quotes": [
-    // SYNTH: Reddit fetch is blocked from this environment; quotes synthesized from RPG.net / forum reception ("probably the best post-apocalyptic game on the market") and the documented push-die / Ark / Zone reactions.
-    {
-      "text": "Mutant: Year Zero is probably the best post-apocalyptic RPG on the market. The push mechanic alone is worth the price — every roll is a tiny morality play about how much of your body you're willing to break for one more success.",
-      "author": "Composite review (r/rpg sentiment) — SYNTH, replace with verbatim quote"
-    },
-    {
-      "text": "What hooked my table wasn't the mutations, it was the Ark. They argued for forty minutes about whether to spend Development Points on Warfare or Food Supply. Nobody argues about XP that hard.",
-      "author": "Composite review (r/freeleague sentiment) — SYNTH, replace with verbatim quote"
-    }
+    // VERIFIED-AT: https://stargazersworld.com/2015/02/09/review-mutant-year-zero/
+    {"text": "If you are into post-apocalypse RPGs you definitely should give Mutant a chance!", "author": "Michael Wolf, Stargazer's World"},
+    // VERIFIED-AT: https://www.cgmagonline.com/review/tabletop/mutant-year-zero-tabletop-review/
+    {"text": "Choosing relationships is where the system shined for me, as both a player and a DM.", "author": "Preston Dozsa, CGMagazine"}
   ],
   "ru": {
     "tagShort": "Постапок выживание у руин Ковчега",
-    "tagline": "«Старейшины умирают. Грубы кончаются. Зона зовёт. Это — Год Ноль».",
+    "tagline": "«Старейшины умирают. Паёк кончается. Зона зовёт. Это — Год Ноль».",
     "description": "Игра, с которой начался Year Zero Engine (2014). Постапокалипсис: вы — мутанты Ковчега, последнего убежища в мире, погибшем сто лет назад. Старейшины при смерти, и больше никто не помнит, откуда вы взялись. Бросаете пулы шестигранников, форсируете провалы — но каждая «пушнутая» единица ломает снаряжение или запускает мутацию. Год Ноль — это год, когда ваше поколение должно решить: спасти Ковчег или найти Эдем за Зоной.",
-    "setting": "Земля после неназванного коллапса. Поля радиации, ржавые мегаполисы, мутировавшие звери и растения. Ковчег — горстка лачуг под властью Старейшин — даёт грубы (универсальную еду) и иллюзию безопасности. Вокруг — Зона: бывшие города, лаборатории, бункеры. Мутанты не знают истории, не знают мира до Падения, но в Зоне лежат артефакты, которые могут всё изменить. Атмосфера — Сталкер встречает Безумного Макса с привкусом скандинавской меланхолии.",
-    "vignette": "Зачистщик Ковчега в подвале старого торгового центра. Бросок Пробивы: 4 кубика навыка, ни одной шестёрки. Рискуете — пушаете. Перебрасываете пять кубиков (можно и кубики снаряжения), выпадает шестёрка — успех. Но две единицы: ваша заточка ломается, и активируется мутация «Костяные шипы». Из ладоней растут отростки, вы корчитесь от боли — и пробиваете дверь насквозь. За дверью — ящик с патронами. Ковчег получит +1 Грубы. А вы получите шрам на всю кампанию.",
+    "setting": "Земля после неназванного коллапса. Поля радиации, ржавые мегаполисы, мутировавшие звери и растения. Ковчег — горстка лачуг под властью Старейшин — даёт паёк (универсальную еду) и иллюзию безопасности. Вокруг — Зона: бывшие города, лаборатории, бункеры. Мутанты не знают истории, не знают мира до Падения, но в Зоне лежат артефакты, которые могут всё изменить. Атмосфера — Сталкер встречает Безумного Макса с привкусом скандинавской меланхолии.",
+    "vignette": "Сталкер Ковчега в подвале старого торгового центра. Бросок Пробивы: 4 кубика навыка, ни одной шестёрки. Рискуете — пушаете. Перебрасываете пять кубиков (можно и снаряжения), выпадает шестёрка — успех. Но на двух кубиках выпали единицы: ваша заточка ломается. Зато на кубике мутации тоже единица — вы зарабатываете Очко Мутации. Тратите его и активируете «Костяные шипы»: из ладоней растут отростки, вы корчитесь от боли и пробиваете дверь насквозь. За дверью — ящик с патронами. Ковчег получит +1 Паёк. А вы получите шрам на всю кампанию.",
     "prep": "~20 мин",
     "mechanics": [
       {
@@ -5120,8 +5285,8 @@ registerSystem("mutant-year-zero", {
         "text": "Между сессиями вы голосуете, во что вложить Очки Развития: Война, Еда, Технологии, Культура. Ваш Ковчег — общая овца. Каждый сектор открывает новые проекты и угрозы."
       },
       {
-        "title": "Гексплорейшн Зоны",
-        "text": "Зона — генерируемая на лету сетка гексов. Бросаете на угрозы, артефакты, мутировавшую фауну. Полевые экспедиции = поиск груб, патронов и обломков прошлого."
+        "title": "Гексокроул Зоны",
+        "text": "Зона — генерируемая на лету сетка гексов. Бросаете на угрозы, артефакты, мутировавшую фауну. Полевые экспедиции = поиск пайка, патронов и обломков прошлого."
       },
       {
         "title": "Мутации",
@@ -5161,6 +5326,11 @@ registerSystem("mutant-year-zero", {
       {
         "name": "Карта The Dead Apple"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Если вам нравятся постапокалиптические RPG, обязательно дайте Mutant шанс!" },
+      { "text": "Выбор отношений — то, в чём система засияла для меня и как для игрока, и как для мастера." }
     ]
   },
   "en": {
@@ -5293,13 +5463,11 @@ registerSystem("mythic-bastionland", {
     }
   ],
   "quotes": [
+
     {
-      "text": "Mythic Bastionland feels like what D&D would be if it was designed today by someone who actually read Le Morte d'Arthur instead of Lord of the Rings.",
-      "author": "u/knight_errant, r/osr"
-    },
-    {
-      "text": "The procedural generation is incredible. I ran a 6-session campaign and never prepped more than 20 minutes. The oracles did the heavy lifting and the results were better than anything I could've planned.",
-      "author": "u/hexcrawl_fan, r/rpg"
+      // VERIFIED-AT: https://giantbrain.co.uk/2025/08/09/mythic-bastionland-first-read/
+      "text": "It is an incredibly thoughtful and well designed product that feels like it is begging you to play it.",
+      "author": "Iain McAllister, The Giant Brain"
     }
   ],
   "ru": {
@@ -5357,6 +5525,10 @@ registerSystem("mythic-bastionland", {
       {
         "name": "Лист персонажа"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Невероятно продуманный и грамотно спроектированный продукт, который буквально умоляет в него играть." }
     ]
   },
   "en": {
@@ -5420,7 +5592,7 @@ registerSystem("mythic-bastionland", {
 registerSystem("nimble", {
   "groups": {
     "default": { "key": "tactical", "order": 2 },
-    "family": { "key": "standalone", "order": 10 },
+    "family": { "key": "standalone", "order": 10.5 },
     "genre": { "key": "tactical", "order": 2 }
   },
   "name": "Nimble 2e",
@@ -5473,13 +5645,15 @@ registerSystem("nimble", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://ttrpgfans.com/nimble-5e-boxed-set/
     {
-      "text": "Nimble fixed everything I hated about 5e combat in one elegant move: remove the attack roll. Now every turn something happens. My sessions went from 3-hour combats to 45-minute cinematic battles.",
-      "author": "r/rpg"
+      "text": "Nimble is easily one of the best 5E-adjacent RPGs ever made and delivers on its promise of speed and tactical play without sacrificing the best parts of modern D&D.",
+      "author": "Jason Volk, TTRPGfans"
     },
+    // VERIFIED-AT: https://www.wargamer.com/nimble-rpg-expansion-kickstarter
     {
-      "text": "The boss phase mechanic is stolen straight from video games and it works PERFECTLY at the table. When the dragon roared and entered Phase 2, my players genuinely panicked.",
-      "author": "r/nimblerpg"
+      "text": "Even those who adore D&D can agree that it sometimes feels like a slog, and that's the experience Nimble RPG vehemently avoids.",
+      "author": "Gab Hernandez, Wargamer"
     }
   ],
   "ru": {
@@ -5525,6 +5699,11 @@ registerSystem("nimble", {
       {
         "name": "Официальный сайт"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Nimble — без преувеличения, одна из лучших RPG на базе 5E из когда-либо сделанных, и она держит обещание скорости и тактичной игры, не жертвуя лучшим из современной D&D." },
+      { "text": "Даже фанаты D&D признают, что иногда она ощущается как болото — и именно от этого ощущения Nimble RPG яростно бежит." }
     ]
   },
   "en": {
@@ -5634,13 +5813,11 @@ registerSystem("one-ring", {
     }
   ],
   "quotes": [
+
+    // VERIFIED-AT: https://freeleaguepublishing.com/games/the-one-ring/ (press blurb credited to Tabletop Gaming Magazine)
     {
-      "text": "The One Ring is the ONLY Tolkien RPG that actually feels like Tolkien. It's not about killing things. It's about the journey, the friendships, and standing up to darkness even when you're afraid. My group cried during our Rivendell fellowship phase.",
-      "author": "u/shire_folk, r/TheOneRing"
-    },
-    {
-      "text": "The Shadow mechanic is a masterpiece. Watching a player's hobbit slowly succumb to weariness and despair was more dramatic than any dragon fight. This game GETS Tolkien.",
-      "author": "u/middle_earth_gm, r/rpg"
+      "text": "Must play. A staggeringly beautiful adaptation of Middle-earth.",
+      "author": "Tabletop Gaming Magazine"
     }
   ],
   "ru": {
@@ -5689,6 +5866,10 @@ registerSystem("one-ring", {
       {
         "name": "Официальный лист"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Обязательно сыграть. Ошеломляюще красивая адаптация Средиземья." }
     ]
   },
   "en": {
@@ -5767,12 +5948,14 @@ registerSystem("ose", {
   ],
   "quotes": [
     {
-      "text": "I ran this for a 5e group as a 'one-shot' in February. We're now 14 sessions into a Dolmenwood campaign. The reaction roll system alone changed how I GM forever.",
-      "author": "u/moldvay_revival, r/osr"
+      // VERIFIED-AT: https://unwinnable.com/2020/02/10/old-school-essentials/
+      "text": "This is about as perfect a set of old school rules as we've encountered – light, fast, streamlined, concise and polished to gleaming.",
+      "author": "Stu Horvath, Unwinnable (Vintage RPG, Feb 2020)"
     },
     {
-      "text": "The layout is the product. I can find any rule mid-session in seconds. It sounds like a small thing until you've wasted 10 minutes hunting through a 400-page hardcover mid-fight.",
-      "author": "u/BX_forever, r/rpg"
+      // VERIFIED-AT: https://therewillbe.games/articles-ttrpg-reviews/8556-play-matt-old-school-essentials-review
+      "text": "As a dungeon master, it's a dream come true: fewer rules to juggle, easier to find the ones I do forget.",
+      "author": "Matt Thrower, There Will Be Games"
     }
   ],
   "resources": [
@@ -5846,6 +6029,11 @@ registerSystem("ose", {
       {
         "name": "Basic Rules — бесплатный PDF"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Это, пожалуй, самый совершенный набор олдскульных правил, который нам встречался — лёгкий, быстрый, выверенный, лаконичный и отполированный до блеска." },
+      { "text": "Для мастера это сбывшаяся мечта: меньше правил жонглировать, и забытое легче отыскать." }
     ]
   },
   "en": {
@@ -5957,12 +6145,14 @@ registerSystem("outgunned", {
   ],
   "quotes": [
     {
-      "text": "No other recent game captures the rhythm of an action film quite like this. The push-your-luck dice make every roll feel like a slow-motion explosion.",
-      "author": "Geeknative"
+      "text": "Outgunned is the best cinematic action RPG since Feng Shui.",
+      "author": "Rob Wieland, EN World"
+      // VERIFIED-AT: https://www.enworld.org/threads/outgunned-brings-a-little-dice-dice-bang-bang-to-your-table.706056/
     },
     {
-      "text": "We played a Die Hard scenario. One player jumped off the roof with a fire hose. He rolled three sixes. The table erupted. This is what Outgunned is for.",
-      "author": "RPGnet"
+      "text": "Outgunned keeps the promise of a TTRPG system that lets you create games like action movies.",
+      "author": "Andrew Girdwood, Geek Native"
+      // VERIFIED-AT: https://www.geeknative.com/166783/be-rewarded-for-being-awesome-a-review-of-outgunned/
     }
   ],
   "ru": {
@@ -6014,6 +6204,11 @@ registerSystem("outgunned", {
       {
         "name": "Quickstart"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Outgunned — лучшая кинематографичная боевиковая RPG со времён Feng Shui." },
+      { "text": "Outgunned держит обещание: TTRPG-система, в которой получаются игры, как боевики." }
     ]
   },
   "en": {
@@ -6118,7 +6313,10 @@ registerSystem("pirate-borg", {
       "icon": "users"
     }
   ],
-  "quotes": [{"text": "One character got turned into a chicken, contracted a disease, and promptly exploded while his friend tried to carry him to safety. Funniest sequence in 20 years of TTRPGs.", "author": "Geek to Geek Media review"}, {"text": "The bestiary goes from mundane but deadly to things that should have stayed at the bottom of the ocean, and somehow it all holds together as a coherent, rum-soaked nightmare.", "author": "Rolling Boxcars, rollingboxcars.com"}],
+  "quotes": [
+    // VERIFIED-AT: https://screenrant.com/pirate-borg-review/
+    {"text": "With nautical lore, naval combat, and Lovecraftian horror, Pirate Borg is everything anyone could want in a sea-faring TTRPG.", "author": "Austin King, Screen Rant"}
+  ],
   "ru": {
     "tagShort": "Проклятые пираты арт-панк RPG",
     "tagline": "«Ваша сабля и пистоль не спасут вас от орд скелетов, Кракена и даже собственной команды.»",
@@ -6156,6 +6354,10 @@ registerSystem("pirate-borg", {
       {
         "name": "Free League Publishing"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "С морским лором, морскими боями и лавкрафтовским ужасом Pirate Borg — это всё, чего можно желать от настольной игры о море." }
     ]
   },
   "en": {
@@ -6200,10 +6402,10 @@ registerSystem("pirate-borg", {
 });
 registerSystem("runequest", {
   "groups": {
-    "default": { "key": "tactical", "order": 99 },
-    "family": { "key": "standalone", "order": 99 },
-    "genre": { "key": "dark-fantasy", "order": 99 },
-    "solo": { "key": "solo-compatible", "order": 99 }
+    "default": { "key": "tactical", "order": 4 },
+    "family": { "key": "standalone", "order": 18 },
+    "genre": { "key": "dark-fantasy", "order": 9 },
+    "solo": { "key": "solo-compatible", "order": 14 }
   },
   "name": "RuneQuest",
   "publisher": "Chaosium",
@@ -6269,28 +6471,28 @@ registerSystem("runequest", {
     }
   ],
   "quotes": [
-    // SYNTH: paraphrased from common r/rpg / r/runequest sentiment captured in forum discussions; not a verbatim Reddit quote
+    // VERIFIED-AT: https://www.tabletopgaming.co.uk/reviews/runequest-roleplaying-in-glorantha-rpg-review/
     {
-      "text": "I love Glorantha and the runes-and-passions system makes characters feel like they actually belong to a myth. Combat is brutal and slow, but every fight matters — a broadsword to the leg ends careers.",
-      "author": "Composite review (r/runequest sentiment) — SYNTH, replace with verbatim quote"
+      "text": "where historic realism mixes with raw, primitive magic that hangs in the air like early morning mist",
+      "author": "Richard Jansen-Parkes, Tabletop Gaming"
     },
-    // SYNTH: paraphrased from recurring 'pitch me RuneQuest' threads on r/rpg
+    // VERIFIED-AT: https://www.chaosium.com/blogennies-2019-spotlight-one-of-the-most-stunning-rpg-books-ever-made-runequest-nominated-for-best-interior-art/
     {
-      "text": "It's the great-grandparent of Call of Cthulhu's BRP. Percentile skills, hit locations, no levels — your character grows by actually using skills. Glorantha is the weirdest, deepest setting in the hobby. Not generic fantasy at all.",
-      "author": "Composite review (r/rpg sentiment) — SYNTH, replace with verbatim quote"
+      "text": "breaks away from the core tropes of gleaming armour and codified magic that have come to dominate fantasy in recent decades and replaces it with something that feels closer to ancient myths and legends – more The Odyssey than Lord of the Rings.",
+      "author": "EN World"
     }
   ],
   "ru": {
     "tagShort": "Бронзовый век, мифы и руны Глоранты",
     "tagline": "«Не фэнтези про эльфов. Мифический мир, где боги ходят по земле, а руна Истины — это не флаф, а механика».",
-    "description": "Прародитель всей линейки BRP — той самой системы, что породила Call of Cthulhu. d100 процентные навыки, зоны попадания, никаких уровней: персонаж растёт через применение умений. Издание 2018 года — прямой наследник RQ2 1980-го, переизданный Chaosium с подачи Грега Стаффорда. Жёсткая, медленная, мифологическая.",
+    "description": "Прародитель всей линейки BRP — той самой системы, что породила Call of Cthulhu. d100 процентные навыки, зоны попадания, никаких уровней: персонаж растёт через применение умений. Издание 2018 года — прямой наследник RQ2 1980-го, переизданный Chaosium с подачи Грега Стаффорда. Жёсткая, вдумчивая, мифологическая.",
     "setting": "Глоранта — бронзовый век, придуманный Грегом Стаффордом ещё в 1966 году. Здесь мифы буквальны: солнце — это бог, который умер и вернулся, руны — реальные силы мироздания, а культы определяют судьбу сильнее, чем класс или раса. Драгон Пасс, Сартар, Лунная Империя. Орланти-варвары против лунарской магии. Утки, тролли, эльфы-растения. Мир, который НЕ похож на Толкина — он глубже, страннее, антропологичнее.",
-    "vignette": "Васана, всадница Орланти с рунами Воздуха 75% и Движения 60%, страсть «Любовь к Сартару 80%». Бой с лунарским пехотинцем. Кидаете d100 на Бродсворд: 23, успех. Локация попадания — d20: 16, левая нога. Урон 1d8+1d4: 9 пунктов, броня кожи поглощает 2. Нога повреждена — половина HP локации. Васана хромает, штраф к Движению. Следующий ход: молитесь Орланти, тратите Магические Очки, кастуете «Heal 4» через культовое чудо. Рука мага на ноге, рана закрывается. Но руна Истины ноет — вы поклялись не отступать.",
+    "vignette": "Васана, всадница Орланти с рунами Воздуха 75% и Движения 60%, страсть «Любовь к Сартару 80%». Бой с лунарским пехотинцем. Кидаете d100 на Меч (Broadsword): 23, успех. Локация попадания — d20: 07, левая нога. Урон 1d8+1d4: 9 пунктов, броня кожи поглощает 2. Нога повреждена — половина HP локации. Васана хромает, штраф к Движению. Следующий ход: тратите Магические Очки на спирит-магию «Heal 4». Рука мага на ноге, рана закрывается. Но руна Истины ноет — вы поклялись не отступать.",
     "prep": "~60 мин",
     "mechanics": [
       {
         "title": "Руны и страсти",
-        "text": "У персонажа есть рунические сродства (Воздух, Истина, Движение…) и страсти («Ненависть к лунарам 80%»). Это не флаф — вы кидаете по ним d100 как по навыку, и они меняют исход сцен."
+        "text": "У персонажа есть рунические сродства (Воздух, Истина, Движение…) и страсти («Ненависть к лунарам 80%»). Это не просто декорация — вы кидаете по ним d100 как по навыку, и они меняют исход сцен."
       },
       {
         "title": "Зоны попадания",
@@ -6302,7 +6504,7 @@ registerSystem("runequest", {
       },
       {
         "title": "Магия от культов",
-        "text": "Заклинания приходят от богов, которым вы служите. Орланти даёт Heal и Lightning, Хумакт — Sword Trance. Магия — часть веры, не сборник заклинаний."
+        "text": "Спирит-магия (Heal, Disrupt) доступна почти всем; Рун-магия — это чудеса вашего бога. Орланти даёт Wind Words и Lightning, Хумакт — Sword Trance. Магия — часть веры, не сборник заклинаний."
       }
     ],
     "gallery": [
@@ -6333,13 +6535,18 @@ registerSystem("runequest", {
         "name": "Преген-персонажи Quickstart"
       }
     ]
+  ,
+    "quotes": [
+      { "text": "где исторический реализм смешан с сырой первобытной магией, что висит в воздухе как утренний туман" },
+      { "text": "уходит от расхожих тропов сверкающих доспехов и кодифицированной магии, что захватили фэнтези в последние десятилетия, и заменяет их чем-то, что ближе к древним мифам и легендам — скорее «Одиссея», чем «Властелин колец»." }
+    ]
   },
   "en": {
     "tagShort": "Bronze-age myth, runes, hit locations",
     "tagline": "\"Not fantasy with elves. A mythic world where gods walk and the Truth rune is mechanics, not flavor.\"",
     "description": "The grandparent of the entire BRP family — the system that birthed Call of Cthulhu. d100 percentile skills, hit locations, no levels: characters grow by using skills. The 2018 edition is a direct sequel to RQ2 (1980), reissued by Chaosium under Greg Stafford's guidance. Gritty, deliberate, mythological.",
     "setting": "Glorantha — a bronze-age world Greg Stafford has been building since 1966. Myths are literal: the sun is a god who died and returned, runes are actual cosmic forces, and cults shape destiny more than class or race ever could. Dragon Pass, Sartar, the Lunar Empire. Orlanthi barbarians vs. Lunar magic. Ducks, trolls, plant-elves. A world that is NOT Tolkien — deeper, weirder, anthropological.",
-    "vignette": "Vasana, an Orlanthi rider with Air rune 75%, Movement 60%, passion 'Love (Sartar) 80%'. Fighting a Lunar hoplite. Roll d100 vs. Broadsword: 23, success. Hit location d20: 16, left leg. Damage 1d8+1d4: 9 points, leather absorbs 2. The leg is wounded — half HP for that location. Vasana limps, Movement penalty. Next round: pray to Orlanth, spend Magic Points, cast 'Heal 4' as a cult miracle. Your mage's hand on the leg, the wound knits. But your Truth rune aches — you swore never to retreat.",
+    "vignette": "Vasana, an Orlanthi rider with Air rune 75%, Movement 60%, passion 'Love (Sartar) 80%'. Fighting a Lunar hoplite. Roll d100 vs. Broadsword: 23, success. Hit location d20: 07, left leg. Damage 1d8+1d4: 9 points, leather absorbs 2. The leg is wounded — half HP for that location. Vasana limps, Movement penalty. Next round: spend Magic Points on Spirit Magic 'Heal 4'. Your hand on the leg, the wound knits. But your Truth rune aches — you swore never to retreat.",
     "prep": "~60 min",
     "mechanics": [
       {
@@ -6356,7 +6563,7 @@ registerSystem("runequest", {
       },
       {
         "title": "Cult magic",
-        "text": "Spells come from the gods you serve. Orlanth gives Heal and Lightning; Humakt grants Sword Trance. Magic is faith, not a spellbook."
+        "text": "Spirit Magic (Heal, Disrupt) is broadly available; Rune Magic is the miraculous gift of your god. Orlanth grants Wind Words and Lightning; Humakt grants Sword Trance. Magic is faith, not a spellbook."
       }
     ],
     "gallery": [
@@ -6452,13 +6659,15 @@ registerSystem("shadowdark", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://www.enworld.org/threads/plenty-of-time-to-die-a-shadowdark-review.697134/
     {
-      "text": "The real-time torch timer is a gimmick that shouldn't work. But it does. The moment the timer goes off and you're in total darkness, the whole table panics. Best mechanic I've seen in years.",
-      "author": "u/torch_watcher, r/shadowdark"
+      "text": "Shadowdark cuts most of the fat of other versions of D&D, leaving a lean, mean dungeon crawling machine.",
+      "author": "Rob Wieland, EN World"
     },
+    // VERIFIED-AT: https://www.wargamer.com/dnd-like-shadowdark-western-reaches
     {
-      "text": "Shadowdark is what happens when someone takes the best parts of 5e and OSR, cuts everything else, and makes a game that's actually fun to run AND play. I've converted my entire group.",
-      "author": "u/dungeon_delver_99, r/rpg"
+      "text": "It's not the only OSR game, but it's certainly one of the most successful, striking a good balance of ease of play and thematic depth.",
+      "author": "Timothy Linward, Wargamer"
     }
   ],
   "ru": {
@@ -6507,6 +6716,11 @@ registerSystem("shadowdark", {
       {
         "name": "Quickstart Set (136 стр.!)"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Shadowdark срезает почти весь жир с других версий D&D, оставляя поджарую и злую машину для подземельных вылазок." },
+      { "text": "Это не единственная OSR-игра, но определённо одна из самых успешных — она удачно сочетает простоту игры и тематическую глубину." }
     ]
   },
   "en": {
@@ -6589,13 +6803,15 @@ registerSystem("spire", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://www.enworld.org/threads/it%E2%80%99s-hard-to-be-a-saint-in-the-city-of-spire.705023/
     {
-      "text": "A PC got her reputation track filled in session 3. The Fallout meant an aelfir magistrate now has her description. She's been running a double life ever since. No other game creates consequences like this.",
-      "author": "u/downspire_ministry, r/rpg"
+      "text": "A moody game in a dark city full of spies, revolutionaries and strange magic.",
+      "author": "Rob Wieland, EN World"
     },
+    // VERIFIED-AT: https://gnomestew.com/spire-the-city-must-fall-review/
     {
-      "text": "The setting is doing things I've never seen in a fantasy RPG. It's about occupation and resistance and the cost of being the villain in someone else's story. Heavy, brilliant, completely unlike D&D.",
-      "author": "u/carrion_priest_77, r/narrativerpg"
+      "text": "The mechanics of stress and fallout are both familiar and combined in a new and exciting fashion, and I think that even people that are a little burned out on fantasy may want to keep an eye on these mechanics and how they managed to promote and resolve story elements.",
+      "author": "Jared Rascher, Gnome Stew"
     }
   ],
   "resources": [
@@ -6675,6 +6891,11 @@ registerSystem("spire", {
       {
         "name": "Лист персонажа"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Атмосферная игра в тёмном городе, кишащем шпионами, революционерами и странной магией." },
+      { "text": "Механика стресса и последствий и знакома, и собрана новым, увлекательным образом — стоит присмотреться даже тем, кто немного выгорел на фэнтези: ради того, как через эту механику двигаются и разрешаются сюжетные элементы." }
     ]
   },
   "en": {
@@ -6812,17 +7033,20 @@ registerSystem("star-wars-ffg", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://www.belloflostsouls.net/2020/02/rpg-spotlight-ffgs-star-wars-takes-you-to-a-galaxy-far-far-away.html
     {
-      "text": "The narrative dice system is pure genius. Elegant. Intuitive. Easy to learn, but requires practice and dedication to master. It encourages players to collaborate and contribute to the narrative, making it a more cooperative storytelling experience.",
-      "author": "u/GroggyGolem, r/swrpg"
+      "text": "Fantasy Flight Games made the best Star Wars RPG system imaginable.",
+      "author": "Meaghan Colleran, Bell of Lost Souls"
     },
+    // VERIFIED-AT: https://www.belloflostsouls.net/2020/02/rpg-spotlight-ffgs-star-wars-takes-you-to-a-galaxy-far-far-away.html
     {
-      "text": "I ran Edge of the Empire for two years. The moment that sold me was when a player failed a Piloting check but rolled three Advantages — so she crashed the speeder into the hangar bay door, but the explosion took out the guards on the other side. That's Star Wars.",
-      "author": "u/Kill_Welly, r/rpg"
+      "text": "You can fail up or succeed your way into trouble, and to me that is very Star Wars.",
+      "author": "Meaghan Colleran, Bell of Lost Souls"
     },
+    // VERIFIED-AT: https://www.wargamer.com/star-wars-roleplaying-game/history
     {
-      "text": "The books are among the most gorgeous I have ever run a game from. The production quality is insane, and the art captures the feel of the original trilogy perfectly. Edge Studio has kept the line alive and I'm grateful.",
-      "author": "u/Ghostofman, r/swrpg"
+      "text": "The most recent family of Star Wars TTRPGs, developed by Fantasy Flight Games, uses custom polyhedral dice.",
+      "author": "Timothy Linward, Wargamer"
     }
   ],
   "ru": {
@@ -6886,6 +7110,12 @@ registerSystem("star-wars-ffg", {
       {
         "name": "Foundry VTT модуль"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Fantasy Flight Games сделала лучшую RPG-систему по «Звёздным войнам», какую только можно себе представить." },
+      { "text": "Можно проваливаться вверх или успешно вкатиться в неприятности — и для меня это очень «Звёздные войны»." },
+      { "text": "Самое свежее семейство TTRPG по «Звёздным войнам» от Fantasy Flight Games использует собственные многогранные кубики." }
     ]
   },
   "en": {
@@ -6954,10 +7184,10 @@ registerSystem("star-wars-ffg", {
 });
 registerSystem("starfinder-2e", {
   "groups": {
-    "default": { "key": "tactical", "order": 99 },
-    "family": { "key": "standalone", "order": 99 },
-    "genre": { "key": "sci-fi", "order": 99 },
-    "solo": { "key": "solo-compatible", "order": 99 }
+    "default": { "key": "tactical", "order": 5 },
+    "family": { "key": "standalone", "order": 19 },
+    "genre": { "key": "sci-fi", "order": 9 },
+    "solo": { "key": "solo-compatible", "order": 13 }
   },
   "name": "Starfinder 2e",
   "publisher": "Paizo",
@@ -7024,23 +7254,23 @@ registerSystem("starfinder-2e", {
     }
   ],
   "quotes": [
-    // CHECK: real comment from EN World thread on SF2e Player Core review (not Reddit, but verified user comment)
+    // VERIFIED-AT: https://www.enworld.org/threads/starfinder-second-edition-playtest-review.706833/
     {
-      "text": "Well, time to combine this with Pathfinder 2E now. The compatibility is the killer feature — my paladin can step onto a starship and the rules just work.",
-      "author": "Weiley31, EN World forums"
+      "text": "This makes Starfinder and Pathfinder completely compatible, so if you want Gunslingers in space or Envoys on Golorian, you can have them.",
+      "author": "Dawn Dalton, EN World"
     },
-    // SYNTH: paraphrased from r/Pathfinder2e and r/starfinder_rpg sentiment around the August 2025 release; Reddit blocked WebFetch
+    // VERIFIED-AT: https://gamingtrend.com/reviews/starfinder-2nd-edition-player-core-review-the-precision-of-pf2e-now-with-plasma-rifles/
     {
-      "text": "It's PF2e with plasma rifles and starships. Same crunchy 3-action turns, same tight math, but now my mystic casts in zero-g and the operative hacks the enemy ship from across the bridge.",
-      "author": "Composite review (r/starfinder_rpg sentiment) — SYNTH, replace with verbatim quote"
+      "text": "Each character will feel a bit more unique in the second edition, with each class feeling like it serves more of a unique purpose.",
+      "author": "Raven Winters, Gaming Trend"
     }
   ],
   "ru": {
     "tagShort": "Тактическая космоопера на движке PF2e",
     "tagline": "«Pathfinder 2e, но с лазерами, дрифт-двигателями и мистиком в скафандре».",
-    "description": "Второе издание Starfinder (август 2025) — полная переработка космической d20-системы Paizo на движке Pathfinder 2e Remastered. Та же 3-экшен-экономика, тот же кранч, но в декорациях далёкого будущего: классы вроде envoy, mystic, soldier, operative, witchwarper, mechanic, solarian, наследия (ancestries) от андроидов до кашрит, и — главное — полная кросс-совместимость с PF2e. Ваш пэйнфайндеровский паладин может зайти на космический корабль, и правила работают.",
-    "setting": "Pact Worlds — содружество планет вокруг звёзды-близнеца, удерживаемое мирным договором между разными расами. Космос пересекают на Drift-двигателях — пробивая плазменное подпространство, придуманное богиней Триуне после Gap, столетнего провала в памяти всей галактики. Никто не помнит, что было до Gap, и это — ключевая загадка сеттинга. Технология и магия работают рядом: соларианец с гравитационным мечом сражается рядом с механиком и его дроном-компаньоном.",
-    "vignette": "Ваш дредноут-фрегат вынырнул из Drift у астероида с пиратской базой. Пилот-оперативник бросает Piloting на манёвр — три экшена: Maneuver, Fire, Reload. Соларианец в зеро-g переключает форму звезды с фотонной на гравитационную — третий экшен ушёл в Flare. Мистик читает заклинание сквозь стекло шлема — соматический компонент в перчатке скафандра, проверка на Concentrate. Андроид-механик с дрона взламывает турель противника — Computers DC 22, успех. Капитан кричит: «Стрелять!» — и ваш плазменный канон делает критический урон. Pathfinder, но в космосе. Тот же ритм, тот же вкус.",
+    "description": "Второе издание Starfinder (август 2025) — полная переработка космической d20-системы Paizo на движке Pathfinder 2e Remastered. Та же 3-экшен-экономика, тот же кранч, но в декорациях далёкого будущего: классы вроде envoy, mystic, soldier, operative, witchwarper, mechanic, solarian, наследия (ancestries) от андроидов до касатхи, и — главное — полная кросс-совместимость с PF2e. Ваш пэйнфайндеровский паладин может зайти на космический корабль, и правила работают.",
+    "setting": "Pact Worlds — содружество планет вокруг звёзды-близнеца, удерживаемое мирным договором между разными расами. Космос пересекают на Drift-двигателях — пробивая плазменное подпространство, придуманное богиней Триуной после Gap, столетнего провала в памяти всей галактики. Никто не помнит, что было до Gap, и это — ключевая загадка сеттинга. Технология и магия работают рядом: соларианец с гравитационным мечом сражается рядом с механиком и его дроном-компаньоном.",
+    "vignette": "Ваш дредноут-фрегат вынырнул из Drift у астероида с пиратской базой. Пилот-оперативник бросает Piloting на манёвр — три экшена: Манёвр, Огонь, Перезарядка. Соларианец в невесомости переключает форму звезды с фотонной на гравитационную — третий экшен ушёл в Flare. Мистик читает заклинание сквозь стекло шлема — соматический компонент в перчатке скафандра, проверка на Concentrate. Андроид-механик с дрона взламывает турель противника — Computers DC 22, успех. Капитан кричит: «Стрелять!» — и ваш плазменный канон делает критический урон. Pathfinder, но в космосе. Тот же ритм, тот же вкус.",
     "prep": "~30–60 мин",
     "mechanics": [
       {
@@ -7088,13 +7318,18 @@ registerSystem("starfinder-2e", {
         "name": "Archives of Nethys SRD"
       }
     ]
+  ,
+    "quotes": [
+      { "text": "Это делает Starfinder и Pathfinder полностью совместимыми: хотите Стрелков в космосе или Послов на Голарионе — пожалуйста." },
+      { "text": "Во втором издании каждый персонаж ощущается чуть более уникальным — у каждого класса появляется собственная, более чётко выраженная роль." }
+    ]
   },
   "en": {
     "tagShort": "Tactical space-opera on the PF2e engine",
     "tagline": "\"Pathfinder 2e, but with plasma rifles, drift drives, and a mystic in a spacesuit.\"",
     "description": "Starfinder Second Edition (August 2025) is Paizo's full rebuild of their space d20 system on the Pathfinder 2e Remastered chassis. Same 3-action economy, same tactical crunch, but in a far-future setting: classes like envoy, mystic, soldier, operative, witchwarper, mechanic, and solarian; ancestries from androids to kasatha; and — crucially — full cross-compatibility with PF2e. Your Pathfinder paladin can step onto a starship, and the rules just work.",
     "setting": "The Pact Worlds — a confederation of planets around a binary star, held together by a peace treaty between wildly different species. Ships cross the void via the Drift, a plasma-subspace dimension carved out by the goddess Triune after the Gap — a galaxy-wide century of erased memory. Nobody remembers what came before the Gap, and that mystery is the setting's hook. Tech and magic share the table: a solarian wields a gravity blade beside a mechanic and her drone companion.",
-    "vignette": "Your dreadnought-frigate drops out of the Drift near an asteroid pirate base. The pilot-operative rolls Piloting for the maneuver — three actions: Maneuver, Fire, Reload. The solarian in zero-g flips their star form from photon to graviton — third action burned on a Flare. The mystic casts through their helmet visor — somatic component in a glove, Concentrate check. The android mechanic's drone hacks the enemy turret — Computers DC 22, success. The captain shouts: \"Fire!\" — and your plasma cannon crits. Pathfinder, but in space. Same rhythm, same flavor.",
+    "vignette": "Your dreadnought-frigate drops out of the Drift near an asteroid pirate base. The pilot-operative rolls Piloting for the maneuver — three actions: Манёвр, Огонь, Перезарядка. The solarian in zero-g flips their star form from photon to graviton — third action burned on a Flare. The mystic casts through their helmet visor — somatic component in a glove, Concentrate check. The android mechanic's drone hacks the enemy turret — Computers DC 22, success. The captain shouts: \"Fire!\" — and your plasma cannon crits. Pathfinder, but in space. Same rhythm, same flavor.",
     "prep": "~30–60 min",
     "mechanics": [
       {
@@ -7147,7 +7382,7 @@ registerSystem("starfinder-2e", {
 registerSystem("starforged", {
   "groups": {
     "default": { "key": "narrative", "order": 16 },
-    "family": { "key": "standalone", "order": 11 },
+    "family": { "key": "standalone", "order": 11.5 },
     "genre": { "key": "sci-fi", "order": 10 },
     "solo": { "key": "solo-adventure", "order": 2 }
   },
@@ -7209,7 +7444,10 @@ registerSystem("starforged", {
     { "icon": "anchor" },
     { "icon": "feather" }
   ],
-  "quotes": [{"text": "The oracles don't just tell you what happens — they hand you a weird detail and trust you to build the world around it. I've ended up in situations I never would have invented on my own.", "author": "u/void_cartographer, r/solorpg"}, {"text": "For developing a story with structure that still manages to surprise me, nothing beats this. It's become my favorite solo tabletop system, full stop.", "author": "popcult.blog, solo RPG review series"}],
+  "quotes": [
+    // VERIFIED-AT: https://www.enworld.org/threads/a-review-of-ironsworn-starforged.688914/
+    {"text": "Ironsworn: Starforged is an excellent follow up to the original and is highly recommended for sci-fi fans who want to explore the final frontier without the need for a GM.", "author": "Rob Wieland, EN World"}
+  ],
   "ru": {
     "tagShort": "Соло sci-fi PbtA RPG",
     "tagline": "«Поклянитесь на железе. Выживите в кузнице звёзд.»",
@@ -7251,6 +7489,10 @@ registerSystem("starforged", {
       { "name": "Бесплатная PDF (itch.io)" },
       { "name": "Листы и плейкит" },
       { "name": "Генератор оракулов" }
+    ]
+  ,
+    "quotes": [
+      { "text": "Ironsworn: Starforged — отличное продолжение оригинала и горячо рекомендована sci-fi-фанатам, что хотят исследовать последний фронтир без ведущего." }
     ]
   },
   "en": {
@@ -7360,13 +7602,12 @@ registerSystem("tales-loop", {
     }
   ],
   "quotes": [
+
+
+    // VERIFIED-AT: https://gizmodo.com/tales-from-the-loop-rpg-will-make-you-feel-like-a-stra-1797310505
     {
-      "text": "Tales from the Loop made my table of hardened D&D players cry. Actual tears. Over a kid trying to save his robot dog. I've never seen anything like it.",
-      "author": "u/loop_kid, r/rpg"
-    },
-    {
-      "text": "If Stranger Things was an RPG, this is it. But better, because it's YOUR kids and YOUR weird town and everything feels personal.",
-      "author": "u/80s_nostalgia, r/FreeLeague"
+      "text": "Tales From The Loop RPG Will Make You Feel Like a (Stranger Things) Kid Again",
+      "author": "Beth Elderkin, io9 / Gizmodo"
     }
   ],
   "ru": {
@@ -7418,6 +7659,10 @@ registerSystem("tales-loop", {
       {
         "name": "Официальный лист"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Tales From The Loop RPG снова заставит почувствовать себя ребёнком — в духе «Очень странных дел»." }
     ]
   },
   "en": {
@@ -7475,7 +7720,7 @@ registerSystem("tales-loop", {
 registerSystem("the-wretched", {
   "groups": {
     "default": { "key": "narrative", "order": 18 },
-    "family": { "key": "standalone", "order": 13 },
+    "family": { "key": "standalone", "order": 13.5 },
     "genre": { "key": "horror", "order": 5 },
     "solo": { "key": "solo-journaling", "order": 2 }
   },
@@ -7534,13 +7779,11 @@ registerSystem("the-wretched", {
     }
   ],
   "quotes": [
+
+    // VERIFIED-AT: https://www.tabletopgaming.co.uk/reviews/the-wretched-review/
     {
-      "text": "The Wretched made me sob at 1am recording audio logs to my phone while a candle burned down. I have never felt more alone in a game, and I mean that as the highest possible compliment.",
-      "author": "u/signal_lost, r/solorpg"
-    },
-    {
-      "text": "The moment the Jenga tower collapsed I genuinely screamed. It's just blocks and cards, and yet my hands were shaking for the last twenty minutes of play. Nothing has ever made me feel dread like that.",
-      "author": "u/last_survivor_log, r/solorpg"
+      "text": "The Wretched is what comes after that and it's atmospheric, frightening, and downright brilliant.",
+      "author": "Anna Blackwell, Tabletop Gaming Magazine"
     }
   ],
   "ru": {
@@ -7589,6 +7832,10 @@ registerSystem("the-wretched", {
       {
         "name": "DriveThruRPG"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "The Wretched — это то, что остаётся после, и она атмосферна, пугающа и попросту блестяща." }
     ]
   },
   "en": {
@@ -7643,7 +7890,7 @@ registerSystem("the-wretched", {
 registerSystem("thousand-year-old-vampire", {
   "groups": {
     "default": { "key": "narrative", "order": 17 },
-    "family": { "key": "standalone", "order": 12 },
+    "family": { "key": "standalone", "order": 12.5 },
     "genre": { "key": "narrative-weird", "order": 7 },
     "solo": { "key": "solo-journaling", "order": 1 }
   },
@@ -7695,13 +7942,15 @@ registerSystem("thousand-year-old-vampire", {
     { "icon": "skull" }
   ],
   "quotes": [
+    // VERIFIED-AT: https://thousandyearoldvampire.com/products/thousand-year-old-vampire
     {
-      "text": "I've played hundreds of TTRPGs. TYOV is the only one that made me genuinely mourn a fictional person I invented myself. When I lost the memory of my mortal wife, I had to stop and sit with it for a moment.",
-      "author": "u/inkandbone_gm, r/Solo_Roleplaying"
+      "text": "One of the most critically acclaimed solo journaling games ever made...",
+      "author": "Charlie L Hall, Polygon"
     },
+    // VERIFIED-AT: https://www.meeplelikeus.co.uk/thousand-year-old-vampire-2020/
     {
-      "text": "The genius is that forgetting is the mechanic. You don't just read about your vampire losing their humanity — you actually lose the notes. Those memories are gone. It's the most elegant horror design I've seen.",
-      "author": "u/design_dark, r/rpg"
+      "text": "Most important are your memory slots, and it's here where Thousand Year Old Vampire becomes a genuinely poignant experience.",
+      "author": "Michael Heron, Meeple Like Us"
     }
   ],
   "ru": {
@@ -7738,6 +7987,11 @@ registerSystem("thousand-year-old-vampire", {
       { "name": "Официальный сайт" },
       { "name": "Itch.io (PDF, $15)" },
       { "name": "Купить PDF" }
+    ]
+  ,
+    "quotes": [
+      { "text": "Одна из самых высоко оценённых критикой соло-дневниковых игр всех времён…" },
+      { "text": "Главное — слоты памяти; именно здесь Thousand Year Old Vampire превращается в по-настоящему пронзительный опыт." }
     ]
   },
   "en": {
@@ -7779,10 +8033,10 @@ registerSystem("thousand-year-old-vampire", {
 });
 registerSystem("traveller", {
   "groups": {
-    "default": { "key": "tactical", "order": 99 },
-    "family": { "key": "standalone", "order": 99 },
-    "genre": { "key": "sci-fi", "order": 99 },
-    "solo": { "key": "solo-compatible", "order": 99 }
+    "default": { "key": "tactical", "order": 6 },
+    "family": { "key": "standalone", "order": 20 },
+    "genre": { "key": "sci-fi", "order": 11 },
+    "solo": { "key": "solo-compatible", "order": 12 }
   },
   "name": "Traveller",
   "publisher": "Mongoose Publishing",
@@ -7848,23 +8102,18 @@ registerSystem("traveller", {
     }
   ],
   "quotes": [
-    // SYNTH: distilled from r/traveller and EN World "Sell me on Traveller" threads — captures the lifepath-death meme
+    // VERIFIED-AT: https://cannibalhalflinggaming.com/2019/12/30/traveller-behind-the-claw/
     {
-      "text": "Character creation IS the first session. You roll up a Scout, survive four terms, lose an eye on a survey gone wrong, and retire with a beat-up Type S — and you haven't even started playing yet. By the time the game begins, you already know who this person is.",
-      "author": "Composite review (r/traveller sentiment) — SYNTH, replace with verbatim quote"
-    },
-    // SYNTH: composite of common r/rpg sentiment about Traveller's emergent sandbox
-    {
-      "text": "Traveller doesn't have a plot. It has a star map, a cargo hold, and a mortgage on the ship. The story is whatever happens between the jump points. It's the most freeform sci-fi RPG I've ever run.",
-      "author": "Composite review (r/rpg sentiment) — SYNTH, replace with verbatim quote"
+      "text": "I think even its harshest critics would have to admit that the worldbuilding is incredible, if a bit spread out.",
+      "author": "Aki, Cannibal Halfling Gaming"
     }
   ],
   "ru": {
-    "tagShort": "Хард-сай-фай про вольных торговцев",
+    "tagShort": "Хардовая сай-фай про вольных торговцев",
     "tagline": "«Персонаж может умереть на этапе создания. И это фича».",
     "description": "Traveller — дедушка научно-фантастических ролёвок (1977, Марк Миллер). Текущая редакция — Mongoose 2e: 2d6 + модификаторы, броски на навыки, лайфпас вместо классов. Вы создаёте не героя, а биографию: служба в Имперском флоте, провал на брокерской сделке, потерянная нога на колониальной планете. Игра про фрилансеров на потрёпанном корабле, ипотеку за джамп-двигатель и грузы, которые лучше не вскрывать.",
     "setting": "Charted Space и Третья Империя. 11 000 населённых миров, гиперпространственные прыжки до 6 парсеков, феодальная аристократия с лазерами. Между секторами — фронтир, пираты, потерянные колонии. Вы — не спасители галактики, а команда вольного торговца с выплатой банку каждые 30 дней.",
-    "vignette": "Лайфпас. Вы выбрали Скаута. Бросок на поступление: 2d6, нужно 6+. Прошли. Первый срок — четыре года разведки. Бросок на выживание: 1+1 = 2. Провал. Открываете таблицу «Mishap»: «Серьёзное ранение, конец карьеры». Спасбросок — провалили. Ваш персонаж погиб до начала игры. Стол смеётся. Бросаете заново — на этот раз Drifter. Через сорок минут у вас — седой ветеран с тремя сроками, кибернетической рукой, врагом-капитаном и долей в торговом корабле Type-A Free Trader. Игра ещё не началась, а биография уже есть.",
+    "vignette": "Лайфпас. Вы выбрали Скаута. Бросок на поступление: 2d6, нужно 6+. Прошли. Первый срок — четыре года разведки. Бросок на выживание: 1+1 = 2. Провал. Открываете таблицу «Mishap» (d66): 11 — «Тяжёлое ранение, конец карьеры». В Mongoose 2e обычно выживаете, но шрамы остаются. Стол смеётся. Бросаете заново — на этот раз Drifter. Через сорок минут у вас — седой ветеран с тремя контрактами, кибернетической рукой, врагом-капитаном и долей в торговом корабле Type-A Free Trader. Игра ещё не началась, а биография уже есть.",
     "prep": "~20–30 мин",
     "mechanics": [
       {
@@ -7881,7 +8130,7 @@ registerSystem("traveller", {
       },
       {
         "title": "2d6 + всё",
-        "text": "Один бросок на всё: навык + характеристика + модификатор, цель — 8+. Простая шкала, понятные шансы. Кубики двадцатиугольникам не нужны."
+        "text": "Один бросок на всё: навык + характеристика + модификатор, цель — 8+. Простая шкала, понятные шансы. Двадцатигранник не нужен."
       }
     ],
     "gallery": [
@@ -7912,13 +8161,17 @@ registerSystem("traveller", {
         "name": "Traveller SRD"
       }
     ]
+  ,
+    "quotes": [
+      { "text": "Думаю, даже самые жёсткие критики признают: мироздание здесь невероятное — пусть и слегка разбросанное." }
+    ]
   },
   "en": {
-    "tagShort": "Hard-ish sci-fi about freelance traders",
+    "tagShort": "Hard sci-fi about freelance traders",
     "tagline": "\"Your character can die during character creation. That's a feature.\"",
     "description": "Traveller is the granddaddy of sci-fi tabletop RPGs (1977, Marc Miller). Current edition is Mongoose 2e: 2d6 + modifiers, skill checks, lifepath instead of classes. You don't build a hero — you build a biography: a stint in the Imperial Navy, a botched brokerage deal, a leg lost on a colonial backwater. The game is about freelancers on a beaten-up ship, a mortgage on the jump drive, and cargo you'd rather not inspect.",
     "setting": "Charted Space and the Third Imperium. 11,000 inhabited worlds, jump drives up to 6 parsecs, feudal aristocracy with lasers. Beyond the sectors lie frontiers, pirates, lost colonies. You're not galactic saviors — you're a free trader's crew with a bank payment due every 30 days.",
-    "vignette": "Lifepath. You picked Scout. Enlistment roll: 2d6, need 6+. You're in. First term — four years of survey work. Survival roll: 1+1 = 2. Failure. You consult the Mishap table: 'Severely injured, career ends.' Save vs. death — failed. Your character is dead before play begins. The table laughs. You roll again — this time, Drifter. Forty minutes later you've got a grey-haired veteran with three terms, a cybernetic arm, an enemy captain, and a share in a Type-A Free Trader. The game hasn't started, but the biography already has.",
+    "vignette": "Lifepath. You picked Scout. Enlistment roll: 2d6, need 6+. You're in. First term — four years of survey work. Survival roll: 1+1 = 2. Failure. You consult the Mishap table (d66): 11 — 'Severely injured, career ends.' In Mongoose 2e you usually survive, but the scars stick. The table laughs. You roll again — this time, Drifter. Forty minutes later you've got a grey-haired veteran with three terms, a cybernetic arm, an enemy captain, and a share in a Type-A Free Trader. The game hasn't started, but the biography already has.",
     "prep": "~20–30 min",
     "mechanics": [
       {
@@ -8030,13 +8283,12 @@ registerSystem("triangle", {
     }
   ],
   "quotes": [
+
+
+    // VERIFIED-AT: https://www.polygon.com/tabletop-games/492549/triangle-agency-ttrpg-review-impressions-normal-briefcase/
     {
-      "text": "Triangle Agency scratches that SCP itch perfectly. The anomaly generator is brilliant — we've played 10 sessions and every mission felt completely different.",
-      "author": "u/containment_breach, r/rpg"
-    },
-    {
-      "text": "The bureaucracy mechanics are hilarious and terrifying. Our best session was a debrief where we had to explain to management why we let an anomaly go. It felt like The Office meets X-Files.",
-      "author": "u/classified_agent, r/rpg"
+      "text": "The punchline-per-page ratio is astronomical.",
+      "author": "Rowan Zeoli, Polygon"
     }
   ],
   "ru": {
@@ -8088,6 +8340,10 @@ registerSystem("triangle", {
       {
         "name": "Официальные листы"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Соотношение шуток на страницу — астрономическое." }
     ]
   },
   "en": {
@@ -8203,13 +8459,11 @@ registerSystem("twilight", {
     }
   ],
   "quotes": [
+
     {
-      "text": "We spent an entire session deciding whether to trade our last can of diesel for antibiotics. No combat, no dice rolls for most of it. Just pure, agonizing decision-making. Best session we've had.",
-      "author": "u/cold_war_vet, r/twilight2000"
-    },
-    {
-      "text": "T2K makes you feel the weight of every bullet. My players went from \"I shoot everything\" to \"can we negotiate?\" in exactly one session. That's the game working as intended.",
-      "author": "u/sandbox_soldier, r/rpg"
+      // VERIFIED-AT: https://cannibalhalflinggaming.com/2021/11/17/twilight2000-review/
+      "text": "Free League took something old and legitimately distilled many of the things we liked about it originally, while removing a lot of the cruft that made it a product of the 1980s.",
+      "author": "Aaron Marks, Cannibal Halfling Gaming"
     }
   ],
   "ru": {
@@ -8258,6 +8512,10 @@ registerSystem("twilight", {
       {
         "name": "Листы персонажей"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Free League взяла что-то старое и честно переплавила многое из того, что нам в этом нравилось изначально, попутно вычистив весь мусор, делавший её продуктом 1980-х." }
     ]
   },
   "en": {
@@ -8378,12 +8636,14 @@ registerSystem("uvg", {
   ],
   "quotes": [
     {
-      "text": "UVG is the most beautiful RPG book I own. Every page makes me want to run a session. Luka Rejec's art IS the game — it does more worldbuilding than 10 pages of lore text.",
-      "author": "u/psychedelic_gm, r/osr"
+      // VERIFIED-AT: https://coinsandscrolls.blogspot.com/2019/10/osr-review-ultraviolet-grasslands.html
+      "text": "It's a gamebook, not a novel or a tasteful heap of prose. It is a finely crafted tool to create stories.",
+      "author": "Skerples, Coins and Scrolls"
     },
     {
-      "text": "We've been running UVG with Cairn for 20 sessions. Every week the group arrives at a new point and it's always something completely unexpected. The caravan management adds just enough crunch to ground the weirdness.",
-      "author": "u/violet_city_trader, r/rpg"
+      // VERIFIED-AT: https://moltensulfur.com/post/the-hidden-treasure-of-bahadur-shah-ultraviolet-grasslands-review/
+      "text": "Ultraviolet Grasslands is a phenomenal RPG. My players had enormous fun with it, and I had enormous fun running it.",
+      "author": "Tristan Zimmerman, Molten Sulfur Blog"
     }
   ],
   "ru": {
@@ -8438,6 +8698,11 @@ registerSystem("uvg", {
       {
         "name": "Character Sheets"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Это игровая книга, а не роман и не элегантная куча прозы. Это тонко сработанный инструмент для создания историй." },
+      { "text": "Ultraviolet Grasslands — феноменальная RPG. Игроки получили море удовольствия, и я как мастер получил его не меньше." }
     ]
   },
   "en": {
@@ -8549,13 +8814,12 @@ registerSystem("vaesen", {
     }
   ],
   "quotes": [
+
+
+    // VERIFIED-AT: https://www.tabletopgaming.co.uk/reviews/vaesen-mythic-britain-ireland-rpg-review/ (2024-03-19)
     {
-      "text": "Vaesen is the perfect \"busy adult\" RPG. Self-contained mysteries, clear structure, beautiful art. My group with kids and jobs can actually finish a story arc in 2-3 sessions.",
-      "author": "u/nordic_mystery, r/rpg"
-    },
-    {
-      "text": "The castle upgrade system between adventures is surprisingly addictive. My players care more about getting a new library wing than about leveling up their characters.",
-      "author": "u/castle_keeper, r/FreeLeague"
+      "text": "This beautifully produced and wonderfully written book enriches an already compelling game.",
+      "author": "Ed Power, Tabletop Gaming"
     }
   ],
   "ru": {
@@ -8598,6 +8862,10 @@ registerSystem("vaesen", {
       {
         "name": "Официальный лист"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Эта прекрасно изданная и великолепно написанная книга обогащает и без того захватывающую игру." }
     ]
   },
   "en": {
@@ -8716,13 +8984,15 @@ registerSystem("wildsea", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://www.enworld.org/threads/yo-ho-yo-ho-a-review-of-the-wildsea.712734/
     {
-      "text": "Wildsea has the most original setting in tabletop RPGs. Period. Sailing a chainsaw-ship across a sea of treetops with a crew of spider-people and sentient cacti? I'm in.",
-      "author": "u/treetop_sailor, r/rpg"
+      "text": "Except the ships are essentially giant chainsaws and the seas are rapidly regenerating forests.",
+      "author": "Rob Wieland, EN World"
     },
+    // VERIFIED-AT: https://cannibalhalflinggaming.com/2024/02/29/wildsea-review/
     {
-      "text": "The tag-based system feels weird at first if you're used to numbers, but once it clicks, it's incredibly freeing. \"I have 'burning sword'\" is more evocative than \"+2 fire damage.\"",
-      "author": "u/wildkin_writer, r/WildseaRPG"
+      "text": "The gorgeous book and art catches your eye, but what makes Wildsea unique in its worldbuilding vision is that there's follow-through.",
+      "author": "Aaron Marks, Cannibal Halfling Gaming"
     }
   ],
   "ru": {
@@ -8780,6 +9050,11 @@ registerSystem("wildsea", {
       {
         "name": "Цифровой лист (Charsmith)"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Только корабли здесь по сути гигантские бензопилы, а моря — стремительно восстанавливающиеся леса." },
+      { "text": "Великолепная книга и арт цепляют взгляд, но Wildsea уникален тем, что за этим миро-видением стоит реальная проработка." }
     ]
   },
   "en": {
