@@ -59,7 +59,13 @@ registerSystem("cy-borg", {
       "icon": "zap"
     }
   ],
-  "quotes": [{"text": "Whether you've got an unstoppable killer or a frail gearhead, you'll have a blast running them face first into the meat grinder of Cy. The city wants you dead, and that makes it irresistible.", "author": "Bloody Disgusting review"}, {"text": "Whereas I wouldn't run Mork Borg as anything but a one-off, Cy_Borg holds up to long-form play. The setting is thin enough that you fill it with your own neon-soaked paranoia.", "author": "TTRPG Factory, ttrpgfactory.com"}],
+  "quotes": [
+    // VERIFIED-AT: https://www.wargamer.com/cy-borg/review
+    {
+      "text": "Cy_Borg is like Blade Runner if someone had let David Cronenberg get his hands on it.",
+      "author": "Mollie Russell, Wargamer"
+    }
+  ],
   "ru": {
     "tagShort": "Нео-панк киберпанк RPG",
     "tagline": "«RPG о конце света, нано-заражённых киберпанках и ярости против безжалостного корпоративного ада.»",
@@ -106,6 +112,10 @@ registerSystem("cy-borg", {
       {
         "name": "Листы персонажа"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Cy_Borg — это «Бегущий по лезвию», если бы за него взялся Дэвид Кроненберг." }
     ]
   },
   "en": {

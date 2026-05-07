@@ -71,13 +71,15 @@ registerSystem("wildsea", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://www.enworld.org/threads/yo-ho-yo-ho-a-review-of-the-wildsea.712734/
     {
-      "text": "Wildsea has the most original setting in tabletop RPGs. Period. Sailing a chainsaw-ship across a sea of treetops with a crew of spider-people and sentient cacti? I'm in.",
-      "author": "u/treetop_sailor, r/rpg"
+      "text": "Except the ships are essentially giant chainsaws and the seas are rapidly regenerating forests.",
+      "author": "Rob Wieland, EN World"
     },
+    // VERIFIED-AT: https://cannibalhalflinggaming.com/2024/02/29/wildsea-review/
     {
-      "text": "The tag-based system feels weird at first if you're used to numbers, but once it clicks, it's incredibly freeing. \"I have 'burning sword'\" is more evocative than \"+2 fire damage.\"",
-      "author": "u/wildkin_writer, r/WildseaRPG"
+      "text": "The gorgeous book and art catches your eye, but what makes Wildsea unique in its worldbuilding vision is that there's follow-through.",
+      "author": "Aaron Marks, Cannibal Halfling Gaming"
     }
   ],
   "ru": {
@@ -135,6 +137,11 @@ registerSystem("wildsea", {
       {
         "name": "Цифровой лист (Charsmith)"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Только корабли здесь по сути гигантские бензопилы, а моря — стремительно восстанавливающиеся леса." },
+      { "text": "Великолепная книга и арт цепляют взгляд, но Wildsea уникален тем, что за этим миро-видением стоит реальная проработка." }
     ]
   },
   "en": {

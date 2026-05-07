@@ -48,7 +48,10 @@ registerSystem("pirate-borg", {
       "icon": "users"
     }
   ],
-  "quotes": [{"text": "One character got turned into a chicken, contracted a disease, and promptly exploded while his friend tried to carry him to safety. Funniest sequence in 20 years of TTRPGs.", "author": "Geek to Geek Media review"}, {"text": "The bestiary goes from mundane but deadly to things that should have stayed at the bottom of the ocean, and somehow it all holds together as a coherent, rum-soaked nightmare.", "author": "Rolling Boxcars, rollingboxcars.com"}],
+  "quotes": [
+    // VERIFIED-AT: https://screenrant.com/pirate-borg-review/
+    {"text": "With nautical lore, naval combat, and Lovecraftian horror, Pirate Borg is everything anyone could want in a sea-faring TTRPG.", "author": "Austin King, Screen Rant"}
+  ],
   "ru": {
     "tagShort": "Проклятые пираты арт-панк RPG",
     "tagline": "«Ваша сабля и пистоль не спасут вас от орд скелетов, Кракена и даже собственной команды.»",
@@ -86,6 +89,10 @@ registerSystem("pirate-borg", {
       {
         "name": "Free League Publishing"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "С морским лором, морскими боями и лавкрафтовским ужасом Pirate Borg — это всё, чего можно желать от настольной игры о море." }
     ]
   },
   "en": {

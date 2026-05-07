@@ -71,13 +71,15 @@ registerSystem("ironsworn", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://tomkinpress.com/pages/ironsworn
     {
-      "text": "Ironsworn is the game that made me realize I didn't need a group to scratch my RPG itch. Three months of solo play and it's produced the most emotionally resonant campaign I've ever run — and I've been playing TTRPGs for 20 years.",
-      "author": "u/lone_delver, r/solorpg"
+      "text": "Ironsworn advanced the art of solo adventure game design by leaps and bounds, bringing innovative techniques and systems to the form and helping to introduce solo rpgs to a new generation of players. It's a masterpiece.",
+      "author": "John Harper, designer of Blades in the Dark"
     },
+    // VERIFIED-AT: https://tomkinpress.com/pages/ironsworn
     {
-      "text": "The Vow system is genius. Instead of 'do a quest', you literally swear an iron oath and the game mechanically tracks whether you're honoring it or failing. Consequences feel EARNED.",
-      "author": "u/narrative_ironist, r/ironsworn"
+      "text": "Ironsworn is one of the smartest, best designed, TTRPGs I've ever played, and more than that I think it's an incredible tool for writers and creatives.",
+      "author": "Mara Holmes, streamer and author"
     }
   ],
   "ru": {
@@ -132,6 +134,11 @@ registerSystem("ironsworn", {
       {
         "name": "Онлайн-оракул и трекер"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Ironsworn продвинула искусство дизайна соло-приключений на световые годы вперёд, принесла в формат новые техники и системы и познакомила с соло-RPG новое поколение игроков. Это шедевр." },
+      { "text": "Ironsworn — одна из самых умных и грамотно спроектированных TTRPG, что я водил. Более того, это потрясающий инструмент для писателей и творческих людей." }
     ]
   },
   "en": {

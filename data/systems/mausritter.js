@@ -23,13 +23,12 @@ registerSystem("mausritter", {
     }
   ],
   "quotes": [
+
+
+    // VERIFIED-AT: https://www.wargamer.com/dnd/mausritter-srd-rules (Gab Hernandez, Wargamer, updated 2025-06-22)
     {
-      "text": "The card inventory is the best physical design in any RPG I've played. When my mouse was Hungry AND carrying a spell stone, that slot decision felt genuinely agonizing.",
-      "author": "u/grainfield_delver, r/osr"
-    },
-    {
-      "text": "Introduced my 8-year-old niece and my grognard dad to this at the same table. Both loved it. I don't know how Isaac Williams did that but it's real.",
-      "author": "u/tinywhiskers, r/rpg"
+      "text": "Mausritter offers players a very simple, slick, and classic RPG experience in a teensy, squeaky package.",
+      "author": "Gab Hernandez, Wargamer"
     }
   ],
   "resources": [
@@ -103,6 +102,10 @@ registerSystem("mausritter", {
       {
         "name": "Лист персонажа"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Mausritter предлагает игрокам очень простой, гладкий и классический RPG-опыт в крошечной пищащей упаковке." }
     ]
   },
   "en": {

@@ -1,7 +1,7 @@
 registerSystem("the-wretched", {
   "groups": {
     "default": { "key": "narrative", "order": 18 },
-    "family": { "key": "standalone", "order": 13 },
+    "family": { "key": "standalone", "order": 13.5 },
     "genre": { "key": "horror", "order": 5 },
     "solo": { "key": "solo-journaling", "order": 2 }
   },
@@ -60,13 +60,11 @@ registerSystem("the-wretched", {
     }
   ],
   "quotes": [
+
+    // VERIFIED-AT: https://www.tabletopgaming.co.uk/reviews/the-wretched-review/
     {
-      "text": "The Wretched made me sob at 1am recording audio logs to my phone while a candle burned down. I have never felt more alone in a game, and I mean that as the highest possible compliment.",
-      "author": "u/signal_lost, r/solorpg"
-    },
-    {
-      "text": "The moment the Jenga tower collapsed I genuinely screamed. It's just blocks and cards, and yet my hands were shaking for the last twenty minutes of play. Nothing has ever made me feel dread like that.",
-      "author": "u/last_survivor_log, r/solorpg"
+      "text": "The Wretched is what comes after that and it's atmospheric, frightening, and downright brilliant.",
+      "author": "Anna Blackwell, Tabletop Gaming Magazine"
     }
   ],
   "ru": {
@@ -115,6 +113,10 @@ registerSystem("the-wretched", {
       {
         "name": "DriveThruRPG"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "The Wretched — это то, что остаётся после, и она атмосферна, пугающа и попросту блестяща." }
     ]
   },
   "en": {

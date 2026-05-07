@@ -64,13 +64,15 @@ registerSystem("blade-runner", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://www.wargamer.com/blade-runner-the-roleplaying-game/review
     {
-      "text": "This isn't a combat RPG with investigation bolted on. It's a genuine detective game. We spent an entire session analyzing a crime scene and it was the most engaged my players have ever been.",
-      "author": "u/replicant_hunter, r/rpg"
+      "text": "I don't like to use the word 'perfect' often, but I'm going there now. The Blade Runner RPG captures the themes and feel of the source material perfectly.",
+      "author": "Mollie Russell, Wargamer"
     },
+    // VERIFIED-AT: https://cannibalhalflinggaming.com/2022/12/21/blade-runner-review/
     {
-      "text": "The case files are incredible. They feel like you're reading a screenplay. And the \"am I human?\" reveal mechanic gave us the best RP moment we've ever had.",
-      "author": "u/neon_rain, r/bladerunner"
+      "text": "Blade Runner is a well-executed RPG, it is exactly Blade Runner the RPG and not one thing more.",
+      "author": "Aaron Marks, Cannibal Halfling Gaming"
     }
   ],
   "ru": {
@@ -125,6 +127,11 @@ registerSystem("blade-runner", {
       {
         "name": "Официальный лист"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Я редко использую слово «идеально», но здесь иначе никак. Blade Runner RPG идеально передаёт темы и атмосферу первоисточника." },
+      { "text": "Blade Runner — отлично сделанная RPG: ровно настолько Blade Runner, насколько нужно, и ни на грамм больше." }
     ]
   },
   "en": {

@@ -79,13 +79,15 @@ registerSystem("coriolis", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://spritesanddice.com/reviews/review-coriolis/
     {
-      "text": "Coriolis has the most unique sci-fi setting I've ever played in. It's not Star Wars, it's not Star Trek, it's something completely its own. The Arabic/Persian aesthetic makes everything feel fresh.",
-      "author": "u/third_horizon, r/rpg"
+      "text": "Coriolis may just be one of the best systems I've ever seen if you're looking to make your players' starship their command center, their home, and even a character in their journey.",
+      "author": "Adam Factor, Sprites and Dice"
     },
+    // VERIFIED-AT: https://www.strangeassembly.com/2019/review-coriolis-the-third-horizon
     {
-      "text": "The Darkness mechanic is so elegant. Players WANT to pray for rerolls, but they know every prayer makes the GM's job easier. It creates constant, beautiful tension.",
-      "author": "u/icon_seeker, r/FreeLeague"
+      "text": "Coriolis feels like a lot of Firefly, but with a Middle Eastern styling instead of the Old West.",
+      "author": "Strange Assembly review"
     }
   ],
   "ru": {
@@ -146,6 +148,11 @@ registerSystem("coriolis", {
       {
         "name": "Quickstart Third Horizon"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Coriolis — пожалуй, одна из лучших систем, что я видел, если вам нужно сделать звездолёт игроков их командным центром, домом и даже персонажем их путешествия." },
+      { "text": "Coriolis ощущается как «Светлячок», но с ближневосточной стилизацией вместо Дикого Запада." }
     ]
   },
   "en": {

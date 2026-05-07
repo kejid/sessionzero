@@ -58,13 +58,11 @@ registerSystem("heart", {
     }
   ],
   "quotes": [
+
+    // VERIFIED-AT: https://www.wargamer.com/heart-the-city-beneath/tabletop-rpg-fixes-travel-dnd
     {
-      "text": "Heart is the most creative RPG I've ever read. A market made of bones where memories are currency? A forest of meat that grows from the walls? It's Annihilation meets Dark Souls.",
-      "author": "u/deep_delver, r/rpg"
-    },
-    {
-      "text": "The Zenith/Nadir character arc system means every character has a built-in ending. My player's final session was the most emotionally intense RP moment I've ever witnessed.",
-      "author": "u/spire_citizen, r/HeartRPG"
+      "text": "Heart: The City Beneath — my group's current indie TTRPG du jour — deals with this like no other game I've played, and it's hugely refreshing.",
+      "author": "Alex Evans, Wargamer"
     }
   ],
   "ru": {
@@ -113,6 +111,10 @@ registerSystem("heart", {
       {
         "name": "Quickstart (правила + приключение)"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Heart: The City Beneath — текущий инди-фаворит нашей группы — решает это как ни одна другая игра, что я водил. Дико свежо." }
     ]
   },
   "en": {

@@ -292,6 +292,7 @@ function renderSystemPage(id, sys, lang) {
   const mechanics = mergeArr(sys.mechanics, sys[lang] && sys[lang].mechanics);
   const gallery = mergeArr(sys.gallery, sys[lang] && sys[lang].gallery);
   const resources = mergeArr(sys.resources, sys[lang] && sys[lang].resources);
+  const quotes = mergeArr(sys.quotes, sys[lang] && sys[lang].quotes);
 
   const canonical = lang === 'en'
     ? `${SITE}/system/${id}.html`
@@ -327,7 +328,7 @@ function renderSystemPage(id, sys, lang) {
     return `<div class="card"><h4><i data-lucide="${escapeHtml(icon)}"></i> ${escBody(m.title)}</h4><p>${escBody(m.text || '')}</p></div>`;
   }).join('');
 
-  const quotesHTML = (sys.quotes || []).map(q =>
+  const quotesHTML = quotes.map(q =>
     `<div class="reddit-quote">${escBody(q.text)}<span class="reddit-user">— ${escBody(q.author || '')}</span></div>`
   ).join('');
 

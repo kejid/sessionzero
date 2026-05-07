@@ -67,17 +67,20 @@ registerSystem("call-of-cthulhu", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://nerdist.com/article/the-best-rpg-of-all-time-is-call-of-cthulhu/
     {
-      "text": "Call of Cthulhu is unequivocally the greatest role-playing game ever written. Unlike D&D, characters deteriorate over time rather than grow stronger — it has to be about something besides an adolescent power fantasy.",
-      "author": "Ben Riggs & Ken Hite, Nerdist"
+      "text": "Call of Cthulhu is unequivocally the greatest role-playing game ever written.",
+      "author": "Ben Riggs, Nerdist"
     },
+    // VERIFIED-AT: https://www.wargamer.com/best-horror-rpg-games
     {
-      "text": "Unifying everything to percentages and getting rid of the resistance table are things they needed to do for decades. The Luck mechanic is another dwindling resource like Sanity, but the player has more control.",
-      "author": "eyeheartawk & Committed Hero, EN World"
+      "text": "Call of Cthulhu is one of, if not the most popular RPG that isn't called Dungeons and Dragons.",
+      "author": "Gab Hernandez, Wargamer"
     },
+    // VERIFIED-AT: https://www.wargamer.com/call-of-cthulhu-rpg/scouts-against-cthulhu
     {
-      "text": "Basic Roleplaying has to be one of the simplest yet flexible core mechanics in RPGs. Roll this number, get under the number, and you've succeeded. The sanity system makes the horrors mean something much more than just monsters who can kill you.",
-      "author": "harunmushod, EN World"
+      "text": "Its adventures are novel and genuinely exciting. It's versatile enough to cover any place on earth, at any time, with any cast of characters.",
+      "author": "Mollie Russell, Wargamer"
     }
   ],
   "ru": {
@@ -129,6 +132,12 @@ registerSystem("call-of-cthulhu", {
       {
         "name": "The Dhole's House — онлайн-генератор персонажей"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Call of Cthulhu — без всяких оговорок величайшая ролевая игра, когда-либо написанная." },
+      { "text": "Call of Cthulhu — одна из самых популярных RPG, что не называется Dungeons & Dragons. А может, и единственная такая." },
+      { "text": "Её приключения свежи и по-настоящему увлекательны. Система универсальна настолько, что охватывает любое место на земле, в любое время, с любым составом персонажей." }
     ]
   },
   "en": {

@@ -73,12 +73,14 @@ registerSystem("forbidden-lands", {
   ],
   "quotes": [
     {
-      "text": "Forbidden Lands is the only game where my players voluntarily avoided a fight because they remembered what happened last time someone got a critical wound. That's good design.",
-      "author": "u/raven_gm, r/FreeLeague"
+      // VERIFIED-AT: https://www.tabletopgaming.co.uk/reviews/forbidden-lands-rpg-review/
+      "text": "It's like someone took hazy childhood memories of a classic D&D game and mixed them with a dash of bleak Scandinavian darkness.",
+      "author": "Richard Jansen-Parkes, Tabletop Gaming"
     },
     {
-      "text": "The stronghold building gives the campaign a home base that the players genuinely care about. When bandits attacked our keep, it felt personal in a way no other RPG has achieved.",
-      "author": "u/hex_mapper, r/rpg"
+      // VERIFIED-AT: https://droplowest.com/2019/02/11/review-forbidden-lands/
+      "text": "It truly brings something new to the dark fantasy genre. And these days that's really something to celebrate.",
+      "author": "R.M. Jansen-Parkes, Drop Lowest"
     }
   ],
   "ru": {
@@ -133,6 +135,11 @@ registerSystem("forbidden-lands", {
       {
         "name": "Легенды к карты"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Как будто кто-то взял туманные детские воспоминания о классической D&D и добавил щепотку мрачной скандинавской тьмы." },
+      { "text": "Игра по-настоящему привносит в жанр тёмного фэнтези что-то новое. А в наши дни это уже само по себе повод для радости." }
     ]
   },
   "en": {

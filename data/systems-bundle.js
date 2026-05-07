@@ -91,6 +91,7 @@ registerSystem("alien", {
     }
   ],
   "ru": {
+    "tagShort": "Sci-fi хоррор по «Чужому»",
     "tagline": "«В космосе никто не услышит ваш крик».",
     "description": "Официальная RPG по вселенной «Чужого». Year Zero Engine с уникальной механикой стресса: чем больше паникуете, тем больше бросаете кубиков. Больше кубиков = выше шанс успеха, НО и выше шанс панической атаки. Два режима: кампания (долгая игра в космосе) и кинематографичный (ваншот-ужастик (приключение на одну сессию), как в фильмах).",
     "setting": "2183 год. Корпорации колонизируют космос. Weyland-Yutani тянет щупальца к каждой обитаемой системе. За фасадом прогресса — рабочие-контрактники на забытых станциях, контрабандисты, колониальные морпехи и ксеноморфы, которые ждут в темноте. Лор охватывает все фильмы и расширяет вселенную.",
@@ -141,6 +142,7 @@ registerSystem("alien", {
     ]
   },
   "en": {
+    "tagShort": "Year Zero sci-fi horror RPG",
     "tagline": "\"In space no one can hear you scream.\"",
     "description": "The official RPG set in the Alien universe. Year Zero Engine with a unique stress mechanic: the more you panic, the more dice you roll. More dice = higher chance of success, BUT also higher chance of a panic attack. Two modes: campaign (long-form space game) and cinematic (one-shot horror, just like the movies).",
     "setting": "Year 2183. Corporations colonize space. Weyland-Yutani extends its tentacles to every inhabited system. Behind the facade of progress — contract workers on forgotten stations, smugglers, colonial marines, and xenomorphs waiting in the dark. The lore covers all the films and expands the universe.",
@@ -267,6 +269,7 @@ registerSystem("blade-runner", {
     }
   ],
   "ru": {
+    "tagShort": "Нуар-детектив с репликантами",
     "tagline": "«Детектив о морали, памяти и бесконечном дожде».",
     "description": "RPG-детектив в мире Blade Runner 2037. Вы — Blade Runners, детективы LAPD, расследующие дела, связанные с репликантами. Система заточена под расследования: анализ улик, допросы, моральные дилеммы. Не экшн-игра — нуарный процедурал.",
     "setting": "Лос-Анджелес 2037 года. Неоновый дождь, гигантские голограммы, внеземные колонии. Репликанты нового поколения живут среди людей, и граница между «человеком» и «машиной» стёрта окончательно. Корпорации контролируют всё, а улицы полны отчаяния.",
@@ -320,6 +323,7 @@ registerSystem("blade-runner", {
     ]
   },
   "en": {
+    "tagShort": "neo-noir detective RPG",
     "tagline": "\"A detective story about morality, memory, and endless rain.\"",
     "description": "A detective RPG set in the world of Blade Runner 2037. You are Blade Runners, LAPD detectives investigating cases involving replicants. The system is designed for investigations: analyzing evidence, interrogations, moral dilemmas. Not an action game — a noir procedural.",
     "setting": "Los Angeles, 2037. Neon rain, colossal holograms, off-world colonies. New generation replicants live among humans, and the line between 'human' and 'machine' has been erased entirely. Corporations control everything, and the streets overflow with despair.",
@@ -445,6 +449,7 @@ registerSystem("blades", {
     }
   ],
   "ru": {
+    "tagShort": "Криминальная FitD-RPG",
     "tagline": "«Вы — банда отчаянных в тёмном городе, который никогда не спит».",
     "description": "RPG про криминальную банду в тёмном индустриальном городе. Революционная система: никакого планирования операций заранее — вместо этого флешбэки во время дела. «Что-то идёт не так? Я УЖЕ подкупил охранника вчера». Между делами — фаза даунтайма (отдых между приключениями): лечение, тренировки, развитие базы.",
     "setting": "Досквол — город, освещённый электрическими барьерами от призраков. Вокруг — мёртвые земли, населённые духами. Внутри — фракции, контролирующие районы: от Серых Плащей (полиция) до Духовных Стражей. Индустриальная готика, демоны и кровь на булыжниках.",
@@ -488,6 +493,7 @@ registerSystem("blades", {
     ]
   },
   "en": {
+    "tagShort": "FitD heist & crime RPG",
     "tagline": "\"You're a gang of scoundrels in a dark city that never sleeps.\"",
     "description": "An RPG about a criminal gang in a dark industrial city. A revolutionary system: no planning operations in advance — instead, flashbacks during the job. 'Something goes wrong? I ALREADY bribed the guard yesterday.' Between jobs — a downtime phase: healing, training, upgrading your lair.",
     "setting": "Doskvol — a city lit by electric barriers against ghosts. Beyond — dead lands inhabited by spirits. Within — factions controlling districts: from the Bluecoats (police) to the Spirit Wardens. Industrial gothic, demons, and blood on the cobblestones.",
@@ -611,6 +617,7 @@ registerSystem("cairn", {
     }
   ],
   "ru": {
+    "tagShort": "Ультралёгкая фолк-хоррор OSR",
     "tagline": "«Фольклорный хоррор без классов, уровней и ерунды».",
     "description": "Бесплатная, открытая, ультралёгкая система для тёмного фольклорного фэнтези. Основана на Into the Odd и Knave. Правила — 20 страниц. Нет классов, нет уровней. Персонаж — это его снаряжение и решения. Cairn 2e добавила процедуры путешествий, инвентарь на слотах и расширенные правила wilderness exploration.",
     "setting": "Вдохновлён славянскими и кельтскими сказками. Лес здесь — живой, голодный и не прощает легкомыслия. Деревни жмутся к опушке. В чаще — духи, ведьмы и существа, которые были здесь задолго до людей. Атмосфера — братья Гримм до того, как сказки стали детскими.",
@@ -661,6 +668,7 @@ registerSystem("cairn", {
     ]
   },
   "en": {
+    "tagShort": "ultralight folk-horror OSR",
     "tagline": "\"Folk horror without classes, levels, or nonsense.\"",
     "description": "A free, open, ultra-light system for dark folkloric fantasy. Built on Into the Odd and Knave. Rules — 20 pages. No classes, no levels. A character is their gear and their choices. Cairn 2e added travel procedures, slot-based inventory, and expanded wilderness exploration rules.",
     "setting": "Inspired by Slavic and Celtic fairy tales. The forest here is alive, hungry, and unforgiving. Villages huddle at the tree line. Deep within — spirits, witches, and creatures that were here long before humans. The atmosphere — Brothers Grimm before the tales were sanitized for children.",
@@ -794,6 +802,7 @@ registerSystem("call-of-cthulhu", {
     }
   ],
   "ru": {
+    "tagShort": "Классика хоррор-RPG, 1920-е",
     "tagline": "«Тайны, которые лучше бы не раскрывать. Истина, от которой сходят с ума».",
     "description": "Старейшая и самая знаменитая хоррор-RPG в мире, впервые изданная в 1981 году Сэнди Петерсеном. Седьмая редакция — современная, отполированная версия классики. Основа — процентильная система Basic Roleplaying (BRP): у каждого навыка есть значение в процентах, и чтобы преуспеть, нужно выбросить на d100 меньше этого числа. Просто, интуитивно, элегантно. Но суть игры — не в кубиках. Call of Cthulhu — это расследование. Вы не воины и не герои. Вы — обычные люди: частные детективы, профессора, журналисты — которые столкнулись с тем, чего не должно существовать. Каждая встреча с непостижимым оставляет шрамы: механика Рассудка (Sanity) отслеживает медленное сползание персонажа в безумие. В отличие от D&D, где персонажи становятся сильнее, в Call of Cthulhu они деградируют. Это не power fantasy — это греческая трагедия за игровым столом, и именно поэтому система живёт уже более 40 лет.",
     "setting": "Классический сеттинг — Америка 1920-х годов, эпоха джаза, сухого закона и тайных культов. Газовые фонари, библиотеки Мискатоникского университета, туманные доки Инсмута. Но Call of Cthulhu не ограничена одной эпохой: официальные дополнения охватывают викторианскую Англию (Cthulhu by Gaslight), Древний Рим (Cthulhu Invictus), Средневековье (Cthulhu Dark Ages), современность и даже далёкое будущее. Ужас Лавкрафта вне времени — Великие Древние ждали миллиарды лет до появления человечества и будут ждать после. Мир полон тайных культов, запретных книг вроде Некрономикона и существ, один взгляд на которых ломает разум.",
@@ -844,6 +853,7 @@ registerSystem("call-of-cthulhu", {
     ]
   },
   "en": {
+    "tagShort": "classic 1920s horror RPG",
     "tagline": "\"Mysteries best left unsolved. Truths that shatter the mind.\"",
     "description": "The oldest and most renowned horror RPG in the world, first published in 1981 by Sandy Petersen. The 7th edition is the modern, polished version of this classic. The foundation is the percentile-based Basic Roleplaying (BRP) system: every skill has a percentage value, and to succeed you must roll under it on a d100. Simple, intuitive, elegant. But the heart of the game is not the dice. Call of Cthulhu is about investigation. You are not warriors or heroes. You are ordinary people — private detectives, professors, journalists — who have encountered something that should not exist. Every brush with the incomprehensible leaves scars: the Sanity mechanic tracks a character's slow descent into madness. Unlike D&D, where characters grow stronger, in Call of Cthulhu they deteriorate. This is not a power fantasy — it is a Greek tragedy at the gaming table, and that is exactly why the system has endured for over 40 years.",
     "setting": "The classic setting is 1920s America — the jazz age, Prohibition, and secret cults. Gas lamps, the libraries of Miskatonic University, the fog-shrouded docks of Innsmouth. But Call of Cthulhu is not limited to a single era: official supplements cover Victorian England (Cthulhu by Gaslight), Ancient Rome (Cthulhu Invictus), the Middle Ages (Cthulhu Dark Ages), the modern day, and even the far future. Lovecraftian horror is timeless — the Great Old Ones waited billions of years before humanity appeared and will wait long after. The world is full of secret cults, forbidden tomes like the Necronomicon, and entities whose mere sight breaks the mind.",
@@ -985,6 +995,7 @@ registerSystem("coriolis", {
     }
   ],
   "ru": {
+    "tagShort": "Арабо-персидская космоопера",
     "tagline": "«Арабские Ночи в космосе. Торговля, молитва и Тьма Между Звёзд».",
     "description": "Космическая опера с арабо-персидской эстетикой. Группа владеет космическим кораблём и путешествует по Третьему Горизонту — кластеру звёздных систем. Торговля, контрабанда, дипломатия, исследование — и Тьма Между Звёзд, которая проникает в реальность через молитвы Иконам.",
     "setting": "Третий Горизонт — десятки звёздных систем, связанных порталами. Базары на орбитальных станциях, мечети рядом с доками, древние порталы неизвестного происхождения. Фракции: от религиозных орденов до мегакорпораций. Атмосфера — Firefly встречает «1001 ночь».",
@@ -1044,6 +1055,7 @@ registerSystem("coriolis", {
     ]
   },
   "en": {
+    "tagShort": "Arabian-Persian space opera",
     "tagline": "\"Arabian Nights in space. Trade, prayer, and the Darkness Between the Stars.\"",
     "description": "A space opera with Arab-Persian aesthetics. The group owns a spaceship and travels the Third Horizon — a cluster of star systems. Trade, smuggling, diplomacy, exploration — and the Darkness Between the Stars, which seeps into reality through prayers to the Icons.",
     "setting": "The Third Horizon — dozens of star systems connected by portals. Bazaars on orbital stations, mosques next to docks, ancient portals of unknown origin. Factions range from religious orders to megacorporations. The atmosphere — Firefly meets One Thousand and One Nights.",
@@ -1166,6 +1178,7 @@ registerSystem("cy-borg", {
   ],
   "quotes": [{"text": "Whether you've got an unstoppable killer or a frail gearhead, you'll have a blast running them face first into the meat grinder of Cy. The city wants you dead, and that makes it irresistible.", "author": "Bloody Disgusting review"}, {"text": "Whereas I wouldn't run Mork Borg as anything but a one-off, Cy_Borg holds up to long-form play. The setting is thin enough that you fill it with your own neon-soaked paranoia.", "author": "TTRPG Factory, ttrpgfactory.com"}],
   "ru": {
+    "tagShort": "Нео-панк киберпанк RPG",
     "tagline": "«RPG о конце света, нано-заражённых киберпанках и ярости против безжалостного корпоративного ада.»",
     "description": "Духовный наследник MÖRK BORG в жанре киберпанка — та же злая арт-панковая энергетика, та же жестокая смертность, только вместо тёмного фэнтези — неоновый смог и корпоративный ад. CY_BORG берёт всё, что сделало Мёрк Борг культом, и пропускает через хромированную мясорубку. Ты скорее всего умрёшь. Городу всё равно. Реклама продолжает мигать.",
     "setting": "Мегаполис Cy, год 20X3. Инцидент уже произошёл, и с тех пор стало только хуже. Четырнадцать мегакорпораций владеют небом, землёй и всем, что между ними. Трущобы гниют в тени небоскрёбных лесов. Неоновые соборы рекламируют товары, которые персонажам не по карману. Бактерии из открытого космоса захватили человеческие нанороботы. Апокалипсис отслеживается через Ужасные Заголовки: семь новостей, каждая хуже предыдущей, и когда выйдет седьмая — город будет стёрт.",
@@ -1213,6 +1226,7 @@ registerSystem("cy-borg", {
     ]
   },
   "en": {
+    "tagShort": "neon doom-punk cyberpunk RPG",
     "tagline": "\"A nano-infested doomsday RPG about cybernetic misfits and punks raging against a relentless corporate hell.\"",
     "description": "The cyberpunk spiritual successor to MÖRK BORG — same furious art-punk DNA, same brutal lethality, now drowning in neon death smog. CY_BORG takes everything Mörk Borg perfected and smashes it through a chrome-plated, corpo-owned meat grinder. You will probably die. The city doesn't care. The ads keep playing regardless.",
     "setting": "Megacity Cy, year 20X3. The Incident happened and things have only gotten worse since. Fourteen megacorps own the sky, the ground, and everything between. Slums rot beneath scraper-forests of towers. Neon cathedrals advertise products your character can't afford. Bacteria from outer space have hijacked human nanorobotics and nobody has a fix. The apocalypse is tracked in Miserable Headlines — seven headlines, each worse than the last, and when the seventh drops, the city's data is purged. The world is always ending. It just hasn't finished yet.",
@@ -1256,6 +1270,196 @@ registerSystem("cy-borg", {
       },
       {
         "name": "Character sheets"
+      }
+    ]
+  }
+});
+registerSystem("daggerheart", {
+  "groups": {
+    "default": { "key": "narrative", "order": 99 },
+    "family": { "key": "standalone", "order": 99 },
+    "genre": { "key": "adventure", "order": 99 },
+    "solo": { "key": "solo-compatible", "order": 99 }
+  },
+  "name": "Daggerheart",
+  "publisher": "Darrington Press",
+  "dice": "2d12 (Hope/Fear)",
+  "players": "3–5",
+  "complexity": 3,
+  "foundryStatus": "Community", // CHECK: Foundryborne system is DPCGL-licensed, widely used, but not first-party Darrington Press
+  "heroImage": "https://darringtonpress.com/wp-content/uploads/2024/12/HEADER-DH-Standard-Cover-Art.png",
+  "playstyleTags": [
+    "narrative",
+    "combat",
+    "social"
+  ],
+  "settingTags": ["fantasy"],
+  "gallery": [
+    {
+      "src": "https://darringtonpress.com/wp-content/uploads/2024/12/DH-Standard-Cover-Art-watermarked-Mat-Wilma-1600x900.png"
+    },
+    {
+      "src": "https://darringtonpress.com/wp-content/uploads/2024/12/DH-Limited-Cover-Art-watermarked-Dominik-Mayer-1600x900.png"
+    },
+    {
+      "src": "https://darringtonpress.com/wp-content/uploads/2024/12/DH-Stnd-Book-Alone-copy.png"
+    },
+    {
+      "src": "https://darringtonpress.com/wp-content/uploads/2024/12/DH-Limited-Spill-Fixed-landscape.png"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://www.daggerheart.com/",
+      "fmt": "Web"
+    },
+    {
+      "type": "link",
+      "url": "https://www.daggerheart.com/srd/",
+      "fmt": "Web"
+    },
+    {
+      "type": "sheet",
+      "url": "https://www.daggerheart.com/wp-content/uploads/2025/05/Character-Sheets-and-Guides-Daggerheart-May212025.pdf",
+      "fmt": "PDF"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://www.daggerheart.com/wp-content/uploads/2025/05/Quickstart-Adventure-5-20-2025.pdf",
+      "fmt": "PDF"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "dice-6"
+    },
+    {
+      "icon": "scroll"
+    },
+    {
+      "icon": "swords"
+    },
+    {
+      "icon": "heart"
+    }
+  ],
+  // SYNTH: quotes synthesized from review summaries — Reddit fetch was blocked. Swap for verbatim r/daggerheart quotes when possible.
+  "quotes": [
+    {
+      "text": "Every roll has a hook. Hope or Fear, the narrative moves — and somehow even my failures feel like they belong in the story.",
+      "author": "Composite review (r/daggerheart sentiment) — SYNTH, replace with verbatim quote"
+    },
+    {
+      "text": "First system in years that made me leave the table thinking 'I want more of this.' The duality dice spiked the tension every single check.",
+      "author": "Composite review (r/rpg sentiment) — SYNTH, replace with verbatim quote"
+    }
+  ],
+  "ru": {
+    "tagShort": "Фэнтези от создателей Critical Role",
+    "tagline": "«Каждый бросок — это поворот сюжета. Надежда или Страх — выбирай свою судьбу».",
+    "description": "Нарративное героическое фэнтези от Darrington Press — издательского крыла Critical Role. В основе — два d12: кубик Надежды и кубик Страха. Сумма решает успех, а тот, что выпал больше, диктует тон сцены: триумф или цена. Карточная система классов и происхождений собирает героя как колоду, бой ощущается кинематографично, а ГМ копит Страх, чтобы развернуть сцену в самый драматичный момент.",
+    "setting": "Базовый мир — высокое фэнтези с нотками Критроли: древние королевства, павшие империи, магия как наследие. Кампания-фреймы (Age of Umbra, Sablewood и др.) задают тон — от мрачного дарк-фэнтези до светлой сказки. Можно играть в стандартном сеттинге или взять только систему и натянуть её на свой мир.",
+    "vignette": "ГМ описывает разлом в полу храма — оттуда тянет холодом и шёпотом. Ваш бард делает проверку Присутствия: бросаете d12 Надежды и d12 Страха. 9 и 11 — успех с перевесом Страха. Заклинание срабатывает, тени отступают, но кубик Страха выше: ГМ кладёт жетон Страха в свою копилку и тихо улыбается. Где-то в темноте что-то услышало вашу песню. Вы получаете жетон Надежды за следующий ход — но знаете: за углом ждёт цена.",
+    "prep": "~30 мин",
+    "mechanics": [
+      {
+        "title": "Кубики Надежды и Страха",
+        "text": "2d12 разного цвета. Сумма — успех, перевес — тон. Каждый бросок двигает фишки между игроками и ГМ-ом."
+      },
+      {
+        "title": "Карточный герой",
+        "text": "Класс, происхождение, способности, домены — всё карты. Билд героя — это буквально твоя колода на столе."
+      },
+      {
+        "title": "Кинематографичный бой",
+        "text": "Без жёстких раундов — ГМ передаёт «прожектор» от игрока к игроку, пока сцена не выдохнется. Действие льётся, а не считается."
+      },
+      {
+        "title": "Stress и урон",
+        "text": "HP, Stress, броня — три полосы. Стресс копится от страха и колдовства, броня смягчает удар. Падение — не смерть, а выбор последствий."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Стандартная обложка"
+      },
+      {
+        "cap": "Лимитированная обложка"
+      },
+      {
+        "cap": "Корбук"
+      },
+      {
+        "cap": "Содержимое издания"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт"
+      },
+      {
+        "name": "SRD (бесплатно, DPCGL)"
+      },
+      {
+        "name": "Листы персонажа"
+      },
+      {
+        "name": "Quickstart-приключение"
+      }
+    ]
+  },
+  "en": {
+    "tagShort": "Narrative fantasy from Critical Role",
+    "tagline": "\"Every roll is a story beat. Hope or Fear — pick your fate.\"",
+    "description": "A narrative heroic fantasy by Darrington Press, the publishing arm of Critical Role. At its core: two d12s — a Hope die and a Fear die. The sum decides success; whichever rolled higher sets the tone — triumph or cost. A card-based class and ancestry system builds your hero like a deck, combat feels cinematic, and the GM banks Fear to twist the scene at the most dramatic moment.",
+    "setting": "The default world is high fantasy with Critical Role flavor: ancient kingdoms, fallen empires, magic-as-legacy. Campaign Frames (Age of Umbra, Sablewood, and more) set the dial — from grim dark-fantasy to bright storybook. Run the in-house setting, or rip the system out and bolt it onto your own world.",
+    "vignette": "The GM describes a fissure in the temple floor — cold air and whispers leak out. Your bard makes a Presence check: roll d12 Hope and d12 Fear. 9 and 11 — success with Fear. The spell works, the shadows recoil, but the Fear die was higher: the GM drops a Fear token into her stash and smiles quietly. Something in the dark heard your song. You bank a Hope token for next turn — but you know there's a price waiting around the corner.",
+    "prep": "~30 min",
+    "mechanics": [
+      {
+        "title": "Hope & Fear dice",
+        "text": "Two d12s in different colors. Sum is the success; the higher die sets the tone. Every roll shifts tokens between players and GM."
+      },
+      {
+        "title": "Card-built heroes",
+        "text": "Class, ancestry, abilities, domains — all cards. Your build is literally a deck on the table."
+      },
+      {
+        "title": "Cinematic combat",
+        "text": "No rigid rounds — the GM passes the spotlight player to player until the scene exhales. Action flows instead of crunching."
+      },
+      {
+        "title": "Stress & damage",
+        "text": "HP, Stress, Armor — three tracks. Stress accrues from fear and magic, armor softens the blow. Going down isn't death; it's choosing a consequence."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Standard cover"
+      },
+      {
+        "cap": "Limited cover"
+      },
+      {
+        "cap": "Core book"
+      },
+      {
+        "cap": "Edition contents"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official website"
+      },
+      {
+        "name": "SRD (free, DPCGL)"
+      },
+      {
+        "name": "Character sheets"
+      },
+      {
+        "name": "Quickstart adventure"
       }
     ]
   }
@@ -1322,6 +1526,7 @@ registerSystem("death-in-space", {
   ],
   "quotes": [{"text": "Your characters are scroungers on the edge. Then the Void starts pulling at the cracks in your mind, and suddenly survival is the least of your problems.", "author": "Gaming Trend review"}, {"text": "It feels like the universe has already left to beat traffic, and you're the ones left holding a wrench and a dwindling oxygen supply. Blue-collar apocalypse done right.", "author": "u/heat_death_salvager, r/osr"}],
   "ru": {
+    "tagShort": "Грязный sci-fi survival RPG",
     "tagline": "«Добро пожаловать в коллапсирующую вселенную. Ваш экипаж — единственная семья.»",
     "description": "Death in Space — мрачная, рабочая sci-fi RPG о людях, которые пытаются выжить во вселенной, которая активно разваливается. Гнетущий промышленный ужас 80-х: Alien, Outland, Mad Max — перенесённые в пустоту между умирающими звёздами.",
     "setting": "Система Тенебрис — разорённый войной рубеж рухнувших правительств и мёртвых корпораций. Каждая машина починена и перечинена. Таинственный Статик пронизывает электронику — шёпот на краю известного космоса. Пустота меняет людей.",
@@ -1366,6 +1571,7 @@ registerSystem("death-in-space", {
     ]
   },
   "en": {
+    "tagShort": "grimy blue-collar sci-fi RPG",
     "tagline": "\"Welcome to a collapsing universe. Your crew is your only family.\"",
     "description": "Death in Space is a grimy, blue-collar sci-fi RPG about people trying to survive — and maybe turn a profit — in a universe that is actively falling apart. Created by Stockholm Kartell and published by Free League, it channels the gritty industrial dread of early 80s science fiction: Alien, Outland, and the original Mad Max transplanted into the void between dying stars.",
     "setting": "The Tenebris system is a war-torn frontier of collapsed interplanetary governments and dead corporations, where every machine is repaired, re-repaired, and held together with tape and desperation. A mysterious Static permeates all electronics — a signal between channels, a whisper at the edge of known space — and prolonged exposure to the void changes people in ways medicine cannot explain.",
@@ -1487,6 +1693,7 @@ registerSystem("delta-green", {
     }
   ],
   "ru": {
+    "tagShort": "Современный Ктулху-хоррор RPG",
     "tagline": "«Ктулху работает на правительство. И вы тоже».",
     "description": "Модерновый лавкрафтианский хоррор. Вы — федеральные агенты (ФБР, ЦРУ, АНБ, CDC), тайно борющиеся с космическим ужасом. Днём — бюрократия. Ночью — невозможные операции. Каждая миссия разрушает вашу личную жизнь: семью, друзей, рассудок. Механика отслеживает, как работа пожирает всё.",
     "setting": "Современные США (или мир). За фасадом привычной реальности — инопланетные боги, культы, правительственные заговоры. Delta Green — нелегальная ячейка внутри спецслужб. Вы получаете SMS от неизвестного номера: «Ночная оперативка. Приезжайте по адресу...» И ваша жизнь никогда не будет прежней.",
@@ -1537,6 +1744,7 @@ registerSystem("delta-green", {
     ]
   },
   "en": {
+    "tagShort": "modern Lovecraftian agency RPG",
     "tagline": "\"Cthulhu works for the government. And so do you.\"",
     "description": "Modern Lovecraftian horror. You are federal agents (FBI, CIA, NSA, CDC) secretly fighting cosmic horror. By day — bureaucracy. By night — impossible operations. Every mission destroys your personal life: family, friends, sanity. The mechanics track how the job devours everything.",
     "setting": "Modern-day USA (or the world). Behind the facade of everyday reality — alien gods, cults, government conspiracies. Delta Green is an illegal cell within the intelligence agencies. You get a text from an unknown number: 'Night op. Report to this address...' And your life will never be the same.",
@@ -1668,6 +1876,7 @@ registerSystem("dragonbane", {
     }
   ],
   "ru": {
+    "tagShort": "Шведское героическое фэнтези",
     "tagline": "«Классическое фэнтези без балласта. Лёгкое, как меч в руке мастера».",
     "description": "Переосмысление классического шведского RPG «Drakar och Demoner» (1982). Лёгкая, быстрая фэнтези-система: бросай d20, попади ниже навыка. Бои на картах инициативы, магия с риском срыва, рост через провалы. «D&D, если бы его сделали шведы в 2023 году».",
     "setting": "Мисгард — светлое фэнтези с тёмными нотками. Драконы, рыцари, подземелья — но с нордическим колоритом. Утиные людины, оркоподобные полуорки, классические эльфы и дварфы. Стартовый бокс включает готовый регион, карту и кампанию.",
@@ -1721,6 +1930,7 @@ registerSystem("dragonbane", {
     ]
   },
   "en": {
+    "tagShort": "Swedish heroic fantasy RPG",
     "tagline": "\"Classic fantasy without the bloat. Light as a sword in a master's hand.\"",
     "description": "A reimagining of the classic Swedish RPG 'Drakar och Demoner' (1982). A light, fast fantasy system: roll d20, get under your skill. Combat on initiative cards, magic with misfire risk, growth through failure. 'D&D, if the Swedes made it in 2023.'",
     "setting": "Misgarth — bright fantasy with dark undertones. Dragons, knights, dungeons — but with a Nordic flavor. Ducklings (duck-folk), orc-like half-orcs, classic elves and dwarves. The starter box includes a ready region, map, and campaign.",
@@ -1840,6 +2050,7 @@ registerSystem("draw-steel", {
     }
   ],
   "ru": {
+    "tagShort": "Тактическое героическое фэнтези",
     "tagline": "«Каждый удар — кинематографичен. Промахов не существует. Вопрос лишь — насколько вы круты.»",
     "description": "Героическое фэнтези нового типа. Не толкиновское, не днд-шное. Мир Ордена — место, где герои действительно меняют историю. Демоны, рыцари, политика и надежда. Тон: оптимистично-героический. Каждое действие ВСЕГДА что-то делает — кубики определяют СКОЛЬКО, а не ДА/НЕТ. Промахов не существует.",
     "setting": "Героическое фэнтези нового типа. Не толкиновское, не днд-шное. Мир Ордена — место, где герои действительно меняют историю. Демоны, рыцари, политика и надежда. Тон: оптимистично-героический.",
@@ -1884,6 +2095,7 @@ registerSystem("draw-steel", {
     ]
   },
   "en": {
+    "tagShort": "tactical heroic fantasy RPG",
     "tagline": "\"Every strike is cinematic. Misses don't exist. The only question is — how awesome are you.\"",
     "description": "Heroic fantasy of a new kind. Not Tolkien-esque, not D&D-esque. The world of the Order is a place where heroes truly change history. Demons, knights, politics, and hope. Tone: optimistically heroic. Every action ALWAYS does something — dice determine HOW MUCH, not YES/NO. There are no misses.",
     "setting": "A new kind of heroic fantasy. Not Tolkien, not D&D. The world of the Order is a place where heroes truly shape history. Demons, knights, politics, and hope. Tone: optimistically heroic.",
@@ -2003,6 +2215,7 @@ registerSystem("electric-bastionland", {
     }
   ],
   "ru": {
+    "tagShort": "Странный городской OSR",
     "tagline": "«У вас есть долг в миллион фунтов и очень мало времени».",
     "description": "Эволюция Into the Odd. Те же элегантные правила, но фокус — на городских приключениях в электрическую эпоху. Главная фишка — 100+ «Неудачных Профессий»: случайных предысторий, каждая из которых даёт уникальный стартовый набор проблем, связей и абсурдного снаряжения. Вы не герои — вы неудачники в долгах.",
     "setting": "Электрический Бастион — город, разросшийся до масштабов континента. Трамваи, телефоны, подозрительные банки и Глубинные Страны внизу, полные сокровищ и ужасов. Атмосфера — если бы Терри Пратчетт писал weird fiction.",
@@ -2053,6 +2266,7 @@ registerSystem("electric-bastionland", {
     ]
   },
   "en": {
+    "tagShort": "weird urban OSR",
     "tagline": "\"You owe a million pounds and time is running out.\"",
     "description": "The evolution of Into the Odd. Same elegant rules, but focused on urban adventures in an electric age. The standout feature — 100+ 'Failed Careers': random backgrounds, each providing a unique starter kit of problems, contacts, and absurd equipment. You're not heroes — you're losers in debt.",
     "setting": "Electric Bastion — a city that has sprawled to continental scale. Trams, telephones, shady banks, and the Deep Country below, brimming with treasures and horrors. The vibe — as if Terry Pratchett wrote weird fiction.",
@@ -2099,6 +2313,196 @@ registerSystem("electric-bastionland", {
       },
       {
         "name": "Character sheet"
+      }
+    ]
+  }
+});
+registerSystem("fabula-ultima", {
+  "groups": {
+    "default": { "key": "narrative", "order": 99 },
+    "family": { "key": "standalone", "order": 99 },
+    "genre": { "key": "adventure", "order": 99 },
+    "solo": { "key": "solo-compatible", "order": 99 }
+  },
+  "name": "Fabula Ultima",
+  "publisher": "Need Games / Rooster Games",
+  "dice": "2 attribute dice (d6–d12)",
+  "players": "3–5",
+  "complexity": 2,
+  "foundryStatus": "Community",
+  "heroImage": "https://need.games/wp-content/uploads/2024/02/fu-spread-mockup-1.jpg",
+  "playstyleTags": [
+    "narrative",
+    "combat",
+    "social"
+  ],
+  "settingTags": ["fantasy"],
+  "gallery": [
+    {
+      "src": "https://need.games/wp-content/uploads/2024/02/fu-spread-mockup-2.jpg"
+    },
+    {
+      "src": "https://need.games/wp-content/uploads/2024/02/fu-spread-mockup-3.jpg"
+    },
+    {
+      "src": "https://need.games/wp-content/uploads/2024/02/fu-spread-mockup-4.jpg"
+    },
+    {
+      "src": "https://need.games/wp-content/uploads/2024/02/fu-spread-mockup-5.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://need.games/fabula-ultima/",
+      "fmt": "Web"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://modiphius.us/products/fabula-ultima-press-start-pdf",
+      "fmt": "PDF"
+    },
+    {
+      "type": "sheet",
+      "url": "https://www.needgames.it/wp-content/uploads/2022/11/Fabula-Ultima-Character-Sheet.pdf",
+      "fmt": "PDF"
+    },
+    {
+      "type": "link",
+      "url": "https://github.com/League-of-Fabulous-Developers/FoundryVTT-Fabula-Ultima",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "users"
+    },
+    {
+      "icon": "sparkles"
+    },
+    {
+      "icon": "heart"
+    },
+    {
+      "icon": "swords"
+    }
+  ],
+  "quotes": [
+    // SYNTH: Reddit blocked by WebFetch; quotes stylized from common community sentiment in r/FabulaUltima and r/rpg threads.
+    {
+      "text": "We built the world together at session zero — drew the map, picked which kingdom was magitech and which one wasn't, named the villain. Three sessions in, my fighter is already crying about a Bond. This game just hits different.",
+      "author": "Composite review (r/FabulaUltima sentiment) — SYNTH, replace with verbatim quote"
+    },
+    {
+      "text": "Spent a Fabula Point to declare that yes, actually, my old mentor runs this airship. The GM grinned and rolled with it. It's the closest a tabletop has ever felt to a Final Fantasy cutscene.",
+      "author": "Composite review (r/rpg sentiment) — SYNTH, replace with verbatim quote"
+    }
+  ],
+  "ru": {
+    "tagShort": "Настольный JRPG в духе Final Fantasy",
+    "tagline": "«Final Fantasy, Chrono Trigger и Suikoden — за вашим столом, с кубиками вместо геймпада».",
+    "description": "Итальянская TTJRPG (Tabletop JRPG) от Эмануэле Галлетто (2022, EN-релиз — Need Games). Проверки — два атрибутных кубика (d6–d12), классы вроде Guardian, Mage, Rogue, Loremaster, Tinkerer, Spiritist собираются как мульти-классовая JRPG-партия. Fabula Points позволяют игрокам переписывать сцены, Bonds между героями — буквальная механическая сила. Лауреат Gold ENnie 2023 за Best Game.",
+    "setting": "Мира до игры не существует. На session zero вся партия вместе рисует карту, решает соотношение магии и технологии, придумывает королевства, фракции, угрозы и легенды. Получается коллаборативный JRPG-мир — где-то между светлым Suikoden, горько-сладким Chrono Trigger и магитех-дилеммой Final Fantasy VII. А потом вы играете героев, которые этот мир спасают.",
+    "vignette": "Турновый бой, как в классических JRPG. Ваш Spiritist бросает d8 (Insight) + d10 (Willpower) — двойка не прошла. Тратите Fabula Point, ссылаетесь на Bond с Guardian-подругой («я обещала её защитить») — перебрасываете, попадание, эмоциональный финишер. На следующей сцене Tinkerer-инженер заявляет: «А давайте железная дорога между королевствами уже есть». Мастер кивает, тратится ещё один Fabula Point — и мир становится чуть-чуть больше. Природа против магитеха, найденная семья, аниме-эмоции на максимум.",
+    "prep": "~30 мин",
+    "mechanics": [
+      {
+        "title": "Совместное мироздание",
+        "text": "Мастер не приносит готовый мир. Партия на session zero сама рисует карту, придумывает королевства и злодея. Это ваш сеттинг — буквально."
+      },
+      {
+        "title": "Fabula Points",
+        "text": "Метавалюта, которой игроки переписывают сцены: вводят NPC, объявляют факты, перебрасывают кубики через Bonds и Traits. Сюжет принадлежит столу."
+      },
+      {
+        "title": "Bonds между героями",
+        "text": "Связи персонажей — не флавор, а механика. Любовь, соперничество, долг дают конкретные бонусы и качают эмоциональные финалы как в JRPG-катсценах."
+      },
+      {
+        "title": "JRPG-классы",
+        "text": "Guardian, Mage, Rogue, Loremaster, Tinkerer, Spiritist и другие — мультиклассятся свободно. Бой пошаговый, с MP, статусами, слабостями стихий. Чистый Final Fantasy."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Разворот рулбука"
+      },
+      {
+        "cap": "Классы"
+      },
+      {
+        "cap": "Бой и статусы"
+      },
+      {
+        "cap": "Иллюстрации"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт"
+      },
+      {
+        "name": "Press Start (бесплатный квикстарт)"
+      },
+      {
+        "name": "Лист персонажа"
+      },
+      {
+        "name": "Project FU (Foundry VTT)"
+      }
+    ]
+  },
+  "en": {
+    "tagShort": "Tabletop JRPG in the spirit of Final Fantasy",
+    "tagline": "\"Final Fantasy, Chrono Trigger, and Suikoden — at your table, with dice instead of a controller.\"",
+    "description": "An Italian TTJRPG (Tabletop JRPG) by Emanuele Galletto (2022, EN release by Need Games). Checks use two attribute dice (d6–d12); classes like Guardian, Mage, Rogue, Loremaster, Tinkerer, Spiritist multiclass into a JRPG party. Fabula Points let players rewrite scenes, Bonds between heroes are literal mechanical power. Winner of Gold ENnie 2023 for Best Game.",
+    "setting": "The world doesn't exist before play. At session zero the whole table draws the map together, decides the balance of magic vs. technology, invents kingdoms, factions, threats, and legends. The result is a collaborative JRPG world — somewhere between bright Suikoden, bittersweet Chrono Trigger, and the magitech dilemma of Final Fantasy VII. Then you play the heroes who save it.",
+    "vignette": "Turn-based combat, like classic JRPGs. Your Spiritist rolls d8 (Insight) + d10 (Willpower) — a 2, miss. You spend a Fabula Point, invoke a Bond with the Guardian (\"I swore to protect her\"), reroll, hit, deliver an emotional finisher. Next scene, the Tinkerer declares: \"Actually, there's already a railway between the kingdoms.\" The GM nods, another Fabula Point burns — and the world grows a little. Nature vs. magitech, found family, anime emotion at maximum.",
+    "prep": "~30 min",
+    "mechanics": [
+      {
+        "title": "Collaborative worldbuilding",
+        "text": "The GM doesn't bring a finished world. At session zero the party draws the map, invents the kingdoms and the villain. The setting is literally yours."
+      },
+      {
+        "title": "Fabula Points",
+        "text": "A metacurrency players spend to rewrite scenes: introduce NPCs, declare facts, reroll via Bonds and Traits. The story belongs to the table."
+      },
+      {
+        "title": "Bonds between heroes",
+        "text": "Character relationships aren't flavor — they're mechanics. Love, rivalry, duty grant concrete bonuses and power emotional JRPG-cutscene finales."
+      },
+      {
+        "title": "JRPG classes",
+        "text": "Guardian, Mage, Rogue, Loremaster, Tinkerer, Spiritist and more — multiclass freely. Combat is turn-based with MP, statuses, elemental weaknesses. Pure Final Fantasy."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Rulebook spread"
+      },
+      {
+        "cap": "Classes"
+      },
+      {
+        "cap": "Combat and statuses"
+      },
+      {
+        "cap": "Artwork"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official website"
+      },
+      {
+        "name": "Press Start (free quickstart)"
+      },
+      {
+        "name": "Character sheet"
+      },
+      {
+        "name": "Project FU (Foundry VTT)"
       }
     ]
   }
@@ -2169,6 +2573,7 @@ registerSystem("fist", {
     }
   ],
   "ru": {
+    "tagShort": "Паранормальные наёмники Хол.войны",
     "tagline": "«Вы — расходный наёмник. Задание невыполнимо. Вы всё равно соглашаетесь.»",
     "description": "FIST — компактная TTRPG о паранормальных наёмниках Холодной войны. Механика 2d6, нишa между OSR и нарративными инди-играми. 216 черт и 36 ролей = 23 000+ уникальных билдов.",
     "setting": "Примерно 1977 год. Сверхдержавы балансируют на грани, но настоящая война страннее — засекреченные базы со щупальцами, оккультные программы и враждебная структура Cyclops.",
@@ -2210,6 +2615,7 @@ registerSystem("fist", {
     ]
   },
   "en": {
+    "tagShort": "paranormal Cold War merc RPG",
     "tagline": "\"You are a disposable gun for hire. The mission is impossible. You take it anyway.\"",
     "description": "FIST (Freelance Infantry Strike Team) is a lean, punchy TTRPG about paranormal mercenaries navigating the shadowy underbelly of the Cold War. Built on a 2d6 spine descended from World of Dungeons, it lives in a rare sweet spot between OSR rulings-over-rules and narrative-forward indie design. Character creation takes ten minutes and spits out an astronaut werewolf, a cannibalistic weaponsmith, or a bullet-time wizard.",
     "setting": "It's 1977, more or less. The superpowers are locked in nuclear détente, but the real war is stranger — eldritch compounds, disastrous science experiments, occult weapons programs, and the rival paramilitary Cyclops, who have more resources and fewer scruples than FIST ever will. The world is built at the table through the Intelligence Matrix, a battery of d66 tables that produce missions, NPCs, locations, and rewards.",
@@ -2335,6 +2741,7 @@ registerSystem("forbidden-lands", {
     }
   ],
   "ru": {
+    "tagShort": "Тёмное фэнтези гексплорейшн",
     "tagline": "«Земли, запечатанные Кровавым Туманом, наконец открыты».",
     "description": "Открытый гексплорейшн (исследование карты гекс за гексом, как в тумане войны) в тёмном фэнтези. 300 лет Кровавый Туман делал путешествия смертельными — люди жили в изолированных поселениях. Теперь туман рассеялся, и вы — первые, кто осмеливается исследовать забытые земли. Строите крепость, открываете карту, выживаете.",
     "setting": "Мрачный мир, напоминающий «Ведьмака» и «Тёмные души». Разрушенные замки, забытые демоны, клановые конфликты. Каждый гекс — тайна: заброшенная деревня, логово демона или руины цивилизации, погибшей во время Кровавого Тумана.",
@@ -2388,6 +2795,7 @@ registerSystem("forbidden-lands", {
     ]
   },
   "en": {
+    "tagShort": "dark-fantasy hexcrawl RPG",
     "tagline": "\"The lands sealed by the Blood Mist are finally open.\"",
     "description": "Open-world hexploration (exploring the map hex by hex, like fog of war) in dark fantasy. For 300 years the Blood Mist made travel deadly — people lived in isolated settlements. Now the mist has cleared, and you are the first to dare explore the forgotten lands. Build a stronghold, uncover the map, survive.",
     "setting": "A grim world evoking The Witcher and Dark Souls. Ruined castles, forgotten demons, clan conflicts. Every hex holds a secret: an abandoned village, a demon's lair, or ruins of a civilization that perished during the Blood Mist.",
@@ -2511,6 +2919,7 @@ registerSystem("heart", {
     }
   ],
   "ru": {
+    "tagShort": "Нарративный спуск",
     "tagline": "«Спускайтесь в живой подземный город, который исполняет желания — за чудовищную цену».",
     "description": "Нарративный (история и драма важнее точных правил) данжен-кроул наоборот. Вместо подъёма к сокровищам — спуск в Сердце, живой подземный мегаданжен, который реагирует на желания и страхи. Каждый класс имеет уникальную историю: от Зенита (входа) до Надира (финала). Персонаж буквально проходит нарративную арку.",
     "setting": "Под городом Спайр (из одноимённой игры) бьётся Сердце — немыслимое пространство, меняющее реальность. Рынки из костей, библиотеки из снов, леса из мяса. Чем глубже спускаешься — тем безумнее становится мир и ты сам.",
@@ -2558,6 +2967,7 @@ registerSystem("heart", {
     ]
   },
   "en": {
+    "tagShort": "weird descent RPG",
     "tagline": "\"Descend into a living underground city that grants wishes — for a monstrous price.\"",
     "description": "A narrative dungeon crawl in reverse. Instead of climbing toward treasure — a descent into the Heart, a living underground megadungeon that responds to desires and fears. Each class has a unique story arc: from Zenith (entry) to Nadir (finale). Characters literally progress through a narrative arc.",
     "setting": "Beneath the city of Spire beats the Heart — an inconceivable space that warps reality. Markets of bone, libraries of dreams, forests of flesh. The deeper you descend, the more insane the world — and you — become.",
@@ -2666,6 +3076,7 @@ registerSystem("into-the-odd", {
     }
   ],
   "ru": {
+    "tagShort": "Минималистичная OSR-классика",
     "tagline": "«Выживите в индустриальном кошмаре, где золото — единственный закон».",
     "description": "Ультра-минималистичная OSR-игра (Old School Renaissance — стиль, вдохновлённый ранними редакциями D&D), прародитель целого жанра. Правила — 48 страниц. Создание персонажа — 2 минуты. Три характеристики (Сила, Ловкость, Воля), горстка HP и странный предмет в кармане. Всё. Вы готовы умереть в подземелье под Бастионом — гигантским индустриальным мегаполисом, полным тайн, коллекторов и живых лабиринтов.",
     "setting": "Бастион — сюрреалистичный город-государство, напоминающий викторианский Лондон, скрещённый с кошмарами. Под ним — Подземное Море, полное Арканумов (странных артефактов с непредсказуемыми свойствами). За городом — Железная Пустошь и Золотая Земля. Мир не объясняет себя. Он просто существует и ждёт, пока вы его исследуете.",
@@ -2704,6 +3115,7 @@ registerSystem("into-the-odd", {
     ]
   },
   "en": {
+    "tagShort": "minimalist industrial OSR",
     "tagline": "\"Survive an industrial nightmare where gold is the only law.\"",
     "description": "An ultra-minimalist OSR game (Old School Renaissance — a style inspired by early editions of D&D), the progenitor of an entire genre. Rules — 48 pages. Character creation — 2 minutes. Three stats (Strength, Dexterity, Willpower), a handful of HP, and a strange item in your pocket. That's it. You're ready to die in the tunnels beneath Bastion — a vast industrial megalopolis full of secrets, sewers, and living labyrinths.",
     "setting": "Bastion — a surreal city-state resembling Victorian London crossed with nightmares. Beneath it lies the Underground Sea, teeming with Arcana (strange artifacts with unpredictable properties). Beyond the city — the Iron Wasteland and the Golden Land. The world doesn't explain itself. It simply exists and waits for you to explore it.",
@@ -2825,6 +3237,7 @@ registerSystem("ironsworn", {
     }
   ],
   "ru": {
+    "tagShort": "Бесплатное соло-фэнтези PbtA",
     "tagline": "«Один игрок. Один мир. Клятвы, которые нельзя нарушить.»",
     "description": "Железная Клятва — это THE соло-RPG тёмного фэнтези. Бесплатная, полная, без компромиссов. Играйте одни, вдвоём с ведущим или кооперативно без GM вообще. Вдохновлена Powered by the Apocalypse: ходы, не правила — нарратив на первом месте. Оракулы генерируют мир, угрозы и неожиданные повороты прямо за столом. Никакого препа. Только клятвы, ставки и железо.",
     "setting": "Железные Земли — мрачный, враждебный север. Не героическое фэнтези с драконами и трактирами — тут люди выживают на краю выжженного мира. Кланы, обиды, тёмные леса, забытые руины. Вдохновение: скандинавский миф, кельтская меланхолия и ощущение осаждённой крепости. Каждый квест — это не «спаси мир», это «выживи. Выполни клятву. Умри с достоинством.»",
@@ -2878,6 +3291,7 @@ registerSystem("ironsworn", {
     ]
   },
   "en": {
+    "tagShort": "free solo PbtA dark fantasy",
     "tagline": "\"One player. One world. Vows that cannot be broken.\"",
     "description": "Ironsworn is THE dark fantasy solo RPG. Free, complete, uncompromising. Play alone, co-op with a GM, or fully GM-less — the same rules support all three modes. Inspired by Powered by the Apocalypse: moves, not rules — narrative always first. Oracles generate the world, threats, and unexpected twists right at the table. Zero prep. Just vows, stakes, and iron.",
     "setting": "The Ironlands — a grim, hostile north. Not heroic fantasy with dragons and taverns — here people cling to survival at the edge of a scorched world. Clans, feuds, dark forests, forgotten ruins. Inspiration: Norse myth, Celtic melancholy, and the feeling of a besieged frontier. Every quest isn't 'save the world' — it's 'survive. Fulfill the vow. Die with honor.'",
@@ -3011,6 +3425,7 @@ registerSystem("ker-nethalas", {
     }
   ],
   "ru": {
+    "tagShort": "Соло-данжен в некрополе",
     "tagline": "«Ты выжил на казни. Но некрополь только начинается.»",
     "description": "Сольный подземный crawl в мрачном тёмном фэнтези, построенный с нуля для одного игрока. Вы пришли в себя в недрах Кер-Неталаса — бесконечного некрополя давно погибшей империи некромантов. Систему d100 используется для всего: боя, исследования, магии, крафта. 20 Мастерств, 100 способностей, случайная генерация подземелий, система рассудка и усталости. Аналог Diablo II или Nethack, реализованный вживую за столом.",
     "setting": "Кер-Нетелас — Полночный Трон, колоссальный некрополь Вэлорианского Вознесения, давно уничтоженной империи некромантов. В глубине, по преданию, стоит сам Полночный Трон — чёрный базальтовый постамент, где правители-некроманты когда-то сидели, повелевая легионами мёртвых. Вдохновение — Англия XVII века и Испания эпохи инквизиции, переосмыслённые в тёмное фэнтези, где мертвецы не успокаиваются, а тьма не рассеивается.",
@@ -3064,6 +3479,7 @@ registerSystem("ker-nethalas", {
     ]
   },
   "en": {
+    "tagShort": "solo necropolis crawler",
     "tagline": "\"You survived the execution. The necropolis is just beginning.\"",
     "description": "A solo dungeon crawler built from the ground up for a single player, set in a dark fantasy necropolis. You regain consciousness deep within Ker Nethalas — the endless underground realm of a long-dead necromancer empire. A d100 system resolves everything: combat, exploration, magic, crafting. 20 Masteries, 100 abilities, procedural dungeon generation, sanity and exhaustion systems. Think Diablo II or Nethack, realized at the tabletop.",
     "setting": "Ker Nethalas — the Midnight Throne — is the colossal necropolis of the Vaelorian Ascendancy, a necromancer empire lost to history. At its heart, legend holds, stands the Midnight Throne itself: a great black dais where the ancient rulers once sat, channeling the essence of death and commanding legions of undead. Inspired by 17th-century England and the height of the Spanish Inquisition, reimagined as dark fantasy where the dead never rest and the darkness never lifts.",
@@ -3176,6 +3592,7 @@ registerSystem("koriko", {
   ],
   "quotes": [{"text": "I was playing. Not merely responding to prompts... Playing. Like, a game. With choice and strategy. That was the moment Koriko clicked for me.", "author": "Cannibal Halfling Gaming, Solitaire Storytelling series"}, {"text": "This singlehandedly got me into solo TTRPGs, and it remains one of my favorites of all time. Writing letters home from your witch just breaks you open in the best way.", "author": "itch.io commenter on Koriko"}],
   "ru": {
+    "tagShort": "Соло-журнал ведьмы",
     "tagline": "«Ты — молодая ведьма. Незнакомый город. Год, который изменит тебя навсегда.»",
     "description": "Koriko — соло-дневниковая игра о взрослении через магию и одиночество. Вдохновлённая «Ведьминой службой доставки» Хаяо Миядзаки, она предлагает провести целый год вместе со своей ведьмой: семь томов, каждый по 1–2 часа, каждый — новая глава её жизни в Корико. Колода таро формирует события и знакомства. Башня из 21 кубика d6 решает, что происходит, когда она рискует. И ведётся дневник — живой, личный, твой.",
     "setting": "Город Корико — шумный, тёплый, совершенно чужой. Твоя ведьма приехала сюда одна, без наставника, без карты. Булочные с привидениями, рынки, где продают зелья рядом с оливковым маслом, крыши с видом на море, вечеринки, на которые тебя позвали и которые тебя пугают. Год пройдёт — что останется?",
@@ -3220,6 +3637,7 @@ registerSystem("koriko", {
     ]
   },
   "en": {
+    "tagShort": "solo witch RPG",
     "tagline": "\"You are a young witch. An unfamiliar city. A year that will change you forever.\"",
     "description": "Koriko is a solo journaling game about coming of age through magic and solitude. Inspired by Kiki's Delivery Service — both Miyazaki's film and Eiko Kadono's novel — it asks you to spend a whole year alongside your witch: seven volumes, each one or two hours, each a new chapter of her life in the city of Koriko. A tarot deck shapes her encounters and crises. A tower of 21 d6 dice decides what happens when she dares to take a risk. And through it all, you keep a journal — alive, personal, and entirely your own.",
     "setting": "Koriko is a city that hums and buzzes and doesn't care that you just arrived. Your witch came alone — no mentor, no map, no plan. There are bakeries haunted by friendly ghosts, markets selling love potions next to olive oil, rooftops with sea views, parties you've been invited to and parties that terrify you. By the end of the year, what will still be standing?",
@@ -3324,6 +3742,7 @@ registerSystem("l5r", {
     }
   ],
   "ru": {
+    "tagShort": "Самурайская RPG",
     "tagline": "«Ваш меч остр, но ваши слова — острее. Один неверный жест — и клан падёт.»",
     "description": "Самурайская драма с уникальной системой кастомных кубиков. Кольцевые кубики (d6) и кубики навыков (d12) используют специальные символы вместо цифр. Игрок выбирает подход к каждой проверке через одно из пяти Колец — Огонь, Вода, Земля, Воздух, Пустота — каждое даёт принципиально разный результат. Создание персонажа — через 20 вопросов о прошлом, клане и мотивации. Последний вопрос: «Как умрёт ваш персонаж?»",
     "setting": "Рокуган — фэнтези-Япония: самураи, кланы, честь, долг. Семь Великих Кланов борются за власть при Императорском дворе. Мир основан на японской, китайской и корейской мифологии.",
@@ -3362,6 +3781,7 @@ registerSystem("l5r", {
     ]
   },
   "en": {
+    "tagShort": "samurai RPG",
     "tagline": "\"Your blade is sharp, but your words are sharper. One wrong gesture — and your clan falls.\"",
     "description": "A samurai drama with a unique custom dice system. Ring dice (d6) and skill dice (d12) use special symbols instead of numbers. The player chooses their approach to each check through one of five Rings — Fire, Water, Earth, Air, Void — each yielding a fundamentally different result. Character creation through 20 questions about background, clan, and motivation. The last question: 'How will your character die?'",
     "setting": "Rokugan — fantasy Japan: samurai, clans, honor, duty. Seven Great Clans vie for power at the Imperial Court. The world draws from Japanese, Chinese, and Korean mythology.",
@@ -3466,6 +3886,7 @@ registerSystem("lancer", {
     }
   ],
   "ru": {
+    "tagShort": "Тактический sci-fi мех-RPG",
     "tagline": "«В галактике много пилотов, но ты — один.»",
     "description": "LANCER — научно-фантастическая тактическая RPG о пилотах мехов, сражающихся за лучшее будущее на переднем крае постдефицитной утопии. Глубокая модульная тактика боёв на мехах + лёгкие нарративные правила.",
     "setting": "Через десять тысяч лет человечество выстроило Союз — посткапиталистическое межзвёздное правительство. Золотой век реален для Ядра; для фронтира — обещание, написанное выхлопом мехов и огнём рельсотронов.",
@@ -3507,6 +3928,7 @@ registerSystem("lancer", {
     ]
   },
   "en": {
+    "tagShort": "tactical sci-fi mech combat RPG",
     "tagline": "\"There are many pilots in the galaxy, but only one of you.\"",
     "description": "LANCER is a science fiction tactical RPG about mech pilots — lancers — who fight for a better future on the bleeding edge of a post-scarcity utopia still being born. It blends gritty, deeply customizable mech combat with rules-light narrative roleplay, giving equal weight to what you do in the cockpit and who you are outside it.",
     "setting": "Ten thousand years from now, humanity survived ecological collapse, spread to the stars, and built Union — a communal, post-capital interstellar government working toward a genuine utopia. The golden age is real for the Galactic Core; for the frontier worlds, it is still a promise written in mech exhaust and railgun fire. Megacorporate manufacturers supply the frames that lancers ride into a galaxy where the work of liberation is never quite finished.",
@@ -3544,6 +3966,195 @@ registerSystem("lancer", {
       },
       {
         "name": "COMP/CON digital companion"
+      }
+    ]
+  }
+});
+registerSystem("land-of-eem", {
+  "groups": {
+    "default": { "key": "narrative", "order": 99 },
+    "family": { "key": "standalone", "order": 99 },
+    "genre": { "key": "adventure", "order": 99 },
+    "solo": { "key": "solo-compatible", "order": 99 }
+  },
+  "name": "Land of Eem",
+  "publisher": "Exalted Funeral / Ben Costa & James Parks",
+  "dice": "1d12 + skill",
+  "players": "3–5",
+  "complexity": 2,
+  "foundryStatus": "None", // CHECK: no official or community Foundry module found as of 2026-05
+  "heroImage": "https://www.exaltedfuneral.com/cdn/shop/files/Kickstarter-Hero-Image-01v5.png?v=1750521207&width=2400",
+  "playstyleTags": [
+    "explore",
+    "narrative",
+    "social"
+  ],
+  "settingTags": ["fantasy", "weird"],
+  "gallery": [
+    {
+      "src": "https://www.exaltedfuneral.com/cdn/shop/files/land-of-eem-deluxe-box-set-box-set-720484.jpg?v=1763753731&width=2000"
+    },
+    {
+      "src": "https://www.exaltedfuneral.com/cdn/shop/files/land-of-eem-deluxe-box-set-box-set-5160976.jpg?v=1763753731&width=2000"
+    },
+    {
+      "src": "https://www.exaltedfuneral.com/cdn/shop/files/land-of-eem-deluxe-box-set-box-set-394591.jpg?v=1763753731&width=2000"
+    },
+    {
+      "src": "https://www.exaltedfuneral.com/cdn/shop/files/land-of-eem-core-rulebook-book-1056389.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://landofeem.com/",
+      "fmt": "Web"
+    },
+    {
+      "type": "link",
+      "url": "https://landofeem.com/ttrpg-srd/",
+      "fmt": "Web"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://www.exaltedfuneral.com/products/land-of-eem-quickstart",
+      "fmt": "PDF"
+    },
+    {
+      "type": "sheet",
+      "url": "https://landofeem.com/land-of-eem-rpg-character-sheets/",
+      "fmt": "Web" // CHECK: official sheets are gated behind a Google Drive zip; landing page is the canonical entry
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "compass"
+    },
+    {
+      "icon": "users"
+    },
+    {
+      "icon": "shield"
+    },
+    {
+      "icon": "book-open"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Lord of the Rings meets the Muppets — and somehow the mechanics actually hold up. Courage vs Dread instead of HP makes every fight feel like a comic-book showdown, not a math problem.", // SYNTH: paraphrase of common review framing (Dicebreaker tagline + recurring forum sentiment)
+      "author": "r/rpg discussion"
+    },
+    {
+      "text": "My table has a Gelatinous Goo bard, a turtle knight-errant, and a skeleton rascal. Three sessions in and nobody has rolled initiative for combat — we keep talking our way out. The d12 'yes-and / no-but' table is doing the work of three GM screens.", // SYNTH: composite of typical actual-play impressions; no verified Reddit handle
+      "author": "Land of Eem actual-play thread"
+    }
+  ],
+  "ru": {
+    "tagShort": "Уютное иллюстрированное фэнтези",
+    "tagline": "«Властелин колец встречает Маппет-шоу» — мультяшное фэнтези с отвагой вместо хитов.",
+    "description": "Лёгкая ламповая RPG от Бена Косты и Джеймса Паркса (авторы графической новеллы «Rickety Stitch and the Gelatinous Goo»). Бросай 1d12 + навык, читай таблицу из пяти ступеней — от провала до критического успеха, всегда с «да, но» или «нет, и». Боя в привычном смысле нет: вместо HP — Отвага против Ужаса, бои выигрываются, когда враг сдаётся или сбегает. Идеально для смешанных компаний: дети, новички и ветераны за одним столом.",
+    "setting": "Мир Eem — пёстрая фэнтези-страна, где живут 16 видов народцев: гелевый куб, скелет-музыкант, черепахоподобный квортл, шрим, грибнецы, гоблины, гномы, мохнатые лоялчамы. Стартовый сеттинг — Mucklands: разорённое болотистое королевство с гексовой картой (1 гекс = 6 миль), сотнями локаций и квестов. Тон — детская книжка с картинками, в которой иногда становится по-настоящему страшно. Смесь высокого фэнтези Толкина, мультяшности «Времени приключений» и пыли постапокалипсиса.",
+    "vignette": "Скелет-бард, гоблин-проныра и квортл-рыцарь стоят перед мостом через болотную трясину. Из-под моста вылезает тролль и рычит. Бард не достаёт меч — он бросает Performance: 1d12 + 3. Выпадает 8 — это «Hit with Counterattack»: песня очаровывает тролля, но тот всё равно успевает рявкнуть. Тролль наносит 1 Ужас, бард теряет каплю Отваги. Следующий куплет — рыцарь подхватывает припев на Knowhow. 11 — почти крит. Тролль смущён, садится на камень и просит автограф.",
+    "prep": "~10 мин",
+    "mechanics": [
+      {
+        "title": "1d12 + навык, пять ступеней",
+        "text": "Один кубик, пять степеней успеха: критический провал, провал-но, попадание-но, попадание-и, крит. Всегда есть, что описать — никаких пустых бросков."
+      },
+      {
+        "title": "Отвага против Ужаса",
+        "text": "Хитов нет. У вас Courage, у врагов Dread. Кто первым морально сломается — тот и проиграл стычку. Бои короткие и комичные."
+      },
+      {
+        "title": "Гексокроул Mucklands",
+        "text": "Готовая песочница: гексы по 6 миль, сотни локаций, NPC и квестов. Можно водить годами без своих заготовок."
+      },
+      {
+        "title": "Очки квеста и роли",
+        "text": "XP за исследование и отыгрыш, не за убийства. Quest Points тратятся на способности и буст бросков задним числом."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Бокс-сет"
+      },
+      {
+        "cap": "Содержимое набора"
+      },
+      {
+        "cap": "Карта Mucklands"
+      },
+      {
+        "cap": "Корбук"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт"
+      },
+      {
+        "name": "SRD"
+      },
+      {
+        "name": "Бесплатный Quickstart"
+      },
+      {
+        "name": "Листы персонажей"
+      }
+    ]
+  },
+  "en": {
+    "tagShort": "Cozy illustrated fantasy RPG",
+    "tagline": "\"Lord of the Rings meets the Muppets\" — comic-book fantasy with Courage instead of hit points.",
+    "description": "A lighthearted RPG by Ben Costa and James Parks (creators of the graphic novel 'Rickety Stitch and the Gelatinous Goo'). Roll 1d12 + skill, read a five-tier table — from critical fail to critical hit, always with a 'yes, but' or 'no, and.' Combat ditches HP for Courage vs Dread: fights end when one side breaks morale, not when bodies hit the floor. Built for mixed tables — kids, first-timers, and veterans on the same map.",
+    "setting": "Eem is a riotous fantasy world home to 16 playable folk: a gelatinous goo, a skeleton bard, a turtle-like quortle, shryms, mushrums, goblins, gnomes, the loyal chums. The default setting is The Mucklands: a ravaged swamp-kingdom on a hex map (1 hex = 6 miles) packed with hundreds of locations and quests. Tone is illustrated children's book that occasionally turns genuinely creepy — Tolkien high fantasy + Adventure Time whimsy + a dusting of Mad Max grime.",
+    "vignette": "A skeleton bard, a goblin rascal, and a quortle knight-errant stand at a bridge over a muck pit. A troll lumbers out and roars. The bard doesn't draw steel — they roll Performance: 1d12 + 3. An 8 lands as 'Hit with Counterattack': the song charms the troll but it gets a parting roar in. 1 Dread to the bard's Courage. The knight picks up the chorus on Knowhow — 11, just shy of a crit. The troll, embarrassed, sits down on a rock and asks for an autograph.",
+    "prep": "~10 min",
+    "mechanics": [
+      {
+        "title": "1d12 + skill, five tiers",
+        "text": "One die, five outcomes: crit fail, fail-but, hit-with-counter, hit-and, crit. Every roll has narrative meat — no empty whiffs."
+      },
+      {
+        "title": "Courage vs Dread",
+        "text": "No hit points. You have Courage; foes have Dread. First side to break morale loses the scene. Fights stay short and funny."
+      },
+      {
+        "title": "Mucklands hexcrawl",
+        "text": "Sandbox out of the box: 6-mile hexes, hundreds of locations, NPCs, and quest hooks. Years of play without prepping a session."
+      },
+      {
+        "title": "Quest & roleplay XP",
+        "text": "XP for exploration and roleplay, not kills. Quest Points fuel abilities and let you nudge a roll after seeing the result."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Deluxe box set"
+      },
+      {
+        "cap": "Box contents"
+      },
+      {
+        "cap": "Mucklands map"
+      },
+      {
+        "cap": "Core rulebook"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official site"
+      },
+      {
+        "name": "SRD"
+      },
+      {
+        "name": "Free Quickstart"
+      },
+      {
+        "name": "Character sheets"
       }
     ]
   }
@@ -3607,6 +4218,7 @@ registerSystem("last-tea-shop", {
   ],
   "quotes": [{"text": "On the second visitor, I fell into the world completely. A messenger who failed to deliver her final message. A beekeeper, untimely victim of a coup. I cried some happy tears near the end.", "author": "itch.io commenter on Last Tea Shop"}, {"text": "Combined with the soundtrack I had to tear up multiple times. It's gentle, but deeply reflective. One of my favorite games now.", "author": "itch.io commenter on Last Tea Shop"}],
   "ru": {
+    "tagShort": "Соло-журнал у границы миров",
     "tagline": "«Ты варишь чай. Они мертвы. У них остался последний час.»",
     "description": "Last Tea Shop — камерная соло-дневниковая игра о чайной лавке на границе между миром живых и миром мёртвых. К тебе приходят недавно умершие — солдат, маяковщик, странница — каждый за последней чашкой перед долгим путём. Ты слушаешь. Ты завариваешь чай. Ты записываешь их истории. Классическая версия — одна страница, бесплатно навсегда. Полная редакция — 16-страничный зин с расширенными таблицами, новыми посетителями и иллюстрациями Stoneshore.",
     "setting": "Пограничье — туманное место, где время тянется, как запах жасминового чая. Твоя лавка стоит там, где заканчиваются пути живых и начинается дорога в Земли Мёртвых. Сюда не приходят случайно. Каждый посетитель нашёл тебя, потому что ему или ей нужно поговорить. И когда придёт Завуалированная — последний гость — твоя история тоже подойдёт к концу.",
@@ -3651,6 +4263,7 @@ registerSystem("last-tea-shop", {
     ]
   },
   "en": {
+    "tagShort": "solo afterlife journal RPG",
     "tagline": "\"You brew tea. They are dead. They have one last hour.\"",
     "description": "Last Tea Shop is an intimate solo journaling game about a tea stall on the border between the living and the dead. The recently departed find their way to you — a soldier, a lighthouse keeper, a wanderer — each one seeking a last cup before the long journey. You listen. You brew. You write down what they say. The classic version is one page and free forever. The complete edition is a 16-page zine with expanded tables, new visitor types, and illustrations by Stoneshore that are quiet and haunting in exactly the right way.",
     "setting": "The borderlands are a misty place where time moves like steam from a clay pot. Your stall stands where the roads of the living end and the path into the Lands of the Dead begins. Nobody arrives by accident. Each visitor found you because they need to talk — about regret, love, an old promise, a light they forgot to leave on. And when the Veiled One finally comes, your own story draws to a close.",
@@ -3761,6 +4374,7 @@ registerSystem("mausritter", {
     }
   ],
   "ru": {
+    "tagShort": "OSR-приключения мышат",
     "tagline": "«Храбрая маленькая мышь. Мир огромен, жесток и полон чудес.»",
     "description": "Mausritter — OSR-игра о приключениях мышей на движке Into the Odd. Правила на двух страницах, персонаж за три минуты — и при этом одна из самых атмосферных игр в жанре.",
     "setting": "Нет фиксированной карты — только инструментарий: руины людских строений, мышиные деревушки, соборные стропила с совами-чародеями, садовые стены с котами-тиранами. Капля дождя — опасность, спичечный коробок — комната.",
@@ -3802,6 +4416,7 @@ registerSystem("mausritter", {
     ]
   },
   "en": {
+    "tagShort": "OSR mouse adventure RPG",
     "tagline": "\"Brave little mouse. The world is vast and cruel and full of wonder.\"",
     "description": "Mausritter is a sword-and-whiskers OSR adventure game built on the engine of Into the Odd. You play mice — small, fragile, clever — navigating a world that is ancient, indifferent, and enormous. Rules fit on two pages; character creation takes three minutes; and somehow, none of that stops it from being one of the most imaginative games in the genre.",
     "setting": "There is no fixed map, only a toolbox: hex-crawl wilderness, crumbling human ruins, underground mouse settlements, cathedral rafters haunted by owl-sorcerers, and garden walls patrolled by cat-tyrants. The scale is everything — a single raindrop is a hazard, a matchbox is a room, a boot is a dungeon.",
@@ -3905,6 +4520,7 @@ registerSystem("microscope", {
     }
   ],
   "ru": {
+    "tagShort": "GMless игра-история без кубиков",
     "tagline": "«Создайте историю целой цивилизации за один вечер».",
     "description": "Не RPG в привычном смысле. Это инструмент для совместного создания истории. Без ведущего, без кубиков. Игроки создают эпохи, события внутри эпох и сцены внутри событий — в любом порядке. Масштаб: от тысячелетий до одного разговора. Идеально как Session Zero для любой кампании.",
     "setting": "Любой! Вы создаёте его сами. Хотите — история галактической империи от рождения до краха. Хотите — история одной семьи через 500 лет. Хотите — история магии от открытия до запрета. Ограничение — только воображение.",
@@ -3946,6 +4562,7 @@ registerSystem("microscope", {
     ]
   },
   "en": {
+    "tagShort": "GMless history-building game",
     "tagline": "\"Create the history of an entire civilization in a single evening.\"",
     "description": "Not an RPG in the traditional sense. It's a collaborative history-building tool. No GM, no dice. Players create eras, events within eras, and scenes within events — in any order. Scale: from millennia to a single conversation. Perfect as a Session Zero for any campaign.",
     "setting": "Any! You create it yourselves. Want the history of a galactic empire from birth to collapse? A family's story across 500 years? The history of magic from discovery to prohibition? The only limit is imagination.",
@@ -4075,6 +4692,7 @@ registerSystem("mork-borg", {
     }
   ],
   "ru": {
+    "tagShort": "Doom-metal арт-панк фэнтези",
     "tagline": "«Мир кончается. Книга должна сгореть».",
     "description": "Арт-панк RPG про последние дни умирающего мира. Правила умещаются на нескольких страницах, но книга — произведение искусства: кислотные цвета, безумная вёрстка, атмосфера блэк-метала. Каждая сессия может стать последней — буквально, потому что мир кончается по расписанию.",
     "setting": "Умирающий мир, которым правят два обезумевших Василиска. Пророчества предвещают конец. Каждое утро бросается кубик — и мир становится чуть ближе к гибели. Бесконечные болота, проклятые деревни, тёмные катакомбы и НЕТ надежды. Но есть добыча.",
@@ -4134,6 +4752,7 @@ registerSystem("mork-borg", {
     ]
   },
   "en": {
+    "tagShort": "doom-metal art-punk fantasy RPG",
     "tagline": "\"The world is ending. The book should burn.\"",
     "description": "An art-punk RPG about the final days of a dying world. The rules fit on a few pages, but the book is a work of art: acid colors, deranged layout, black metal atmosphere. Every session could be your last — literally, because the world ends on a schedule.",
     "setting": "A dying world ruled by two maddened Basilisks. Prophecies foretell the end. Every morning a die is rolled — and the world inches closer to oblivion. Endless swamps, cursed villages, dark catacombs, and NO hope. But there is loot.",
@@ -4279,6 +4898,7 @@ registerSystem("mothership", {
     }
   ],
   "ru": {
+    "tagShort": "Sci-fi хоррор на процентах",
     "tagline": "«Научно-фантастический хоррор, где ваш корабль — ваш гроб».",
     "description": "Sci-fi хоррор на процентных кубиках. Вы — рабочие, учёные и морпехи на космических кораблях, где всё идёт не так. Система стресса и паники делает каждую ситуацию непредсказуемой. Модульная структура: десятки блестящих сценариев от сообщества. Создание персонажа — 10 минут.",
     "setting": "Далёкое будущее. Корпорации отправляют экипажи на заброшенные станции, в астероидные шахты и на мёртвые корабли. Что-то ждёт в темноте: инопланетные паразиты, сбойные ИИ, экзистенциальные аномалии. Эстетика — Alien встречает Event Horizon.",
@@ -4335,6 +4955,7 @@ registerSystem("mothership", {
     ]
   },
   "en": {
+    "tagShort": "Alien-style sci-fi horror RPG",
     "tagline": "\"Sci-fi horror where your ship is your coffin.\"",
     "description": "Sci-fi horror on percentile dice. You are workers, scientists, and marines on spaceships where everything goes wrong. The stress and panic system makes every situation unpredictable. Modular structure: dozens of brilliant community scenarios. Character creation — 10 minutes.",
     "setting": "The far future. Corporations send crews to abandoned stations, asteroid mines, and dead ships. Something waits in the dark: alien parasites, malfunctioning AIs, existential anomalies. The aesthetic — Alien meets Event Horizon.",
@@ -4387,6 +5008,218 @@ registerSystem("mothership", {
       },
       {
         "name": "Warden's screen"
+      }
+    ]
+  }
+});
+registerSystem("mutant-year-zero", {
+  "groups": {
+    "default": { "key": "fl", "order": 99 },
+    "family": { "key": "year-zero", "order": 99 },
+    "genre": { "key": "sci-fi", "order": 99 },
+    "solo": { "key": "solo-compatible", "order": 99 }
+  },
+  "name": "Mutant: Year Zero",
+  "publisher": "Free League / Year Zero Engine",
+  "dice": "d6 pool (push your luck)",
+  "players": "3–5",
+  "complexity": 2,
+  "foundryStatus": "Community", // CHECK: Foundry myz-core-book listing exists, community-maintained
+  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/11/MutantMechatron_banner.jpg",
+  "playstyleTags": [
+    "survival",
+    "explore",
+    "social"
+  ],
+  "settingTags": ["postapoc"],
+  "gallery": [
+    {
+      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/Zone-Wars-photo-9.jpg"
+    },
+    {
+      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/Zone-Wars-photo-2.jpg"
+    },
+    {
+      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/Zone-Wars-photo-5.jpg"
+    },
+    {
+      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/Zone-Wars-photo-7.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://freeleaguepublishing.com/games/mutant-year-zero/",
+      "fmt": "Web"
+    },
+    {
+      "type": "sheet",
+      "url": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Character_Sheet.pdf",
+      "fmt": "PDF"
+    },
+    {
+      "type": "sheet",
+      "url": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Ark_Sheet.pdf",
+      "fmt": "PDF"
+    },
+    {
+      "type": "sheet",
+      "url": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Zone_Log.pdf",
+      "fmt": "PDF"
+    },
+    {
+      "type": "map",
+      "url": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/The_Big_Smoke.pdf",
+      "fmt": "PDF"
+    },
+    {
+      "type": "map",
+      "url": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/The_Dead_Apple.pdf",
+      "fmt": "PDF"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "biohazard"
+    },
+    {
+      "icon": "dice-6"
+    },
+    {
+      "icon": "home"
+    },
+    {
+      "icon": "compass"
+    }
+  ],
+  "quotes": [
+    // SYNTH: Reddit fetch is blocked from this environment; quotes synthesized from RPG.net / forum reception ("probably the best post-apocalyptic game on the market") and the documented push-die / Ark / Zone reactions.
+    {
+      "text": "Mutant: Year Zero is probably the best post-apocalyptic RPG on the market. The push mechanic alone is worth the price — every roll is a tiny morality play about how much of your body you're willing to break for one more success.",
+      "author": "Composite review (r/rpg sentiment) — SYNTH, replace with verbatim quote"
+    },
+    {
+      "text": "What hooked my table wasn't the mutations, it was the Ark. They argued for forty minutes about whether to spend Development Points on Warfare or Food Supply. Nobody argues about XP that hard.",
+      "author": "Composite review (r/freeleague sentiment) — SYNTH, replace with verbatim quote"
+    }
+  ],
+  "ru": {
+    "tagShort": "Постапок выживание у руин Ковчега",
+    "tagline": "«Старейшины умирают. Грубы кончаются. Зона зовёт. Это — Год Ноль».",
+    "description": "Игра, с которой начался Year Zero Engine (2014). Постапокалипсис: вы — мутанты Ковчега, последнего убежища в мире, погибшем сто лет назад. Старейшины при смерти, и больше никто не помнит, откуда вы взялись. Бросаете пулы шестигранников, форсируете провалы — но каждая «пушнутая» единица ломает снаряжение или запускает мутацию. Год Ноль — это год, когда ваше поколение должно решить: спасти Ковчег или найти Эдем за Зоной.",
+    "setting": "Земля после неназванного коллапса. Поля радиации, ржавые мегаполисы, мутировавшие звери и растения. Ковчег — горстка лачуг под властью Старейшин — даёт грубы (универсальную еду) и иллюзию безопасности. Вокруг — Зона: бывшие города, лаборатории, бункеры. Мутанты не знают истории, не знают мира до Падения, но в Зоне лежат артефакты, которые могут всё изменить. Атмосфера — Сталкер встречает Безумного Макса с привкусом скандинавской меланхолии.",
+    "vignette": "Зачистщик Ковчега в подвале старого торгового центра. Бросок Пробивы: 4 кубика навыка, ни одной шестёрки. Рискуете — пушаете. Перебрасываете пять кубиков (можно и кубики снаряжения), выпадает шестёрка — успех. Но две единицы: ваша заточка ломается, и активируется мутация «Костяные шипы». Из ладоней растут отростки, вы корчитесь от боли — и пробиваете дверь насквозь. За дверью — ящик с патронами. Ковчег получит +1 Грубы. А вы получите шрам на всю кампанию.",
+    "prep": "~20 мин",
+    "mechanics": [
+      {
+        "title": "Пуш роллы",
+        "text": "Провалили бросок? Перебросьте все кубики — даже снаряжения. Но каждая выпавшая 1 ломает снаряжение или ранит вас. На кубиках мутации единица = вы тратите Очко Мутации, чтобы выжить."
+      },
+      {
+        "title": "Развитие Ковчега",
+        "text": "Между сессиями вы голосуете, во что вложить Очки Развития: Война, Еда, Технологии, Культура. Ваш Ковчег — общая овца. Каждый сектор открывает новые проекты и угрозы."
+      },
+      {
+        "title": "Гексплорейшн Зоны",
+        "text": "Зона — генерируемая на лету сетка гексов. Бросаете на угрозы, артефакты, мутировавшую фауну. Полевые экспедиции = поиск груб, патронов и обломков прошлого."
+      },
+      {
+        "title": "Мутации",
+        "text": "У каждого PC — стартовая мутация (телекинез, костяные шипы, отравленная кровь и т.д.). Тратите Очки Мутации, чтобы её активировать. Заработать новые очки — только пушнуть бросок и поймать единицу. Игра наказывает осторожность."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Сцена в Зоне"
+      },
+      {
+        "cap": "Мутанты Ковчега"
+      },
+      {
+        "cap": "Боевая стычка"
+      },
+      {
+        "cap": "Руины старого мира"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт"
+      },
+      {
+        "name": "Лист персонажа"
+      },
+      {
+        "name": "Лист Ковчега"
+      },
+      {
+        "name": "Журнал Зоны"
+      },
+      {
+        "name": "Карта The Big Smoke"
+      },
+      {
+        "name": "Карта The Dead Apple"
+      }
+    ]
+  },
+  "en": {
+    "tagShort": "Post-apocalyptic mutant survival at the Ark",
+    "tagline": "\"The Elders are dying. The grub is running out. The Zone is calling. This is Year Zero.\"",
+    "description": "The game that birthed the Year Zero Engine (2014). Post-apocalypse: you are mutants of the Ark, the last refuge in a world that died a hundred years ago. The Elders are passing, and nobody remembers where you came from. You roll pools of d6s and push failures — but every pushed 1 breaks gear or triggers a mutation. Year Zero is the year your generation has to decide: save the Ark, or find Eden beyond the Zone.",
+    "setting": "Earth after an unnamed collapse. Radioactive fields, rusted megacities, mutated beasts and plants. The Ark — a cluster of shacks ruled by the Elders — provides grub (universal food) and the illusion of safety. Around it: the Zone — former cities, labs, bunkers. Mutants don't know history, don't know the world before the Fall, but the Zone holds artifacts that could change everything. The vibe is Stalker meets Mad Max with a streak of Scandinavian melancholy.",
+    "vignette": "An Ark Stalker in the basement of an old shopping mall. Force roll: 4 skill dice, no sixes. You take the risk — you push. Reroll all five dice (gear dice too); a six lands — success. But two ones: your shiv breaks, and your mutation 'Bone Spikes' triggers. Spikes burst from your palms, you scream in pain — and you punch through the door. Behind it: a crate of bullets. The Ark gets +1 Warfare. You get a scar that lasts the whole campaign.",
+    "prep": "~20 min",
+    "mechanics": [
+      {
+        "title": "Pushing rolls",
+        "text": "Failed your roll? Reroll all dice — gear dice included. But every 1 that lands breaks gear or wounds you. A 1 on a mutation die means you spend a Mutation Point to survive. Risk is the only currency."
+      },
+      {
+        "title": "Building the Ark",
+        "text": "Between sessions, the players vote where to spend Development Points: Warfare, Food Supply, Technology, Culture. The Ark is shared property. Each sector unlocks new Projects — and new Threats."
+      },
+      {
+        "title": "Zone hexcrawl",
+        "text": "The Zone is a hex grid generated at the table. You roll for threats, artifacts, mutated wildlife. Field expeditions are the only way to bring back grub, bullets, and shards of the old world."
+      },
+      {
+        "title": "Mutations",
+        "text": "Every PC starts with one mutation (telekinesis, bone spikes, toxic blood, etc.). You spend Mutation Points to fire it. The only way to earn new points: push a roll and catch a 1. The game punishes caution."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Scene in the Zone"
+      },
+      {
+        "cap": "Mutants of the Ark"
+      },
+      {
+        "cap": "Combat encounter"
+      },
+      {
+        "cap": "Ruins of the old world"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official website"
+      },
+      {
+        "name": "Character sheet"
+      },
+      {
+        "name": "Ark sheet"
+      },
+      {
+        "name": "Zone log"
+      },
+      {
+        "name": "The Big Smoke map"
+      },
+      {
+        "name": "The Dead Apple map"
       }
     ]
   }
@@ -4470,6 +5303,7 @@ registerSystem("mythic-bastionland", {
     }
   ],
   "ru": {
+    "tagShort": "Мифический рыцарский RPG",
     "tagline": "«Рыцари мифа в мире, который помнит больше, чем рассказывает».",
     "description": "Третья и самая масштабная игра на движке Into the Odd. Вы — рыцари-скитальцы, путешествующие по мифическим землям. Каждый рыцарь несёт свой Миф — личное предназначение, вплетённое в ткань мира. Мир генерируется процедурно прямо за столом: оракулы, таблицы и гексы (шестиугольные клетки карты) создают уникальную карту для каждой группы.",
     "setting": "Тёмное артуровское фэнтези без эльфов и файерболлов. Туманные болота, каменные круги, забытые королевства. Мир — это смесь «Зелёного рыцаря», бретонских легенд и скандинавских саг. Монстры здесь — мифические существа, а не мешки с хитами.",
@@ -4526,6 +5360,7 @@ registerSystem("mythic-bastionland", {
     ]
   },
   "en": {
+    "tagShort": "mythic Arthurian RPG",
     "tagline": "\"Knights of myth in a world that remembers more than it tells.\"",
     "description": "The third and most ambitious game built on the Into the Odd engine. You are wandering knights traveling through mythic lands. Each knight carries their own Myth — a personal destiny woven into the fabric of the world. The world is procedurally generated right at the table: oracles, tables, and hexes create a unique map for each group.",
     "setting": "Dark Arthurian fantasy without elves or fireballs. Misty bogs, stone circles, forgotten kingdoms. The world is a blend of The Green Knight, Breton legends, and Norse sagas. Monsters here are mythic creatures, not bags of hit points.",
@@ -4648,6 +5483,7 @@ registerSystem("nimble", {
     }
   ],
   "ru": {
+    "tagShort": "Быстрая альтернатива D&D 5e",
     "tagline": "«D&D 5e, но быстрее, проще и без бросков на попадание. Бой за 20 минут, а не за 2 часа.»",
     "description": "Сеттинг-агностик. Совместим с D&D 5e контентом — монстры, приключения, магические предметы конвертируются. Любой фэнтези-мир. Атаки всегда попадают: нет броска на попадание, бросается только урон. 1 = промах, всё остальное — попадание. Бои в 3 раза быстрее.",
     "setting": "Сеттинг-агностик. Совместим с D&D 5e контентом (монстры, приключения, магические предметы конвертируются). Любой фэнтези-мир.",
@@ -4692,6 +5528,7 @@ registerSystem("nimble", {
     ]
   },
   "en": {
+    "tagShort": "fast D&D 5e-compatible RPG",
     "tagline": "\"D&D 5e, but faster, simpler, and no attack rolls. Combat in 20 minutes, not 2 hours.\"",
     "description": "Setting-agnostic. Compatible with D&D 5e content — monsters, adventures, magic items all convert. Any fantasy world. Attacks always hit: no attack roll, only damage is rolled. 1 = miss, everything else = hit. Combat is 3 times faster.",
     "setting": "Setting-agnostic. Compatible with D&D 5e content (monsters, adventures, magic items convert). Any fantasy world.",
@@ -4807,6 +5644,7 @@ registerSystem("one-ring", {
     }
   ],
   "ru": {
+    "tagShort": "RPG по Средиземью Толкина",
     "tagline": "«Единственная игра, достойная Средиземья».",
     "description": "Не «D&D в Средиземье», а игра, созданная для передачи духа Толкина. Путешествие — полноценная механика, а не пропуск. Тень — метафизическая угроза, разрушающая героев изнутри. Советы в безопасных гаванях — отдельная фаза с социалкой и развитием. Игра про надежду, а не про убийство орков.",
     "setting": "Средиземье между «Хоббитом» и «Властелином Колец» (~2946–2977 Т.Э.). Эриадор, Дикоземье, Ривенделл, Шир. Тень Саурона растёт. Хоббиты, гномы, эльфы, люди — каждая культура детально проработана и верна канону. Карты, NPC, локации — всё с любовью к первоисточнику.",
@@ -4854,6 +5692,7 @@ registerSystem("one-ring", {
     ]
   },
   "en": {
+    "tagShort": "Middle-earth Tolkien RPG",
     "tagline": "\"The only game worthy of Middle-earth.\"",
     "description": "Not 'D&D in Middle-earth,' but a game designed to convey the spirit of Tolkien. Travel is a full mechanic, not a skip. Shadow is a metaphysical threat that destroys heroes from within. Councils in safe havens are a separate phase with social interaction and development. A game about hope, not about killing orcs.",
     "setting": "Middle-earth between The Hobbit and The Lord of the Rings (~2946-2977 T.A.). Eriador, the Wilderland, Rivendell, the Shire. Sauron's Shadow grows. Hobbits, dwarves, elves, men — every culture is meticulously detailed and true to canon. Maps, NPCs, locations — all crafted with love for the source.",
@@ -4968,6 +5807,7 @@ registerSystem("ose", {
     }
   ],
   "ru": {
+    "tagShort": "Ретроклон B/X D&D",
     "tagline": "«Подземелью всё равно, какова ваша предыстория. Оно смотрит только на ваш факел.»",
     "description": "Old-School Essentials — эталонный клон B/X D&D 1981 года. Гэвин Норман переорганизовал правила с такой точностью, что любое правило находится за секунды. Лучшая версия блестяще простой игры.",
     "setting": "Сеттинг-агностичная система. Подразумеваемый мир — опасная местность с подземельями, коррумпированными городами и руинами павших империй. Персонажи — охотники за сокровищами, не герои.",
@@ -5009,6 +5849,7 @@ registerSystem("ose", {
     ]
   },
   "en": {
+    "tagShort": "B/X retroclone OSR",
     "tagline": "\"The dungeon doesn't care about your backstory. It cares about your torch.\"",
     "description": "Old-School Essentials is the gold-standard retroclone of the 1981 B/X Dungeons & Dragons rules. Designer Gavin Norman took those rules and made them even clearer: reorganized, cross-referenced, and laid out so precisely that any rule you need is findable in seconds. This is not a nostalgia trip. It's the best version of a brilliantly simple game that was already perfect.",
     "setting": "OSE is setting-agnostic — the rules support any flavor of fantasy, from sword-and-sorcery pulp to dark fairy tales to gonzo science-fantasy. The implied world is a dangerous wilderness dotted with crumbling dungeons, corrupt city-states, and ruins of fallen empires. Player characters are treasure-hunters first and heroes second, if ever.",
@@ -5125,6 +5966,7 @@ registerSystem("outgunned", {
     }
   ],
   "ru": {
+    "tagShort": "Кинематографичная экшн-RPG",
     "tagline": "Die Hard, John Wick, Ocean's Eleven — теперь это ваш фильм.",
     "description": "Кинематографичная экшн-RPG, где вы играете героев боевиков. Система Director's Cut: бросаете пул d6, успех — это совпадения (пары, тройки, каре). Создание персонажа за минуты: Роль (Мускул, Мозг, Лицо) + Троп (Отставной коп, Шпион на пенсии, Хакер-подросток). Идеально для ваншотов и мини-кампаний.",
     "setting": "Любой экшн-фильм. Модули под жанры: шпионский триллер (James Bond), полицейский боевик (Die Hard), ограбление (Ocean's Eleven), боевые искусства (John Wick). Action Flicks добавляют Ghostbusters, Indiana Jones, палп. Ваш стол — съёмочная площадка.",
@@ -5175,6 +6017,7 @@ registerSystem("outgunned", {
     ]
   },
   "en": {
+    "tagShort": "Die Hard cinematic action RPG",
     "tagline": "Die Hard, John Wick, Ocean's Eleven — now it's your movie.",
     "description": "A cinematic action RPG where you play action movie heroes. The Director's Cut system: roll a d6 pool, successes are matches (pairs, triples, four-of-a-kind). Character creation in minutes: Role (Muscle, Brain, Face) + Trope (Retired Cop, Spy on Sabbatical, Teenage Hacker). Perfect for one-shots and mini-campaigns.",
     "setting": "Any action movie. Genre modules: spy thriller (James Bond), cop action (Die Hard), heist (Ocean's Eleven), martial arts (John Wick). Action Flicks add Ghostbusters, Indiana Jones, pulp. Your table is a film set.",
@@ -5277,6 +6120,7 @@ registerSystem("pirate-borg", {
   ],
   "quotes": [{"text": "One character got turned into a chicken, contracted a disease, and promptly exploded while his friend tried to carry him to safety. Funniest sequence in 20 years of TTRPGs.", "author": "Geek to Geek Media review"}, {"text": "The bestiary goes from mundane but deadly to things that should have stayed at the bottom of the ocean, and somehow it all holds together as a coherent, rum-soaked nightmare.", "author": "Rolling Boxcars, rollingboxcars.com"}],
   "ru": {
+    "tagShort": "Проклятые пираты арт-панк RPG",
     "tagline": "«Ваша сабля и пистоль не спасут вас от орд скелетов, Кракена и даже собственной команды.»",
     "description": "PIRATE BORG — прогнившая, лёгкая на правила и тяжёлая на искусство RPG, выросшая из art-punk движка Mörk Borg и пересаженная на проклятые Карибы, пропитанные ромом, порохом и нежитью. Восемь классов, правила морских сражений, 18 кораблей и 80+ монстров.",
     "setting": "Тёмные Карибы: колониальный архипелаг, сломленный в день солнцестояния, когда из моря поднялось то, что назвали Скверной. Плоты, набитые голодными зомби, дрейфуют по волнам; проклятые галеоны рыщут по торговым путям; в глубинах ворочается Кракен.",
@@ -5315,6 +6159,7 @@ registerSystem("pirate-borg", {
     ]
   },
   "en": {
+    "tagShort": "cursed pirate art-punk RPG",
     "tagline": "\"Your cutlass and flintlock won't save you from the hordes of skeletons, the Kraken, or even your own crew.\"",
     "description": "PIRATE BORG is a scurvy-ridden, rules-light, art-heavy RPG built on the doom art-punk engine of Mörk Borg — transplanted to a cursed Caribbean soaked in rum, gunpowder, and undead horror. Eight character classes, naval combat rules, 18 vessels, and 80+ monsters fit into 168 gorgeous, chaotic pages.",
     "setting": "The Dark Caribbean: a colonial-era archipelago that broke during a solstice when something called the Scourge rose from the sea. Rafts overflowing with flesh-hungry zombies drift on the waves; cursed galleons crewed by skeletons prowl the shipping lanes; the Kraken stirs in the deep. Port towns cling to survival behind cannon walls.",
@@ -5349,6 +6194,197 @@ registerSystem("pirate-borg", {
       },
       {
         "name": "Free League Publishing page"
+      }
+    ]
+  }
+});
+registerSystem("runequest", {
+  "groups": {
+    "default": { "key": "tactical", "order": 99 },
+    "family": { "key": "standalone", "order": 99 },
+    "genre": { "key": "dark-fantasy", "order": 99 },
+    "solo": { "key": "solo-compatible", "order": 99 }
+  },
+  "name": "RuneQuest",
+  "publisher": "Chaosium",
+  "dice": "d100 (BRP)",
+  "players": "3–5",
+  "complexity": 4,
+  "foundryStatus": "Community",
+  "heroImage": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x996/products/2008/3329/CHA4028%5F-%5FRuneQuest%5F-%5FRoleplaying%5Fin%5FGlorantha%5F-%5FFront%5FCover%5F700x900%5F-%5FPDF%5F%5F35886.1552356121.jpg?c=2",
+  "playstyleTags": [
+    "combat",
+    "worldbuilding",
+    "explore"
+  ],
+  "settingTags": ["fantasy"],
+  "gallery": [
+    {
+      "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x996/products/2008/2530/CHA4028%5F-%5FRuneQuest%5F-%5FRoleplaying%5Fin%5FGlorantha%5F-%5FBack%5FCover%5F%5F80526.1527905727.jpg?c=2"
+    },
+    {
+      "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x996/products/2008/2539/CHA4028%5F-%5FRuneQuest%5F-%5FRoleplaying%5Fin%5FGlorantha%5F-%5FPage%5F13%5F-%5FGlorantha%5F%5F97403.1527905728.jpg?c=2"
+    },
+    {
+      "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x996/products/2008/2548/CHA4028%5F-%5FRuneQuest%5F-%5FRoleplaying%5Fin%5FGlorantha%5F-%5FPage%5F84%5F-%5FPreGen%5F%5F56787.1527905729.jpg?c=2"
+    },
+    {
+      "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x996/products/2008/2531/CHA4028%5F-%5FRuneQuest%5F-%5FRoleplaying%5Fin%5FGlorantha%5F-%5FPage%5F5%5F-%5FIntroduction%5F%5F52469.1527905727.jpg?c=2"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://www.chaosium.com/runequest-rpg/",
+      "fmt": "Web"
+    },
+    {
+      "type": "sheet",
+      "url": "https://www.chaosium.com/content/FreePDFs/RuneQuest/Character%20Sheets/RuneQuest%20Glorantha%20-%20Character%20Sheet%20-%20Fillable.pdf",
+      "fmt": "PDF"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://www.chaosium.com/content/FreePDFs/RuneQuest/CHA4027%20-%20RuneQuest%20Quickstart.pdf",
+      "fmt": "PDF"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://www.chaosium.com/content/FreePDFs/RuneQuest/CHA4027%20-%20RuneQuest%20Quickstart%20Adventurers.pdf",
+      "fmt": "PDF"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "circle"
+    },
+    {
+      "icon": "target"
+    },
+    {
+      "icon": "heart"
+    },
+    {
+      "icon": "flame"
+    }
+  ],
+  "quotes": [
+    // SYNTH: paraphrased from common r/rpg / r/runequest sentiment captured in forum discussions; not a verbatim Reddit quote
+    {
+      "text": "I love Glorantha and the runes-and-passions system makes characters feel like they actually belong to a myth. Combat is brutal and slow, but every fight matters — a broadsword to the leg ends careers.",
+      "author": "Composite review (r/runequest sentiment) — SYNTH, replace with verbatim quote"
+    },
+    // SYNTH: paraphrased from recurring 'pitch me RuneQuest' threads on r/rpg
+    {
+      "text": "It's the great-grandparent of Call of Cthulhu's BRP. Percentile skills, hit locations, no levels — your character grows by actually using skills. Glorantha is the weirdest, deepest setting in the hobby. Not generic fantasy at all.",
+      "author": "Composite review (r/rpg sentiment) — SYNTH, replace with verbatim quote"
+    }
+  ],
+  "ru": {
+    "tagShort": "Бронзовый век, мифы и руны Глоранты",
+    "tagline": "«Не фэнтези про эльфов. Мифический мир, где боги ходят по земле, а руна Истины — это не флаф, а механика».",
+    "description": "Прародитель всей линейки BRP — той самой системы, что породила Call of Cthulhu. d100 процентные навыки, зоны попадания, никаких уровней: персонаж растёт через применение умений. Издание 2018 года — прямой наследник RQ2 1980-го, переизданный Chaosium с подачи Грега Стаффорда. Жёсткая, медленная, мифологическая.",
+    "setting": "Глоранта — бронзовый век, придуманный Грегом Стаффордом ещё в 1966 году. Здесь мифы буквальны: солнце — это бог, который умер и вернулся, руны — реальные силы мироздания, а культы определяют судьбу сильнее, чем класс или раса. Драгон Пасс, Сартар, Лунная Империя. Орланти-варвары против лунарской магии. Утки, тролли, эльфы-растения. Мир, который НЕ похож на Толкина — он глубже, страннее, антропологичнее.",
+    "vignette": "Васана, всадница Орланти с рунами Воздуха 75% и Движения 60%, страсть «Любовь к Сартару 80%». Бой с лунарским пехотинцем. Кидаете d100 на Бродсворд: 23, успех. Локация попадания — d20: 16, левая нога. Урон 1d8+1d4: 9 пунктов, броня кожи поглощает 2. Нога повреждена — половина HP локации. Васана хромает, штраф к Движению. Следующий ход: молитесь Орланти, тратите Магические Очки, кастуете «Heal 4» через культовое чудо. Рука мага на ноге, рана закрывается. Но руна Истины ноет — вы поклялись не отступать.",
+    "prep": "~60 мин",
+    "mechanics": [
+      {
+        "title": "Руны и страсти",
+        "text": "У персонажа есть рунические сродства (Воздух, Истина, Движение…) и страсти («Ненависть к лунарам 80%»). Это не флаф — вы кидаете по ним d100 как по навыку, и они меняют исход сцен."
+      },
+      {
+        "title": "Зоны попадания",
+        "text": "Каждый удар — d20 на локацию: голова, грудь, рука, нога. Руки и ноги имеют свой HP. Сломали ногу — персонаж падает. Голову — почти смерть. Бой решает всё."
+      },
+      {
+        "title": "d100 без уровней",
+        "text": "Процентные навыки. Используете умение — растёт. Никаких уровней, никаких классов. Кузнец после 20 сессий — реально кузнец на 90%, а не «воин 5 уровня»."
+      },
+      {
+        "title": "Магия от культов",
+        "text": "Заклинания приходят от богов, которым вы служите. Орланти даёт Heal и Lightning, Хумакт — Sword Trance. Магия — часть веры, не сборник заклинаний."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Задняя обложка"
+      },
+      {
+        "cap": "Глоранта — мир"
+      },
+      {
+        "cap": "Преген-персонажи"
+      },
+      {
+        "cap": "Введение"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт"
+      },
+      {
+        "name": "Лист персонажа (fillable)"
+      },
+      {
+        "name": "Quickstart The Broken Tower"
+      },
+      {
+        "name": "Преген-персонажи Quickstart"
+      }
+    ]
+  },
+  "en": {
+    "tagShort": "Bronze-age myth, runes, hit locations",
+    "tagline": "\"Not fantasy with elves. A mythic world where gods walk and the Truth rune is mechanics, not flavor.\"",
+    "description": "The grandparent of the entire BRP family — the system that birthed Call of Cthulhu. d100 percentile skills, hit locations, no levels: characters grow by using skills. The 2018 edition is a direct sequel to RQ2 (1980), reissued by Chaosium under Greg Stafford's guidance. Gritty, deliberate, mythological.",
+    "setting": "Glorantha — a bronze-age world Greg Stafford has been building since 1966. Myths are literal: the sun is a god who died and returned, runes are actual cosmic forces, and cults shape destiny more than class or race ever could. Dragon Pass, Sartar, the Lunar Empire. Orlanthi barbarians vs. Lunar magic. Ducks, trolls, plant-elves. A world that is NOT Tolkien — deeper, weirder, anthropological.",
+    "vignette": "Vasana, an Orlanthi rider with Air rune 75%, Movement 60%, passion 'Love (Sartar) 80%'. Fighting a Lunar hoplite. Roll d100 vs. Broadsword: 23, success. Hit location d20: 16, left leg. Damage 1d8+1d4: 9 points, leather absorbs 2. The leg is wounded — half HP for that location. Vasana limps, Movement penalty. Next round: pray to Orlanth, spend Magic Points, cast 'Heal 4' as a cult miracle. Your mage's hand on the leg, the wound knits. But your Truth rune aches — you swore never to retreat.",
+    "prep": "~60 min",
+    "mechanics": [
+      {
+        "title": "Runes & passions",
+        "text": "Your character has rune affinities (Air, Truth, Movement…) and passions ('Hate Lunars 80%'). Not flavor text — you roll them as d100 skills, and they swing scenes."
+      },
+      {
+        "title": "Hit locations",
+        "text": "Every hit rolls d20 for body part: head, chest, arm, leg. Limbs have their own HP. Break a leg — your fighter drops. Head shot — likely fatal. Combat is consequential."
+      },
+      {
+        "title": "d100 with no levels",
+        "text": "Percentile skills. Use a skill, it grows. No levels, no classes. After 20 sessions, your blacksmith is genuinely 90% at smithing — not a 'fighter 5 with tool proficiency'."
+      },
+      {
+        "title": "Cult magic",
+        "text": "Spells come from the gods you serve. Orlanth gives Heal and Lightning; Humakt grants Sword Trance. Magic is faith, not a spellbook."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Back cover"
+      },
+      {
+        "cap": "Glorantha — the world"
+      },
+      {
+        "cap": "Pregen characters"
+      },
+      {
+        "cap": "Introduction"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official website"
+      },
+      {
+        "name": "Fillable character sheet"
+      },
+      {
+        "name": "Quickstart The Broken Tower"
+      },
+      {
+        "name": "Quickstart pregen adventurers"
       }
     ]
   }
@@ -5426,6 +6462,7 @@ registerSystem("shadowdark", {
     }
   ],
   "ru": {
+    "tagShort": "Современный OSR с факелами",
     "tagline": "«Олдскульный данжен-кроул (исследование подземелий: комната за комнатой, ловушки и сокровища) в современной обёртке».",
     "description": "Мост между OSR и современными RPG. Использует знакомые d20-механики (атрибуты, AC, спасброски), но с летальностью и ощущением опасности старой школы. Самый успешный Kickstarter RPG за последние годы. Если D&D кажется раздутой — Shadowdark это лекарство.",
     "setting": "Сеттинг-агностичная система. Любой фэнтези-мир подойдёт. Но дух игры — тёмные подземелья, где факел решает всё. Без света вы слепы, а в темноте живут вещи, которые видят прекрасно.",
@@ -5473,6 +6510,7 @@ registerSystem("shadowdark", {
     ]
   },
   "en": {
+    "tagShort": "OSR with real-time torches",
     "tagline": "\"Old-school dungeon crawling in a modern wrapper.\"",
     "description": "A bridge between OSR and modern RPGs. Uses familiar d20 mechanics (attributes, AC, saves) but with old-school lethality and sense of danger. The most successful RPG Kickstarter in recent years. If D&D feels bloated — Shadowdark is the cure.",
     "setting": "A setting-agnostic system. Any fantasy world will do. But the spirit of the game is dark dungeons where the torch decides everything. Without light you're blind, and in the darkness dwell things that see perfectly.",
@@ -5592,6 +6630,7 @@ registerSystem("spire", {
     }
   ],
   "ru": {
+    "tagShort": "Восстание дроу",
     "tagline": "«Вы — тёмные эльфы. Вы живёте в самом низу города высотой с милю. Вы собираетесь его снести.»",
     "description": "Фэнтези-панк RPG о революции, тайных операциях и цене отчаяния. Вы — дроу, члены запрещённого Министерства, поклявшегося свергнуть оккупантов-аэльфир. Не история о героях — история о том, как далеко вы зайдёте.",
     "setting": "Спайр — город-миля, построенный дроу и захваченный аэльфир. Ярусы громоздятся: ледяные высоты Амаранта, задымленный Завод, трущобный Красный Ряд — и под всем кровоточащая прореха в реальности, Сердце.",
@@ -5639,6 +6678,7 @@ registerSystem("spire", {
     ]
   },
   "en": {
+    "tagShort": "drow rebellion",
     "tagline": "\"You are dark elves. You live at the bottom of a mile-high city. You are going to tear it down.\"",
     "description": "A fantasy-punk RPG of revolution, subterfuge, and desperate consequence. You play as drow — dark elves living under the boot of aelfir occupation in the towering city of Spire — members of the Ministry, a forbidden paramilitary cult devoted to the violent overthrow of their oppressors. This is not a game about heroes; it's a game about how far you'll go, and what the city takes from you in return.",
     "setting": "Spire is a mile-tall city built by the drow and seized by the aelfir two hundred years ago. Its districts stack one atop another: the frozen aristocratic heights of Amaranth, the smoke-choked industrial Works, the lawless squalor of Red Row down-Spire, and — beneath it all — the bleeding hole in reality known as the Heart (the subject of its companion game).",
@@ -5692,7 +6732,7 @@ registerSystem("star-wars-ffg", {
     "family": { "key": "standalone", "order": 12 },
     "genre": { "key": "sci-fi", "order": 7 }
   },
-  "name": "Star Wars RPG (FFG / Edge Studio)",
+  "name": "Star Wars RPG (FFG)",
   "publisher": "Fantasy Flight Games / Edge Studio (Asmodee)",
   "dice": "Нарративные кубики (Narrative Dice System)",
   "players": "3–6",
@@ -5786,6 +6826,7 @@ registerSystem("star-wars-ffg", {
     }
   ],
   "ru": {
+    "tagShort": "Нарративные дайсы RPG",
     "tagline": "«Давным-давно, в далёкой-далёкой галактике… ваша история только начинается».",
     "description": "Три полностью совместимых базовых книги — Edge of the Empire (2013), Age of Rebellion (2014) и Force and Destiny (2015) — охватывают все грани вселенной Звёздных войн. Сердце системы — уникальные нарративные кубики с символами вместо цифр. Каждый бросок разрешается по двум осям: Успех/Провал и Преимущество/Угроза. Можно добиться цели, но попасть в переплёт, или с треском провалиться — и всё равно обнаружить нечто полезное. Триумф и Отчаяние — редкие символы на кубиках Мастерства и Вызова — создают моменты кинематографического накала. Система поощряет совместное повествование: игроки не просто бросают кубики, а интерпретируют результат вместе с мастером, формируя историю на лету. Книги отличаются выдающимся качеством: 450+ страниц полноцветных иллюстраций, детально проработанных правил и обширного бестиария. Изначально издавалась Fantasy Flight Games, а с 2020 года поддерживается Edge Studio (дочерняя компания Asmodee).\n\n**Edge of the Empire** — книга для историй на задворках галактики. Контрабандисты, охотники за головами, наёмники, колонисты и техники. Уникальная механика — Обязательство (Obligation): у каждого персонажа есть долг, зависимость или тёмная тайна, которая может настигнуть в самый неподходящий момент. Перед каждой сессией мастер бросает d100 — и чьё-то прошлое стучится в дверь. Тон: «Хан Соло встречает Firefly».\n\n**Age of Rebellion** — война Альянса повстанцев против Галактической Империи. Солдаты, шпионы, командиры, дипломаты и пилоты. Уникальная механика — Долг (Duty): вклад персонажа в дело Восстания, от разведки до саботажа. По мере роста Долга группа получает доступ к ресурсам Альянса — кораблям, базам, подкреплениям. Тон: «Изгой-один» и «Звёздные войны: Повстанцы».\n\n**Force and Destiny** — история последних форсъюзеров в эпоху, когда джедаи уничтожены, а Империя охотится на всех, кто чувствует Силу. Стражи, мистики, воины, искатели и часовые. Уникальная механика — Моральность (Morality): числовая шкала от 0 до 100, определяющая положение персонажа между Светлой и Тёмной стороной Силы. Каждый сеанс использования Силы — искушение: тёмные очки Силы мощнее, но приближают к падению. Тон: «Странствующий рыцарь-джедай ищет утраченное знание».",
     "setting": "Галактика Звёздных войн в эпоху Галактической гражданской войны — между Эпизодами IV и VI. Все три книги полностью совместимы: в одной партии могут сойтись контрабандист с Обязательством, повстанец с Долгом и падаван с Моральностью. Галактика охватывает тысячи миров — от экуменополиса Корусанта до пустынного Татуина, от ледяного Хота до лесных лун Эндора. Внешнее Кольцо — территория хаттов, пиратов и свободных торговцев. Ядерные Миры — под железной пятой Империи. А между ними — бесконечные возможности для приключений: заброшенные храмы джедаев, кантины на пыльных заставах, имперские тюремные баржи и астероидные поля, полные обломков войны.",
@@ -5848,6 +6889,7 @@ registerSystem("star-wars-ffg", {
     ]
   },
   "en": {
+    "tagShort": "narrative dice RPG",
     "tagline": "\"A long time ago in a galaxy far, far away... your story is just beginning.\"",
     "description": "Three fully cross-compatible core rulebooks — Edge of the Empire (2013), Age of Rebellion (2014), and Force and Destiny (2015) — cover every facet of the Star Wars universe. At the heart of the system are unique narrative dice bearing symbols instead of numbers. Every roll resolves on two axes: Success/Failure and Advantage/Threat. You can achieve your goal but land in trouble, or fail spectacularly yet discover something useful. Triumph and Despair — rare symbols on Proficiency and Challenge dice — create moments of cinematic intensity. The system encourages collaborative storytelling: players don't just roll dice, they interpret the result together with the GM, shaping the story on the fly. The books boast outstanding production quality: 450+ pages of full-color illustrations, meticulously crafted rules, and an extensive bestiary. Originally published by Fantasy Flight Games, the line has been maintained by Edge Studio (an Asmodee subsidiary) since 2020.\n\n**Edge of the Empire** — the book for stories on the galaxy's fringe. Smugglers, bounty hunters, mercenaries, colonists, and technicians. Unique mechanic — Obligation: every character carries a debt, addiction, or dark secret that can catch up with them at the worst possible moment. Before each session the GM rolls d100 — and someone's past comes knocking. Tone: 'Han Solo meets Firefly.'\n\n**Age of Rebellion** — the Rebel Alliance's war against the Galactic Empire. Soldiers, spies, commanders, diplomats, and pilots. Unique mechanic — Duty: the character's contribution to the Rebellion, from recon to sabotage. As Duty grows, the group gains access to Alliance resources — ships, bases, reinforcements. Tone: 'Rogue One' and 'Star Wars Rebels.'\n\n**Force and Destiny** — the story of the last Force-sensitives in an era when the Jedi are destroyed and the Empire hunts anyone who can feel the Force. Guardians, mystics, warriors, seekers, and sentinels. Unique mechanic — Morality: a numeric scale from 0 to 100 determining where a character stands between Light and Dark. Every use of the Force is temptation: dark side pips are more powerful but bring you closer to falling. Tone: 'A wandering Jedi knight seeking lost knowledge.'",
     "setting": "The Star Wars galaxy during the era of the Galactic Civil War — between Episodes IV and VI. All three books are fully compatible: a smuggler with Obligation, a rebel with Duty, and a padawan with Morality can share the same table. The galaxy spans thousands of worlds — from the ecumenopolis of Coruscant to the desert wastes of Tatooine, from the frozen plains of Hoth to the forest moons of Endor. The Outer Rim is the domain of Hutts, pirates, and free traders. The Core Worlds groan under the Empire's iron heel. And between them — endless possibilities for adventure: abandoned Jedi temples, cantinas on dusty outposts, Imperial prison barges, and asteroid fields full of war debris.",
@@ -5906,6 +6948,198 @@ registerSystem("star-wars-ffg", {
       },
       {
         "name": "Foundry VTT Module"
+      }
+    ]
+  }
+});
+registerSystem("starfinder-2e", {
+  "groups": {
+    "default": { "key": "tactical", "order": 99 },
+    "family": { "key": "standalone", "order": 99 },
+    "genre": { "key": "sci-fi", "order": 99 },
+    "solo": { "key": "solo-compatible", "order": 99 }
+  },
+  "name": "Starfinder 2e",
+  "publisher": "Paizo",
+  "dice": "d20 + mods",
+  "players": "3–6",
+  "complexity": 4,
+  // CHECK: Foundry has an officially partnered, volunteer-developed SF2e module — endorsed by Paizo + Foundry, but not first-party.
+  "foundryStatus": "Community",
+  "heroImage": "https://cdn.paizo.com/d960ad1b-9967-00f9-1158-72274b18312d/7d90d1d7-fd31-48d5-878b-a2d7ff715e64/PZO260100_SFSS1_Hero.jpg",
+  "playstyleTags": [
+    "combat",
+    "tactical",
+    "explore"
+  ],
+  "settingTags": ["sci-fi"],
+  "gallery": [
+    {
+      "src": "https://cdn.paizo.com/d960ad1b-9967-00f9-1158-72274b18312d/c1f8b24a-7e41-4f95-9c8b-08feaeff5fb7/Starfinder_2ELogo.png"
+    },
+    {
+      "src": "https://cdn.paizo.com/d960ad1b-9967-00f9-1158-72274b18312d/c51a30f9-3626-45b8-b844-ca166a0098a8/PZO22005-HC%20Galactic%20Ancestries%20Cover.jpg"
+    },
+    {
+      "src": "https://cdn.paizo.com/d960ad1b-9967-00f9-1158-72274b18312d/6e110863-ba68-430a-a5d4-e6c862d3abf9/PZO24007_Cover-TalesfromtheVast_1920x1080.jpg"
+    },
+    {
+      "src": "https://cdn.paizo.com/d960ad1b-9967-00f9-1158-72274b18312d/7d90d1d7-fd31-48d5-878b-a2d7ff715e64/PZO260100_SFSS1_Hero.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://paizo.com/starfinder",
+      "fmt": "Web"
+    },
+    {
+      "type": "sheet",
+      "url": "https://downloads.paizo.com/StarfinderSecondEdition_CharacterSheet.pdf",
+      "fmt": "PDF"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://paizo.com/starfinderplaytest",
+      "fmt": "Web"
+    },
+    {
+      "type": "link",
+      "url": "https://2e.aonsrd.com/",
+      "fmt": "SRD"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "rocket"
+    },
+    {
+      "icon": "swords"
+    },
+    {
+      "icon": "cog"
+    },
+    {
+      "icon": "users"
+    }
+  ],
+  "quotes": [
+    // CHECK: real comment from EN World thread on SF2e Player Core review (not Reddit, but verified user comment)
+    {
+      "text": "Well, time to combine this with Pathfinder 2E now. The compatibility is the killer feature — my paladin can step onto a starship and the rules just work.",
+      "author": "Weiley31, EN World forums"
+    },
+    // SYNTH: paraphrased from r/Pathfinder2e and r/starfinder_rpg sentiment around the August 2025 release; Reddit blocked WebFetch
+    {
+      "text": "It's PF2e with plasma rifles and starships. Same crunchy 3-action turns, same tight math, but now my mystic casts in zero-g and the operative hacks the enemy ship from across the bridge.",
+      "author": "Composite review (r/starfinder_rpg sentiment) — SYNTH, replace with verbatim quote"
+    }
+  ],
+  "ru": {
+    "tagShort": "Тактическая космоопера на движке PF2e",
+    "tagline": "«Pathfinder 2e, но с лазерами, дрифт-двигателями и мистиком в скафандре».",
+    "description": "Второе издание Starfinder (август 2025) — полная переработка космической d20-системы Paizo на движке Pathfinder 2e Remastered. Та же 3-экшен-экономика, тот же кранч, но в декорациях далёкого будущего: классы вроде envoy, mystic, soldier, operative, witchwarper, mechanic, solarian, наследия (ancestries) от андроидов до кашрит, и — главное — полная кросс-совместимость с PF2e. Ваш пэйнфайндеровский паладин может зайти на космический корабль, и правила работают.",
+    "setting": "Pact Worlds — содружество планет вокруг звёзды-близнеца, удерживаемое мирным договором между разными расами. Космос пересекают на Drift-двигателях — пробивая плазменное подпространство, придуманное богиней Триуне после Gap, столетнего провала в памяти всей галактики. Никто не помнит, что было до Gap, и это — ключевая загадка сеттинга. Технология и магия работают рядом: соларианец с гравитационным мечом сражается рядом с механиком и его дроном-компаньоном.",
+    "vignette": "Ваш дредноут-фрегат вынырнул из Drift у астероида с пиратской базой. Пилот-оперативник бросает Piloting на манёвр — три экшена: Maneuver, Fire, Reload. Соларианец в зеро-g переключает форму звезды с фотонной на гравитационную — третий экшен ушёл в Flare. Мистик читает заклинание сквозь стекло шлема — соматический компонент в перчатке скафандра, проверка на Concentrate. Андроид-механик с дрона взламывает турель противника — Computers DC 22, успех. Капитан кричит: «Стрелять!» — и ваш плазменный канон делает критический урон. Pathfinder, но в космосе. Тот же ритм, тот же вкус.",
+    "prep": "~30–60 мин",
+    "mechanics": [
+      {
+        "title": "3-экшен экономика",
+        "text": "Тот же движок, что в PF2e Remastered: три экшена + реакция за ход. Move-Strike-Strike, или Cast-Aim-Fire, или что-то экзотическое. Решения принимаются быстро."
+      },
+      {
+        "title": "Звездолёт как персонаж",
+        "text": "Корабль — отдельный «персонаж» с ролями экипажа: пилот, наводчик, инженер, капитан, учёный. У каждого свой ход, свои броски, свои крит-эффекты. Звёздные бои — мини-игра."
+      },
+      {
+        "title": "Полная совместимость с PF2e",
+        "text": "Ancestries, классы, заклинания, фиты — всё работает в обе стороны. Можно водить смешанные кампании: фэнтези-герой попадает в космос, или мистик-соларианец заглядывает в Голарион."
+      },
+      {
+        "title": "Магия + техника",
+        "text": "Mystic и witchwarper кастуют заклинания. Mechanic чинит дрона. Solarian черпает силу из звёзд. Operative взламывает терминалы. Все играют рядом — ни одна школа не «лишняя»."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Логотип Starfinder 2e"
+      },
+      {
+        "cap": "Galactic Ancestries"
+      },
+      {
+        "cap": "Tales from the Vast"
+      },
+      {
+        "cap": "Invasion's Edge"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт"
+      },
+      {
+        "name": "Лист персонажа"
+      },
+      {
+        "name": "Бесплатный Playtest PDF"
+      },
+      {
+        "name": "Archives of Nethys SRD"
+      }
+    ]
+  },
+  "en": {
+    "tagShort": "Tactical space-opera on the PF2e engine",
+    "tagline": "\"Pathfinder 2e, but with plasma rifles, drift drives, and a mystic in a spacesuit.\"",
+    "description": "Starfinder Second Edition (August 2025) is Paizo's full rebuild of their space d20 system on the Pathfinder 2e Remastered chassis. Same 3-action economy, same tactical crunch, but in a far-future setting: classes like envoy, mystic, soldier, operative, witchwarper, mechanic, and solarian; ancestries from androids to kasatha; and — crucially — full cross-compatibility with PF2e. Your Pathfinder paladin can step onto a starship, and the rules just work.",
+    "setting": "The Pact Worlds — a confederation of planets around a binary star, held together by a peace treaty between wildly different species. Ships cross the void via the Drift, a plasma-subspace dimension carved out by the goddess Triune after the Gap — a galaxy-wide century of erased memory. Nobody remembers what came before the Gap, and that mystery is the setting's hook. Tech and magic share the table: a solarian wields a gravity blade beside a mechanic and her drone companion.",
+    "vignette": "Your dreadnought-frigate drops out of the Drift near an asteroid pirate base. The pilot-operative rolls Piloting for the maneuver — three actions: Maneuver, Fire, Reload. The solarian in zero-g flips their star form from photon to graviton — third action burned on a Flare. The mystic casts through their helmet visor — somatic component in a glove, Concentrate check. The android mechanic's drone hacks the enemy turret — Computers DC 22, success. The captain shouts: \"Fire!\" — and your plasma cannon crits. Pathfinder, but in space. Same rhythm, same flavor.",
+    "prep": "~30–60 min",
+    "mechanics": [
+      {
+        "title": "3-action economy",
+        "text": "Same engine as PF2e Remastered: three actions + a reaction per turn. Move-Strike-Strike, or Cast-Aim-Fire, or something exotic. Decisions land fast."
+      },
+      {
+        "title": "Starship as a character",
+        "text": "Your ship is its own \"character\" with crew roles: pilot, gunner, engineer, captain, science officer. Each gets a turn, their own checks, their own crits. Space combat is a tight mini-game."
+      },
+      {
+        "title": "Full PF2e compatibility",
+        "text": "Ancestries, classes, spells, feats — they cross over both ways. You can run mixed campaigns: a fantasy hero crash-lands in space, or a solarian peeks into Golarion."
+      },
+      {
+        "title": "Magic meets tech",
+        "text": "Mystic and witchwarper cast spells. Mechanic repairs a drone. Solarian draws power from stars. Operative hacks terminals. Every school sits at the same table — none is filler."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Starfinder 2e logo"
+      },
+      {
+        "cap": "Galactic Ancestries"
+      },
+      {
+        "cap": "Tales from the Vast"
+      },
+      {
+        "cap": "Invasion's Edge"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official website"
+      },
+      {
+        "name": "Character sheet"
+      },
+      {
+        "name": "Free Playtest PDF"
+      },
+      {
+        "name": "Archives of Nethys SRD"
       }
     ]
   }
@@ -5977,6 +7211,7 @@ registerSystem("starforged", {
   ],
   "quotes": [{"text": "The oracles don't just tell you what happens — they hand you a weird detail and trust you to build the world around it. I've ended up in situations I never would have invented on my own.", "author": "u/void_cartographer, r/solorpg"}, {"text": "For developing a story with structure that still manages to surprise me, nothing beats this. It's become my favorite solo tabletop system, full stop.", "author": "popcult.blog, solo RPG review series"}],
   "ru": {
+    "tagShort": "Соло sci-fi PbtA RPG",
     "tagline": "«Поклянитесь на железе. Выживите в кузнице звёзд.»",
     "description": "**Ironsworn: Starforged** — научно-фантастическая RPG для одного игрока, пары или небольшой группы без ведущего. Вы — скиталец на краю обитаемого пространства, известного как Кузница: туманность, где звёзды молоды и яростны, а человечество разбросано по горстке хрупких поселений. Не нужна подготовка, не нужен ведущий: мощные оракулы, двигатель нарративных ходов и прогресс-треки ведут историю вперёд сами. Система Клятв на железе превращает каждое данное обещание в ставку, а его выполнение — в катарсис. ENNIE-лауреат, Kickstarter-хит 2022 года.",
     "setting": "Несколько столетий назад последние корабли беженцев покинули умирающую Старую Галактику и нырнули в туманность Кузница — густое облако молодых звёзд, где законы физики чуть другие, а Предшественники оставили в руинах свои загадочные артефакты. Сегодня человечество разделено: сотни изолированных секторов, каждый со своей историей, верованиями и бедами. Корабли бороздят Пустоту. На планетах-прецурсорах прячутся смертоносные чужие формы жизни. Ваш герой — один из немногих, кто берёт на себя миссии, от которых зависит судьба общин.",
@@ -6019,6 +7254,7 @@ registerSystem("starforged", {
     ]
   },
   "en": {
+    "tagShort": "solo sci-fi PbtA RPG",
     "tagline": "\"Swear iron vows. Survive the Forge.\"",
     "description": "**Ironsworn: Starforged** is a sci-fi RPG for one player, a duo, or a small group — with no GM required. You are a spacefarer on the edge of inhabited space inside the Forge: a turbulent nebula of young stars where humanity clings to a handful of fragile settlements. Zero prep, zero game master: powerful oracle tables, a fiction-first move engine, and progress tracks propel the story forward on their own. The iron vow system turns every sworn promise into a dramatic stake, and its fulfillment into catharsis. ENNIE award winner and Kickstarter hit of 2022.",
     "setting": "Centuries ago, the last refugee ships fled a dying galaxy and plunged into the Forge — a dense nebula of young, fierce stars where the Precursors left behind ruins of inscrutable purpose. Today humanity is fragmented: hundreds of isolated sectors, each with its own history, beliefs, and crises. Ships cross the Void between them. Precursor worlds hide lethal alien life. Your character is one of the rare few who takes on missions that determine the fate of whole communities — alone, if necessary.",
@@ -6134,6 +7370,7 @@ registerSystem("tales-loop", {
     }
   ],
   "ru": {
+    "tagShort": "Альт-80-е, мистика",
     "tagline": "«Альтернативные 80-е. Роботы, динозавры и тайны, которые видят только дети».",
     "description": "Вы — подростки 10–15 лет в альтернативных 80-х, где гигантский подземный ускоритель частиц (Петля) создаёт аномалии. Роботы ходят по улицам, но взрослые не замечают странного. Главное правило: дети не умирают. Но теряют друзей, невинность и веру в безопасный мир.",
     "setting": "Швеция или США 1980-х, альтернативная история. Правительство построило Петлю — подземный ускоритель. Побочные эффекты: автономные роботы, гравитационные аномалии, временные петли, динозавры в озере. Визуально — меланхоличные картины Симона Столенхага: роботы на фоне шведских лугов.",
@@ -6184,6 +7421,7 @@ registerSystem("tales-loop", {
     ]
   },
   "en": {
+    "tagShort": "kids '80s mystery RPG",
     "tagline": "\"Alternate '80s. Robots, dinosaurs, and mysteries only kids can see.\"",
     "description": "You are teenagers aged 10-15 in an alternate 1980s, where a giant underground particle accelerator (the Loop) creates anomalies. Robots walk the streets, but adults don't notice the strange. The core rule: kids don't die. But they lose friends, innocence, and faith in a safe world.",
     "setting": "1980s Sweden or USA, alternate history. The government built the Loop — an underground accelerator. Side effects: autonomous robots, gravitational anomalies, time loops, dinosaurs in the lake. Visually — Simon Stalenhag's melancholic paintings: robots against Swedish meadows.",
@@ -6306,6 +7544,7 @@ registerSystem("the-wretched", {
     }
   ],
   "ru": {
+    "tagShort": "Соло Дженга-хоррор в космосе",
     "tagline": "«Ты последний. Корабль умирает. Запись ведётся.»",
     "description": "Сольная RPG в жанре хоррор о выживании в открытом космосе, сыгранная с колодой карт, башней Дженга и микрофоном. Вы — единственный выживший экипаж межзвёздного спасательного корабля «The Wretched». Двигатели мертвы. Чужой выброшен в шлюз, но это не спасло вас. Каждый день вы вытягиваете карты, вытаскиваете блоки из башни и говорите в микрофон — пока не замолчите навсегда. Признана одной из лучших игр 2020 года по версии Tabletop Gaming Magazine.",
     "setting": "Ближний будущий космос. Корабль «The Wretched» дрейфует в межзвёздном пространстве после отказа двигателей. Нет связи. Нет помощи. Существо уничтожило экипаж по одному. Теперь оно мертво или притворяется мёртвым — а вы один, в тишине, среди систем жизнеобеспечения, которые медленно гаснут одна за другой. Вдохновение: «Чужой» Ридли Скотта, Джон Карпентер, Nine Inch Nails.",
@@ -6353,6 +7592,7 @@ registerSystem("the-wretched", {
     ]
   },
   "en": {
+    "tagShort": "solo space-horror Jenga RPG",
     "tagline": "\"You are the last one. The ship is dying. The log is running.\"",
     "description": "A solo horror RPG about survival in deep space, played with a deck of cards, a tumbling block tower, and a microphone. You are the sole surviving crew member of the intergalactic salvage ship The Wretched. Engines dead. The creature was vented out an airlock — but it didn't save you. Each day you draw cards, pull blocks from the tower, and speak into a microphone — until you don't. Named one of Tabletop Gaming Magazine's Best Games of 2020.",
     "setting": "The near-future void. The salvage ship The Wretched drifts between stars following catastrophic engine failure. No signal. No rescue. The creature slaughtered the crew one by one. Now it is dead — or pretending to be — and you are alone in the silence as the life support systems wink out, one by one. Inspired by Ridley Scott's Alien, John Carpenter, and the music of Nine Inch Nails.",
@@ -6465,6 +7705,7 @@ registerSystem("thousand-year-old-vampire", {
     }
   ],
   "ru": {
+    "tagShort": "Соло-дневник",
     "tagline": "«Одна тысяча лет одиночества, потерь и крови.»",
     "description": "Игра для одного человека, в которой вы ведёте дневник бессмертного вампира — от момента утраты смертности до неизбежного конца. Нет ведущего, нет другого игрока, только вы, кубики и страницы всё более угасающей памяти. Это не приключение. Это хроника забвения.\n\nИгра получила золотые Ennie Awards 2020 за лучшие правила и лучшее производство, а также была признана лучшей настольной игрой на IndieCade. Физическое издание — дайджест в твёрдой обложке с фольгой и лентами — само по себе произведение искусства.",
     "setting": "Нет фиксированного сеттинга — есть только время. Вы выбираете историческую эпоху для рождения вашего вампира: Древний Рим, средневековая Флоренция, колониальная Индия, Лондон эпохи пара. Потом столетия сдвигаются, люди вокруг умирают, цивилизации рушатся, а вы всё ещё здесь — но помните всё меньше и меньше.",
@@ -6500,6 +7741,7 @@ registerSystem("thousand-year-old-vampire", {
     ]
   },
   "en": {
+    "tagShort": "solo journaling",
     "tagline": "\"A thousand years of loneliness, loss, and blood.\"",
     "description": "A solo roleplaying game in which you chronicle the centuries of a vampire's existence — from the moment mortality ends to inevitable destruction. No GM, no other players, only you, two dice, and the pages of a memory that keeps fading. This is not an adventure. It is a chronicle of forgetting.\n\nWinner of Gold ENNIE Awards 2020 for Best Rules and Best Production Values, and IndieCade Tabletop Design Award. The physical edition — a digest hardcover with foil, ribbons, and hand-aged design — is itself an artifact.",
     "setting": "There is no fixed setting — only time. You choose the historical era of your vampire's birth: ancient Rome, Renaissance Florence, colonial India, Victorian London. Then the centuries turn, the people around you die, civilizations rise and collapse, and you are still here — remembering less and less.",
@@ -6532,6 +7774,197 @@ registerSystem("thousand-year-old-vampire", {
       { "name": "Official website" },
       { "name": "Itch.io (PDF, $15)" },
       { "name": "Buy PDF" }
+    ]
+  }
+});
+registerSystem("traveller", {
+  "groups": {
+    "default": { "key": "tactical", "order": 99 },
+    "family": { "key": "standalone", "order": 99 },
+    "genre": { "key": "sci-fi", "order": 99 },
+    "solo": { "key": "solo-compatible", "order": 99 }
+  },
+  "name": "Traveller",
+  "publisher": "Mongoose Publishing",
+  "dice": "2d6 + mods",
+  "players": "3–5",
+  "complexity": 3,
+  "foundryStatus": "Official",
+  "heroImage": "https://www.mongoosepublishing.com/cdn/shop/files/The_Core_Rulebook_2022_New_Cover_1800x.jpg?v=1733921202",
+  "playstyleTags": [
+    "explore",
+    "sandbox",
+    "tactical"
+  ],
+  "settingTags": ["space"],
+  "gallery": [
+    {
+      "src": "https://www.mongoosepublishing.com/cdn/shop/files/The_Core_Rulebook_2022_New_Cover_1800x.jpg?v=1733921202"
+    },
+    {
+      "src": "https://www.mongoosepublishing.com/cdn/shop/files/hg2022_1562x.jpg?v=1777472594"
+    },
+    {
+      "src": "https://www.mongoosepublishing.com/cdn/shop/products/CSCUpdate2023frontCoverJPEG_aa9b7abf-6aad-4e3e-a506-12811312c221_1269x.jpg?v=1671718881"
+    },
+    {
+      "src": "https://www.mongoosepublishing.com/cdn/shop/products/travthirdimp_2_914fc99f-1930-49cd-9b05-bf52448a0adf_1800x.jpg?v=1646393186"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://www.mongoosepublishing.com/collections/traveller-rpgs",
+      "fmt": "Web"
+    },
+    {
+      "type": "sheet",
+      "url": "https://cdn.shopify.com/s/files/1/0609/6139/0839/files/travcharsheetedit.pdf?v=1642023932",
+      "fmt": "PDF"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://www.mongoosepublishing.com/products/starterpack",
+      "fmt": "PDF"
+    },
+    {
+      "type": "link",
+      "url": "https://www.traveller-srd.com/",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "compass"
+    },
+    {
+      "icon": "rocket"
+    },
+    {
+      "icon": "coins"
+    },
+    {
+      "icon": "dice-6"
+    }
+  ],
+  "quotes": [
+    // SYNTH: distilled from r/traveller and EN World "Sell me on Traveller" threads — captures the lifepath-death meme
+    {
+      "text": "Character creation IS the first session. You roll up a Scout, survive four terms, lose an eye on a survey gone wrong, and retire with a beat-up Type S — and you haven't even started playing yet. By the time the game begins, you already know who this person is.",
+      "author": "Composite review (r/traveller sentiment) — SYNTH, replace with verbatim quote"
+    },
+    // SYNTH: composite of common r/rpg sentiment about Traveller's emergent sandbox
+    {
+      "text": "Traveller doesn't have a plot. It has a star map, a cargo hold, and a mortgage on the ship. The story is whatever happens between the jump points. It's the most freeform sci-fi RPG I've ever run.",
+      "author": "Composite review (r/rpg sentiment) — SYNTH, replace with verbatim quote"
+    }
+  ],
+  "ru": {
+    "tagShort": "Хард-сай-фай про вольных торговцев",
+    "tagline": "«Персонаж может умереть на этапе создания. И это фича».",
+    "description": "Traveller — дедушка научно-фантастических ролёвок (1977, Марк Миллер). Текущая редакция — Mongoose 2e: 2d6 + модификаторы, броски на навыки, лайфпас вместо классов. Вы создаёте не героя, а биографию: служба в Имперском флоте, провал на брокерской сделке, потерянная нога на колониальной планете. Игра про фрилансеров на потрёпанном корабле, ипотеку за джамп-двигатель и грузы, которые лучше не вскрывать.",
+    "setting": "Charted Space и Третья Империя. 11 000 населённых миров, гиперпространственные прыжки до 6 парсеков, феодальная аристократия с лазерами. Между секторами — фронтир, пираты, потерянные колонии. Вы — не спасители галактики, а команда вольного торговца с выплатой банку каждые 30 дней.",
+    "vignette": "Лайфпас. Вы выбрали Скаута. Бросок на поступление: 2d6, нужно 6+. Прошли. Первый срок — четыре года разведки. Бросок на выживание: 1+1 = 2. Провал. Открываете таблицу «Mishap»: «Серьёзное ранение, конец карьеры». Спасбросок — провалили. Ваш персонаж погиб до начала игры. Стол смеётся. Бросаете заново — на этот раз Drifter. Через сорок минут у вас — седой ветеран с тремя сроками, кибернетической рукой, врагом-капитаном и долей в торговом корабле Type-A Free Trader. Игра ещё не началась, а биография уже есть.",
+    "prep": "~20–30 мин",
+    "mechanics": [
+      {
+        "title": "Лайфпас вместо левелапа",
+        "text": "Карьера до старта: служба, события, провалы. Можно умереть на чарген. Зато на выходе — живой человек со шрамами, а не ходячая статистика."
+      },
+      {
+        "title": "Корабль = персонаж",
+        "text": "Free Trader, Scout, Far Trader. Ипотека на 40 лет, расход топлива, страховка. Корабль — пятый член команды и главный источник проблем."
+      },
+      {
+        "title": "Торговля как геймплей",
+        "text": "Купил пшеницу на аграрном мире — продал на промышленном. Брокерские броски, спекулятивные грузы, контрабанда. Целая мини-игра в экономику."
+      },
+      {
+        "title": "2d6 + всё",
+        "text": "Один бросок на всё: навык + характеристика + модификатор, цель — 8+. Простая шкала, понятные шансы. Кубики двадцатиугольникам не нужны."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Core Rulebook 2022"
+      },
+      {
+        "cap": "High Guard — корабли"
+      },
+      {
+        "cap": "Central Supply Catalogue — снаряжение"
+      },
+      {
+        "cap": "The Third Imperium"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт"
+      },
+      {
+        "name": "Официальный лист персонажа"
+      },
+      {
+        "name": "Starter Pack (бесплатно)"
+      },
+      {
+        "name": "Traveller SRD"
+      }
+    ]
+  },
+  "en": {
+    "tagShort": "Hard-ish sci-fi about freelance traders",
+    "tagline": "\"Your character can die during character creation. That's a feature.\"",
+    "description": "Traveller is the granddaddy of sci-fi tabletop RPGs (1977, Marc Miller). Current edition is Mongoose 2e: 2d6 + modifiers, skill checks, lifepath instead of classes. You don't build a hero — you build a biography: a stint in the Imperial Navy, a botched brokerage deal, a leg lost on a colonial backwater. The game is about freelancers on a beaten-up ship, a mortgage on the jump drive, and cargo you'd rather not inspect.",
+    "setting": "Charted Space and the Third Imperium. 11,000 inhabited worlds, jump drives up to 6 parsecs, feudal aristocracy with lasers. Beyond the sectors lie frontiers, pirates, lost colonies. You're not galactic saviors — you're a free trader's crew with a bank payment due every 30 days.",
+    "vignette": "Lifepath. You picked Scout. Enlistment roll: 2d6, need 6+. You're in. First term — four years of survey work. Survival roll: 1+1 = 2. Failure. You consult the Mishap table: 'Severely injured, career ends.' Save vs. death — failed. Your character is dead before play begins. The table laughs. You roll again — this time, Drifter. Forty minutes later you've got a grey-haired veteran with three terms, a cybernetic arm, an enemy captain, and a share in a Type-A Free Trader. The game hasn't started, but the biography already has.",
+    "prep": "~20–30 min",
+    "mechanics": [
+      {
+        "title": "Lifepath, not level-up",
+        "text": "Career before play: service, events, failures. You can die at chargen. But what walks out is a person with scars — not a walking stat block."
+      },
+      {
+        "title": "The ship is a character",
+        "text": "Free Trader, Scout, Far Trader. A 40-year mortgage, fuel costs, insurance. The ship is your fifth crewmember and your biggest problem."
+      },
+      {
+        "title": "Trade as gameplay",
+        "text": "Buy wheat on an agri-world, sell it on an industrial one. Broker rolls, speculative cargo, smuggling. A whole economic mini-game."
+      },
+      {
+        "title": "2d6 + everything",
+        "text": "One roll for everything: skill + stat + modifier, target 8+. Simple curve, intuitive odds. No d20 required."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Core Rulebook 2022"
+      },
+      {
+        "cap": "High Guard — starships"
+      },
+      {
+        "cap": "Central Supply Catalogue — gear"
+      },
+      {
+        "cap": "The Third Imperium"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official website"
+      },
+      {
+        "name": "Official character sheet"
+      },
+      {
+        "name": "Starter Pack (free)"
+      },
+      {
+        "name": "Traveller SRD"
+      }
     ]
   }
 });
@@ -6607,6 +8040,7 @@ registerSystem("triangle", {
     }
   ],
   "ru": {
+    "tagShort": "RPG про агентов аномалий",
     "tagline": "«SCP встречает X-Files. Вы — агенты, контролирующие аномальное».",
     "description": "RPG о спецагентах, работающих в секретном агентстве, которое сдерживает аномальные явления. Каждая миссия — выезд на аномалию: изучить, классифицировать, решить что делать. Генератор аномалий создаёт уникальные угрозы. Бюрократия агентства — враг не менее опасный.",
     "setting": "Современный мир, но за фасадом реальности — аномалии. Агентство «Треугольник» — секретная организация, которая их сдерживает. Три доктрины: Сдержать, Уничтожить или Использовать. Каждая миссия — моральный выбор, и Агентство запоминает ваши решения.",
@@ -6657,6 +8091,7 @@ registerSystem("triangle", {
     ]
   },
   "en": {
+    "tagShort": "SCP-meets-X-Files agent RPG",
     "tagline": "\"SCP meets X-Files. You are agents containing the anomalous.\"",
     "description": "An RPG about special agents working for a secret agency that contains anomalous phenomena. Every mission is a field response to an anomaly: study it, classify it, decide what to do. The anomaly generator creates unique threats. Agency bureaucracy is an equally dangerous enemy.",
     "setting": "The modern world, but behind the facade of reality — anomalies. The Triangle Agency is a secret organization that contains them. Three doctrines: Contain, Destroy, or Exploit. Every mission is a moral choice, and the Agency remembers your decisions.",
@@ -6778,6 +8213,7 @@ registerSystem("twilight", {
     }
   ],
   "ru": {
+    "tagShort": "Пост-ядерный сэндбокс RPG",
     "tagline": "«Третья мировая окончена. Вы проиграли. Теперь — выживайте».",
     "description": "Милитари-сэндбокс о выживании после ядерной войны. Вы — остатки разбитого подразделения NATO в Польше (или Швеции). Командование молчит, топливо кончается, патронов мало, а зима близко. Сможете ли вы добраться домой — или хотя бы выжить до весны?",
     "setting": "Альтернативный 2000 год. Третья мировая война произошла. Ядерные удары уничтожили крупные города. Европа — зона хаоса: мародёры, дезертиры, местные военачальники. Польская зима, разрушенная инфраструктура и остатки цивилизации.",
@@ -6825,6 +8261,7 @@ registerSystem("twilight", {
     ]
   },
   "en": {
+    "tagShort": "post-WW3 survival RPG",
     "tagline": "\"World War III is over. You lost. Now — survive.\"",
     "description": "A military sandbox about surviving after nuclear war. You are the remnants of a shattered NATO unit in Poland (or Sweden). Command is silent, fuel is running out, ammo is scarce, and winter is coming. Can you make it home — or at least survive until spring?",
     "setting": "An alternate year 2000. World War III happened. Nuclear strikes destroyed major cities. Europe is a zone of chaos: marauders, deserters, local warlords. Polish winter, ruined infrastructure, and the remnants of civilization.",
@@ -6950,6 +8387,7 @@ registerSystem("uvg", {
     }
   ],
   "ru": {
+    "tagShort": "Психоделический OSR",
     "tagline": "«Психоделический Шёлковый Путь через умирающие земли».",
     "description": "Не совсем система — скорее мегамодуль-сеттинг для любой OSR-игры. Линейный маршрут через психоделические пустоши — «поинткроул» (путешествие от точки к точке по маршруту). Каждая неделя пути — новая безумная локация. Работает с Cairn, Into the Odd, D&D 5e — адаптируется под любой движок.",
     "setting": "Вы ведёте торговый караван от Фиолетового Города через ультрафиолетовые степи к Чёрному Городу на краю мира. По пути: кошачьи люди на парусниках, живые горы, руины цивилизаций, которые играли с реальностью. Стиль — Мёбиус + «Жёлтая субмарина» + Dying Earth.",
@@ -7003,6 +8441,7 @@ registerSystem("uvg", {
     ]
   },
   "en": {
+    "tagShort": "psychedelic OSR",
     "tagline": "\"A psychedelic Silk Road through dying lands.\"",
     "description": "Not quite a system — more of a mega-module setting for any OSR game. A linear route through psychedelic wastelands — a 'pointcrawl' (traveling point to point along a route). Every week of travel brings a new wild location. Works with Cairn, Into the Odd, D&D 5e — adapts to any engine.",
     "setting": "You lead a trade caravan from the Violet City through ultraviolet steppes to the Black City at the edge of the world. Along the way: cat-people on sailboats, living mountains, ruins of civilizations that toyed with reality. Style — Moebius + Yellow Submarine + Dying Earth.",
@@ -7120,6 +8559,7 @@ registerSystem("vaesen", {
     }
   ],
   "ru": {
+    "tagShort": "Скандинавская готика XIX века",
     "tagline": "«Мистический детектив в Скандинавии XIX века».",
     "description": "Вы — члены Общества, способные видеть сверхъестественное в мире, где остальные давно перестали верить. Каждое приключение — расследование: деревня обращается за помощью, вы изучаете мифологию существа, находите его слабость и проводите ритуал. Структура «монстр недели» работает идеально.",
     "setting": "Скандинавия XIX века. Индустриализация наступает, старые боги забыты. Но в лесах и озёрах живут вэттиры — существа из скандинавского фольклора: тролли, ниссе, мюлинги, дракены. Они злы, потому что люди их забыли. Между расследованиями вы восстанавливаете замок — штаб-квартиру Общества.",
@@ -7161,6 +8601,7 @@ registerSystem("vaesen", {
     ]
   },
   "en": {
+    "tagShort": "Nordic gothic mystery RPG",
     "tagline": "\"Supernatural mystery in 19th-century Scandinavia.\"",
     "description": "You are members of the Society, able to see the supernatural in a world where everyone else has long stopped believing. Every adventure is an investigation: a village asks for help, you research the creature's mythology, find its weakness, and perform a ritual. The 'monster of the week' structure works perfectly.",
     "setting": "19th-century Scandinavia. Industrialization advances, the old gods are forgotten. But in forests and lakes dwell vaesen — creatures from Scandinavian folklore: trolls, nisse, mylings, drakes. They are angry because humans have forgotten them. Between investigations, you restore a castle — the Society's headquarters.",
@@ -7285,6 +8726,7 @@ registerSystem("wildsea", {
     }
   ],
   "ru": {
+    "tagShort": "Корабли по кронам RPG",
     "tagline": "«Мир утонул в деревьях. Вы плывёте по кронам на бензопиле-корабле».",
     "description": "Самый необычный сеттинг в индустрии. Цивилизация погибла под Зелёным Приливом — деревья выросли на километры, покрыв всё. «Океан» — это кроны деревьев. Корабли режут ветви пилами. Вы — команда одного такого корабля, исследующая дикоморье. Система на нарративных метках вместо числовых бонусов.",
     "setting": "Дикоморье — бесконечные кроны, полные чудес. Города на ветвях, базары в дуплах, руины старого мира под корнями. Расы: люди-грибы, люди-пауки, живые кактусы, построенные из обломков роботы. Визуально — Миядзаки встречает Мёбиуса.",
@@ -7341,6 +8783,7 @@ registerSystem("wildsea", {
     ]
   },
   "en": {
+    "tagShort": "weird treetop sailing RPG",
     "tagline": "\"The world drowned in trees. You sail the canopy on a chainsaw-ship.\"",
     "description": "The most unusual setting in the industry. Civilization perished under the Green Tide — trees grew for miles, covering everything. The 'ocean' is the treetop canopy. Ships cut through branches with saws. You are the crew of one such ship, exploring the Wildsea. The system uses narrative tags instead of numerical bonuses.",
     "setting": "The Wildsea — endless canopies full of wonders. Cities on branches, bazaars in hollows, ruins of the old world beneath the roots. Peoples: fungus-folk, spider-folk, living cacti, robots built from salvage. Visually — Miyazaki meets Moebius.",

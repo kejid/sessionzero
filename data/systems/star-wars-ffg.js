@@ -84,17 +84,20 @@ registerSystem("star-wars-ffg", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://www.belloflostsouls.net/2020/02/rpg-spotlight-ffgs-star-wars-takes-you-to-a-galaxy-far-far-away.html
     {
-      "text": "The narrative dice system is pure genius. Elegant. Intuitive. Easy to learn, but requires practice and dedication to master. It encourages players to collaborate and contribute to the narrative, making it a more cooperative storytelling experience.",
-      "author": "u/GroggyGolem, r/swrpg"
+      "text": "Fantasy Flight Games made the best Star Wars RPG system imaginable.",
+      "author": "Meaghan Colleran, Bell of Lost Souls"
     },
+    // VERIFIED-AT: https://www.belloflostsouls.net/2020/02/rpg-spotlight-ffgs-star-wars-takes-you-to-a-galaxy-far-far-away.html
     {
-      "text": "I ran Edge of the Empire for two years. The moment that sold me was when a player failed a Piloting check but rolled three Advantages — so she crashed the speeder into the hangar bay door, but the explosion took out the guards on the other side. That's Star Wars.",
-      "author": "u/Kill_Welly, r/rpg"
+      "text": "You can fail up or succeed your way into trouble, and to me that is very Star Wars.",
+      "author": "Meaghan Colleran, Bell of Lost Souls"
     },
+    // VERIFIED-AT: https://www.wargamer.com/star-wars-roleplaying-game/history
     {
-      "text": "The books are among the most gorgeous I have ever run a game from. The production quality is insane, and the art captures the feel of the original trilogy perfectly. Edge Studio has kept the line alive and I'm grateful.",
-      "author": "u/Ghostofman, r/swrpg"
+      "text": "The most recent family of Star Wars TTRPGs, developed by Fantasy Flight Games, uses custom polyhedral dice.",
+      "author": "Timothy Linward, Wargamer"
     }
   ],
   "ru": {
@@ -158,6 +161,12 @@ registerSystem("star-wars-ffg", {
       {
         "name": "Foundry VTT модуль"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Fantasy Flight Games сделала лучшую RPG-систему по «Звёздным войнам», какую только можно себе представить." },
+      { "text": "Можно проваливаться вверх или успешно вкатиться в неприятности — и для меня это очень «Звёздные войны»." },
+      { "text": "Самое свежее семейство TTRPG по «Звёздным войнам» от Fantasy Flight Games использует собственные многогранные кубики." }
     ]
   },
   "en": {

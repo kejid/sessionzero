@@ -61,13 +61,12 @@ registerSystem("tales-loop", {
     }
   ],
   "quotes": [
+
+
+    // VERIFIED-AT: https://gizmodo.com/tales-from-the-loop-rpg-will-make-you-feel-like-a-stra-1797310505
     {
-      "text": "Tales from the Loop made my table of hardened D&D players cry. Actual tears. Over a kid trying to save his robot dog. I've never seen anything like it.",
-      "author": "u/loop_kid, r/rpg"
-    },
-    {
-      "text": "If Stranger Things was an RPG, this is it. But better, because it's YOUR kids and YOUR weird town and everything feels personal.",
-      "author": "u/80s_nostalgia, r/FreeLeague"
+      "text": "Tales From The Loop RPG Will Make You Feel Like a (Stranger Things) Kid Again",
+      "author": "Beth Elderkin, io9 / Gizmodo"
     }
   ],
   "ru": {
@@ -119,6 +118,10 @@ registerSystem("tales-loop", {
       {
         "name": "Официальный лист"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Tales From The Loop RPG снова заставит почувствовать себя ребёнком — в духе «Очень странных дел»." }
     ]
   },
   "en": {

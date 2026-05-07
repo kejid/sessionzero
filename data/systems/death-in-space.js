@@ -58,7 +58,10 @@ registerSystem("death-in-space", {
       "icon": "radio"
     }
   ],
-  "quotes": [{"text": "Your characters are scroungers on the edge. Then the Void starts pulling at the cracks in your mind, and suddenly survival is the least of your problems.", "author": "Gaming Trend review"}, {"text": "It feels like the universe has already left to beat traffic, and you're the ones left holding a wrench and a dwindling oxygen supply. Blue-collar apocalypse done right.", "author": "u/heat_death_salvager, r/osr"}],
+  "quotes": [
+    // VERIFIED-AT: https://www.enworld.org/threads/a-review-of-death-in-space.688213/
+    {"text": "Death In Space is a dark game that stands out from contemporaries by embracing a rules-lite system and injecting weirdness into its setting.", "author": "Rob Wieland, EN World"}
+  ],
   "ru": {
     "tagShort": "Грязный sci-fi survival RPG",
     "tagline": "«Добро пожаловать в коллапсирующую вселенную. Ваш экипаж — единственная семья.»",
@@ -102,6 +105,10 @@ registerSystem("death-in-space", {
       {
         "name": "Лист персонажа"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Death In Space — мрачная игра, которая выделяется среди современниц лёгкими правилами и щедрой дозой странностей в сеттинге." }
     ]
   },
   "en": {

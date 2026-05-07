@@ -55,7 +55,10 @@ registerSystem("last-tea-shop", {
       "icon": "feather"
     }
   ],
-  "quotes": [{"text": "On the second visitor, I fell into the world completely. A messenger who failed to deliver her final message. A beekeeper, untimely victim of a coup. I cried some happy tears near the end.", "author": "itch.io commenter on Last Tea Shop"}, {"text": "Combined with the soundtrack I had to tear up multiple times. It's gentle, but deeply reflective. One of my favorite games now.", "author": "itch.io commenter on Last Tea Shop"}],
+  "quotes": [
+    // VERIFIED-AT: https://cannibalhalflinggaming.com/2022/01/17/solitaire-storytelling-last-tea-house/
+    {"text": "The settings, the ingredients, the recipes, the weather and the emotions, the variety of visitors, they pack a lot of flavor into a single page.", "author": "Seamus Conneely, Cannibal Halfling Gaming"}
+  ],
   "ru": {
     "tagShort": "Соло-журнал у границы миров",
     "tagline": "«Ты варишь чай. Они мертвы. У них остался последний час.»",
@@ -99,6 +102,10 @@ registerSystem("last-tea-shop", {
       {
         "name": "Полная редакция — зин (itch.io)"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Сеттинги, ингредиенты, рецепты, погода и эмоции, разнообразие посетителей — всё это вмещает уйму атмосферы в одну страницу." }
     ]
   },
   "en": {

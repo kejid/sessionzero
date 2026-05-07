@@ -1,7 +1,7 @@
 registerSystem("nimble", {
   "groups": {
     "default": { "key": "tactical", "order": 2 },
-    "family": { "key": "standalone", "order": 10 },
+    "family": { "key": "standalone", "order": 10.5 },
     "genre": { "key": "tactical", "order": 2 }
   },
   "name": "Nimble 2e",
@@ -54,13 +54,15 @@ registerSystem("nimble", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://ttrpgfans.com/nimble-5e-boxed-set/
     {
-      "text": "Nimble fixed everything I hated about 5e combat in one elegant move: remove the attack roll. Now every turn something happens. My sessions went from 3-hour combats to 45-minute cinematic battles.",
-      "author": "r/rpg"
+      "text": "Nimble is easily one of the best 5E-adjacent RPGs ever made and delivers on its promise of speed and tactical play without sacrificing the best parts of modern D&D.",
+      "author": "Jason Volk, TTRPGfans"
     },
+    // VERIFIED-AT: https://www.wargamer.com/nimble-rpg-expansion-kickstarter
     {
-      "text": "The boss phase mechanic is stolen straight from video games and it works PERFECTLY at the table. When the dragon roared and entered Phase 2, my players genuinely panicked.",
-      "author": "r/nimblerpg"
+      "text": "Even those who adore D&D can agree that it sometimes feels like a slog, and that's the experience Nimble RPG vehemently avoids.",
+      "author": "Gab Hernandez, Wargamer"
     }
   ],
   "ru": {
@@ -106,6 +108,11 @@ registerSystem("nimble", {
       {
         "name": "Официальный сайт"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Nimble — без преувеличения, одна из лучших RPG на базе 5E из когда-либо сделанных, и она держит обещание скорости и тактичной игры, не жертвуя лучшим из современной D&D." },
+      { "text": "Даже фанаты D&D признают, что иногда она ощущается как болото — и именно от этого ощущения Nimble RPG яростно бежит." }
     ]
   },
   "en": {

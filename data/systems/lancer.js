@@ -23,13 +23,15 @@ registerSystem("lancer", {
     }
   ],
   "quotes": [
+    // VERIFIED-AT: https://www.geeknative.com/70479/review-lancer-rpg/
     {
-      "text": "The mech-building alone is worth the price. I spent two hours in COMP/CON before session one just theorycrafting builds. Then combat hit and every single choice mattered.",
-      "author": "u/ironclad_actual, r/rpg"
+      "text": "It feels like an actual mech skirmish game that's genuinely merged with an indie RPG.",
+      "author": "Andrew Girdwood, Geek Native"
     },
+    // VERIFIED-AT: https://www.cbr.com/lancer-mech-ttrpg/
     {
-      "text": "Lancer is the rare tactical game where the narrative stuff isn't a chore between fights — our pilot RP has been just as good as the grid combat. Two games in one, both excellent.",
-      "author": "u/NHP_Cascade, r/lancer"
+      "text": "The leveling in Lancer is where the game's unique system of completely modular mech design shines.",
+      "author": "Zachary Pilon, CBR"
     }
   ],
   "resources": [
@@ -103,6 +105,11 @@ registerSystem("lancer", {
       {
         "name": "Приложение COMP/CON"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Ощущается как настоящая варгеймовая стычка мехов, по-настоящему сросшаяся с инди-RPG." },
+      { "text": "Прокачка в Lancer — это то, где раскрывается уникальная система полностью модульного дизайна мехов." }
     ]
   },
   "en": {

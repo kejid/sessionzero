@@ -52,13 +52,12 @@ registerSystem("vaesen", {
     }
   ],
   "quotes": [
+
+
+    // VERIFIED-AT: https://www.tabletopgaming.co.uk/reviews/vaesen-mythic-britain-ireland-rpg-review/ (2024-03-19)
     {
-      "text": "Vaesen is the perfect \"busy adult\" RPG. Self-contained mysteries, clear structure, beautiful art. My group with kids and jobs can actually finish a story arc in 2-3 sessions.",
-      "author": "u/nordic_mystery, r/rpg"
-    },
-    {
-      "text": "The castle upgrade system between adventures is surprisingly addictive. My players care more about getting a new library wing than about leveling up their characters.",
-      "author": "u/castle_keeper, r/FreeLeague"
+      "text": "This beautifully produced and wonderfully written book enriches an already compelling game.",
+      "author": "Ed Power, Tabletop Gaming"
     }
   ],
   "ru": {
@@ -101,6 +100,10 @@ registerSystem("vaesen", {
       {
         "name": "Официальный лист"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Эта прекрасно изданная и великолепно написанная книга обогащает и без того захватывающую игру." }
     ]
   },
   "en": {

@@ -49,13 +49,12 @@ registerSystem("into-the-odd", {
     }
   ],
   "quotes": [
+
+
+    // VERIFIED-AT: https://coinsandscrolls.blogspot.com/2019/11/osr-troika-vs-electric-bastionland.html
     {
-      "text": "Into the Odd is the game that made me realize I don't need 300 pages of rules to have the best session of my life. We played for 4 hours and I prepped for 10 minutes.",
-      "author": "u/bastioneer_23, r/osr"
-    },
-    {
-      "text": "The \"attacks always hit\" rule sounds weird until you play it. Then you realize combat becomes about positioning, retreating, and creative problem solving instead of \"I roll to hit... miss. Next.\"",
-      "author": "u/dungeon_owl, r/rpg"
+      "text": "Both seem to be great for one shots, convention games, OSR intros, or games where rapidly generating a new and evocative character is the goal.",
+      "author": "Skerples, Coins and Scrolls (2019)"
     }
   ],
   "ru": {
@@ -95,6 +94,10 @@ registerSystem("into-the-odd", {
       {
         "name": "Лист персонажа (fan)"
       }
+    ]
+  ,
+    "quotes": [
+      { "text": "Обе отлично подходят для ваншотов, конвенционных игр, знакомства с OSR или партий, где цель — быстро собрать колоритного персонажа." }
     ]
   },
   "en": {

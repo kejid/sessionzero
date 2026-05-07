@@ -52,6 +52,44 @@ COPY = {
 }
 
 
+def _strip_jsonc(body: str) -> str:
+    """Strip // line comments and trailing commas so JSON.loads accepts a JSON-with-comments dialect.
+    Respects string literals (does not strip inside strings)."""
+    out = []
+    i = 0
+    n = len(body)
+    in_str = False
+    esc = False
+    while i < n:
+        c = body[i]
+        if in_str:
+            out.append(c)
+            if esc:
+                esc = False
+            elif c == "\\":
+                esc = True
+            elif c == '"':
+                in_str = False
+            i += 1
+            continue
+        if c == '"':
+            in_str = True
+            out.append(c)
+            i += 1
+            continue
+        if c == "/" and i + 1 < n and body[i + 1] == "/":
+            # consume to end-of-line
+            while i < n and body[i] != "\n":
+                i += 1
+            continue
+        out.append(c)
+        i += 1
+    cleaned = "".join(out)
+    # Remove trailing commas before } or ].
+    cleaned = re.sub(r",(\s*[}\]])", r"\1", cleaned)
+    return cleaned
+
+
 def parse_system(path: Path) -> dict | None:
     text = path.read_text(encoding="utf-8")
     m = re.search(r'registerSystem\(\s*"([^"]+)"\s*,\s*(\{.*\})\s*\)\s*;?\s*$',
@@ -60,7 +98,7 @@ def parse_system(path: Path) -> dict | None:
         return None
     system_id, body = m.group(1), m.group(2)
     try:
-        data = json.loads(body)
+        data = json.loads(_strip_jsonc(body))
     except json.JSONDecodeError as e:
         print(f"  ! parse error in {path.name}: {e}")
         return None
@@ -76,17 +114,26 @@ def cache_path_for(url: str) -> Path:
     return CACHE_DIR / f"{h}{suffix}"
 
 
-def fetch_image(url: str) -> Image.Image | None:
+def fetch_image(url: str, attempts: int = 3, backoff: float = 1.5) -> Image.Image | None:
     if not url:
         return None
     cp = cache_path_for(url)
     if not cp.exists():
-        try:
-            req = urllib.request.Request(url, headers={"User-Agent": UA})
-            with urllib.request.urlopen(req, timeout=20) as resp:
-                cp.write_bytes(resp.read())
-        except Exception as e:
-            print(f"  ! download failed: {url} -> {e}")
+        import time as _time
+        last_err = None
+        for i in range(attempts):
+            try:
+                req = urllib.request.Request(url, headers={"User-Agent": UA})
+                with urllib.request.urlopen(req, timeout=20) as resp:
+                    cp.write_bytes(resp.read())
+                last_err = None
+                break
+            except Exception as e:
+                last_err = e
+                if i < attempts - 1:
+                    _time.sleep(backoff * (i + 1))
+        if last_err is not None:
+            print(f"  ! download failed after {attempts} tries: {url} -> {last_err}")
             return None
     try:
         img = Image.open(cp).convert("RGB")
