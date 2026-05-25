@@ -23,6 +23,15 @@ const ABOUT_EN = path.join(ROOT, 'about.html');
 const ABOUT_RU = path.join(OUT_RU, 'about.html');
 
 const SITE = 'https://sessionzero.games';
+
+// Reliable CTA click tracking for static pages. Builds the event URL via the
+// already-loaded count.js (so the URL format matches GoatCounter exactly) and
+// sends it with `fetch(..., {keepalive:true})` — a GET that survives the page
+// navigating to the tool, where a plain <img> beacon would be cancelled.
+// sendBeacon is intentionally not used: it forces a POST, but GoatCounter's
+// /count endpoint is GET-based. Respects goatcounter.filter() (skips localhost
+// /bots) and degrades to a plain Image if fetch is unavailable.
+const CTA_TRACK_SCRIPT = `<script>(function(){function s(el){var g=window.goatcounter;if(!g||!g.url)return;if(g.filter&&g.filter())return;var u=g.url({path:el.getAttribute('data-gc-event'),title:el.getAttribute('data-gc-title')||'',event:true});if(!u)return;try{if(window.fetch){fetch(u,{method:'GET',mode:'no-cors',credentials:'omit',keepalive:true});return;}}catch(e){}new Image().src=u;}function b(){var e=document.querySelectorAll('[data-gc-event]');for(var i=0;i<e.length;i++){e[i].addEventListener('click',function(){s(this);});e[i].addEventListener('auxclick',function(){s(this);});}}if(document.readyState!=='loading')b();else document.addEventListener('DOMContentLoaded',b);})();</script>`;
 const TODAY = '2026-04-22';
 const HOMEPAGE_OG = SITE + '/og/home.jpg';
 const HOMEPAGE_OG_ALT = 'Session Zero — TTRPG group voting tool';
@@ -434,11 +443,11 @@ function renderSystemPage(id, sys, lang) {
 
   // GoatCounter click event fired when a reader follows the CTA into the
   // voting tool. Lets us measure SEO-landing → tool conversion per system.
-  // count.js auto-binds [data-goatcounter-click]; top + bottom CTA share the
-  // same path so clicks aggregate per page.
+  // Sent by CTA_TRACK_SCRIPT (fetch keepalive, survives the navigation away);
+  // top + bottom CTA share the same path so clicks aggregate per page.
   const ctaEvent = `cta-vote-${id}`;
   const ctaTitle = `${name} → tool`;
-  const ctaAttrs = `data-goatcounter-click="${escapeHtml(ctaEvent)}" data-goatcounter-title="${escapeHtml(ctaTitle)}"`;
+  const ctaAttrs = `data-gc-event="${escapeHtml(ctaEvent)}" data-gc-title="${escapeHtml(ctaTitle)}"`;
 
   // Relative-ish path to /style.css and /favicon.svg — we serve from root.
   // Using absolute paths (/style.css) works on GitHub Pages since we own the domain root.
@@ -527,6 +536,7 @@ function renderSystemPage(id, sys, lang) {
   <a href="${lang === 'ru' ? '/ru/about.html' : '/about.html'}">${escBody(S.footer_about)}</a> ·
   <a href="https://github.com/kejid/sessionzero" target="_blank" rel="noopener">GitHub</a>
 </footer>
+${CTA_TRACK_SCRIPT}
 <script data-goatcounter="https://kejid.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
@@ -568,7 +578,7 @@ function renderAbout(lang) {
     <div class="setting-block"><p>Goals: keep the catalog curated (not comprehensive — Wargamer does that better), add comparison articles for specific use cases (solo, small groups, OSR vs PbtA), and keep everything free and ad-free. If you want to support the project, <a href="https://github.com/kejid/sessionzero" target="_blank" rel="noopener">star the repo</a> or tell a group you play with.</p></div>
 
     <div class="vote-cta">
-      <a href="/" class="vote-cta-btn" data-goatcounter-click="cta-vote-about" data-goatcounter-title="About → tool">Start your group's session zero →</a>
+      <a href="/" class="vote-cta-btn" data-gc-event="cta-vote-about" data-gc-title="About → tool">Start your group's session zero →</a>
     </div>
   `;
 
@@ -597,7 +607,7 @@ function renderAbout(lang) {
     <div class="setting-block"><p>Цели: держать каталог курированным (не список-всех-систем — Wargamer делает это лучше), добавлять статьи-сравнения для конкретных задач (соло, маленькие группы, OSR vs PbtA), держать всё бесплатным и без рекламы. Если хочется поддержать — <a href="https://github.com/kejid/sessionzero" target="_blank" rel="noopener">поставьте звёзду</a> или расскажите своей группе.</p></div>
 
     <div class="vote-cta">
-      <a href="/" class="vote-cta-btn" data-goatcounter-click="cta-vote-about" data-goatcounter-title="About → tool">Начать Session Zero с группой →</a>
+      <a href="/" class="vote-cta-btn" data-gc-event="cta-vote-about" data-gc-title="About → tool">Начать Session Zero с группой →</a>
     </div>
   `;
 
@@ -667,6 +677,7 @@ function renderAbout(lang) {
   <a href="${lang === 'ru' ? '/ru/about.html' : '/about.html'}">${escBody(S.footer_about)}</a> ·
   <a href="https://github.com/kejid/sessionzero" target="_blank" rel="noopener">GitHub</a>
 </footer>
+${CTA_TRACK_SCRIPT}
 <script data-goatcounter="https://kejid.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
