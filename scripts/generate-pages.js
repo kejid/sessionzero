@@ -169,6 +169,7 @@ const STR = {
     qs_complexity: 'Complexity',
     back_to_catalog: '← Session Zero',
     vote_cta: name => `Vote on ${name} with your group →`,
+    vote_cta_short: 'Vote with your group →',
     vote_cta_sub: 'Open in Session Zero to let every player vote and see the results.',
     footer_home: 'Home',
     footer_about: 'About',
@@ -197,6 +198,7 @@ const STR = {
     qs_complexity: 'Сложность',
     back_to_catalog: '← Session Zero',
     vote_cta: name => `Проголосуйте за ${name} всей группой →`,
+    vote_cta_short: 'Голосовать всей группой →',
     vote_cta_sub: 'Откройте в Session Zero, чтобы каждый игрок проголосовал и увидел итоги.',
     footer_home: 'Главная',
     footer_about: 'О проекте',
@@ -430,6 +432,14 @@ function renderSystemPage(id, sys, lang) {
   const enActive = lang === 'en' ? ' class="active"' : '';
   const ruActive = lang === 'ru' ? ' class="active"' : '';
 
+  // GoatCounter click event fired when a reader follows the CTA into the
+  // voting tool. Lets us measure SEO-landing → tool conversion per system.
+  // count.js auto-binds [data-goatcounter-click]; top + bottom CTA share the
+  // same path so clicks aggregate per page.
+  const ctaEvent = `cta-vote-${id}`;
+  const ctaTitle = `${name} → tool`;
+  const ctaAttrs = `data-goatcounter-click="${escapeHtml(ctaEvent)}" data-goatcounter-title="${escapeHtml(ctaTitle)}"`;
+
   // Relative-ish path to /style.css and /favicon.svg — we serve from root.
   // Using absolute paths (/style.css) works on GitHub Pages since we own the domain root.
   return `<!DOCTYPE html>
@@ -488,6 +498,9 @@ function renderSystemPage(id, sys, lang) {
         <div class="qs"><span class="qs-label">${escBody(S.qs_foundry)}</span><span class="qs-value">${escBody(foundry)}</span></div>
         <div class="qs"><span class="qs-label">${escBody(S.qs_complexity)}</span><div class="complexity-bar">${complexityBar(sys.complexity)}</div></div>
     </div>
+    <div class="vote-cta vote-cta-top">
+      <a href="/#${escapeHtml(id)}" class="vote-cta-btn" ${ctaAttrs}>${escBody(S.vote_cta_short)}</a>
+    </div>
     ${description ? `<div class="section-title">${escBody(S.section_system)}</div>
     <div class="setting-block"><p>${miniMd(description)}</p></div>` : ''}
     ${setting ? `<div class="section-title">${escBody(S.section_setting)}</div>
@@ -504,7 +517,7 @@ function renderSystemPage(id, sys, lang) {
     <p class="author-credit">${S.author_credit}</p>
     ${similarHTML}
     <div class="vote-cta">
-      <a href="/#${escapeHtml(id)}" class="vote-cta-btn">${escBody(S.vote_cta(name))}</a>
+      <a href="/#${escapeHtml(id)}" class="vote-cta-btn" ${ctaAttrs}>${escBody(S.vote_cta(name))}</a>
       <p class="vote-cta-sub">${escBody(S.vote_cta_sub)}</p>
     </div>
   </article>
@@ -555,7 +568,7 @@ function renderAbout(lang) {
     <div class="setting-block"><p>Goals: keep the catalog curated (not comprehensive — Wargamer does that better), add comparison articles for specific use cases (solo, small groups, OSR vs PbtA), and keep everything free and ad-free. If you want to support the project, <a href="https://github.com/kejid/sessionzero" target="_blank" rel="noopener">star the repo</a> or tell a group you play with.</p></div>
 
     <div class="vote-cta">
-      <a href="/" class="vote-cta-btn">Start your group's session zero →</a>
+      <a href="/" class="vote-cta-btn" data-goatcounter-click="cta-vote-about" data-goatcounter-title="About → tool">Start your group's session zero →</a>
     </div>
   `;
 
@@ -584,7 +597,7 @@ function renderAbout(lang) {
     <div class="setting-block"><p>Цели: держать каталог курированным (не список-всех-систем — Wargamer делает это лучше), добавлять статьи-сравнения для конкретных задач (соло, маленькие группы, OSR vs PbtA), держать всё бесплатным и без рекламы. Если хочется поддержать — <a href="https://github.com/kejid/sessionzero" target="_blank" rel="noopener">поставьте звёзду</a> или расскажите своей группе.</p></div>
 
     <div class="vote-cta">
-      <a href="/" class="vote-cta-btn">Начать Session Zero с группой →</a>
+      <a href="/" class="vote-cta-btn" data-goatcounter-click="cta-vote-about" data-goatcounter-title="About → tool">Начать Session Zero с группой →</a>
     </div>
   `;
 
