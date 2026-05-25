@@ -1974,9 +1974,11 @@ function initApp() {
     renderResults();
     applyLang();
     refreshIcons();
-    // Restore page from URL hash if present
+    // Restore page from URL hash if present. System pages are lazy-rendered,
+    // so a #system-id won't be in the DOM yet — gate on SYSTEMS_DATA too and
+    // let showPage() render it (else a deep link just lands on the catalog).
     const hash = window.location.hash.replace('#', '');
-    if (hash && document.getElementById(hash)) {
+    if (hash && (SYSTEMS_DATA[hash] || document.getElementById(hash))) {
         showPage(hash, false);
     }
 }
