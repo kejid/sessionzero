@@ -29,6 +29,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/about.html"/>
   </url>
   <url>
+    <loc>https://sessionzero.games/how-to-choose-a-ttrpg.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/how-to-choose-a-ttrpg.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/how-to-choose-a-ttrpg.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/how-to-choose-a-ttrpg.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/ru/how-to-choose-a-ttrpg.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/how-to-choose-a-ttrpg.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/how-to-choose-a-ttrpg.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/how-to-choose-a-ttrpg.html"/>
+  </url>
+  <url>
     <loc>https://sessionzero.games/system/alien.html</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>

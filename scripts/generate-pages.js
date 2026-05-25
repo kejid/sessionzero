@@ -24,6 +24,9 @@ const RU_HOME = path.join(OUT_RU, 'index.html');
 const SITEMAP = path.join(ROOT, 'sitemap.xml');
 const ABOUT_EN = path.join(ROOT, 'about.html');
 const ABOUT_RU = path.join(OUT_RU, 'about.html');
+const GUIDE_SLUG = 'how-to-choose-a-ttrpg';
+const GUIDE_EN = path.join(ROOT, `${GUIDE_SLUG}.html`);
+const GUIDE_RU = path.join(OUT_RU, `${GUIDE_SLUG}.html`);
 
 const SITE = 'https://sessionzero.games';
 
@@ -634,7 +637,7 @@ function renderAbout(lang) {
     <p class="tagline">Небольшой инструмент, который помогает вашей TTRPG-группе выбрать, во что играть дальше.</p>
 
     <div class="section-title">Что такое Session Zero?</div>
-    <div class="setting-block"><p>Session Zero решает конкретную проблему: ваша TTRPG-группа не может договориться, во что играть следующей кампанией. Один хочет D&amp;D 5e, второй — что-то необычное, ГМ хочет минимум препа. Session Zero сжимает это в структурированное голосование: каждый игрок смотрит описания 44+ систем (OSR, PbtA, FitD, нарративные, соло, sci-fi, хоррор, странное), отмечает те, в которые реально хочет сыграть, и группа видит общий шортлист. Без регистраций, без сбора данных — всё хранится в вашем браузере.</p></div>
+    <div class="setting-block"><p>Session Zero решает конкретную проблему: ваша TTRPG-группа не может договориться, во что играть следующей кампанией. Один хочет D&amp;D 5e, второй — что-то необычное, ГМ хочет минимум препа. Session Zero сжимает это в структурированное голосование: каждый игрок смотрит описания ${SYSTEM_COUNT}+ систем (OSR, PbtA, FitD, нарративные, соло, sci-fi, хоррор, странное), отмечает те, в которые реально хочет сыграть, и группа видит общий шортлист. Без регистраций, без сбора данных — всё хранится в вашем браузере.</p></div>
 
     <div class="section-title">Проблема</div>
     <div class="setting-block"><p>Выбор новой системы — главная причина, по которой кампании разваливаются ещё до первой сессии. Один хочет D&amp;D 5e, второй — что-то необычное, ГМ хочет минимум препа. Дискуссия растягивается на две недели, а потом группа всё равно играет в D&amp;D — или не играет вообще. Session Zero сжимает всё это в десять минут структурированного голосования.</p></div>
@@ -960,6 +963,8 @@ function renderRuHome() {
     3. Страница результатов показывает шортлист по голосам. Выбираете одну — или спорите за топ-3 под пиццу.
     </p></div>
 
+    <div class="setting-block"><p>Не можете договориться? Гайд: <a href="/ru/how-to-choose-a-ttrpg.html">как выбрать TTRPG всей группой</a> — четыре способа решить и три правила, чтобы спор не начался заново.</p></div>
+
     <div class="vote-cta vote-cta-top">
       <a href="/?lang=ru" class="vote-cta-btn" data-gc-event="cta-vote-home-ru" data-gc-title="RU home → tool">Открыть Session Zero →</a>
     </div>
@@ -983,6 +988,236 @@ function renderRuHome() {
 <footer class="static-footer">
   <a href="/?lang=ru">Session Zero</a> ·
   <a href="/ru/about.html">О проекте</a> ·
+  <a href="https://github.com/kejid/sessionzero" target="_blank" rel="noopener">GitHub</a>
+</footer>
+${CTA_TRACK_SCRIPT}
+<script data-goatcounter="https://kejid.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
+`;
+}
+
+// ---------- 5c. Guide / pillar page (decision-intent how-to) ----------
+function renderGuidePage(lang) {
+  const S = STR[lang];
+  const canonical = lang === 'en' ? `${SITE}/${GUIDE_SLUG}.html` : `${SITE}/ru/${GUIDE_SLUG}.html`;
+  const enUrl = `${SITE}/${GUIDE_SLUG}.html`;
+  const ruUrl = `${SITE}/ru/${GUIDE_SLUG}.html`;
+  const ogImage = lang === 'ru' ? `${SITE}/og/ru/home.jpg` : HOMEPAGE_OG;
+  const homeHref = `/${lang === 'ru' ? '?lang=ru' : ''}`;
+  const toolHref = homeHref;
+  const sys = (id) => lang === 'en' ? `/system/${id}.html` : `/ru/system/${id}.html`;
+  const coll = (slug) => lang === 'en' ? `/collections/${slug}.html` : `/ru/collections/${slug}.html`;
+  const enActive = lang === 'en' ? ' class="active"' : '';
+  const ruActive = lang === 'ru' ? ' class="active"' : '';
+
+  const title = lang === 'en'
+    ? 'How to Choose a TTRPG Your Whole Group Will Play | Session Zero'
+    : 'Как выбрать TTRPG, в которую согласится играть вся группа | Session Zero';
+  const headline = lang === 'en'
+    ? 'How to choose a TTRPG your whole group will actually play'
+    : 'Как выбрать TTRPG, в которую реально согласится играть вся группа';
+  const desc = lang === 'en'
+    ? 'Can’t agree on what tabletop RPG to play? Four honest ways a group can decide — quick consensus, approval voting, pitches, ranked choice — and how to do it in ten minutes.'
+    : 'Группа не может договориться, во что играть? Четыре честных способа выбрать настольную ролёвку — консенсус, approval-голосование, питчи, ранжирование — и как сделать это за десять минут.';
+
+  const faq = lang === 'en' ? [
+    ['Isn’t this just a poll?', 'A generic poll asks which one is your favourite, which recreates the split-vote problem. Approval voting asks which of these you’re happy to play, and finds the option with the broadest support. Session Zero is built around that second question and pairs it with a summary of each game, so people vote informed.'],
+    ['Is this the same as a session zero?', 'No. A session zero is the prep meeting where the group sets expectations, agrees on safety tools and makes characters — that comes after you’ve chosen the game. This is the step before: deciding what to play. Pick the system first, then run your prep session.'],
+    ['Do we need accounts?', 'No signup and nothing stored on a server — your group, votes and any custom systems live in your browser. It’s free and works in English and Russian.'],
+  ] : [
+    ['Это просто опрос?', 'Обычный опрос спрашивает «что нравится больше всего» — и воссоздаёт проблему расщепления голосов. Approval-голосование спрашивает «во что из этого ты готов сыграть» и находит вариант с самой широкой поддержкой. Session Zero построен вокруг второго вопроса и даёт описание каждой игры, чтобы голосовали осознанно.'],
+    ['Это то же самое, что нулевая сессия?', 'Нет. Нулевая сессия — это встреча, где группа уже выбрала игру и обсуждает ожидания, безопасность и создаёт персонажей. Здесь — шаг раньше: какую систему вообще взять. Сначала выберите систему, потом проводите нулевую сессию.'],
+    ['Нужны аккаунты?', 'Нет регистрации, ничего не хранится на сервере — группа, голоса и свои системы живут в браузере. Бесплатно, EN/RU.'],
+  ];
+  const faqHTML = faq.map(([q, a]) => `<div class="seo-faq-item"><h3>${escBody(q)}</h3><p>${escBody(a)}</p></div>`).join('');
+
+  const bodyEn = `
+    <h1>${escBody(headline)}</h1>
+    <p class="tagline">Four honest ways to pick your next tabletop RPG — and how to do it in ten minutes instead of letting the group chat drag on for three weeks.</p>
+
+    <div class="setting-block"><p>Choosing the next game is the quietest way a campaign dies. One player is set on D&amp;D 5e, another wants something weird and rules-light, the GM wants minimal prep, and someone hasn&rsquo;t said a word but will absolutely bail if it&rsquo;s another dungeon crawl. The conversation spreads across three Discord channels, nobody wants to be the pushy one, and two weeks later you&rsquo;re either defaulting to D&amp;D again or not playing at all. This is a guide to actually deciding — fairly, fast, and in a way nobody resents.</p></div>
+
+    <div class="section-title">Why groups stall</div>
+    <div class="setting-block"><p>
+    <strong>Split vote.</strong> Five people, five favourites, no majority — so the most stubborn person wins by attrition.<br>
+    <strong>The vocal minority.</strong> One firm &ldquo;I&rsquo;d really rather not&rdquo; quietly kills an option everyone else liked.<br>
+    <strong>Paradox of choice.</strong> There are thousands of TTRPGs now. Past a handful of options, people freeze instead of choosing.<br>
+    <strong>Undefined scope.</strong> &ldquo;What should we play&rdquo; means something different for a one-shot than for a two-year campaign. People vote differently when they don&rsquo;t know what they&rsquo;re committing to.
+    </p></div>
+
+    <div class="section-title">Four ways to decide</div>
+    <div class="setting-block"><p>Pick the one that fits how your table actually behaves:</p></div>
+    <div class="setting-block"><p>
+    <strong>1. Quick consensus</strong> — best for small, agreeable groups. Someone proposes two or three options, show of hands, done. Fast, but it falls apart the moment opinions genuinely differ.<br><br>
+    <strong>2. Approval voting</strong> — the best default for most groups. Everyone votes for <em>every</em> game they&rsquo;d be happy to play, not just their favourite. The option with the broadest support wins. This is the one that kills the &ldquo;stuck playing something I hate&rdquo; problem, because a game only wins if most of the table is at least OK with it.<br><br>
+    <strong>3. Everyone pitches</strong> — best for passionate groups. Each person gets two minutes to sell one game. Enthusiasm is contagious, and people often warm to an option they&rsquo;d have skipped on a list. Then vote.<br><br>
+    <strong>4. Ranked choice</strong> — best when the options are similar. Everyone ranks their top few; if nothing has a majority, the lowest drops and its votes flow to second choices. Genuinely useful when, say, two OSR games are splitting the same voters.
+    </p></div>
+    <div class="setting-block"><p>For most groups, <strong>approval voting</strong> is the sweet spot: low drama, no vote-splitting, and the winner is something the whole table can live with.</p></div>
+
+    <div class="section-title">The ten-minute version</div>
+    <div class="setting-block"><p><a href="${toolHref}">Session Zero</a> is built around approval voting, because it&rsquo;s the format that holds up with real groups. Add your players (just names — no accounts), everyone browses a catalogue of ${SYSTEM_COUNT}+ systems with honest, human-written summaries, and each person flags the ones they&rsquo;d genuinely be up for. The results page shows a shortlist ranked by votes. Pick the winner, or argue over the top three over pizza — except now you&rsquo;re arguing over three games everyone already approved, not starting from zero.</p></div>
+
+    <div class="vote-cta vote-cta-top">
+      <a href="${toolHref}" class="vote-cta-btn" data-gc-event="cta-vote-guide" data-gc-title="Guide → tool">Start a vote with your group →</a>
+    </div>
+
+    <div class="section-title">If you don&rsquo;t know where to start</div>
+    <div class="setting-block"><p>Half the stall is just not knowing what&rsquo;s out there. A few directions, by what your group is actually after:</p></div>
+    <div class="setting-block"><p>
+    <strong>Prep-light, pick-up-and-play:</strong> <a href="${sys('cairn')}">Cairn</a>, <a href="${sys('mausritter')}">Mausritter</a>, <a href="${sys('mork-borg')}">Mörk Borg</a> — rules you can teach in five minutes.<br>
+    <strong>Story-first, low-crunch:</strong> <a href="${sys('blades')}">Blades in the Dark</a>, <a href="${sys('heart')}">Heart</a> — mechanics that push the fiction, not stat blocks.<br>
+    <strong>Horror for a tense night:</strong> <a href="${sys('mothership')}">Mothership</a>, <a href="${sys('call-of-cthulhu')}">Call of Cthulhu</a> — two very different flavours of dread.<br>
+    <strong>One evening, no commitment:</strong> <a href="${sys('the-wretched')}">The Wretched</a>, <a href="${sys('last-tea-shop')}">Last Tea Shop</a> — one-shots that resolve in a single sitting.<br>
+    <strong>Playing solo or between sessions:</strong> see <a href="${coll('best-solo-ttrpgs')}">the best solo TTRPGs</a>.<br>
+    <strong>Old-school dungeon energy:</strong> see <a href="${coll('osr-tabletop-rpgs')}">OSR tabletop RPGs</a>.
+    </p></div>
+
+    <div class="section-title">Three rules that stop the argument restarting</div>
+    <div class="setting-block"><p>
+    <strong>Define the scope first.</strong> One-shot, mini-arc, or open-ended campaign — say it out loud before anyone votes. People commit differently to three sessions than to three years.<br><br>
+    <strong>Let people veto, not just vote.</strong> One honest &ldquo;I will not enjoy this&rdquo; is worth knowing before session one, not halfway through it.<br><br>
+    <strong>Timebox it.</strong> Give the decision ten minutes and a hard deadline. Endless deliberation is exactly how the default option — D&amp;D again — wins by exhaustion.
+    </p></div>
+
+    <div class="section-title">FAQ</div>
+    ${faqHTML}
+
+    <div class="vote-cta">
+      <a href="${toolHref}" class="vote-cta-btn" data-gc-event="cta-vote-guide" data-gc-title="Guide → tool">Start your group&rsquo;s vote →</a>
+      <p class="vote-cta-sub">Free, no signup — everyone votes, the group sees a shortlist.</p>
+    </div>
+  `;
+
+  const bodyRu = `
+    <h1>${escBody(headline)}</h1>
+    <p class="tagline">Четыре честных способа выбрать следующую настольную ролёвку — и как сделать это за десять минут, а не растягивать обсуждение в чате на три недели.</p>
+
+    <div class="setting-block"><p>Выбор следующей игры — самый тихий способ убить кампанию. Один игрок намертво за D&amp;D 5e, другой хочет что-то странное и лёгкое по правилам, ГМ хочет минимум препа, а кто-то молчит, но точно сольётся, если это снова данжен-кроул. Обсуждение расползается по трём каналам в Discord, никто не хочет давить — и через две недели вы либо по умолчанию опять играете в D&amp;D, либо не играете вообще. Это гайд о том, как реально выбрать — честно, быстро и так, чтобы никто не затаил обиду.</p></div>
+
+    <div class="section-title">Почему группа застревает</div>
+    <div class="setting-block"><p>
+    <strong>Расщепление голосов.</strong> Пятеро игроков, пять фаворитов, ни у кого нет большинства — и побеждает самый упёртый, измором.<br>
+    <strong>Громкое меньшинство.</strong> Одно твёрдое «я бы лучше не надо» тихо убивает вариант, который нравился всем остальным.<br>
+    <strong>Парадокс выбора.</strong> Систем сейчас тысячи. После пары-тройки вариантов люди не выбирают, а зависают.<br>
+    <strong>Неопределённый масштаб.</strong> «Во что играть» — это разное для ваншота и для двухлетней кампании. Люди голосуют иначе, когда не знают, на что подписываются.
+    </p></div>
+
+    <div class="section-title">Четыре способа решить</div>
+    <div class="setting-block"><p>Выберите тот, что подходит вашему столу:</p></div>
+    <div class="setting-block"><p>
+    <strong>1. Быстрый консенсус</strong> — для маленьких сговорчивых групп. Кто-то предлагает два-три варианта, поднятие рук, готово. Быстро, но рассыпается, как только мнения реально расходятся.<br><br>
+    <strong>2. Approval-голосование</strong> — лучший дефолт для большинства групп. Каждый голосует за <em>все</em> игры, в которые был бы рад сыграть, а не только за фаворита. Побеждает вариант с самой широкой поддержкой. Именно это снимает проблему «застрял в том, что ненавижу»: игра побеждает, только если большинство стола хотя бы не против.<br><br>
+    <strong>3. Каждый питчит</strong> — для увлечённых групп. У каждого две минуты, чтобы продать одну игру. Энтузиазм заразителен, и люди часто теплеют к варианту, который пропустили бы в списке. Потом голосуете.<br><br>
+    <strong>4. Ранжирование</strong> — когда варианты похожи. Каждый ранжирует топ; если ни у кого нет большинства, нижний выбывает, а его голоса перетекают ко вторым выборам. Реально полезно, когда, скажем, две OSR-игры тянут одних и тех же избирателей.
+    </p></div>
+    <div class="setting-block"><p>Для большинства групп <strong>approval-голосование</strong> — золотая середина: мало драмы, нет расщепления голосов, а победитель — то, с чем готов жить весь стол.</p></div>
+
+    <div class="section-title">Версия за десять минут</div>
+    <div class="setting-block"><p><a href="${toolHref}">Session Zero</a> построен вокруг approval-голосования, потому что именно этот формат выдерживает реальные группы. Добавьте игроков (только имена — без аккаунтов), каждый листает каталог из ${SYSTEM_COUNT}+ систем с честными, написанными вручную описаниями и отмечает те, в которые правда готов сыграть. Страница результатов показывает шортлист по голосам. Выбираете победителя — или спорите за топ-3 под пиццу, только теперь спор идёт между тремя играми, которые все уже одобрили, а не с нуля.</p></div>
+
+    <div class="vote-cta vote-cta-top">
+      <a href="${toolHref}" class="vote-cta-btn" data-gc-event="cta-vote-guide" data-gc-title="Guide → tool">Запустить голосование с группой →</a>
+    </div>
+
+    <div class="section-title">Если не знаете, с чего начать</div>
+    <div class="setting-block"><p>Половина ступора — это просто незнание, что вообще есть. Несколько направлений по тому, чего хочет ваша группа:</p></div>
+    <div class="setting-block"><p>
+    <strong>Лёгкие правила, сел-и-играешь:</strong> <a href="${sys('cairn')}">Cairn</a>, <a href="${sys('mausritter')}">Mausritter</a>, <a href="${sys('mork-borg')}">Mörk Borg</a> — правила объясняются за пять минут.<br>
+    <strong>История важнее цифр:</strong> <a href="${sys('blades')}">Blades in the Dark</a>, <a href="${sys('heart')}">Heart</a> — механики толкают сюжет, а не стат-блоки.<br>
+    <strong>Хоррор на напряжённый вечер:</strong> <a href="${sys('mothership')}">Mothership</a>, <a href="${sys('call-of-cthulhu')}">Call of Cthulhu</a> — два очень разных вкуса ужаса.<br>
+    <strong>Один вечер, без обязательств:</strong> <a href="${sys('the-wretched')}">The Wretched</a>, <a href="${sys('last-tea-shop')}">Last Tea Shop</a> — ваншоты, которые закрываются за одну сессию.<br>
+    <strong>Соло или между сессиями:</strong> смотрите <a href="${coll('best-solo-ttrpgs')}">лучшие соло-TTRPG</a>.<br>
+    <strong>Олдскульный данжен-вайб:</strong> смотрите <a href="${coll('osr-tabletop-rpgs')}">OSR-системы</a>.
+    </p></div>
+
+    <div class="section-title">Три правила, чтобы спор не начался заново</div>
+    <div class="setting-block"><p>
+    <strong>Сначала определите масштаб.</strong> Ваншот, мини-арка или открытая кампания — проговорите это вслух до голосования. На три сессии и на три года подписываются по-разному.<br><br>
+    <strong>Дайте право вето, не только голос.</strong> Одно честное «мне это не зайдёт» лучше узнать до первой сессии, а не на середине.<br><br>
+    <strong>Ограничьте время.</strong> Дайте на решение десять минут и жёсткий дедлайн. Бесконечное обсуждение — это ровно то, как побеждает вариант по умолчанию (снова D&amp;D), измором.
+    </p></div>
+
+    <div class="section-title">FAQ</div>
+    ${faqHTML}
+
+    <div class="vote-cta">
+      <a href="${toolHref}" class="vote-cta-btn" data-gc-event="cta-vote-guide" data-gc-title="Guide → tool">Запустить голосование группы →</a>
+      <p class="vote-cta-sub">Бесплатно, без регистрации — все голосуют, группа видит шортлист.</p>
+    </div>
+  `;
+
+  const body = lang === 'en' ? bodyEn : bodyRu;
+
+  const articleLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    'headline': headline,
+    'description': desc,
+    'url': canonical,
+    'inLanguage': lang,
+    'author': { '@type': 'Person', 'name': 'Kejid' },
+    'publisher': { '@type': 'Organization', 'name': 'Session Zero', 'url': `${SITE}/` },
+    'mainEntityOfPage': canonical,
+  };
+  const faqLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': faq.map(([q, a]) => ({ '@type': 'Question', 'name': q, 'acceptedAnswer': { '@type': 'Answer', 'text': a } })),
+  };
+
+  return `<!DOCTYPE html>
+<html lang="${lang}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${escapeHtml(title)}</title>
+<meta name="description" content="${escapeHtml(desc)}">
+<link rel="canonical" href="${escapeHtml(canonical)}">
+<link rel="alternate" hreflang="en" href="${escapeHtml(enUrl)}">
+<link rel="alternate" hreflang="ru" href="${escapeHtml(ruUrl)}">
+<link rel="alternate" hreflang="x-default" href="${escapeHtml(enUrl)}">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:url" content="${escapeHtml(canonical)}">
+<meta property="og:title" content="${escapeHtml(title)}">
+<meta property="og:description" content="${escapeHtml(desc)}">
+<meta property="og:image" content="${escapeHtml(ogImage)}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="${escapeHtml(HOMEPAGE_OG_ALT)}">
+<meta property="og:locale" content="${lang === 'ru' ? 'ru_RU' : 'en_US'}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${escapeHtml(title)}">
+<meta name="twitter:description" content="${escapeHtml(desc)}">
+<meta name="twitter:image" content="${escapeHtml(ogImage)}">
+<meta name="twitter:image:alt" content="${escapeHtml(HOMEPAGE_OG_ALT)}">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap"></noscript>
+<link rel="stylesheet" href="/style.min.css">
+<script defer src="/lib/lucide.min.js"></script>
+<script type="application/ld+json">${JSON.stringify(articleLd)}</script>
+<script type="application/ld+json">${JSON.stringify(faqLd)}</script>
+</head>
+<body class="static-page">
+<header class="static-header">
+  <a href="${homeHref}" class="back-link">${escBody(S.back_to_catalog)}</a>
+  <div class="lang-switch">
+    <a href="/${GUIDE_SLUG}.html"${enActive}>${S.lang_en}</a>
+    <a href="/ru/${GUIDE_SLUG}.html"${ruActive}>${S.lang_ru}</a>
+  </div>
+</header>
+<main class="static-main">
+  <article class="static-article">${body}</article>
+</main>
+<footer class="static-footer">
+  <a href="${homeHref}">${escBody(S.footer_home)}</a> ·
+  <a href="${lang === 'ru' ? '/ru/about.html' : '/about.html'}">${escBody(S.footer_about)}</a> ·
   <a href="https://github.com/kejid/sessionzero" target="_blank" rel="noopener">GitHub</a>
 </footer>
 ${CTA_TRACK_SCRIPT}
@@ -1018,6 +1253,16 @@ function renderSitemap() {
   urls.push({
     loc: `${SITE}/ru/about.html`, priority: '0.6', changefreq: 'monthly',
     alts: { en: `${SITE}/about.html`, ru: `${SITE}/ru/about.html` },
+    lastmod: aboutMtime,
+  });
+  urls.push({
+    loc: `${SITE}/${GUIDE_SLUG}.html`, priority: '0.8', changefreq: 'monthly',
+    alts: { en: `${SITE}/${GUIDE_SLUG}.html`, ru: `${SITE}/ru/${GUIDE_SLUG}.html` },
+    lastmod: aboutMtime,
+  });
+  urls.push({
+    loc: `${SITE}/ru/${GUIDE_SLUG}.html`, priority: '0.8', changefreq: 'monthly',
+    alts: { en: `${SITE}/${GUIDE_SLUG}.html`, ru: `${SITE}/ru/${GUIDE_SLUG}.html` },
     lastmod: aboutMtime,
   });
   for (const id of ids) {
@@ -1105,6 +1350,10 @@ for (const id of ids) {
 
 fs.writeFileSync(ABOUT_EN, renderAbout('en'), 'utf8');
 fs.writeFileSync(ABOUT_RU, renderAbout('ru'), 'utf8');
+written += 2;
+
+fs.writeFileSync(GUIDE_EN, renderGuidePage('en'), 'utf8');
+fs.writeFileSync(GUIDE_RU, renderGuidePage('ru'), 'utf8');
 written += 2;
 
 for (const slug of collectionSlugs) {
