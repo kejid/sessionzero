@@ -105,7 +105,7 @@
             <button onclick="setLang('en')" class="setup-lang-btn" id="setup-lang-en">EN</button>
             <button onclick="setLang('ru')" class="setup-lang-btn" id="setup-lang-ru">RU</button>
         </div>
-        <h1 data-i18n="setup_title">Session Zero</h1>
+        <h2 data-i18n="setup_title">Session Zero</h2>
         <p data-i18n="setup_subtitle">Настрой группу перед началом. Каждый игрок сможет голосовать за системы, которые хочет попробовать.</p>
         <div class="setup-field">
             <label data-i18n="setup_players_label">Количество игроков</label>
@@ -226,7 +226,7 @@
 <!-- Editor Overlay -->
 <div id="editor-overlay" class="editor-overlay hidden">
     <div class="editor-card">
-        <h1 id="editor-heading" data-i18n="editor_title">Новая система</h1>
+        <h2 id="editor-heading" data-i18n="editor_title">Новая система</h2>
         <input type="hidden" id="editor-id" value="">
         <div class="setup-field">
             <label data-i18n="editor_name">Название</label>
@@ -320,7 +320,7 @@
 <div id="sys-selector-overlay" class="sys-selector-overlay hidden">
     <div class="sys-selector-card">
         <div class="sys-selector-header">
-            <h1 data-i18n="sys_selector_title">Управление списком</h1>
+            <h2 data-i18n="sys_selector_title">Управление списком</h2>
             <div class="setup-lang-toggle">
                 <button onclick="setLang('en')" class="setup-lang-btn" id="sel-lang-en">EN</button>
                 <button onclick="setLang('ru')" class="setup-lang-btn" id="sel-lang-ru">RU</button>
@@ -415,7 +415,7 @@
 <!-- Export Overlay -->
 <div id="export-overlay" class="editor-overlay hidden" onclick="if(event.target===this)closeExport()">
     <div class="editor-card export-card">
-        <h1 data-i18n="export_title">Экспорт списка</h1>
+        <h2 data-i18n="export_title">Экспорт списка</h2>
         <textarea id="export-text" readonly rows="14"></textarea>
         <div class="export-actions">
             <button id="export-copy-btn" class="setup-start-btn" onclick="copyExport()" data-i18n="btn_copy">Копировать</button>

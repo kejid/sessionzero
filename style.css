@@ -55,7 +55,7 @@ body {
     max-width: 560px;
     width: 90%;
 }
-.setup-card h1 {
+.setup-card h2 {
     font-family: 'Unbounded', sans-serif;
     font-size: 28px;
     color: var(--accent);
@@ -1462,7 +1462,7 @@ body.browse-mode .setup-players-btn { display: flex; }
     .sidebar-backdrop.open { display: block; }
 
     .setup-card { padding: 28px 24px; }
-    .setup-card h1 { font-size: 24px; }
+    .setup-card h2 { font-size: 24px; }
     .setup-card p { margin-bottom: 20px; font-size: 14px; }
     .setup-overlay { padding: 24px 12px; }
     .setup-players-list { gap: 8px; }
@@ -1547,7 +1547,7 @@ body.browse-mode .setup-players-btn { display: flex; }
 
     .setup-overlay { padding: 16px 8px; }
     .setup-card { padding: 24px 18px; width: 100%; border-radius: 16px; }
-    .setup-card h1 { font-size: 20px; }
+    .setup-card h2 { font-size: 20px; }
     .setup-card p { font-size: 13px; margin-bottom: 16px; }
     .setup-field label { font-size: 11px; letter-spacing: 1.5px; margin-bottom: 6px; }
     .setup-field input, .setup-field select { padding: 10px 12px; font-size: 15px; }
@@ -1580,7 +1580,7 @@ body.browse-mode .setup-players-btn { display: flex; }
     max-width: 640px;
     width: 100%;
 }
-.editor-card h1 {
+.editor-card h2 {
     font-family: 'Unbounded', sans-serif;
     font-size: 24px;
     color: var(--accent);
@@ -1721,7 +1721,7 @@ body.browse-mode .setup-players-btn { display: flex; }
 .sys-selector-header .setup-lang-toggle {
     margin-bottom: 0;
 }
-.sys-selector-card h1 {
+.sys-selector-card h2 {
     font-family: 'Unbounded', sans-serif;
     font-size: 22px;
     color: var(--accent);
