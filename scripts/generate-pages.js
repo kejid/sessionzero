@@ -34,7 +34,7 @@ const SITE = 'https://sessionzero.games';
 // sendBeacon is intentionally not used: it forces a POST, but GoatCounter's
 // /count endpoint is GET-based. Respects goatcounter.filter() (skips localhost
 // /bots) and degrades to a plain Image if fetch is unavailable.
-const CTA_TRACK_SCRIPT = `<script>(function(){function s(el){var g=window.goatcounter;if(!g||!g.url)return;if(g.filter&&g.filter())return;var u=g.url({path:el.getAttribute('data-gc-event'),title:el.getAttribute('data-gc-title')||'',event:true});if(!u)return;try{if(window.fetch){fetch(u,{method:'GET',mode:'no-cors',credentials:'omit',keepalive:true});return;}}catch(e){}new Image().src=u;}function b(){var e=document.querySelectorAll('[data-gc-event]');for(var i=0;i<e.length;i++){e[i].addEventListener('click',function(){s(this);});e[i].addEventListener('auxclick',function(){s(this);});}}if(document.readyState!=='loading')b();else document.addEventListener('DOMContentLoaded',b);})();</script>`;
+const CTA_TRACK_SCRIPT = `<script>(function(){function s(el){var g=window.goatcounter;if(!g||!g.url)return;if(g.filter&&g.filter())return;var u=g.url({path:el.getAttribute('data-gc-event'),title:el.getAttribute('data-gc-title')||'',event:true});if(!u)return;var img=function(){try{new Image().src=u;}catch(e){}};if(window.fetch){try{fetch(u,{method:'GET',mode:'no-cors',credentials:'omit',keepalive:true}).catch(img);}catch(e){img();}}else{img();}}function b(){var e=document.querySelectorAll('[data-gc-event]');for(var i=0;i<e.length;i++){e[i].addEventListener('click',function(){s(this);});e[i].addEventListener('auxclick',function(ev){if(ev.button===1)s(this);});}}if(document.readyState!=='loading')b();else document.addEventListener('DOMContentLoaded',b);})();</script>`;
 const TODAY = '2026-04-22';
 const HOMEPAGE_OG = SITE + '/og/home.jpg';
 const HOMEPAGE_OG_ALT = 'Session Zero — TTRPG group voting tool';
@@ -62,6 +62,7 @@ for (const f of files) {
 }
 
 const ids = Object.keys(SYSTEMS).sort();
+const SYSTEM_COUNT = ids.length;
 console.log(`[generate-pages] loaded ${ids.length} systems`);
 
 // Intent / decision landing pages ("best solo TTRPGs", "OSR vs PbtA", ...).
@@ -225,7 +226,7 @@ const STR = {
     lang_en: 'EN',
     lang_ru: 'RU',
     about_title: 'About — Session Zero',
-    about_meta_desc: 'Can\'t agree on what TTRPG to play next? Session Zero is a free tool that lets your group vote together and see a shortlist. 44 systems, no signup, bilingual.',
+    about_meta_desc: `Can't agree on what TTRPG to play next? Session Zero is a free tool that lets your group vote together and see a shortlist. ${SYSTEM_COUNT} systems, no signup, bilingual.`,
     article_genre: 'Tabletop role-playing game',
     author_credit: 'Written and curated by <a href="https://github.com/kejid" target="_blank" rel="noopener">Kejid</a> — TTRPG player &amp; GM',
   },
@@ -257,7 +258,7 @@ const STR = {
     lang_en: 'EN',
     lang_ru: 'RU',
     about_title: 'О проекте — Session Zero',
-    about_meta_desc: 'Не можете договориться, во что играть следующей кампанией? Session Zero — бесплатный инструмент для группового голосования с шортлистом. 44 системы, без регистрации, билингв.',
+    about_meta_desc: `Не можете договориться, во что играть следующей кампанией? Session Zero — бесплатный инструмент для группового голосования с шортлистом. ${SYSTEM_COUNT}+ систем, без регистрации, билингв.`,
     article_genre: 'Настольная ролевая игра',
     author_credit: 'Написано и курируется <a href="https://github.com/kejid" target="_blank" rel="noopener">Kejid</a> — игрок и ГМ в TTRPG',
   },
@@ -491,7 +492,8 @@ function renderSystemPage(id, sys, lang) {
   const ctaTitle = `${name} → tool`;
   const ctaAttrs = `data-gc-event="${escapeHtml(ctaEvent)}" data-gc-title="${escapeHtml(ctaTitle)}"`;
   // RU pages hand the chosen language to the app via ?lang=ru (see i18n.js).
-  const toolHref = `/${lang === 'ru' ? '?lang=ru' : ''}#${escapeHtml(id)}`;
+  const homeHref = `/${lang === 'ru' ? '?lang=ru' : ''}`;
+  const toolHref = `${homeHref}#${escapeHtml(id)}`;
 
   // Relative-ish path to /style.css and /favicon.svg — we serve from root.
   // Using absolute paths (/style.css) works on GitHub Pages since we own the domain root.
@@ -534,7 +536,7 @@ function renderSystemPage(id, sys, lang) {
 </head>
 <body class="static-page">
 <header class="static-header">
-  <a href="/" class="back-link">${escBody(S.back_to_catalog)}</a>
+  <a href="${homeHref}" class="back-link">${escBody(S.back_to_catalog)}</a>
   <div class="lang-switch">
     <a href="${escapeHtml(enHref)}"${enActive}>${S.lang_en}</a>
     <a href="${escapeHtml(ruHref)}"${ruActive}>${S.lang_ru}</a>
@@ -576,7 +578,7 @@ function renderSystemPage(id, sys, lang) {
   </article>
 </main>
 <footer class="static-footer">
-  <a href="/">${escBody(S.footer_home)}</a> ·
+  <a href="${homeHref}">${escBody(S.footer_home)}</a> ·
   <a href="${lang === 'ru' ? '/ru/about.html' : '/about.html'}">${escBody(S.footer_about)}</a> ·
   <a href="https://github.com/kejid/sessionzero" target="_blank" rel="noopener">GitHub</a>
 </footer>
@@ -590,6 +592,7 @@ ${CTA_TRACK_SCRIPT}
 // ---------- 5. About pages ----------
 function renderAbout(lang) {
   const S = STR[lang];
+  const homeHref = `/${lang === 'ru' ? '?lang=ru' : ''}`;
   const canonical = lang === 'en' ? `${SITE}/about.html` : `${SITE}/ru/about.html`;
   const enUrl = `${SITE}/about.html`;
   const ruUrl = `${SITE}/ru/about.html`;
@@ -602,7 +605,7 @@ function renderAbout(lang) {
     <p class="tagline">A small tool that helps your tabletop RPG group decide what to play next.</p>
 
     <div class="section-title">What is Session Zero?</div>
-    <div class="setting-block"><p>Session Zero solves a specific problem: your TTRPG group can't agree on what to play next. One player wants D&amp;D 5e, another wants something weird, the GM wants prep-light. Session Zero compresses that discussion into a structured vote. Each player browses human-written summaries of 44+ systems (OSR, PbtA, FitD, narrative, solo, sci-fi, horror, weird), marks the ones they'd actually be excited about, and the group sees a shortlist together. No accounts, no data collection — everything lives in your browser.</p></div>
+    <div class="setting-block"><p>Session Zero solves a specific problem: your TTRPG group can't agree on what to play next. One player wants D&amp;D 5e, another wants something weird, the GM wants prep-light. Session Zero compresses that discussion into a structured vote. Each player browses human-written summaries of ${SYSTEM_COUNT}+ systems (OSR, PbtA, FitD, narrative, solo, sci-fi, horror, weird), marks the ones they'd actually be excited about, and the group sees a shortlist together. No accounts, no data collection — everything lives in your browser.</p></div>
 
     <div class="section-title">The problem</div>
     <div class="setting-block"><p>Picking a new game as a group is the single biggest reason campaigns die before session one. One player wants D&amp;D 5e, another wants something weird, the GM wants prep-light. The conversation drags across three Discord channels for two weeks and then the group just... plays D&amp;D again, or doesn't play at all. Session Zero collapses that conversation into ten minutes of structured voting.</p></div>
@@ -707,7 +710,7 @@ function renderAbout(lang) {
 </head>
 <body class="static-page">
 <header class="static-header">
-  <a href="/" class="back-link">${escBody(S.back_to_catalog)}</a>
+  <a href="${homeHref}" class="back-link">${escBody(S.back_to_catalog)}</a>
   <div class="lang-switch">
     <a href="/about.html"${enActive}>${S.lang_en}</a>
     <a href="/ru/about.html"${ruActive}>${S.lang_ru}</a>
@@ -717,7 +720,7 @@ function renderAbout(lang) {
   <article class="static-article">${body}</article>
 </main>
 <footer class="static-footer">
-  <a href="/">${escBody(S.footer_home)}</a> ·
+  <a href="${homeHref}">${escBody(S.footer_home)}</a> ·
   <a href="${lang === 'ru' ? '/ru/about.html' : '/about.html'}">${escBody(S.footer_about)}</a> ·
   <a href="https://github.com/kejid/sessionzero" target="_blank" rel="noopener">GitHub</a>
 </footer>
@@ -852,7 +855,7 @@ ${CTA_TRACK_SCRIPT}
 // Copy here is condensed from the author's hand-written RU about page.
 function renderRuHome() {
   const title = 'Во что поиграть всей группой? Голосование по TTRPG | Session Zero';
-  const metaDesc = 'Не можете выбрать настольную ролевую игру для следующей кампании? Session Zero — бесплатный инструмент: каждый игрок голосует за системы, а группа видит общий шортлист. 51 система, без регистрации.';
+  const metaDesc = `Не можете выбрать настольную ролевую игру для следующей кампании? Session Zero — бесплатный инструмент: каждый игрок голосует за системы, а группа видит общий шортлист. ${SYSTEM_COUNT}+ систем, без регистрации.`;
   const canonical = `${SITE}/ru/`;
   const ogImage = `${SITE}/og/ru/home.jpg`;
 
@@ -931,7 +934,7 @@ function renderRuHome() {
     <h1>Во что поиграть всей группой?</h1>
     <p class="tagline">Session Zero помогает TTRPG-группе выбрать систему для следующей кампании — без бесконечных споров в чате.</p>
 
-    <div class="setting-block"><p>Один игрок хочет D&amp;D, другой — что-то необычное, ГМ хочет минимум препа. Session Zero сжимает этот спор в короткое голосование: каждый отмечает системы, в которые хочет сыграть, а группа видит общий шортлист. Без регистрации, всё хранится в браузере. В каталоге 51 система — OSR, PbtA, Year Zero, нарративные, соло, sci-fi, хоррор.</p></div>
+    <div class="setting-block"><p>Один игрок хочет D&amp;D, другой — что-то необычное, ГМ хочет минимум препа. Session Zero сжимает этот спор в короткое голосование: каждый отмечает системы, в которые хочет сыграть, а группа видит общий шортлист. Без регистрации, всё хранится в браузере. В каталоге ${SYSTEM_COUNT}+ систем — OSR, PbtA, Year Zero, нарративные, соло, sci-fi, хоррор.</p></div>
 
     <div class="section-title">Как это работает</div>
     <div class="setting-block"><p>
