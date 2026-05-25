@@ -2199,3 +2199,18 @@ a.nav-item.nav-system-link.active { color: var(--accent); }
     opacity: 0;
     pointer-events: none;
 }
+
+/* ---- CLS guard: Lucide loads deferred and swaps each <i data-lucide> for an
+   <svg> after first paint. Reserve the exact final icon size on the placeholder
+   so that swap doesn't grow icon rows and shift the layout. Sizes mirror the
+   `… svg { width/height }` rules above; 24px default matches Lucide's default. */
+i[data-lucide] { display: inline-block; vertical-align: middle; flex-shrink: 0; width: 24px; height: 24px; }
+.grouping-btn i[data-lucide], .custom-badge i[data-lucide] { width: 12px; height: 12px; }
+.nav-search i[data-lucide], .playstyle-tag i[data-lucide], .rc-action-btn i[data-lucide],
+.export-btn i[data-lucide], .tag-filter-header > i[data-lucide], .tag-filter-btn i[data-lucide],
+.setup-players-btn i[data-lucide], .custom-edit-btn i[data-lucide], .sys-tag-icons i[data-lucide],
+.sys-selector-tag-details summary i[data-lucide] { width: 14px; height: 14px; }
+.card h4 i[data-lucide] { width: 18px; height: 18px; }
+.view-toggle-btn i[data-lucide], .catalog-btn i[data-lucide], .vote-btn i[data-lucide],
+.results-btn i[data-lucide], .pres-toggle i[data-lucide], .sidebar-btn i[data-lucide],
+.pres-exit i[data-lucide], .pres-nav i[data-lucide], .reset-btn-sidebar i[data-lucide] { width: 16px; height: 16px; }
