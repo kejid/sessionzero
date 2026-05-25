@@ -314,7 +314,10 @@ const LANG = {
   }
 };
 
-let currentLang = localStorage.getItem('ttrpg-lang') || ((navigator.language || '').toLowerCase().startsWith('ru') ? 'ru' : 'en');
+const _urlLang = (new URLSearchParams(location.search).get('lang') || '').toLowerCase();
+let currentLang = (_urlLang === 'ru' || _urlLang === 'en')
+    ? _urlLang
+    : (localStorage.getItem('ttrpg-lang') || ((navigator.language || '').toLowerCase().startsWith('ru') ? 'ru' : 'en'));
 
 function t(key) {
     return (LANG[currentLang] && LANG[currentLang][key]) || (LANG['ru'] && LANG['ru'][key]) || key;
