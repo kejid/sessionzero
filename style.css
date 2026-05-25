@@ -745,6 +745,19 @@ body:not(.presentation) .pres-counter { display: none; }
     gap: 16px;
     min-height: 50vh;
 }
+/* Before JS injects the cards the grid is empty; reserve a full screen so the
+   SEO footer below it starts off-screen. Otherwise the footer paints above the
+   fold, then card injection grows the grid and pushes the footer down ~3600px
+   — that drop is the entire CLS (0.25). :empty stops matching once cards exist,
+   so users who hid most systems don't get a tall blank gap. */
+.results-grid:empty { min-height: 100vh; }
+.results-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--dim);
+    padding: 72px 20px;
+    font-size: 15px;
+}
 @media (max-width: 1000px) { .results-grid { grid-template-columns: repeat(2, 1fr); } }
 .result-card {
     background: var(--card);

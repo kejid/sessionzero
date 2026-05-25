@@ -79,13 +79,15 @@ function imgProxy(url, opts) {
     if (opts.w) params += '&w=' + opts.w;
     if (opts.h) params += '&h=' + opts.h;
     if (opts.fit) params += '&fit=' + opts.fit;
-    params += '&output=webp&q=80';
+    params += '&output=webp&q=' + (opts.q || 80);
     return 'https://wsrv.nl/?' + params;
 }
 
-function heroThumb(url) { return imgProxy(url, { w: 400, h: 200, fit: 'cover' }); }
+// Grid/gallery thumbnails are small, lazy and below the fold — q=65 trims bytes
+// with no visible loss. heroFull stays q=80 (shown large on system pages).
+function heroThumb(url) { return imgProxy(url, { w: 400, h: 200, fit: 'cover', q: 65 }); }
 function heroFull(url) { return imgProxy(url, { w: 1200, h: 600, fit: 'cover' }); }
-function galleryThumb(url) { return imgProxy(url, { w: 300, h: 300, fit: 'cover' }); }
+function galleryThumb(url) { return imgProxy(url, { w: 300, h: 300, fit: 'cover', q: 65 }); }
 
 // ============ RESOURCE ICONS & LABELS ============
 const RES_ICONS = { link: 'external-link', sheet: 'file-text', quickstart: 'book-open', rules: 'scroll-text', map: 'map', tool: 'wrench' };
@@ -895,7 +897,9 @@ function renderResults() {
         </div>`;
     }
 
-    const html = systems.map((s, i) => renderCard(s, i, systems.length)).join('');
+    const html = systems.length
+        ? systems.map((s, i) => renderCard(s, i, systems.length)).join('')
+        : `<div class="results-empty">${t('results_empty')}</div>`;
 
     grid.innerHTML = html;
     refreshIcons();
