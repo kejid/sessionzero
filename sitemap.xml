@@ -3,11 +3,11 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://sessionzero.games/</loc>
-    <lastmod>2026-05-24</lastmod>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/"/>
   </url>
   <url>
@@ -945,5 +945,50 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/wildsea.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/system/wildsea.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/system/wildsea.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/ru/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/collections/best-solo-ttrpgs.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/collections/best-solo-ttrpgs.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/collections/best-solo-ttrpgs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/collections/best-solo-ttrpgs.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/ru/collections/best-solo-ttrpgs.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/collections/best-solo-ttrpgs.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/collections/best-solo-ttrpgs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/collections/best-solo-ttrpgs.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/collections/osr-tabletop-rpgs.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/collections/osr-tabletop-rpgs.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/collections/osr-tabletop-rpgs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/collections/osr-tabletop-rpgs.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/ru/collections/osr-tabletop-rpgs.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/collections/osr-tabletop-rpgs.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/collections/osr-tabletop-rpgs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/collections/osr-tabletop-rpgs.html"/>
   </url>
 </urlset>

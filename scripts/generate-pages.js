@@ -18,6 +18,9 @@ const DATA_DIR = path.join(ROOT, 'data', 'systems');
 const OUT_SYSTEM = path.join(ROOT, 'system');
 const OUT_RU = path.join(ROOT, 'ru');
 const OUT_RU_SYSTEM = path.join(OUT_RU, 'system');
+const OUT_COLLECTIONS = path.join(ROOT, 'collections');
+const OUT_RU_COLLECTIONS = path.join(OUT_RU, 'collections');
+const RU_HOME = path.join(OUT_RU, 'index.html');
 const SITEMAP = path.join(ROOT, 'sitemap.xml');
 const ABOUT_EN = path.join(ROOT, 'about.html');
 const ABOUT_RU = path.join(OUT_RU, 'about.html');
@@ -38,8 +41,10 @@ const HOMEPAGE_OG_ALT = 'Session Zero — TTRPG group voting tool';
 
 // ---------- 1. Load systems via vm sandbox ----------
 const SYSTEMS = {};
+const COLLECTIONS = {};
 const sandbox = vm.createContext({
-  registerSystem: (id, data) => { SYSTEMS[id] = data; }
+  registerSystem: (id, data) => { SYSTEMS[id] = data; },
+  registerCollection: (slug, config) => { COLLECTIONS[slug] = config; }
 });
 
 const files = fs.readdirSync(DATA_DIR)
@@ -58,6 +63,37 @@ for (const f of files) {
 
 const ids = Object.keys(SYSTEMS).sort();
 console.log(`[generate-pages] loaded ${ids.length} systems`);
+
+// Intent / decision landing pages ("best solo TTRPGs", "OSR vs PbtA", ...).
+// Optional file — prose is hand-written by the author; the generator only
+// assembles SEO scaffolding + the system list pulled from the catalog.
+const COLLECTIONS_FILE = path.join(ROOT, 'data', 'collections.js');
+if (fs.existsSync(COLLECTIONS_FILE)) {
+  try {
+    vm.runInContext(fs.readFileSync(COLLECTIONS_FILE, 'utf8'), sandbox, { filename: 'collections.js' });
+  } catch (e) {
+    console.error('[generate-pages] failed to parse collections.js:', e.message);
+    process.exit(1);
+  }
+}
+const collectionSlugs = Object.keys(COLLECTIONS).sort();
+console.log(`[generate-pages] loaded ${collectionSlugs.length} collections`);
+
+// Resolve which systems belong to a collection: explicit ids, or every
+// system in a grouping scheme (optionally a specific key within it).
+function resolveCollectionSystems(filter) {
+  if (!filter) return [];
+  if (filter.ids) return filter.ids.filter(id => SYSTEMS[id]);
+  const matches = [];
+  for (const id of Object.keys(SYSTEMS)) {
+    const g = SYSTEMS[id].groups && SYSTEMS[id].groups[filter.scheme];
+    if (!g) continue;
+    if (filter.key && g.key !== filter.key) continue;
+    matches.push({ id, order: Number(g.order) || 999 });
+  }
+  matches.sort((a, b) => a.order - b.order || a.id.localeCompare(b.id));
+  return matches.map(m => m.id);
+}
 
 // ---------- 2. Helpers ----------
 function escapeHtml(s) {
@@ -180,6 +216,9 @@ const STR = {
     vote_cta: name => `Vote on ${name} with your group →`,
     vote_cta_short: 'Vote with your group →',
     vote_cta_sub: 'Open in Session Zero to let every player vote and see the results.',
+    coll_systems_title: 'Systems in this list',
+    coll_breadcrumb: 'Guides',
+    coll_cta: 'Open Session Zero and vote with your group →',
     footer_home: 'Home',
     footer_about: 'About',
     breadcrumb_home: 'Session Zero',
@@ -209,6 +248,9 @@ const STR = {
     vote_cta: name => `Проголосуйте за ${name} всей группой →`,
     vote_cta_short: 'Голосовать всей группой →',
     vote_cta_sub: 'Откройте в Session Zero, чтобы каждый игрок проголосовал и увидел итоги.',
+    coll_systems_title: 'Системы из этой подборки',
+    coll_breadcrumb: 'Гайды',
+    coll_cta: 'Открыть Session Zero и проголосовать всей группой →',
     footer_home: 'Главная',
     footer_about: 'О проекте',
     breadcrumb_home: 'Session Zero',
@@ -448,6 +490,8 @@ function renderSystemPage(id, sys, lang) {
   const ctaEvent = `cta-vote-${id}`;
   const ctaTitle = `${name} → tool`;
   const ctaAttrs = `data-gc-event="${escapeHtml(ctaEvent)}" data-gc-title="${escapeHtml(ctaTitle)}"`;
+  // RU pages hand the chosen language to the app via ?lang=ru (see i18n.js).
+  const toolHref = `/${lang === 'ru' ? '?lang=ru' : ''}#${escapeHtml(id)}`;
 
   // Relative-ish path to /style.css and /favicon.svg — we serve from root.
   // Using absolute paths (/style.css) works on GitHub Pages since we own the domain root.
@@ -508,7 +552,7 @@ function renderSystemPage(id, sys, lang) {
         <div class="qs"><span class="qs-label">${escBody(S.qs_complexity)}</span><div class="complexity-bar">${complexityBar(sys.complexity)}</div></div>
     </div>
     <div class="vote-cta vote-cta-top">
-      <a href="/#${escapeHtml(id)}" class="vote-cta-btn" ${ctaAttrs}>${escBody(S.vote_cta_short)}</a>
+      <a href="${toolHref}" class="vote-cta-btn" ${ctaAttrs}>${escBody(S.vote_cta_short)}</a>
     </div>
     ${description ? `<div class="section-title">${escBody(S.section_system)}</div>
     <div class="setting-block"><p>${miniMd(description)}</p></div>` : ''}
@@ -526,7 +570,7 @@ function renderSystemPage(id, sys, lang) {
     <p class="author-credit">${S.author_credit}</p>
     ${similarHTML}
     <div class="vote-cta">
-      <a href="/#${escapeHtml(id)}" class="vote-cta-btn" ${ctaAttrs}>${escBody(S.vote_cta(name))}</a>
+      <a href="${toolHref}" class="vote-cta-btn" ${ctaAttrs}>${escBody(S.vote_cta(name))}</a>
       <p class="vote-cta-sub">${escBody(S.vote_cta_sub)}</p>
     </div>
   </article>
@@ -607,7 +651,7 @@ function renderAbout(lang) {
     <div class="setting-block"><p>Цели: держать каталог курированным (не список-всех-систем — Wargamer делает это лучше), добавлять статьи-сравнения для конкретных задач (соло, маленькие группы, OSR vs PbtA), держать всё бесплатным и без рекламы. Если хочется поддержать — <a href="https://github.com/kejid/sessionzero" target="_blank" rel="noopener">поставьте звёзду</a> или расскажите своей группе.</p></div>
 
     <div class="vote-cta">
-      <a href="/" class="vote-cta-btn" data-gc-event="cta-vote-about" data-gc-title="About → tool">Начать Session Zero с группой →</a>
+      <a href="/?lang=ru" class="vote-cta-btn" data-gc-event="cta-vote-about" data-gc-title="About → tool">Начать Session Zero с группой →</a>
     </div>
   `;
 
@@ -684,6 +728,246 @@ ${CTA_TRACK_SCRIPT}
 `;
 }
 
+// ---------- 5b. Collection (intent / decision) pages ----------
+function renderCollectionPage(slug, cfg, lang) {
+  const S = STR[lang];
+  const title = (lang === 'ru' ? cfg.title_ru : cfg.title) || cfg.title || slug;
+  const h1 = (lang === 'ru' ? cfg.h1_ru : cfg.h1) || title;
+  const descSource = (lang === 'ru' ? cfg.description_ru : cfg.description) || cfg.description || title;
+  const metaDesc = truncate(descSource, 155);
+  const intro = (lang === 'ru' ? cfg.intro_ru : cfg.intro) || cfg.intro || '';
+  const fullTitle = `${title} | Session Zero`;
+
+  const canonical = lang === 'en' ? `${SITE}/collections/${slug}.html` : `${SITE}/ru/collections/${slug}.html`;
+  const enUrl = `${SITE}/collections/${slug}.html`;
+  const ruUrl = `${SITE}/ru/collections/${slug}.html`;
+  const ogImage = lang === 'ru' ? `${SITE}/og/ru/home.jpg` : HOMEPAGE_OG;
+
+  const enHref = `/collections/${slug}.html`;
+  const ruHref = `/ru/collections/${slug}.html`;
+  const enActive = lang === 'en' ? ' class="active"' : '';
+  const ruActive = lang === 'ru' ? ' class="active"' : '';
+  const toolHref = `/${lang === 'ru' ? '?lang=ru' : ''}`;
+
+  const sysIds = resolveCollectionSystems(cfg.filter);
+  const cardsHTML = sysIds.map(sid => {
+    const ssys = SYSTEMS[sid];
+    const sname = ssys.name || sid;
+    const sHref = lang === 'en' ? `/system/${sid}.html` : `/ru/system/${sid}.html`;
+    return `<a href="${escapeHtml(sHref)}" class="similar-system-card">
+            <img src="${escapeHtml(`${SITE}/og/${sid}.jpg`)}" alt="${escapeHtml(sname + ' hero art')}" loading="lazy" decoding="async" fetchpriority="low">
+            <span class="similar-system-name">${escBody(sname)}</span>
+          </a>`;
+  }).join('');
+
+  const jsonLdList = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    'name': title,
+    'description': metaDesc,
+    'itemListElement': sysIds.map((sid, i) => ({
+      '@type': 'ListItem',
+      'position': i + 1,
+      'url': lang === 'en' ? `${SITE}/system/${sid}.html` : `${SITE}/ru/system/${sid}.html`,
+      'name': SYSTEMS[sid].name || sid,
+    })),
+  };
+  const jsonLdBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': STR[lang].breadcrumb_home, 'item': `${SITE}/` },
+      { '@type': 'ListItem', 'position': 2, 'name': title, 'item': canonical },
+    ],
+  };
+
+  return `<!DOCTYPE html>
+<html lang="${lang}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${escapeHtml(fullTitle)}</title>
+<meta name="description" content="${escapeHtml(metaDesc)}">
+<link rel="canonical" href="${escapeHtml(canonical)}">
+<link rel="alternate" hreflang="en" href="${escapeHtml(enUrl)}">
+<link rel="alternate" hreflang="ru" href="${escapeHtml(ruUrl)}">
+<link rel="alternate" hreflang="x-default" href="${escapeHtml(enUrl)}">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:url" content="${escapeHtml(canonical)}">
+<meta property="og:title" content="${escapeHtml(fullTitle)}">
+<meta property="og:description" content="${escapeHtml(metaDesc)}">
+<meta property="og:image" content="${escapeHtml(ogImage)}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="${escapeHtml(HOMEPAGE_OG_ALT)}">
+<meta property="og:locale" content="${lang === 'ru' ? 'ru_RU' : 'en_US'}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${escapeHtml(fullTitle)}">
+<meta name="twitter:description" content="${escapeHtml(metaDesc)}">
+<meta name="twitter:image" content="${escapeHtml(ogImage)}">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap"></noscript>
+<link rel="stylesheet" href="/style.min.css">
+<script defer src="/lib/lucide.min.js"></script>
+<script type="application/ld+json">${JSON.stringify(jsonLdList)}</script>
+<script type="application/ld+json">${JSON.stringify(jsonLdBreadcrumb)}</script>
+</head>
+<body class="static-page">
+<header class="static-header">
+  <a href="${toolHref}" class="back-link">${escBody(S.back_to_catalog)}</a>
+  <div class="lang-switch">
+    <a href="${escapeHtml(enHref)}"${enActive}>${S.lang_en}</a>
+    <a href="${escapeHtml(ruHref)}"${ruActive}>${S.lang_ru}</a>
+  </div>
+</header>
+<main class="static-main">
+  <article class="static-article">
+    <h1>${escBody(h1)}</h1>
+    ${intro ? `<div class="setting-block">${intro}</div>` : ''}
+    ${cardsHTML ? `<div class="section-title">${escBody(S.coll_systems_title)}</div>
+    <div class="similar-systems-grid">${cardsHTML}</div>` : ''}
+    <div class="vote-cta">
+      <a href="${toolHref}" class="vote-cta-btn" data-gc-event="cta-vote-coll-${escapeHtml(slug)}" data-gc-title="${escapeHtml(title)} → tool">${escBody(S.coll_cta)}</a>
+    </div>
+  </article>
+</main>
+<footer class="static-footer">
+  <a href="${toolHref}">${escBody(S.footer_home)}</a> ·
+  <a href="${lang === 'ru' ? '/ru/about.html' : '/about.html'}">${escBody(S.footer_about)}</a> ·
+  <a href="https://github.com/kejid/sessionzero" target="_blank" rel="noopener">GitHub</a>
+</footer>
+${CTA_TRACK_SCRIPT}
+<script data-goatcounter="https://kejid.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
+`;
+}
+
+// ---------- 5c. Russian homepage landing (static, indexable; funnels to /) ----------
+// Copy here is condensed from the author's hand-written RU about page.
+function renderRuHome() {
+  const title = 'Во что поиграть всей группой? Голосование по TTRPG | Session Zero';
+  const metaDesc = 'Не можете выбрать настольную ролевую игру для следующей кампании? Session Zero — бесплатный инструмент: каждый игрок голосует за системы, а группа видит общий шортлист. 51 система, без регистрации.';
+  const canonical = `${SITE}/ru/`;
+  const ogImage = `${SITE}/og/ru/home.jpg`;
+
+  const featured = ids.filter((_, i) => i % Math.max(1, Math.ceil(ids.length / 8)) === 0).slice(0, 8);
+  const cardsHTML = featured.map(sid => {
+    const sname = SYSTEMS[sid].name || sid;
+    return `<a href="/ru/system/${escapeHtml(sid)}.html" class="similar-system-card">
+            <img src="${escapeHtml(`${SITE}/og/${sid}.jpg`)}" alt="${escapeHtml(sname + ' hero art')}" loading="lazy" decoding="async" fetchpriority="low">
+            <span class="similar-system-name">${escBody(sname)}</span>
+          </a>`;
+  }).join('');
+
+  const collLinks = collectionSlugs.map(slug => {
+    const c = COLLECTIONS[slug];
+    return `<li><a href="/ru/collections/${escapeHtml(slug)}.html">${escBody(c.title_ru || c.title || slug)}</a></li>`;
+  }).join('');
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    'name': 'Session Zero',
+    'url': canonical,
+    'description': metaDesc,
+    'applicationCategory': 'GameApplication',
+    'operatingSystem': 'Any (web-based)',
+    'offers': { '@type': 'Offer', 'price': '0' },
+    'inLanguage': 'ru',
+  };
+
+  return `<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${escapeHtml(title)}</title>
+<meta name="description" content="${escapeHtml(metaDesc)}">
+<link rel="canonical" href="${escapeHtml(canonical)}">
+<link rel="alternate" hreflang="en" href="${SITE}/">
+<link rel="alternate" hreflang="ru" href="${SITE}/ru/">
+<link rel="alternate" hreflang="x-default" href="${SITE}/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:url" content="${escapeHtml(canonical)}">
+<meta property="og:title" content="${escapeHtml(title)}">
+<meta property="og:description" content="${escapeHtml(metaDesc)}">
+<meta property="og:image" content="${escapeHtml(ogImage)}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="${escapeHtml(HOMEPAGE_OG_ALT)}">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${escapeHtml(title)}">
+<meta name="twitter:description" content="${escapeHtml(metaDesc)}">
+<meta name="twitter:image" content="${escapeHtml(ogImage)}">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap"></noscript>
+<link rel="stylesheet" href="/style.min.css">
+<script defer src="/lib/lucide.min.js"></script>
+<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
+</head>
+<body class="static-page">
+<header class="static-header">
+  <a href="/?lang=ru" class="back-link">Session Zero</a>
+  <div class="lang-switch">
+    <a href="/?lang=en">EN</a>
+    <a href="/ru/" class="active">RU</a>
+  </div>
+</header>
+<main class="static-main">
+  <article class="static-article">
+    <h1>Во что поиграть всей группой?</h1>
+    <p class="tagline">Session Zero помогает TTRPG-группе выбрать систему для следующей кампании — без бесконечных споров в чате.</p>
+
+    <div class="setting-block"><p>Один игрок хочет D&amp;D, другой — что-то необычное, ГМ хочет минимум препа. Session Zero сжимает этот спор в короткое голосование: каждый отмечает системы, в которые хочет сыграть, а группа видит общий шортлист. Без регистрации, всё хранится в браузере. В каталоге 51 система — OSR, PbtA, Year Zero, нарративные, соло, sci-fi, хоррор.</p></div>
+
+    <div class="section-title">Как это работает</div>
+    <div class="setting-block"><p>
+    1. Настройте группу — только имена, без логинов.<br>
+    2. Каждый игрок листает каталог и голосует за то, что хочет попробовать.<br>
+    3. Страница результатов показывает шортлист по голосам. Выбираете одну — или спорите за топ-3 под пиццу.
+    </p></div>
+
+    <div class="vote-cta vote-cta-top">
+      <a href="/?lang=ru" class="vote-cta-btn" data-gc-event="cta-vote-home-ru" data-gc-title="RU home → tool">Открыть Session Zero →</a>
+    </div>
+
+    ${collLinks ? `<div class="section-title">Подборки</div>
+    <ul>${collLinks}</ul>` : ''}
+
+    ${cardsHTML ? `<div class="section-title">Несколько систем из каталога</div>
+    <div class="similar-systems-grid">${cardsHTML}</div>` : ''}
+
+    <div class="vote-cta">
+      <a href="/?lang=ru" class="vote-cta-btn" data-gc-event="cta-vote-home-ru" data-gc-title="RU home → tool">Открыть Session Zero и проголосовать →</a>
+      <p class="vote-cta-sub">Откройте инструмент, чтобы вся группа проголосовала и увидела итоги.</p>
+    </div>
+  </article>
+</main>
+<footer class="static-footer">
+  <a href="/?lang=ru">Session Zero</a> ·
+  <a href="/ru/about.html">О проекте</a> ·
+  <a href="https://github.com/kejid/sessionzero" target="_blank" rel="noopener">GitHub</a>
+</footer>
+${CTA_TRACK_SCRIPT}
+<script data-goatcounter="https://kejid.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
+`;
+}
+
 // ---------- 6. Sitemap ----------
 function mtimeIso(filePath) {
   try {
@@ -725,8 +1009,28 @@ function renderSitemap() {
       lastmod: sysMtime,
     });
   }
-  // Home gets the same hreflang set as before (en/ru both point to root)
-  urls[0].alts = { en: `${SITE}/`, ru: `${SITE}/` };
+  // RU homepage landing
+  urls.push({
+    loc: `${SITE}/ru/`, priority: '0.9', changefreq: 'weekly',
+    alts: { en: `${SITE}/`, ru: `${SITE}/ru/` },
+    lastmod: mtimeIso(path.join(ROOT, 'scripts', 'generate-pages.js')),
+  });
+  // Collection (intent) pages
+  for (const slug of collectionSlugs) {
+    const collMtime = mtimeIso(COLLECTIONS_FILE);
+    urls.push({
+      loc: `${SITE}/collections/${slug}.html`, priority: '0.7', changefreq: 'monthly',
+      alts: { en: `${SITE}/collections/${slug}.html`, ru: `${SITE}/ru/collections/${slug}.html` },
+      lastmod: collMtime,
+    });
+    urls.push({
+      loc: `${SITE}/ru/collections/${slug}.html`, priority: '0.7', changefreq: 'monthly',
+      alts: { en: `${SITE}/collections/${slug}.html`, ru: `${SITE}/ru/collections/${slug}.html` },
+      lastmod: collMtime,
+    });
+  }
+  // Home: EN canonical at root, RU variant at /ru/
+  urls[0].alts = { en: `${SITE}/`, ru: `${SITE}/ru/` };
 
   const out = ['<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
@@ -756,6 +1060,8 @@ function ensureDir(d) {
 ensureDir(OUT_SYSTEM);
 ensureDir(OUT_RU);
 ensureDir(OUT_RU_SYSTEM);
+ensureDir(OUT_COLLECTIONS);
+ensureDir(OUT_RU_COLLECTIONS);
 
 let written = 0;
 for (const id of ids) {
@@ -777,7 +1083,22 @@ fs.writeFileSync(ABOUT_EN, renderAbout('en'), 'utf8');
 fs.writeFileSync(ABOUT_RU, renderAbout('ru'), 'utf8');
 written += 2;
 
+for (const slug of collectionSlugs) {
+  const cfg = COLLECTIONS[slug];
+  try {
+    fs.writeFileSync(path.join(OUT_COLLECTIONS, `${slug}.html`), renderCollectionPage(slug, cfg, 'en'), 'utf8');
+    fs.writeFileSync(path.join(OUT_RU_COLLECTIONS, `${slug}.html`), renderCollectionPage(slug, cfg, 'ru'), 'utf8');
+    written += 2;
+  } catch (e) {
+    console.error(`[generate-pages] failed to render collection ${slug}:`, e.message);
+    process.exit(1);
+  }
+}
+
+fs.writeFileSync(RU_HOME, renderRuHome(), 'utf8');
+written += 1;
+
 fs.writeFileSync(SITEMAP, renderSitemap(), 'utf8');
 
 console.log(`[generate-pages] wrote ${written} HTML pages + sitemap.xml`);
-console.log(`[generate-pages] systems: ${ids.length} (×2 langs = ${ids.length * 2} system pages)`);
+console.log(`[generate-pages] systems: ${ids.length} (×2 langs = ${ids.length * 2} system pages), collections: ${collectionSlugs.length}`);
