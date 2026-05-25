@@ -37,7 +37,7 @@
 </head>
 <body class="static-page">
 <header class="static-header">
-  <a href="/" class="back-link">← Session Zero</a>
+  <a href="/?lang=ru" class="back-link">← Session Zero</a>
   <div class="lang-switch">
     <a href="/system/tales-loop.html">EN</a>
     <a href="/ru/system/tales-loop.html" class="active">RU</a>
@@ -53,6 +53,9 @@
         <div class="qs"><span class="qs-label">Преп</span><span class="qs-value">~20 мин</span></div>
         <div class="qs"><span class="qs-label">Foundry VTT</span><span class="qs-value">Official контент</span></div>
         <div class="qs"><span class="qs-label">Сложность</span><div class="complexity-bar"><div class="complexity-pip filled"></div><div class="complexity-pip filled"></div><div class="complexity-pip"></div><div class="complexity-pip"></div><div class="complexity-pip"></div></div></div>
+    </div>
+    <div class="vote-cta vote-cta-top">
+      <a href="/?lang=ru#tales-loop" class="vote-cta-btn" data-gc-event="cta-vote-tales-loop" data-gc-title="Tales from the Loop → tool">Голосовать всей группой →</a>
     </div>
     <div class="section-title">Что это за система</div>
     <div class="setting-block"><p>Вы — подростки 10–15 лет в альтернативных 80-х, где гигантский подземный ускоритель частиц (Петля) создаёт аномалии. Роботы ходят по улицам, но взрослые не замечают странного. Главное правило: дети не умирают. Но теряют друзей, невинность и веру в безопасный мир.</p></div>
@@ -138,16 +141,17 @@
           </a>
     </div>
     <div class="vote-cta">
-      <a href="/#tales-loop" class="vote-cta-btn">Проголосуйте за Tales from the Loop всей группой →</a>
+      <a href="/?lang=ru#tales-loop" class="vote-cta-btn" data-gc-event="cta-vote-tales-loop" data-gc-title="Tales from the Loop → tool">Проголосуйте за Tales from the Loop всей группой →</a>
       <p class="vote-cta-sub">Откройте в Session Zero, чтобы каждый игрок проголосовал и увидел итоги.</p>
     </div>
   </article>
 </main>
 <footer class="static-footer">
-  <a href="/">Главная</a> ·
+  <a href="/?lang=ru">Главная</a> ·
   <a href="/ru/about.html">О проекте</a> ·
   <a href="https://github.com/kejid/sessionzero" target="_blank" rel="noopener">GitHub</a>
 </footer>
+<script>(function(){function s(el){var g=window.goatcounter;if(!g||!g.url)return;if(g.filter&&g.filter())return;var u=g.url({path:el.getAttribute('data-gc-event'),title:el.getAttribute('data-gc-title')||'',event:true});if(!u)return;var img=function(){try{new Image().src=u;}catch(e){}};if(window.fetch){try{fetch(u,{method:'GET',mode:'no-cors',credentials:'omit',keepalive:true}).catch(img);}catch(e){img();}}else{img();}}function b(){var e=document.querySelectorAll('[data-gc-event]');for(var i=0;i<e.length;i++){e[i].addEventListener('click',function(){s(this);});e[i].addEventListener('auxclick',function(ev){if(ev.button===1)s(this);});}}if(document.readyState!=='loading')b();else document.addEventListener('DOMContentLoaded',b);})();</script>
 <script data-goatcounter="https://kejid.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

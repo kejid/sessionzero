@@ -2041,6 +2041,11 @@ body.static-page .vote-cta-btn {
     transition: transform 0.15s;
 }
 body.static-page .vote-cta-btn:hover { transform: translateY(-1px); }
+body.static-page .vote-cta-top {
+    margin-top: 20px;
+    margin-bottom: 4px;
+    padding: 16px 20px;
+}
 body.static-page .vote-cta-sub {
     margin-top: 12px;
     color: var(--dim);

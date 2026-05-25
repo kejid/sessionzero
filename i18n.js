@@ -314,7 +314,17 @@ const LANG = {
   }
 };
 
-let currentLang = localStorage.getItem('ttrpg-lang') || ((navigator.language || '').toLowerCase().startsWith('ru') ? 'ru' : 'en');
+// Language precedence: a saved choice wins (so the in-app toggle sticks across
+// reloads), then a ?lang= handoff from a static page, then the browser locale.
+// A ?lang= value is persisted only when nothing is saved yet, so a shared/
+// bookmarked ?lang= link can't override a preference the user already set.
+const _urlLang = (new URLSearchParams(location.search).get('lang') || '').toLowerCase();
+const _storedLang = localStorage.getItem('ttrpg-lang');
+const _paramLang = (_urlLang === 'ru' || _urlLang === 'en') ? _urlLang : null;
+let currentLang = _storedLang || _paramLang || ((navigator.language || '').toLowerCase().startsWith('ru') ? 'ru' : 'en');
+if (!_storedLang && _paramLang) {
+    try { localStorage.setItem('ttrpg-lang', _paramLang); } catch (e) {}
+}
 
 function t(key) {
     return (LANG[currentLang] && LANG[currentLang][key]) || (LANG['ru'] && LANG['ru'][key]) || key;

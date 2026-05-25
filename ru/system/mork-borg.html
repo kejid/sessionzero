@@ -37,7 +37,7 @@
 </head>
 <body class="static-page">
 <header class="static-header">
-  <a href="/" class="back-link">← Session Zero</a>
+  <a href="/?lang=ru" class="back-link">← Session Zero</a>
   <div class="lang-switch">
     <a href="/system/mork-borg.html">EN</a>
     <a href="/ru/system/mork-borg.html" class="active">RU</a>
@@ -53,6 +53,9 @@
         <div class="qs"><span class="qs-label">Преп</span><span class="qs-value">~5 мин</span></div>
         <div class="qs"><span class="qs-label">Foundry VTT</span><span class="qs-value">Official + Community</span></div>
         <div class="qs"><span class="qs-label">Сложность</span><div class="complexity-bar"><div class="complexity-pip filled"></div><div class="complexity-pip"></div><div class="complexity-pip"></div><div class="complexity-pip"></div><div class="complexity-pip"></div></div></div>
+    </div>
+    <div class="vote-cta vote-cta-top">
+      <a href="/?lang=ru#mork-borg" class="vote-cta-btn" data-gc-event="cta-vote-mork-borg" data-gc-title="MÖRK BORG → tool">Голосовать всей группой →</a>
     </div>
     <div class="section-title">Что это за система</div>
     <div class="setting-block"><p>Арт-панк RPG про последние дни умирающего мира. Правила умещаются на нескольких страницах, но книга — произведение искусства: кислотные цвета, безумная вёрстка, атмосфера блэк-метала. Каждая сессия может стать последней — буквально, потому что мир кончается по расписанию.</p></div>
@@ -158,16 +161,17 @@
           </a>
     </div>
     <div class="vote-cta">
-      <a href="/#mork-borg" class="vote-cta-btn">Проголосуйте за MÖRK BORG всей группой →</a>
+      <a href="/?lang=ru#mork-borg" class="vote-cta-btn" data-gc-event="cta-vote-mork-borg" data-gc-title="MÖRK BORG → tool">Проголосуйте за MÖRK BORG всей группой →</a>
       <p class="vote-cta-sub">Откройте в Session Zero, чтобы каждый игрок проголосовал и увидел итоги.</p>
     </div>
   </article>
 </main>
 <footer class="static-footer">
-  <a href="/">Главная</a> ·
+  <a href="/?lang=ru">Главная</a> ·
   <a href="/ru/about.html">О проекте</a> ·
   <a href="https://github.com/kejid/sessionzero" target="_blank" rel="noopener">GitHub</a>
 </footer>
+<script>(function(){function s(el){var g=window.goatcounter;if(!g||!g.url)return;if(g.filter&&g.filter())return;var u=g.url({path:el.getAttribute('data-gc-event'),title:el.getAttribute('data-gc-title')||'',event:true});if(!u)return;var img=function(){try{new Image().src=u;}catch(e){}};if(window.fetch){try{fetch(u,{method:'GET',mode:'no-cors',credentials:'omit',keepalive:true}).catch(img);}catch(e){img();}}else{img();}}function b(){var e=document.querySelectorAll('[data-gc-event]');for(var i=0;i<e.length;i++){e[i].addEventListener('click',function(){s(this);});e[i].addEventListener('auxclick',function(ev){if(ev.button===1)s(this);});}}if(document.readyState!=='loading')b();else document.addEventListener('DOMContentLoaded',b);})();</script>
 <script data-goatcounter="https://kejid.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

@@ -54,6 +54,9 @@
         <div class="qs"><span class="qs-label">Foundry VTT</span><span class="qs-value">Community</span></div>
         <div class="qs"><span class="qs-label">Complexity</span><div class="complexity-bar"><div class="complexity-pip filled"></div><div class="complexity-pip filled"></div><div class="complexity-pip"></div><div class="complexity-pip"></div><div class="complexity-pip"></div></div></div>
     </div>
+    <div class="vote-cta vote-cta-top">
+      <a href="/#triangle" class="vote-cta-btn" data-gc-event="cta-vote-triangle" data-gc-title="Triangle Agency → tool">Vote with your group →</a>
+    </div>
     <div class="section-title">What is this system</div>
     <div class="setting-block"><p>An RPG about special agents working for a secret agency that contains anomalous phenomena. Every mission is a field response to an anomaly: study it, classify it, decide what to do. The anomaly generator creates unique threats. Agency bureaucracy is an equally dangerous enemy.</p></div>
     <div class="section-title">Setting</div>
@@ -138,7 +141,7 @@
           </a>
     </div>
     <div class="vote-cta">
-      <a href="/#triangle" class="vote-cta-btn">Vote on Triangle Agency with your group →</a>
+      <a href="/#triangle" class="vote-cta-btn" data-gc-event="cta-vote-triangle" data-gc-title="Triangle Agency → tool">Vote on Triangle Agency with your group →</a>
       <p class="vote-cta-sub">Open in Session Zero to let every player vote and see the results.</p>
     </div>
   </article>
@@ -148,6 +151,7 @@
   <a href="/about.html">About</a> ·
   <a href="https://github.com/kejid/sessionzero" target="_blank" rel="noopener">GitHub</a>
 </footer>
+<script>(function(){function s(el){var g=window.goatcounter;if(!g||!g.url)return;if(g.filter&&g.filter())return;var u=g.url({path:el.getAttribute('data-gc-event'),title:el.getAttribute('data-gc-title')||'',event:true});if(!u)return;var img=function(){try{new Image().src=u;}catch(e){}};if(window.fetch){try{fetch(u,{method:'GET',mode:'no-cors',credentials:'omit',keepalive:true}).catch(img);}catch(e){img();}}else{img();}}function b(){var e=document.querySelectorAll('[data-gc-event]');for(var i=0;i<e.length;i++){e[i].addEventListener('click',function(){s(this);});e[i].addEventListener('auxclick',function(ev){if(ev.button===1)s(this);});}}if(document.readyState!=='loading')b();else document.addEventListener('DOMContentLoaded',b);})();</script>
 <script data-goatcounter="https://kejid.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
