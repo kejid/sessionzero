@@ -885,6 +885,23 @@ function renderRuHome() {
     'inLanguage': 'ru',
   };
 
+  const faq = [
+    ['Как работает голосование?', 'Настройте группу — только имена, без аккаунтов. Каждый игрок листает каталог из ' + SYSTEM_COUNT + '+ систем и голосует за те, в которые хочет сыграть. Страница результатов показывает шортлист по голосам — выбираете одну или спорите за топ-3 под пиццу.'],
+    ['Это то же самое, что нулевая сессия (session zero) с safety tools?', 'Нет. Нулевая сессия — это когда вы уже выбрали игру и обсуждаете ожидания, безопасность и создаёте персонажей. Этот инструмент — про шаг раньше: какую систему вообще взять. Сначала выберите систему здесь, потом проводите нулевую сессию.'],
+    ['Нужна регистрация?', 'Нет, без логинов. Группа, голоса и свои системы хранятся в браузере. Полностью бесплатно, EN/RU.'],
+    ['Какие системы можно выбрать?', SYSTEM_COUNT + '+ настольных ролёвок: OSR, PbtA, Year Zero Engine, нарративные, соло, sci-fi и хоррор — от Mothership и Blades in the Dark до Mörk Borg, Dragonbane и Call of Cthulhu. Можно добавить свою.'],
+  ];
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': faq.map(([q, a]) => ({
+      '@type': 'Question',
+      'name': q,
+      'acceptedAnswer': { '@type': 'Answer', 'text': a },
+    })),
+  };
+  const faqHTML = faq.map(([q, a]) => `<div class="seo-faq-item"><h3>${escBody(q)}</h3><p>${escBody(a)}</p></div>`).join('');
+
   return `<!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -952,6 +969,10 @@ function renderRuHome() {
 
     ${cardsHTML ? `<div class="section-title">Несколько систем из каталога</div>
     <div class="similar-systems-grid">${cardsHTML}</div>` : ''}
+
+    <div class="section-title">Частые вопросы</div>
+    ${faqHTML}
+    <script type="application/ld+json">${JSON.stringify(faqJsonLd)}</script>
 
     <div class="vote-cta">
       <a href="/?lang=ru" class="vote-cta-btn" data-gc-event="cta-vote-home-ru" data-gc-title="RU home → tool">Открыть Session Zero и проголосовать →</a>
