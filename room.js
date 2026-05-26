@@ -49,7 +49,7 @@ const SZ_STR = {
     not_configured: 'Shared voting isn\'t configured on this site.',
     missing_systems: '{n} system(s) in this list aren\'t in your catalog and were skipped.',
     name_first: 'Enter your name first.',
-    share_title: 'Share these systems',
+    share_title: 'Share your shortlist',
     share_count: '{n} systems selected',
     list_btn: 'Copy list link',
     list_hint: 'Just a browsable list — no voting, no server.',
@@ -112,7 +112,7 @@ const SZ_STR = {
     not_configured: 'Общее голосование на этом сайте не настроено.',
     missing_systems: '{n} систем(ы) из списка нет в твоём каталоге — пропущены.',
     name_first: 'Сначала введи имя.',
-    share_title: 'Поделиться системами',
+    share_title: 'Поделиться списком',
     share_count: 'Выбрано систем: {n}',
     list_btn: 'Скопировать ссылку на список',
     list_hint: 'Просто список для просмотра — без голосования и сервера.',
@@ -607,6 +607,11 @@ function szLoadPick() {
 function szSavePick() {
   try { localStorage.setItem('sz-picker-selection', JSON.stringify([...szPick])); } catch (e) {}
 }
+// Selection count label — handles EN singular without declension headaches.
+function szCountLabel(n) {
+  if (typeof currentLang !== 'undefined' && currentLang === 'ru') return 'Выбрано: ' + n;
+  return n === 1 ? '1 system selected' : n + ' systems selected';
+}
 
 function szPickerHTML() {
   return szPickGroups().map((g, idx) => {
@@ -676,7 +681,7 @@ function szFilterPicker(q) {
 }
 function szUpdatePickUI() {
   const c = document.getElementById('sz-pick-count');
-  if (c) c.textContent = szT('share_count', { n: szPick.size });
+  if (c) c.textContent = szCountLabel(szPick.size);
   const disabled = szPick.size === 0;
   document.querySelectorAll('#sz-room .sz-pick-action').forEach(b => { b.disabled = disabled; });
   document.querySelectorAll('#sz-room .sz-pick-n').forEach(s => { s.textContent = ' (' + szPick.size + ')'; });
@@ -694,7 +699,7 @@ function szOpenCreate() {
   const picker = `
     <details class="sz-share-block sz-pick-details">
       <summary class="sz-pick-summary">
-        <span class="sz-count" id="sz-pick-count">${szEsc(szT('share_count', { n: szPick.size }))}</span>
+        <span class="sz-count" id="sz-pick-count">${szEsc(szCountLabel(szPick.size))}</span>
         <span class="sz-pick-toggle">${szEsc(szT('edit_list'))} <i data-lucide="chevron-down"></i></span>
       </summary>
       <div class="sz-pick-tools">
