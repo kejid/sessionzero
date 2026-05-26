@@ -54,6 +54,8 @@ const SZ_STR = {
     list_btn: 'Copy list link',
     list_hint: 'Just a browsable list — no voting, no server.',
     or_vote: '…or collect everyone\'s votes:',
+    pick_all: 'Select all',
+    pick_none: 'Clear',
     list_block_title: 'Just a list',
     list_block_desc: 'Read-only — they browse the games and open full pages. No voting, no signup, no server.',
     vote_block_title: 'Collect votes',
@@ -113,6 +115,8 @@ const SZ_STR = {
     list_btn: 'Скопировать ссылку на список',
     list_hint: 'Просто список для просмотра — без голосования и сервера.',
     or_vote: '…или собрать голоса группы:',
+    pick_all: 'Выбрать все',
+    pick_none: 'Снять все',
     list_block_title: 'Просто список',
     list_block_desc: 'Read-only — листают игры и открывают полные страницы. Без голосования, регистрации и сервера.',
     vote_block_title: 'Собрать голоса',
@@ -169,6 +173,7 @@ let szMyVeto = new Set();
 let szPollTimer = null;
 let szDirty = false;           // unsaved local changes
 let szView = null;             // active overlay view: 'room' | 'list' | 'create'
+let szPick = null;             // Set of system ids selected to share (create view)
 
 function szVoterName() {
   try { return localStorage.getItem('sz-voter-name') || ''; } catch (e) { return ''; }
@@ -520,7 +525,8 @@ function szListUrl(ids) {
   return location.origin + location.pathname + '#list=' + ids.join(',');
 }
 function szCopyListLink() {
-  const ids = szListIds || szSelectedSystems();
+  const ids = szListIds || (szPick ? [...szPick] : szSelectedSystems());
+  if (!ids.length) return;
   const url = szListUrl(ids);
   const done = () => { if (typeof showToast === 'function') showToast(szT('copy_list_done')); };
   if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, () => prompt(szT('copy'), url));
@@ -566,18 +572,73 @@ function szSelectedSystems() {
   return visible.length ? visible : all;
 }
 
+// ---- inline system picker (edit the shared list right in the panel) ----
+// All official systems, grouped exactly like the catalog (localized via t()).
+function szPickGroups() {
+  return (typeof getNavGroups === 'function') ? getNavGroups(typeof currentGrouping !== 'undefined' ? currentGrouping : 'default') : [];
+}
+function szAllPickIds() {
+  const ids = [];
+  szPickGroups().forEach(g => g.ids.forEach(id => { if (SYSTEMS_DATA[id]) ids.push(id); }));
+  return ids;
+}
+function szPickerHTML() {
+  return szPickGroups().map(g => {
+    const items = g.ids.filter(id => SYSTEMS_DATA[id]);
+    if (!items.length) return '';
+    const title = (typeof t === 'function') ? t(g.key) : g.key;
+    const rows = items.map(id => {
+      const name = (SYSTEMS_DATA[id] && SYSTEMS_DATA[id].name) ||
+        (typeof SYSTEM_NAMES !== 'undefined' && SYSTEM_NAMES[id]) || id;
+      return `<label class="sz-pick-item">
+        <input type="checkbox" data-id="${szEsc(id)}" ${szPick.has(id) ? 'checked' : ''} onchange="szTogglePick('${szEsc(id)}', this.checked)">
+        <span>${szEsc(name)}</span>
+      </label>`;
+    }).join('');
+    return `<div class="sz-pick-group"><div class="sz-pick-gtitle">${szEsc(title)}</div>${rows}</div>`;
+  }).join('');
+}
+function szTogglePick(id, on) {
+  if (on) szPick.add(id); else szPick.delete(id);
+  szUpdatePickUI();
+}
+function szPickAll(on) {
+  szPick = new Set(on ? szAllPickIds() : []);
+  document.querySelectorAll('#sz-picker input[type=checkbox]').forEach(cb => { cb.checked = on; });
+  szUpdatePickUI();
+}
+function szUpdatePickUI() {
+  const c = document.getElementById('sz-pick-count');
+  if (c) c.textContent = szT('share_count', { n: szPick.size });
+  const disabled = szPick.size === 0;
+  document.querySelectorAll('#sz-room .sz-pick-action').forEach(b => { b.disabled = disabled; });
+}
+
 function szOpenCreate() {
   szView = 'create';
   const el = szEnsureOverlay();
-  const list = szSelectedSystems();
+  if (szPick === null) szPick = new Set(szAllPickIds()); // default: everything on
   const myRooms = szMyRooms();
+
+  // Inline picker — edit exactly which systems get shared, independent of the catalog.
+  const picker = `
+    <div class="sz-share-block">
+      <div class="sz-pick-head">
+        <span class="sz-count" id="sz-pick-count">${szEsc(szT('share_count', { n: szPick.size }))}</span>
+        <span class="sz-pick-allnone">
+          <button onclick="szPickAll(true)">${szEsc(szT('pick_all'))}</button>
+          <button onclick="szPickAll(false)">${szEsc(szT('pick_none'))}</button>
+        </span>
+      </div>
+      <div class="sz-picker" id="sz-picker">${szPickerHTML()}</div>
+    </div>`;
 
   // Read-only list link — always available, needs no backend.
   const listSection = `
     <div class="sz-share-block">
       <h2 class="sz-subhead">${szEsc(szT('list_block_title'))}</h2>
       <p class="sz-hint">${szEsc(szT('list_block_desc'))}</p>
-      <button class="sz-btn sz-save" onclick="szCopyListLink()"><i data-lucide="link"></i> ${szEsc(szT('list_btn'))}</button>
+      <button class="sz-btn sz-save sz-pick-action" onclick="szCopyListLink()"><i data-lucide="link"></i> ${szEsc(szT('list_btn'))}</button>
     </div>`;
 
   // Async vote — only when the rooms API is configured.
@@ -587,7 +648,7 @@ function szOpenCreate() {
       <p class="sz-hint">${szEsc(szT('vote_block_desc'))}</p>
       <input id="sz-room-title" class="sz-name-input" type="text" maxlength="120" placeholder="${szEsc(szT('create_placeholder'))}">
       <div class="sz-savebar">
-        <button class="sz-btn sz-save" onclick="szDoCreate()">${szEsc(szT('create_btn'))}</button>
+        <button class="sz-btn sz-save sz-pick-action" onclick="szDoCreate()">${szEsc(szT('create_btn'))}</button>
       </div>
     </div>` : '';
 
@@ -604,22 +665,18 @@ function szOpenCreate() {
     <div class="sz-body">
       <div class="sz-create">
         <h1 class="sz-title">${szEsc(szT('share_title'))}</h1>
-        ${list.length === 0
-          ? `<p class="sz-warn">${szEsc(szT('create_none'))}</p>`
-          : `<p class="sz-count">${szEsc(szT('share_count', { n: list.length }))}</p>${listSection}${voteSection}`}
-        ${historySection}
+        ${picker}${listSection}${voteSection}${historySection}
       </div>
     </div>`;
   szMarkLang();
+  szUpdatePickUI();
   if (typeof refreshIcons === 'function') refreshIcons();
-  const input = document.getElementById('sz-room-title');
-  if (input) input.focus();
 }
 
 async function szDoCreate() {
   const titleEl = document.getElementById('sz-room-title');
   const title = titleEl ? titleEl.value.trim() : '';
-  const list = szSelectedSystems();
+  const list = szPick ? [...szPick] : szSelectedSystems();
   if (!list.length) return;
   try {
     const { roomId } = await szApi('/room', { method: 'POST', body: JSON.stringify({ title, list }) });
