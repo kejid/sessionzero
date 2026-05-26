@@ -57,6 +57,7 @@ const SZ_STR = {
     pick_all: 'Select all',
     pick_none: 'Clear',
     pick_search: 'Search systems…',
+    edit_list: 'Edit list',
     list_block_title: 'Just a list',
     list_block_desc: 'Read-only — they browse the games and open full pages. No voting, no signup, no server.',
     vote_block_title: 'Collect votes',
@@ -119,6 +120,7 @@ const SZ_STR = {
     pick_all: 'Выбрать все',
     pick_none: 'Снять все',
     pick_search: 'Поиск систем…',
+    edit_list: 'Изменить список',
     list_block_title: 'Просто список',
     list_block_desc: 'Read-only — листают игры и открывают полные страницы. Без голосования, регистрации и сервера.',
     vote_block_title: 'Собрать голоса',
@@ -682,26 +684,32 @@ function szOpenCreate() {
   if (szPick === null) szPick = szLoadPick(); // restore last selection, else all on
   const myRooms = szMyRooms();
 
-  // Inline picker — edit exactly which systems get shared, independent of the catalog.
+  // Inline picker — collapsed by default into a summary so the share actions stay
+  // above the fold; expand to curate. Native <details> = free a11y + keyboard.
   const picker = `
-    <div class="sz-share-block">
-      <div class="sz-pick-head">
+    <details class="sz-share-block sz-pick-details">
+      <summary class="sz-pick-summary">
         <span class="sz-count" id="sz-pick-count">${szEsc(szT('share_count', { n: szPick.size }))}</span>
+        <span class="sz-pick-toggle">${szEsc(szT('edit_list'))} <i data-lucide="chevron-down"></i></span>
+      </summary>
+      <div class="sz-pick-tools">
+        <input class="sz-name-input sz-pick-search" type="text" placeholder="${szEsc(szT('pick_search'))}" oninput="szFilterPicker(this.value)">
         <span class="sz-pick-allnone">
           <button onclick="szPickAll(true)">${szEsc(szT('pick_all'))}</button>
           <button onclick="szPickAll(false)">${szEsc(szT('pick_none'))}</button>
         </span>
       </div>
-      <input class="sz-name-input sz-pick-search" type="text" placeholder="${szEsc(szT('pick_search'))}" oninput="szFilterPicker(this.value)">
       <div class="sz-picker" id="sz-picker">${szPickerHTML()}</div>
-    </div>`;
+    </details>`;
 
   // Read-only list link — always available, needs no backend.
   const listSection = `
     <div class="sz-share-block">
       <h2 class="sz-subhead">${szEsc(szT('list_block_title'))}</h2>
       <p class="sz-hint">${szEsc(szT('list_block_desc'))}</p>
-      <button class="sz-btn sz-save sz-pick-action" onclick="szCopyListLink()"><i data-lucide="link"></i> ${szEsc(szT('list_btn'))}<span class="sz-pick-n"></span></button>
+      <div class="sz-savebar">
+        <button class="sz-btn sz-save sz-pick-action" onclick="szCopyListLink()"><i data-lucide="link"></i> ${szEsc(szT('list_btn'))}<span class="sz-pick-n"></span></button>
+      </div>
     </div>`;
 
   // Async vote — only when the rooms API is configured.
