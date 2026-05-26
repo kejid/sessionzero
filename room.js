@@ -122,7 +122,7 @@ const SZ_STR = {
     pick_search: 'Поиск систем…',
     edit_list: 'Изменить список',
     list_block_title: 'Просто список',
-    list_block_desc: 'Read-only — листают игры и открывают полные страницы. Без голосования, регистрации и сервера.',
+    list_block_desc: 'Только просмотр — листают игры и открывают полные страницы. Без голосования, регистрации и сервера.',
     vote_block_title: 'Собрать голоса',
     vote_block_desc: 'Каждый со своего устройства жмёт За / Вето в удобное время — ты видишь живой ранжированный шортлист.',
     my_votes: 'Мои голосования',
@@ -526,7 +526,7 @@ async function szDoCreateFromList() {
 }
 
 function szListUrl(ids) {
-  return SZ_API ? (SZ_API + '/l/' + ids.join(',')) : (location.origin + location.pathname + '#list=' + ids.join(','));
+  return SZ_API ? (SZ_API + '/l/' + ids.join(',') + '?l=' + szShareLang()) : (location.origin + location.pathname + '#list=' + ids.join(','));
 }
 function szCopyListLink() {
   const ids = szListIds || (szPick ? [...szPick] : szSelectedSystems());
@@ -539,9 +539,14 @@ function szCopyListLink() {
 
 // ============================ link / lang / exit ============================
 // Shared URLs point at the server's OG routes (so links unfurl with previews),
-// which redirect into the SPA. Without an API, fall back to direct hash links.
+// which redirect into the SPA. The sharer's language is baked in (?l=) so the
+// preview card matches the channel's language — crawlers don't forward locale.
+// Without an API, fall back to direct hash links.
+function szShareLang() {
+  return (typeof currentLang !== 'undefined' && currentLang === 'ru') ? 'ru' : 'en';
+}
 function szRoomUrl(id) {
-  return SZ_API ? (SZ_API + '/r/' + id) : (location.origin + location.pathname + '#room=' + id);
+  return SZ_API ? (SZ_API + '/r/' + id + '?l=' + szShareLang()) : (location.origin + location.pathname + '#room=' + id);
 }
 function szCopyLink() {
   const url = szRoomUrl(szRoomId);

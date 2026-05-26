@@ -193,9 +193,17 @@ function htmlEsc(s) {
     { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
   ));
 }
-// Reuse the already-generated per-system OG images; fall back to the home card.
-function ogImage(firstId) {
-  return (firstId && /^[a-z0-9_-]+$/i.test(firstId)) ? `${SITE}/og/${firstId}.jpg` : `${SITE}/og/home.jpg`;
+// Reuse the already-generated per-system OG images (EN + RU variants); fall back
+// to the home card.
+function ogImage(firstId, ru) {
+  const dir = ru ? '/og/ru/' : '/og/';
+  return (firstId && /^[a-z0-9_-]+$/i.test(firstId)) ? `${SITE}${dir}${firstId}.jpg` : `${SITE}/og/home.jpg`;
+}
+// Crawlers rarely forward the end user's locale, so the sharer's language is
+// baked into the link (?l=ru); Accept-Language is a weak fallback.
+function wantsRu(req) {
+  if (req.query && req.query.l) return req.query.l === 'ru';
+  return /^ru\b/.test(String(req.headers['accept-language'] || '').toLowerCase());
 }
 function ogPage({ title, desc, image, redirect }) {
   const t = htmlEsc(title), d = htmlEsc(desc), img = htmlEsc(image), r = htmlEsc(redirect);
@@ -230,11 +238,16 @@ app.get('/r/:id', async (req, res) => {
     const r = await pool.query('SELECT title, list FROM rooms WHERE id = $1', [id]);
     if (r.rowCount === 0) return res.redirect(302, SITE + '/');
     const list = r.rows[0].list || [];
-    const title = (r.rows[0].title && r.rows[0].title.trim()) || 'Vote: what should we play next?';
-    const desc = `${list.length} tabletop RPGs · vote with your group on Session Zero`;
+    const ru = wantsRu(req);
+    const title = (r.rows[0].title && r.rows[0].title.trim()) ||
+      (ru ? 'Голосование: во что играем дальше?' : 'Vote: what should we play next?');
+    const desc = ru
+      ? `${list.length} настольных RPG · голосуйте группой в Session Zero`
+      : `${list.length} tabletop RPGs · vote with your group on Session Zero`;
     res.set('Content-Type', 'text/html; charset=utf-8')
        .set('Cache-Control', 'public, max-age=300')
-       .send(ogPage({ title, desc, image: ogImage(list[0]), redirect: `${SITE}/#room=${id}` }));
+       .set('Vary', 'Accept-Language')
+       .send(ogPage({ title, desc, image: ogImage(list[0], ru), redirect: `${SITE}/#room=${id}` }));
   } catch (e) {
     console.error('GET /r/:id', e);
     res.redirect(302, SITE + '/');
@@ -246,11 +259,17 @@ app.get('/l/:ids', (req, res) => {
   const ids = req.params.ids;
   if (!/^[A-Za-z0-9_,-]+$/.test(ids)) return res.redirect(302, SITE + '/');
   const arr = ids.split(',').filter(Boolean);
-  const title = `A shortlist of ${arr.length} tabletop RPG${arr.length === 1 ? '' : 's'}`;
-  const desc = 'A hand-picked list shared on Session Zero — tap any game to read more.';
+  const ru = wantsRu(req);
+  const title = ru
+    ? `Шортлист из ${arr.length} настольных RPG`
+    : `A shortlist of ${arr.length} tabletop RPG${arr.length === 1 ? '' : 's'}`;
+  const desc = ru
+    ? 'Подборка игр из Session Zero — нажми на любую, чтобы узнать больше.'
+    : 'A hand-picked list shared on Session Zero — tap any game to read more.';
   res.set('Content-Type', 'text/html; charset=utf-8')
      .set('Cache-Control', 'public, max-age=300')
-     .send(ogPage({ title, desc, image: ogImage(arr[0]), redirect: `${SITE}/#list=${ids}` }));
+     .set('Vary', 'Accept-Language')
+     .send(ogPage({ title, desc, image: ogImage(arr[0], ru), redirect: `${SITE}/#list=${ids}` }));
 });
 
 // Only boot the server when run directly (`node index.js`), not when imported by tests.
