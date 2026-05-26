@@ -183,6 +183,76 @@ app.put('/room/:id/ballot', async (req, res) => {
   }
 });
 
+// ---- OG link-preview pages ----------------------------------------------
+// Social crawlers ignore the SPA hash fragment and don't run JS, so they can't
+// read per-link OG from the static site. These HTML routes return per-link OG
+// meta and instantly redirect humans into the SPA. Share links point here.
+const SITE = process.env.SITE_ORIGIN || 'https://sessionzero.games';
+function htmlEsc(s) {
+  return String(s == null ? '' : s).replace(/[&<>"']/g, c => (
+    { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
+  ));
+}
+// Reuse the already-generated per-system OG images; fall back to the home card.
+function ogImage(firstId) {
+  return (firstId && /^[a-z0-9_-]+$/i.test(firstId)) ? `${SITE}/og/${firstId}.jpg` : `${SITE}/og/home.jpg`;
+}
+function ogPage({ title, desc, image, redirect }) {
+  const t = htmlEsc(title), d = htmlEsc(desc), img = htmlEsc(image), r = htmlEsc(redirect);
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>${t}</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Session Zero">
+<meta property="og:title" content="${t}">
+<meta property="og:description" content="${d}">
+<meta property="og:image" content="${img}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="${r}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${t}">
+<meta name="twitter:description" content="${d}">
+<meta name="twitter:image" content="${img}">
+<link rel="canonical" href="${r}">
+<meta http-equiv="refresh" content="0; url=${r}">
+</head><body>
+<p>Opening Session Zero… <a href="${r}">Continue</a></p>
+<script>location.replace(${JSON.stringify(redirect)});</script>
+</body></html>`;
+}
+
+// Room share link → per-room OG (title from DB) + redirect to the SPA room.
+app.get('/r/:id', async (req, res) => {
+  const id = req.params.id;
+  if (!/^[a-z0-9]+$/i.test(id)) return res.redirect(302, SITE + '/');
+  try {
+    const r = await pool.query('SELECT title, list FROM rooms WHERE id = $1', [id]);
+    if (r.rowCount === 0) return res.redirect(302, SITE + '/');
+    const list = r.rows[0].list || [];
+    const title = (r.rows[0].title && r.rows[0].title.trim()) || 'Vote: what should we play next?';
+    const desc = `${list.length} tabletop RPGs · vote with your group on Session Zero`;
+    res.set('Content-Type', 'text/html; charset=utf-8')
+       .set('Cache-Control', 'public, max-age=300')
+       .send(ogPage({ title, desc, image: ogImage(list[0]), redirect: `${SITE}/#room=${id}` }));
+  } catch (e) {
+    console.error('GET /r/:id', e);
+    res.redirect(302, SITE + '/');
+  }
+});
+
+// List share link → shortlist OG (ids from the path) + redirect to the SPA list.
+app.get('/l/:ids', (req, res) => {
+  const ids = req.params.ids;
+  if (!/^[A-Za-z0-9_,-]+$/.test(ids)) return res.redirect(302, SITE + '/');
+  const arr = ids.split(',').filter(Boolean);
+  const title = `A shortlist of ${arr.length} tabletop RPG${arr.length === 1 ? '' : 's'}`;
+  const desc = 'A hand-picked list shared on Session Zero — tap any game to read more.';
+  res.set('Content-Type', 'text/html; charset=utf-8')
+     .set('Cache-Control', 'public, max-age=300')
+     .send(ogPage({ title, desc, image: ogImage(arr[0]), redirect: `${SITE}/#list=${ids}` }));
+});
+
 // Only boot the server when run directly (`node index.js`), not when imported by tests.
 import { pathToFileURL } from 'node:url';
 const isMain = process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href;
