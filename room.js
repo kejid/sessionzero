@@ -36,6 +36,7 @@ const SZ_STR = {
     veto: 'Veto',
     open_page: 'Open game page (new tab)',
     save_vote: 'Save my vote',
+    save_need_name: 'Enter your name above to save.',
     saved: 'Saved ✓',
     saving: 'Saving…',
     tally_title: 'Results so far',
@@ -99,6 +100,7 @@ const SZ_STR = {
     veto: 'Вето',
     open_page: 'Открыть страницу игры (новая вкладка)',
     save_vote: 'Сохранить голос',
+    save_need_name: 'Введи имя выше, чтобы сохранить.',
     saved: 'Сохранено ✓',
     saving: 'Сохраняю…',
     tally_title: 'Текущие результаты',
@@ -332,6 +334,7 @@ function szRenderRoom() {
         <button id="sz-save" class="sz-btn sz-save" onclick="szSaveBallot()">${szEsc(szT('save_vote'))}</button>
         <button class="sz-btn sz-ghost" onclick="szCopyLink()"><i data-lucide="link"></i> ${szEsc(szT('copy'))}</button>
       </div>
+      <p class="sz-save-hint" id="sz-save-hint">${szEsc(szT('save_need_name'))}</p>
 
       <section class="sz-tally" id="sz-tally"></section>
     </div>`;
@@ -414,13 +417,25 @@ function szUpdateSaveBtn() {
   const btn = document.getElementById('sz-save');
   if (!btn) return;
   const hasName = szVoterName().length > 0;
-  btn.disabled = !hasName;
-  btn.classList.toggle('sz-dirty', szDirty && hasName);
+  // Save stays enabled even without a name — clicking guides the user to the
+  // name field instead of dead-ending on a greyed button.
+  btn.classList.toggle('sz-dirty', szDirty);
+  const hint = document.getElementById('sz-save-hint');
+  if (hint) hint.style.display = hasName ? 'none' : '';
+  if (hasName) {
+    const inp = document.getElementById('sz-name');
+    if (inp) inp.classList.remove('sz-name-needed');
+  }
 }
 
 async function szSaveBallot() {
   const voter = szVoterName();
-  if (!voter) { if (typeof showToast === 'function') showToast(szT('name_first')); return; }
+  if (!voter) {
+    const inp = document.getElementById('sz-name');
+    if (inp) { inp.classList.add('sz-name-needed'); inp.focus(); inp.scrollIntoView({ block: 'center', behavior: 'smooth' }); }
+    if (typeof showToast === 'function') showToast(szT('name_first'));
+    return;
+  }
   const btn = document.getElementById('sz-save');
   if (btn) { btn.disabled = true; btn.textContent = szT('saving'); }
   try {

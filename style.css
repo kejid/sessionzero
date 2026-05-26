@@ -2337,6 +2337,8 @@ body.sz-room-open { overflow: hidden; }
     font-size: 16px; font-family: inherit;
 }
 .sz-name-input:focus { outline: none; border-color: var(--accent); }
+.sz-name-needed { border-color: var(--red) !important; box-shadow: 0 0 0 3px var(--red-bg); }
+.sz-save-hint { margin: 8px 0 0; font-size: 13px; color: var(--dim); }
 
 .sz-cards { display: flex; flex-direction: column; gap: 10px; margin: 18px 0; }
 .sz-card {
