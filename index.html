@@ -176,6 +176,9 @@
     <button class="pres-toggle" onclick="openEditor()">
         <i data-lucide="plus-circle"></i> <span data-i18n="btn_add_system">Добавить систему</span>
     </button>
+    <button class="pres-toggle" id="sz-create-btn" style="display:none;" onclick="szOpenCreate()">
+        <i data-lucide="share-2"></i> <span data-i18n="btn_shared_vote">Поделиться списком</span>
+    </button>
 
     <div class="sidebar-divider"></div>
 
@@ -371,9 +374,25 @@
             <button class="view-toggle-btn active" data-view="cards" onclick="setView('cards')" aria-label="Вид карточками" data-i18n-aria="aria_view_cards"><i data-lucide="layout-grid" aria-hidden="true"></i></button>
             <button class="view-toggle-btn" data-view="list" onclick="setView('list')" aria-label="Вид списком" data-i18n-aria="aria_view_list"><i data-lucide="list" aria-hidden="true"></i></button>
             <button class="export-btn" onclick="exportResults()" title="Export"><i data-lucide="clipboard-copy"></i> <span data-i18n="btn_export">Экспорт</span></button>
+            <button class="export-btn share-cta" onclick="szOpenCreate()" title="Share"><i data-lucide="share-2"></i> <span data-i18n="btn_share">Поделиться</span></button>
         </div>
     </div>
     <p class="tagline" id="results-subtitle">Нажми на карточку, чтобы узнать больше о системе.</p>
+
+    <!-- First-visit intro (browse mode only, dismissible) -->
+    <div id="intro-banner" class="intro-banner">
+        <button class="intro-dismiss" onclick="dismissIntro()" aria-label="Закрыть" data-i18n-aria="aria_close_menu"><i data-lucide="x" aria-hidden="true"></i></button>
+        <div class="intro-emoji" aria-hidden="true">🎲</div>
+        <div class="intro-content">
+            <h2 class="intro-title" data-i18n="intro_title">Не знаете, во что играть?</h2>
+            <p class="intro-body" data-i18n="intro_body">Session Zero помогает группе выбрать настолку — листайте каталог, голосуйте вместе или поделитесь списком.</p>
+            <div class="intro-ctas">
+                <button class="intro-cta primary" onclick="enableVoting()" data-i18n="intro_cta_vote">Голосование группой</button>
+                <button class="intro-cta" onclick="szOpenCreate()" data-i18n="intro_cta_share">Поделиться списком</button>
+            </div>
+        </div>
+    </div>
+
     <div class="results-layout">
         <aside id="results-tag-filter" class="tag-filter"></aside>
         <div id="results-grid" class="results-grid"></div>
@@ -434,6 +453,8 @@
 <script src="i18n.min.js"></script>
 <script src="data/systems-bundle.min.js"></script>
 <script src="app.min.js"></script>
+<script src="config.js"></script>
+<script src="room.min.js"></script>
 <script data-goatcounter="https://kejid.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 </body>

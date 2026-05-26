@@ -1963,6 +1963,13 @@ document.addEventListener('langchange', function() {
     refreshIcons();
 });
 
+// First-visit intro banner (browse mode only). Visibility is CSS-gated on
+// body.browse-mode:not(.intro-dismissed); this just records the dismissal.
+function dismissIntro() {
+    try { localStorage.setItem('ttrpg-intro-dismissed', '1'); } catch (e) {}
+    document.body.classList.add('intro-dismissed');
+}
+
 // ============ INIT ============
 function initApp() {
     // Set active grouping button
@@ -1994,6 +2001,9 @@ if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 history.replaceState({ page: 'results' }, '', window.location.hash || '#results');
 
 loadSystems();
+
+// Hide the first-visit intro for returning visitors who dismissed it.
+if (localStorage.getItem('ttrpg-intro-dismissed')) document.body.classList.add('intro-dismissed');
 
 const isBrowseMode = localStorage.getItem('ttrpg-browse') === 'true';
 if (PLAYERS) {

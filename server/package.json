@@ -1,0 +1,19 @@
+{
+  "name": "sessionzero-rooms",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Tiny API for Session Zero shareable lists + async voting rooms",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "pg": "^8.13.1"
+  }
+}

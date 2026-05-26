@@ -11,3 +11,9 @@ test-results/
 __pycache__/
 data/systems-bundle.js'
 data/rpg-wiki-gamerec.json
+
+# The Railway backend needs its manifests committed (the global package.json /
+# package-lock.json ignore above otherwise hides them). The secret stays in
+# server/.env, which server/.gitignore keeps untracked.
+!server/package.json
+!server/package-lock.json
