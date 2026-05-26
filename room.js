@@ -308,7 +308,7 @@ function szRenderRoom() {
 
   const resolved = szData.list.map(szResolve);
   const missing = resolved.filter(r => !r).length;
-  const cards = resolved.filter(Boolean).map(szCardHTML).join('');
+  const cards = resolved.filter(Boolean).map(s => szCardHTML(s)).join(''); // not .map(szCardHTML) — map's index arg would become readOnly
 
   el.innerHTML = szTopBar() + `
     <div class="sz-body">
