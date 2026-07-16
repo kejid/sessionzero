@@ -1086,6 +1086,35 @@ body:not(.presentation) .pres-counter { display: none; }
 }
 .tag-filter-btn.setting.active .tag-filter-count { color: var(--purple); opacity: 1; }
 
+/* Tri-state tag filter: include (accent, "+") / exclude (red, "−", struck through) */
+.tag-filter-btn.include { background: var(--accent-bg); border-color: var(--accent); color: var(--accent); }
+.tag-filter-btn.include .tag-filter-count { color: var(--accent); opacity: 1; }
+.tag-filter-btn.setting.include { background: var(--purple-bg); border-color: var(--purple); color: var(--purple); }
+.tag-filter-btn.setting.include .tag-filter-count { color: var(--purple); opacity: 1; }
+.tag-filter-btn.exclude { background: var(--red-bg); border-color: var(--red); color: var(--red); }
+.tag-filter-btn.exclude .tag-filter-label { text-decoration: line-through; opacity: 0.85; }
+.tag-filter-btn.exclude .tag-filter-count { color: var(--red); opacity: 1; }
+.tag-filter-btn.include::after,
+.tag-filter-btn.exclude::after {
+    font-weight: 700; font-size: 12px; line-height: 1;
+    width: 12px; text-align: center; flex-shrink: 0;
+}
+.tag-filter-btn.include::after { content: '+'; }
+.tag-filter-btn.exclude::after { content: '\2212'; }
+
+/* Free / edition badges (system page + result cards) */
+.system-badges { display: flex; gap: 8px; margin: -4px 0 14px; flex-wrap: wrap; }
+.sys-badge {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 999px;
+    border: 1px solid var(--border, rgba(255,255,255,0.14));
+}
+.sys-badge i[data-lucide] { width: 13px; height: 13px; }
+.sys-badge-free { color: #4ade80; border-color: #4ade80; background: rgba(74,222,128,0.12); }
+.sys-badge-edition { color: var(--accent); border-color: var(--accent); background: var(--accent-bg); }
+.result-card-tag.rc-free { color: #4ade80; background: rgba(74,222,128,0.14); }
+.result-card-tag.rc-edition { color: var(--accent); background: var(--accent-bg); }
+
 /* Setting tag chips on system pages */
 .playstyle-tag.setting-tag {
     background: var(--purple-bg);

@@ -9,6 +9,8 @@ registerSystem("ose", {
   "dice": "d20 + стандарт",
   "players": "2–6",
   "complexity": 2,
+  "edition": "B/X",
+  "free": true,
   "foundryStatus": "Community",
   "heroImage": "https://necroticgnome.com/cdn/shop/files/AFM_Cover_-_C_2022_David_Hoskins_13c53e3d-e120-43b0-8085-87d125f9aa7b.jpg?v=1669315843&width=3200",
   "playstyleTags": [

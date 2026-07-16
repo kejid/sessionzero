@@ -216,6 +216,7 @@ const STR = {
     qs_prep: 'Prep',
     qs_foundry: 'Foundry VTT',
     qs_complexity: 'Complexity',
+    badge_free: 'Free',
     back_to_catalog: '← Session Zero',
     vote_cta: name => `Vote on ${name} with your group →`,
     vote_cta_short: 'Vote with your group →',
@@ -248,6 +249,7 @@ const STR = {
     qs_prep: 'Преп',
     qs_foundry: 'Foundry VTT',
     qs_complexity: 'Сложность',
+    badge_free: 'Бесплатно',
     back_to_catalog: '← Session Zero',
     vote_cta: name => `Проголосуйте за ${name} всей группой →`,
     vote_cta_short: 'Голосовать всей группой →',
@@ -277,7 +279,7 @@ const TAG_ICONS = {
 const SETTING_TAG_ICONS = {
   space: 'rocket', fantasy: 'castle', cyberpunk: 'cpu',
   modern: 'building-2', postapoc: 'radiation', historical: 'landmark',
-  weird: 'sparkles', 'urban-fantasy': 'building',
+  weird: 'sparkles', 'urban-fantasy': 'building', 'sword-and-sorcery': 'sword',
 };
 const TAG_LABELS = {
   en: {
@@ -287,7 +289,7 @@ const TAG_LABELS = {
     worldbuild: 'Worldbuilding', solo: 'Solo',
     space: 'Space', fantasy: 'Fantasy', cyberpunk: 'Cyberpunk',
     modern: 'Modern', postapoc: 'Post-Apoc', historical: 'Historical',
-    weird: 'Weird', 'urban-fantasy': 'Urban Fantasy',
+    weird: 'Weird', 'urban-fantasy': 'Urban Fantasy', 'sword-and-sorcery': 'Sword & Sorcery',
   },
   ru: {
     explore: 'Исследование',
@@ -309,6 +311,7 @@ const TAG_LABELS = {
     historical: 'История',
     weird: 'Странное',
     'urban-fantasy': 'Городское фэнтези',
+    'sword-and-sorcery': 'Меч и магия',
   },
 };
 const RES_LABELS = {
@@ -549,6 +552,10 @@ function renderSystemPage(id, sys, lang) {
   <article class="system-page static active">
     <div class="hero-banner"${heroStyle}>${heroImg}<div class="hero-overlay"><div class="meta">${escBody(publisher)}</div><h1>${escBody(name)}</h1></div></div>
     ${tagline ? `<p class="tagline">${escBody(tagline)}</p>` : ''}
+    ${(sys.free || sys.edition) ? `<div class="system-badges">
+        ${sys.free ? `<span class="sys-badge sys-badge-free">${escBody(S.badge_free)}</span>` : ''}
+        ${sys.edition ? `<span class="sys-badge sys-badge-edition">${escBody(sys.edition)}</span>` : ''}
+    </div>` : ''}
     <div class="quick-stats">
         <div class="qs"><span class="qs-label">${escBody(S.qs_dice)}</span><span class="qs-value">${escBody(sys.dice || '—')}</span></div>
         <div class="qs"><span class="qs-label">${escBody(S.qs_players)}</span><span class="qs-value">${escBody(sys.players || '—')}</span></div>

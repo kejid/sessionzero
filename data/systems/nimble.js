@@ -14,8 +14,7 @@ registerSystem("nimble", {
   "heroStyle": "background: linear-gradient(135deg, #1a3a2a, #0f1a0f, #2d1b00);",
   "playstyleTags": [
     "combat",
-    "explore",
-    "combat"
+    "explore"
   ],
   "settingTags": ["fantasy"],
   "gallery": [

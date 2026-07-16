@@ -14,7 +14,7 @@ registerSystem("runequest", {
   "heroImage": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x996/products/2008/3329/CHA4028%5F-%5FRuneQuest%5F-%5FRoleplaying%5Fin%5FGlorantha%5F-%5FFront%5FCover%5F700x900%5F-%5FPDF%5F%5F35886.1552356121.jpg?c=2",
   "playstyleTags": [
     "combat",
-    "worldbuilding",
+    "worldbuild",
     "explore"
   ],
   "settingTags": ["fantasy"],

@@ -16,9 +16,9 @@ registerSystem("starfinder-2e", {
   "playstyleTags": [
     "combat",
     "tactical",
-    "explore"
+    "narrative"
   ],
-  "settingTags": ["sci-fi"],
+  "settingTags": ["space"],
   "gallery": [
     {
       "src": "https://cdn.paizo.com/d960ad1b-9967-00f9-1158-72274b18312d/c1f8b24a-7e41-4f95-9c8b-08feaeff5fb7/Starfinder_2ELogo.png"

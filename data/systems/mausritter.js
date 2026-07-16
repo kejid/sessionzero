@@ -9,6 +9,7 @@ registerSystem("mausritter", {
   "dice": "d20 + d6",
   "players": "2–5",
   "complexity": 1,
+  "free": true,
   "foundryStatus": "Community",
   "heroImage": "https://preview.redd.it/about-mausritter-v0-9ddnjzceq2gf1.png?width=820&format=png&auto=webp&s=4720e331d3fc15268eadfcf8aa1a42a16b917bef",
   "playstyleTags": [

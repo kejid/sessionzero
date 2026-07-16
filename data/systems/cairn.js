@@ -10,6 +10,7 @@ registerSystem("cairn", {
   "dice": "d20 + d6/d8",
   "players": "2–5",
   "complexity": 1,
+  "free": true,
   "foundryStatus": "Official",
   "heroImage": "https://assetsio.gnwcdn.com/cairn-2e-box-set-art-trolls-tree-header.png?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp",
   "playstyleTags": [

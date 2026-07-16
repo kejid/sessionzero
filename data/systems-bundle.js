@@ -16,6 +16,165 @@ function registerSystem(id, data) {
         SYSTEM_GROUPS_ALL[scheme][key].push({ id: id, order: order });
     }
 }
+registerSystem("advanced-fighting-fantasy", {
+  "groups": {
+    "default": { "key": "osr", "order": 21 },
+    "family": { "key": "standalone", "order": 24 },
+    "genre": { "key": "adventure", "order": 20 }
+  },
+  "name": "Advanced Fighting Fantasy",
+  "publisher": "Arion Games",
+  "dice": "2d6 (roll-under SKILL)",
+  "players": "2–6",
+  "complexity": 2,
+  "free": true,
+  "foundryStatus": "Official",
+  "heroImage": "https://image.nobleknight.com/p/jpg1500/psicb7001.jpg",
+  "playstyleTags": [
+    "combat",
+    "explore",
+    "social"
+  ],
+  "settingTags": ["fantasy"],
+  "gallery": [
+    {
+      "src": "https://cdn.freewebstore.com/origin/235161/cb77001-thumb.jpg"
+    },
+    {
+      "src": "https://cdn.freewebstore.com/origin/235161/488616_1765104439277.png"
+    },
+    {
+      "src": "https://cdn.freewebstore.com/origin/235161/483969_1726044220939.png"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://www.arion-games.com/",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "swords"
+    },
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "clover"
+    },
+    {
+      "icon": "map"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.randroll.com/solo-aff2e-intro/
+    {
+      "text": "There's more than enough to run a game or campaign from just the core book, which is how I prefer to run the solo game.",
+      "author": "Duncan Thomson, RandRoll"
+    },
+    // VERIFIED-AT: https://tkurtbond.github.io/posts/2021/06/21/why-i-like-advanced-fighting-fantasy/
+    {
+      "text": "Advanced Fighting Fantasy is a role-playing game with simple mechanics that still provide ample detail, set in an interesting fantasy world.",
+      "author": "T. Kurt Bond, Lacking Natural Simplicity"
+    }
+  ],
+  "ru": {
+    "tagShort": "Ролёвка по книгам-игркам Fighting Fantasy",
+    "tagline": "«SKILL, STAMINA и LUCK — легендарные книги-игры становятся полноценной RPG».",
+    "description": "Advanced Fighting Fantasy — ролевая игра по классическим книгам-играм Fighting Fantasy и Sorcery! (Стив Джексон и Иан Ливингстон). Простая система на 2d6: три характеристики — Мастерство, Выносливость и Удача — плюс Магия во 2-й редакции. Издаётся Arion Games; действие — в любимом мире Титан (континент Аллансия). Ностальгия и живая система в одном.",
+    "setting": "Титан — фэнтезийный мир культовых книг-игр 1980-х: континент Аллансия, порт-город Блэксэнд, Ледяные пустоши и колдуны Крарта. Десятилетия лора из десятков геймбуков. Тон — героическое приключение с чудовищами, ловушками и мрачным юмором в духе оригинальных «Warlock of Firetop Mountain».",
+    "vignette": "Ваш искатель приключений входит в логово орка. Проверка Мастерства: 2d6 против значения Мастерства, нужно меньше-равно. Начинается бой — оба бросают 2d6 плюс Мастерство; чей результат выше, тот ранит, снимая Выносливость. Удача на исходе — потратить её на смертельный удар или приберечь на спасение? Классика книг-игр за столом.",
+    "prep": "~20 мин",
+    "mechanics": [
+      {
+        "title": "Мастерство, Выносливость, Удача",
+        "text": "Три легендарные характеристики Fighting Fantasy плюс Магия во 2-й редакции. Проверки — 2d6 против Мастерства. Знакомо всем, кто листал книги-игры в детстве."
+      },
+      {
+        "title": "Встречный бой на 2d6",
+        "text": "В схватке обе стороны кидают 2d6 + Мастерство; чей результат выше — наносит удар по Выносливости. Быстро, напряжённо и смертельно — как в оригинальных геймбуках."
+      },
+      {
+        "title": "Специальные навыки",
+        "text": "Широкое Мастерство уточняется Специальными навыками (Меч, Магия, Внимательность). Тонкая настройка героя без раздувания системы."
+      },
+      {
+        "title": "Мир Титан",
+        "text": "Готовый сеттинг любимых книг-игр: Аллансия, Sorcery!, десятки приключений и монстров. Ностальгия, подкреплённая цельной и лёгкой ролевой системой."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Обложка кора"
+      },
+      {
+        "cap": "Magic Companion"
+      },
+      {
+        "cap": "Adventure Creator"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт — Arion Games"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "Одного кора более чем достаточно, чтобы вести игру или кампанию — именно так я предпочитаю играть в соло." },
+      { "text": "Advanced Fighting Fantasy — ролевая игра с простыми механиками, дающими при этом достаточно деталей, в интересном фэнтезийном мире." }
+    ]
+  },
+  "en": {
+    "tagShort": "The RPG of the Fighting Fantasy gamebooks",
+    "tagline": "\"SKILL, STAMINA, and LUCK — the legendary gamebooks become a full RPG.\"",
+    "description": "Advanced Fighting Fantasy is the RPG of the classic Fighting Fantasy and Sorcery! gamebooks (Steve Jackson and Ian Livingstone). A simple 2d6 system: three stats — SKILL, STAMINA, and LUCK — plus MAGIC in 2nd edition. Published by Arion Games and set in the beloved world of Titan (the continent of Allansia). Nostalgia and a living system in one.",
+    "setting": "Titan — the fantasy world of the cult 1980s gamebooks: the continent of Allansia, the port-city of Port Blacksand, the Icefinger Mountains, and the sorcerers of Kakhabad. Decades of lore across dozens of gamebooks. The tone is heroic adventure with monsters, traps, and grim humor in the spirit of the original Warlock of Firetop Mountain.",
+    "vignette": "Your adventurer enters an orc's lair. A SKILL test: 2d6 against your SKILL, rolling equal or under. Combat begins — both sides roll 2d6 plus SKILL; the higher result wounds, draining STAMINA. LUCK is running low — spend it for a killing blow, or save it to survive? The classic gamebook experience, at the table.",
+    "prep": "~20 min",
+    "mechanics": [
+      {
+        "title": "SKILL, STAMINA, LUCK",
+        "text": "The three legendary Fighting Fantasy stats, plus MAGIC in 2nd edition. Tests are 2d6 against SKILL. Instantly familiar to anyone who leafed through the gamebooks as a kid."
+      },
+      {
+        "title": "Opposed 2d6 combat",
+        "text": "In a fight, both sides roll 2d6 + SKILL; the higher result lands a hit on STAMINA. Fast, tense, and deadly — just like the original gamebooks."
+      },
+      {
+        "title": "Special Skills",
+        "text": "Broad SKILL is refined by Special Skills (Sword, Magic, Awareness). Fine-tune a hero without bloating the system."
+      },
+      {
+        "title": "The world of Titan",
+        "text": "A ready-made setting from the beloved gamebooks: Allansia, Sorcery!, and dozens of adventures and monsters. Nostalgia backed by a cohesive, light RPG system."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Core rulebook cover"
+      },
+      {
+        "cap": "Magic Companion"
+      },
+      {
+        "cap": "Adventure Creator"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official site — Arion Games"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "There's more than enough to run a game or campaign from just the core book, which is how I prefer to run the solo game." },
+      { "text": "Advanced Fighting Fantasy is a role-playing game with simple mechanics that still provide ample detail, set in an interesting fantasy world." }
+    ]
+  }
+});
 registerSystem("alien", {
   "groups": {
     "default": { "key": "fl", "order": 1 },
@@ -197,6 +356,147 @@ registerSystem("alien", {
       {
         "name": "Character generator"
       }
+    ]
+  }
+});
+registerSystem("basic-fantasy", {
+  "groups": {
+    "default": { "key": "osr", "order": 12 },
+    "family": { "key": "osr-classic", "order": 7 },
+    "genre": { "key": "adventure", "order": 14 }
+  },
+  "name": "Basic Fantasy RPG",
+  "publisher": "Chris Gonnerman / Basic Fantasy RPG",
+  "dice": "d20 + variable weapon damage",
+  "players": "3–6",
+  "complexity": 2,
+  "edition": "B/X",
+  "free": true,
+  "foundryStatus": "Community",
+  "heroImage": "https://image.nobleknight.com/b/jpg1500/basicfantasy4thed.jpg",
+  "playstyleTags": [
+    "explore",
+    "combat",
+    "sandbox"
+  ],
+  "settingTags": ["fantasy"],
+  "gallery": [],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://basicfantasy.org/",
+      "fmt": "Web"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://basicfantasy.org/downloads.html",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "shield"
+    },
+    {
+      "icon": "users"
+    },
+    {
+      "icon": "gift"
+    },
+    {
+      "icon": "book-open"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://blackgate.com/a-belated-first-look-at-basic-fantasy-role-playing-game
+    {
+      "text": "Overall, this game does what it sets out to do, and does it with conviction. It's an inexpensive, exhaustive, and approachable system.",
+      "author": "M Harold Page, Black Gate"
+    },
+    // VERIFIED-AT: https://therpggazette.wordpress.com/2026/05/15/back-to-basics-a-review-of-basic-fantasy-roleplaying-game/
+    {
+      "text": "It captures the spirit of old-school fantasy adventure without burying players under archaic mechanics and obtuse formatting.",
+      "author": "Serban Ionita, The RPG Gazette"
+    }
+  ],
+  "ru": {
+    "tagShort": "Бесплатный community-клон B/X",
+    "tagline": "«Классическая D&D 1981 года — бесплатно, начисто и с апгрейдами удобства».",
+    "description": "Basic Fantasy RPG — полностью бесплатный ретроклон D&D Basic/Expert (B/X) 1981 года, который сообщество развивает с 2006-го. Крис Гоннерман взял B/X и внёс два ключевых улучшения: восходящий класс брони и раса отдельно от класса. Десятки бесплатных приключений и супплементов, живой форум, открытая лицензия. Самая экономичная точка входа в OSR.",
+    "setting": "Система-агностик с духом классического меча-и-магии. Подземелья, деревни на фронтире, драконы и забытые гробницы. Тон — приземлённое героическое фэнтези старой школы: свеча, десятифутовый шест, картирование по клеточкам и жадность как двигатель сюжета. Любой модуль B/X идёт почти без конвертации.",
+    "vignette": "Отряд спускается по верёвке в затопленный склеп. Вор идёт первым — проверка на поиск ловушек. Дальше коридор с гулями. Боец бьёт: d20 + бонус атаки против восходящего AC гуля 13. Выпало 16 — попадание, бросок урона по оружию (длинный меч — d8). Гуль огрызается когтями. Свеча оплывает; отряд решает: вперёд к добыче или назад к свету.",
+    "prep": "~30 мин",
+    "mechanics": [
+      {
+        "title": "Восходящий класс брони",
+        "text": "В отличие от оригинального B/X с нисходящим AC, здесь AC растёт — чем выше, тем лучше. Интуитивно для новичков и совместимо с современными привычками d20."
+      },
+      {
+        "title": "Раса отдельно от класса",
+        "text": "Не «раса-как-класс» из B/X: выбираете расу и класс независимо. Дварф-маг или полурослик-вор — без ограничений старой школы, но в её духе."
+      },
+      {
+        "title": "Полностью бесплатно",
+        "text": "Все правила и десятки супплементов — бесплатные PDF на basicfantasy.org под открытой лицензией. Печатные копии — по себестоимости. Community-проект без коммерции."
+      },
+      {
+        "title": "Совместимость с B/X",
+        "text": "Монстры, заклинания и процедуры совместимы с классической линейкой. Любое приключение B/X или OSR запускается почти без правок."
+      }
+    ],
+    "gallery": [],
+    "resources": [
+      {
+        "name": "Официальный сайт — всё бесплатно"
+      },
+      {
+        "name": "Бесплатные загрузки (правила, листы, супплементы)"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "В целом игра делает то, что задумано, и делает это с убеждённостью. Недорогая, исчерпывающая и доступная система." },
+      { "text": "Она передаёт дух олдскульного фэнтезийного приключения, не погребая игроков под архаичными механиками и путаной вёрсткой." }
+    ]
+  },
+  "en": {
+    "tagShort": "The free, community-built B/X clone",
+    "tagline": "\"Classic 1981 D&D — free, clean, and quietly upgraded.\"",
+    "description": "Basic Fantasy RPG is a fully free retroclone of 1981 D&D Basic/Expert (B/X), developed by its community since 2006. Chris Gonnerman took B/X and made two key upgrades: ascending armor class, and race decoupled from class. Dozens of free adventures and supplements, an active forum, and an open license. The most economical on-ramp into the OSR.",
+    "setting": "Setting-agnostic with a classic sword-and-sorcery spirit. Dungeons, frontier villages, dragons, and forgotten tombs. The tone is grounded old-school heroic fantasy: the candle, the ten-foot pole, graph-paper mapping, and greed as the engine of the plot. Any B/X module runs with almost no conversion.",
+    "vignette": "The party ropes down into a flooded crypt. The thief goes first — a check to find traps. Ahead, a corridor of ghouls. The fighter swings: d20 + attack bonus against the ghoul's ascending AC 13. He rolls a 16 — a hit, then damage by weapon (longsword, d8). The ghoul rakes back with its claws. The candle gutters; the party decides — press on toward the loot, or fall back to the light.",
+    "prep": "~30 min",
+    "mechanics": [
+      {
+        "title": "Ascending armor class",
+        "text": "Unlike original B/X's descending AC, here armor class goes up — higher is better. Intuitive for newcomers and compatible with modern d20 instincts."
+      },
+      {
+        "title": "Race separate from class",
+        "text": "No B/X 'race-as-class': you pick race and class independently. A dwarf magic-user or a halfling thief — free of the old-school restriction, but true to its feel."
+      },
+      {
+        "title": "Completely free",
+        "text": "All rules and dozens of supplements are free PDFs on basicfantasy.org under an open license. Print copies are sold at cost. A community project, not a commercial one."
+      },
+      {
+        "title": "B/X compatible",
+        "text": "Monsters, spells, and procedures are compatible with the classic line. Any B/X or OSR adventure runs with almost no editing."
+      }
+    ],
+    "gallery": [],
+    "resources": [
+      {
+        "name": "Official site — everything is free"
+      },
+      {
+        "name": "Free downloads (rules, sheets, supplements)"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "Overall, this game does what it sets out to do, and does it with conviction. It's an inexpensive, exhaustive, and approachable system." },
+      { "text": "It captures the spirit of old-school fantasy adventure without burying players under archaic mechanics and obtuse formatting." }
     ]
   }
 });
@@ -570,6 +870,7 @@ registerSystem("cairn", {
   "dice": "d20 + d6/d8",
   "players": "2–5",
   "complexity": 1,
+  "free": true,
   "foundryStatus": "Official",
   "heroImage": "https://assetsio.gnwcdn.com/cairn-2e-box-set-art-trolls-tree-header.png?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp",
   "playstyleTags": [
@@ -933,6 +1234,177 @@ registerSystem("call-of-cthulhu", {
       {
         "name": "The Dhole's House — online character generator"
       }
+    ]
+  }
+});
+registerSystem("castles-and-crusades", {
+  "groups": {
+    "default": { "key": "osr", "order": 13 },
+    "family": { "key": "osr-classic", "order": 8 },
+    "genre": { "key": "adventure", "order": 15 }
+  },
+  "name": "Castles & Crusades",
+  "publisher": "Troll Lord Games",
+  "dice": "d20 (SIEGE engine)",
+  "players": "3–6",
+  "complexity": 3,
+  "edition": "AD&D",
+  "free": true,
+  "foundryStatus": "Official",
+  "heroImage": "https://image.nobleknight.com/i/jpg1500/imptlg80107.jpg",
+  "playstyleTags": [
+    "combat",
+    "explore",
+    "sandbox"
+  ],
+  "settingTags": ["fantasy"],
+  "gallery": [
+    {
+      "src": "https://image.nobleknight.com/t/jpg1500/tlg80108.jpg"
+    },
+    {
+      "src": "https://trolllord.com/wp-content/uploads/2024/12/Pages-from-TLG-801010-Players-Handbook.pdf.jpg"
+    },
+    {
+      "src": "https://trolllord.com/wp-content/uploads/2024/12/Pages-from-TLG-801010-Players-Handbook_Page_02-1583x2048.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://trolllord.com/castles-crusades/",
+      "fmt": "Web"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://trolllord.com/product/cc-players-handbook-7th-printing-alternate-cover-free-pdf/",
+      "fmt": "PDF"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "star"
+    },
+    {
+      "icon": "swords"
+    },
+    {
+      "icon": "zap"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.blackgate.com/2013/08/18/the-exploding-world-of-castles-and-crusades/
+    {
+      "text": "Troll Lord's recent Castles and Crusades releases get my highest recommendation.",
+      "author": "John O'Neill, Black Gate"
+    },
+    // VERIFIED-AT: https://www.blackgate.com/2013/08/18/the-exploding-world-of-castles-and-crusades/
+    {
+      "text": "It's a terrific collection of cleverly designed and splendidly written products useful to anyone running a D&D or OE campaign.",
+      "author": "John O'Neill, Black Gate"
+    }
+  ],
+  "ru": {
+    "tagShort": "Стримлайн AD&D на едином движке SIEGE",
+    "tagline": "«D&D, каким вы его помните — но с одной механикой проверок на всё».",
+    "description": "Castles & Crusades — это ощущение AD&D на шасси d20, но с гениальным упрощением: движок SIEGE сводит все проверки к одной механике. Издаётся Troll Lord Games с 2004 года при участии авторов оригинальной D&D (Гэри Гайгэкс консультировал). Мост между старой школой и понятным современным дизайном; не строгий OSR, но с тем же духом.",
+    "setting": "Система-агностик с подразумеваемым классическим фэнтези (официальный сеттинг — Айзос/Aihrde). Рыцари, подземелья, драконы и древние руины. Дух — героическое приключение старой школы: исследуй, сражайся, богатей. Легко переносит любые модули AD&D и OSR почти без конвертации.",
+    "vignette": "Замковый Хранитель описывает ров с обрушенным мостом. Дwarf-воин хочет перепрыгнуть. Сила — его прайм-атрибут, значит база сложности 12. Бросок d20 + уровень + модификатор Силы против 12 плюс уровень испытания. Выпало 15 — с запасом. Он приземляется на той стороне, меч наготове. Один бросок, одна механика — и снова в игру.",
+    "prep": "~15 мин",
+    "mechanics": [
+      {
+        "title": "Движок SIEGE",
+        "text": "Все проверки — одна механика: d20 + уровень + модификатор против базы сложности (12 для прайм-атрибута, 18 для остальных) плюс уровень испытания. Учится за 15 минут."
+      },
+      {
+        "title": "Прайм-атрибуты",
+        "text": "Каждый персонаж помечает часть характеристик как «прайм» — по ним проверки легче. Так задаётся, в чём герой силён, без раздутых списков навыков."
+      },
+      {
+        "title": "Дух AD&D на d20",
+        "text": "Классы, уровни, AC, знакомые расы. Играли в AD&D или в тройку — уже знаете основу. Летальность и исследование старой школы в современной подаче."
+      },
+      {
+        "title": "Скорость за столом",
+        "text": "Система создана ради темпа: минимум обращений к книге, быстрые решения Хранителя. «D&D, каким он был раньше» — без анализа-паралича билдов."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Castle Keepers Guide"
+      },
+      {
+        "cap": "Разворот Player's Handbook"
+      },
+      {
+        "cap": "Интерьерные страницы"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт — Troll Lord Games"
+      },
+      {
+        "name": "Player's Handbook — бесплатный PDF"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "Недавние релизы Castles & Crusades от Troll Lord получают мою высшую рекомендацию." },
+      { "text": "Это отличный набор умно спроектированных и превосходно написанных продуктов, полезных любому, кто ведёт кампанию по D&D или старым редакциям." }
+    ]
+  },
+  "en": {
+    "tagShort": "Streamlined AD&D on the unified SIEGE engine",
+    "tagline": "\"The game the way it used to be — with one check mechanic for everything.\"",
+    "description": "Castles & Crusades is the feel of AD&D on a d20 chassis, with one brilliant simplification: the SIEGE engine resolves every check with a single mechanic. Published by Troll Lord Games since 2004 with input from original D&D authors (Gary Gygax consulted). A bridge between old-school play and clean modern design — not strict OSR, but cut from the same cloth.",
+    "setting": "Setting-agnostic, with an implied classic fantasy (the official setting is Aihrde). Knights, dungeons, dragons, and ancient ruins. The spirit is old-school heroic adventure: explore, fight, grow rich. It runs virtually any AD&D or OSR module with almost no conversion.",
+    "vignette": "The Castle Keeper describes a moat with a collapsed bridge. The dwarf fighter wants to leap it. Strength is his prime attribute, so the Challenge Base is 12. He rolls d20 + level + Strength mod against 12 plus the challenge level. He rolls a 15 — clears it easily, landing on the far side, sword ready. One roll, one mechanic, and back into the action.",
+    "prep": "~15 min",
+    "mechanics": [
+      {
+        "title": "The SIEGE Engine",
+        "text": "Every check is one mechanic: d20 + level + modifier against a Challenge Base (12 for a prime attribute, 18 otherwise) plus the challenge level. Learnable in fifteen minutes."
+      },
+      {
+        "title": "Prime Attributes",
+        "text": "Each character marks some abilities as 'prime' — checks against them are easier. This defines what a hero is good at without bloated skill lists."
+      },
+      {
+        "title": "AD&D feel on d20",
+        "text": "Classes, levels, AC, familiar ancestries. If you've played AD&D or 3e, you already know the base. Old-school lethality and exploration in a modern presentation."
+      },
+      {
+        "title": "Speed at the table",
+        "text": "Built for pace: minimal rulebook lookups, quick Castle Keeper rulings. 'D&D the way it used to be' — without build analysis paralysis."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Castle Keepers Guide"
+      },
+      {
+        "cap": "Player's Handbook spread"
+      },
+      {
+        "cap": "Interior pages"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official site — Troll Lord Games"
+      },
+      {
+        "name": "Player's Handbook — free PDF"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "Troll Lord's recent Castles and Crusades releases get my highest recommendation." },
+      { "text": "It's a terrific collection of cleverly designed and splendidly written products useful to anyone running a D&D or OE campaign." }
     ]
   }
 });
@@ -2062,7 +2534,7 @@ registerSystem("draw-steel", {
   "heroStyle": "background: linear-gradient(135deg, #4a1942, #1a1a2e, #0f3460);",
   "playstyleTags": [
     "combat",
-    "narrative",
+    "tactical",
     "narrative"
   ],
   "settingTags": ["fantasy"],
@@ -2205,6 +2677,185 @@ registerSystem("draw-steel", {
     "resources": [
       {
         "name": "Official website"
+      }
+    ]
+  }
+});
+registerSystem("dungeon-crawl-classics", {
+  "groups": {
+    "default": { "key": "osr", "order": 9.5 },
+    "family": { "key": "osr-modern", "order": 1 },
+    "genre": { "key": "sword-and-sorcery", "order": 5 },
+    "solo": { "key": "solo-compatible", "order": 9.5 }
+  },
+  "name": "Dungeon Crawl Classics",
+  "publisher": "Goodman Games",
+  "dice": "d20 + dice chain (d3–d30)",
+  "players": "3–6",
+  "complexity": 3,
+  "foundryStatus": "Community",
+  "heroImage": "https://image.nobleknight.com/g/jpg1500/gmg5070.jpg",
+  "playstyleTags": [
+    "combat",
+    "explore",
+    "survival",
+    "horror",
+    "sandbox"
+  ],
+  "settingTags": ["fantasy", "sword-and-sorcery"],
+  "gallery": [
+    {
+      "src": "https://cdn11.bigcommerce.com/s-ua4dd/images/stencil/1280x1280/products/345696/500037/Gamenerdzimage9999-6539__01376.1770668527.png"
+    },
+    {
+      "src": "https://image.nobleknight.com/i/jpg1500/impgmg5070l.jpg"
+    },
+    {
+      "src": "https://image.nobleknight.com/g/jpg1500/gmg5070-p7.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://goodman-games.com/dungeon-crawl-classics-rpg/",
+      "fmt": "Web"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://goodman-games.com/wp-content/uploads/2023/05/2023_DCC_QSR_completeLinks_ScreenRes.pdf",
+      "fmt": "PDF"
+    },
+    {
+      "type": "sheet",
+      "url": "https://goodman-games.com/dcc-rpg-character-sheets/",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "swords"
+    },
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "skull"
+    },
+    {
+      "icon": "book-open"
+    }
+  ],
+  "quotes": [
+
+    // VERIFIED-AT: https://www.blackgate.com/2012/07/02/dungeon-crawl-classics-growing-fresh-from-old-roots/
+    {
+      "text": "It is not a clone of the original game, like some products of the Old School Renaissance; it is a relative. The similarity is there, but this one is less interested in minutiae.",
+      "author": "Howard Andrew Jones, Black Gate"
+    },
+    // VERIFIED-AT: https://www.wargamer.com/dnd/dungeon-crawl-classics-bundle
+    {
+      "text": "This charming, unrepentantly old-school system harkens back to first edition Advanced Dungeons and Dragons, offering a surprisingly fast-paced, streamlined way to revisit those glory days.",
+      "author": "Cat Bussell, Wargamer"
+    }
+  ],
+  "ru": {
+    "tagShort": "Вайрд-фэнтези в духе Appendix N",
+    "tagline": "«Слава и золото, добытые чародейством и мечом».",
+    "description": "DCC RPG — стремительная, дикая OSR-игра по мотивам Appendix N: списка книг, вдохновлявших Гайгакса. Механика на d20 с уникальной dice chain (d3–d30). Магия опасна и непредсказуема, воины рубятся с кинематографичными Deed of Arms, а нулевой уровень — это крестьяне с вилами. Система не балансирует — она уничтожает баланс и радуется этому.",
+    "setting": "Мир DCC — вселенная Appendix N: Ховард, Лейбер, Вэнс, Муркок, Лавкрафт. Древние руины, вырождающиеся цивилизации, космический ужас на границах реальности. Это не высокое фэнтези, это тёмное, странное, кислотное приключение, где магия всегда имеет цену.",
+    "vignette": "Четыре крестьянина — пасечник, могильщик, канавокопатель и говночист — спускаются в циклопейский склеп. Говночист наступает на плиту — провал, ловушка уносит его во тьму. Пасечник зажигает факел и видит светящиеся руны. Могильщик проверяет Удачу — крит, он замечает скрытую плиту за секунду до того, как потолок рушится. Двое выживших идут дальше. На рассвете один из них станет воином — если доживёт.",
+    "prep": "~20 мин",
+    "mechanics": [
+      {
+        "title": "The Funnel (Воронка)",
+        "text": "Каждый персонаж начинает нулевым уровнем: рандомный крестьянин (1d4 хп, ржавые вилы). Игрок ведёт 2–4 таких «никто». Выжившие (25–50%) становятся героями первого уровня. Это создаёт связь со случайным персонажем и задаёт тон: жестокий, чёрный юмор."
+      },
+      {
+        "title": "Dice Chain (Цепь кубов)",
+        "text": "Вместо advantage/+X — сдвиг по цепи: d3→d4→d5→d6→d7→d8→d10→d12→d14→d16→d20→d24→d30. Бонус = шаг вверх, штраф = шаг вниз. Каждый модификатор осязаем — вы физически кидаете другой куб."
+      },
+      {
+        "title": "Mighty Deed of Arms",
+        "text": "Воины и дварфы кидают deed die (d3+), добавляя к атаке и урону. Если выпало 3+ — воин выполняет заявленный трюк: обезоруживание, щепка щита, опрокидывание великана. Один бросок заменяет всю систему фитов и combat maneuver."
+      },
+      {
+        "title": "Mercurial Magic + Spellburn",
+        "text": "Каждое заклинание уникально: при изучении бросок по mercurial magic — ваш магический снаряд может вонять серой, призывать лягушек или вызывать кровотечение из носа. Заклинатель может жечь Силу, Ловкость или Выносливость для усиления — жертвуя жизненной силой за могущество."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Leatherbound-издание (арт Дуга Ковача)"
+      },
+      {
+        "cap": "Кожаное издание"
+      },
+      {
+        "cap": "Обложка кора (7-е издание)"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт"
+      },
+      {
+        "name": "Quickstart — бесплатный PDF (82 стр.)"
+      },
+      {
+        "name": "Листы персонажей"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "Это не клон оригинальной игры, как некоторые продукты OSR — это родственник. Схожесть есть, но эта игра гораздо меньше заботится о мелочах и предпочитает, чтобы вы не листали туда-сюда в поисках правил." },
+      { "text": "Эта очаровательная, бескомпромиссно олдскульная система отсылает к первой редакции Advanced Dungeons and Dragons, предлагая удивительно быстрый и стройный способ вновь пережить те славные дни." }
+    ]
+  },
+  "en": {
+    "tagShort": "Weird fantasy old-school RPG",
+    "tagline": "\"Glory & Gold Won by Sorcery & Sword.\"",
+    "description": "DCC RPG is a fast-paced, open-feeling rules set for Appendix N-inspired weird fantasy. Uses a d20 with a unique dice chain (d3–d30). Magic is dangerous and unpredictable, warriors perform cinematic Mighty Deeds of Arms, and every character starts at level 0 as a random peasant. The game doesn't balance encounters — it nukes balance from orbit and wages war on the survivors.",
+    "setting": "The world of DCC is Appendix N itself: Howard, Leiber, Vance, Moorcock, Lovecraft. Ancient ruins, degenerate civilizations, cyclopean architecture, and cosmic horrors at the edges of reality. Not high fantasy — dark, weird, acid-flavored adventure where magic always costs something.",
+    "vignette": "Four level-0 peasants — a beekeeper, a grave digger, a ditch digger, and a gongfarmer — descend into a cyclopean ruin. The gongfarmer steps on a pressure plate — failure, the trap swallows him into darkness. The beekeeper's torch reveals glowing glyphs. The grave digger rolls a natural 20 on Luck — spots the hidden plate a second before the ceiling collapses. Two survivors press deeper. By dawn, one might earn a class — if they live.",
+    "prep": "~20 min",
+    "mechanics": [
+      {
+        "title": "The Funnel",
+        "text": "Every character starts at level 0 as a random nobody with 1d4 HP and a rusty tool. Players run 2–4 such characters through a lethal adventure. The survivors (25–50%) graduate to level 1. This creates investment in random rolled characters and sets DCC's brutal, darkly comic tone."
+      },
+      {
+        "title": "The Dice Chain",
+        "text": "Instead of advantage or +X modifiers, DCC shifts die types up or down a chain: d3→d4→d5→d6→d7→d8→d10→d12→d14→d16→d20→d24→d30. A bonus moves one step up, a penalty one step down. Every modifier is tangible — you physically roll a different die."
+      },
+      {
+        "title": "Mighty Deed of Arms",
+        "text": "Warriors and dwarves roll a unique deed die (d3+) added to attack and damage. If the deed die shows 3+, the warrior also executes a declared stunt: disarming, shield-shattering, tripping a giant. One roll replaces the entire feat/combat-maneuver subsystem."
+      },
+      {
+        "title": "Mercurial Magic & Spellburn",
+        "text": "Every wizard's spell is unique: upon learning, roll on the mercurial magic table — your magic missile may stink of brimstone, summon frogs, or cause nosebleeds. Casters can burn Strength, Agility, or Stamina to boost spell checks — literally sacrificing life force for power."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Leatherbound edition (Doug Kovacs art)"
+      },
+      {
+        "cap": "Leather edition"
+      },
+      {
+        "cap": "Core rulebook cover (7th printing)"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official website — Goodman Games"
+      },
+      {
+        "name": "Quickstart — free PDF (82 pp.)"
+      },
+      {
+        "name": "Character sheets"
       }
     ]
   }
@@ -3108,6 +3759,173 @@ registerSystem("heart", {
     ]
   }
 });
+registerSystem("hyperborea-3", {
+  "groups": {
+    "default": { "key": "osr", "order": 5.5 },
+    "family": { "key": "osr-classic", "order": 6 },
+    "genre": { "key": "sword-and-sorcery", "order": 4 }
+  },
+  "name": "Hyperborea 3",
+  "publisher": "North Wind Adventures",
+  "dice": "d20 + d4–d20",
+  "players": "3–6",
+  "complexity": 3,
+  "foundryStatus": "Community",
+  "heroImage": "https://www.hyperborea.tv/uploads/4/4/6/6/44662451/hyperborean-scene_orig.jpg",
+  "playstyleTags": [
+    "combat",
+    "explore",
+    "sandbox",
+    "survival",
+    "horror"
+  ],
+  "settingTags": ["sword-and-sorcery", "fantasy"],
+  "gallery": [
+    {
+      "src": "https://www.hyperborea.tv/uploads/4/4/6/6/44662451/1000027114_orig.png"
+    },
+    {
+      "src": "https://www.hyperborea.tv/uploads/4/4/6/6/44662451/20241016-112234_orig.jpg"
+    },
+    {
+      "src": "https://www.hyperborea.tv/uploads/4/4/6/6/44662451/1000027125_orig.png"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://www.hyperborea.tv",
+      "fmt": "Web"
+    },
+    {
+      "type": "sheet",
+      "url": "https://www.hyperborea.tv/uploads/4/4/6/6/44662451/hype3e-charsheet.pdf",
+      "fmt": "PDF"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "swords"
+    },
+    {
+      "icon": "wand-sparkles"
+    },
+    {
+      "icon": "skull"
+    },
+    {
+      "icon": "compass"
+    }
+  ],
+  "quotes": [
+
+    // VERIFIED-AT: http://grognardia.blogspot.com/2024/03/review-hyperborea.html
+    {
+      "text": "I consider Hyperborea the best modern restatement of AD&D.",
+      "author": "James Maliszewski, Grognardia"
+    },
+    // VERIFIED-AT: https://pocketmags.com/tabletop-gaming-magazine/september-2023-82/articles/hyperborea-3e
+    {
+      "text": "These are books that want you to be playing with them for years and they give you the tools to do that.",
+      "author": "Tim Clare, Tabletop Gaming Magazine (Issue #82, Sep 2023)"
+    }
+  ],
+  "ru": {
+    "tagShort": "Sword-and-sorcery с налётом science-fantasy",
+    "tagline": "«Под Северным Ветром, под алым солнцем — приключения стали и чародейства».",
+    "description": "Hyperborea 3e — отполированная версия AD&D 1e, заточенная под sword-and-sorcery и weird science-fantasy. Джеффри Таланян объединил гайгаксовский барок с интуитивными улучшениями: единый спасбросок, упрощённые матрицы атак, d6-система задач. Полная обратная совместимость с классическими модулями.",
+    "setting": "Гиперборея — плоский гексагональный мир за Северным Ветром под багровым умирающим солнцем. Аметистовые города, лучемёты (radium pistols), каннибалы-пикты, спящие древние ужасы. Вдохновлено Ховардом, Лавкрафтом и Кларком Эштоном Смитом. Мир, где выживание считается успехом.",
+    "vignette": "Группа выходит из червивого леса к Хромиуму — Городу-Государству, распростёртому под алым закатом. В порту одноглазая ведьма предлагает карту к Гробнице Свёрнутой Змеи за тень сильнейшего воина. Прежде чем ответить — вой из катакомб под Бронзовой Улицей. Древний проснулся.",
+    "prep": "~20 мин",
+    "mechanics": [
+      {
+        "title": "4 базовых класса, 22 подкласса",
+        "text": "Воин, Маг, Клирик, Вор — и 22 подкласса (Варвар, Пиромаг, Рунепис, Катафракт, Ведьма...). У каждого свои требования, способности и таблица опыта."
+      },
+      {
+        "title": "Унифицированный спасбросок",
+        "text": "Вместо AD&D-матриц с пятью категориями — один спасбросок с модификаторами по классу и уровню. Проще, но олдскульно."
+      },
+      {
+        "title": "Мастерство оружия + DR брони",
+        "text": "Воины получают бонусы к атакам с избранным оружием. Средняя и тяжёлая броня дают поглощение урона (DR). Броня — не просто AC, а тактический выбор."
+      },
+      {
+        "title": "d6-система задач",
+        "text": "Для не-боевых действий (лазание, скрытность, переговоры) — d6-бросок рефери. Нагрузка упрощена до веса брони. Игра не вязнет в деталях."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Referee's Manual"
+      },
+      {
+        "cap": "Карта Гипербореи"
+      },
+      {
+        "cap": "Арт"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт"
+      },
+      {
+        "name": "Лист персонажа (PDF)"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "Я считаю Hyperborea лучшим современным изложением AD&D." },
+      { "text": "Это книги, которые хотят, чтобы вы играли с ними годами, и они дают вам инструменты для этого." }
+    ]
+  },
+  "en": {
+    "tagShort": "Sword-and-sorcery with weird science-fantasy",
+    "tagline": "\"Beyond the North Wind, under a dying crimson sun — adventure by steel and sorcery.\"",
+    "description": "Hyperborea 3e is a streamlined restatement of Gygaxian AD&D tailored for sword-and-sorcery and weird science-fantasy. Jeffrey Talanian combines the baroque class-and-level framework of 1E AD&D with intuitive modernizations — unified saving throw, simplified combat matrices, and a d6 task resolution — while preserving full backwards compatibility with classic modules.",
+    "setting": "Hyperborea is a flat hexagonal realm hemmed in by the mystical North Wind, lit by a bloated dying red sun. Inspired by Howard, Lovecraft, and Clark Ashton Smith — ancient amethyst cities, radium pistols, cannibal Picts, cyclopean ruins, and slumbering alien horrors. A world where survival itself is considered thriving.",
+    "vignette": "The party emerges from the worm-riddled forest to find the City-State of Khromarium sprawling beneath a scarlet dusk. On the harbourfront, a one-eyed witch offers a map to the Tomb of the Coiled Serpent for the price of their strongest warrior's shadow. Before they can answer — a howl from the catacombs beneath the Street of Bronze. Something ancient has awakened.",
+    "prep": "~20 min",
+    "mechanics": [
+      {
+        "title": "4 Base Classes, 22 Subclasses",
+        "text": "Fighter, Magician, Cleric, or Thief — or one of 22 subclasses (Barbarian, Pyromancer, Runegraver, Cataphract, Witch...). Each with distinct requirements, abilities, and XP tables."
+      },
+      {
+        "title": "Unified Saving Throw",
+        "text": "Instead of AD&D's five saving throw categories — a single roll with class- and level-based modifiers. Simpler, yet old-school."
+      },
+      {
+        "title": "Weapon Mastery & Armour DR",
+        "text": "Fighters gain bonuses with chosen weapons. Medium and heavy armour grant damage reduction (DR). Armour is a tactical choice, not just AC."
+      },
+      {
+        "title": "D6 Task Resolution",
+        "text": "A referee-facing d6 system for non-combat actions (climbing, stealth, persuasion). Encumbrance simplified to armour weight. The game keeps moving."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Referee's Manual"
+      },
+      {
+        "cap": "Map of Hyperborea"
+      },
+      {
+        "cap": "Interior art"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official website"
+      },
+      {
+        "name": "Character sheet (PDF)"
+      }
+    ]
+  }
+});
 registerSystem("into-the-odd", {
   "groups": {
     "default": { "key": "osr", "order": 1 },
@@ -3262,6 +4080,7 @@ registerSystem("ironsworn", {
   "dice": "2d6 + d10",
   "players": "1–4",
   "complexity": 2,
+  "free": true,
   "heroImage": "https://img.itch.zone/aW1nLzE3OTgwODguanBn/original/gRDqF5.jpg",
   "playstyleTags": [
     "solo",
@@ -3950,6 +4769,170 @@ registerSystem("l5r", {
     ]
   }
 });
+registerSystem("labyrinth-lord", {
+  "groups": {
+    "default": { "key": "osr", "order": 19 },
+    "family": { "key": "osr-classic", "order": 11 },
+    "genre": { "key": "adventure", "order": 18 }
+  },
+  "name": "Labyrinth Lord",
+  "publisher": "Goblinoid Games",
+  "dice": "d20 + B/X resolution",
+  "players": "3–6",
+  "complexity": 2,
+  "edition": "B/X",
+  "free": true,
+  "foundryStatus": "None",
+  "heroImage": "https://image.nobleknight.com/i/jpg1500/impgbn1001.jpg",
+  "playstyleTags": [
+    "combat",
+    "explore",
+    "sandbox"
+  ],
+  "settingTags": ["fantasy"],
+  "gallery": [
+    {
+      "src": "https://image.nobleknight.com/g/jpg1500/gbd1003-dragon.jpg"
+    },
+    {
+      "src": "https://image.nobleknight.com/g/jpg1500/gbd1002.jpg"
+    },
+    {
+      "src": "https://image.nobleknight.com/i/jpg1500/impgbdmonlist.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://www.goblinoidgames.com/",
+      "fmt": "Web"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://www.drivethrurpg.com/en/product/64331/labyrinth-lord-revised-edition-no-art-version",
+      "fmt": "PDF"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "book-open"
+    },
+    {
+      "icon": "swords"
+    },
+    {
+      "icon": "gift"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://dungeonsandpossums.com/2018/12/review-advanced-labyrinth-lord-by/
+    {
+      "text": "Advanced Labyrinth Lord is absolutely playable, very convenient, and a pleasantly complete package deal.",
+      "author": "Dungeons & Possums"
+    }
+  ],
+  "ru": {
+    "tagShort": "Точный ретроклон B/X, опора OSR",
+    "tagline": "«D&D Basic/Expert 1981 года — верно, полно и бесплатно».",
+    "description": "Labyrinth Lord — верный ретроклон D&D Basic/Expert (B/X) 1981 года от Дэниела Проктора (Goblinoid Games, 2007). Один из первых и самых уважаемых клонов OSR, десятилетиями служащий эталоном совместимости. «Advanced Edition Companion» добавляет опции в духе AD&D (классы, расы, заклинания). Бесплатная версия без иллюстраций — на все правила.",
+    "setting": "Система-агностик в духе классического подземельного фэнтези. Раса-как-класс (Эльф, Дварф, Полурослик), демихьюманы с лимитами уровней, картирование по клеточкам, реакции монстров и жажда сокровищ. Любой модуль эпохи B/X идёт без конвертации — Labyrinth Lord создан именно ради этой совместимости.",
+    "vignette": "Партия у развилки в подземелье. Ведущий кидает реакцию монстра — из тьмы выходит отряд кобольдов, но бросок 2d6 показывает «нерешительность»: они колеблются. Клерик пытается договориться. Не выйдет — боец бьёт: d20 против AC, классическая таблица атак. Золото ждёт за дверью, и партия чует его запах.",
+    "prep": "~20 мин",
+    "mechanics": [
+      {
+        "title": "Верный клон B/X",
+        "text": "Почти дословные правила Молдвея/Кука 1981 года. Любой модуль и супплемент эпохи Basic/Expert запускается без правок. Эталон совместимости всего OSR-движения."
+      },
+      {
+        "title": "Advanced Edition Companion",
+        "text": "Опциональный том добавляет классы, расы и заклинания в духе AD&D — так рождается «Advanced Labyrinth Lord». Хотите проще — играете чистый B/X; хотите глубже — подключаете AEC."
+      },
+      {
+        "title": "Раса-как-класс",
+        "text": "Классический олдскул: Эльф, Дварф и Полурослик — это классы, а не расы поверх класса. Простое создание персонажа и тот самый ретро-вкус ранней D&D."
+      },
+      {
+        "title": "Бесплатная версия без арта",
+        "text": "Полные правила доступны бесплатным PDF (без иллюстраций). Порог входа — нулевой. С 2007 года это опорный справочник-ретроклон старой школы."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Иллюстрация — дракон"
+      },
+      {
+        "cap": "Модуль-приключение"
+      },
+      {
+        "cap": "Список монстров"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт — Goblinoid Games"
+      },
+      {
+        "name": "Бесплатная версия без арта (PDF)"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "Advanced Labyrinth Lord абсолютно играбелен, очень удобен и приятно завершённый комплект «всё в одном»." }
+    ]
+  },
+  "en": {
+    "tagShort": "A faithful B/X retroclone, an OSR cornerstone",
+    "tagline": "\"1981 D&D Basic/Expert — faithful, complete, and free.\"",
+    "description": "Labyrinth Lord is Daniel Proctor's faithful retroclone of 1981 D&D Basic/Expert (B/X), from Goblinoid Games (2007). One of the earliest and most respected OSR clones, it has served as the compatibility benchmark for decades. The 'Advanced Edition Companion' adds AD&D-style options (classes, races, spells). A free no-art version covers the full rules.",
+    "setting": "Setting-agnostic in the classic dungeon-fantasy mold. Race-as-class (Elf, Dwarf, Halfling), demihuman level limits, graph-paper mapping, monster reactions, and the lust for treasure. Any B/X-era module runs without conversion — Labyrinth Lord was built for exactly that compatibility.",
+    "vignette": "The party halts at a dungeon fork. The GM rolls a monster reaction — a kobold band emerges from the dark, but a 2d6 result reads 'uncertain': they hesitate. The cleric tries to parley. If it fails, the fighter swings: d20 against AC on the classic attack matrix. Gold waits behind the door, and the party can smell it.",
+    "prep": "~20 min",
+    "mechanics": [
+      {
+        "title": "Faithful B/X clone",
+        "text": "Near-verbatim 1981 Moldvay/Cook rules. Any Basic/Expert-era module or supplement runs unedited. The compatibility benchmark for the whole OSR movement."
+      },
+      {
+        "title": "Advanced Edition Companion",
+        "text": "An optional volume adds AD&D-style classes, races, and spells — this is how 'Advanced Labyrinth Lord' is born. Want it simpler? Play pure B/X. Want more depth? Bolt on the AEC."
+      },
+      {
+        "title": "Race-as-class",
+        "text": "Classic old-school: Elf, Dwarf, and Halfling are classes, not races layered onto a class. Simple character creation and that authentic early-D&D flavor."
+      },
+      {
+        "title": "Free no-art version",
+        "text": "The complete rules are available as a free PDF (without illustrations). A zero-cost on-ramp. Since 2007 it has been the old-school movement's reference retroclone."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Dragon illustration"
+      },
+      {
+        "cap": "Adventure module"
+      },
+      {
+        "cap": "Monster listing"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official site — Goblinoid Games"
+      },
+      {
+        "name": "Free no-art version (PDF)"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "Advanced Labyrinth Lord is absolutely playable, very convenient, and a pleasantly complete package deal." }
+    ]
+  }
+});
 registerSystem("lancer", {
   "groups": {
     "default": { "key": "tactical", "order": 3 },
@@ -4470,6 +5453,7 @@ registerSystem("mausritter", {
   "dice": "d20 + d6",
   "players": "2–5",
   "complexity": 1,
+  "free": true,
   "foundryStatus": "Community",
   "heroImage": "https://preview.redd.it/about-mausritter-v0-9ddnjzceq2gf1.png?width=820&format=png&auto=webp&s=4720e331d3fc15268eadfcf8aa1a42a16b917bef",
   "playstyleTags": [
@@ -5605,8 +6589,7 @@ registerSystem("nimble", {
   "heroStyle": "background: linear-gradient(135deg, #1a3a2a, #0f1a0f, #2d1b00);",
   "playstyleTags": [
     "combat",
-    "explore",
-    "combat"
+    "explore"
   ],
   "settingTags": ["fantasy"],
   "gallery": [
@@ -5932,6 +6915,8 @@ registerSystem("ose", {
   "dice": "d20 + стандарт",
   "players": "2–6",
   "complexity": 2,
+  "edition": "B/X",
+  "free": true,
   "foundryStatus": "Community",
   "heroImage": "https://necroticgnome.com/cdn/shop/files/AFM_Cover_-_C_2022_David_Hoskins_13c53e3d-e120-43b0-8085-87d125f9aa7b.jpg?v=1669315843&width=3200",
   "playstyleTags": [
@@ -6076,6 +7061,354 @@ registerSystem("ose", {
       {
         "name": "Basic Rules — free PDF"
       }
+    ]
+  }
+});
+registerSystem("osric-3", {
+  "groups": {
+    "default": { "key": "osr", "order": 3.5 },
+    "family": { "key": "osr-classic", "order": 3.5 },
+    "genre": { "key": "dark-fantasy", "order": 8.5 }
+  },
+  "name": "OSRIC 3",
+  "publisher": "Mythmere Games",
+  "dice": "d20 + d4–d100",
+  "players": "2–6",
+  "complexity": 3,
+  "edition": "AD&D 1e",
+  "free": true,
+  "foundryStatus": "Official",
+  "heroImage": "https://www.mythmeregames.com/cdn/shop/files/PDFCovers3.png",
+  "playstyleTags": [
+    "explore",
+    "combat",
+    "sandbox",
+    "survival"
+  ],
+  "settingTags": ["fantasy", "sword-and-sorcery"],
+  "gallery": [
+    {
+      "src": "https://www.mythmeregames.com/cdn/shop/files/PDFCovers2.png"
+    },
+    {
+      "src": "https://www.mythmeregames.com/cdn/shop/files/PDFCovers4_91571dbb-8283-418b-9d4b-42d9a1a3af3f.png"
+    },
+    {
+      "src": "https://www.mythmeregames.com/cdn/shop/files/OSRIC3.0GMScreen.png"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://www.mythmeregames.com/collections/osric-3-0",
+      "fmt": "Web"
+    },
+    {
+      "type": "link",
+      "url": "https://www.drivethrurpg.com/en/product/550861/osric-3-0-player-guide",
+      "fmt": "Web"
+    },
+    {
+      "type": "sheet",
+      "url": "https://dragonsfoot.org/php4/archive.php?sectioninit=SG&fileid=386",
+      "fmt": "PDF"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "swords"
+    },
+    {
+      "icon": "book-open"
+    },
+    {
+      "icon": "shield"
+    }
+  ],
+  "quotes": [
+
+    // VERIFIED-AT: https://traversefantasy.blogspot.com/2026/03/osric-3e-informal-review.html
+    {
+      "text": "OSRIC 3e aims to reintroduce an old game for a new cultural context of play. I just adore it for that.",
+      "author": "Traverse Fantasy"
+    },
+    // VERIFIED-AT: http://sbrpg20.blogspot.com/2026/03/mail-room-osric-3-hardcovers.html
+    {
+      "text": "If I were starting new players with 1E, I would be playing OSRIC 3.0. Never has there been a clearer, easier-to-learn, and well-represented version of the game than this.",
+      "author": "Hak, SBRPG"
+    }
+  ],
+  "ru": {
+    "tagShort": "AD&D 1e ретроклон",
+    "tagline": "«Оригинальный ретроклон, возрождённый для нового поколения».",
+    "description": "OSRIC 3.0 — точное изложение AD&D 1e, полностью переписанное для ясности и доступности. Золотая середина между правил-лайт OSR и сложными современными RPG. Рефери — судья, механика достаточно глубока для хай-левела. Бесплатные PDF, открытая лицензия на модули, совместимость с тысячами приключений. Вход в AD&D — здесь.",
+    "setting": "Система-агностик. Подразумеваемый мир — псевдо-средневековое фэнтези начала 80-х: руины, драконы, древняя магия и сверкающие сокровища. Опасный фронтир, где авантюристы либо вписывают свои имена в легенды, либо умирают забытыми в темноте.",
+    "vignette": "Факел мерцает. Ниорвия, воительница, приоткрывает дверь — за ней зал в паутине. Скрип когтей по камню где-то впереди. Джарвиан-вор показывает на отпечаток плиты в пыли. Полдарк-маг шепчет арканное слово, его глаза стекленеют — ESP нащупывает сознание за дверью. Воительница поднимает меч и шагает во тьму.",
+    "prep": "~15 мин",
+    "mechanics": [
+      {
+        "title": "Сегментная инициатива",
+        "text": "Раунд поделён на 10 сегментов. Каждая сторона кидает 1d6 — результат определяет сегмент действия. Время заклинаний, скорость оружия и движение взаимодействуют с этой шкалой."
+      },
+      {
+        "title": "Четыре режима генерации",
+        "text": "От «хардкор» (3d6 по порядку) до «гибкий» (4d6 с отбрасыванием по выбору). Модификаторы возраста и расы. Потолок — 18."
+      },
+      {
+        "title": "Heroic Assault (Cleave)",
+        "text": "Воин, убивший врага до 0 хп, немедленно атакует соседнего. На высоких уровнях — несколько атак за раунд. Механика не работает одновременно, заменяет себя."
+      },
+      {
+        "title": "Backstab и навыки вора",
+        "text": "Процентные навыки: скрытность, тишина, взлом, поиск/обезвреживание ловушек. Backstab: +4 к атаке, множитель урона. Чёткие правила: скрытное приближение или атака из тени."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Player Guide + GM Guide"
+      },
+      {
+        "cap": "Корешки книг"
+      },
+      {
+        "cap": "GM Screen"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт — Mythmere Games"
+      },
+      {
+        "name": "Player Guide (Free/PWYW на DriveThruRPG)"
+      },
+      {
+        "name": "Лист персонажа — Dragonsfoot"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "OSRIC 3e стремится заново представить старую игру для нового культурного контекста. Я просто обожаю это." },
+      { "text": "Если бы я начинал новых игроков с 1E, я бы играл в OSRIC 3.0. Никогда не было более ясной, лёгкой для изучения и хорошо представленной версии этой игры." }
+    ]
+  },
+  "en": {
+    "tagShort": "AD&D 1e retro-clone",
+    "tagline": "\"The original retro-clone, reborn for a new generation.\"",
+    "description": "OSRIC 3.0 is a faithful restatement and reorganization of first-edition Advanced Dungeons & Dragons, fully rewritten for clarity and accessibility. It occupies a middle ground between rules-light OSR and modern complex RPGs, relying on the GM as referee while providing enough mechanical depth to hold together at high-level play. Free PDFs, third-party licensing, and compatibility with thousands of existing adventures.",
+    "setting": "Setting-agnostic. The implied world is pseudo-medieval early-1980s fantasy: ruined dungeons, ancient magic, fierce dragons, glittering treasure. A dangerous frontier where adventurers carve their names into legend or die forgotten in the dark.",
+    "vignette": "The torchlight flickers. Niorvia the fighter eases the dungeon door open — a chamber thick with cobwebs. A faint scraping sound — claws on stone. Jarvian the thief points at a faint pressure plate impression in the dust. Poldark the mage whispers an arcane syllable, his eyes glazing as he reaches out with ESP. The fighter nods once, raises her blade, and steps into the dark.",
+    "prep": "~15 min",
+    "mechanics": [
+      {
+        "title": "Segment-Based Initiative",
+        "text": "Combat rounds divided into 10 segments. Each side rolls 1d6 for initiative — the result is the segment when their actions resolve. Spell casting times, weapon speeds, and movement interact with this granular timeline."
+      },
+      {
+        "title": "Four Ability Generation Modes",
+        "text": "From Hardest Mode (3d6 down the line) to Flexible Mode (4d6 drop lowest, arrange as desired). Age and racial modifiers apply, hard cap at 18."
+      },
+      {
+        "title": "Heroic Assault (Cleave)",
+        "text": "Fighters who reduce a foe to 0 HP may immediately make an additional attack against an adjacent enemy. At higher levels this becomes multiple attacks per round."
+      },
+      {
+        "title": "Backstab & Thief Skills",
+        "text": "Thieves use percentile skills for hide, move silently, pick locks, and find/remove traps. Backstab grants +4 to hit and multiplies damage dice. Clear rules for when it applies."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Player Guide + GM Guide"
+      },
+      {
+        "cap": "Spine art"
+      },
+      {
+        "cap": "GM Screen"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official website — Mythmere Games"
+      },
+      {
+        "name": "Player Guide (Free/PWYW on DriveThruRPG)"
+      },
+      {
+        "name": "Character sheet — Dragonsfoot"
+      }
+    ]
+  }
+});
+registerSystem("outcast-silver-raiders", {
+  "groups": {
+    "default": { "key": "osr", "order": 22 },
+    "family": { "key": "standalone", "order": 25 },
+    "genre": { "key": "dark-fantasy", "order": 10 }
+  },
+  "name": "Outcast Silver Raiders",
+  "publisher": "Esoteric Ludology / Isaac VanDuyn",
+  "dice": "d20 / d10 / d6 (roll-high)",
+  "players": "3–6",
+  "complexity": 2,
+  "foundryStatus": "None",
+  "heroImage": "https://images.squarespace-cdn.com/content/v1/5e669e911f689d55045f96b8/41b71530-99c4-4e85-abae-6f6b7edabcff/church+battle.png",
+  "playstyleTags": [
+    "explore",
+    "survival",
+    "horror"
+  ],
+  "settingTags": ["fantasy", "weird"],
+  "gallery": [
+    {
+      "src": "https://images.squarespace-cdn.com/content/v1/5e669e911f689d55045f96b8/1a8bbe5d-2ba9-4488-bb91-947de0692570/warlock+tower.png"
+    },
+    {
+      "src": "https://images.squarespace-cdn.com/content/v1/5e669e911f689d55045f96b8/26b1d141-9da5-466a-98ef-ca74538ebb1c/warriors.png"
+    },
+    {
+      "src": "https://images.squarespace-cdn.com/content/v1/5e669e911f689d55045f96b8/55cdd122-0ce9-4b01-83ec-3436bec05bb6/rogues.png"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://www.osr-rpg.com/",
+      "fmt": "Web"
+    },
+    {
+      "type": "link",
+      "url": "https://www.exaltedfuneral.com/products/outcast-silver-raiders",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "cross"
+    },
+    {
+      "icon": "lightbulb"
+    },
+    {
+      "icon": "swords"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://unwinnable.com/2024/07/26/smelting-rpgs-down-to-simple-bliss-with-outcast-silver-raiders/
+    {
+      "text": "Standing among the many titles that have emerged in this tradition, Outcast Silver Raiders offers a particularly innovative, evocative and immersive experience to potential players.",
+      "author": "Justin Reeve, Unwinnable"
+    },
+    // VERIFIED-AT: https://unwinnable.com/2024/07/26/smelting-rpgs-down-to-simple-bliss-with-outcast-silver-raiders/
+    {
+      "text": "The game's blend of old school mechanics, dark thematic elements and stunning artwork all come together to create a unique experience that stands out in the sometimes crowded landscape of TTRPGs.",
+      "author": "Justin Reeve, Unwinnable"
+    }
+  ],
+  "ru": {
+    "tagShort": "Кроваво-оккультный OSR в Мифическом Севере",
+    "tagline": "«Окровавленное средневековое фэнтези по мотивам шотландского фольклора XII века».",
+    "description": "Outcast Silver Raiders — OSR-игра с оглушительным арт-стилем (красное-чёрное-белое, экстрим-метал-эстетика Кима Диаса Хольма). Изгои-наёмники добывают серебро в жестоком мифическом мире. Своя механика «всегда бросай высоко» с разными кубами под ситуацию. Влияния — Lamentations of the Flame Princess, The Black Hack, Swordfish Islands.",
+    "setting": "Мифический Север — окровавленное оккультное средневековье по мотивам фольклора Шотландии XII века и средневековой католической церкви. Мир низкой магии с хоррор-подтекстом: гниющие крепости, еретики, святые и твари из-под земли. Не героика — выживание изгоев, которым нужно серебро, чтобы протянуть ещё зиму.",
+    "vignette": "Отряд крадётся в разорённое аббатство за серебром алтаря. Вор проверяет навык — бросок d6, всегда «высоко»: выпало 5, порог пройден, реликвия у вас. Но снаружи звонит колокол. Стычка неизбежна — атака бросается d20 «высоко» против защиты. Здесь ценят не резню, а хитрость: лучший бой — тот, которого удалось избежать.",
+    "prep": "~5 мин",
+    "mechanics": [
+      {
+        "title": "Всегда бросай высоко",
+        "text": "Под каждую ситуацию — свой куб: d20 на атаки, d10 на спасброски, d6 на проверки. Всегда бросаете «высоко». Простая, интуитивная система без таблиц модификаторов."
+      },
+      {
+        "title": "Мифический Север",
+        "text": "Оккультное средневековье, вдохновлённое Шотландией XII века и католической церковью. Низкая магия, хоррор-подтекст, кровь и святость — цельный, мрачный сеттинг в комплекте."
+      },
+      {
+        "title": "Квест важнее боя",
+        "text": "Стычки поощряют смекалку и решение проблем, а не убийство. Играет мастерство игрока: обмануть, обойти, договориться. Прямой бой — крайняя и опасная мера."
+      },
+      {
+        "title": "Кампания без подготовки",
+        "text": "Игра создана, чтобы запускаться прямо из коробки: кубы связывают фракции и встречи на лету. Минимум прикидок для ведущего — максимум игры за столом."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Башня чернокнижника"
+      },
+      {
+        "cap": "Воины"
+      },
+      {
+        "cap": "Разбойники"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт — osr-rpg.com"
+      },
+      {
+        "name": "Boxed Set (Exalted Funeral)"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "Среди множества игр этой традиции Outcast Silver Raiders предлагает особенно новаторский, выразительный и погружающий опыт." },
+      { "text": "Смесь олдскульных механик, мрачных тем и потрясающего арта создаёт уникальный опыт, выделяющийся в порой перенасыщенном ландшафте настолок." }
+    ]
+  },
+  "en": {
+    "tagShort": "Blood-soaked occult OSR in the Mythic North",
+    "tagline": "\"Blood-drenched medieval fantasy drawn from 12th-century Scottish folklore.\"",
+    "description": "Outcast Silver Raiders is an OSR game with a jaw-dropping art style — red, black, and white, in the extreme-metal aesthetic of Kim Diaz Holm. Outcast mercenaries scrape silver from a brutal mythic world. Its own 'always roll high' engine uses a different die per situation. Influences: Lamentations of the Flame Princess, The Black Hack, and The Swordfish Islands.",
+    "setting": "The Mythic North — a blood-drenched occult medieval world inspired by 12th-century Scottish folklore and the medieval Catholic church. Low magic with a horror undercurrent: rotting keeps, heretics, saints, and things from underground. Not heroism — the survival of outcasts who need silver to last one more winter.",
+    "vignette": "The party creeps into a ruined abbey for the altar's silver. The thief tests a skill — a d6, always rolled high: a 5 clears the target, and the relic is yours. But a bell tolls outside. A clash is coming — an attack rolls d20 high against a defense. Here cunning beats slaughter: the best fight is the one you avoid.",
+    "prep": "~5 min",
+    "mechanics": [
+      {
+        "title": "Always roll high",
+        "text": "Each situation uses its own die: d20 for attacks, d10 for saving throws, d6 for checks. You always roll high. A simple, intuitive system with no modifier tables."
+      },
+      {
+        "title": "The Mythic North",
+        "text": "An occult medieval world inspired by 12th-century Scotland and the Catholic church. Low magic, a horror undercurrent, blood and sanctity — a complete, grim setting in the box."
+      },
+      {
+        "title": "Quest over combat",
+        "text": "Encounters reward ingenuity and problem-solving, not killing. Player skill is what matters: trick it, bypass it, talk your way past. Open combat is a last, dangerous resort."
+      },
+      {
+        "title": "No-prep campaign",
+        "text": "Built to run right out of the box: dice tie factions and encounters together on the fly. Minimal GM prep — maximal play at the table."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Warlock's tower"
+      },
+      {
+        "cap": "Warriors"
+      },
+      {
+        "cap": "Rogues"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official site — osr-rpg.com"
+      },
+      {
+        "name": "Boxed Set (Exalted Funeral)"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "Standing among the many titles that have emerged in this tradition, Outcast Silver Raiders offers a particularly innovative, evocative and immersive experience to potential players." },
+      { "text": "The game's blend of old school mechanics, dark thematic elements and stunning artwork all come together to create a unique experience that stands out in the sometimes crowded landscape of TTRPGs." }
     ]
   }
 });
@@ -6416,7 +7749,7 @@ registerSystem("runequest", {
   "heroImage": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x996/products/2008/3329/CHA4028%5F-%5FRuneQuest%5F-%5FRoleplaying%5Fin%5FGlorantha%5F-%5FFront%5FCover%5F700x900%5F-%5FPDF%5F%5F35886.1552356121.jpg?c=2",
   "playstyleTags": [
     "combat",
-    "worldbuilding",
+    "worldbuild",
     "explore"
   ],
   "settingTags": ["fantasy"],
@@ -7200,9 +8533,9 @@ registerSystem("starfinder-2e", {
   "playstyleTags": [
     "combat",
     "tactical",
-    "explore"
+    "narrative"
   ],
-  "settingTags": ["sci-fi"],
+  "settingTags": ["space"],
   "gallery": [
     {
       "src": "https://cdn.paizo.com/d960ad1b-9967-00f9-1158-72274b18312d/c1f8b24a-7e41-4f95-9c8b-08feaeff5fb7/Starfinder_2ELogo.png"
@@ -7539,6 +8872,337 @@ registerSystem("starforged", {
     ]
   }
 });
+registerSystem("stars-without-number", {
+  "groups": {
+    "default": { "key": "osr", "order": 15 },
+    "family": { "key": "osr-classic", "order": 9 },
+    "genre": { "key": "sci-fi", "order": 12 },
+    "solo": { "key": "solo-compatible", "order": 16 }
+  },
+  "name": "Stars Without Number",
+  "publisher": "Sine Nomine Publishing / Kevin Crawford",
+  "dice": "d20 (combat) + 2d6 (skills)",
+  "players": "3–6",
+  "complexity": 3,
+  "edition": "B/X",
+  "free": true,
+  "foundryStatus": "Community",
+  "heroImage": "https://image.nobleknight.com/s/jpg1500/swnrevised.jpg",
+  "playstyleTags": [
+    "explore",
+    "sandbox",
+    "combat"
+  ],
+  "settingTags": ["space"],
+  "gallery": [
+    {
+      "src": "https://image.nobleknight.com/s/jpg1500/swnrre.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "quickstart",
+      "url": "https://www.drivethrurpg.com/en/product/230009/stars-without-number-revised-edition-free-version",
+      "fmt": "PDF"
+    },
+    {
+      "type": "link",
+      "url": "https://www.drivethrurpg.com/en/publisher/3482/Sine-Nomine-Publishing",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "orbit"
+    },
+    {
+      "icon": "flag"
+    },
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "rocket"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://cannibalhalflinggaming.com/2018/01/31/level-one-wonk-stars-without-number/
+    {
+      "text": "Stars Without Number is a solid and expansive entry in the science fiction RPG genre; the OSR backbone is yet another bonus.",
+      "author": "Aaron Marks, Cannibal Halfling Gaming"
+    },
+    // VERIFIED-AT: https://cannibalhalflinggaming.com/2018/01/31/level-one-wonk-stars-without-number/
+    {
+      "text": "it's hard to think of a better start point for a GM who wants to write a space sandbox.",
+      "author": "Aaron Marks, Cannibal Halfling Gaming"
+    }
+  ],
+  "ru": {
+    "tagShort": "B/X в космосе: сай-фай песочница",
+    "tagline": "«Год 3200. Империя человечества лежит в руинах — а перед вами целый сектор».",
+    "description": "Stars Without Number — олдскульная научно-фантастическая RPG, целиком заточенная под песочницу и облегчение труда ведущего. Наследие B/X в космосе: атрибуты, классы, спасброски, но с генераторами секторов, миров и фракций. Знаменита бесплатной полной версией и лучшим в жанре инструментарием для sandbox-кампаний.",
+    "setting": "Через 600 лет после «Крика» — телепатической катастрофы, оборвавшей сверхсветовые пути и обрушившей галактическую цивилизацию. Теперь человечество заново сшивает разорванные звёзды: фронтирные миры, забытые технологии Предтеч, псионики и молчаливые ИИ. Классический космический фронтир, готовый к освоению.",
+    "vignette": "Ваш экипаж высаживается на мире с тегами «Изгнанники» и «Запретные технологии». Инженер вскрывает древний терминал Предтеч — проверка навыка: 2d6 + Интеллект + Fix. Выпало 9, порог 8 — успех, но терминал пробуждается. Между сессиями ход фракции: местный культ делает бросок на «Захватить актив». Сектор живёт сам, без рельсов.",
+    "prep": "~20 мин",
+    "mechanics": [
+      {
+        "title": "Генерация сектора и миров",
+        "text": "За вечер собирается звёздный сектор: броски по таблицам создают миры, а два «тега мира» на каждый задают конфликты и завязки. Готовая песочница почти без ручной работы."
+      },
+      {
+        "title": "Ходы фракций",
+        "text": "Фракции действуют между сессиями как в стратегии: строят активы, атакуют друг друга, захватывают миры. Мир меняется сам — ведущему не нужно вести игроков за руку."
+      },
+      {
+        "title": "Гибрид d20 + 2d6",
+        "text": "Бой — привычный d20 против AC. Навыки — 2d6 + атрибут + навык против порога. Две простые механики, знакомые всем, кто играл в олдскульную D&D."
+      },
+      {
+        "title": "Три класса и фокусы",
+        "text": "Воин, Эксперт, Псионик (и Авантюрист-мультикласс). «Фокусы» тонко настраивают героя. Псионика — отдельная опасная система с телепатией, телекинезом и метапсионикой."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Revised Edition"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Бесплатная полная версия (DriveThruRPG)"
+      },
+      {
+        "name": "Sine Nomine Publishing"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "Stars Without Number — крепкий и обширный представитель жанра научной фантастики; OSR-основа лишь добавляет плюсов." },
+      { "text": "Трудно представить лучшую отправную точку для ведущего, который хочет написать космическую песочницу." }
+    ]
+  },
+  "en": {
+    "tagShort": "B/X in space: a sci-fi sandbox toolkit",
+    "tagline": "\"The year is 3200 and mankind's empire lies in ashes — and a whole sector waits.\"",
+    "description": "Stars Without Number is an old-school-inspired sci-fi RPG built from the ground up for sandbox play and to simplify the GM's job. B/X heritage in space — attributes, classes, saves — paired with generators for sectors, worlds, and factions. Famous for its genuinely complete free edition and the best sandbox-campaign toolkit in the genre.",
+    "setting": "Six hundred years after the Scream — a psychic catastrophe that severed faster-than-light travel and collapsed galactic civilization. Now humanity re-stitches the shattered stars: frontier worlds, forgotten Precursor tech, psychics, and silent AIs. A classic space frontier, wide open to explore.",
+    "vignette": "Your crew lands on a world tagged 'Exile Colony' and 'Forbidden Tech.' The engineer cracks an ancient Precursor terminal — skill check: 2d6 + Intelligence + Fix. She rolls a 9 against difficulty 8 — success, but the terminal wakes up. Between sessions, a faction turn: a local cult rolls to Seize an Asset. The sector lives on its own, no rails required.",
+    "prep": "~20 min",
+    "mechanics": [
+      {
+        "title": "Sector & world generation",
+        "text": "Roll up a star sector in an evening: tables generate worlds, and two 'World Tags' per world seed conflicts and adventure hooks. A ready-made sandbox with almost no hand-crafting."
+      },
+      {
+        "title": "Faction turns",
+        "text": "Factions act between sessions like a strategy game: building assets, attacking each other, seizing worlds. The setting evolves by itself — the GM never has to railroad."
+      },
+      {
+        "title": "d20 + 2d6 hybrid",
+        "text": "Combat is familiar d20 vs AC. Skills are 2d6 + attribute + skill against a difficulty. Two simple mechanics anyone who's played old-school D&D already knows."
+      },
+      {
+        "title": "Three classes & Foci",
+        "text": "Warrior, Expert, Psychic (plus the Adventurer multiclass). 'Foci' fine-tune a hero. Psionics is its own dangerous system of telepathy, telekinesis, and metapsionics."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Revised Edition"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Free complete edition (DriveThruRPG)"
+      },
+      {
+        "name": "Sine Nomine Publishing"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "Stars Without Number is a solid and expansive entry in the science fiction RPG genre; the OSR backbone is yet another bonus." },
+      { "text": "it's hard to think of a better start point for a GM who wants to write a space sandbox." }
+    ]
+  }
+});
+registerSystem("sword-and-wizardry", {
+  "groups": {
+    "default": { "key": "osr", "order": 6.5 },
+    "family": { "key": "osr-classic", "order": 5 },
+    "genre": { "key": "dark-fantasy", "order": 5.5 }
+  },
+  "name": "Swords & Wizardry",
+  "publisher": "Mythmere Games / Matt Finch",
+  "dice": "d20 + d4–d12",
+  "players": "2–6",
+  "complexity": 2,
+  "edition": "OD&D",
+  "free": true,
+  "foundryStatus": "Community",
+  "heroImage": "https://www.mythmeregames.com/cdn/shop/files/Swords_Wizardry_f97618b8-689a-4b99-a580-ca1a2182a1cc.png?v=1707749908",
+  "playstyleTags": [
+    "combat",
+    "explore",
+    "sandbox",
+    "survival"
+  ],
+  "settingTags": ["fantasy", "sword-and-sorcery"],
+  "gallery": [
+    {
+      "src": "https://www.mythmeregames.com/cdn/shop/files/Swords_Wizardry_f97618b8-689a-4b99-a580-ca1a2182a1cc.png?v=1707749908"
+    },
+    {
+      "src": "https://www.mythmeregames.com/cdn/shop/files/SWPlayerBook20232_a8c5d191-e209-406f-878d-63f60a271a85.jpg"
+    },
+    {
+      "src": "https://www.mythmeregames.com/cdn/shop/files/SWPlayerBook20233_b52fdac8-d4ed-4a1d-87cf-cfff19ebea7c.jpg"
+    },
+    {
+      "src": "https://www.mythmeregames.com/cdn/shop/files/SWPlayerBook20234_08e48758-c05f-4ce8-ba9a-f67252765223.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://www.mythmeregames.com/products/swords-wizardry-complete-revised-a-fantasy-role-playing-game",
+      "fmt": "Web"
+    },
+    {
+      "type": "sheet",
+      "url": "https://www.mythmeregames.com/products/swords-wizardry-character-sheets-pdf-free",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "swords"
+    },
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "book-open"
+    },
+    {
+      "icon": "scroll"
+    }
+  ],
+  "quotes": [
+
+    // VERIFIED-AT: https://garysentus.blogspot.com/2023/05/review-swords-wizardry-complete-revised.html
+    {
+      "text": "This latest evolution of Swords & Wizardry is easily the best yet; a standout in the crowded retro-clone field and a legitimate contender for the honor of greatest 'D&D' rule book ever devised.",
+      "author": "Will Mistretta, It's okay; Gary sent us."
+    },
+    // VERIFIED-AT: https://mdhughes.tech/2023/06/11/review-swords-wizardry-complete-revised
+    {
+      "text": "Swords & Wizardry is much more eclectic and opinionated. It's also much more playable, more hackable, and more easily used as a 'modern' RPG... S&W Complete Revised is the best of these.",
+      "author": "Mark Damon Hughes, mdhughes.tech"
+    }
+  ],
+  "ru": {
+    "tagShort": "Ретроклон OD&D",
+    "tagline": "«Первая RPG, причёсанная и улучшенная».",
+    "description": "Swords & Wizardry Complete Revised — ENNIE-награждённый ретроклон оригинальной D&D (1974–1978). Мэтт Финч собрал все ранние супплементы в единую книгу на 144 страницы. Девять классов, пять рас, ~200 заклинаний, 160+ монстров. Философия «rulings over rules» — основа OSR-движения.",
+    "setting": "Система-агностик. Подразумеваемый мир — классическое sword-and-sorcery в духе Ховарда и Лейбера. Средневековое фэнтези с руинами, древними тайнами и силами Порядка против Хаоса. Поддерживает всё от приземистого low-fantasy до гонзо-фантастики с андроидами и марсианами.",
+    "vignette": "Гримм, дварф-воин, прижимается ухом к замшелой двери — за ней орки. Мира-воровка достаёт кинжал и проверяет замок. Факел мерцает. Гримм выбивает дверь — орки в шоке, у Миры внезапная атака. Бой быстр и летален: один хороший удар может убить любого.",
+    "prep": "~10 мин",
+    "mechanics": [
+      {
+        "title": "Единый спасбросок",
+        "text": "Вместо пяти категорий спасбросков — один универсальный спасбросок, зависящий от класса и уровня. Просто и элегантно."
+      },
+      {
+        "title": "Нисходящий и восходящий AC",
+        "text": "Каждое чудовище и правило даны с обоими вариантами AC. Совместимость с любыми приключениями — как старыми, так и новыми."
+      },
+      {
+        "title": "Четыре системы инициативы",
+        "text": "В комплекте четыре варианта: от стандартного d6 до DEX-ранга и системы действий из Eldritch Wizardry. Выбирайте под свой стиль."
+      },
+      {
+        "title": "Rulings over Rules",
+        "text": "Правила намеренно оставляют пробелы для рефери. Быстрые решения вместо поиска по книге. Полиморф — 63 слова, доверьтесь ведущему."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Обложка Complete Revised"
+      },
+      {
+        "cap": "Разворот книги"
+      },
+      {
+        "cap": "Интерьер"
+      },
+      {
+        "cap": "Иллюстрации"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт — Mythmere Games"
+      },
+      {
+        "name": "Листы персонажей"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "Эта последняя эволюция Swords & Wizardry — лучшая на данный момент; выдающаяся работа в переполненном поле ретроклонов и законный претендент на звание величайшей книги правил D&D из когда-либо созданных." },
+      { "text": "Swords & Wizardry гораздо более эклектичная и своеобразная. Она также куда более играбельная, хакабельная, и легче используется как «современная» RPG." }
+    ]
+  },
+  "en": {
+    "tagShort": "OD&D retroclone, rulings over rules",
+    "tagline": "\"The ENNIE award-winning retro-clone of the original fantasy roleplaying game.\"",
+    "description": "Swords & Wizardry Complete Revised is the definitive edition of the ENNIE award-winning retro-clone of original D&D (1974–1978). Matt Finch distilled all the early supplements into one cohesive 144-page rulebook: nine classes, five ancestries, ~200 spells, 160+ monsters, and procedures for dungeon and wilderness play. The rulings-over-rules philosophy that defined the OSR movement.",
+    "setting": "Setting-agnostic. The implied world is classic pulp sword-and-sorcery in the tradition of Howard, Leiber, and Vance — medieval fantasy with crumbling dungeons, ancient mysteries, and the war of Law vs. Chaos. Supports everything from gritty low-fantasy to gonzo sci-fantasy with androids and Martians.",
+    "vignette": "Grimm the dwarf fighter presses his ear to the moss-caked door — orcish voices beyond. Mira the thief draws her dagger and checks the lock. Torchlight flickers. Grimm kicks the door open — Surprise is theirs. Combat is swift and deadly; one good hit can fell any man, and the players know it.",
+    "prep": "~10 min",
+    "mechanics": [
+      {
+        "title": "Single Saving Throw",
+        "text": "Instead of five traditional saving throw categories, S&W uses one unified saving throw based on class and level. Simple and elegant."
+      },
+      {
+        "title": "Ascending & Descending AC",
+        "text": "Every monster and rule includes both ascending and descending AC. Seamless compatibility with classic and modern adventures alike."
+      },
+      {
+        "title": "Four Initiative Systems",
+        "text": "The book includes four distinct initiative options — from standard d6 group roll to DEX-rank and activity-point systems from Eldritch Wizardry."
+      },
+      {
+        "title": "Rulings over Rules",
+        "text": "The rules deliberately leave gaps for the Referee to fill. Quick rulings over rulebook lookup. Polymorph Self: 63 words — trust the GM."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Complete Revised cover"
+      },
+      {
+        "cap": "Book spread"
+      },
+      {
+        "cap": "Interior pages"
+      },
+      {
+        "cap": "Illustrations"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official website — Mythmere Games"
+      },
+      {
+        "name": "Character sheets (free PDF)"
+      }
+    ]
+  }
+});
 registerSystem("tales-loop", {
   "groups": {
     "default": { "key": "fl", "order": 6 },
@@ -7714,6 +9378,298 @@ registerSystem("tales-loop", {
       {
         "name": "Official sheet"
       }
+    ]
+  }
+});
+registerSystem("tales-of-argosa", {
+  "groups": {
+    "default": { "key": "osr", "order": 17 },
+    "family": { "key": "standalone", "order": 23 },
+    "genre": { "key": "sword-and-sorcery", "order": 6 }
+  },
+  "name": "Tales of Argosa",
+  "publisher": "Pickpocket Press",
+  "dice": "d20 (roll-under + roll-high combat)",
+  "players": "3–6",
+  "complexity": 3,
+  "free": true,
+  "foundryStatus": "Community",
+  "heroImage": "https://lowfantasygaming.com/wp-content/uploads/2024/07/image-1.png",
+  "playstyleTags": [
+    "combat",
+    "explore",
+    "survival"
+  ],
+  "settingTags": ["fantasy", "sword-and-sorcery"],
+  "gallery": [
+    {
+      "src": "https://lowfantasygaming.com/wp-content/uploads/2024/07/image-8.png"
+    },
+    {
+      "src": "https://lowfantasygaming.com/wp-content/uploads/2024/01/mines-of-perinthos-thumb.png"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://lowfantasygaming.com/tales-of-argosa/",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "clover"
+    },
+    {
+      "icon": "flame"
+    },
+    {
+      "icon": "swords"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://deathtrap-games.blogspot.com/2026/01/game-review-tales-of-argosa.html
+    {
+      "text": "If high-octane Sword & Sorcery action with little downtime and low-to-no-prep are what you want, Tales of Argosa is an ideal system.",
+      "author": "Brian C. Rideout, Welcome to the Deathtrap"
+    },
+    // VERIFIED-AT: https://sablemage.blogspot.com/2025/05/review-tales-of-argosa.html
+    {
+      "text": "I find myself fighting the urge to play Tales of Argosa right away, which is usually a good sign",
+      "author": "Andy Slack, Halfway Station"
+    }
+  ],
+  "ru": {
+    "tagShort": "Грим-фэнтези low-magic, наследник Low Fantasy Gaming",
+    "tagline": "«Меч-и-магия без прикрас: жестоко, стремительно, почти без подготовки».",
+    "description": "Tales of Argosa — самостоятельная и отшлифованная наследница Low Fantasy Gaming от Стивена Гродзицки. Собственный d20-движок для мрачного low-magic фэнтези: проверки «меньше-равно», бой «больше», отдельный стат Удачи и рискованная «Тёмная и Опасная магия». Заточена под быструю игру в духе kick-in-the-door с минимумом подготовки; поддерживает соло и игру без ведущего.",
+    "setting": "Приземлённый меч-и-магия: магия редка, опасна и внушает страх. Наёмники, воры и отчаянные авантюристы бьются за серебро на суровом фронтире — не эпические герои, а люди, которым надо выжить и не остаться без гроша. Низкое фэнтези с зубами: болота, руины, работорговцы и твари из глубин.",
+    "vignette": "Разбойник крадётся мимо спящего огра — проверка Ловкости «меньше-равно»: d20 против значения. Выпало 8, порог 12 — тихо прошёл. Дальше маг решается на заклинание: у Tales есть шанс сработать «Тёмной и Опасной магии». Бросок по таблице осечек — и посох вспыхивает не туда. Магия здесь не бесплатна.",
+    "prep": "~10 мин",
+    "mechanics": [
+      {
+        "title": "«Меньше» и «больше»",
+        "text": "Проверки атрибутов, навыков и Удачи — бросок d20 «меньше-равно». Бой — бросок «больше» против защиты. Смешанно, но быстро: за столом решения принимаются мгновенно."
+      },
+      {
+        "title": "Стат Удачи",
+        "text": "У каждого героя есть Удача — её тратят, чтобы подкрутить бросок, избежать смерти или урвать преимущество. Ресурс восстанавливается; в грязном мире Аргосы удача решает многое."
+      },
+      {
+        "title": "Тёмная и Опасная магия",
+        "text": "Заклинания могут сорваться в хаос: бросок по таблице жутких осечек. Магия редка, страшна и никогда не рутина — ровно тот low-magic тон, что задаёт весь сеттинг."
+      },
+      {
+        "title": "Low-prep, kick-in-the-door",
+        "text": "Система создана ради темпа и минимальной подготовки: генераторы на лету, стремительные вылазки, высокая летальность. Поддержка соло и игры без ведущего в комплекте."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Обложка"
+      },
+      {
+        "cap": "Mines of Perinthos — разворот"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт — Low Fantasy Gaming"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "Если вам нужен драйвовый меч-и-магии экшн с минимумом простоя и почти без подготовки — Tales of Argosa идеальная система." },
+      { "text": "Я ловлю себя на желании сыграть в Tales of Argosa прямо сейчас, а это обычно хороший знак." }
+    ]
+  },
+  "en": {
+    "tagShort": "Grim low-magic fantasy, successor to Low Fantasy Gaming",
+    "tagline": "\"Sword & sorcery with no gloss: brutal, fast, and almost prep-free.\"",
+    "description": "Tales of Argosa is Stephen Grodzicki's standalone, polished successor to Low Fantasy Gaming. Its own d20 engine for grim low-magic fantasy: roll-under checks, roll-high combat, a dedicated Luck stat, and risky 'Dark & Dangerous Magic'. Built for fast, kick-in-the-door play with minimal prep — and it supports solo and GM-less play out of the box.",
+    "setting": "Grounded sword-and-sorcery: magic is rare, dangerous, and feared. Mercenaries, thieves, and desperate adventurers fight over silver on a harsh frontier — not epic heroes, but people who need to survive and stay solvent. Low fantasy with teeth: swamps, ruins, slavers, and things from the deep.",
+    "vignette": "The rogue creeps past a sleeping ogre — a Dexterity roll-under check: d20 against the value. An 8 against a target of 12 — through in silence. Ahead, the mage risks a spell: in Tales, casting can trigger 'Dark & Dangerous Magic.' A roll on the mishap table — and the staff flares the wrong way. Magic here is never free.",
+    "prep": "~10 min",
+    "mechanics": [
+      {
+        "title": "Roll-under & roll-high",
+        "text": "Attribute, skill, and Luck checks are roll-under d20. Combat rolls high against a defense. Mixed but fast — decisions land instantly at the table."
+      },
+      {
+        "title": "The Luck stat",
+        "text": "Every hero has Luck — spent to nudge a roll, cheat death, or seize an edge. It refreshes; in the grubby world of Argosa, luck decides a great deal."
+      },
+      {
+        "title": "Dark & Dangerous Magic",
+        "text": "Spells can spiral into chaos: a roll on a table of grisly mishaps. Magic is rare, frightening, and never routine — exactly the low-magic tone that defines the setting."
+      },
+      {
+        "title": "Low-prep, kick-in-the-door",
+        "text": "Built for pace and minimal prep: on-the-fly generators, swift raids, high lethality. Solo and GM-less support are included in the box."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Cover"
+      },
+      {
+        "cap": "Mines of Perinthos spread"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official site — Low Fantasy Gaming"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "If high-octane Sword & Sorcery action with little downtime and low-to-no-prep are what you want, Tales of Argosa is an ideal system." },
+      { "text": "I find myself fighting the urge to play Tales of Argosa right away, which is usually a good sign." }
+    ]
+  }
+});
+registerSystem("the-black-hack", {
+  "groups": {
+    "default": { "key": "osr", "order": 18 },
+    "family": { "key": "osr-modern", "order": 2 },
+    "genre": { "key": "adventure", "order": 17 }
+  },
+  "name": "The Black Hack",
+  "publisher": "David Black / Gold Piece Publications",
+  "dice": "Roll-under d20 + Usage Dice",
+  "players": "3–6",
+  "complexity": 1,
+  "foundryStatus": "Community",
+  "heroImage": "https://image.nobleknight.com/b/jpg1500/blackhack2.jpg",
+  "playstyleTags": [
+    "combat",
+    "explore",
+    "survival"
+  ],
+  "settingTags": ["fantasy"],
+  "gallery": [
+    {
+      "src": "https://image.nobleknight.com/b/jpg1500/blackhack2eboxset.jpg"
+    },
+    {
+      "src": "https://image.nobleknight.com/b/jpg1500/blackhack2b.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://squarehex.co.uk/collections/the-black-hack",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "battery-low"
+    },
+    {
+      "icon": "swords"
+    },
+    {
+      "icon": "feather"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://save.vs.totalpartykill.ca/review/black-hack/
+    {
+      "text": "The rules are simple and get out of the way. They are easy to hack and tweak as needed.",
+      "author": "Ramanan Sivaranjan, Save vs. Total Party Kill"
+    }
+  ],
+  "ru": {
+    "tagShort": "Ультралёгкий d20 «меньше-равно», король хаков",
+    "tagline": "«Проще некуда — и потому переделан миллион раз».",
+    "description": "The Black Hack — предельно лёгкая OSR-игра: проверки броском «меньше-равно» d20 по характеристике, и все броски делают игроки. Двадцать страниц правил, знакомые классы и уровни, но без раздутых таблиц. Самый хакаемый движок старой школы: на его основе выросли Cthulhu Hack, Rad Hack, Black Sword Hack и десятки других.",
+    "setting": "Система-агностик. Подразумеваемый мир — классическое подземельное фэнтези: свеча, паёк, монстры во тьме. Но лёгкость правил делает Black Hack идеальным каркасом под любой сеттинг — от гримдарка до гонзо. Именно поэтому его так любят хакать под что угодно.",
+    "vignette": "Боец рубит гоблина: игрок кидает d20 против Силы 14, нужно 14 или меньше. Выпало 11 — попадание. Гоблин бьёт в ответ, но защищается тоже игрок: бросок против Ловкости. Факел на исходе — кость расхода факела d6 показывает 1, шаг вниз. Ещё пара сцен — и наступит тьма.",
+    "prep": "~10 мин",
+    "mechanics": [
+      {
+        "title": "Броски «меньше-равно» d20",
+        "text": "Проверка — киньте d20 против характеристики, нужно значение или меньше. Игроки делают все броски: и атаку, и защиту. Ведущий не бросает — только описывает мир."
+      },
+      {
+        "title": "Кости расхода (Usage Dice)",
+        "text": "Патроны, паёк, факелы отслеживаются одной костью: использовал — бросок; выпало 1–2 — кость шагает вниз (d20→d12→…). Кончилась — ресурс иссяк. Никакого подсчёта единиц."
+      },
+      {
+        "title": "Преимущество и помеха",
+        "text": "Хорошая позиция — кидаете лишний d20 и берёте лучший. Плохая — худший. Простой, интуитивный модификатор вместо стопки бонусов."
+      },
+      {
+        "title": "Лёгкий и хакаемый",
+        "text": "Все правила — на пару десятков страниц. Настолько гибкий, что породил целое семейство «хаков» под любой жанр. Идеальный каркас, чтобы собрать свою игру."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Box Set (2-е издание)"
+      },
+      {
+        "cap": "Задняя обложка"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный магазин — Squarehex"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "Правила простые и не мешаются под ногами. Их легко хакать и подстраивать под себя." }
+    ]
+  },
+  "en": {
+    "tagShort": "Ultra-light roll-under d20, the king of hacks",
+    "tagline": "\"As simple as it gets — which is why it's been remixed a thousand times.\"",
+    "description": "The Black Hack is an ultra-rules-light OSR game: checks are roll-under d20 against an attribute, and the players make every roll. Twenty pages of rules, familiar classes and levels, but none of the bloated tables. The most-hacked old-school engine going — Cthulhu Hack, Rad Hack, Black Sword Hack, and dozens more were built on its chassis.",
+    "setting": "Setting-agnostic. The implied world is classic dungeon fantasy: the candle, the ration, monsters in the dark. But the featherweight rules make The Black Hack an ideal frame for any setting — from grimdark to gonzo. That flexibility is exactly why people love to hack it into anything.",
+    "vignette": "The fighter swings at a goblin: the player rolls d20 against Strength 14, needing 14 or under. An 11 — a hit. The goblin strikes back, but the player defends too, rolling against Dexterity. The torch is burning low — its Usage Die (d6) comes up 1 and steps down. A few more scenes and the dark closes in.",
+    "prep": "~10 min",
+    "mechanics": [
+      {
+        "title": "Roll-under d20",
+        "text": "To test something, roll d20 against an attribute and score equal or under. Players make all the rolls — attack and defense both. The GM never rolls; they just narrate the world."
+      },
+      {
+        "title": "Usage Dice",
+        "text": "Ammo, rations, torches are tracked by a single die: use it, roll it; on a 1–2 the die steps down (d20→d12→…). When it's gone, so is the resource. No counting individual units."
+      },
+      {
+        "title": "Advantage & Disadvantage",
+        "text": "A good position lets you roll an extra d20 and keep the better; a bad one, the worse. A simple, intuitive modifier instead of a stack of bonuses."
+      },
+      {
+        "title": "Light & hackable",
+        "text": "The whole game fits in a couple dozen pages. So flexible it spawned an entire family of 'hacks' across every genre. The perfect frame for building your own game."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Box Set (2nd Edition)"
+      },
+      {
+        "cap": "Back cover"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official store — Squarehex"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "The rules are simple and get out of the way. They are easy to hack and tweak as needed." }
     ]
   }
 });
@@ -8398,6 +10354,346 @@ registerSystem("triangle", {
     ]
   }
 });
+registerSystem("troika", {
+  "groups": {
+    "default": { "key": "osr", "order": 14 },
+    "family": { "key": "standalone", "order": 22 },
+    "genre": { "key": "narrative-weird", "order": 10 }
+  },
+  "name": "Troika!",
+  "publisher": "Melsonian Arts Council",
+  "dice": "2d6 (roll-under) + d66",
+  "players": "2–5",
+  "complexity": 1,
+  "free": true,
+  "foundryStatus": "Official",
+  "heroImage": "https://img.itch.zone/aW1nLzMyMjg4MDkucG5n/original/hYv6Fw.png",
+  "playstyleTags": [
+    "narrative",
+    "explore",
+    "social"
+  ],
+  "settingTags": ["weird"],
+  "gallery": [
+    {
+      "src": "https://img.itch.zone/aW1hZ2UvMzkyODUxLzE5NDYwMDAuanBn/original/Wjwgpm.jpg"
+    },
+    {
+      "src": "https://img.itch.zone/aW1hZ2UvMzkyODUxLzE5NDU5OTEuanBn/original/bcfBWl.jpg"
+    },
+    {
+      "src": "https://img.itch.zone/aW1hZ2UvMzkyODUxLzE5NDU5OTMuanBn/original/8w8VYj.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://melsonian-arts-council.itch.io/troika-numinous-edition",
+      "fmt": "Web"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://melsonian-arts-council.itch.io/troika-numinous-edition/devlog/104412/srd",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "shuffle"
+    },
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "sparkles"
+    },
+    {
+      "icon": "backpack"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://therewillbe.games/articles-ttrpg-reviews/8251-the-edge-of-specificity-troika-and-acid-death-fantasy-review
+    {
+      "text": "Light but limitless role-playing among the best in the RPG field today.",
+      "author": "Michael Barnes, There Will Be Games"
+    },
+    // VERIFIED-AT: https://www.tabletopgaming.co.uk/reviews/review-troika-rpg/
+    {
+      "text": "A masterpiece. The perfect place to start for anyone looking for a game of real adventure.",
+      "author": "Christopher Eggett, Tabletop Gaming"
+    }
+  ],
+  "ru": {
+    "tagShort": "Пси-фэнтези прыжки между сферами",
+    "tagline": "«Гуманистическая научная фэнтези о путешествиях между сферами по золотым баржам».",
+    "description": "Troika! — правила-лёгкая ролевая игра-погружение в сюрреалистичную мультивселенную, где кристаллические сферы связаны межпланетными баржами. Собственная система на 2d6, а не клон D&D. Знаменита 36 безумными предысториями персонажей и неповторимым визуальным стилем. Сердце «нью-школы» (NSR): минимум правил, максимум странного.",
+    "setting": "Бесконечная мультивселенная сфер, соединённых золотыми баржами, что скользят по невозможным небесам. Один мир — базарный город богов, другой — болото философов, третий — арена бессмертных гладиаторов. Тон — печальный, смешной и глубоко чуждый; научная фэнтези в духе «Умирающей Земли» Вэнса и «Книги Нового Солнца» Вулфа.",
+    "vignette": "Ваш Чемпион Хаоса сходит с баржи в город, где дождь идёт вверх. Стражник-многоножка требует пошлину. Вы врёте — бросок против навыка Обмана: Навык 7, кидаете 2d6, нужно 7 или меньше. Выпало 9 — провал. Многоножка щёлкает жвалами. Вы тянете жетон инициативы из мешка; выпал не ваш. Стража ходит первой.",
+    "prep": "~10 мин",
+    "mechanics": [
+      {
+        "title": "36 предысторий (d66)",
+        "text": "Вместо классов — бросок d66 по таблице из 36 предысторий: от Монахоторговца до Зоантропа. Каждая даёт странный набор навыков и снаряжения. Персонаж за минуту."
+      },
+      {
+        "title": "Бросок «меньше-равно» на 2d6",
+        "text": "Проверка: киньте 2d6, сравните с суммой Навыка и профильного Продвинутого навыка. Меньше или равно — успех. Вся резолюция в одной механике."
+      },
+      {
+        "title": "Три характеристики",
+        "text": "Навык, Выносливость и Удача — вот и всё. Удача тратится и восстанавливается, влияя на броски и урон. Никаких листов на страницу."
+      },
+      {
+        "title": "Инициатива из мешка",
+        "text": "Порядок ходов не пошаговый: в мешок кладут жетоны за каждого участника плюс жетоны конца раунда. Тянешь вслепую — хаос боя на удаче."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Разворот книги"
+      },
+      {
+        "cap": "Предыстории персонажей"
+      },
+      {
+        "cap": "Интерьерный арт"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт — troika.fyi"
+      },
+      {
+        "name": "Бесплатный Quickstart и SRD (itch.io)"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "Лёгкая, но безграничная ролевая игра — одна из лучших в поле RPG на сегодня." },
+      { "text": "Шедевр. Идеальная отправная точка для всех, кто ищет игру о настоящем приключении." }
+    ]
+  },
+  "en": {
+    "tagShort": "Sphere-hopping science-fantasy on golden barges",
+    "tagline": "\"A humanist science-fantasy of travel between crystal spheres.\"",
+    "description": "Troika! is a rules-light roleplaying game of surreal travel across a multiverse of crystal spheres linked by interplanetary barges. Its own 2d6 engine, not a D&D clone. Famous for its 36 bizarre character backgrounds and an unmistakable visual style. A cornerstone of the NSR (New School Revolution): minimal rules, maximal strangeness.",
+    "setting": "An endless multiverse of spheres joined by golden barges that sail impossible skies. One world is a bazaar-city of gods, another a swamp of philosophers, another an arena of undying gladiators. The tone is melancholy, funny, and deeply alien — science-fantasy in the tradition of Vance's Dying Earth and Wolfe's Book of the New Sun.",
+    "vignette": "Your Chaos Champion steps off the barge into a city where rain falls upward. A centipede guardsman demands a toll. You lie — test against Con: Skill 7, roll 2d6, need 7 or under. You roll a 9 — failure. The centipede clicks its mandibles. You draw an initiative token from the bag; it isn't yours. The guards act first.",
+    "prep": "~10 min",
+    "mechanics": [
+      {
+        "title": "36 Backgrounds (d66)",
+        "text": "No classes — roll d66 on a table of 36 backgrounds, from Monkeymonger to Zoanthrop. Each grants a strange bundle of skills and possessions. A character in a minute."
+      },
+      {
+        "title": "Roll-under 2d6",
+        "text": "To test something, roll 2d6 against the sum of your Skill and the relevant Advanced Skill. Roll equal or under to succeed. The entire resolution system in one mechanic."
+      },
+      {
+        "title": "Three stats only",
+        "text": "Skill, Stamina, and Luck — that's it. Luck is spent and recovered, swinging rolls and damage. No character sheet longer than an index card."
+      },
+      {
+        "title": "Initiative from a bag",
+        "text": "Turn order isn't round-by-round: tokens for each combatant plus end-of-round tokens go into a bag. You draw blind — combat as beautiful, lethal chaos."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Book spread"
+      },
+      {
+        "cap": "Character backgrounds"
+      },
+      {
+        "cap": "Interior art"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official site — troika.fyi"
+      },
+      {
+        "name": "Free Quickstart & SRD (itch.io)"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "Light but limitless role-playing among the best in the RPG field today." },
+      { "text": "A masterpiece. The perfect place to start for anyone looking for a game of real adventure." }
+    ]
+  }
+});
+registerSystem("trophy", {
+  "groups": {
+    "default": { "key": "narrative", "order": 24 },
+    "family": { "key": "pbta-fitd", "order": 3 },
+    "genre": { "key": "horror", "order": 6 }
+  },
+  "name": "Trophy",
+  "publisher": "Hedgemaze Press",
+  "dice": "d6 pools (light & dark dice)",
+  "players": "3–5",
+  "complexity": 2,
+  "free": true,
+  "foundryStatus": "Community",
+  "heroImage": "https://trophyrpg.com/downloads/Trophy-Map.png",
+  "playstyleTags": [
+    "narrative",
+    "horror",
+    "social"
+  ],
+  "settingTags": ["fantasy", "weird"],
+  "gallery": [
+    {
+      "src": "https://trophyrpg.com/assets/images/cover-trophy-dark.jpg"
+    },
+    {
+      "src": "https://trophyrpg.com/assets/images/cover-trophy-gold.jpg"
+    },
+    {
+      "src": "https://trophyrpg.com/assets/images/cover-trophy-loom.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://trophyrpg.com/",
+      "fmt": "Web"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://trophyrpg.com/system/",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "skull"
+    },
+    {
+      "icon": "trees"
+    },
+    {
+      "icon": "users"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://gothicnaturejournal.com/trophy-dark-review/
+    {
+      "text": "It is a game of moods and resonances and excels in capturing them.",
+      "author": "James L. Smith, Gothic Nature Journal"
+    },
+    // VERIFIED-AT: https://indiegamereadingclub.com/indie-game-reading-club/a-tale-of-two-and-a-half-trophies/
+    {
+      "text": "I do love a sad story! Each time we've played, it's ended either violently, or creepily, or awash in melancholy.",
+      "author": "Paul Beakley, Indie Game Reading Club"
+    }
+  ],
+  "ru": {
+    "tagShort": "FitD-хоррор об обречённых кладоискателях",
+    "tagline": "«Жадные искатели сокровищ входят в лес, из которого не возвращаются».",
+    "description": "Trophy — нарративная хоррор-игра о кладоискателях, обречённых сгинуть в проклятом лесу. Наследует Cthulhu Dark и Blades in the Dark: пулы кубиков, где тёмные кости тянут героя к гибели. Два режима: Trophy Dark — беспощадный ваншот-спуск в ужас, и Trophy Gold — кампания в духе OSR-подземелий, но с тем же фатализмом.",
+    "setting": "Гримдарк-сказка: жадность, долги и голод гонят охотников за сокровищами в древний лес, что живёт, дышит и ненавидит пришельцев. Не героика — трагедия. Игроки сами придумывают, как их персонажи катятся к погибели; вопрос не «выживут ли», а «насколько красиво падут».",
+    "vignette": "Ваш охотник тянется к золотому идолу. Ведущий предлагает риск. Вы собираете пул: светлые кости за навык плюс одна тёмная кость Руин. Бросок — высшая кость решает исход. Выпадает 5... но это тёмная кость. Успех: идол ваш. Цена: Руин растёт. Лес шепчет ваше имя, и вы чувствуете, как он тянет вас глубже.",
+    "prep": "~10 мин",
+    "mechanics": [
+      {
+        "title": "Светлые и тёмные кости",
+        "text": "Проверка — пул d6: светлые кости за навыки и помощь, тёмные кости Руин добавляет игрок ради шанса. Высшая кость решает. Но если победила тёмная — успех приходит с ростом Руин."
+      },
+      {
+        "title": "Руин — трек гибели",
+        "text": "Руин копится и толкает персонажа к жуткому концу. Достигнув предела, герой поддаётся лесу — сходит с ума, перерождается чудовищем или гибнет. Обречённость встроена в правила."
+      },
+      {
+        "title": "Dark против Gold",
+        "text": "Trophy Dark — ваншот-спуск в ужас без победы. Trophy Gold — кампания: «вылазки» за золотом в опасные места, разбор сокровищ и долгов. Один тон, два формата игры."
+      },
+      {
+        "title": "Совместный хоррор",
+        "text": "Fiction-first, минимум правил. Игроки сами вводят осложнения и описывают, как их герои катятся к гибели. Ведущий плетёт настроение, а не считает хиты."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Trophy Dark"
+      },
+      {
+        "cap": "Trophy Gold"
+      },
+      {
+        "cap": "Trophy Loom"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт — trophyrpg.com"
+      },
+      {
+        "name": "Бесплатный SRD «Rooted in Trophy» (CC-BY)"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "Это игра настроений и резонансов, и она превосходно их улавливает." },
+      { "text": "Я обожаю печальные истории! Каждый раз наша игра заканчивалась либо жестоко, либо жутко, либо в накрывающей меланхолии." }
+    ]
+  },
+  "en": {
+    "tagShort": "FitD horror of doomed treasure-hunters",
+    "tagline": "\"Greedy treasure-hunters enter a forest they will not leave.\"",
+    "description": "Trophy is a narrative horror game about treasure-hunters doomed to perish in a cursed forest. It draws on Cthulhu Dark and Blades in the Dark: dice pools where dark dice drag a character toward ruin. Two modes: Trophy Dark, a merciless one-shot descent into horror, and Trophy Gold, an OSR-flavored dungeon-crawl campaign with the same fatalism.",
+    "setting": "A grimdark fairy tale: greed, debt, and hunger drive treasure-hunters into an ancient forest that lives, breathes, and hates intruders. Not heroism — tragedy. Players invent how their own characters slide toward doom; the question isn't whether they survive, but how beautifully they fall.",
+    "vignette": "Your hunter reaches for the golden idol. The GM offers a risk. You gather a pool: light dice for skill, plus one dark Ruin die. You roll — the highest die decides. A 5 comes up... but it's the dark die. Success: the idol is yours. The cost: Ruin rises. The forest whispers your name, and you feel it pulling you deeper.",
+    "prep": "~10 min",
+    "mechanics": [
+      {
+        "title": "Light & dark dice",
+        "text": "A check is a d6 pool: light dice for skill and help, plus dark Ruin dice the player adds for a better chance. The highest die decides. But if a dark die wins, success comes with rising Ruin."
+      },
+      {
+        "title": "Ruin — the doom track",
+        "text": "Ruin accumulates and pushes a character toward a grisly end. At its limit, the hero gives in to the forest — going mad, transforming into a monster, or dying. Doom is built into the rules."
+      },
+      {
+        "title": "Dark vs. Gold",
+        "text": "Trophy Dark is a one-shot descent into horror with no winning. Trophy Gold is a campaign: 'incursions' for gold into dangerous places, dividing loot and debts. One tone, two formats."
+      },
+      {
+        "title": "Collaborative horror",
+        "text": "Fiction-first, minimal rules. Players introduce their own complications and narrate how their characters slide toward ruin. The GM weaves mood, not hit-point math."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Trophy Dark"
+      },
+      {
+        "cap": "Trophy Gold"
+      },
+      {
+        "cap": "Trophy Loom"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official site — trophyrpg.com"
+      },
+      {
+        "name": "Free 'Rooted in Trophy' SRD (CC-BY)"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "It is a game of moods and resonances and excels in capturing them." },
+      { "text": "I do love a sad story! Each time we've played, it's ended either violently, or creepily, or awash in melancholy." }
+    ]
+  }
+});
 registerSystem("twilight", {
   "groups": {
     "default": { "key": "fl", "order": 5 },
@@ -8911,6 +11207,136 @@ registerSystem("vaesen", {
     ]
   }
 });
+registerSystem("white-box-fmag", {
+  "groups": {
+    "default": { "key": "osr", "order": 20 },
+    "family": { "key": "osr-classic", "order": 12 },
+    "genre": { "key": "adventure", "order": 19 }
+  },
+  "name": "White Box: Fantastic Medieval Adventure Game",
+  "publisher": "Charlie Mason / Seattle Hill Games",
+  "dice": "d20 (OD&D, single saving throw)",
+  "players": "3–6",
+  "complexity": 1,
+  "edition": "OD&D",
+  "free": true,
+  "foundryStatus": "None",
+  "heroImage": "https://image.nobleknight.com/w/jpg1500/whiteboxfmag.jpg",
+  "playstyleTags": [
+    "combat",
+    "explore",
+    "sandbox"
+  ],
+  "settingTags": ["fantasy"],
+  "gallery": [],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://whiteboxgame.blogspot.com/",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "shield"
+    },
+    {
+      "icon": "swords"
+    },
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "gift"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.tenkarstavern.com/2016/09/looking-at-white-box-fantastic-medieval.html
+    {
+      "text": "There is nothing horribly new in FMAG, but at the same time there is nothing that will turn off your average S&W / OSR gamer.",
+      "author": "Erik Tenkar, Tenkar's Tavern"
+    },
+    // VERIFIED-AT: https://smolderingwizard.com/2019/01/27/a-quick-look-at-white-box-fantastic-medieval-adventure-game/
+    {
+      "text": "All this is free in PDF and POD copies are sold at cost on Lulu or Amazon, making it one of the more affordable OSR games to play.",
+      "author": "Doug, Smoldering Wizard"
+    }
+  ],
+  "ru": {
+    "tagShort": "Самый дешёвый полный OSR: клон OD&D",
+    "tagline": "«Вся оригинальная D&D на сотне страниц — бесплатно».",
+    "description": "White Box: Fantastic Medieval Adventure Game — предельно лёгкий клон оригинальной D&D 1974 года от Чарли Мэйсона. Переработка Swords & Wizardry WhiteBox с добавленным вором, турнирами и правилами путешествий. Бесплатный PDF, печать по себестоимости — недаром его зовут «самой дешёвой полной OSR-игрой». Идеальная стартовая точка в старую школу.",
+    "setting": "Система-агностик классического фэнтези: подземелья, деревни, драконы. Минимализм правил делает White Box чистым каркасом под любой мир. Дух — самая ранняя D&D: воображение важнее таблиц, а ведущий решает всё, чего нет в тонкой книжке.",
+    "vignette": "Маг-новичок в затхлом подземелье тратит единственное заклинание — «Свет» вспыхивает над скелетами. Боец бросается вперёд: d20 против AC. Скелет отвечает; маг проваливает единый спасбросок и получает удар. Правил — на сотню страниц, но за столом рождается вся классика приключений.",
+    "prep": "~15 мин",
+    "mechanics": [
+      {
+        "title": "Единый спасбросок",
+        "text": "Как в S&W WhiteBox — один универсальный спасбросок вместо пяти категорий. Проще некуда: минимум таблиц, максимум скорости за столом."
+      },
+      {
+        "title": "Четыре класса",
+        "text": "Воин, Клерик, Маг плюс добавленный Вор. Ничего лишнего — тот самый костяк оригинальной D&D, к которому легко прикрутить что угодно своё."
+      },
+      {
+        "title": "Восходящий или нисходящий AC",
+        "text": "В комплекте оба варианта класса брони. Совместимость и с олдскульными модулями, и с привычками современных d20-игроков."
+      },
+      {
+        "title": "Самая дешёвая полная OSR",
+        "text": "Полные правила — бесплатный PDF; печать по себестоимости на Lulu/Amazon. Вся игра умещается в ~100 страниц. Нулевой порог входа в старую школу."
+      }
+    ],
+    "gallery": [],
+    "resources": [
+      {
+        "name": "Официальный блог — бесплатный PDF"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "В FMAG нет ничего радикально нового, но при этом нет и ничего, что оттолкнуло бы среднего игрока S&W / OSR." },
+      { "text": "Всё это бесплатно в PDF, а печатные копии продаются по себестоимости на Lulu или Amazon — одна из самых доступных OSR-игр." }
+    ]
+  },
+  "en": {
+    "tagShort": "The cheapest full OSR game — an OD&D clone",
+    "tagline": "\"All of original D&D in a hundred pages — for free.\"",
+    "description": "White Box: Fantastic Medieval Adventure Game is Charlie Mason's ultra-light clone of 1974 original D&D. A reworking of Swords & Wizardry WhiteBox with an added thief, jousting, and travel rules. Free PDF, print-on-demand at cost — small wonder it's called 'one of the most affordable OSR games to play.' A perfect on-ramp into old-school play.",
+    "setting": "Setting-agnostic classic fantasy: dungeons, villages, dragons. The rules' minimalism makes White Box a clean frame for any world. The spirit is the earliest D&D — imagination over tables, and the GM deciding everything the slim book leaves out.",
+    "vignette": "A first-level magic-user in a dank dungeon spends their single spell — 'Light' flares over the skeletons. The fighter charges: d20 against AC. A skeleton strikes back; the mage fails their single saving throw and takes the hit. A hundred pages of rules, but the whole classic of adventure is born at the table.",
+    "prep": "~15 min",
+    "mechanics": [
+      {
+        "title": "Single saving throw",
+        "text": "Like S&W WhiteBox — one unified saving throw instead of five categories. As simple as it gets: minimal tables, maximal speed at the table."
+      },
+      {
+        "title": "Four classes",
+        "text": "Fighter, Cleric, Magic-User, plus an added Thief. Nothing extraneous — the very chassis of original D&D, easy to bolt your own ideas onto."
+      },
+      {
+        "title": "Ascending or descending AC",
+        "text": "Both armor-class options are included. Compatible with old-school modules and with modern d20 players' instincts alike."
+      },
+      {
+        "title": "The cheapest full OSR",
+        "text": "The complete rules are a free PDF; print is sold at cost on Lulu/Amazon. The whole game fits in ~100 pages. A zero-cost on-ramp into old-school play."
+      }
+    ],
+    "gallery": [],
+    "resources": [
+      {
+        "name": "Official blog — free PDF"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "There is nothing horribly new in FMAG, but at the same time there is nothing that will turn off your average S&W / OSR gamer." },
+      { "text": "All this is free in PDF and POD copies are sold at cost on Lulu or Amazon, making it one of the more affordable OSR games to play." }
+    ]
+  }
+});
 registerSystem("wildsea", {
   "groups": {
     "default": { "key": "narrative", "order": 6 },
@@ -9112,6 +11538,162 @@ registerSystem("wildsea", {
       {
         "name": "Digital sheet (Charsmith)"
       }
+    ]
+  }
+});
+registerSystem("worlds-without-number", {
+  "groups": {
+    "default": { "key": "osr", "order": 16 },
+    "family": { "key": "osr-classic", "order": 10 },
+    "genre": { "key": "adventure", "order": 16 },
+    "solo": { "key": "solo-compatible", "order": 17 }
+  },
+  "name": "Worlds Without Number",
+  "publisher": "Sine Nomine Publishing / Kevin Crawford",
+  "dice": "d20 (combat) + 2d6 (skills)",
+  "players": "3–6",
+  "complexity": 3,
+  "edition": "B/X",
+  "free": true,
+  "foundryStatus": "Community",
+  "heroImage": "https://image.nobleknight.com/2/jpg1500/2370011105765worlds.jpg",
+  "playstyleTags": [
+    "explore",
+    "combat",
+    "sandbox"
+  ],
+  "settingTags": ["fantasy"],
+  "gallery": [
+    {
+      "src": "https://thegaminggang.com/wp-content/uploads/2021/03/Worlds-Without-Number.jpg"
+    },
+    {
+      "src": "https://image.nobleknight.com/2/jpg1500/23222440222h.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "quickstart",
+      "url": "https://www.drivethrurpg.com/en/product/348809/worlds-without-number-free-edition",
+      "fmt": "PDF"
+    },
+    {
+      "type": "link",
+      "url": "https://www.drivethrurpg.com/en/publisher/3482/Sine-Nomine-Publishing",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "map"
+    },
+    {
+      "icon": "sparkles"
+    },
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "flag"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://thegaminggang.com/our_reviews/fantastical-worlds-unleashed-worlds-without-number-reviewed
+    {
+      "text": "Kevin Crawford's Worlds Without Number builds on the excellent foundation established by its science fiction predecessor, Stars Without Number, to deliver a compelling and unique fantasy game with special interest for GMs.",
+      "author": "Sami Yuhas, The Gaming Gang"
+    }
+  ],
+  "ru": {
+    "tagShort": "Олдскульная фэнтези-песочница от автора SWN",
+    "tagline": "«Фэнтезийный близнец Stars Without Number — и лучший GM-тулкит для sandbox-игры».",
+    "description": "Worlds Without Number — олдскульная фэнтези-RPG Кевина Кроуфорда, фэнтезийная спутница Stars Without Number. B/X-наследие с восходящим AC, но главная сила — генераторы наций, фракций, карт и подземелий, превращающие подготовку в удовольствие. Отдельная система магии «Искусства» и героические пути делают персонажей мощнее классического олдскула.",
+    "setting": "Латтер-Эрт (Latter Earth) — постапокалиптическое фэнтези на руинах бесчисленных погибших цивилизаций. Магия здесь — оружие, некогда расколовшее мир; её боятся и запрещают. Регион Гир полон павших империй, забытых чудес и фракций, грызущихся за власть. Готовая песочница для долгой кампании.",
+    "vignette": "Отряд входит в занесённый песком храм эпохи до Катастрофы. Взломщик проверяет древний механизм: 2d6 + Ловкость + навык против порога 10. Выпало 11 — успех, плита отходит. Между сессиями ход фракции: соседний культ бросает на «Расширить влияние» и захватывает деревню на тракте. Мир меняется сам, без рельсов ведущего.",
+    "prep": "~20 мин",
+    "mechanics": [
+      {
+        "title": "GM-тулкит песочницы",
+        "text": "Генераторы наций, фракций, карт, подземелий и таблиц зацепок. Целый мир и живые силы в нём собираются за вечер — минимум ручной работы, максимум игры."
+      },
+      {
+        "title": "Система «Искусства» (магия)",
+        "text": "Низкая, Высокая и магия Адептов — разные традиции. Магия опасна и раскалывает мир; она отделена от боевой мощи, так что маг не обязан быть хрупким."
+      },
+      {
+        "title": "Гибрид d20 + 2d6",
+        "text": "Бой — привычный d20 против AC. Навыки — 2d6 + атрибут + навык против порога. Две простые механики в духе олдскульной D&D."
+      },
+      {
+        "title": "Фокусы и герои",
+        "text": "«Фокусы» и предыстории настраивают персонажа, а героические пути дают эпические трюки. Совместимо со Stars Without Number — можно смешивать фэнтези и сай-фай."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Обложка"
+      },
+      {
+        "cap": "Издание Print-on-Demand"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Бесплатная Free Edition (DriveThruRPG)"
+      },
+      {
+        "name": "Sine Nomine Publishing"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "Worlds Without Number Кевина Кроуфорда развивает превосходный фундамент своего научно-фантастического предшественника, Stars Without Number, и выдаёт цельную и самобытную фэнтези-игру, особенно ценную для ведущих." }
+    ]
+  },
+  "en": {
+    "tagShort": "Old-school fantasy sandbox from the SWN designer",
+    "tagline": "\"The fantasy twin of Stars Without Number — and the best GM sandbox toolkit going.\"",
+    "description": "Worlds Without Number is Kevin Crawford's old-school fantasy RPG, the fantasy companion to Stars Without Number. B/X heritage with ascending AC, but its real strength is the generators — nations, factions, maps, and dungeons — that turn prep into a pleasure. A distinct 'Arts' magic system and heroic paths make characters mightier than classic old-school.",
+    "setting": "The Latter Earth — a post-apocalyptic fantasy built on the ruins of countless dead civilizations. Magic here is the weapon that once shattered the world; it is feared and outlawed. The Gyre region teems with fallen empires, forgotten wonders, and factions clawing for power. A ready-made sandbox for a long campaign.",
+    "vignette": "The party enters a sand-choked temple from before the Cataclysm. The delver tests an ancient mechanism: 2d6 + Dexterity + skill against difficulty 10. She rolls 11 — success, and the slab grinds aside. Between sessions, a faction turn: a neighboring cult rolls to Expand Influence and seizes a village on the road. The world moves on its own, no GM rails.",
+    "prep": "~20 min",
+    "mechanics": [
+      {
+        "title": "Sandbox GM toolkit",
+        "text": "Generators for nations, factions, maps, dungeons, and hook tables. A whole world and the living powers within it come together in an evening — minimal hand-crafting, maximal play."
+      },
+      {
+        "title": "The Arts (magic)",
+        "text": "Low, High, and Adept traditions are distinct paths. Magic is dangerous and world-shattering, and it's decoupled from combat power, so a mage need not be fragile."
+      },
+      {
+        "title": "d20 + 2d6 hybrid",
+        "text": "Combat is familiar d20 vs AC. Skills are 2d6 + attribute + skill against a difficulty. Two simple mechanics in the old-school D&D idiom."
+      },
+      {
+        "title": "Foci & heroes",
+        "text": "'Foci' and backgrounds customize a character, while heroic paths grant epic stunts. Fully compatible with Stars Without Number — mix fantasy and sci-fi freely."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Cover"
+      },
+      {
+        "cap": "Print-on-Demand edition"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Free Edition (DriveThruRPG)"
+      },
+      {
+        "name": "Sine Nomine Publishing"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "Kevin Crawford's Worlds Without Number builds on the excellent foundation established by its science fiction predecessor, Stars Without Number, to deliver a compelling and unique fantasy game with special interest for GMs." }
     ]
   }
 });

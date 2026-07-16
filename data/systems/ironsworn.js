@@ -10,6 +10,7 @@ registerSystem("ironsworn", {
   "dice": "2d6 + d10",
   "players": "1–4",
   "complexity": 2,
+  "free": true,
   "heroImage": "https://img.itch.zone/aW1nLzE3OTgwODguanBn/original/gRDqF5.jpg",
   "playstyleTags": [
     "solo",

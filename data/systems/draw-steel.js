@@ -14,7 +14,7 @@ registerSystem("draw-steel", {
   "heroStyle": "background: linear-gradient(135deg, #4a1942, #1a1a2e, #0f3460);",
   "playstyleTags": [
     "combat",
-    "narrative",
+    "tactical",
     "narrative"
   ],
   "settingTags": ["fantasy"],

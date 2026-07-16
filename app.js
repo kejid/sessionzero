@@ -23,12 +23,12 @@ const TAG_I18N = {
 const SETTING_TAG_ICONS = {
     space: 'rocket', fantasy: 'castle', cyberpunk: 'cpu',
     modern: 'building-2', postapoc: 'radiation', historical: 'landmark',
-    weird: 'sparkles', 'urban-fantasy': 'building',
+    weird: 'sparkles', 'urban-fantasy': 'building', 'sword-and-sorcery': 'sword',
 };
 const SETTING_TAG_I18N = {
     space: 'tag_space', fantasy: 'tag_fantasy', cyberpunk: 'tag_cyberpunk',
     modern: 'tag_modern', postapoc: 'tag_postapoc', historical: 'tag_historical',
-    weird: 'tag_weird', 'urban-fantasy': 'tag_urban_fantasy',
+    weird: 'tag_weird', 'urban-fantasy': 'tag_urban_fantasy', 'sword-and-sorcery': 'tag_sword_sorcery',
 };
 
 function track(event) {
@@ -211,6 +211,10 @@ function renderSystemPage(id, sys) {
     return `<section id="${id}" class="system-page">
     ${buildHeroBanner(id, sys)}
     <p class="tagline">${localField(sys, 'tagline')}</p>
+    ${(sys.free || sys.edition) ? `<div class="system-badges">
+        ${sys.free ? `<span class="sys-badge sys-badge-free"><i data-lucide="gift"></i> ${t('badge_free')}</span>` : ''}
+        ${sys.edition ? `<span class="sys-badge sys-badge-edition"><i data-lucide="git-fork"></i> ${sys.edition}</span>` : ''}
+    </div>` : ''}
     <div class="quick-stats">
         <div class="qs"><span class="qs-label" data-i18n="qs_dice">${t('qs_dice')}</span><span class="qs-value">${sys.dice}</span></div>
         <div class="qs"><span class="qs-label" data-i18n="qs_players">${t('qs_players')}</span><span class="qs-value">${sys.players}</span></div>
@@ -339,7 +343,49 @@ let votes = JSON.parse(localStorage.getItem('ttrpg-votes') || '{}');
 let vetoes = JSON.parse(localStorage.getItem('ttrpg-vetoes') || '{}');
 let deferred = JSON.parse(localStorage.getItem('ttrpg-deferred') || '[]');
 let manualOrder = JSON.parse(localStorage.getItem('ttrpg-order') || '[]');
-let tagFilter = new Set(JSON.parse(localStorage.getItem('ttrpg-tag-filter') || '[]'));
+// Tri-state tag filter. Keys can be playstyle/setting tags, complexity buckets
+// ("cx:light" | "cx:medium" | "cx:heavy"), or "free". Includes are ANDed (a system
+// must have every included tag); complexity-bucket includes are ORed among themselves
+// (a system has exactly one bucket). Excludes remove a system if it matches any of them.
+let tagInclude = new Set(
+    JSON.parse(localStorage.getItem('ttrpg-tag-include') || 'null')
+    // migrate legacy single-set OR filter → treat old selections as includes
+    || JSON.parse(localStorage.getItem('ttrpg-tag-filter') || '[]')
+);
+let tagExclude = new Set(JSON.parse(localStorage.getItem('ttrpg-tag-exclude') || '[]'));
+
+function tagFilterCount() { return tagInclude.size + tagExclude.size; }
+
+function persistTagFilter() {
+    localStorage.setItem('ttrpg-tag-include', JSON.stringify([...tagInclude]));
+    localStorage.setItem('ttrpg-tag-exclude', JSON.stringify([...tagExclude]));
+}
+
+// Map a 1–4 complexity rating to a rules-weight bucket key.
+function complexityBucketKey(c) {
+    if (c == null) return null;
+    if (c <= 2) return 'cx:light';
+    if (c === 3) return 'cx:medium';
+    return 'cx:heavy';
+}
+
+// Predicate shared by results grid + export. `s` carries tagKeys, settingKeys,
+// complexity, free.
+function matchesTagFilter(s) {
+    if (tagFilterCount() === 0) return true;
+    const has = (key) => {
+        if (key === 'free') return s.free === true;
+        if (key.slice(0, 3) === 'cx:') return complexityBucketKey(s.complexity) === key;
+        return (s.tagKeys || []).indexOf(key) !== -1 || (s.settingKeys || []).indexOf(key) !== -1;
+    };
+    const inc = [...tagInclude];
+    const cxInc = inc.filter(k => k.slice(0, 3) === 'cx:');
+    const otherInc = inc.filter(k => k.slice(0, 3) !== 'cx:');
+    if (otherInc.length && !otherInc.every(has)) return false;   // AND across tag/free includes
+    if (cxInc.length && !cxInc.some(has)) return false;          // OR across mutually-exclusive buckets
+    for (const k of tagExclude) { if (has(k)) return false; }
+    return true;
+}
 
 // ============ SETUP SCREEN ============
 function updateSetupFields() {
@@ -644,21 +690,22 @@ function sortSystems(systems, browseMode) {
 
 function exportResults() {
     const browseMode = document.body.classList.contains('browse-mode');
-    let systems = SYSTEM_IDS.filter(id => !hiddenSystems.includes(id)).map(id => ({
-        id, name: SYSTEM_NAMES[id],
-        ...getSystemTags(id),
-        count: (votes[id] || []).length,
-        vetoCount: (vetoes[id] || []).length,
-        score: (votes[id] || []).length - (vetoes[id] || []).length,
-        voters: PLAYERS ? (votes[id] || []).map(vid => PLAYERS.find(p => p.id === vid)).filter(Boolean) : [],
-        vetoers: PLAYERS ? (vetoes[id] || []).map(vid => PLAYERS.find(p => p.id === vid)).filter(Boolean) : []
-    }));
-    if (tagFilter.size > 0) {
-        systems = systems.filter(s =>
-            s.tagKeys.some(k => tagFilter.has(k)) ||
-            s.settingKeys.some(k => tagFilter.has(k))
-        );
-    }
+    let systems = SYSTEM_IDS.filter(id => !hiddenSystems.includes(id)).map(id => {
+        const sysData = SYSTEMS_DATA[id];
+        const customSys = sysData ? null : CustomSystems.find(id);
+        return {
+            id, name: SYSTEM_NAMES[id],
+            ...getSystemTags(id),
+            complexity: sysData ? sysData.complexity : customSys?.complexity,
+            free: sysData ? !!sysData.free : !!customSys?.free,
+            count: (votes[id] || []).length,
+            vetoCount: (vetoes[id] || []).length,
+            score: (votes[id] || []).length - (vetoes[id] || []).length,
+            voters: PLAYERS ? (votes[id] || []).map(vid => PLAYERS.find(p => p.id === vid)).filter(Boolean) : [],
+            vetoers: PLAYERS ? (vetoes[id] || []).map(vid => PLAYERS.find(p => p.id === vid)).filter(Boolean) : []
+        };
+    });
+    systems = systems.filter(matchesTagFilter);
     sortSystems(systems, browseMode);
     let lines = [];
     lines.push(t('export_header'));
@@ -703,16 +750,19 @@ function closeExport() {
     document.getElementById('export-overlay').classList.add('hidden');
 }
 
-function toggleTagFilter(tag) {
-    if (tagFilter.has(tag)) tagFilter.delete(tag);
-    else tagFilter.add(tag);
-    localStorage.setItem('ttrpg-tag-filter', JSON.stringify([...tagFilter]));
+// Cycle a tag through three states: neutral → include → exclude → neutral.
+function cycleTagFilter(tag) {
+    if (tagInclude.has(tag)) { tagInclude.delete(tag); tagExclude.add(tag); }
+    else if (tagExclude.has(tag)) { tagExclude.delete(tag); }
+    else { tagInclude.add(tag); }
+    persistTagFilter();
     renderResults();
 }
 
 function clearTagFilter() {
-    tagFilter.clear();
-    localStorage.setItem('ttrpg-tag-filter', '[]');
+    tagInclude.clear();
+    tagExclude.clear();
+    persistTagFilter();
     renderResults();
 }
 
@@ -725,8 +775,25 @@ function updateTagFilterHeaderCount() {
     const panel = document.getElementById('results-tag-filter');
     if (!panel) return;
     const badge = panel.querySelector('.tag-filter-active-count');
-    if (badge) badge.textContent = tagFilter.size > 0 ? `(${tagFilter.size})` : '';
+    const n = tagFilterCount();
+    if (badge) badge.textContent = n > 0 ? `(${n})` : '';
 }
+
+// Reflect include/exclude state onto already-rendered buttons (no innerHTML rewrite).
+function applyTagFilterStates(panel) {
+    panel.querySelectorAll('.tag-filter-btn[data-tag-key]').forEach(btn => {
+        const k = btn.dataset.tagKey;
+        btn.classList.toggle('include', tagInclude.has(k));
+        btn.classList.toggle('exclude', tagExclude.has(k));
+    });
+    const allBtn = panel.querySelector('.tag-filter-btn[data-tag-all]');
+    if (allBtn) allBtn.classList.toggle('active', tagFilterCount() === 0);
+    updateTagFilterHeaderCount();
+}
+
+const COMPLEXITY_BUCKET_KEYS = ['cx:light', 'cx:medium', 'cx:heavy'];
+const COMPLEXITY_BUCKET_I18N = { 'cx:light': 'rules_light', 'cx:medium': 'rules_medium', 'cx:heavy': 'rules_heavy' };
+const COMPLEXITY_BUCKET_ICON = { 'cx:light': 'feather', 'cx:medium': 'scale', 'cx:heavy': 'anvil' };
 
 function renderTagFilter(allSystems) {
     const panel = document.getElementById('results-tag-filter');
@@ -735,31 +802,43 @@ function renderTagFilter(allSystems) {
     // (which handles both official and custom systems)
     const playCounts = {};
     const setCounts = {};
+    const cxCounts = { 'cx:light': 0, 'cx:medium': 0, 'cx:heavy': 0 };
+    let freeCount = 0;
     allSystems.forEach(s => {
         (s.tagKeys || []).forEach(k => { playCounts[k] = (playCounts[k] || 0) + 1; });
         (s.settingKeys || []).forEach(k => { setCounts[k] = (setCounts[k] || 0) + 1; });
+        const cx = complexityBucketKey(s.complexity);
+        if (cx) cxCounts[cx]++;
+        if (s.free) freeCount++;
     });
     const sortedPlay = Object.keys(playCounts).sort((a, b) => playCounts[b] - playCounts[a]);
     const sortedSet = Object.keys(setCounts).sort((a, b) => setCounts[b] - setCounts[a]);
+    const cxKeys = COMPLEXITY_BUCKET_KEYS.filter(k => cxCounts[k] > 0);
     const totalCount = allSystems.length;
 
-    // Fingerprint of the rendered DOM. If unchanged, only update .active classes
+    // Fingerprint of the rendered DOM. If unchanged, only update state classes
     // in place — avoids innerHTML rewrite + lucide re-creation (which causes flicker).
     const fingerprint = JSON.stringify({
         lang: typeof currentLang !== 'undefined' ? currentLang : '',
         n: totalCount,
         p: sortedPlay.map(k => [k, playCounts[k]]),
-        s: sortedSet.map(k => [k, setCounts[k]])
+        s: sortedSet.map(k => [k, setCounts[k]]),
+        c: cxKeys.map(k => [k, cxCounts[k]]),
+        f: freeCount
     });
     if (panel.dataset.tagFingerprint === fingerprint) {
-        panel.querySelectorAll('.tag-filter-btn[data-tag-key]').forEach(btn => {
-            btn.classList.toggle('active', tagFilter.has(btn.dataset.tagKey));
-        });
-        const allBtn = panel.querySelector('.tag-filter-btn[data-tag-all]');
-        if (allBtn) allBtn.classList.toggle('active', tagFilter.size === 0);
-        updateTagFilterHeaderCount();
+        applyTagFilterStates(panel);
         return;
     }
+
+    // Renders one tri-state tag button. State classes are applied afterwards.
+    const btn = (key, icon, label, count, extraClass) =>
+        `<button class="tag-filter-btn ${extraClass || ''}" data-tag-key="${key}" onclick="cycleTagFilter('${key}')" title="${t('tag_filter_cycle_hint')}">
+            ${icon ? `<i data-lucide="${icon}"></i>` : ''}
+            <span class="tag-filter-label">${label}</span>
+            <span class="tag-filter-count">${count}</span>
+        </button>`;
+    const section = (i18nKey) => `<div class="tag-filter-section" data-i18n="${i18nKey}">${t(i18nKey)}</div>`;
 
     let html = `<button type="button" class="tag-filter-header" onclick="toggleTagFilterPanel()">
         <i data-lucide="sliders-horizontal"></i>
@@ -768,41 +847,43 @@ function renderTagFilter(allSystems) {
         <i data-lucide="chevron-down" class="tag-filter-chev"></i>
     </button>`;
     html += `<div class="tag-filter-body">`;
-    html += `<button class="tag-filter-btn ${tagFilter.size === 0 ? 'active' : ''}" data-tag-all onclick="clearTagFilter()">
+    html += `<button class="tag-filter-btn" data-tag-all onclick="clearTagFilter()">
         <span class="tag-filter-label" data-i18n="tag_filter_all">${t('tag_filter_all')}</span>
         <span class="tag-filter-count">${totalCount}</span>
     </button>`;
 
     if (sortedPlay.length > 0) {
-        html += `<div class="tag-filter-section" data-i18n="tag_filter_playstyle">${t('tag_filter_playstyle')}</div>`;
+        html += section('tag_filter_playstyle');
         sortedPlay.forEach(tag => {
             const cfg = TAG_CONFIG[tag];
-            const isActive = tagFilter.has(tag);
-            html += `<button class="tag-filter-btn ${isActive ? 'active' : ''}" data-tag-key="${tag}" onclick="toggleTagFilter('${tag}')">
-                <i data-lucide="${cfg.icon}"></i>
-                <span class="tag-filter-label">${cfg.label}</span>
-                <span class="tag-filter-count">${playCounts[tag]}</span>
-            </button>`;
+            html += btn(tag, cfg.icon, cfg.label, playCounts[tag], '');
         });
     }
 
     if (sortedSet.length > 0) {
-        html += `<div class="tag-filter-section" data-i18n="tag_filter_setting">${t('tag_filter_setting')}</div>`;
+        html += section('tag_filter_setting');
         sortedSet.forEach(tag => {
             const cfg = SETTING_TAG_CONFIG[tag];
-            const isActive = tagFilter.has(tag);
-            html += `<button class="tag-filter-btn setting ${isActive ? 'active' : ''}" data-tag-key="${tag}" onclick="toggleTagFilter('${tag}')">
-                <i data-lucide="${cfg.icon}"></i>
-                <span class="tag-filter-label">${cfg.label}</span>
-                <span class="tag-filter-count">${setCounts[tag]}</span>
-            </button>`;
+            html += btn(tag, cfg.icon, cfg.label, setCounts[tag], 'setting');
         });
+    }
+
+    if (cxKeys.length > 0) {
+        html += section('tag_filter_rules');
+        cxKeys.forEach(key => {
+            html += btn(key, COMPLEXITY_BUCKET_ICON[key], t(COMPLEXITY_BUCKET_I18N[key]), cxCounts[key], 'rules');
+        });
+    }
+
+    if (freeCount > 0) {
+        html += section('tag_filter_access');
+        html += btn('free', 'gift', t('badge_free'), freeCount, 'access');
     }
     html += `</div>`;
 
     panel.innerHTML = html;
     panel.dataset.tagFingerprint = fingerprint;
-    updateTagFilterHeaderCount();
+    applyTagFilterStates(panel);
     refreshIcons();
 }
 
@@ -828,6 +909,9 @@ function renderResults() {
         });
         return {
             id, name: SYSTEM_NAMES[id], heroImg, tagline, tags, tagKeys, settingKeys,
+            complexity: sysData ? sysData.complexity : customSys?.complexity,
+            free: sysData ? !!sysData.free : !!customSys?.free,
+            edition: sysData ? sysData.edition : customSys?.edition,
             voters: PLAYERS ? (votes[id] || []).map(vid => PLAYERS.find(p => p.id === vid)).filter(Boolean) : [],
             vetoers: PLAYERS ? (vetoes[id] || []).map(vid => PLAYERS.find(p => p.id === vid)).filter(Boolean) : [],
             count: (votes[id] || []).length,
@@ -839,13 +923,8 @@ function renderResults() {
     // Render tag filter sidebar (uses unfiltered system list for stable counts)
     renderTagFilter(allSystems);
 
-    // Apply tag filter (OR semantics: system shown if it matches ANY selected tag from EITHER category)
-    const systems = tagFilter.size === 0
-        ? allSystems
-        : allSystems.filter(s =>
-            s.tagKeys.some(k => tagFilter.has(k)) ||
-            s.settingKeys.some(k => tagFilter.has(k))
-        );
+    // Apply tri-state filter (includes ANDed, complexity buckets ORed, excludes removed)
+    const systems = allSystems.filter(matchesTagFilter);
 
     sortSystems(systems, browseMode);
 
@@ -891,7 +970,7 @@ function renderResults() {
             <div class="result-card-body">
                 <div class="result-card-name">${s.name}</div>
                 <div class="result-card-tagline">${s.tagline}</div>
-                <div class="result-card-tags">${s.tags.slice(0, 3).map(t => `<span class="result-card-tag">${t}</span>`).join('')}</div>
+                <div class="result-card-tags">${s.free ? `<span class="result-card-tag rc-free">${t('badge_free')}</span>` : ''}${s.edition ? `<span class="result-card-tag rc-edition">${s.edition}</span>` : ''}${s.tags.slice(0, 3).map(tg => `<span class="result-card-tag">${tg}</span>`).join('')}</div>
                 ${votesHTML}
             </div>
         </div>`;
