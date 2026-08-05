@@ -10,7 +10,7 @@ registerSystem("uvg", {
   "players": "2–5",
   "complexity": 2,
   "foundryStatus": "Community (SDM)",
-  "heroImage": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcbd0f960-e54b-438b-a2a2-4021279bba97_1600x900.jpeg",
+  "heroImage": "https://sessionzero.games/images/systems/uvg-hero.jpeg",
   "playstyleTags": [
     "explore",
     "worldbuild",
@@ -19,13 +19,13 @@ registerSystem("uvg", {
   "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
-      "src": "https://i.kickstarter.com/assets/027/487/468/c840ff8095f7e5aae9da7674703ee23d_original.jpg?anim=false&fit=scale-down&origin=ugc&q=92&v=1576152739&width=700"
+      "src": "https://cdn.shopify.com/s/files/1/0025/6006/5625/products/reanimated-damage-the-ultra-violet-grasslands-and-the-black-city-warning-book-1347321.jpg?v=1753228007"
     },
     {
-      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4u2A8fuE6SMEBsYZMJjVNW2EJ8oBkqz0RSQ&s"
+      "src": "https://sessionzero.games/images/systems/uvg-g1.jpg"
     },
     {
-      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzWazJyHA_IvXOKETmI7XSv--JCCXiGhudOw&s"
+      "src": "https://sessionzero.games/images/systems/uvg-g2.jpg"
     },
     {
       "src": "https://www.exaltedfuneral.com/cdn/shop/files/uvg-2e-book-463900.jpg?v=1720802815"

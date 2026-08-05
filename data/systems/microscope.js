@@ -19,13 +19,13 @@ registerSystem("microscope", {
   ],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1hZ2UvNTEzMzI2LzgzOTE4NjIuanBlZw==/original/1pjWRk.jpeg"
+      "src": "https://www.indiepressrevolution.com/xcart/image.php?type=P&id=17540"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvNTEzMzI2LzgzOTE4NjQuanBlZw==/original/O5Ehss.jpeg"
+      "src": "https://www.indiepressrevolution.com/xcart/image.php?type=P&id=19891"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvNTEzMzI2LzgzOTE3MjMuanBn/original/dVdzJT.jpg"
+      "src": "https://cf.geekdo-images.com/C1ox8bAodvWDJqhqAk0w-Q__itemrep/img/XgQ1Act3YETvDkEtU1j27cyIoKQ=/fit-in/246x300/filters:strip_icc()/pic931050.jpg"
     }
   ],
   "resources": [

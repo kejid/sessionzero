@@ -27,7 +27,7 @@ registerSystem("call-of-cthulhu", {
       "src": "https://www.tribality.com/wp-content/uploads/2019/04/richard-wright-cthulhu-museum1-1024x512.jpg"
     },
     {
-      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ92RstGeZr_fhYgkNO2aiZjI6j4p-kjq6okQ&s"
+      "src": "https://sessionzero.games/images/systems/call-of-cthulhu-g2.jpg"
     }
   ],
   "resources": [

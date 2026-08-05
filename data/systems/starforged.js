@@ -28,10 +28,10 @@ registerSystem("starforged", {
       "src": "https://assetsio.gnwcdn.com/starforged-ironsworn-ship-alien-art.png?width=690&quality=85&format=jpg&dpr=3&auto=webp"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMTQzMzQxNy84OTAzMzYwLnBuZw==/original/kWJNFl.png"
+      "src": "https://cdn.shopify.com/s/files/1/0712/0329/1447/files/ironsworn-starforged-digital-main.png?v=1767637357"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMTQzMzQxNy84OTAzMzYxLnBuZw==/original/3VZ%2BAO.png"
+      "src": "https://cdn.shopify.com/s/files/1/0712/0329/1447/files/starforged-asset-deck-1.png?v=1760647856"
     }
   ],
   "resources": [

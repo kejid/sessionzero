@@ -10,7 +10,7 @@ registerSystem("mythic-bastionland", {
   "players": "2–5",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6a2f0bf6-1328-488d-a457-aa66a531ca55_1064x566.png",
+  "heroImage": "https://sessionzero.games/images/systems/mythic-bastionland-hero.jpg",
   "playstyleTags": [
     "explore",
     "narrative",
@@ -19,10 +19,10 @@ registerSystem("mythic-bastionland", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6a2f0bf6-1328-488d-a457-aa66a531ca55_1064x566.png"
+      "src": "https://sessionzero.games/images/systems/mythic-bastionland-hero.jpg"
     },
     {
-      "src": "https://lh7-rt.googleusercontent.com/docsz/AD_4nXcIlzbaMrweNWqQ5dyQ-73LBaVweIzXID4LnrkExRJpwlsC-DPnq4tyX_nudHSn03ahnTH4khvCid4HWgdfIxHy1dpWCWWp1TLnFilLwM-K8E5Tu477XUiGFQc62np7oGsWja4JCWwodWR3xNd2lez2ul3x=w640-h340"
+      "src": "https://cdn.shopify.com/s/files/1/0025/6006/5625/files/mythic-bastionland-book-9307117.png?v=1765482428"
     },
     {
       "src": "https://img.itch.zone/aW1hZ2UvMjY0MjkzMi8xNjA1NzI2NS5wbmc=/original/M5VEoN.png"

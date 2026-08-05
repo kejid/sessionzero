@@ -19,16 +19,16 @@ registerSystem("outgunned", {
   "settingTags": ["modern"],
   "gallery": [
     {
-      "src": "https://www.drivethrurpg.com/images/18374/_product_images/449021/Car.jpeg"
+      "src": "https://twolittlemice.net/wp-content/uploads/2024/01/Cover_OG_Site.jpg"
     },
     {
-      "src": "https://i.pinimg.com/736x/c3/2f/d9/c32fd93ef75f374d83d3519ea822c128.jpg"
+      "src": "https://sessionzero.games/images/systems/outgunned-g1.jpg"
     },
     {
-      "src": "https://i0.wp.com/twolittlemice.net/wp-content/uploads/2024/01/DL_Hero_Sheets.jpg"
+      "src": "https://twolittlemice.net/wp-content/uploads/2024/01/DL_Hero_Sheets.jpg"
     },
     {
-      "src": "https://i0.wp.com/twolittlemice.net/wp-content/uploads/2024/01/DL_Schede-Eroe-1.jpg"
+      "src": "https://twolittlemice.net/wp-content/uploads/2024/01/Download_QS_Site.jpg"
     }
   ],
   "resources": [

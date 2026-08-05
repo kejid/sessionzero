@@ -19,16 +19,16 @@ registerSystem("electric-bastionland", {
   "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1hZ2UvNTk4NDYyLzMxNzkzMTkucG5n/original/MnG1LD.png"
+      "src": "https://cdn.shopify.com/s/files/1/0025/6006/5625/products/electric-bastionland-pdf-book-141375.jpg?v=1688417871"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvNTk4NDYyLzMxNzkyOTkucG5n/original/PQkILZ.png"
+      "src": "https://cdn.shopify.com/s/files/1/0025/6006/5625/products/electric-bastionland-pdf-book-853175.png?v=1688417871"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvNTk4NDYyLzMxNzkzMDEucG5n/original/HsUsO1.png"
+      "src": "https://cdn.shopify.com/s/files/1/0025/6006/5625/products/electric-bastionland-pdf-book-426085.png?v=1688417871"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvNTk4NDYyLzMxNzkzMDIucG5n/original/lbwRs4.png"
+      "src": "https://cdn.shopify.com/s/files/1/0025/6006/5625/products/electric-bastionland-pdf-book-392957.png?v=1688417871"
     }
   ],
   "resources": [

@@ -16,6 +16,172 @@ function registerSystem(id, data) {
         SYSTEM_GROUPS_ALL[scheme][key].push({ id: id, order: order });
     }
 }
+registerSystem("13th-age", {
+  "groups": {
+    "default": { "key": "tactical", "order": 36 },
+    "family": { "key": "standalone", "order": 41 },
+    "genre": { "key": "adventure", "order": 23 }
+  },
+  "name": "13th Age",
+  "publisher": "Pelgrane Press",
+  "dice": "d20 + escalation die",
+  "players": "3–6",
+  "complexity": 3,
+  "edition": null,
+  "free": true,
+  "foundryStatus": "Community",
+  "heroImage": "https://pelgranepress.com/wp-content/uploads/2020/04/Hardcover-PEL13A01.jpg",
+  "playstyleTags": [
+    "combat",
+    "tactical",
+    "narrative"
+  ],
+  "settingTags": ["fantasy"],
+  "gallery": [
+    {
+      "src": "https://pelgranepress.com/wp-content/uploads/2020/04/Hardcover-PEL13A02.jpg"
+    },
+    {
+      "src": "https://pelgranepress.com/wp-content/uploads/2020/04/Hardcover-PEL13A04.jpg"
+    },
+    {
+      "src": "https://pelgranepress.com/wp-content/uploads/2020/04/Softcover-PEL13A06.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://pelgranepress.com/13th-age/",
+      "fmt": "Web"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://pelgranepress.com/media/SRD/13thAgeArchmageEngineSRD.pdf",
+      "fmt": "PDF"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "trending-up"
+    },
+    {
+      "icon": "crown"
+    },
+    {
+      "icon": "sparkles"
+    },
+    {
+      "icon": "swords"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://pelgranepress.com/13th-age/
+    {
+      "text": "One of the best systems I've encountered — and I've either played or read the rules to countless d20 systems at this point — is 13th Age. It's fun, fast and accessible.",
+      "author": "Erik Kain, Forbes"
+    },
+    // VERIFIED-AT: https://pelgranepress.com/13th-age/
+    {
+      "text": "13th Age RPG delivers an incredible fantasy storytelling experience.",
+      "author": "Ed Grabianowski, io9"
+    }
+  ],
+  "ru": {
+    "tagShort": "d20-фэнтези от ведущих дизайнеров 3-й и 4-й D&D",
+    "tagline": "«Всё как в d20, но каждый раунд битва разгоняется — в буквальном смысле».",
+    "description": "13th Age — d20-фэнтези Роба Хейнсу (ведущий 4-й редакции D&D) и Джонатана Твита (ведущий 3-й). Берёт тактический бой d20 и оживляет его «кубиком эскалации», который каждый раунд повышает всем шанс попасть. Плюс сюжетные инструменты: 13 Икон и «Одна уникальная черта». Кранч и нарратив в одном флаконе, в сеттинге Империи Драконов.",
+    "setting": "Империя Драконов — классическое высокое фэнтези, но живое и своё. Тринадцать Икон (Император, Личь-Король, Три и др.) — сверхсилы мира, с которыми связан каждый герой. Никаких серых километров лора: детали появляются через твою «Одну уникальную черту» и связи с Иконами, прямо в игре.",
+    "vignette": "Второй раунд боя с орочьим вожаком — кубик эскалации показывает +1, и он растёт. Файтер бьёт: d20 + бонус атаки + эскалация против AC. Раунд за раундом попадать всё легче — бой ускоряется, а не вязнет. На +4 воин совершает то, что было невозможно вначале. Иконный бросок: связь с Личь-Королём внезапно осложняет сцену — из тьмы поднимаются мертвецы.",
+    "prep": "~30 мин",
+    "mechanics": [
+      {
+        "title": "Кубик эскалации",
+        "text": "На столе лежит d6, который со 2-го раунда растёт на +1 (до +6) и добавляется всем к попаданию. Награда за агрессию: бои ускоряются к финалу, а не затягиваются."
+      },
+      {
+        "title": "13 Икон",
+        "text": "Тринадцать великих сил мира. У героя есть «кубики отношений» с некоторыми — бросаешь их в начале сессии, и результат вплетает Икон в сюжет: помощь, осложнение, интрига."
+      },
+      {
+        "title": "Одна уникальная черта",
+        "text": "У каждого персонажа — деталь, которой нет больше ни у кого в мире («единственный выживший из…»). Сразу даёт крючок для истории и делает героя по-настоящему уникальным."
+      },
+      {
+        "title": "d20 с ДНК 3-й и 4-й D&D",
+        "text": "Тактический, но обтёсанный: предыстории вместо длинных списков навыков, гибкие классы, быстрый бой. Знакомо игрокам D&D, но легче и сюжетнее."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Bestiary"
+      },
+      {
+        "cap": "13 True Ways"
+      },
+      {
+        "cap": "Book of Loot"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальная страница — Pelgrane Press"
+      },
+      {
+        "name": "Бесплатный SRD (Archmage Engine)"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "Одна из лучших систем, что мне встречались — а я к этому моменту либо играл, либо читал правила бесчисленных d20-систем — это 13th Age. Она весёлая, быстрая и доступная." },
+      { "text": "13th Age дарит невероятный опыт фэнтезийного повествования." }
+    ]
+  },
+  "en": {
+    "tagShort": "d20 fantasy from the lead designers of D&D 3E and 4E",
+    "tagline": "\"It's d20, but every round the fight literally speeds up.\"",
+    "description": "13th Age is a d20 fantasy game by Rob Heinsoo (D&D 4E lead) and Jonathan Tweet (D&D 3E lead). It takes tactical d20 combat and enlivens it with the escalation die, which raises everyone's to-hit each round. Add story-first tools: the 13 Icons and the One Unique Thing. Crunch and narrative in one package, in the Dragon Empire setting.",
+    "setting": "The Dragon Empire — classic high fantasy, but living and its own. Thirteen Icons (the Emperor, the Lich King, the Three, and more) are the world's superpowers, and every hero is tied to some of them. No gray miles of lore: details emerge through your One Unique Thing and your Icon relationships, right at the table.",
+    "vignette": "Round two of the fight with the orc warlord — the escalation die shows +1, and it's climbing. The fighter swings: d20 + attack bonus + escalation against AC. Round by round, hitting gets easier — the fight accelerates instead of grinding. At +4 the warrior pulls off what was impossible at the start. An Icon roll: a tie to the Lich King suddenly complicates the scene — the dead rise from the dark.",
+    "prep": "~30 min",
+    "mechanics": [
+      {
+        "title": "The escalation die",
+        "text": "A d6 sits on the table, rising +1 from round 2 (up to +6) and added to everyone's to-hit. A reward for aggression: fights accelerate toward the finish instead of dragging."
+      },
+      {
+        "title": "The 13 Icons",
+        "text": "Thirteen great powers of the world. A hero has 'relationship dice' with some — roll them at the start of a session and the result weaves the Icons into the story: aid, complication, intrigue."
+      },
+      {
+        "title": "One Unique Thing",
+        "text": "Every character has a detail no one else in the world shares ('the only survivor of…'). It instantly gives a story hook and makes the hero genuinely one of a kind."
+      },
+      {
+        "title": "d20 with 3E & 4E DNA",
+        "text": "Tactical but streamlined: backgrounds instead of long skill lists, flexible classes, fast combat. Familiar to D&D players, but lighter and more story-forward."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Bestiary"
+      },
+      {
+        "cap": "13 True Ways"
+      },
+      {
+        "cap": "Book of Loot"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official page — Pelgrane Press"
+      },
+      {
+        "name": "Free SRD (Archmage Engine)"
+      }
+    ]
+  }
+});
 registerSystem("advanced-fighting-fantasy", {
   "groups": {
     "default": { "key": "osr", "order": 21 },
@@ -359,6 +525,389 @@ registerSystem("alien", {
     ]
   }
 });
+registerSystem("apocalypse-world", {
+  "groups": {
+    "default": { "key": "narrative", "order": 28 },
+    "family": { "key": "pbta-fitd", "order": 5 },
+    "genre": { "key": "post-apocalyptic", "order": 1 }
+  },
+  "name": "Apocalypse World",
+  "publisher": "Lumpley Games",
+  "dice": "2d6",
+  "players": "3–5",
+  "complexity": 2,
+  "free": false,
+  "foundryStatus": "None",
+  "heroImage": "https://static0.cbrimages.com/wordpress/wp-content/uploads/2020/09/Apocalypse-World-Cover.png",
+  "playstyleTags": [
+    "narrative",
+    "explore",
+    "combat"
+  ],
+  "settingTags": ["postapoc"],
+  "gallery": [
+    {
+      "src": "https://static0.cbrimages.com/wordpress/wp-content/uploads/2020/09/apocalypse-world-creatures.png"
+    },
+    {
+      "src": "https://img.itch.zone/aW1nLzI2Njk0NDIuanBn/original/IGjp5b.jpg"
+    },
+    {
+      "src": "https://static0.cbrimages.com/wordpress/wp-content/uploads/2020/09/Apocalypse-World-Cover.png"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "http://apocalypse-world.com/",
+      "fmt": "Web"
+    },
+    {
+      "type": "link",
+      "url": "https://lumpley.itch.io/apocalypse-world",
+      "fmt": "Web"
+    },
+    {
+      "type": "link",
+      "url": "https://lumpley.games/apocalypseworld/",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "sparkles"
+    },
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "book-open"
+    },
+    {
+      "icon": "scroll"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.cbr.com/powered-by-the-apocalypse-indie-rpg/
+    {
+      "text": "Ten years on, Powered by the Apocalypse games (PbtA) are everywhere. The Bakers designed the PbtA engine so that other game designers could 'hack' it, creating games with similar mechanics, but unique worlds and rules. More than four dozen games bear the PbtA license, making Apocalypse World incredibly influential.",
+      "author": "James Hanna, CBR"
+    },
+    // VERIFIED-AT: https://thealexandrian.net/wordpress/9584/roleplaying-games/apocalypse-world
+    {
+      "text": "Apocalypse World is both a roleplaying game and a really intense primer on D. Vincent Baker's approach to GMing a campaign. In fact, the primer is so intense that it's been baked right into the ruleset at a really primal level.",
+      "author": "Justin Alexander, The Alexandrian"
+    }
+  ],
+  "ru": {
+    "tagShort": "Постапокалипсис на 2d6 — родоначальник PbtA",
+    "tagline": "«Мир мёртв. Правила просты. Истории — бесконечны».",
+    "description": "Apocalypse World — настольная RPG от Lumpley Games (2-е издание, 2019), родоначальник системы Powered by the Apocalypse (PbtA). 2d6: 10+ — полный успех, 7–9 — частичный, 6- — MC решает. Геймплей через Playbooks (шаблоны персонажей) и Moves (ходы), активируемые из фикции. Нулевой пресесс — мир рождается за столом. Влияние: Dungeon World, Masks, Blades in the Dark и десятки других.",
+    "setting": "Постапокалипсис без прописанного мира. Игроки создают мир вместе на первой сессии: что случилось, кто вы, что здесь происходит. Нет предwritten сеттинга — только архетипы и импровизация.",
+    "vignette": "MC: «Вы подходите к дому. Дверь приоткрыта. Изнутри — запах горелого мяса. Что делаете?» Гангстер ( playbook: Driver): «Заглядываю внутрь, держа пистолет наготове.» Бросок 2d6 + Sharp: 4+2 = 6. Провал. MC: «Дверь захлопывается. Вы слышите щелчок замка. И цепь.» Мир мёртв. Правила просты. Истории — бесконечны.",
+    "prep": "~5 мин (создание мира на первой сессии)",
+    "mechanics": [
+      {
+        "title": "PbtA (2d6)",
+        "text": "Бросок 2d6 + модификатор: 10+ — полный успех, 7–9 — частичный (успех с осложнением), 6- — MC решает. Простая, но глубокая математика."
+      },
+      {
+        "title": "Playbooks",
+        "text": "Шаблоны персонажей: Driver, Chopper, Battlebabe, Hardholder и др. Каждый playbook — уникальные ходы, способности и конфликты."
+      },
+      {
+        "title": "Moves",
+        "text": "Действия, активируемые из фикции. Нет «атаки» или «проверки навыка» — есть «заходишь в ближний бой» или «TRIES to read a tense situation»."
+      },
+      {
+        "title": "MC не бросает кубики",
+        "text": "Master of Ceremonies (GM) описывает последствия через свои ходы. Игроки — единственные, кто берёт кубики в руки."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Игровые существа"
+      },
+      {
+        "cap": "Обложка 2-го издания"
+      },
+      {
+        "cap": "Обложка (CBR)"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт — apocalypse-world.com"
+      },
+      {
+        "name": "Itch.io — купить PDF"
+      },
+      {
+        "name": "Lumpley Games — дизайн-серия PbtA"
+      }
+    ],
+    "quotes": [
+      { "text": "Десять лет спустя игры Powered by the Apocalypse повсюду. Бейкеры создали движок PbtA так, чтобы другие дизайнеры могли его 'хакать', создавая игры с похожими механиками, но уникальными мирами. Более четырех десятков игр носят лицензию PbtA, делая Apocalypse World невероятно влиятельной." },
+      { "text": "Apocalypse World — это и RPG, и очень интенсивный гайд по подходу Винсента Бейкера к ведению кампании. Гайд настолько интенсивен, что встроен прямо в правила на примитивном уровне." }
+    ]
+  },
+  "en": {
+    "tagShort": "Post-apocalyptic 2d6 — the PbtA originator",
+    "tagline": "\"The world is dead. The rules are simple. The stories are infinite.\"",
+    "description": "Apocalypse World is a tabletop RPG from Lumpley Games (2nd Edition, 2019), the originator of the Powered by the Apocalypse (PbtA) engine. 2d6: 10+ full success, 7–9 partial, 6- the MC decides. Gameplay through Playbooks (character archetypes) and Moves (actions triggered from fiction). Zero prep — the world is born at the table. Influence: Dungeon World, Masks, Blades in the Dark, and dozens more.",
+    "setting": "Post-apocalyptic with no pre-written world. Players create the world together in session 1: what happened, who you are, what's going on. No prewritten setting — only archetypes and improvisation.",
+    "vignette": "MC: 'You approach the house. Door ajar. Inside — the smell of burnt meat. What do you do?' The Gangster (playbook: Driver): 'I peer inside, pistol ready.' Roll 2d6 + Sharp: 4+2 = 6. Miss. MC: 'The door slams shut. You hear a lock click. And a chain.' The world is dead. The rules are simple. The stories are infinite.",
+    "prep": "~5 min (world creation in session 1)",
+    "mechanics": [
+      {
+        "title": "PbtA (2d6)",
+        "text": "Roll 2d6 + modifier: 10+ full success, 7–9 partial (success with complication), 6- MC decides. Simple but deep math."
+      },
+      {
+        "title": "Playbooks",
+        "text": "Character archetypes: Driver, Chopper, Battlebabe, Hardholder, etc. Each playbook has unique moves, abilities, and conflicts."
+      },
+      {
+        "title": "Moves",
+        "text": "Actions triggered from fiction. No 'attack' or 'skill check' — there's 'going into melee' or 'trying to read a tense situation'."
+      },
+      {
+        "title": "MC Never Rolls",
+        "text": "The Master of Ceremonies (GM) describes consequences through their moves. Players are the only ones who touch the dice."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "In-game creatures"
+      },
+      {
+        "cap": "2nd Edition cover"
+      },
+      {
+        "cap": "Cover art (CBR)"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official site — apocalypse-world.com"
+      },
+      {
+        "name": "Itch.io — buy PDF"
+      },
+      {
+        "name": "Lumpley Games — PbtA design series"
+      }
+    ],
+    "quotes": [
+      { "text": "Ten years on, Powered by the Apocalypse games (PbtA) are everywhere. The Bakers designed the PbtA engine so that other game designers could 'hack' it, creating games with similar mechanics, but unique worlds and rules. More than four dozen games bear the PbtA license, making Apocalypse World incredibly influential." },
+      { "text": "Apocalypse World is both a roleplaying game and a really intense primer on D. Vincent Baker's approach to GMing a campaign. In fact, the primer is so intense that it's been baked right into the ruleset at a really primal level." }
+    ]
+  }
+});
+registerSystem("ars-magica", {
+  "groups": {
+    "default": { "key": "narrative", "order": 43 },
+    "family": { "key": "standalone", "order": 51 },
+    "genre": { "key": "historical", "order": 2 }
+  },
+  "name": "Ars Magica",
+  "publisher": "Atlas Games",
+  "dice": "d10",
+  "players": "3–6",
+  "complexity": 5,
+  "free": true,
+  "edition": "Definitive (5E)",
+  "foundryStatus": "Community",
+  "heroImage": "https://www.atlas-games.com/atlas-cms/resources/armdef-3d-full-white.jpg",
+  "playstyleTags": ["worldbuild", "narrative", "explore"],
+  "settingTags": ["fantasy", "historical"],
+  "gallery": [
+    { "src": "https://www.atlas-games.com/atlas-cms/resources/08laboratorycolor.jpg" },
+    { "src": "https://www.atlas-games.com/atlas-cms/resources/armdef-interior-spreads-mockup.png" },
+    { "src": "https://www.atlas-games.com/atlas-cms/resources/images/display-part-2-nocorerulebook.png" }
+  ],
+  "resources": [
+    { "type": "link", "url": "https://www.atlas-games.com/arsmagica/", "fmt": "Web" },
+    { "type": "link", "url": "https://www.atlas-games.com/arsmagica/openars", "fmt": "Web" },
+    { "type": "rules", "url": "https://www.drivethrurpg.com/en/product/329468/ars-magica-fifth-edition-digital", "fmt": "PDF" },
+    { "type": "link", "url": "https://foundryvtt.com/packages/arm5e", "fmt": "VTT" }
+  ],
+  "mechanics": [
+    { "icon": "sparkles" },
+    { "icon": "users" },
+    { "icon": "castle" },
+    { "icon": "flask-conical" }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://thealexandrian.net/wordpress/44673/roleplaying-games/ars-magica-5th-edition-system-cheat-sheet
+    {
+      "text": "The result is arguably the single most complete and deliberately comprehensive RPG product line to ever exist.",
+      "author": "Justin Alexander, The Alexandrian"
+    },
+    // VERIFIED-AT: https://matthewjconstantine.com/2020/03/31/tabletop-rpg-review-ars-magica-fifth-edition/
+    {
+      "text": "I often refer to Ars Magica as my dream game.",
+      "author": "Matthew J. Constantine"
+    }
+  ],
+  "ru": {
+    "tagShort": "средневековая магическая сага",
+    "tagline": "«Волшебники Мифической Европы, где легенды — правда».",
+    "description": "Ars Magica делает вас могущественными волшебниками Мифической Европы — мира XIII века, где средневековые легенды буквально реальны. Знаменитая магическая система соединяет пять Техник (глаголы) с десятью Формами (существительными), позволяя импровизировать почти любой эффект. Игра ведётся «труппой»: каждый игрок водит мага, а также спутников и простых грогов, защищающих ковенант. Саги разворачиваются по сезонам — персонажи учатся, изобретают заклинания и растут десятилетиями. Глубокая, литературная и ни на что не похожая игра.",
+    "setting": "Мифическая Европа — это наши 1220-е годы, переосмысленные так, что легенды стали правдой: феи населяют леса, ангелы и демоны ведут войну Божественного и Инфернального, драконы спят под горами, а Орден Гермеса прячет свои ковенанты от Церкви, сжигающей ведьм. Вы играете за нелюдимых магов, владеющих истинной силой, — и за простых людей, втянутых в их орбиту.",
+    "vignette": "Грог кричит, когда ворота ковенанта раскалываются под топорами разбойников. У вашей маги нет готового заклинания, поэтому вы творите спонтанную магию: Рего Террам, чтобы подчинить землю. Складываете Рего 12 + Террам 8 + Выносливость 2 и бросаете стресс-кость — выпадает 7. Для спонтанной магии сумма делится пополам: 14 против уровня эффекта — достаточно. Булыжники двора встают стеной, и налётчики бросаются врассыпную.",
+    "prep": "~45 мин",
+    "mechanics": [
+      { "title": "Техники и Формы", "text": "Пять Техник (Крео, Интеллего, Муто, Пердо, Рего) сочетаются с десятью Формами вроде Игнем или Корпус. Соедините глагол и существительное — и импровизируйте почти любой магический эффект на ходу." },
+      { "title": "Игра труппой", "text": "Никто не владеет одним героем. Каждый игрок водит могучего мага, разносторонних спутников и расходных грогов, а роль ведущего может переходить по кругу между сессиями." },
+      { "title": "Ковенант и сага", "text": "Ваш ковенант — это общий дом, библиотека и наследие. Кампании — это саги длиной в годы, и вся труппа вместе строит и защищает этот живой институт." },
+      { "title": "Сезоны в лаборатории", "text": "Время идёт сезонами. Между приключениями маги уходят в лаборатории: изобретают заклинания, зачаровывают предметы, добывают вис (сырую магию) и оттачивают своё Искусство." }
+    ],
+    "gallery": [
+      { "cap": "В лаборатории ковенанта" },
+      { "cap": "Полноцветные развороты книги" },
+      { "cap": "Коллекционное издание Definitive" }
+    ],
+    "resources": [
+      { "name": "Официальный сайт Ars Magica" },
+      { "name": "Открытая лицензия (бесплатный CC-текст)" },
+      { "name": "PDF Пятой редакции (DriveThruRPG)" },
+      { "name": "Система для Foundry VTT" }
+    ],
+    "quotes": [
+      { "text": "Пожалуй, это самая полная и целенаправленно всеобъемлющая линейка ролевых продуктов из когда-либо существовавших." },
+      { "text": "Я часто называю Ars Magica игрой моей мечты." }
+    ]
+  },
+  "en": {
+    "tagShort": "medieval wizard saga",
+    "tagline": "\"Wizards of Mythic Europe, where legend is literally true.\"",
+    "description": "Ars Magica casts you as powerful wizards in Mythic Europe — a 13th-century world where medieval myth is real. Its celebrated magic pairs five Techniques (verbs) with ten Forms (nouns), letting you improvise almost any effect. Play is troupe-style: everyone runs a magus, plus the companions and common grogs who defend the covenant. Sagas unfold across seasons, with characters studying, inventing spells, and growing over decades. Deep, literary, and unlike anything else in the hobby.",
+    "setting": "Mythic Europe is our own 1220s reimagined so legend is real: faeries haunt the forests, angels and demons wage the Divine and Infernal war, dragons sleep beneath mountains, and the Order of Hermes hides its covenants from a Church that burns witches. You play the reclusive magi who wield true power — and the mundane folk caught in their orbit.",
+    "vignette": "A grog screams as the covenant gate splinters under bandit axes. Your maga has no spell for this, so you cast spontaneously: Rego Terram to seize the earth. You total Rego 12 + Terram 8 + Stamina 2 and roll the stress die — a 7. Halved for spontaneous magic, that's 14 against the effect's level: enough. The courtyard cobbles rear up like a wall, and the raiders scatter.",
+    "prep": "~45 min",
+    "mechanics": [
+      { "title": "Techniques & Forms", "text": "Five Techniques (Creo, Intellego, Muto, Perdo, Rego) combine with ten Forms like Ignem or Corpus. Pair a verb and a noun to improvise nearly any magical effect on the fly." },
+      { "title": "Troupe Play", "text": "Nobody owns one hero. Each player runs a mighty magus, versatile companions, and expendable grogs, and the storyguide role can pass around the table between sessions." },
+      { "title": "Covenant & Saga", "text": "Your covenant is a shared home, library, and legacy. Campaigns are sagas spanning years, and the whole troupe builds and defends this living institution together." },
+      { "title": "Seasons in the Lab", "text": "Time advances in seasons. Between adventures, magi retreat to their laboratories to invent spells, enchant items, extract raw magic (vis), and slowly master their Arts." }
+    ],
+    "gallery": [
+      { "cap": "Inside a covenant laboratory" },
+      { "cap": "Full-color interior spreads" },
+      { "cap": "The Definitive Edition set" }
+    ],
+    "resources": [
+      { "name": "Official Ars Magica site" },
+      { "name": "Open License (free CC text)" },
+      { "name": "Fifth Edition PDF (DriveThruRPG)" },
+      { "name": "Foundry VTT system" }
+    ],
+    "quotes": [
+      { "text": "The result is arguably the single most complete and deliberately comprehensive RPG product line to ever exist." },
+      { "text": "I often refer to Ars Magica as my dream game." }
+    ]
+  }
+});
+registerSystem("avatar-legends", {
+  "groups": {
+    "default": { "key": "narrative", "order": 47 },
+    "family": { "key": "pbta-fitd", "order": 33 },
+    "genre": { "key": "adventure", "order": 28 }
+  },
+  "name": "Avatar Legends: The Roleplaying Game",
+  "publisher": "Magpie Games",
+  "dice": "2d6 + stat/approach (PbtA)",
+  "players": "3–6",
+  "complexity": 3,
+  "free": false,
+  "edition": null,
+  "foundryStatus": "Community",
+  "heroImage": "https://magpiegames.com/cdn/shop/files/Avatar-Core_1.jpg",
+  "playstyleTags": ["narrative", "action", "social"],
+  "settingTags": ["fantasy"],
+  "gallery": [
+    { "src": "https://magpiegames.com/cdn/shop/files/Avatar-Core_2.jpg" },
+    { "src": "https://magpiegames.com/cdn/shop/files/Avatar-Republic-City_1.jpg" },
+    { "src": "https://magpiegames.com/cdn/shop/files/Avatar-UIAG_1.jpg" }
+  ],
+  "resources": [
+    { "type": "link", "url": "https://magpiegames.com/collections/avatar-legends", "fmt": "Web" },
+    { "type": "link", "url": "https://foundryvtt.com/packages/legends", "fmt": "Foundry" }
+  ],
+  "mechanics": [
+    { "icon": "dices" },
+    { "icon": "scale" },
+    { "icon": "flame" },
+    { "icon": "swords" }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.meeplemountain.com/reviews/avatar-legends-the-rpg-review/
+    {
+      "text": "If you're looking for a game that feels like an episode of Avatar: the Last Airbender or The Legend of Korra, this is it.",
+      "author": "Ian Howard, Meeple Mountain"
+    },
+    // VERIFIED-AT: https://cannibalhalflinggaming.com/2022/12/14/avatar-legends-review/
+    {
+      "text": "The game is fine, it probably plays a lot nicer than D&D to be honest.",
+      "author": "Aaron Marks, Cannibal Halfling Gaming"
+    }
+  ],
+  "ru": {
+    "tagShort": "PbtA по «Аватару» и «Легенде о Корре»",
+    "tagline": "«Власть над стихией — ничто без равновесия внутри».",
+    "description": "Avatar Legends: The Roleplaying Game — официальная ролевая игра Magpie Games по «Аватару: Легенде об Аанге» и «Легенде о Корре» на движке Powered by the Apocalypse. Вы и ваша группа собираете отряд юных героев в любой эпохе мира Аватара, покоряете четыре стихии и решаете конфликты словом не реже, чем кулаком. Игра о взрослении, дружбе и борьбе между двумя сторонами собственной личности.",
+    "setting": "Мир четырёх народов — Воды, Земли, Огня и Воздуха — во все эпохи, от романов о Киоши до индустриального Республиканского города Корры. Маги стихий и обычные люди живут среди войн, политики, духов и личных распрей. Вы выбираете эпоху и стартовый конфликт и рассказываете свою историю в живом мире боевых искусств и нравственного выбора.",
+    "vignette": "Маг огня загоняет вашу магиню воды в угол на причале. Вы выбираете подход «Наступать и атаковать» и бросаете 2d6 + подход: выпадает 8. Успех с осложнением — вы наносите удар и накладываете Статус, но тратите Усталость на приём, и ведущий сдвигает ваше Равновесие к Страсти. Перешагнёте +3 — потеряете контроль; ещё один удар по чувствам — и вместо этого вы отмечаете состояние «Злость».",
+    "prep": "~15 мин",
+    "mechanics": [
+      { "title": "Ходы на 2d6 (PbtA)", "text": "Любое действие — это ход: 2d6 плюс характеристика или боевой подход. 10+ — чистый успех, 7–9 — успех с ценой, 6 и ниже отдаёт инициативу ведущему." },
+      { "title": "Равновесие между Принципами", "text": "Каждый плейбук растягивает персонажа между двумя противоположными Принципами. Игра двигает вас по шкале; в центре открывается момент Равновесия раз за сезон, но выход за +3 — потеря контроля." },
+      { "title": "Усталость, Состояния, Статусы", "text": "Три связанных трека. Усталость питает сильнейшие приёмы; когда она заполнена, вы отмечаете Состояния — Страх, Злость, Вину, Неуверенность, Смятение, — мешающие ходам, пока вы их не отыграете. Бой оставляет всем Статусы." },
+      { "title": "Техники и обмены ударами", "text": "Бой идёт обменами: бойцы выбирают подходы и тратят изученные Техники — фирменные формы магии и боевые приёмы, — превращая схватку в напряжённый кинематографичный диалог, а не в подсчёт хитов." }
+    ],
+    "gallery": [
+      { "cap": "Основная книга — задняя обложка" },
+      { "cap": "Сурсбук по Республиканскому городу" },
+      { "cap": "Дополнение по эпохе" }
+    ],
+    "resources": [
+      { "name": "Официальная страница — Magpie Games" },
+      { "name": "Народная система для Foundry VTT" }
+    ],
+    "quotes": [
+      { "text": "Если вы ищете игру, которая ощущается как серия «Аватара: Легенды об Аанге» или «Легенды о Корре», — вот она." },
+      { "text": "Игра нормальная и, честно говоря, играется куда приятнее, чем D&D." }
+    ]
+  },
+  "en": {
+    "tagShort": "PbtA in the world of Avatar and Korra",
+    "tagline": "\"Power over the elements means nothing without balance within.\"",
+    "description": "Avatar Legends: The Roleplaying Game is Magpie Games' official RPG for Avatar: The Last Airbender and The Legend of Korra, built on Powered by the Apocalypse. You and your group form a company of young heroes in any era of the Avatarverse, bending the four elements and settling conflicts as often with words as with fists. It's a game about growth, community, and the pull between two sides of who you are.",
+    "setting": "The world of the four nations — Water, Earth, Fire, Air — across every era, from the Kyoshi novels to Korra's industrial Republic City. Benders and non-benders alike navigate war, politics, spirits, and personal rivalries. You pick an era and a starting conflict, then tell your own story in a lived-in world of martial-arts action and moral weight.",
+    "vignette": "A firebending duelist corners your waterbender on the pier. You commit to the Advance & Attack approach and roll 2d6 + that approach: an 8. Success with a catch — you land the hit and inflict a Status, but you mark Fatigue to power it, and the GM shifts your Balance toward Passion. Push past +3 and you lose control; take one more blow to the heart and you're marking the Angry condition instead.",
+    "prep": "~15 min",
+    "mechanics": [
+      { "title": "2d6 moves (PbtA)", "text": "Every action is a move: roll 2d6 plus a stat or combat approach. 10+ hits clean, 7–9 succeeds with a cost, 6 or under hands the GM the initiative." },
+      { "title": "Balance between two Principles", "text": "Each playbook stretches your character between two opposed Principles. Play shifts you along the track; reach the center to unlock a once-a-season moment of Balance, but overreach past +3 and you lose control." },
+      { "title": "Fatigue, Conditions, Statuses", "text": "Three interlocking tracks. Fatigue fuels your strongest moves; when it fills you mark Conditions — Afraid, Angry, Guilty, Insecure, Troubled — that penalize moves until you act on them. Combat leaves Statuses on everyone." },
+      { "title": "Techniques and exchanges", "text": "Combat runs as exchanges where fighters choose approaches and spend learned Techniques — signature bending forms and martial moves — turning a fight into a tense, cinematic back-and-forth rather than a hit-point grind." }
+    ],
+    "gallery": [
+      { "cap": "Core rulebook — back cover" },
+      { "cap": "Republic City sourcebook" },
+      { "cap": "Era supplement cover" }
+    ],
+    "resources": [
+      { "name": "Official page — Magpie Games" },
+      { "name": "Community Foundry VTT system" }
+    ],
+    "quotes": [
+      { "text": "If you're looking for a game that feels like an episode of Avatar: the Last Airbender or The Legend of Korra, this is it." },
+      { "text": "The game is fine, it probably plays a lot nicer than D&D to be honest." }
+    ]
+  }
+});
 registerSystem("basic-fantasy", {
   "groups": {
     "default": { "key": "osr", "order": 12 },
@@ -497,6 +1046,155 @@ registerSystem("basic-fantasy", {
     "quotes": [
       { "text": "Overall, this game does what it sets out to do, and does it with conviction. It's an inexpensive, exhaustive, and approachable system." },
       { "text": "It captures the spirit of old-school fantasy adventure without burying players under archaic mechanics and obtuse formatting." }
+    ]
+  }
+});
+registerSystem("black-sword-hack", {
+  "groups": {
+    "default": { "key": "osr", "order": 26 },
+    "family": { "key": "osr-modern", "order": 4 },
+    "genre": { "key": "sword-and-sorcery", "order": 7 }
+  },
+  "name": "Black Sword Hack",
+  "publisher": "The Merry Mushmen",
+  "dice": "d20 roll-under + d6 Doom Die",
+  "players": "3–6",
+  "complexity": 2,
+  "free": true,
+  "foundryStatus": "Community",
+  "heroImage": "https://www.themerrymushmen.com/wp-content/uploads/2023/01/BSH-COVER.jpg",
+  "playstyleTags": [
+    "combat",
+    "explore",
+    "survival"
+  ],
+  "settingTags": ["fantasy", "sword-and-sorcery"],
+  "gallery": [
+    {
+      "src": "https://www.themerrymushmen.com/wp-content/uploads/2022/12/BSH-Book_Mockup_01BBAP.jpg"
+    },
+    {
+      "src": "https://www.themerrymushmen.com/wp-content/uploads/2022/12/BSH-MockupCREA.jpg"
+    },
+    {
+      "src": "https://www.themerrymushmen.com/wp-content/uploads/2022/12/BSH-MockupBASEADVS-scaled.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://www.themerrymushmen.com/product/black-sword-hack-ultimate-chaos-edition/",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "swords"
+    },
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "hourglass"
+    },
+    {
+      "icon": "infinity"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: http://grognardia.blogspot.com/2023/07/review-black-sword-hack.html
+    {
+      "text": "combat is much more fraught with danger, which makes sense, given its literary inspirations.",
+      "author": "James Maliszewski, Grognardia"
+    },
+    // VERIFIED-AT: https://cannibalhalflinggaming.com/2024/03/28/black-sword-hack-and-the-evolving-osr/
+    {
+      "text": "Black Sword Hack is tight (and short), and it would be hard to pad out a review of the game into a full article.",
+      "author": "Aaron Marks, Cannibal Halfling Gaming"
+    }
+  ],
+  "ru": {
+    "tagShort": "Меч-и-магия в духе Муркока на Black Hack",
+    "tagline": "«Ты обречён. Вопрос лишь — сколько успеешь до того, как Рок настигнет».",
+    "description": "Black Sword Hack — OSR-игра тёмного меча-и-магии на движке The Black Hack, вдохновлённая Вечным Воителем Муркока и обречёнными антигероями вроде Элрика. Бесклассовые герои, определяемые Происхождением и Предысторией, ставят судьбу на Кость Рока — она тает, пока ты опираешься на удачу. Мультивселенная вечной борьбы Хаоса и Закона со встроенными инструментами генерации мира.",
+    "setting": "Мрачная мультивселенная на грани катастрофы, где Хаос и Закон рвут реальность на части. Проклятые мечи, чуждые боги, гибнущие империи и герои, отмеченные роком. Тон — трагический пульп в духе Элрика: сила всегда с ценой, победа всегда с горчинкой. Генераторы в правилах соберут ваш умирающий мир на лету.",
+    "vignette": "Наёмник загнан в угол cult-истами. Он призывает Кость Рока — d6 к броску, чтобы прорваться. Успех: клинок находит горло жреца. Но Кость Рока брошена — если выпала 1–2, она уменьшается (d6→d4). Ещё пара таких рывков — и Рок иссякнет. А когда он иссякает, вселенная взыскивает долг сполна.",
+    "prep": "~10 мин",
+    "mechanics": [
+      {
+        "title": "Броски «меньше» на d20",
+        "text": "Ядро The Black Hack: проверка — d20 «меньше-равно» характеристики, игроки делают все броски. Лёгкая, быстрая, летальная система, знакомая всему семейству хаков."
+      },
+      {
+        "title": "Кость Рока",
+        "text": "Особый ресурс: призови Кость Рока (d6), чтобы усилить действие. Но на 1–2 она уменьшается. Когда истощится — на героя обрушивается Рок. Механическая метафора обречённости антигероя."
+      },
+      {
+        "title": "Бесклассовость: Происхождение и Предыстория",
+        "text": "Классов нет. Персонажа задают Происхождение (человек, полукровка, порождение Хаоса…) и Предыстория. Гибко и мрачно — как и подобает миру Вечного Воителя."
+      },
+      {
+        "title": "Хаос против Закона + генераторы",
+        "text": "Сеттинг вечной войны Хаоса и Закона встроен в механику, а таблицы-генераторы (фракции, чужие боги, руины) собирают умирающую мультивселенную прямо за столом."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Разворот книги"
+      },
+      {
+        "cap": "Бестиарий"
+      },
+      {
+        "cap": "Приключения"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальная страница — The Merry Mushmen"
+      }
+    ]
+  },
+  "en": {
+    "tagShort": "Moorcockian sword-and-sorcery on The Black Hack",
+    "tagline": "\"You are doomed. The only question is how much you get done before Doom catches up.\"",
+    "description": "Black Sword Hack is a dark sword-and-sorcery OSR game on The Black Hack engine, drawing on Moorcock's Eternal Champion and doomed antiheroes like Elric. Classless heroes, defined by Origin and Background, stake their fate on a Doom Die that erodes as they lean on luck. A multiverse locked in the eternal struggle of Chaos and Law, with world-building tools baked into the rules.",
+    "setting": "A grim multiverse on the brink of catastrophe, where Chaos and Law tear reality apart. Cursed swords, alien gods, dying empires, and heroes marked by doom. The tone is tragic pulp in the Elric vein: power always has a price, victory always a bitter edge. Generator tables in the rules assemble your dying world on the fly.",
+    "vignette": "The mercenary is cornered by cultists. He invokes the Doom Die — a d6 added to the roll to break free. Success: the blade finds the priest's throat. But the Doom Die is cast — on a 1–2 it shrinks (d6→d4). A few more such gambits and the Doom runs out. And when it does, the universe collects its debt in full.",
+    "prep": "~10 min",
+    "mechanics": [
+      {
+        "title": "Roll-under d20",
+        "text": "The Black Hack core: a test is d20 roll-under your attribute, and players make all the rolls. A light, fast, lethal system familiar to the whole family of Hacks."
+      },
+      {
+        "title": "The Doom Die",
+        "text": "A special resource: invoke the Doom Die (a d6) to boost an action. But on a 1–2 it shrinks. When it's spent, Doom befalls the hero. A mechanical metaphor for the antihero's doom."
+      },
+      {
+        "title": "Classless: Origin & Background",
+        "text": "No classes. A character is defined by Origin (human, half-breed, spawn of Chaos…) and Background. Flexible and grim — as befits the world of the Eternal Champion."
+      },
+      {
+        "title": "Chaos vs Law + generators",
+        "text": "The setting's eternal war of Chaos and Law is built into the mechanics, and generator tables (factions, alien gods, ruins) assemble the dying multiverse right at the table."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Book spread"
+      },
+      {
+        "cap": "Bestiary"
+      },
+      {
+        "cap": "Adventures"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official page — The Merry Mushmen"
+      }
     ]
   }
 });
@@ -858,6 +1556,108 @@ registerSystem("blades", {
     ]
   }
 });
+registerSystem("brindlewood-bay", {
+  "groups": {
+    "default": { "key": "narrative", "order": 46 },
+    "family": { "key": "pbta-fitd", "order": 32 },
+    "genre": { "key": "horror", "order": 16 }
+  },
+  "name": "Brindlewood Bay",
+  "publisher": "The Gauntlet",
+  "dice": "2d6",
+  "players": "2–5",
+  "complexity": 2,
+  "free": false,
+  "edition": null,
+  "foundryStatus": "Community",
+  "heroImage": "https://image.nobleknight.com/2/jpg1500/24090740087h.jpg",
+  "playstyleTags": ["mystery", "narrative", "social"],
+  "settingTags": ["modern", "weird"],
+  "gallery": [
+    { "src": "https://netherbook.com/cdn/shop/files/brindlewood-bay-a-dark-cozy-mystery-7145627.webp?v=1765001473&width=1946" },
+    { "src": "https://netherbook.com/cdn/shop/files/brindlewood-bay-a-dark-cozy-mystery-9875193.webp?v=1765001473&width=1946" },
+    { "src": "https://www.gauntlet-rpg.com/uploads/7/7/8/1/77811662/editor/551319902.png?1733167270" }
+  ],
+  "resources": [
+    { "type": "link", "url": "https://www.gauntlet-rpg.com/brindlewood-bay.html", "fmt": "Web" },
+    { "type": "rules", "url": "https://www.drivethrurpg.com/en/product/410316/brindlewood-bay-kickstarter-edition", "fmt": "PDF/Print" },
+    { "type": "quickstart", "url": "https://www.gauntlet-rpg.com/uploads/7/7/8/1/77811662/brindlewood_bay_play_sheets.pdf", "fmt": "PDF" }
+  ],
+  "mechanics": [
+    { "icon": "dices" },
+    { "icon": "puzzle" },
+    { "icon": "venetian-mask" },
+    { "icon": "eye" }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://tasker.land/2025/10/07/review-brindlewood-bay/
+    {
+      "text": "Brindlewood Bay is a great game because it casts spells.",
+      "author": "Moreau Vazh, Taskerland"
+    },
+    // VERIFIED-AT: https://www.rollplusheart.co.uk/blog/brindlewood-bay
+    {
+      "text": "This means that even with the same mystery and same clues, two groups of Mavens might come up with an entirely different solution, which is a really neat feature of the game.",
+      "author": "Becca Watson, Roll Plus Heart"
+    }
+  ],
+  "ru": {
+    "tagShort": "Уютные детективы с ноткой космического ужаса",
+    "tagline": "«„Она написала убийство“ встречает Лавкрафта».",
+    "description": "В Brindlewood Bay вы играете за Мавенов-детективов, книжный клуб остроумных пожилых дам, которые раскрывают убийства в тихом городке Новой Англии, пока под чашками чая шевелится космический культ. Движок Carved from Brindlewood устроен так, что у загадок нет заранее заданного решения: вы собираете улики, сплетаете их в теорию и бросаете 2d6, чтобы проверить догадку. Уютное расследование и ползучий лавкрафтианский ужас в равной мере.",
+    "setting": "Приморская деревушка Бриндлвуд-Бей, современная Новая Англия: пастельные домики, церковные ярмарки выпечки и сплочённый книжный клуб. За открыточным покоем таится Тёмный Заговор, оккультный культ и космические сущности, которых Мавены раскрывают дело за делом, сессию за сессией.",
+    "vignette": "Мавены собираются за остывшим ромашковым чаем: надорванный билет на паром, пропавший большой палец смотрителя маяка и соль, рассыпанная у крыльца вдовы, всё указывает в одну сторону. Рут заявляет, что регент хора утопил дьякона, скрывая контрабанду. Они считают четыре объяснённые улики, вычитают Сложность загадки и бросают 2d6, выпадает 9. Верно, но преступник ускользает с уличающим сборником гимнов.",
+    "prep": "~15 мин",
+    "mechanics": [
+      { "title": "Теория (Theorize)", "text": "Набрав достаточно улик, Мавены совещаются, сплетают их в единое объяснение и бросают 2d6 плюс число объяснённых улик минус Сложность загадки. 10+ — точное попадание; 7-9 — верно, но с осложнением." },
+      { "title": "Улики без решения", "text": "У загадок есть яркие улики, но нет заранее назначенного убийцы. Смысл собирается за столом, поэтому одно и то же дело даёт разного преступника в каждой компании." },
+      { "title": "Ходы Мавена", "text": "Плейбуков нет. Каждый игрок — Мавен-детектив, которого выделяет горстка Ходов, названных в честь классических телесыщиков и задающих её манеру расследования." },
+      { "title": "Тёмный Заговор", "text": "Под чаем и вязанием шевелится космический культ. Пустотные улики и Ночные ходы медленно раскрывают лавкрафтианский заговор, от которого Мавенам не уйти." }
+    ],
+    "gallery": [
+      { "cap": "Твёрдая обложка Brindlewood Bay" },
+      { "cap": "Задняя обложка и детали издания" },
+      { "cap": "Обложечная иллюстрация: приморский уют и подступающий ужас" }
+    ],
+    "resources": [
+      { "name": "Страница издателя (The Gauntlet)" },
+      { "name": "Купить на DriveThruRPG" },
+      { "name": "Бесплатные листы для игры (PDF)" }
+    ],
+    "quotes": [
+      { "text": "Brindlewood Bay — отличная игра, потому что она творит волшебство." },
+      { "text": "Это значит, что даже с одной и той же загадкой и одними и теми же уликами две группы Мавенов могут прийти к совершенно разным решениям, и это по-настоящему приятная особенность игры." }
+    ]
+  },
+  "en": {
+    "tagShort": "Cozy murder mysteries with a cosmic-horror undertow",
+    "tagline": "\"Murder, She Wrote meets Lovecraft.\"",
+    "description": "Brindlewood Bay casts you as the Murder Mavens, a book club of sharp-witted old ladies who solve killings in a quaint New England town while a cosmic cult stirs beneath the clam chowder. Built on the Carved from Brindlewood engine, its mysteries have no predetermined solution: you gather clues, weave them into a theory, and roll 2d6 to see if you cracked it. Cozy sleuthing and creeping Lovecraftian dread, in equal measure.",
+    "setting": "The seaside village of Brindlewood Bay, present-day New England: pastel cottages, church bake sales, and a tight-knit mystery book club. Under the postcard calm lurks the Dark Conspiracy, an occult cult and cosmic entities the Mavens uncover case by case, session by session.",
+    "vignette": "The Mavens gather over lukewarm chamomile: the torn ferry ticket, the lighthouse-keeper's missing thumb, and the salt ringing the widow's porch all point one way. Ruth declares the choir director drowned the deacon to hide the smuggling. They tally four explained clues, subtract the mystery's Complexity, and roll 2d6, landing a 9. Correct, but the culprit slips away with the incriminating hymnal.",
+    "prep": "~15 min",
+    "mechanics": [
+      { "title": "Theorize", "text": "Once the Mavens have enough clues, they huddle, weave them into a single explanation, then roll 2d6 plus clues explained minus the mystery's Complexity. 10+ nails it; 7-9 works but at a cost." },
+      { "title": "Clues, No Solution", "text": "Mysteries ship with evocative clues but no predetermined culprit. Meaning is assembled at the table, so the same case yields a different killer for every group that plays it." },
+      { "title": "Maven Moves", "text": "There are no playbooks. Every player is a Murder Maven, personalized by a handful of Moves named for classic TV sleuths, each shaping how she investigates and acts." },
+      { "title": "The Dark Conspiracy", "text": "Beneath the tea and knitting a cosmic cult stirs. Void clues and Night moves slowly reveal a Lovecraftian conspiracy the Mavens can never fully escape." }
+    ],
+    "gallery": [
+      { "cap": "The Brindlewood Bay hardcover" },
+      { "cap": "Back cover and edition detail" },
+      { "cap": "Title art blending seaside charm and cosmic dread" }
+    ],
+    "resources": [
+      { "name": "Publisher page (The Gauntlet)" },
+      { "name": "Buy on DriveThruRPG" },
+      { "name": "Free play sheets (PDF)" }
+    ],
+    "quotes": [
+      { "text": "Brindlewood Bay is a great game because it casts spells." },
+      { "text": "This means that even with the same mystery and same clues, two groups of Mavens might come up with an entirely different solution, which is a really neat feature of the game." }
+    ]
+  }
+});
 registerSystem("cairn", {
   "groups": {
     "default": { "key": "osr", "order": 4 },
@@ -1072,7 +1872,7 @@ registerSystem("call-of-cthulhu", {
       "src": "https://www.tribality.com/wp-content/uploads/2019/04/richard-wright-cthulhu-museum1-1024x512.jpg"
     },
     {
-      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ92RstGeZr_fhYgkNO2aiZjI6j4p-kjq6okQ&s"
+      "src": "https://sessionzero.games/images/systems/call-of-cthulhu-g2.jpg"
     }
   ],
   "resources": [
@@ -1408,6 +2208,161 @@ registerSystem("castles-and-crusades", {
     ]
   }
 });
+registerSystem("city-of-mist", {
+  "groups": {
+    "default": { "key": "narrative", "order": 23.5 },
+    "family": { "key": "pbta-fitd", "order": 26 },
+    "genre": { "key": "noir", "order": 34 }
+  },
+  "name": "City of Mist",
+  "publisher": "Son of Oak Game Studio",
+  "dice": "2d6",
+  "players": "2–5",
+  "complexity": 2,
+  "free": true,
+  "foundryStatus": "Community",
+  "heroImage": "https://sonofoak.com/cdn/shop/files/MOCKUP-book-Core-Books-Player_s-Guide_1eeeba69-aa3c-45bb-9192-eb308407f400.png?v=1706050848",
+  "playstyleTags": [
+    "narrative",
+    "combat",
+    "social"
+  ],
+  "settingTags": ["urban-fantasy", "modern"],
+  "gallery": [
+    {
+      "src": "https://sonofoak.com/cdn/shop/products/Combo-Full-Sets-CoM.png?v=1762364603"
+    },
+    {
+      "src": "https://sonofoak.com/cdn/shop/products/Slipcase-Expansions-open-1.png?v=1719841351"
+    },
+    {
+      "src": "https://sonofoak.com/cdn/shop/files/The_Core_Set_-_Web_Square.png?v=1736160691"
+    }
+  ],
+  "resources": [
+    {
+      "type": "quickstart",
+      "url": "https://www.drivethrurpg.com/en/product/312680/city-of-mist-starter-kit",
+      "fmt": "PDF"
+    },
+    {
+      "type": "link",
+      "url": "https://cityofmist.co/",
+      "fmt": "Web"
+    },
+    {
+      "type": "link",
+      "url": "https://cityofmist.co/city-of-mist-free-quickstart",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "sparkles"
+    },
+    {
+      "icon": "target"
+    },
+    {
+      "icon": "book-open"
+    },
+    {
+      "icon": "scroll"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.tabletopgaming.co.uk/reviews/city-of-mist-rpg-review/
+    {
+      "text": "Style and drama ooze from every page of this beautiful book.",
+      "author": "Richard Jansen-Parkes, Tabletop Gaming"
+    },
+    // VERIFIED-AT: https://www.tabletopgaming.co.uk/reviews/city-of-mist-rpg-review/
+    {
+      "text": "It takes a little more effort to crack than most story-driven games, but when things click it offers something truly special.",
+      "author": "Richard Jansen-Parkes, Tabletop Gaming"
+    }
+  ],
+  "ru": {
+    "tagShort": "2d6 — noir-детектив с мифологическими силами",
+    "tagline": "«Мифические силы пробудились в тебе. Город пропитан туманом. Кто-то должен открыть глаза».",
+    "description": "City of Mist — настольная RPG (2017) от Son of Oak Game Studio (Ориан Дасет). Noir-детектив в современном городе, где обычные люди пробуждают силы мифов. Механики созданы как «некоммерческий ответ D&D»: всё для совместного повествования. Система тегов: каждый тег — короткая фраза, описывающая аспект персонажа. 2d6 с модификатором (+/-): 10+ — успех, 7–9 — успех с осложнением, 6- — провал.",
+    "setting": "Современный город (анонимный мегаполис), пропитанный мистическим туманом. За обычными дверями скрываются мифические сущности. Обычные люди — детективы, журналисты, уличные бойцы — пробуждают силы, связанные с мифами (греческими, скандинавскими, славянскими, японскими). Два типа персонажей: Mythos (мифические силы) и Logos (человеческая жизнь).",
+    "vignette": "ГМ: «Ты в квартире убитого. Полиция уехала. Ты чувствуешь что-то в стенах — туман просачивается.» Игрок: «Использую свой тег 'Следопыт мифов' чтобы найти невидимые знаки.» Бросает 2d6 +2 (Mythos): 9. Успех с осложнением: «Ты находишь знаки... но они ведут вниз, в канализацию, и ты чувствуешь, что кто-то за тобой наблюдает.»",
+    "prep": "~15 мин",
+    "mechanics": [
+      {
+        "title": "Теги (Tag System)",
+        "text": "Каждый тег — короткая фраза («Законный страж», «Гнев океана», «Мои кулаки»). Броски 2d6 + модификатор тега. Теги можно создавать, использовать и терять."
+      },
+      {
+        "title": "Mythos vs Logos",
+        "text": "У каждого персонажа два аспекта: Mythos (мифические силы) и Logos (человеческая жизнь). Усиление одного ослабляет другой — баланс напряжения."
+      },
+      {
+        "title": "Классы тегов",
+        "text": "Power Tags (силы), Danger Tags (угрозы), Weakness Tags (слабости), Status Tags (статусы). Каждый тип — свои правила."
+      },
+      {
+        "title": "Мифический детектив",
+        "text": "Игра строится на расследованиях: что случилось, кто виноват, какова мифическая угроза. ГМ следует принципам noir-расследования."
+      }
+    ],
+    "gallery": [
+      { "cap": "City of Mist Player's Guide" },
+      { "cap": "City of Mist Starter Kit" },
+      { "cap": "City of Mist: Cases & Mysteries" }
+    ],
+    "resources": [
+      { "name": "Бесплатный Quickstart (PDF)" },
+      { "name": "Официальный сайт" },
+      { "name": "Бесплатный квикстарт (веб)" }
+    ],
+    "quotes": [
+      { "text": "Стиль и драма сочатся с каждой страницы этой красивой книги." },
+      { "text": "Её сложнее раскусить, чем большинство сюжетных игр, но когда всё складывается — она даёт нечто по-настоящему особенное." }
+    ]
+  },
+  "en": {
+    "tagShort": "2d6 — noir detective with mythic powers",
+    "tagline": "\"Mythic powers awakened in you. The city is steeped in mist. Someone must open their eyes.\"",
+    "description": "City of Mist is a tabletop RPG (2017) by Son of Oak Game Studio (Orion Dassler). A noir detective game in a modern city where ordinary people awaken the powers of myths. The mechanics are built as 'a non-commercial answer to D&D': everything serves co-narrative storytelling. Tag system: every tag is a short phrase describing a character aspect. 2d6 with modifier (+/-): 10+ — full success, 7–9 — success with complication, 6- — fail.",
+    "setting": "A modern anonymous city steeped in mist. Behind ordinary doors hide mythic entities. Ordinary people — detectives, journalists, street fighters — awaken powers connected to myths (Greek, Nordic, Slavic, Japanese). Two character aspects: Mythos (mythic powers) and Logos (human life).",
+    "vignette": "GM: 'You're in the victim's apartment. Police left. You feel something in the walls — mist is seeping in.' Player: 'I use my Trail Seeker tag to find invisible signs.' Rolls 2d6+2 (Mythos): 9. Success with complication: 'You find the signs... but they lead down, into the sewers, and you feel someone watching you.'",
+    "prep": "~15 min",
+    "mechanics": [
+      {
+        "title": "Tag System",
+        "text": "Every tag is a short phrase ('Guardian of Law', 'Wrath of the Ocean', 'My Fists'). Rolls 2d6 + tag modifier. Tags can be created, used, and lost."
+      },
+      {
+        "title": "Mythos vs Logos",
+        "text": "Every character has two aspects: Mythos (mythic powers) and Logos (human life). Strengthening one weakens the other — tension balance."
+      },
+      {
+        "title": "Tag Types",
+        "text": "Power Tags, Danger Tags, Weakness Tags, Status Tags. Each type — its own rules."
+      },
+      {
+        "title": "Mythic Detective",
+        "text": "The game revolves around investigations: what happened, who's to blame, what the mythic threat is. The GM follows noir investigation principles."
+      }
+    ],
+    "gallery": [
+      { "cap": "City of Mist Player's Guide" },
+      { "cap": "City of Mist Starter Kit" },
+      { "cap": "City of Mist: Cases & Mysteries" }
+    ],
+    "resources": [
+      { "name": "Free Quickstart (PDF)" },
+      { "name": "Official website" },
+      { "name": "Free quickstart (web)" }
+    ],
+    "quotes": [
+      { "text": "Style and drama ooze from every page of this beautiful book." },
+      { "text": "It takes a little more effort to crack than most story-driven games, but when things click it offers something truly special." }
+    ]
+  }
+});
 registerSystem("coriolis", {
   "groups": {
     "default": { "key": "fl", "order": 8 },
@@ -1626,6 +2581,149 @@ registerSystem("coriolis", {
     ]
   }
 });
+registerSystem("cortex-prime", {
+  "groups": {
+    "default": { "key": "narrative", "order": 35 },
+    "family": { "key": "standalone", "order": 43 },
+    "genre": { "key": "adventure", "order": 25 }
+  },
+  "name": "Cortex Prime",
+  "publisher": "Dire Wolf Digital",
+  "dice": "Пул кубиков d4–d12",
+  "players": "3–6",
+  "complexity": 3,
+  "foundryStatus": "Community",
+  "heroImage": "https://shop.direwolfdigital.com/cdn/shop/products/store_cortex_bookcover_1200x.png",
+  "playstyleTags": [
+    "narrative",
+    "social",
+    "combat"
+  ],
+  "settingTags": [],
+  "gallery": [
+    {
+      "src": "https://shop.direwolfdigital.com/cdn/shop/products/store_cortex_inside_1200x.png"
+    },
+    {
+      "src": "https://prod-images.cortexrpg.com/cms/media/temp/intro-bg.png"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://www.cortexrpg.com/",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "blocks"
+    },
+    {
+      "icon": "coins"
+    },
+    {
+      "icon": "shapes"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://gnomestew.com/cortex-prime-review/
+    {
+      "text": "This book is a joy to look at, and that makes it a joy to learn from.",
+      "author": "Jared Rascher, Gnome Stew"
+    },
+    // VERIFIED-AT: https://cannibalhalflinggaming.com/2020/10/21/cortex-prime-review/
+    {
+      "text": "What Cortex Prime does is take that system and turn it into an immensely powerful toolbox, laying all the switches and dials bare in a way that GMs can actually use.",
+      "author": "Aaron Marks, Cannibal Halfling Gaming"
+    }
+  ],
+  "ru": {
+    "tagShort": "Модульный универсальный движок из кубиков",
+    "tagline": "«Собери свою игру: любой жанр — из одного набора деталей».",
+    "description": "Cortex Prime — универсальный конструктор ролевых систем Кэма Бэнкса (изданный Dire Wolf Digital). Не готовая игра, а набор «модов»: берёшь нужные детали — Отличия, Активы, Осложнения, Очки сюжета — и собираешь механику под свой жанр и стол. На движке Cortex выходили Firefly, Marvel Heroic, Smallville. Дайспул d4–d12 вместо фиксированных статов.",
+    "setting": "Сеттинг-агностик по определению: Cortex ничего не навязывает. Хочешь нуар, супергероику, космооперу или семейную драму — собираешь под это свою версию правил. Сила системы — в том, что она подстраивается под тон истории, а не наоборот.",
+    "vignette": "Героиня взламывает сейф под давлением. Ведущий и игрок собирают пул: кубик Атрибута (d8), кубик Навыка (d6), кубик Отличия (d8) и кубик Осложнения «Тревога» (d6, за него ведущий получит Очко сюжета). Бросок. Берёшь два кубика в сумму против сложности и один — как Effect Die, размер успеха. 8 против 7 — сейф открыт, но сигнализация уже воет.",
+    "prep": "~20 мин",
+    "mechanics": [
+      {
+        "title": "Пулы кубиков d4–d12",
+        "text": "Черта — это кубик (чем крупнее, тем лучше). Действие собирает пул из подходящих черт; берёшь два в сумму против сложности и один как Effect Die — он задаёт масштаб успеха."
+      },
+      {
+        "title": "Модульность («моды»)",
+        "text": "Cortex — не одна игра, а набор опциональных модулей: Отличия, Активы, Осложнения, Стресс, Роли. Комбинируешь нужные — получаешь систему ровно под свой жанр."
+      },
+      {
+        "title": "Очки сюжета",
+        "text": "Метавалюта: тратишь, чтобы добавить кубик в пул, оставить лишний, активировать спецэффект. Осложнения приносят Очки сюжета — риск конвертируется в ресурс."
+      },
+      {
+        "title": "Один движок — любой мир",
+        "text": "20+ лет и десятки лицензий (Firefly, Marvel, Smallville) на одном шасси. Осваиваешь ядро раз — и запускаешь на нём любой жанр без новой системы."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Интерьер книги"
+      },
+      {
+        "cap": "Арт"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт — cortexrpg.com"
+      }
+    ],
+    "quotes": [
+      { "text": "На эту книгу приятно смотреть — и потому по ней приятно учиться." },
+      { "text": "Cortex Prime берёт систему и превращает её в невероятно мощный набор инструментов, выкладывая все рычажки и переключатели так, что ведущие реально могут ими пользоваться." }
+    ]
+  },
+  "en": {
+    "tagShort": "A modular, universal dice-pool engine",
+    "tagline": "\"Build your game: any genre, from one box of parts.\"",
+    "description": "Cortex Prime is Cam Banks's universal RPG construction kit (published by Dire Wolf Digital). Not a finished game but a set of 'mods': take the parts you want — Distinctions, Assets, Complications, Plot Points — and assemble mechanics to fit your genre and table. The Cortex engine powered Firefly, Marvel Heroic, and Smallville. Dice pools of d4–d12 instead of fixed stats.",
+    "setting": "Setting-agnostic by design: Cortex imposes nothing. Want noir, superheroes, space opera, or family drama — you build your own version of the rules for it. The system's strength is that it bends to the tone of the story, not the other way around.",
+    "vignette": "The hero cracks a safe under pressure. GM and player build a pool: an Attribute die (d8), a Skill die (d6), a Distinction die (d8), and a Complication 'Anxiety' die (d6, for which the GM earns a Plot Point). Roll. Take two dice for the total against the difficulty and one as the Effect Die, the size of success. An 8 beats 7 — the safe opens, but the alarm is already wailing.",
+    "prep": "~20 min",
+    "mechanics": [
+      {
+        "title": "Dice pools d4–d12",
+        "text": "A trait is a die (bigger is better). An action gathers a pool of relevant traits; you take two for the total against the difficulty and one as the Effect Die — which sets the scale of success."
+      },
+      {
+        "title": "Modularity ('mods')",
+        "text": "Cortex isn't one game but a set of optional modules: Distinctions, Assets, Complications, Stress, Roles. Combine the ones you want and you get a system built exactly for your genre."
+      },
+      {
+        "title": "Plot Points",
+        "text": "A meta-currency: spend to add a die to a pool, keep an extra one, or activate a special effect. Complications earn Plot Points — risk converts into a resource."
+      },
+      {
+        "title": "One engine, any world",
+        "text": "20+ years and dozens of licenses (Firefly, Marvel, Smallville) on a single chassis. Learn the core once and run any genre on it without a new system."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Book interior"
+      },
+      {
+        "cap": "Art"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official site — cortexrpg.com"
+      }
+    ]
+  }
+});
 registerSystem("cy-borg", {
   "groups": {
     "default": { "key": "osr", "order": 6 },
@@ -1792,6 +2890,185 @@ registerSystem("cy-borg", {
       {
         "name": "Character sheets"
       }
+    ]
+  }
+});
+registerSystem("cyberpunk-red", {
+  "groups": {
+    "default": { "key": "tactical", "order": 10 },
+    "family": { "key": "standalone", "order": 29 },
+    "genre": { "key": "sci-fi", "order": 7.5 }
+  },
+  "name": "Cyberpunk RED",
+  "publisher": "R. Talsorian Games",
+  "dice": "d10",
+  "players": "3–6",
+  "complexity": 3,
+  "free": false,
+  "foundryStatus": "Community",
+  "heroImage": "https://d1vzi28wh99zvq.cloudfront.net/images/13/333585.jpg",
+  "playstyleTags": [
+    "combat",
+    "narrative",
+    "explore"
+  ],
+  "settingTags": ["cyberpunk"],
+  "gallery": [
+    {
+      "src": "https://d1vzi28wh99zvq.cloudfront.net/images/13/409912.jpg"
+    },
+    {
+      "src": "https://d1vzi28wh99zvq.cloudfront.net/images/13/279014.jpg"
+    },
+    {
+      "src": "https://d1vzi28wh99zvq.cloudfront.net/images/13/333585.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://rtalsoriangames.com/cyberpunk/",
+      "fmt": "Web"
+    },
+    {
+      "type": "link",
+      "url": "https://talsorianstore.com/products/cyberpunk-red",
+      "fmt": "Web"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://www.drivethrurpg.com/en/product/409912/cyberpunk-red-easy-mode",
+      "fmt": "PDF"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "swords"
+    },
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "book-open"
+    },
+    {
+      "icon": "scroll"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.polygon.com/reviews/2020/11/13/21561586/cyberpunk-red-rpg-review/
+    {
+      "text": "Cyberpunk Red pushes its own alternate future timeline forward far enough to remain different and exciting when compared to our own, while remaining a funhouse mirror image of the same troubled world we still live in.",
+      "author": "Charlie Hall, Polygon"
+    },
+    // VERIFIED-AT: https://www.dicebreaker.com/games/cyberpunk-red/review/cyberpunk-red-rpg-review
+    {
+      "text": "The first impression you get of Cyberpunk Red is that it's a game of wild contradictions. From its rules to its setting, everything leaps between extremes of simplicity and complexity, campy fun and corporate brutality.",
+      "author": "Richard Jansen-Parkes, Dicebreaker"
+    }
+  ],
+  "ru": {
+    "tagShort": "Киберпанк на d10",
+    "tagline": "«Ночь, город, корпорации и красное небо после ядерного пожара».",
+    "description": "Cyberpunk RED — настольная RPG в жанре киберпанка от R. Talsorian Games (2020), четвёртое издание линейки Interlock. Действие происходит в 2045 году, после 4-й Корпоративной войны: небо Найт-Сити окрашено в красный из-за ядерного fallout, а игроки — эджраннеры, выживающие между корпорациями и улицей. Система d10 с Lifepath-созданием персонажей и боевой подсистемой Friday Night Firefight.",
+    "setting": "Найт-Сити, 2045 — гибрид Лос-Анджелеса и Сан-Франциско в постъядерном будущем. Корпорации контролируют всё, но у улицы свои правила. Фэшн, киберимпланты и стил — неотъемлемая часть жизни (и смерти).",
+    "vignette": "Раненый эджраннер лежит в переулке. Киберглаз мигает красным: системная ошибка. Над ним — силуэт нано-хирурга с биочемоданом. «Стоимость?» — спрашивает бандит. «Жизнь и 5000 creds», — отвечает хирург. Четыре кубика d10 в руке. Difficulty 14. Бросок... 7+3+1+0 = 11. Провал. Хирург пожимает плечами: «Попробуй в следующей жизни».",
+    "prep": "~15 мин",
+    "mechanics": [
+      {
+        "title": "Система Interlock (d10)",
+        "text": "Бросок 1d10 + Атрибут + Навык против Difficulty Value. Простая, но жёсткая математика: криты на двойных, фалы на двойных единицах."
+      },
+      {
+        "title": "Friday Night Firefight",
+        "text": "Жестокая боевая система: оружие реально, броня хрупкая, раны смертельны. Один выстрел может убить. Бой — это не развлечение, а вопрос выживания."
+      },
+      {
+        "title": "Lifepath",
+        "text": "Создание персонажа через таблицы: семья, детство, подростковый возраст, первая работа, события. Каждый персонаж — готовая история."
+      },
+      {
+        "title": "Киберимпланты",
+        "text": "Кибернетика усиливает тело, но добавляет Humanity Loss. Слишком много металла — и ты перестаёшь быть человеком."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Core Rulebook (2020)"
+      },
+      {
+        "cap": "Easy Mode — бесплатный квикстарт"
+      },
+      {
+        "cap": "Jumpstart Kit"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт — R. Talsorian Games"
+      },
+      {
+        "name": "Магазин — купить Core Rulebook"
+      },
+      {
+        "name": "Easy Mode (бесплатный квикстарт PDF)"
+      }
+    ],
+    "quotes": [
+      { "text": "Cyberpunk Red продвигает свою альтернативную временную шкалу достаточно далеко, чтобы оставаться другим и захватывающим по сравнению с нашим миром, оставаясь при этом отражением того же troubled мира, в котором мы всё ещё живём." },
+      { "text": "Первое впечатление от Cyberpunk Red — это игра диких противоречий. От правил до сеттинга всё прыгает между крайностями простоты и сложности,campy fun и корпоративной бруталностью." }
+    ]
+  },
+  "en": {
+    "tagShort": "Cyberpunk d10 — Night City 2045",
+    "tagline": "\"Night City, 2045 — red skies, corporate wars, and edgerunners on the edge.\"",
+    "description": "Cyberpunk RED is a cyberpunk tabletop RPG from R. Talsorian Games (2020), the fourth edition of the Interlock system. Set in 2045, after the 4th Corporate War — Night City's sky is red from nuclear fallout, and players are edgerunners surviving between corporations and the streets. d10 system with Lifepath character creation and the brutal Friday Night Firefight combat subsystem.",
+    "setting": "Night City, 2045 — a Los Angeles/San Francisco hybrid in a post-nuclear future. Corporations control everything, but the street has its own rules. Fashion, cyberware, and style aren't optional — they're survival.",
+    "vignette": "A wounded edgerunner lies in an alley. Cybereye blinks red: system error. Above him, a nano-surgeon with a biocase. 'The price?' asks the gonk. 'Your life and 5000 creds,' says the surgeon. Four d10s in hand. Difficulty 14. Roll... 7+3+1+0 = 11. Fail. The surgeon shrugs: 'Try in your next life.'",
+    "prep": "~15 min",
+    "mechanics": [
+      {
+        "title": "Interlock System (d10)",
+        "text": "Roll 1d10 + Attribute + Skill vs Difficulty Value. Simple but harsh math: crits on doubles, fumbles on double ones."
+      },
+      {
+        "title": "Friday Night Firefight",
+        "text": "Brutal combat system: weapons are real, armor is fragile, wounds are lethal. One shot can kill. Combat isn't entertainment — it's survival."
+      },
+      {
+        "title": "Lifepath",
+        "text": "Character creation through tables: family, childhood, teenage years, first job, events. Every character comes with a built-in story."
+      },
+      {
+        "title": "Cyberware",
+        "text": "Cybernetics enhance the body but add Humanity Loss. Too much metal and you stop being human."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Core Rulebook (2020)"
+      },
+      {
+        "cap": "Easy Mode — free quickstart"
+      },
+      {
+        "cap": "Jumpstart Kit"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official site — R. Talsorian Games"
+      },
+      {
+        "name": "Store — buy Core Rulebook"
+      },
+      {
+        "name": "Easy Mode (free quickstart PDF)"
+      }
+    ],
+    "quotes": [
+      { "text": "Cyberpunk Red pushes its own alternate future timeline forward far enough to remain different and exciting when compared to our own, while remaining a funhouse mirror image of the same troubled world we still live in." },
+      { "text": "The first impression you get of Cyberpunk Red is that it's a game of wild contradictions. From its rules to its setting, everything leaps between extremes of simplicity and complexity, campy fun and corporate brutality." }
     ]
   }
 });
@@ -1982,6 +3259,111 @@ registerSystem("daggerheart", {
       {
         "name": "Quickstart adventure"
       }
+    ]
+  }
+});
+registerSystem("deadlands", {
+  "groups": {
+    "default": { "key": "tactical", "order": 38 },
+    "family": { "key": "standalone", "order": 53 },
+    "genre": { "key": "horror", "order": 17 }
+  },
+  "name": "Deadlands: The Weird West",
+  "publisher": "Pinnacle Entertainment Group",
+  "dice": "trait dice (d4–d12) + exploding Wild Die",
+  "players": "3–5",
+  "complexity": 3,
+  "free": false,
+  "edition": "Weird West (2021, SWADE)",
+  "foundryStatus": "Official",
+  "heroImage": "https://image.nobleknight.com/s/jpg1500/s2p10227.jpg",
+  "playstyleTags": ["action", "horror", "combat"],
+  "settingTags": ["weird", "historical"],
+  "gallery": [
+    { "src": "https://image.nobleknight.com/s/jpg1500/s2p10220.jpg" },
+    { "src": "https://image.nobleknight.com/w/jpg1500/wwdiceplastic.jpg" },
+    { "src": "https://image.nobleknight.com/s/jpg1500/s2p10235.jpg" }
+  ],
+  "resources": [
+    { "type": "link", "url": "https://peginc.com/savage-settings/deadlands/", "fmt": "Web" },
+    { "type": "link", "url": "https://foundryvtt.com/packages/deadlands-core-rules", "fmt": "VTT" },
+    { "type": "quickstart", "url": "https://peginc.com/store/deadlands-the-weird-west-blood-on-the-range-savage-worlds-test-drive-swade/", "fmt": "PDF" },
+    { "type": "link", "url": "https://www.drivethrurpg.com/en/product/319036/deadlands-the-weird-west", "fmt": "Web" }
+  ],
+  "mechanics": [
+    { "icon": "dices" },
+    { "icon": "spade" },
+    { "icon": "coins" },
+    { "icon": "skull" }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.grimdarkmagazine.com/review-deadlands-the-weird-west/
+    {
+      "text": "The Savage World rules are fast and entertaining with a focus on replicating cinematic Wild West action pieces.",
+      "author": "C.T. Phipps, Grimdark Magazine"
+    },
+    // VERIFIED-AT: https://www.d20radio.com/main/rpg-view-copy-deadlands-the-weird-west/
+    {
+      "text": "SWAdE feels designed for this setting and this setting feels like it inspired SWAdE, it's that good of a combination.",
+      "author": "Egg Embry, d20 Radio"
+    }
+  ],
+  "ru": {
+    "tagShort": "Вестерн-хоррор на движке Savage Worlds",
+    "tagline": "«Собери отряд — на Диком Западе стало жутко».",
+    "description": "Deadlands: The Weird West — вестерн-хоррор от Pinnacle на движке Savage Worlds Adventure Edition. В альтернативном 1884 году отряд стрелков, хакстеров-безумных учёных и благословлённых проповедников встречает монстров, рождённых из страха. Персонажи бросают трейт-кубики от d4 до d12 вместе со взрывным Wild Die, тянут игральные карты для инициативы и тратят Бенни — классические Фишки Судьбы, — чтобы обмануть смерть. Игра впервые вышла в 1996 году и вернулась переписанной и упрощённой ради быстрого кинематографичного экшена.",
+    "setting": "Альтернативный фронтир 1884 года, где событие под названием Расплата подняло мёртвых, сделало магию настоящей и позволило древним Reckoners питаться ужасом. Отряд исследует города-призраки на гост-роке, проклятые железные дороги и пыльные могилы, охотясь на тварей, что прячутся за байками Дикого Запада.",
+    "vignette": "Хакстеру нужно скинуть бандита с крыши салуна колдовством. Она тянет валета пик и ходит раньше всех. Стрельба d8 плюс Wild Die d6: на d8 выпадает 8 и взрывается — 8+5 = 13, это Raise. Нежить-стрелок всё ещё на ногах, поэтому она бросает на стол красный Бенни — свою Фишку Судьбы, — чтобы впитать ответный выстрел и перебросить на добивание.",
+    "prep": "~30 мин",
+    "mechanics": [
+      { "title": "Трейт-кубики и Wild Die", "text": "Каждый трейт — кубик от d4 до d12. Wild Card бросает его вместе с d6 Wild Die и оставляет больший; оба взрываются, давая переброс каждый раз при выпадении максимума." },
+      { "title": "Инициатива по картам", "text": "Каждый участник боя тянет карту из покерной колоды в начале раунда. Старшая карта ходит первой, а вытянутый джокер даёт бонус и право ходить когда угодно." },
+      { "title": "Бенни и Фишки Судьбы", "text": "Бенни — это классические Фишки Судьбы Deadlands, мета-валюта. Трать их на перебросы, чтобы впитать Раны или устоять перед страхом, пока Дикий Запад пытается тебя убить." },
+      { "title": "Дикий Запад стал жутким", "text": "Хоррор поверх фронтира: Расплата подняла мёртвых, хакстеры выторговывают магию у демонов, а ужас кормит Reckoners, что плетут интриги за завесой." }
+    ],
+    "gallery": [
+      { "cap": "Корбук Weird West" },
+      { "cap": "Набор кубиков Weird West" },
+      { "cap": "Пешки-фигурки Weird West" }
+    ],
+    "resources": [
+      { "name": "Официальная страница сеттинга — Pinnacle" },
+      { "name": "Foundry VTT — официальный модуль" },
+      { "name": "Blood on the Range — бесплатный Test Drive (PDF)" },
+      { "name": "DriveThruRPG — купить книгу" }
+    ],
+    "quotes": [
+      { "text": "Правила Savage Worlds быстрые и увлекательные, с упором на воспроизведение кинематографичных экшен-сцен Дикого Запада." },
+      { "text": "SWAdE словно создан для этого сеттинга, а сеттинг словно вдохновил SWAdE — настолько хорошо они сочетаются." }
+    ]
+  },
+  "en": {
+    "tagShort": "Weird West horror on Savage Worlds",
+    "tagline": "\"Gather your posse — the West just got weird.\"",
+    "description": "Deadlands: The Weird West is Pinnacle's horror-western built on Savage Worlds Adventure Edition. In an alternate 1884, a posse of gunslingers, mad-science hucksters, and blessed preachers face monsters born of fear. Characters roll trait dice from d4 to d12 alongside an exploding Wild Die, draw playing cards for initiative, and spend Bennies — the classic Fate Chips — to cheat death. First published in 1996, it returns rewritten and streamlined for fast, cinematic Weird West action.",
+    "setting": "An alternate 1884 frontier where an event called the Reckoning raised the dead, turned magic real, and let ancient Reckoners feed on terror. A posse explores ghost-rock boomtowns, haunted rail lines, and dusty graves, hunting the horrors that hide behind the Weird West's tall tales.",
+    "vignette": "The huckster needs a bandit off the saloon roof. She draws the Jack of Spades for initiative and acts early. Shooting d8 plus a Wild Die d6: the d8 comes up 8 and explodes to 8+5 = 13, a Raise. The undead gunhand still stands, so she tosses a red Bennie — her Fate Chip — to soak the return fire and reroll for the kill.",
+    "prep": "~30 min",
+    "mechanics": [
+      { "title": "Trait Dice & Wild Die", "text": "Each trait is a die from d4 to d12. Wild Cards roll it beside a d6 Wild Die and keep the higher; both explode, rolling again whenever they land on a maximum result." },
+      { "title": "Card-Draw Initiative", "text": "Every combatant draws from a poker deck each round. The high card acts first, and a drawn Joker grants a bonus plus the freedom to act whenever you choose." },
+      { "title": "Bennies & Fate Chips", "text": "Bennies, the classic Deadlands Fate Chips, are metagame currency. Spend them to reroll, soak Wounds, or resist fear as the Weird West keeps trying to kill you." },
+      { "title": "The Weird West", "text": "A horror overlay on the frontier: the Reckoning raised the dead, hucksters bargain with demons for their magic, and terror feeds the Reckoners scheming behind the veil." }
+    ],
+    "gallery": [
+      { "cap": "Weird West core rulebook" },
+      { "cap": "Weird West dice set" },
+      { "cap": "Weird West pawns" }
+    ],
+    "resources": [
+      { "name": "Official setting page — Pinnacle" },
+      { "name": "Foundry VTT — official module" },
+      { "name": "Blood on the Range — free Test Drive (PDF)" },
+      { "name": "DriveThruRPG — buy the book" }
+    ],
+    "quotes": [
+      { "text": "The Savage World rules are fast and entertaining with a focus on replicating cinematic Wild West action pieces." },
+      { "text": "SWAdE feels designed for this setting and this setting feels like it inspired SWAdE, it's that good of a combination." }
     ]
   }
 });
@@ -2323,6 +3705,341 @@ registerSystem("delta-green", {
       {
         "name": "Agent Dossiers"
       }
+    ]
+  }
+});
+registerSystem("dnd-5e", {
+  "groups": {
+    "default": { "key": "tactical", "order": 7 },
+    "family": { "key": "standalone", "order": 26 },
+    "genre": { "key": "tactical", "order": 5 }
+  },
+  "name": "Dungeons & Dragons 5e",
+  "publisher": "Wizards of the Coast",
+  "dice": "d20 + modifiers",
+  "players": "3–7",
+  "complexity": 3,
+  "free": true,
+  "foundryStatus": "Official",
+  "heroImage": "https://static.wikia.nocookie.net/dungeonsdragons/images/2/27/PHB5e.jpg/revision/latest?cb=20191127044344",
+  "playstyleTags": [
+    "combat",
+    "explore",
+    "narrative",
+    "tactical"
+  ],
+  "settingTags": ["fantasy"],
+  "gallery": [
+    {
+      "src": "https://static.wikia.nocookie.net/dungeonsdragons/images/2/27/PHB5e.jpg/revision/latest?cb=20191127044344"
+    },
+    {
+      "src": "https://wrathofzombie.wordpress.com/wp-content/uploads/2014/08/phb-cover-art.jpg"
+    },
+    {
+      "src": "https://cdn.vox-cdn.com/thumbor/JkiyvfbW11Txi9UgK3_cZlNEaPo=/0x0:5433x3336/1920x0/filters:focal(0x0:5433x3336):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/25448127/0_DnD_PHB_ALT_Cvr_Full_Cvr.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://www.dndbeyond.com/srd",
+      "fmt": "Web"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://www.dndbeyond.com/sources/basic-rules",
+      "fmt": "Web"
+    },
+    {
+      "type": "link",
+      "url": "https://www.dnd.wizards.com/products/tabletop-games/rpg-products/rpg_playershandbook",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "swords"
+    },
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "book-open"
+    },
+    {
+      "icon": "scroll"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.rpg.net/reviews/archive/16/16138.phtml
+    {
+      "text": "D&D 5e is an extremely well put together game. It makes use of some very elegant and simple mechanics, and best of all, it is recognisably 'Dungeons and Dragons'.",
+      "author": "M. T. Black, RPGnet"
+    },
+    // VERIFIED-AT: https://www.rockpapershotgun.com/cardboard-children-dungeons-dragons-fifth-edition
+    {
+      "text": "This edition of D&D is an arm round your shoulder, a word in your ear, a warm invitation to the world of role-playing. The rules, covered in the Player's Handbook, are dealt with in a handful of pages.",
+      "author": "Robert Florence, Rock Paper Shotgun"
+    }
+  ],
+  "ru": {
+    "tagShort": "Классическая d20-система",
+    "tagline": "«Ролевые игры для каждого — мечта, книга и дракон».",
+    "description": "Dungeons & Dragons 5th Edition — пятое издание самой популярной настольной ролевой игры в мире, вышедшее в 2014 году. d20-система с advantage/disadvantage, 12 классов, 13 рас, сотни заклинаний и монстров. SRD доступен бесплатно под Creative Commons. Игра, вернувшая RPG в массовую культуру благодаря Critical Role, Stranger Things и Baldur's Gate 3.",
+    "setting": "Средневековое фэнтези с бесконечными вариациями: Forgotten Realms, Dragonlance, Eberron, Ravenloft, Spelljammer, Planescape. Мир, где эльфы, дварфы и тифлинги делят стол с людьми, а драконы — не всегда враги.",
+    "vignette": "Гоблин-вождь орёт команду, но Лира-волшебница уже шепчет заклинание. Огонь озаряет пещеру — advantage на бросок! Боец Торин рвётся вперёд, а плут Кэй подкрадывается сзади. Дракон зашевелился. Инициатива решает, кто первым окажется перед его клыками.",
+    "prep": "~15 мин",
+    "mechanics": [
+      {
+        "title": "Advantage / Disadvantage",
+        "text": "Вместо десятов бонусов и штрафов — один простой принцип: бросай два d20 и бери лучший (advantage) или худший (disadvantage). Элегантно и интуитивно."
+      },
+      {
+        "title": "Bounded Accuracy",
+        "text": "Модификаторы растут медленно, а DC остаются стабильными. Новичок-гоблин по-прежнему опасен на 15-м уровне. Баланс без numerical arms race."
+      },
+      {
+        "title": "Классы и подклассы",
+        "text": "12 классов, каждый с 3–4 подклассами. Воин, воровка, паладин, варлок — каждый уровень приносит новые способности, а не просто +1 к характеристикам."
+      },
+      {
+        "title": "Short & Long Rest",
+        "text": "Короткий отдых (1 час) восстанавливает хиты и использованные способности. Длинный отдых (8 часов) — полное восстановление. Система ресурсов, а не «сражение до смерти»."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Player's Handbook (2014)"
+      },
+      {
+        "cap": "Обложка — арт Тайлера Джейкобсона"
+      },
+      {
+        "cap": "Альтернативная обложка (2024)"
+      }
+    ],
+    "resources": [
+      {
+        "name": "SRD — System Reference Document"
+      },
+      {
+        "name": "Basic Rules (бесплатно)"
+      },
+      {
+        "name": "Официальный сайт — Wizards of the Coast"
+      }
+    ],
+    "quotes": [
+      { "text": "D&D 5e — невероятно хорошо собранная игра. Она использует элегантные и простые механики, и, что важнее всего, она безусловно похожа на «Подземелья и Драконов»." },
+      { "text": "Это издание D&D — дружеское пожатие плеч, слово на ухо, тёплое приглашение в мир ролевых игр. Правила умещаются в десятках страниц." }
+    ]
+  },
+  "en": {
+    "tagShort": "The world's most popular d20 RPG",
+    "tagline": "\"The game that brought tabletop RPGs back to the mainstream.\"",
+    "description": "Dungeons & Dragons 5th Edition is the fifth and most popular edition of the world's first tabletop roleplaying game, released in 2014. A d20 system with the elegant advantage/disadvantage mechanic, 12 classes, 13 ancestries, hundreds of spells and monsters. The SRD is free under Creative Commons. The game that brought RPGs back into pop culture through Critical Role, Stranger Things, and Baldur's Gate 3.",
+    "setting": "Medieval fantasy with endless variations: Forgotten Realms, Dragonlance, Eberron, Ravenloft, Spelljammer, Planescape. A world where elves, dwarves, and tieflings share tables with humans, and dragons aren't always enemies.",
+    "vignette": "The goblin chief barks orders, but Lyra the wizard is already whispering the incantation. Fire illuminates the cave — advantage on the roll! Fighter Thorin surges forward while the rogue Cay creeps up behind. The dragon stirs. Initiative decides who faces its fangs first.",
+    "prep": "~15 min",
+    "mechanics": [
+      {
+        "title": "Advantage / Disadvantage",
+        "text": "Instead of pages of bonuses and penalties, one elegant principle: roll two d20s and take the higher (advantage) or lower (disadvantage). Simple, intuitive, and endlessly applicable."
+      },
+      {
+        "title": "Bounded Accuracy",
+        "text": "Modifiers grow slowly, DCs stay stable. A goblin is still dangerous at level 15. Balance without the numerical arms race of previous editions."
+      },
+      {
+        "title": "Classes & Subclasses",
+        "text": "12 classes, each with 3–4 subclasses. Fighter, rogue, paladin, warlock — every level brings new abilities, not just +1 to stats. Character identity through mechanical choices."
+      },
+      {
+        "title": "Short & Long Rest",
+        "text": "A short rest (1 hour) recovers hit points and spent abilities. A long rest (8 hours) fully restores. A resource-management system that encourages pacing over 'fight to the death'."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Player's Handbook (2014)"
+      },
+      {
+        "cap": "Cover art by Tyler Jacobson"
+      },
+      {
+        "cap": "Alternate cover (2024)"
+      }
+    ],
+    "resources": [
+      {
+        "name": "SRD — System Reference Document"
+      },
+      {
+        "name": "Basic Rules (free)"
+      },
+      {
+        "name": "Official site — Wizards of the Coast"
+      }
+    ],
+    "quotes": [
+      { "text": "D&D 5e is an extremely well put together game. It makes use of some very elegant and simple mechanics, and best of all, it is recognisably 'Dungeons and Dragons'." },
+      { "text": "This edition of D&D is an arm round your shoulder, a word in your ear, a warm invitation to the world of role-playing. The rules are dealt with in a handful of pages." }
+    ]
+  }
+});
+registerSystem("dolmenwood", {
+  "groups": {
+    "default": { "key": "osr", "order": 11.5 },
+    "family": { "key": "osr-classic", "order": 13 },
+    "genre": { "key": "dark-fantasy", "order": 25 }
+  },
+  "name": "Dolmenwood",
+  "publisher": "Necrotic Gnome",
+  "dice": "d20 (OSR)",
+  "players": "3–6",
+  "complexity": 2,
+  "free": false,
+  "foundryStatus": "Community",
+  "heroImage": "https://cdn.shopify.com/s/files/1/0017/2330/1933/files/RefScreen.jpg?v=1704807528",
+  "playstyleTags": [
+    "explore",
+    "combat",
+    "mystery"
+  ],
+  "settingTags": ["fantasy", "weird"],
+  "gallery": [
+    {
+      "src": "https://cdn.shopify.com/s/files/1/0017/2330/1933/files/Thumbnail_ce144c08-d39d-4fc1-88ee-4cb210bc0e20.jpg?v=1750675469"
+    },
+    {
+      "src": "https://cdn.shopify.com/s/files/1/0017/2330/1933/files/Thumbnail_fadb86b1-ec93-489a-8a1b-2a5552dcc8b3.png?v=1688756218"
+    },
+    {
+      "src": "https://cdn.shopify.com/s/files/1/0017/2330/1933/files/Thumbnail_094cd9d8-a0c2-4f50-a548-3ecd95f7ef34.png?v=1688756199"
+    }
+  ],
+  "resources": [
+    {
+      "type": "rules",
+      "url": "https://player.necroticgnome.com/",
+      "fmt": "Web"
+    },
+    {
+      "type": "link",
+      "url": "https://necroticgnome.com/products/dolmenwood",
+      "fmt": "Web"
+    },
+    {
+      "type": "link",
+      "url": "https://exaltedfuneral.com/products/dolmenwood",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "target"
+    },
+    {
+      "icon": "book-open"
+    },
+    {
+      "icon": "scroll"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://grognardia.blogspot.com/2025/01/thoughts-on-dolmenwood.html
+    {
+      "text": "I'm really enjoying Dolmenwood and consider it one of the best 'new' fantasy roleplaying games I've played in some time.",
+      "author": "James Maliszewski, Grognardia"
+    },
+    // VERIFIED-AT: https://grognardia.blogspot.com/2025/01/thoughts-on-dolmenwood.html
+    {
+      "text": "I have nothing but praise to offer about Dolmenwood, both as a fantasy setting and as a game.",
+      "author": "James Maliszewski, Grognardia"
+    }
+  ],
+  "ru": {
+    "tagShort": "OSE-клон — fairy tale horror в лесу Долменвуд",
+    "tagline": "«Лес шепчет. Могильные камни хранят тайны. Добро пожаловать в Долменвуд».",
+    "description": "Dolmenwood — настольная RPG-обстановка от Necrotic Gnome (2024, Kickstarter), построенная на базе Old-School Essentials (B/X). Тёмная сказка (fairy tale horror): игроки исследуют древний лес Долменвуд, населённый феями, проклятыми мертвецами, говорящими зверями и странными существами. 9 классов: Cleric, Fighter, Thief, Magic-User, Bard, Dwarf, Elf, Gnome, Halfling. 6 видов (Kindred).",
+    "setting": "Долменвуд — туманный древний лес, окружённый четырьмя королевствами. В лесу есть друидические руины (мегалиты/долмены), фейские территории (Fairy Land), проклятые деревни. Каждое убежище (shelter) — мини-дungeon. Мир пропитан fairy tale horror: не сказочная идиллия, а угрожающая магия.",
+    "vignette": "Мастер: «Вы в туманном лесу. Могильный камень возвышается над вами. На нём — непонятные знаки.» Игрок: «Испую Cleric, чтобы расшифровать знаки.» Мастер: «Знаки говорят: \u0022Не трогай\u0022. Но вы слышите шёпот из-за камня — кто-то зовёт вас.» Игрок: «Иду за шёпотом.» Мастер: «Из тумана выходит маленькая фигура — маленький человек с глазами на ладонях...»",
+    "prep": "~15 мин",
+    "mechanics": [
+      {
+        "title": "Old-School Essentials (B/X)",
+        "text": "Классическая механика B/X: d20 на атаку, d6 на урон, магия через заклинания. В Dolmenwood добавлены fairy-tale механики."
+      },
+      {
+        "title": "9 классов + 6 видов",
+        "text": "Cleric, Fighter, Thief, Magic-User, Bard, Dwarf, Elf, Gnome, Halfling. Виды: Human, Elf, Gnome, Goblin, Moss Dwarf, Wulfling."
+      },
+      {
+        "title": "Shelter-классы",
+        "text": "Каждое убежище в лесу — мини-dungeon с уникальными механиками, encounter таблицами и тайнами."
+      },
+      {
+        "title": "Fairy Land",
+        "text": "Фейская территория с искаженным пространством и временем. Правила для путешествий и столкновений с феями."
+      }
+    ],
+    "gallery": [
+      { "cap": "Dolmenwood Player's Book" },
+      { "cap": "Dolmenwood Campaign Book" },
+      { "cap": "Dolmenwood Monster Book" }
+    ],
+    "resources": [
+      { "name": "Бесплатные правила (player.necroticgnome.com)" },
+      { "name": "Официальный магазин (Necrotic Gnome)" },
+      { "name": "Exalted Funeral — Dolmenwood" }
+    ],
+    "quotes": [
+      { "text": "Мне очень нравится Dolmenwood — считаю его одной из лучших «новых» фэнтезийных ролевых игр, в которые я играл за долгое время." },
+      { "text": "У меня нет ничего, кроме похвалы в адрес Dolmenwood — и как сеттинга, и как игры." }
+    ]
+  },
+  "en": {
+    "tagShort": "OSE clone — fairy tale horror in Dolmenwood forest",
+    "tagline": "\"The forest whispers. The standing stones hold secrets. Welcome to Dolmenwood.\"",
+    "description": "Dolmenwood is a tabletop RPG setting by Necrotic Gnome (2024, Kickstarter), built on Old-School Essentials (B/X). Dark fairy tale horror: players explore the ancient Dolmenwood forest, home to faeries, cursed deadmen, talking beasts, and strange beings. 9 classes: Cleric, Fighter, Thief, Magic-User, Bard, Dwarf, Elf, Gnome, Halfling. 6 Kindreds.",
+    "setting": "Dolmenwood — a misty ancient forest surrounded by four kingdoms. Within: druidic ruins (standing stones/megaliths), faerie territories (Fairy Land), cursed villages. Every shelter is a mini-dungeon. The world is steeped in fairy tale horror: not whimsical idyll, but threatening magic.",
+    "vignette": "GM: 'You're in the misty forest. A standing stone towers above you. Strange symbols are carved on it.' Player: 'I use my Cleric ability to decipher the symbols.' GM: 'The symbols say: \u0022Do not touch.\u0022 But you hear whispering from behind the stone — someone is calling you.' Player: 'I follow the whisper.' GM: 'From the mist emerges a small figure — a little man with eyes on his palms...'",
+    "prep": "~15 min",
+    "mechanics": [
+      {
+        "title": "Old-School Essentials (B/X)",
+        "text": "Classic B/X mechanics: d20 for attacks, d6 for damage, magic through spells. Dolmenwood adds fairy-tale mechanics."
+      },
+      {
+        "title": "9 Classes + 6 Kindreds",
+        "text": "Cleric, Fighter, Thief, Magic-User, Bard, Dwarf, Elf, Gnome, Halfling. Kindreds: Human, Elf, Gnome, Goblin, Moss Dwarf, Wulfling."
+      },
+      {
+        "title": "Shelter Classes",
+        "text": "Every forest shelter is a mini-dungeon with unique mechanics, encounter tables, and mysteries."
+      },
+      {
+        "title": "Fairy Land",
+        "text": "Faerie territory with distorted space and time. Rules for travel and faerie encounters."
+      }
+    ],
+    "gallery": [
+      { "cap": "Dolmenwood Player's Book" },
+      { "cap": "Dolmenwood Campaign Book" },
+      { "cap": "Dolmenwood Monster Book" }
+    ],
+    "resources": [
+      { "name": "Free rules (player.necroticgnome.com)" },
+      { "name": "Official store (Necrotic Gnome)" },
+      { "name": "Exalted Funeral — Dolmenwood" }
+    ],
+    "quotes": [
+      { "text": "I'm really enjoying Dolmenwood and consider it one of the best 'new' fantasy roleplaying games I've played in some time." },
+      { "text": "I have nothing but praise to offer about Dolmenwood, both as a fantasy setting and as a game." }
     ]
   }
 });
@@ -2681,6 +4398,169 @@ registerSystem("draw-steel", {
     ]
   }
 });
+registerSystem("dune-imperium", {
+  "groups": {
+    "default": { "key": "tactical", "order": 35 },
+    "family": { "key": "standalone", "order": 39 },
+    "genre": { "key": "sci-fi", "order": 14 }
+  },
+  "name": "Dune: Adventures in the Imperium",
+  "publisher": "Modiphius Entertainment",
+  "dice": "2d20 System",
+  "players": "3–6",
+  "complexity": 3,
+  "free": true,
+  "foundryStatus": "Community",
+  "heroImage": "https://i.shgcdn.com/04c4131a-6b3d-4501-af47-140c1f068af9/-/format/auto/-/preview/3000x3000/-/quality/lighter/",
+  "playstyleTags": [
+    "social",
+    "narrative",
+    "tactical"
+  ],
+  "settingTags": ["space"],
+  "gallery": [
+    {
+      "src": "https://i.shgcdn.com/c00c3029-a208-4425-98f5-bd18c9db95da/-/format/auto/-/preview/3000x3000/-/quality/better/"
+    },
+    {
+      "src": "https://i.shgcdn.com/398720aa-96dd-4754-a6f5-648cdffd2dac/-/format/auto/-/preview/3000x3000/-/quality/better/"
+    },
+    {
+      "src": "https://i.shgcdn.com/a5d8acc2-4854-4e22-8c65-89b9c18905a8/-/format/auto/-/preview/3000x3000/-/quality/better/"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://modiphius.net/en-us/collections/dune-adventures-in-the-imperium",
+      "fmt": "Web"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://modiphius.net/en-us/products/dune-adventures-in-the-imperium-wormsign-quickstart-guide",
+      "fmt": "PDF"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "activity"
+    },
+    {
+      "icon": "flag"
+    },
+    {
+      "icon": "swords"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.tabletopgaming.co.uk/reviews/dune-adventures-in-the-imperium-review/
+    {
+      "text": "the most impressive thing about Modiphius' attempt to adapt the convoluted world of Dune to the tabletop is that it somehow manages to capture the feel of the setting and still work.",
+      "author": "Richard Jansen-Parkes, Tabletop Gaming"
+    }
+  ],
+  "ru": {
+    "tagShort": "Интриги Великих Домов на движке 2d20",
+    "tagline": "«Плати за всё — кровью, водой или верностью. Такова Империя».",
+    "description": "Dune: Adventures in the Imperium — официальная RPG по «Дюне» от Modiphius на движке 2d20. Играете не одиноким героем, а Домом: агенты, интриганы, воины и ментаты на службе своего рода. Упор на политику, шпионаж и выживание в феодальной галактике, где меланж дороже жизни, а нож решает споры.",
+    "setting": "Империя «Дюны»: Ландсраад Великих Домов, император Коррино, Гильдия, Бене Гессерит и планета-пустыня Арракис — единственный источник Пряности. Заговоры, кровная месть, канли и тонкая паутина обязательств. Ваш Дом восходит или гибнет по вашим решениям — эпический политический sci-fi.",
+    "vignette": "Бал в резиденции соперничающего Дома. Ваш интриган хочет выведать тайну наследника. Проверка Общения + Понимания: 2d20, каждый кубик ниже суммы — успех. Нужно 2, выпало 1. Вы тратите Momentum из общего пула Дома — ещё кубик, ещё успех. Тайна ваша. Но ведущий копит Threat: где-то в тени вас тоже раскусили.",
+    "prep": "~30 мин",
+    "mechanics": [
+      {
+        "title": "Движок 2d20",
+        "text": "Проверка — 2d20, каждый кубик «меньше» суммы Навыка и Драйва даёт успех. Нужное число успехов задаёт сложность. Кубики докупаются за Momentum или через риск."
+      },
+      {
+        "title": "Momentum и Threat",
+        "text": "Успехи сверх нормы копятся в общий Momentum — ресурс всего Дома. У ведущего зеркальный Threat для осложнений и происков врагов. Драма как валюта."
+      },
+      {
+        "title": "Драйвы и Утверждения",
+        "text": "Персонажа двигают Драйвы (Долг, Вера, Справедливость, Власть, Истина) с личными Утверждениями. Действуя по убеждениям, вы усиливаете броски — характер решает."
+      },
+      {
+        "title": "Конфликты в трёх масштабах",
+        "text": "Интрига, дуэль и война ведутся по единой логике, но на разных уровнях: от словесной пикировки на балу до столкновения армий и флотов Дома. Один язык — три сцены."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Core Rulebook"
+      },
+      {
+        "cap": "Материалы линейки"
+      },
+      {
+        "cap": "Арт Империи"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальная страница — Modiphius"
+      },
+      {
+        "name": "Бесплатный Quickstart «Wormsign»"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "Самое впечатляющее в попытке Modiphius перенести запутанный мир «Дюны» на стол — то, что игра каким-то образом ухватывает дух сеттинга и при этом работает." }
+    ]
+  },
+  "en": {
+    "tagShort": "Great-House intrigue on the 2d20 System",
+    "tagline": "\"You pay for everything — in blood, water, or loyalty. Such is the Imperium.\"",
+    "description": "Dune: Adventures in the Imperium is Modiphius's official Dune RPG on the 2d20 System. You don't play a lone hero but a House: agents, schemers, warriors, and Mentats in service of your bloodline. The emphasis is politics, espionage, and survival in a feudal galaxy where the spice is worth more than life and a knife settles arguments.",
+    "setting": "The Imperium of Dune: the Landsraad of Great Houses, Emperor Corrino, the Guild, the Bene Gesserit, and the desert planet Arrakis — the only source of Spice. Plots, blood feuds, kanly, and a fine web of obligation. Your House rises or falls by your decisions — epic political sci-fi.",
+    "vignette": "A ball at a rival House's residence. Your schemer wants to learn the heir's secret. A Communicate + Understand test: 2d20, each die under the total is a success. You need 2, you roll 1. You spend Momentum from the House's shared pool — another die, another success. The secret is yours. But the GM banks Threat: somewhere in the shadows, you've been read too.",
+    "prep": "~30 min",
+    "mechanics": [
+      {
+        "title": "The 2d20 engine",
+        "text": "A test is 2d20; each die under your Skill + Drive total scores a success. The successes required set the difficulty. Buy extra dice with Momentum or by taking a risk."
+      },
+      {
+        "title": "Momentum & Threat",
+        "text": "Successes beyond the requirement bank into shared Momentum — a resource for the whole House. The GM has a mirror Threat pool for complications and enemy schemes. Drama as currency."
+      },
+      {
+        "title": "Drives & Statements",
+        "text": "Characters are driven by Drives (Duty, Faith, Justice, Power, Truth) with personal Statements. Acting on your convictions boosts your rolls — character decides the outcome."
+      },
+      {
+        "title": "Conflict at three scales",
+        "text": "Intrigue, duels, and warfare use one logic at different levels: from a verbal thrust at a ball to a clash of a House's armies and fleets. One language, three scenes."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Core Rulebook"
+      },
+      {
+        "cap": "Line materials"
+      },
+      {
+        "cap": "Imperium art"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official page — Modiphius"
+      },
+      {
+        "name": "Free 'Wormsign' Quickstart"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "the most impressive thing about Modiphius' attempt to adapt the convoluted world of Dune to the tabletop is that it somehow manages to capture the feel of the setting and still work." }
+    ]
+  }
+});
 registerSystem("dungeon-crawl-classics", {
   "groups": {
     "default": { "key": "osr", "order": 9.5 },
@@ -2860,6 +4740,335 @@ registerSystem("dungeon-crawl-classics", {
     ]
   }
 });
+registerSystem("dungeon-world", {
+  "groups": {
+    "default": { "key": "narrative", "order": 25 },
+    "family": { "key": "pbta-fitd", "order": 4 },
+    "genre": { "key": "adventure", "order": 21 }
+  },
+  "name": "Dungeon World",
+  "publisher": "Sage Kobold Productions",
+  "dice": "2d6 + modifier",
+  "players": "3–5",
+  "complexity": 1,
+  "free": true,
+  "foundryStatus": "Community",
+  "heroImage": "https://www.burningwheel.com/cdn/shop/files/20_DungeonWorld__54219.1690575123.1280.1280.jpg?v=1770530451",
+  "playstyleTags": [
+    "narrative",
+    "explore",
+    "combat"
+  ],
+  "settingTags": ["fantasy"],
+  "gallery": [
+    {
+      "src": "https://www.rpg.net/pictures/cache/picthumb26348-medium.jpg"
+    },
+    {
+      "src": "https://dungeonworld.gplusarchive.online/wp-content/uploads/2013/06/Shifter252BRanger252BColor.jpg"
+    },
+    {
+      "src": "https://dungeonworld.gplusarchive.online/wp-content/uploads/2013/06/Half-Orc252BDruid252BColor.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://www.dungeonworldsrd.com/",
+      "fmt": "Web"
+    },
+    {
+      "type": "link",
+      "url": "https://www.burningwheel.com/products/dungeon-world",
+      "fmt": "Web"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://www.dungeonworldsrd.com/",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "sparkles"
+    },
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "book-open"
+    },
+    {
+      "icon": "scroll"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.rpg.net/reviews/archive/15/15793.phtml
+    {
+      "text": "Dungeon World is a strong game if you buy into its assumptions, values, and style. It certainly is working for me.",
+      "author": "Civil Savage, RPGnet"
+    },
+    // VERIFIED-AT: https://dmtales.com/2023/05/23/dungeon-world-a-powered-by-the-apocalypse-review/
+    {
+      "text": "Dungeon World is designed so well for theater of mind combat I feel it would be weird to try to use minis with the game.",
+      "author": "Calvin, DM Tales"
+    }
+  ],
+  "ru": {
+    "tagShort": "Фэнтези на PbtA: D&D без миниатюр",
+    "tagline": "«Простые правила, живая фантазия, драконы без инициативы».",
+    "description": "Dungeon World — настольная RPG в жанре фэнтези на движке Powered by the Apocalypse (PbtA), созданная Сэйджем Латорра и Адамом Кёбелем (2012). D&D-трупы (классы, расы, данжины) с нарративными механиками: бросок 2d6, частичный успех, провал как XP. Правила отпущены по Creative Commons. Одна из самых influential PbtA-игр, породившая десятки хаков.",
+    "setting": "Классическое фэнтезийное мира — подземелья, драконы, таверны. Не столько мир, сколько обстановка: GM описывает ситуацию, игроки решают, что делать. Мир рождается за столом через вопросы GM и ответы игроков.",
+    "vignette": "Варвар ломится в дверь данжина. Бард начинает петь — 2d6+CHA, 10+! Песня воодушевляет стражу, и вор, пока все слушают, залезает в окно. Вдруг — крик! Дракон. Варвар кричит «Я прыгаю ему в пасть!» — 2d6+STR, 7. Частичный успех: прыгнул, но дракон захлопнул челюсти. Теперь нужно Defy Danger, чтобы выбраться. Провал = XP. Но и успех = история.",
+    "prep": "~10 мин",
+    "mechanics": [
+      {
+        "title": "Механика PbtA (2d6)",
+        "text": "Бросок 2d6 + модификатор: 10+ — полный успех, 7–9 — частичный успех (успех с осложнением), 6- — провал (= XP). Простая, но глубокая математика."
+      },
+      {
+        "title": "GM не бросает кубики",
+        "text": "GM описывает последствия через свои ходы (Separate them, Deal damage, Show signs of an approaching threat). Игроки — единственные, кто берёт кубики в руки."
+      },
+      {
+        "title": "Бонды между персонажами",
+        "text": "Создание персонажа начинается с привязки к другим: «___ прикроет меня, если что-то пойдёт не так». Конец сессии — разрешение бонда и получение XP."
+      },
+      {
+        "title": "Фронты и угрозы",
+        "text": "Fronts — угрозы мира, которые развиваются, пока игроки не действуют. Каждый фронт имеет grim portents (предзнаменования) и dire outcomes (катастрофы). Мир живёт вне поля зрения игроков."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Обложка (Burning Wheel)"
+      },
+      {
+        "cap": "Рейнджер-шейпифтер — арт из сообщества"
+      },
+      {
+        "cap": "Полуорк-друид — арт из сообщества"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Dungeon World SRD (бесплатные правила)"
+      },
+      {
+        "name": "Burning Wheel — официальный магазин"
+      },
+      {
+        "name": "Начало игры (правила online)"
+      }
+    ],
+    "quotes": [
+      { "text": "Dungeon World — сильная игра, если вы принимаете её допущения, ценности и стиль. Она определённо работает для меня." },
+      { "text": "Dungeon World настолько хорошо подходит для боя в театре разума, что было бы странно пытаться использовать миниатюры." }
+    ]
+  },
+  "en": {
+    "tagShort": "PbtA fantasy — D&D without minis",
+    "tagline": "\"Simple rules, living fantasy, dragons without initiative rolls.\"",
+    "description": "Dungeon World is a fantasy tabletop RPG powered by the Apocalypse engine (PbtA), created by Sage LaTorra and Adam Koebel (2012). Classic D&D trappings — classes, races, dungeons — with narrative mechanics: roll 2d6, partial success, failure as XP. Rules released under Creative Commons. One of the most influential PbtA games, spawning dozens of hacks and derivatives.",
+    "setting": "Classic fantasy — dungeons, dragons, taverns. Not so much a world as a situation: the GM describes the scene, players decide what to do. The world is born at the table through GM questions and player answers.",
+    "vignette": "The barbarian kicks in the dungeon door. The bard starts a song — 2d6+CHA, 10+! The song inspires the guard, and the rogue slips through the window while everyone listens. Suddenly — a scream! A dragon. The barbarian shouts 'I jump into its maw!' — 2d6+STR, 7. Partial success: jumped in, but the dragon snaps its jaws shut. Now Defy Danger to get out. Failure = XP. But success = story.",
+    "prep": "~10 min",
+    "mechanics": [
+      {
+        "title": "PbtA Mechanic (2d6)",
+        "text": "Roll 2d6 + modifier: 10+ is a full success, 7–9 is a partial success (success with complication), 6- is a miss (= XP). Simple but deep math."
+      },
+      {
+        "title": "GM Never Rolls Dice",
+        "text": "GM describes consequences through GM moves (Separate them, Deal damage, Show signs of an approaching threat). Players are the only ones who touch the dice."
+      },
+      {
+        "title": "Bonds Between Characters",
+        "text": "Character creation starts with ties to others: '___ has my back when things go wrong.' End of session — resolve a bond and gain XP."
+      },
+      {
+        "title": "Fronts and Threats",
+        "text": "Fronts are threats to the world that develop while players aren't acting. Each front has grim portents and dire outcomes. The world lives beyond the players' sight."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Cover (Burning Wheel)"
+      },
+      {
+        "cap": "Shifter Ranger — community art"
+      },
+      {
+        "cap": "Half-Orc Druid — community art"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Dungeon World SRD (free rules)"
+      },
+      {
+        "name": "Burning Wheel — official store"
+      },
+      {
+        "name": "Getting Started (online rules)"
+      }
+    ],
+    "quotes": [
+      { "text": "Dungeon World is a strong game if you buy into its assumptions, values, and style. It certainly is working for me." },
+      { "text": "Dungeon World is designed so well for theater of mind combat I feel it would be weird to try to use minis with the game." }
+    ]
+  }
+});
+registerSystem("eclipse-phase", {
+  "groups": {
+    "default": { "key": "tactical", "order": 37 },
+    "family": { "key": "standalone", "order": 45 },
+    "genre": { "key": "sci-fi", "order": 16 }
+  },
+  "name": "Eclipse Phase",
+  "publisher": "Posthuman Studios",
+  "dice": "d100 percentile",
+  "players": "3–5",
+  "complexity": 4,
+  "free": true,
+  "foundryStatus": "Community",
+  "heroImage": "https://cdn.shopify.com/s/files/1/0253/1809/6947/products/EP2_Cover_-_Front_900px.jpg?v=1584157023",
+  "playstyleTags": [
+    "explore",
+    "horror",
+    "tactical"
+  ],
+  "settingTags": ["space", "postapoc"],
+  "gallery": [
+    {
+      "src": "https://cdn.shopify.com/s/files/1/0253/1809/6947/products/EP2_CriminalOps1.jpg?v=1650146809"
+    },
+    {
+      "src": "https://cdn.shopify.com/s/files/1/0253/1809/6947/products/EP2_XRisks_Nanoswarm.png?v=1650146809"
+    },
+    {
+      "src": "https://cdn.shopify.com/s/files/1/0253/1809/6947/products/EP2_StartingOut.png?v=1650146810"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://eclipsephase.com/",
+      "fmt": "Web"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://robboyle.wordpress.com/eclipse-phase-pdfs/",
+      "fmt": "PDF"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "layers"
+    },
+    {
+      "icon": "zap"
+    },
+    {
+      "icon": "skull"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://cannibalhalflinggaming.com/2019/08/21/eclipse-phase-2e-review/
+    {
+      "text": "The Eclipse Phase setting has been the reason I've made sure to get a copy of every edition, and even though 2e has mostly minor changes it doesn't get old.",
+      "author": "Aaron Marks, Cannibal Halfling Gaming"
+    },
+    // VERIFIED-AT: https://jonne.arjoranta.fi/2020/eclipse-phase-2-review/
+    {
+      "text": "Eclipse Phase 2 successfully brings in ideas formulated fully in source books published after the first book and solves some of the problems the previous edition had.",
+      "author": "Jonne Arjoranta"
+    }
+  ],
+  "ru": {
+    "tagShort": "Трансгуман sci-fi хоррор на d100",
+    "tagline": "«Твоё тело — оболочка. Твой разум — файл. Твоя смерть — временная».",
+    "description": "Eclipse Phase — научно-фантастическая RPG ужасов от Posthuman Studios в жанре трансгуманизма. Через 200 лет после технологической сингулярности человечество расселилось по всей Солнечной системе, а сознание стало данными: разум (эго) можно резервировать, передавать по лазерной связи и загружать в новое тело (морф). Действие — после Падения, катастрофы, в которой восставшие ИИ, ТИТАНы, едва не уничтожили человечество. Система процентников (d100) с телесным и экзистенциальным ужасом. Распространяется бесплатно по лицензии Creative Commons.",
+    "setting": "Внутренняя система под властью гиперкорпораций и биоконсерваторов; независимые анклавы Пояса и внешних планет с прямой демократией и репутационной экономикой. Земля — карантинная зона, оставленная ТИТАНам. Персонажи — агенты Файрвол, тайной сети против экзистенциальных угроз: заражённых нанороев, чужих артефактов, ворот Пандоры и остатков сингулярного интеллекта.",
+    "vignette": "Ваш морф просыпается в незнакомом теле на станции у Марса — предыдущее сгорело сутки назад. Мьюз шепчет в аудиокортекс: сигнал бедствия из заброшенного хабитата, где кто-то вскрыл артефакт ТИТАНов. Тест Восприятия: d100, нужно не выше навыка. 34 — успех, а десятки задают степень. Вы замечаете, что стены хабитата... дышат. Наномашины. И они уже знают, что вы прибыли.",
+    "prep": "~30 мин",
+    "mechanics": [
+      {
+        "title": "Процентники (d100)",
+        "text": "Броском 1d100 нужно выбросить не выше целевого навыка. Разряд десятков задаёт степень успеха (MoS): качество результата, урон, осложнения. Криты — на дублях (11, 22, 33…)."
+      },
+      {
+        "title": "Эго и Морф",
+        "text": "Персонаж — эго (разум, навыки, память) в морфе (теле). Тела меняются: биоморфы, синтморфы, инфоморфы. Смерть тела не конец: из резервной копии вас «перечехлят» в новое — ценой стресса."
+      },
+      {
+        "title": "Пулы",
+        "text": "Во 2-м издании — гибкие ресурсы (Insight, Moxie, Vigor, Flex) на перебросы, инициативу и нарративные вмешательства. Зависят от морфа и эго — тактическая глубина без замедления."
+      },
+      {
+        "title": "ТИТАНы и x-риски",
+        "text": "Экзистенциальные угрозы — ядро игры: заражения экзосознанием, чужие технологии, эпидемии-василиски. Тест на Стресс отслеживает психологический урон. Хоррор здесь — системная механика, а не декор."
+      }
+    ],
+    "gallery": [
+      { "cap": "Обложка Eclipse Phase 2e" },
+      { "cap": "Экзистенциальные угрозы: нанорой" },
+      { "cap": "Криминальные операции" }
+    ],
+    "resources": [
+      { "name": "Официальный сайт" },
+      { "name": "Бесплатные PDF (Creative Commons)" }
+    ]
+  ,
+    "quotes": [
+      { "text": "Сеттинг Eclipse Phase — именно та причина, по которой я обязательно беру каждое издание, и хотя во 2e в основном небольшие изменения, он не приедается." },
+      { "text": "Eclipse Phase 2 удачно вбирает идеи, полностью оформленные в дополнениях после первой книги, и решает часть проблем предыдущего издания." }
+    ]
+  },
+  "en": {
+    "tagShort": "Transhuman sci-fi horror on d100",
+    "tagline": "\"Your body is a shell. Your mind is a file. Your death is temporary.\"",
+    "description": "Eclipse Phase is a transhuman science-fiction horror RPG from Posthuman Studios. Two centuries after the technological singularity, humanity has spread across the solar system and consciousness has become data: your mind (ego) can be backed up, beamed over laser links, and downloaded into a new body (morph). Play unfolds after the Fall — a near-extinction event in which the rogue AIs known as the TITANs almost wiped out transhumanity. A crunchy percentile (d100) system steeped in body horror and existential dread. Distributed free under a Creative Commons license.",
+    "setting": "The inner system is ruled by hypercorps and bioconservatives; the autonomist habitats of the Belt and outer planets run on direct democracy and reputation economies. Earth is a quarantined wasteland abandoned to the TITANs. Characters are agents of Firewall, a covert network that fights existential risks: infectious nanoswarms, alien artifacts, the Pandora Gates, and the remnants of singularity-level intelligences.",
+    "vignette": "Your morph wakes in an unfamiliar body on a station near Mars — the last one burned up a day ago. Your muse whispers into your audio cortex: a distress signal from an abandoned habitat where someone cracked open a TITAN artifact. You roll a Perception test: d100, roll under your skill. 34 — a success, and the tens digit sets your margin. You notice the habitat's walls are... breathing. Nanomachines. And they already know you've arrived.",
+    "prep": "~30 min",
+    "mechanics": [
+      {
+        "title": "Percentile (d100)",
+        "text": "Roll 1d100 and score at or under your target skill. The tens digit sets your Margin of Success (MoS): result quality, damage, and complications. Criticals land on doubles (11, 22, 33…)."
+      },
+      {
+        "title": "Ego & Morph",
+        "text": "A character is an ego (mind, skills, memories) inhabiting a morph (body). Bodies swap freely: biomorphs, synthmorphs, infomorphs. Death of the body isn't the end — you're resleeved from a backup into a new shell, at a psychological cost in stress."
+      },
+      {
+        "title": "Pools",
+        "text": "In 2nd edition, flexible resources (Insight, Moxie, Vigor, Flex) are spent on rerolls, initiative, and narrative edits. Pools scale with your morph and ego, adding tactical depth without slowing play."
+      },
+      {
+        "title": "TITANs & x-risks",
+        "text": "Existential threats are the game's core: exsurgent infections, alien tech, basilisk plagues. A Stress test (the sanity analog) tracks psychological damage. Horror here isn't set dressing — it's a system mechanic."
+      }
+    ],
+    "gallery": [
+      { "cap": "Eclipse Phase 2e cover" },
+      { "cap": "Existential risks: nanoswarm" },
+      { "cap": "Criminal operations" }
+    ],
+    "resources": [
+      { "name": "Official website" },
+      { "name": "Free PDFs (Creative Commons)" }
+    ]
+  ,
+    "quotes": [
+      { "text": "The Eclipse Phase setting has been the reason I've made sure to get a copy of every edition, and even though 2e has mostly minor changes it doesn't get old." },
+      { "text": "Eclipse Phase 2 successfully brings in ideas formulated fully in source books published after the first book and solves some of the problems the previous edition had." }
+    ]
+  }
+});
 registerSystem("electric-bastionland", {
   "groups": {
     "default": { "key": "osr", "order": 2 },
@@ -2881,16 +5090,16 @@ registerSystem("electric-bastionland", {
   "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1hZ2UvNTk4NDYyLzMxNzkzMTkucG5n/original/MnG1LD.png"
+      "src": "https://cdn.shopify.com/s/files/1/0025/6006/5625/products/electric-bastionland-pdf-book-141375.jpg?v=1688417871"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvNTk4NDYyLzMxNzkyOTkucG5n/original/PQkILZ.png"
+      "src": "https://cdn.shopify.com/s/files/1/0025/6006/5625/products/electric-bastionland-pdf-book-853175.png?v=1688417871"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvNTk4NDYyLzMxNzkzMDEucG5n/original/HsUsO1.png"
+      "src": "https://cdn.shopify.com/s/files/1/0025/6006/5625/products/electric-bastionland-pdf-book-426085.png?v=1688417871"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvNTk4NDYyLzMxNzkzMDIucG5n/original/lbwRs4.png"
+      "src": "https://cdn.shopify.com/s/files/1/0025/6006/5625/products/electric-bastionland-pdf-book-392957.png?v=1688417871"
     }
   ],
   "resources": [
@@ -3232,6 +5441,364 @@ registerSystem("fabula-ultima", {
       {
         "name": "Project FU (Foundry VTT)"
       }
+    ]
+  }
+});
+registerSystem("fate", {
+  "groups": {
+    "default": { "key": "narrative", "order": 27 },
+    "family": { "key": "standalone", "order": 31 },
+    "genre": { "key": "narrative-weird", "order": 7.5 }
+  },
+  "name": "Fate Core",
+  "publisher": "Evil Hat Productions",
+  "dice": "4dF",
+  "players": "3–5",
+  "complexity": 2,
+  "free": true,
+  "foundryStatus": "Official",
+  "heroImage": "https://d1vzi28wh99zvq.cloudfront.net/images/2152/114903.jpg",
+  "playstyleTags": [
+    "narrative",
+    "explore",
+    "combat"
+  ],
+  "settingTags": [],
+  "gallery": [
+    {
+      "src": "https://d1vzi28wh99zvq.cloudfront.net/images/2152/114902.jpg"
+    },
+    {
+      "src": "https://static.wikia.nocookie.net/rpgtalk/images/8/8a/Fate_Accelerated_cover.jpg"
+    },
+    {
+      "src": "https://d1vzi28wh99zvq.cloudfront.net/images/2152/114903.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://www.faterpg.com/",
+      "fmt": "Web"
+    },
+    {
+      "type": "link",
+      "url": "https://evilhat.com/product/fate-core-system/",
+      "fmt": "Web"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://fate-srd.com/fate-core/what-you-need-play",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "sparkles"
+    },
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "book-open"
+    },
+    {
+      "icon": "scroll"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.geeknative.com/52120/invoking-for-effect-a-review-and-commentary-on-fate-core/
+    {
+      "text": "I think this game is today's standard-bearer for tabletop roleplaying, and why every game that's come out since can and should be compared to it.",
+      "author": "Ed, Geek Native"
+    },
+    // VERIFIED-AT: https://www.rpg.net/reviews/archive/15/15882.phtml
+    {
+      "text": "Fate Core is an astoundingly well done product. Not only is it a well-produced book, but the system has been refined and distilled to be the best version of Fate so far.",
+      "author": "Wil Hutton, RPGnet"
+    }
+  ],
+  "ru": {
+    "tagShort": "Универсальная нарративная на 4dF",
+    "tagline": "«Аспекты, инвоки, фейт-поинты — подходят под любой мир».",
+    "description": "Fate Core — универсальная настольная RPG от Evil Hat Productions (2013), последняя версия системы Fate (обновлена в Fate Condensed, 2020). Использует 4dF (Fate-кубики: +, -, пусто). Персонажи — набор аспектов (коротких фраз), стант и навыков. Фейт-поинты позволяют менять сюжет. Лицензия CC BY 3.0 — правила полностью бесплатны.",
+    "setting": "Жанр-agnostic. Fate не привязана к миру — она создаёт мир из аспектов. Популярные сеттинги: Dresden Files (городское фэнтези), Spirit of the Century (папп 1920-х), Fate of Cthulhu (хоррор), Interface Zero (киберпанк), Atomic Robo (научные герои).",
+    "vignette": "Герой врывается в лабораторию злодея. Аспект «Бывший оперативник ЦРУ» даёт бонус. Три кубика 4dF: ++- = +1. Успех! Но злодей активирует «Плотная охрана» — аспект меняет ситуацию. Герой тратит фейт-поинт, инвокает «Я знаю эти трюки» и переписывает реальность.",
+    "prep": "~10 мин",
+    "mechanics": [
+      {
+        "title": "4dF (Fate-кубики)",
+        "text": "Четыре кубика с +, -, пусто. Сумма от -4 до +4. Простая, но глубокая математика: каждый +1 меняет результат."
+      },
+      {
+        "title": "Аспекты",
+        "text": "Короткие фразы, описывающие персонажа, место или ситуацию. «Бывший оперативник ЦРУ», «Тёмный переулок». Аспекты — источник бонусов и осложнений."
+      },
+      {
+        "title": "Фейт-поинты",
+        "text": "Валюта для переписывания сюжета. Тратишь — получаешь +2 к броску или переопределяешь ситуацию. Зарабатывается через аспекты злодеев и комплименты."
+      },
+      {
+        "title": "Four Actions",
+        "text": "Четыре действия: Attack, Defend, Overcome, Create Advantage. Любая ситуация решается одним из этих четырёх."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Fate Core System"
+      },
+      {
+        "cap": "Fate Accelerated Edition"
+      },
+      {
+        "cap": "Fate Condensed (2020)"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Fate RPG — официальный сайт (бесплатные правила)"
+      },
+      {
+        "name": "Evil Hat — купить Fate Core"
+      },
+      {
+        "name": "SRD — What You Need To Play"
+      }
+    ],
+    "quotes": [
+      { "text": "Я считаю эту игру сегодняшним знаменосцем настольных RPG — и почему каждая игра, вышедшая с тех пор, может и должна быть с ней сравнена." },
+      { "text": "Fate Core — потрясающе хорошо сделанный продукт. Не только отличная книга, но и система, отточенная и очищенная до лучшей версии Fate на сегодня." }
+    ]
+  },
+  "en": {
+    "tagShort": "Universal narrative RPG on 4dF",
+    "tagline": "\"Aspects, invokes, fate points — any world you can imagine.\"",
+    "description": "Fate Core is a universal tabletop RPG from Evil Hat Productions (2013), the latest version of the Fate system (refreshed in Fate Condensed, 2020). Uses 4dF (Fate dice: +, -, blank). Characters are built from Aspects (short phrases), Stunts, and Skills. Fate Points let you rewrite the story. Licensed CC BY 3.0 — rules are completely free.",
+    "setting": "Genre-agnostic. Fate doesn't tie to a world — it builds worlds from Aspects. Popular settings: Dresden Files (urban fantasy), Spirit of the Century (pulp 1920s), Fate of Cthulhu (horror), Interface Zero (cyberpunk), Atomic Robo (science-heroes).",
+    "vignette": "The hero bursts into the villain's lab. The Aspect 'Former CIA Operative' grants a bonus. Three 4dF dice: ++- = +1. Success! But the villain activates 'Heavy Security' — the Aspect shifts the situation. The hero spends a Fate Point, invokes 'I Know These Tricks', and rewrites reality.",
+    "prep": "~10 min",
+    "mechanics": [
+      {
+        "title": "4dF (Fate Dice)",
+        "text": "Four dice with +, -, blank. Sum from -4 to +4. Simple but deep math: every +1 changes the outcome."
+      },
+      {
+        "title": "Aspects",
+        "text": "Short phrases describing a character, place, or situation. 'Former CIA Operative', 'Dark Alley'. Aspects are sources of bonuses and complications."
+      },
+      {
+        "title": "Fate Points",
+        "text": "Currency for rewriting the story. Spend for +2 to a roll or to reshape the situation. Earned through villain Aspects and compels."
+      },
+      {
+        "title": "Four Actions",
+        "text": "Four actions: Attack, Defend, Overcome, Create Advantage. Any situation is resolved with one of these four."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Fate Core System"
+      },
+      {
+        "cap": "Fate Accelerated Edition"
+      },
+      {
+        "cap": "Fate Condensed (2020)"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Fate RPG — official site (free rules)"
+      },
+      {
+        "name": "Evil Hat — buy Fate Core"
+      },
+      {
+        "name": "SRD — What You Need To Play"
+      }
+    ],
+    "quotes": [
+      { "text": "I think this game is today's standard-bearer for tabletop roleplaying, and why every game that's come out since can and should be compared to it." },
+      { "text": "Fate Core is an astoundingly well done product. Not only is it a well-produced book, but the system has been refined and distilled to be the best version of Fate so far." }
+    ]
+  }
+});
+registerSystem("fiasco", {
+  "groups": {
+    "default": { "key": "narrative", "order": 29 },
+    "family": { "key": "standalone", "order": 35 },
+    "genre": { "key": "narrative-weird", "order": 8.5 }
+  },
+  "name": "Fiasco",
+  "publisher": "Bully Pulpit Games",
+  "dice": "d6 pool",
+  "players": "3–5",
+  "complexity": 1,
+  "free": false,
+  "foundryStatus": "None",
+  "heroImage": "https://bullypulpitgames.com/cdn/shop/products/FiascoClassic-grey.jpg",
+  "playstyleTags": [
+    "narrative",
+    "combat",
+    "explore"
+  ],
+  "settingTags": ["modern"],
+  "gallery": [
+    {
+      "src": "https://bullypulpitgames.com/cdn/shop/files/Fiasco_Boxed-grey.jpg"
+    },
+    {
+      "src": "https://bullypulpitgames.com/cdn/shop/products/fiascoclassiccollagecrop.jpg"
+    },
+    {
+      "src": "https://bullypulpitgames.com/cdn/shop/products/FiascoClassic-grey.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://bullypulpitgames.com/products/fiasco",
+      "fmt": "Web"
+    },
+    {
+      "type": "link",
+      "url": "https://bullypulpitgames.itch.io/fiasco",
+      "fmt": "Web"
+    },
+    {
+      "type": "link",
+      "url": "https://fiascoplaysets.com/",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "sparkles"
+    },
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "book-open"
+    },
+    {
+      "icon": "scroll"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.wired.com/2011/08/fiasco-an-in-depth-rpg-review/
+    {
+      "text": "Hands down one of the best RPGs I have ever played. It delivers exactly what it promises: a self-contained, no-prep session in which a comedy of errors and bad decisions results in a complete fiasco.",
+      "author": "MJ Harnish, WIRED"
+    },
+    // VERIFIED-AT: https://bullypulpitgames.com/products/fiasco-classic (official praise section)
+    {
+      "text": "Fiasco is unique among RPGs because it encourages us to actively reach for that moment we all dread in most games, that moment when something truly awful is going to happen, with possibly dire results for our characters.",
+      "author": "Wil Wheaton, Actor and Writer"
+    }
+  ],
+  "ru": {
+    "tagShort": "Гм-лессный коэн-бродвей на d6",
+    "tagline": "«Планируй ограбление. Получи фиаско. Расскажи историю».",
+    "description": "Fiasco — настольная RPG от Bully Pulpit Games (2-е издание, 2021), вдохновлённая фильмами братьев Коэн. Гм-лессная, без пресесса, на д6-пуле (Classic) или колоде карт (2E). Игроки создают персонажей через «Playset» (тему/место), связаны отношениями, и разыгрывают 3 акта: Setup, Tilt, Aftermath. Каждый бросок — either something good (на чётных) or something bad (на нечётных). Итог — трагикомедия.",
+    "setting": "Без сеттинга. Каждая сессия — новый Playset: мафиозный Чикаго, космическая станция, подростковый лагерь, средневековая деревня. 500+ playsets на fiascoplaysets.com.",
+    "vignette": "Setup: Два брата,OWNER заброшенной фермы. Связь: «Один из нас — вор». Tilt: Странный человек с топором ломится в дверь. Aftermath: Ферма горит. Один брат мёртв. Второй в тюрьме. Третий — владелец фермы, но фермы больше нет. Фиаско.",
+    "prep": "~0 мин (Playset определяет тему)",
+    "mechanics": [
+      {
+        "title": "Д6-пул (Classic)",
+        "text": "4d6 на игрока в двух цветах. Чётное = что-то хорошее, нечётное = что-то плохое. Дубли = крах (катастрофа)."
+      },
+      {
+        "title": "Три акта",
+        "text": "Setup (связи и нужды), Tilt (повороты и осложнения), Aftermath (разбор полётов). Каждый акт — 2-3 раунда бросков."
+      },
+      {
+        "title": "Playsets",
+        "text": "Темы для сессии: мафия, космос, подростки, средневековье. Каждый playset — таблицы Needs, Locations, Objects."
+      },
+      {
+        "title": "Нет GM",
+        "text": "Все играют. Все решают. Все страдают. Фиаско — это про всех."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Fiasco 2E — бокс"
+      },
+      {
+        "cap": "Компоненты (Classic)"
+      },
+      {
+        "cap": "Fiasco Classic — обложка"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт — Bully Pulpit Games"
+      },
+      {
+        "name": "Itch.io — купить Fiasco"
+      },
+      {
+        "name": "Архив playsets (500+)"
+      }
+    ],
+    "quotes": [
+      { "text": "Одна из лучших RPG, в которые я играл. Она делаетactly то, что обещает: самодостаточная сессия без подготовки, в которой комедия ошибок и плохих решений приводит к полному фиаско." },
+      { "text": "Fiasco уникальна среди RPG тем, что побуждает нас активно искать тот момент, которого мы все боимся в других играх — момент, когда произойдёт что-то действительно ужасное, с возможными катастрофическими последствиями для наших персонажей." }
+    ]
+  },
+  "en": {
+    "tagShort": "GM-less Coen Brothers d6 — burn it all down",
+    "tagline": "\"Plan the heist. Get the fiasco. Tell the story.\"",
+    "description": "Fiasco is a tabletop RPG from Bully Pulpit Games (2nd Edition, 2021), inspired by the films of the Coen Brothers. GM-less, zero prep, d6 pool (Classic) or playing cards (2E). Players create characters through a Playset (theme/location), linked by relationships, and play through 3 acts: Setup, Tilt, Aftermath. Each roll is either something good (evens) or something bad (odds). The result is always a tragicomedy.",
+    "setting": "Setting-less. Each session is a new Playset: 1930s mobsters, a space station, a teenage camp, a medieval village. 500+ playsets at fiascoplaysets.com.",
+    "vignette": "Setup: Two brothers, owners of an abandoned farm. Relationship: 'One of us is a thief.' Tilt: A strange man with an axe pounds on the door. Aftermath: The farm burns. One brother is dead. The other is in prison. The third owns the farm — but the farm is gone. Fiasco.",
+    "prep": "~0 min (Playset defines the theme)",
+    "mechanics": [
+      {
+        "title": "d6 Pool (Classic)",
+        "text": "4d6 per player in two colors. Even = something good, odd = something bad. Doubles = disaster."
+      },
+      {
+        "title": "Three Acts",
+        "text": "Setup (needs and relationships), Tilt (turns and complications), Aftermath (fallout). Each act is 2-3 rounds of rolls."
+      },
+      {
+        "title": "Playsets",
+        "text": "Session themes: mob, space, teens, medieval. Each playset has tables for Needs, Locations, Objects."
+      },
+      {
+        "title": "No GM",
+        "text": "Everyone plays. Everyone decides. Everyone suffers. Fiasco is about all of you."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Fiasco 2E — box"
+      },
+      {
+        "cap": "Components (Classic)"
+      },
+      {
+        "cap": "Fiasco Classic — cover"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official site — Bully Pulpit Games"
+      },
+      {
+        "name": "Itch.io — buy Fiasco"
+      },
+      {
+        "name": "Playset archive (500+)"
+      }
+    ],
+    "quotes": [
+      { "text": "Hands down one of the best RPGs I have ever played. It delivers exactly what it promises: a self-contained, no-prep session in which a comedy of errors and bad decisions results in a complete fiasco." },
+      { "text": "Fiasco is unique among RPGs because it encourages us to actively reach for that moment we all dread in most games, that moment when something truly awful is going to happen, with possibly dire results for our characters." }
     ]
   }
 });
@@ -3591,6 +6158,290 @@ registerSystem("forbidden-lands", {
     ]
   }
 });
+registerSystem("genesys", {
+  "groups": {
+    "default": { "key": "narrative", "order": 49 },
+    "family": { "key": "standalone", "order": 54 },
+    "genre": { "key": "adventure", "order": 29 }
+  },
+  "name": "Genesys",
+  "publisher": "Edge Studio",
+  "dice": "Custom narrative dice (Boost, Ability, Proficiency vs Setback, Difficulty, Challenge)",
+  "players": "2–5",
+  "complexity": 3,
+  "free": false,
+  "edition": null,
+  "foundryStatus": "Community",
+  "heroImage": "https://image.nobleknight.com/f/jpg1500/ffggns01.jpg",
+  "playstyleTags": ["narrative", "action", "social"],
+  "settingTags": ["fantasy", "cyberpunk"],
+  "gallery": [
+    { "src": "https://image.nobleknight.com/f/jpg1500/ffggns03.jpg" },
+    { "src": "https://image.nobleknight.com/f/jpg1500/ffggns04.jpg" },
+    { "src": "https://image.nobleknight.com/f/jpg1500/ffggns12.jpg" }
+  ],
+  "resources": [
+    { "type": "link", "url": "https://www.edge-studio.net/games/genesys-core-rulebook/", "fmt": "Web" },
+    { "type": "rules", "url": "https://www.drivethrurpg.com/en/product/228813/genesys-core-rulebook", "fmt": "PDF" },
+    { "type": "link", "url": "https://foundryvtt.com/packages/genesys/", "fmt": "VTT" },
+    { "type": "link", "url": "https://en.wikipedia.org/wiki/Genesys_(RPG)", "fmt": "Web" }
+  ],
+  "mechanics": [
+    { "icon": "dice-6" },
+    { "icon": "sparkles" },
+    { "icon": "globe" },
+    { "icon": "wand-sparkles" }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.tabletopgaming.co.uk/reviews/genesys-rpg-review/
+    {
+      "text": "The system is elegant and easy to understand",
+      "author": "Richard Jansen-Parkes, Tabletop Gaming"
+    },
+    // VERIFIED-AT: https://cannibalhalflinggaming.com/2020/09/16/genesys-in-depth/
+    {
+      "text": "The core game is a good one; the success of Star Wars is not just built on the license.",
+      "author": "Aaron Marks, Cannibal Halfling Gaming"
+    }
+  ],
+  "ru": {
+    "tagShort": "Повествовательные кости для любого жанра",
+    "tagline": "«Одна книга правил, любой мир — на повествовательных костях».",
+    "description": "Genesys — жанрово-нейтральный инструментарий на основе Системы повествовательных костей. Вместо чисел вы собираете пул костей Усиления, Способности и Мастерства против костей Помехи, Сложности и Вызова, а затем читаете символы: чистый Успех или Провал вместе с Преимуществом или Угрозой, плюс редкие Триумф и Отчаяние. Эти побочные результаты превращают каждый бросок в сюжетный момент. С модульными правилами магии и техники и шестью примерами сеттингов одна книга водит фэнтези, киберпанк, фантастику или хоррор.",
+    "setting": "Никакого и все сразу. У Genesys нет мира по умолчанию — вместо него вы получаете жанрово-нейтральный движок и шесть примеров сеттингов: от меча-и-магии до киберпанка, странной войны и далёкого будущего, с модульными правилами магии и техники, которые вы собираете под свою кампанию.",
+    "vignette": "Вы прыгаете к отчаливающему дирижаблю, бросая две зелёные кости Способности и жёлтую кость Мастерства против фиолетовой кости Сложности мастера. Символы выпадают: два чистых Успеха, три Преимущества и золотой Триумф. Вы цепляетесь за поручень (Успех), ваш плащ зацепляет стражника и сбивает его с ног (Преимущество), а Триумф заклинивает лебёдку — и трап за вами уже не поднять.",
+    "prep": "~30 мин",
+    "mechanics": [
+      { "title": "Повествовательные кости", "text": "Собирайте пул костей Усиления, Способности и Мастерства против костей Помехи, Сложности и Вызова мастера. Исход решают выгравированные символы, а не числа." },
+      { "title": "Преимущество и Триумф", "text": "Каждый бросок читается по двум осям: Успех или Провал и Преимущество или Угроза. Редкие грани Триумфа и Отчаяния запускают драматичные повороты сверх самой задачи." },
+      { "title": "Любой жанр", "text": "Один движок водит фэнтези, фантастику, киберпанк или хоррор. Шесть примеров сеттингов и настройки тона помогают задать именно ту кампанию, которую хочет стол." },
+      { "title": "Инструментарий магии и техники", "text": "Модульные подсистемы охватывают заклинания, крафт снаряжения, транспорт и социальные дуэли, так что файербол мага и взлом хакера говорят на одном языке костей." }
+    ],
+    "gallery": [
+      { "cap": "Realms of Terrinoth привносит высокое фэнтези — расы, магию и профессии — в инструментарий Genesys." },
+      { "cap": "Shadow of the Beanstalk переносит систему в неоновый киберпанк-мегаполис Нью-Анджелес." },
+      { "cap": "Secrets of the Crucible адаптирует Genesys для причудливого лоскутного мира KeyForge." }
+    ],
+    "resources": [
+      { "name": "Genesys на Edge Studio" },
+      { "name": "Основная книга на DriveThruRPG" },
+      { "name": "Сообщественная система для Foundry VTT" },
+      { "name": "Genesys в Википедии" }
+    ],
+    "quotes": [
+      { "text": "Система элегантна и проста для понимания." },
+      { "text": "Основная игра хороша: успех «Звёздных войн» держится не только на лицензии." }
+    ]
+  },
+  "en": {
+    "tagShort": "Any-genre narrative dice",
+    "tagline": "\"One rulebook, every world — powered by narrative dice.\"",
+    "description": "Genesys is a setting-agnostic toolkit built on the Narrative Dice System. Instead of numbers, you assemble a pool of Boost, Ability, and Proficiency dice against Setback, Difficulty, and Challenge dice, then read the symbols: net Success or Failure alongside Advantage or Threat, plus rare Triumph and Despair. Those side results turn every roll into a story beat. With modular rules for magic and technology and six sample settings, one core book runs fantasy, cyberpunk, sci-fi, or horror.",
+    "setting": "None and all of them. Genesys ships no default world; it hands you a genre-neutral engine plus six sample settings — from swords-and-sorcery fantasy to cyberpunk, weird war, and far-future sci-fi — with modular rules for magic and technology you bolt on to build your own campaign.",
+    "vignette": "You leap for the departing airship, rolling two green Ability dice and a yellow Proficiency against the GM's purple Difficulty. The symbols land: two net Success, three Advantage, and a golden Triumph. You catch the rail (Success), your cloak snags a guard and drags them off balance (Advantage), and the Triumph jams the winch so no one can raise the ramp behind you.",
+    "prep": "~30 min",
+    "mechanics": [
+      { "title": "Narrative Dice", "text": "Build a pool of Boost, Ability, and Proficiency dice against the GM's Setback, Difficulty, and Challenge dice. Etched symbols, not numbers, decide what happens." },
+      { "title": "Advantage & Triumph", "text": "Every roll reads on two axes: Success or Failure, and Advantage or Threat. Rare Triumph and Despair faces trigger dramatic swings far beyond the task itself." },
+      { "title": "Any Genre", "text": "One core engine runs fantasy, sci-fi, cyberpunk, or horror. Six sample settings and tone dials help you frame exactly the campaign your table wants." },
+      { "title": "Magic & Tech Toolkit", "text": "Modular subsystems cover spellcasting, gear crafting, vehicles, and social duels, so a wizard's fireball and a hacker's intrusion speak the same dice language." }
+    ],
+    "gallery": [
+      { "cap": "Realms of Terrinoth brings high fantasy — races, magic, and careers — to the Genesys toolkit." },
+      { "cap": "Shadow of the Beanstalk drops the system into the neon cyberpunk sprawl of New Angeles." },
+      { "cap": "Secrets of the Crucible adapts Genesys for the wondrous, patchwork world of KeyForge." }
+    ],
+    "resources": [
+      { "name": "Genesys at Edge Studio" },
+      { "name": "Core Rulebook on DriveThruRPG" },
+      { "name": "Community Foundry VTT system" },
+      { "name": "Genesys on Wikipedia" }
+    ],
+    "quotes": [
+      { "text": "The system is elegant and easy to understand" },
+      { "text": "The core game is a good one; the success of Star Wars is not just built on the license." }
+    ]
+  }
+});
+registerSystem("gurps", {
+  "groups": {
+    "default": { "key": "tactical", "order": 11 },
+    "family": { "key": "standalone", "order": 32 },
+    "genre": { "key": "tactical", "order": 8 }
+  },
+  "name": "GURPS",
+  "publisher": "Steve Jackson Games",
+  "dice": "3d6",
+  "players": "3–6",
+  "complexity": 4,
+  "free": true,
+  "foundryStatus": "Community",
+  "heroImage": "https://www.sjgames.com/gurps/books/basic/img/basic1_lg.jpg",
+  "playstyleTags": [
+    "tactical",
+    "explore",
+    "combat"
+  ],
+  "settingTags": [],
+  "gallery": [
+    {
+      "src": "https://www.sjgames.com/gurps/books/basic/img/basic2_lg.jpg"
+    },
+    {
+      "src": "https://www.sjgames.com/gurps/books/basic/img/commando.jpg"
+    },
+    {
+      "src": "https://www.sjgames.com/gurps/books/basic/img/basic1_lg.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://www.sjgames.com/gurps/",
+      "fmt": "Web"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://www.warehouse23.com/products/SJG31-0004",
+      "fmt": "PDF"
+    },
+    {
+      "type": "link",
+      "url": "https://www.sjgames.com/gurps/books/basic",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "swords"
+    },
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "book-open"
+    },
+    {
+      "icon": "scroll"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://en.wikipedia.org/wiki/GURPS#Reception (citing Rick Swan, The Complete Guide to RPGs, 1990)
+    {
+      "text": "An ambitious design by Steve Jackson that attempts to cover every imaginable genre, setting and character type in the same game. That it achieves this goal at all is impressive; that it does so with imagination, elegance, and innovation is stunning.",
+      "author": "Rick Swan, The Complete Guide to Role-Playing Games"
+    },
+    // VERIFIED-AT: https://en.wikipedia.org/wiki/GURPS#Reception (citing Dave Nalle, Abyss #38, 1986)
+    {
+      "text": "GURPS is a promising game in many ways. There are some problems and omissions, but the rules are mostly simple and logical.",
+      "author": "Dave Nalle, Abyss magazine"
+    }
+  ],
+  "ru": {
+    "tagShort": "Универсальная симуляционная на 3d6",
+    "tagline": "«Любой жанр, любая эпоха, любая реальность — один набор правил».",
+    "description": "GURPS (Generic Universal RolePlaying System) — универсальная настольная RPG от Steve Jackson Games (4-е издание, 2004). Система 3d6: бросок под значение навыка/атрибута. Модульная: ядро простое, но опциональные правила (бой с позиционированием, попадания по локациям, магия, псионика) делают её одной из самых crunchy систем. 250+ книг по десяткам жанров. GURPS Lite — бесплатный 32-страничный квикстарт.",
+    "setting": "Жанр-agnostic. GURPS не привязана к миру — она создаёт мир из модулей. Фэнтези, sci-fi, хоррор, шпионаж, супергерои, история, постапокалипсис — всё в одном наборе правил. Infinite Worlds — встроенный сеттинг для путешествий во времени.",
+    "vignette": "Три кубика. 4+5+3 = 12. Против 13 (Difficulty 12). Успех на 1. Один уровень успеха — минимальный. Варвар пролезает через окно, но ломает себе руку. «Ты мог выбрать Buy at 14,» — напоминает GM. «Мне не хватило очков,» — вздыхает игрок. Добро пожаловать в GURPS.",
+    "prep": "~20 мин",
+    "mechanics": [
+      {
+        "title": "Система 3d6",
+        "text": "Бросок 3d6 против значения навыка или атрибута. Чем ниже результат, тем лучше. Криты на тройных (18 = фал, 3 = крит). Простая, но элегантная математика."
+      },
+      {
+        "title": "Модульность",
+        "text": "Ядро — ~200 страниц. Опциональные правила добавляют глубину: позиционирование в бою, попадания по локациям, крафт, социальные взаимодействия. Выбираете сложность сами."
+      },
+      {
+        "title": "Points-based création",
+        "text": "Создание персонажа на очки (Character Points). Более 100 черт (Advantages), 200+ навыков, 50+ недостатков (Disadvantages). Каждый персонаж уникален."
+      },
+      {
+        "title": "250+ книг",
+        "text": "Большой мир книг: от GURPS Space и GURPS Horror до GURPS Vikings и GURPS WWII. Каждая книга — отдельный мир или жанр."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Basic Set: Campaigns"
+      },
+      {
+        "cap": "Иллюстрация — Commando"
+      },
+      {
+        "cap": "Basic Set: Characters"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт — Steve Jackson Games"
+      },
+      {
+        "name": "GURPS Lite (бесплатный квикстарт PDF)"
+      },
+      {
+        "name": "GURPS Basic Set — продукт"
+      }
+    ],
+    "quotes": [
+      { "text": "Амбициозный дизайн Стива Джексона, пытающийся охватить каждый воображаемый жанр, сеттинг и тип персонажа в одной игре. То, что он вообще достигает этой цели, впечатляет; то, что делает это с воображением, элегантностью и инновацией — поражает." },
+      { "text": "GURPS — многообещающая игра во многих отношениях. Есть проблемы и пробелы, но правила в основном просты и логичны." }
+    ]
+  },
+  "en": {
+    "tagShort": "Universal simulationist RPG on 3d6",
+    "tagline": "\"Any genre, any era, any reality — one ruleset.\"",
+    "description": "GURPS (Generic Universal RolePlaying System) is a universal tabletop RPG from Steve Jackson Games (4th Edition, 2004). 3d6 system: roll under your skill/attribute value. Modular: core is learnable, but optional rules (combat maneuvering, hit locations, detailed magic/psionics) push it firmly into crunchy simulationist territory. 250+ sourcebooks spanning dozens of genres. GURPS Lite is a free 32-page quickstart.",
+    "setting": "Genre-agnostic by design. GURPS doesn't tie to a world — it builds worlds from modules. Fantasy, sci-fi, horror, espionage, superheroes, historical, post-apocalyptic — all in one ruleset. Infinite Worlds is the built-in setting for timeline-hopping.",
+    "vignette": "Three dice. 4+5+3 = 12. Against 13 (Difficulty 12). Success by 1. One level of success — bare minimum. The barbarian squeezes through the window but breaks his arm. 'You could have bought at 14,' the GM reminds. 'I didn't have the points,' the player sighs. Welcome to GURPS.",
+    "prep": "~20 min",
+    "mechanics": [
+      {
+        "title": "3d6 System",
+        "text": "Roll 3d6 against your skill or attribute value. The lower the result, the better. Crits on triples (18 = fumble, 3 = crit). Simple but elegant math."
+      },
+      {
+        "title": "Modularity",
+        "text": "Core is ~200 pages. Optional rules add depth: combat positioning, hit locations, crafting, social encounters. You choose the complexity."
+      },
+      {
+        "title": "Points-based Creation",
+        "text": "Character creation uses Character Points. 100+ Advantages, 200+ Skills, 50+ Disadvantages. Every character is unique."
+      },
+      {
+        "title": "250+ Books",
+        "text": "A massive world of books: from GURPS Space and GURPS Horror to GURPS Vikings and GURPS WWII. Each book is its own world or genre."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Basic Set: Campaigns"
+      },
+      {
+        "cap": "Interior art — Commando"
+      },
+      {
+        "cap": "Basic Set: Characters"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official site — Steve Jackson Games"
+      },
+      {
+        "name": "GURPS Lite (free quickstart PDF)"
+      },
+      {
+        "name": "GURPS Basic Set — product page"
+      }
+    ],
+    "quotes": [
+      { "text": "An ambitious design by Steve Jackson that attempts to cover every imaginable genre, setting and character type in the same game. That it achieves this goal at all is impressive; that it does so with imagination, elegance, and innovation is stunning." },
+      { "text": "GURPS is a promising game in many ways. There are some problems and omissions, but the rules are mostly simple and logical." }
+    ]
+  }
+});
 registerSystem("heart", {
   "groups": {
     "default": { "key": "narrative", "order": 1 },
@@ -3756,6 +6607,104 @@ registerSystem("heart", {
       {
         "name": "Quickstart (rules + adventure)"
       }
+    ]
+  }
+});
+registerSystem("his-majesty-the-worm", {
+  "groups": {
+    "default": { "key": "osr", "order": 27 },
+    "family": { "key": "standalone", "order": 48 },
+    "genre": { "key": "narrative-weird", "order": 12 }
+  },
+  "name": "His Majesty the Worm",
+  "publisher": "Rise Up Comus / Exalted Funeral",
+  "dice": "d6 dice pools + a tarot deck",
+  "players": "3–5",
+  "complexity": 2,
+  "foundryStatus": "None",
+  "free": false,
+  "edition": null,
+  "heroImage": "https://www.exaltedfuneral.com/cdn/shop/files/HMtW-CA-Hero.jpg?v=1763530083&width=1920",
+  "playstyleTags": ["explore", "combat", "mystery"],
+  "settingTags": ["fantasy", "weird"],
+  "gallery": [
+    { "src": "https://www.exaltedfuneral.com/cdn/shop/files/his-majesty-the-worm-book-888110.jpg?v=1763412737&width=2000" },
+    { "src": "https://www.exaltedfuneral.com/cdn/shop/files/his-majesty-the-worm-book-950216.jpg?v=1763412737&width=2000" },
+    { "src": "https://www.exaltedfuneral.com/cdn/shop/files/his-majesty-the-worm-book-480645.jpg?v=1763412737&width=2000" }
+  ],
+  "resources": [
+    { "type": "link", "url": "https://www.hismajestytheworm.games/", "fmt": "Web" },
+    { "type": "rules", "url": "https://www.drivethrurpg.com/en/product/488062/his-majesty-the-worm-digital-edition", "fmt": "PDF" },
+    { "type": "link", "url": "https://www.exaltedfuneral.com/products/his-majesty-the-worm", "fmt": "Print" },
+    { "type": "link", "url": "https://riseupcomus.itch.io/his-majesty-the-worm", "fmt": "Web" }
+  ],
+  "mechanics": [
+    { "icon": "shuffle" },
+    { "icon": "users" },
+    { "icon": "compass" },
+    { "icon": "flame" }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.exaltedfuneral.com/products/his-majesty-the-worm
+    {
+      "text": "His Majesty the Worm is a dungeon crawler masterpiece, bridging the way to the next generation of tabletop fantasy games.",
+      "author": "W.F. Smith, Prismatic Wasteland"
+    }
+  ],
+  "ru": {
+    "tagShort": "данжен-кроулер на картах таро",
+    "tagline": "«Спустись под Город на Краю Света».",
+    "description": "404-страничный том о походах в подземелья: новые механики на старой школьной основе. Вместо одних кубов партия тянет карты из колоды таро — они решают бой, гадание и драму. Слотовый инвентарь, свет, еда и Узы между героями здесь не бухгалтерия, а сердце долгого метроидвания-спуска.",
+    "setting": "Искатели спускаются в подземелья под Городом на Краю Света — последним городом, окружённым тьмой. Таро вершит судьбу: карты для боя, для чтения знамений, для запутанных связей между героями. Труппная игра про отношения, где кого любит ваш герой важно не меньше, чем что он несёт.",
+    "vignette": "Свет факела дрожит — вы тянете карту на встречу: Башня, перевёрнутая. Рефери улыбается. Слоты инвентаря почти забиты: верёвка, фонарь, реликвия без имени, — а свет на исходе. Кто-то должен что-то бросить или повернуть назад. Ваши Узы с вором говорят: вы его не оставите. Вы тянете снова.",
+    "prep": "~30 мин",
+    "mechanics": [
+      { "title": "Движок на таро", "text": "Одна колода решает всё: бой, проверки, гадание, драматические повороты. Механика свежая, но осваивается сразу и работает за столом без лишних правил." },
+      { "title": "Слоты и свет", "text": "Груз, свет и еда — настоящие ограничения, и это весело. То, что вы несёте, определяет, кто вы и как глубоко решитесь спуститься." },
+      { "title": "Узы и труппа", "text": "Создание персонажа геймифицирует отношения. Узы дают восстановление и втягивают партию в интересные сцены вместо бессмысленной резни." },
+      { "title": "Процедуры данжа и города", "text": "Прозрачные процедуры для походов в подземелья и интриг в Городе. Каждая подсистема объясняет, ЗАЧЕМ она нужна — прямо в книге." }
+    ],
+    "gallery": [
+      { "cap": "Твёрдый переплёт с фольгой" },
+      { "cap": "Внутренний разворот" },
+      { "cap": "Игра на картах таро" }
+    ],
+    "resources": [
+      { "name": "Официальный сайт" },
+      { "name": "Цифровое издание (DriveThruRPG)" },
+      { "name": "Печатное издание (Exalted Funeral)" },
+      { "name": "Страница на itch.io" }
+    ],
+    "quotes": [
+      { "text": "His Majesty the Worm — шедевр данжен-кроулера, прокладывающий путь к следующему поколению настольных фэнтези-игр." }
+    ]
+  },
+  "en": {
+    "tagShort": "tarot-driven dungeon crawler",
+    "tagline": "\"Descend beneath the City at the End of the World.\"",
+    "description": "A 404-page dungeon-crawling tome with new-school mechanics and old-school sensibilities. Instead of dice alone, the party draws from a tarot deck that drives combat, divination, and drama. Slot-based inventory, light, food, and character Bonds aren't bookkeeping — they're the heart of a long, Metroidvania-like descent.",
+    "setting": "Adventurers delve the dungeons beneath the City at the End of the World — the last city, ringed by darkness. The tarot shapes fate: cards for combat, for reading omens, for the tangled bonds between characters. Troupe-style, relationship-driven play where who your character loves matters as much as what they carry.",
+    "vignette": "Torchlight gutters as you draw for the encounter: the Tower, reversed. The Referee smiles. Your slot inventory is nearly full — rope, lantern, a relic you can't yet name — and the light is running out. Someone has to drop something, or turn back. Your Bond with the thief says you won't leave them behind. You draw again.",
+    "prep": "~30 min",
+    "mechanics": [
+      { "title": "The Tarot Engine", "text": "One deck resolves everything: combat, skill tests, divination, and dramatic reveals. Novel but easy to grasp, and it works at the table without a translation layer." },
+      { "title": "Slot Inventory & Light", "text": "Encumbrance, light, and food are real constraints made fun. What you carry defines who you are and how deep you dare go." },
+      { "title": "Bonds & Troupe Play", "text": "Character creation gamifies relationships. Bonds power recovery and pull the party into interesting roleplay scenes instead of murderhoboing." },
+      { "title": "Dungeon & City Procedures", "text": "Robust, transparent procedures for crawling dungeons and plotting in the City. Every subsystem explains WHY it exists, right in the book." }
+    ],
+    "gallery": [
+      { "cap": "Foil-stamped hardcover" },
+      { "cap": "Interior spread" },
+      { "cap": "Tarot-driven play" }
+    ],
+    "resources": [
+      { "name": "Official website" },
+      { "name": "Digital edition (DriveThruRPG)" },
+      { "name": "Print edition (Exalted Funeral)" },
+      { "name": "itch.io page" }
+    ],
+    "quotes": [
+      { "text": "His Majesty the Worm is a dungeon crawler masterpiece, bridging the way to the next generation of tabletop fantasy games." }
     ]
   }
 });
@@ -4462,6 +7411,154 @@ registerSystem("ker-nethalas", {
     ]
   }
 });
+registerSystem("knave", {
+  "groups": {
+    "default": { "key": "osr", "order": 24 },
+    "family": { "key": "osr-modern", "order": 3 },
+    "genre": { "key": "adventure", "order": 22 }
+  },
+  "name": "Knave",
+  "publisher": "Questing Beast Games / Ben Milton",
+  "dice": "d20 roll-over",
+  "players": "3–6",
+  "complexity": 1,
+  "foundryStatus": "Community",
+  "heroImage": "https://img.itch.zone/aW1hZ2UvMjc3NTUyNy8xNjU2NDM2Ni5wbmc=/original/r0dEmj.png",
+  "playstyleTags": [
+    "explore",
+    "combat",
+    "sandbox"
+  ],
+  "settingTags": ["fantasy"],
+  "gallery": [
+    {
+      "src": "https://img.itch.zone/aW1hZ2UvMjc3NTUyNy8xNjU2NDM3NC5qcGc=/original/e4mJTJ.jpg"
+    },
+    {
+      "src": "https://img.itch.zone/aW1hZ2UvMjc3NTUyNy8xNjU2NDM4MC5qcGc=/original/0JHiXM.jpg"
+    },
+    {
+      "src": "https://image.nobleknight.com/2/jpg1500/24194440115h.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://questingbeast.itch.io/knave-second-edition",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "backpack"
+    },
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "shuffle"
+    },
+    {
+      "icon": "feather"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.explorersdesign.com/exploring-knave-2e/
+    {
+      "text": "Knave 2E's random roll tables will find their way into other games. They're that good.",
+      "author": "Clayton Notestine, Explorers Design"
+    },
+    // VERIFIED-AT: https://michaelghelfistudios.com/knave-2e/
+    {
+      "text": "Knave is lightweight, flexible, and powerful. Its elegant design equally empowers players and GMs.",
+      "author": "John Hodson, Michael Ghelfi Studios"
+    }
+  ],
+  "ru": {
+    "tagShort": "Ультралёгкий бесклассовый OSR-каркас",
+    "tagline": "«Твой инвентарь — это твой билд».",
+    "description": "Knave — предельно лёгкая OSR-игра Бена Милтона (Questing Beast). Персонаж без класса: его определяют характеристики и предметы в слотах инвентаря. 80 страниц — почти сплошь генераторы (NPC, монстры, заклинания, подземелья, гексы), превращающие подготовку в бросок пары таблиц. Идеальный хакаемый каркас под свою кампанию.",
+    "setting": "Система-агностик классического фэнтези. Knave ничего не навязывает: ни сеттинга, ни классов, ни длинных списков умений. Дух — олдскульный данжен-кроул и гексокроул, где смекалка игрока важнее циферок. Пустой холст с мощнейшим набором таблиц, чтобы заполнить его на лету.",
+    "vignette": "Взломщик тянется к рычагу в стене. Ведущий назначает сложность 14. Бросок d20 + бонус Ловкости, нужно 14 или выше. Выпало 16 — рычаг поддаётся, решётка ползёт вверх. Но слоты инвентаря почти полны: факел, верёвка, добытый идол... что-то придётся бросить, чтобы освободить руки. В Knave вес и место решают не меньше боя.",
+    "prep": "~15 мин",
+    "mechanics": [
+      {
+        "title": "Бесклассовость через инвентарь",
+        "text": "Классов нет: кто ты — определяют характеристики и предметы. Инвентарь измеряется слотами (по Силе), и то, что ты носишь, буквально задаёт твои возможности."
+      },
+      {
+        "title": "Бросок «больше» на d20",
+        "text": "Проверка — d20 + бонус характеристики против сложности. Одна механика на всё: атаки, спасброски, навыки. Учится за минуту, играется мгновенно."
+      },
+      {
+        "title": "Генераторы на всё",
+        "text": "Сердце книги — таблицы: NPC, монстры, заклинания, подземелья, гексы, зацепки. Целые куски мира собираются броском кубика. Подготовка почти исчезает."
+      },
+      {
+        "title": "Лёгкий и хакаемый",
+        "text": "Ядро правил умещается на пару страниц. Knave создан, чтобы его растаскивали и хакали — таблицы и слоты легко вставляются в любую другую олдскульную игру."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Разворот книги"
+      },
+      {
+        "cap": "Интерьерный арт"
+      },
+      {
+        "cap": "Premium Edition"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальная страница (itch.io)"
+      }
+    ]
+  },
+  "en": {
+    "tagShort": "An ultra-light, classless OSR toolkit",
+    "tagline": "\"Your inventory is your build.\"",
+    "description": "Knave is Ben Milton's (Questing Beast) ultra-light OSR game. Characters are classless — defined by their attributes and the items in their inventory slots. Its 80 pages are mostly generators (NPCs, monsters, spells, dungeons, hexes) that turn prep into rolling a couple of tables. The perfect hackable frame for your own campaign.",
+    "setting": "Setting-agnostic classic fantasy. Knave imposes nothing — no setting, no classes, no long skill lists. The spirit is old-school dungeon- and hex-crawling where player cunning beats stat blocks. A blank canvas with a powerhouse set of tables to fill it on the fly.",
+    "vignette": "The burglar reaches for a lever in the wall. The GM sets the difficulty at 14. Roll d20 + Dexterity bonus, need 14 or higher. A 16 — the lever gives, the portcullis grinds upward. But the inventory slots are nearly full: torch, rope, the looted idol... something has to be dropped to free your hands. In Knave, weight and space matter as much as combat.",
+    "prep": "~15 min",
+    "mechanics": [
+      {
+        "title": "Classless via inventory",
+        "text": "No classes: who you are is defined by attributes and items. Inventory is measured in slots (by Strength), and what you carry literally sets what you can do."
+      },
+      {
+        "title": "Roll-over d20",
+        "text": "A test is d20 + attribute bonus against a difficulty. One mechanic for everything: attacks, saves, skills. Learned in a minute, played instantly."
+      },
+      {
+        "title": "Generators for everything",
+        "text": "The heart of the book is its tables: NPCs, monsters, spells, dungeons, hexes, hooks. Whole chunks of the world come together on a die roll. Prep nearly vanishes."
+      },
+      {
+        "title": "Light & hackable",
+        "text": "The core rules fit on a couple of pages. Knave is built to be plundered and hacked — its tables and slots drop easily into any other old-school game."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Book spread"
+      },
+      {
+        "cap": "Interior art"
+      },
+      {
+        "cap": "Premium Edition"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official page (itch.io)"
+      }
+    ]
+  }
+});
 registerSystem("koriko", {
   "groups": {
     "default": { "key": "narrative", "order": 19.5 },
@@ -4614,6 +7711,170 @@ registerSystem("koriko", {
       },
       {
         "name": "Mousehole Press official store"
+      }
+    ]
+  }
+});
+registerSystem("kult-divinity-lost", {
+  "groups": {
+    "default": { "key": "narrative", "order": 31 },
+    "family": { "key": "pbta-fitd", "order": 27 },
+    "genre": { "key": "horror", "order": 7 }
+  },
+  "name": "Kult: Divinity Lost",
+  "publisher": "Helmgast",
+  "dice": "2d10 + модификатор (PbtA)",
+  "players": "3–5",
+  "complexity": 2,
+  "free": true,
+  "foundryStatus": "Community",
+  "heroImage": "https://modiphius.net/cdn/shop/products/Gamemaster_Screen.png",
+  "playstyleTags": [
+    "horror",
+    "narrative",
+    "mystery"
+  ],
+  "settingTags": ["modern", "weird"],
+  "gallery": [
+    {
+      "src": "https://modiphius.net/cdn/shop/products/Kult_Core_Book.png"
+    },
+    {
+      "src": "https://modiphius.net/cdn/shop/products/The_Black_Madonna.png"
+    },
+    {
+      "src": "https://modiphius.net/cdn/shop/products/Taroticum_and_Other_Tales.png"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://helmgast.se/kult/",
+      "fmt": "Web"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://modiphius.net/en-us/products/kult-divinity-lost-quickstart-rules-free-pdf",
+      "fmt": "PDF"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "brain"
+    },
+    {
+      "icon": "eye"
+    },
+    {
+      "icon": "skull"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://thegaminggang.com/our_reviews/kult-divinity-lost-reviewed
+    {
+      "text": "Just because I can't see running Kult: Divinity Lost with my gang doesn't mean this isn't an exceptionally well done roleplaying game.",
+      "author": "Jeff McAleer, The Gaming Gang"
+    },
+    // VERIFIED-AT: https://www.rpg.net/reviews/archive/18/18031.phtml
+    {
+      "text": "If you fall into its target group you will discover a rich and well-researched setting that will make your imagination run wild.",
+      "author": "Antonios S, RPGnet"
+    }
+  ],
+  "ru": {
+    "tagShort": "Оккультный хоррор: реальность — тюрьма",
+    "tagline": "«Мы — падшие божества, а мир вокруг — Иллюзия, скрывающая правду».",
+    "description": "Kult: Divinity Lost — 4-я редакция культового шведского хоррора от Helmgast, теперь на движке Powered by the Apocalypse (2d10). Реальность — ложь, темница для человечества, некогда божественного. Прорвавшись сквозь Иллюзию, персонажи видят истинный кошмар за фасадом. Взрослый, философский и по-настоящему тревожный хоррор.",
+    "setting": "Современный мир — это Иллюзия, сотканная, чтобы держать людей в плену и забвении их божественной природы. За ней — Метрополис (мёртвый город-первооснова) и Инферно (десять чистилищ страдания). Ангелы Смерти, ликторы, сущности Смерти и Страсти. Личный, психологический хоррор о деградации и прозрении.",
+    "vignette": "Ваш герой находит фотографию, которой не должно существовать: на ней он сам — в месте, где никогда не был. Ход «Разобраться в ситуации»: 2d10 + Проницательность. Выпало 8 — частичный успех, правда приходит с ценой. Ведущий: «Ты вспоминаешь. И с этим воспоминанием твоя Стабильность рушится». Стены комнаты на миг становятся прозрачными — за ними шевелится Метрополис.",
+    "prep": "~15 мин",
+    "mechanics": [
+      {
+        "title": "Ходы на 2d10 (PbtA)",
+        "text": "Действие запускает «ход»: 2d10 + характеристика. 15+ — полный успех, 10–14 — с осложнением, 9 и ниже — провал и ход ведущего. Фикшн-первый подход, знакомый по Apocalypse World."
+      },
+      {
+        "title": "Тёмные секреты и Недостатки",
+        "text": "У каждого персонажа есть Тёмный секрет и Недостатки, вплетающие его в кошмар. Это не флаф, а мотор сюжета: именно они тянут героя к правде и гибели."
+      },
+      {
+        "title": "Стабильность",
+        "text": "Шкала рассудка. Прозрение сквозь Иллюзию, насилие и ужас подтачивают Стабильность. Чем ниже — тем ближе персонаж к безумию, одержимости или Пробуждению."
+      },
+      {
+        "title": "Пробуждение сквозь Иллюзию",
+        "text": "Игра — о том, чтобы увидеть истину за фасадом реальности. Каждое откровение опасно: знание освобождает и уничтожает одновременно. Сеттинг встроен в саму механику ужаса."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Core Book"
+      },
+      {
+        "cap": "The Black Madonna"
+      },
+      {
+        "cap": "Taroticum & Other Tales"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт — Helmgast"
+      },
+      {
+        "name": "Бесплатные Quickstart-правила"
+      }
+    ],
+    "quotes": [
+      { "text": "То, что я не вижу, как вести Kult: Divinity Lost со своей компанией, не значит, что это не исключительно хорошо сделанная ролевая игра." },
+      { "text": "Если вы попадаете в её целевую аудиторию, вы откроете богатый и тщательно проработанный сеттинг, который заставит воображение разгуляться." }
+    ]
+  },
+  "en": {
+    "tagShort": "Occult horror: reality is a prison",
+    "tagline": "\"We are fallen divinities, and the world around us is an Illusion hiding the truth.\"",
+    "description": "Kult: Divinity Lost is the 4th edition of Helmgast's cult Swedish horror game, now Powered by the Apocalypse (2d10). Reality is a lie — a prison for a humanity that was once divine. Breaking through the Illusion, characters glimpse the true nightmare behind the facade. Adult, philosophical, and genuinely disturbing horror.",
+    "setting": "The modern world is an Illusion woven to keep humanity captive and forgetful of its divine nature. Behind it lie Metropolis (the dead primordial city) and Inferno (ten purgatories of suffering). Angels of Death, lictors, entities of Death and Passion. Personal, psychological horror about degradation and revelation.",
+    "vignette": "Your character finds a photograph that shouldn't exist: it's them, in a place they've never been. The move 'See Through the Illusion': 2d10 + Perception. You roll an 8 — a partial success; the truth comes at a cost. The GM: 'You remember. And with the memory, your Stability cracks.' The room's walls turn briefly transparent — behind them, Metropolis stirs.",
+    "prep": "~15 min",
+    "mechanics": [
+      {
+        "title": "2d10 moves (PbtA)",
+        "text": "An action triggers a 'move': 2d10 + stat. 15+ is a full success, 10–14 comes with a complication, 9 or under fails and hands the GM a move. A fiction-first approach familiar from Apocalypse World."
+      },
+      {
+        "title": "Dark Secrets & Disadvantages",
+        "text": "Every character has a Dark Secret and Disadvantages that weave them into the nightmare. Not flavor but the engine of the story — they drag the hero toward the truth and their doom."
+      },
+      {
+        "title": "Stability",
+        "text": "A sanity track. Seeing through the Illusion, violence, and horror erode Stability. The lower it falls, the closer the character comes to madness, possession, or Awakening."
+      },
+      {
+        "title": "Awakening through the Illusion",
+        "text": "The game is about seeing the truth behind reality's facade. Every revelation is dangerous: knowledge frees and destroys at once. The setting is built into the very mechanics of horror."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Core Book"
+      },
+      {
+        "cap": "The Black Madonna"
+      },
+      {
+        "cap": "Taroticum & Other Tales"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official site — Helmgast"
+      },
+      {
+        "name": "Free Quickstart rules"
       }
     ]
   }
@@ -5442,6 +8703,744 @@ registerSystem("last-tea-shop", {
     ]
   }
 });
+registerSystem("liminal-horror", {
+  "groups": {
+    "default": { "key": "osr", "order": 28 },
+    "family": { "key": "into-the-odd", "order": 6 },
+    "genre": { "key": "horror", "order": 13 },
+    "solo": { "key": "solo-compatible", "order": 12.5 }
+  },
+  "name": "Liminal Horror",
+  "publisher": "Goblin Archives",
+  "dice": "d20 + d6 damage (Into the Odd-based)",
+  "players": "3–5",
+  "complexity": 1,
+  "foundryStatus": "Community",
+  "free": true,
+  "edition": null,
+  "heroImage": "https://img.itch.zone/aW1nLzE1NTgwMzU0LnBuZw==/original/Fiylam.png",
+  "playstyleTags": ["horror", "mystery", "explore"],
+  "settingTags": ["modern", "weird"],
+  "gallery": [
+    { "src": "https://img.itch.zone/aW1hZ2UvMTA1MDI4NC8xNzcwNTQ3Ni5wbmc=/original/O7koxW.png" },
+    { "src": "https://img.itch.zone/aW1hZ2UvMTA1MDI4NC8xNzcwNTQ4Ny5wbmc=/original/ANpkT0.png" },
+    { "src": "https://img.itch.zone/aW1hZ2UvMTA1MDI4NC8xNzcwNTQ4OS5wbmc=/original/qlrF86.png" }
+  ],
+  "resources": [
+    { "type": "rules", "url": "https://liminalhorrorrpg.com/", "fmt": "Web" },
+    { "type": "rules", "url": "https://goblinarchives.itch.io/liminal-horror", "fmt": "PDF" },
+    { "type": "srd", "url": "https://liminalhorrorrpg.com/srd/", "fmt": "Web" }
+  ],
+  "mechanics": [
+    { "icon": "brain" },
+    { "icon": "skull" },
+    { "icon": "search" },
+    { "icon": "plug" }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://tasker.land/2023/08/22/review-liminal-horror/
+    {
+      "text": "Liminal Horror is not a game where you can get out of trouble by flipping through the rulebook, the only way out is to look up and start talking to both your GM and the other people at your table.",
+      "author": "Moreau Vazh, Taskerland"
+    }
+  ],
+  "ru": {
+    "tagShort": "лёгкий современный космический хоррор",
+    "tagline": "«Обычные люди против того, что таится в темноте».",
+    "description": "Лёгкая хоррор-игра на движке Into the Odd (через Cairn). Обычные люди расследуют ползучий космический ужас — и опасность не только в смерти, но и в распаде личности. По мере роста напряжения копится СТРЕСС, персонаж ломается и получает Fallout — сверхъестественные последствия, которые остаются с ним до конца истории.",
+    "setting": "Наши дни, отделённые от чего-то неправильного одной тонкой мембраной. Пустые парковки, лиминальные офисные коридоры, городки с гнилью под кожей. Никаких бестиариев для зубрёжки — ужас уникален, а из инструментов только любопытство, нервы и готовность говорить.",
+    "vignette": "Вы загоняете тварь в подвал. Броска на попадание нет — удар просто проходит, d6 урона, а когда Hit Protection кончается, кости вгрызаются в СИЛУ. Комнату вы пережили. Но проверка СТРЕССА провалена, срабатывает Critical Fallout — и теперь отражение отстаёт от вас на полсекунды. И идёт за вами домой.",
+    "prep": "~10 мин",
+    "mechanics": [
+      { "title": "СТРЕСС и Fallout", "text": "Страх и напряжение копятся как СТРЕСС. Провал проверки — бросок по таблице Fallout: стойкие сверхъестественные эффекты, а не список психических расстройств. Разум уходит в странное." },
+      { "title": "Бой Into the Odd", "text": "Никаких бросков на попадание. Атаки проходят автоматически на урон; выживание держится на Hit Protection и характеристиках. Драки быстры, смертельны и редко того стоят." },
+      { "title": "Решения важнее правил", "text": "Около 35 страниц. Отговориться правилами нельзя — единственный выход из беды — поднять глаза от листа и заговорить со столом." },
+      { "title": "Бесплатно и открыто", "text": "Бесплатные веб-правила, бесплатный PDF и SRD под CC BY-SA. Вокруг того же движка выросла целая экосистема сторонних модулей и хаков." }
+    ],
+    "gallery": [
+      { "cap": "Обложка корбука" },
+      { "cap": "Разворот" },
+      { "cap": "Разворот" }
+    ],
+    "resources": [
+      { "name": "Бесплатные веб-правила" },
+      { "name": "Бесплатный PDF (itch.io)" },
+      { "name": "SRD (CC BY-SA)" }
+    ],
+    "quotes": [
+      { "text": "Liminal Horror — не та игра, где можно выпутаться, листая книгу правил; единственный выход — поднять глаза и начать говорить с ведущим и остальными за столом." }
+    ]
+  },
+  "en": {
+    "tagShort": "rules-light modern cosmic horror",
+    "tagline": "\"Normal people against the things that go bump in the night.\"",
+    "description": "A rules-light modern horror game built on the Into the Odd engine (by way of Cairn). Ordinary characters investigate creeping, cosmic dread — and the danger isn't just dying, it's coming apart. As the pressure mounts, STRESS accumulates and characters break down, gaining supernatural Fallout that lingers on them for the rest of the story.",
+    "setting": "The modern day, one thin membrane away from something wrong. Empty parking garages, liminal office corridors, small towns with a rot underneath. There are no monster manuals to memorize — the horror is bespoke, and the only tools are curiosity, nerve, and a willingness to talk it through.",
+    "vignette": "You corner the thing in the basement. There is no attack roll — the strike simply lands, d6 damage, and once your Hit Protection is gone the dice bite into STRENGTH. You survive the room. But the STRESS check fails, Critical Fallout triggers, and now your reflection lags a half-second behind you. That follows you home.",
+    "prep": "~10 min",
+    "mechanics": [
+      { "title": "STRESS & Fallout", "text": "Fear and strain build as STRESS. Fail a check and you roll on Fallout — lingering supernatural effects, not a mental-illness table. The mind frays into the weird." },
+      { "title": "Into the Odd combat", "text": "No to-hit rolls. Attacks land automatically for damage; survival rides on Hit Protection and ability scores. Fights are fast, lethal, and rarely worth starting." },
+      { "title": "Rulings over rules", "text": "About 35 pages. You can't lawyer your way out — the only exit from trouble is looking up from the sheet and talking to the table." },
+      { "title": "Free & open", "text": "Free web rules, free PDF, and a CC BY-SA SRD. A whole ecosystem of third-party modules and hacks builds on the same engine." }
+    ],
+    "gallery": [
+      { "cap": "Core book cover" },
+      { "cap": "Interior spread" },
+      { "cap": "Interior spread" }
+    ],
+    "resources": [
+      { "name": "Free web rules" },
+      { "name": "Free PDF (itch.io)" },
+      { "name": "SRD (CC BY-SA)" }
+    ],
+    "quotes": [
+      { "text": "Liminal Horror is not a game where you can get out of trouble by flipping through the rulebook, the only way out is to look up and start talking to both your GM and the other people at your table." }
+    ]
+  }
+});
+registerSystem("lotfp", {
+  "groups": {
+    "default": { "key": "osr", "order": 23 },
+    "family": { "key": "osr-classic", "order": 14 },
+    "genre": { "key": "horror", "order": 8 }
+  },
+  "name": "Lamentations of the Flame Princess",
+  "publisher": "Lamentations of the Flame Princess",
+  "dice": "d20 + B/X resolution",
+  "players": "3–6",
+  "complexity": 2,
+  "edition": "B/X",
+  "free": true,
+  "foundryStatus": "Community",
+  "heroImage": "https://us.lotfp.com/store/image/cache/catalog/CoverDisplay2-500x500.jpg",
+  "playstyleTags": [
+    "horror",
+    "explore",
+    "survival"
+  ],
+  "settingTags": ["historical", "weird"],
+  "gallery": [
+    {
+      "src": "https://us.lotfp.com/store/image/cache/catalog/BroodmotherCoverDisplay-500x500.jpg"
+    },
+    {
+      "src": "https://us.lotfp.com/store/image/cache/catalog/AABloodCoverDisplay-500x500.jpg"
+    },
+    {
+      "src": "https://us.lotfp.com/store/image/cache/catalog/AAFCoverDisplay-500x500.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://lotfp.com/store/",
+      "fmt": "Web"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://archive.org/details/lot-fprules-magic-free-no-art",
+      "fmt": "PDF"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "skull"
+    },
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "flame"
+    },
+    {
+      "icon": "gift"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.rpg.net/reviews/archive/16/16920.phtml
+    {
+      "text": "if you're looking for OSR-rules, through a shade darkly, then this book will deliver in spades.",
+      "author": "Endzeitgeist, RPGnet"
+    },
+    // VERIFIED-AT: https://www.rpg.net/reviews/archive/16/16920.phtml
+    {
+      "text": "You can complain about the aesthetics, they are a matter of taste; but I can't see any true faults with the rules presented herein.",
+      "author": "Endzeitgeist, RPGnet"
+    }
+  ],
+  "ru": {
+    "tagShort": "Вирд-хоррор OSR в реальной Европе XVII века",
+    "tagline": "«Раннее Новое время, куда прорывается космический ужас».",
+    "description": "Lamentations of the Flame Princess — OSR-игра вирд-хоррора Джеймса Эдварда Рагги IV. Правила — производная от B/X D&D, но подача другая: мрачное, взрослое, часто шокирующее фэнтези ужасов. Магия здесь опасна и чужеродна, а сокровища — проклятия. Знаменита сильнейшими самостоятельными модулями и бескомпромиссным тоном.",
+    "setting": "Не выдуманный мир, а реальная Европа примерно XVII века — грязная, суеверная, жестокая — куда вторгается лавкрафтовский и хоуардовский космический ужас. Магия редка и извращает мир; сверхъестественное всегда чуждо и неправильно. Играбельно и как исторический хоррор, и как гримдарк-фэнтези с зубами.",
+    "vignette": "Специалист вскрывает замок древнего сундука — d6 против навыка, у профессионала шанс выше среднего. Успех. Внутри — не золото, а книга в переплёте из кожи. Маг распознаёт заклинание: оно работает, но цена в тексте написана мелким шрифтом. В LotFP находка сокровища — это чаще начало беды, чем награда.",
+    "prep": "~15 мин",
+    "mechanics": [
+      {
+        "title": "Ядро B/X с навыками",
+        "text": "d20 на атаку, классы и уровни B/X, но со специалистом-вором и системой навыков на d6. Совместимо с олдскульными модулями, при этом чуть современнее в мелочах."
+      },
+      {
+        "title": "Опасная, чуждая магия",
+        "text": "Заклинания не «фаерболы по кнопке», а нечто неправильное и рискованное. Магия ломает реальность и часто героя вместе с ней — ровно тот вирд-тон, что задаёт вся игра."
+      },
+      {
+        "title": "Реальная историческая Европа",
+        "text": "Действие — в настоящем раннем Новом времени с датами и местами, куда прорывается космический ужас. Приземлённость истории делает сверхъестественное вдвойне жутким."
+      },
+      {
+        "title": "Бесплатная версия без арта",
+        "text": "Официальный «Rules & Magic» в версии без иллюстраций — бесплатный PDF (арт LotFP часто NSFW). Полные правила — с нулевым порогом входа."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Broodmother SkyFortress"
+      },
+      {
+        "cap": "Adventure Anthology: Blood"
+      },
+      {
+        "cap": "Adventure Anthology: Fire"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный магазин — LotFP"
+      },
+      {
+        "name": "Бесплатная версия без арта (PDF)"
+      }
+    ],
+    "quotes": [
+      { "text": "Если вы ищете OSR-правила с тёмным оттенком — эта книга выдаст их сполна." },
+      { "text": "Можно ворчать на эстетику — это дело вкуса; но никаких настоящих изъянов в изложенных правилах я не вижу." }
+    ]
+  },
+  "en": {
+    "tagShort": "Weird-horror OSR in real 17th-century Europe",
+    "tagline": "\"The early modern era, into which cosmic horror breaks through.\"",
+    "description": "Lamentations of the Flame Princess is James Edward Raggi IV's weird-horror OSR game. The rules are a B/X D&D derivative, but the presentation is different: dark, adult, often shocking horror fantasy. Magic here is dangerous and alien, and treasure is a curse. Famous for its outstanding standalone modules and uncompromising tone.",
+    "setting": "Not an invented world but a real, roughly 17th-century Europe — filthy, superstitious, brutal — into which Lovecraftian and Howardian cosmic horror intrudes. Magic is rare and warps the world; the supernatural is always alien and wrong. It plays as historical horror or as grimdark fantasy with teeth.",
+    "vignette": "The Specialist picks the lock on an ancient chest — d6 against a skill, better than even odds for a pro. Success. Inside isn't gold but a book bound in skin. The magic-user identifies the spell: it works, but the price is written in the fine print. In LotFP, finding treasure is more often the start of trouble than a reward.",
+    "prep": "~15 min",
+    "mechanics": [
+      {
+        "title": "B/X core with skills",
+        "text": "d20 to hit, B/X classes and levels, but with a Specialist (thief) and a d6 skill system. Compatible with old-school modules while a touch more modern in the details."
+      },
+      {
+        "title": "Dangerous, alien magic",
+        "text": "Spells aren't push-button fireballs but something wrong and risky. Magic breaks reality, and often the caster with it — exactly the weird tone the whole game sets."
+      },
+      {
+        "title": "A real historical Europe",
+        "text": "Set in an actual early-modern era with dates and places, into which cosmic horror erupts. The grounded history makes the supernatural doubly unsettling."
+      },
+      {
+        "title": "Free no-art version",
+        "text": "The official 'Rules & Magic' in a no-illustrations version is a free PDF (LotFP art is often NSFW). The full rules with a zero-cost on-ramp."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Broodmother SkyFortress"
+      },
+      {
+        "cap": "Adventure Anthology: Blood"
+      },
+      {
+        "cap": "Adventure Anthology: Fire"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official store — LotFP"
+      },
+      {
+        "name": "Free no-art version (PDF)"
+      }
+    ]
+  }
+});
+registerSystem("mage-the-ascension", {
+  "groups": {
+    "default": { "key": "narrative", "order": 32 },
+    "family": { "key": "standalone", "order": 40 },
+    "genre": { "key": "horror", "order": 9 }
+  },
+  "name": "Mage: The Ascension",
+  "publisher": "Onyx Path Publishing / White Wolf",
+  "dice": "d10 dice pool (Storyteller System)",
+  "players": "3–5",
+  "complexity": 3,
+  "foundryStatus": "Community",
+  "heroImage": "https://image.nobleknight.com/m/jpg1500/mta20thpremium.jpg",
+  "playstyleTags": [
+    "narrative",
+    "social",
+    "horror"
+  ],
+  "settingTags": ["modern", "urban-fantasy"],
+  "gallery": [
+    {
+      "src": "https://image.nobleknight.com/m/jpg1500/mta20thpremium1.jpg"
+    },
+    {
+      "src": "https://image.nobleknight.com/m/jpg1500/magequickstart20th.jpg"
+    },
+    {
+      "src": "https://image.nobleknight.com/m/jpg1500/m20dqe.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://theonyxpath.com/mage-the-ascension-20th-anniversary-edition/",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "sparkles"
+    },
+    {
+      "icon": "triangle-alert"
+    },
+    {
+      "icon": "eye"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://grognardia.blogspot.com/2026/04/retrospective-mage-ascension.html
+    {
+      "text": "It's an absolutely terrific premise and one that works well within a modern-day setting.",
+      "author": "James Maliszewski, Grognardia"
+    },
+    // VERIFIED-AT: https://grognardia.blogspot.com/2026/04/retrospective-mage-ascension.html
+    {
+      "text": "The Technocracy is both a terrific adversary and brilliant bit of worldbuilding.",
+      "author": "James Maliszewski, Grognardia"
+    }
+  ],
+  "ru": {
+    "tagShort": "Тайная война магов за саму природу реальности",
+    "tagline": "«Реальность — это то, во что верит большинство. Маги знают, как её переписать».",
+    "description": "Mage: The Ascension — классика Мира Тьмы о просветлённых магах (Willworkers), ведущих тайную войну за то, каким будет реальность. Магия здесь — не заклинания из книжки, а сила воли и парадигмы: ты меняешь мир, потому что знаешь, что он может быть иным. Технократия против мистических Традиций, наука против веры. Философский, амбициозный оккультный хоррор.",
+    "setting": "Современный мир, где реальность держится на «консенсусе» — общей вере масс. Маги пробудились и видят: правила можно переписать. Технократия куёт мир порядка, науки и контроля; девять Традиций хранят мистику и чудо. Между ними — Война Вознесения за душу человечества. Оккультизм, паранойя и большие идеи.",
+    "vignette": "Маг Культа Экстаза хочет исцелить умирающего одной волей. Это «вульгарная» магия — она противоречит тому, что видят обычные свидетели. Он собирает пул: Arete + Сфера Жизни, бросок d10, успехи против сложности. Рана затягивается на глазах медсестры — и реальность мстит. Ведущий начисляет Парадокс: где-то рядом уже сгущается кара за нарушение законов мира.",
+    "prep": "~30 мин",
+    "mechanics": [
+      {
+        "title": "Storyteller System (d10)",
+        "text": "Действие — пул d10 из Атрибута и Способности. Каждый кубик выше сложности — успех. Классическая механика Мира Тьмы: быстро, драматично, с местом для нарратива."
+      },
+      {
+        "title": "Девять Сфер магии",
+        "text": "Магия разбита на девять Сфер (Силы, Жизнь, Разум, Время, Дух…). Точки в Сферах определяют, как далеко ты можешь изменить реальность. Не список заклинаний, а свободное творчество воли."
+      },
+      {
+        "title": "Парадокс",
+        "text": "Твори «вульгарную» магию на глазах непосвящённых — и реальность бьёт в ответ Парадоксом: от неудач до катастроф и «парадоксных духов». Чудо всегда имеет цену."
+      },
+      {
+        "title": "Технократия против Традиций",
+        "text": "Сеттинг — тайная Война Вознесения за то, во что будет верить человечество. Наука и контроль против мистики и чуда. Убеждения буквально формируют мир — идейный конфликт вшит в правила."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "M20 Core (арт)"
+      },
+      {
+        "cap": "M20 Quickstart"
+      },
+      {
+        "cap": "Deluxe Edition"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальная страница — Onyx Path"
+      }
+    ],
+    "quotes": [
+      { "text": "Это совершенно потрясающая посылка, и она отлично работает в современном сеттинге." },
+      { "text": "Технократия — и великолепный противник, и блестящий образец мироустройства." }
+    ]
+  },
+  "en": {
+    "tagShort": "A secret war of mages over the nature of reality",
+    "tagline": "\"Reality is what the majority believes. Mages know how to rewrite it.\"",
+    "description": "Mage: The Ascension is the World of Darkness classic about enlightened mages (Willworkers) waging a secret war over what reality will be. Magic here isn't spells from a book but willpower and paradigm: you change the world because you know it could be otherwise. The Technocracy against the mystic Traditions, science against faith. Philosophical, ambitious occult horror.",
+    "setting": "A modern world where reality rests on 'consensus' — the shared belief of the masses. Mages have Awakened and see that the rules can be rewritten. The Technocracy forges a world of order, science, and control; the nine Traditions guard mysticism and wonder. Between them, the Ascension War for the soul of humanity. Occultism, paranoia, and big ideas.",
+    "vignette": "A Cult of Ecstasy mage wants to heal a dying man by will alone. That's 'vulgar' magic — it defies what ordinary witnesses see. He gathers a pool: Arete + the Life Sphere, rolls d10s, successes against a difficulty. The wound knits shut before the nurse's eyes — and reality retaliates. The GM assigns Paradox: somewhere nearby, punishment for breaking the world's laws is already gathering.",
+    "prep": "~30 min",
+    "mechanics": [
+      {
+        "title": "Storyteller System (d10)",
+        "text": "An action is a d10 pool from an Attribute and an Ability. Each die over the difficulty is a success. The classic World of Darkness mechanic: fast, dramatic, with room for narrative."
+      },
+      {
+        "title": "The nine Spheres of magic",
+        "text": "Magic is split into nine Spheres (Forces, Life, Mind, Time, Spirit…). Your dots in each set how far you can reshape reality. Not a spell list but the free creativity of will."
+      },
+      {
+        "title": "Paradox",
+        "text": "Work 'vulgar' magic in front of the uninitiated and reality strikes back with Paradox: from botches to catastrophes and 'Paradox spirits.' A miracle always has a price."
+      },
+      {
+        "title": "Technocracy vs Traditions",
+        "text": "The setting is a secret Ascension War over what humanity will believe. Science and control against mysticism and wonder. Belief literally shapes the world — an ideological conflict built into the rules."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "M20 Core (art)"
+      },
+      {
+        "cap": "M20 Quickstart"
+      },
+      {
+        "cap": "Deluxe Edition"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official page — Onyx Path"
+      }
+    ]
+  }
+});
+registerSystem("marvel-multiverse", {
+  "groups": {
+    "default": { "key": "tactical", "order": 14 },
+    "family": { "key": "standalone", "order": 36.5 },
+    "genre": { "key": "tactical", "order": 10 }
+  },
+  "name": "Marvel Multiverse RPG",
+  "publisher": "Marvel",
+  "dice": "d616 (3d6)",
+  "players": "3–5",
+  "complexity": 2,
+  "free": true,
+  "foundryStatus": "Community",
+  "heroImage": "https://images2.penguinrandomhouse.com/cover/9781302927837",
+  "playstyleTags": [
+    "combat",
+    "narrative",
+    "explore"
+  ],
+  "settingTags": ["modern"],
+  "gallery": [
+    {
+      "src": "https://images-na.ssl-images-amazon.com/images/P/1302927833.01._SCLZZZZZZZ_SX300_.jpg"
+    },
+    {
+      "src": "https://static0.cbrimages.com/wordpress/wp-content/uploads/2023/08/marvel-multiverse-rpg.jpg"
+    },
+    {
+      "src": "https://images2.penguinrandomhouse.com/cover/9781302927837"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://www.marvel.com/rpg",
+      "fmt": "Web"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://www.marvel.com/rpg",
+      "fmt": "Web"
+    },
+    {
+      "type": "link",
+      "url": "https://www.demiplane.com/nexus/marvel-multiverse",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "swords"
+    },
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "book-open"
+    },
+    {
+      "icon": "scroll"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.forbes.com/sites/robwieland/2023/07/30/marvels-new-tabletop-role-playing-game-brings-the-multiverse-home/
+    {
+      "text": "Marvel Multiverse Role-Playing Game is an excellent choice for fans of Marvel comics who want to try out an RPG or Dungeons & Dragons fans who want to move onto a system that's different while still having familiar elements.",
+      "author": "Rob Wieland, Forbes"
+    },
+    // VERIFIED-AT: https://www.polygon.com/23989775/best-tabletop-rpgs-2023/
+    {
+      "text": "The system is easy, streamlined, and really carries the four-color comic book flavor — this is a must-have book that will bring hours of enjoyment.",
+      "author": "Polygon"
+    }
+  ],
+  "ru": {
+    "tagShort": "Марвел на d616 — супергерои комиксов",
+    "tagline": "«Жми 6-1-6 для Ultimate Fantastic Roll. Добро пожаловать в Мультивселенную».",
+    "description": "Marvel Multiverse RPG — настольная RPG от Marvel (2023), действие в Мультивселенной Marvel (Earth-616). Система d616: бросок 3d6 (один — Marvel Die) + Способность vs сложность. Выпадение 6-1-6 = Ultimate Fantastic Roll (авто-успех). 128 страниц профилей персонажей (Железный Человек, Человек-паук, Мстители, Люди Икс). Бесплатный квикстарт на marvel.com/rpg.",
+    "setting": "Вселенная Marvel — Earth-616 и шире. Мстители, Люди Икс, Стражи Галактики, Космическая Спираль — всё в одном каталоге. Каждый расширение (X-Men, Spider-Verse, Avengers) добавляет локации и персонажей.",
+    "vignette": "Железный Человек бросает 3d6 (Marvel Die — красный): 4+1+6 = 11 + Intelligence 5 = 16. Против Difficulty 14. Успех на 2! repulsor blast бьёт в банду. Но 6-1-6? Нет — просто 6 и 1. Добро пожаловать в Мультивселенную, где даже удача — это суперсила.",
+    "prep": "~15 мин",
+    "mechanics": [
+      {
+        "title": "d616 System",
+        "text": "Бросок 3d6 (Marvel Die — особый) + Способность vs сложность. 6-1-6 = Ultimate Fantastic Roll (авто-успех). Простая, но драматичная математика."
+      },
+      {
+        "title": "Marvel Die",
+        "text": "Один кубик — Marvel Die (обычно красный). Определяет урон и особые эффекты. Делает каждый бросок визуально ярким."
+      },
+      {
+        "title": "128 персонажей",
+        "text": "Готовые профили: Железный Человек, Человек-паук, Капитан Америка, Росомаха, Доктор Стрэндж и десятки других. Каждый — уникальные способности."
+      },
+      {
+        "title": "Ранги (1–6)",
+        "text": "Шесть рангов: от Street Level до Cosmic. Каждый ранг — новый уровень силы и возможностей."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Core Rulebook (Amazon)"
+      },
+      {
+        "cap": "Обзор (CBR)"
+      },
+      {
+        "cap": "Core Rulebook (PRH)"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт — marvel.com/rpg"
+      },
+      {
+        "name": "Бесплатный квикстарт (Thunderbolts)"
+      },
+      {
+        "name": "Demiplane — цифровой инструментарий"
+      }
+    ],
+    "quotes": [
+      { "text": "Marvel Multiverse Role-Playing Game — отличный выбор для фанатов комиксов Marvel, которые хотят попробовать RPG, или фанатов D&D, которые хотят перейти на систему с знакомыми элементами." },
+      { "text": "Система простая, удобная и передаёт дух четырёхцветных комиксов — этоmust-have книга, которая подарит часы удовольствия." }
+    ]
+  },
+  "en": {
+    "tagShort": "Marvel d616 — comic book superheroes",
+    "tagline": "\"Roll 6-1-6 for the Ultimate Fantastic Roll. Welcome to the Multiverse.\"",
+    "description": "Marvel Multiverse RPG is a tabletop RPG from Marvel (2023), set in the Marvel Multiverse (Earth-616). d616 system: roll 3d6 (one is the Marvel Die) + Ability vs difficulty. Rolling 6-1-6 = Ultimate Fantastic Roll (auto-succeed). 128 pages of character profiles (Iron Man, Spider-Man, Avengers, X-Men). Free quickstart at marvel.com/rpg.",
+    "setting": "The Marvel Universe — Earth-616 and beyond. Avengers, X-Men, Guardians of the Galaxy, the Cosmic Spiral — all in one catalog. Each expansion (X-Men, Spider-Verse, Avengers) adds locations and characters.",
+    "vignette": "Iron Man rolls 3d6 (Marvel Die — red): 4+1+6 = 11 + Intelligence 5 = 16. Against Difficulty 14. Success by 2! A repulsor blast tears through the gang. But 6-1-6? No — just a 6 and a 1. Welcome to the Multiverse, where even luck is a superpower.",
+    "prep": "~15 min",
+    "mechanics": [
+      {
+        "title": "d616 System",
+        "text": "Roll 3d6 (Marvel Die — special) + Ability vs difficulty. 6-1-6 = Ultimate Fantastic Roll (auto-succeed). Simple but dramatic math."
+      },
+      {
+        "title": "Marvel Die",
+        "text": "One die is the Marvel Die (usually red). Determines damage and special effects. Makes every roll visually striking."
+      },
+      {
+        "title": "128 Characters",
+        "text": "Ready-made profiles: Iron Man, Spider-Man, Captain America, Wolverine, Doctor Strange, and dozens more. Each with unique powers."
+      },
+      {
+        "title": "Ranks (1–6)",
+        "text": "Six ranks: Street Level to Cosmic. Each rank brings new power levels and capabilities."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Core Rulebook (Amazon)"
+      },
+      {
+        "cap": "Review art (CBR)"
+      },
+      {
+        "cap": "Core Rulebook (PRH)"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official site — marvel.com/rpg"
+      },
+      {
+        "name": "Free quickstart (Thunderbolts)"
+      },
+      {
+        "name": "Demiplane — digital toolset"
+      }
+    ],
+    "quotes": [
+      { "text": "Marvel Multiverse Role-Playing Game is an excellent choice for fans of Marvel comics who want to try out an RPG or Dungeons & Dragons fans who want to move onto a system that's different while still having familiar elements." },
+      { "text": "The system is easy, streamlined, and really carries the four-color comic book flavor — this is a must-have book that will bring hours of enjoyment." }
+    ]
+  }
+});
+registerSystem("masks", {
+  "groups": {
+    "default": { "key": "narrative", "order": 34 },
+    "family": { "key": "pbta-fitd", "order": 28 },
+    "genre": { "key": "adventure", "order": 24 }
+  },
+  "name": "Masks: A New Generation",
+  "publisher": "Magpie Games",
+  "dice": "2d6 + stat (PbtA)",
+  "players": "3–5",
+  "complexity": 2,
+  "foundryStatus": "Community",
+  "heroImage": "https://magpiegames.com/cdn/shop/files/Masks-Core-softcover_1.jpg?v=1734448458",
+  "playstyleTags": [
+    "narrative",
+    "social",
+    "combat"
+  ],
+  "settingTags": ["modern"],
+  "gallery": [
+    {
+      "src": "https://magpiegames.com/cdn/shop/files/Masks-Core-softcover_2.jpg?v=1734448458"
+    },
+    {
+      "src": "https://magpiegames.com/cdn/shop/files/Masks-Core-softcover_3.jpg?v=1734448581"
+    },
+    {
+      "src": "https://magpiegames.com/cdn/shop/files/Masks-Core-softcover_4.jpg?v=1734448581"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://magpiegames.com/collections/masks",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "drama"
+    },
+    {
+      "icon": "users"
+    },
+    {
+      "icon": "venetian-mask"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.dicebreaker.com/categories/roleplaying-game/best-games/best-superhero-rpgs
+    {
+      "text": "It's a really fun way of looking at characters as people rather than mere skill sets.",
+      "author": "Maddie Cullen, Dicebreaker"
+    }
+  ],
+  "ru": {
+    "tagShort": "PbtA о юных супергероях и поиске себя",
+    "tagline": "«Ты — не тот, кем тебя считают. Или всё-таки тот?».",
+    "description": "Masks: A New Generation — ролевая игра на движке Powered by the Apocalypse о команде юных супергероев. Спасать город — половина дела; вторая половина — понять, кто ты, когда все вокруг твердят, кем тебе быть. Игра не про билды и урон, а про эмоции, идентичность и взросление под масками.",
+    "setting": "Халсион-Сити — мегаполис, трижды отстроенный поколениями героев. Молодые супергерои бьются со злодеями и спасают жизни, но настоящая борьба — внутри: ожидания менторов, давление кумиров, страх не оправдать. Яркий, четырёхцветный комикс-мир, где взрослеть тяжелее, чем драться.",
+    "vignette": "Наставник отчитывает вашу героиню перед всей командой: «Ты снова полезла на рожон». Он давит своим Влиянием — и сдвигает ваши Ярлыки: Savior растёт, Freak падает. Вы бросаете «Прямой отпор»: 2d6 + Danger. Выпало 9 — успех с ценой. Вы отбиваетесь, но в глазах команды становитесь чуть более безрассудной. Кем вы себя считаете — меняется на ходу.",
+    "prep": "~10 мин",
+    "mechanics": [
+      {
+        "title": "Ходы на 2d6 (PbtA)",
+        "text": "Действие запускает «ход»: 2d6 + характеристика. 10+ — успех, 7–9 — с осложнением, 6 и ниже — провал и ход ведущего. Правила лёгкие, вся драма — в фикшене."
+      },
+      {
+        "title": "Ярлыки вместо статов",
+        "text": "Пять эмоциональных Ярлыков: Danger, Freak, Savior, Superior, Mundane. Они не фиксированы — сдвигаются по ходу игры. Механика буквально отражает, как меняется самоощущение подростка."
+      },
+      {
+        "title": "Влияние",
+        "text": "Другие — злодеи, товарищи, взрослые — держат над героем Влияние и могут двигать его Ярлыки, хвалить и ранить. Отобрать Влияние или поддаться ему — ключевой выбор о том, чьё мнение о тебе важно."
+      },
+      {
+        "title": "Плейбуки-архетипы",
+        "text": "The Bull, The Nova, The Doomed, The Legacy и другие — архетипы по классике супергероики. Каждый задаёт свою драму взросления и свои ходы, а не только набор сил."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Обложка (варианты)"
+      },
+      {
+        "cap": "Разворот"
+      },
+      {
+        "cap": "Интерьер"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальная страница — Magpie Games"
+      }
+    ],
+    "quotes": [
+      { "text": "Это по-настоящему увлекательный взгляд на персонажей как на людей, а не просто наборы навыков." }
+    ]
+  },
+  "en": {
+    "tagShort": "PbtA about teen superheroes finding themselves",
+    "tagline": "\"You're not who they think you are. Or are you?\"",
+    "description": "Masks: A New Generation is a Powered by the Apocalypse RPG about a team of young superheroes. Saving the city is half the job; the other half is figuring out who you are when everyone around you keeps telling you who to be. This isn't a game about builds and damage — it's about emotion, identity, and coming of age behind the mask.",
+    "setting": "Halcyon City — a metropolis rebuilt three times over by generations of heroes. Young supers fight villains and save lives, but the real struggle is inside: mentors' expectations, idols' pressure, the fear of falling short. A bright, four-color comic-book world where growing up is harder than the fight.",
+    "vignette": "A mentor dresses your hero down in front of the whole team: 'You charged in again.' He leans on his Influence — and shifts your Labels: Savior up, Freak down. You roll 'Directly Engage': 2d6 + Danger. A 9 — success at a cost. You win the fight, but in the team's eyes you become a little more reckless. Who you think you are is changing in real time.",
+    "prep": "~10 min",
+    "mechanics": [
+      {
+        "title": "2d6 moves (PbtA)",
+        "text": "An action triggers a 'move': 2d6 + stat. 10+ is a hit, 7–9 comes with a complication, 6 or under fails and hands the GM a move. The rules are light; all the drama lives in the fiction."
+      },
+      {
+        "title": "Labels instead of stats",
+        "text": "Five emotional Labels: Danger, Freak, Savior, Superior, Mundane. They aren't fixed — they shift during play. The mechanic literally models how a teen's self-image changes."
+      },
+      {
+        "title": "Influence",
+        "text": "Others — villains, teammates, adults — hold Influence over a hero and can shift their Labels, praise and wound them. Taking back Influence or giving in is the key choice about whose opinion of you matters."
+      },
+      {
+        "title": "Archetype playbooks",
+        "text": "The Bull, The Nova, The Doomed, The Legacy, and more — archetypes drawn from superhero canon. Each frames a coming-of-age drama and its own moves, not just a power set."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Cover (variants)"
+      },
+      {
+        "cap": "Spread"
+      },
+      {
+        "cap": "Interior"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official page — Magpie Games"
+      }
+    ]
+  }
+});
 registerSystem("mausritter", {
   "groups": {
     "default": { "key": "osr", "order": 9 },
@@ -5617,13 +9616,13 @@ registerSystem("microscope", {
   ],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1hZ2UvNTEzMzI2LzgzOTE4NjIuanBlZw==/original/1pjWRk.jpeg"
+      "src": "https://www.indiepressrevolution.com/xcart/image.php?type=P&id=17540"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvNTEzMzI2LzgzOTE4NjQuanBlZw==/original/O5Ehss.jpeg"
+      "src": "https://www.indiepressrevolution.com/xcart/image.php?type=P&id=19891"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvNTEzMzI2LzgzOTE3MjMuanBn/original/dVdzJT.jpg"
+      "src": "https://cf.geekdo-images.com/C1ox8bAodvWDJqhqAk0w-Q__itemrep/img/XgQ1Act3YETvDkEtU1j27cyIoKQ=/fit-in/246x300/filters:strip_icc()/pic931050.jpg"
     }
   ],
   "resources": [
@@ -5746,6 +9745,111 @@ registerSystem("microscope", {
       {
         "name": "Official website"
       }
+    ]
+  }
+});
+registerSystem("monsterhearts", {
+  "groups": {
+    "default": { "key": "narrative", "order": 45 },
+    "family": { "key": "pbta-fitd", "order": 31 },
+    "genre": { "key": "horror", "order": 15 }
+  },
+  "name": "Monsterhearts 2",
+  "publisher": "Buried Without Ceremony",
+  "dice": "2d6 + stat (PbtA)",
+  "players": "3–5",
+  "complexity": 2,
+  "free": false,
+  "edition": "Second Edition",
+  "foundryStatus": "Community",
+  "heroImage": "https://buriedwithoutceremony.com/wp-content/uploads/2019/11/Monsterhearts-Cover-Characters-scaled.jpg",
+  "playstyleTags": ["narrative", "social", "horror"],
+  "settingTags": ["urban-fantasy", "modern"],
+  "gallery": [
+    { "src": "https://image.nobleknight.com/m/jpg1500/monasteryheartilytoorealllllll.jpg" },
+    { "src": "https://cdn.shopify.com/s/files/1/0271/4022/7143/files/Monsterhearts_Print.png?v=1748123322" },
+    { "src": "https://cdn.shopify.com/s/files/1/0271/4022/7143/files/Monsterhearts_PDF.png?v=1748123228" }
+  ],
+  "resources": [
+    { "type": "link", "url": "https://buriedwithoutceremony.com/monsterhearts", "fmt": "Web" },
+    { "type": "link", "url": "https://buriedwithoutceremony.itch.io/monsterhearts-2", "fmt": "Itch.io" },
+    { "type": "link", "url": "https://store.buriedwithoutceremony.com/products/monsterhearts-2", "fmt": "Print/PDF" },
+    { "type": "link", "url": "https://foundryvtt.com/packages/monsterhearts", "fmt": "VTT" }
+  ],
+  "mechanics": [
+    { "icon": "dices" },
+    { "icon": "link" },
+    { "icon": "heart" },
+    { "icon": "venetian-mask" }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.strangeassembly.com/2018/review-monsterhearts-2
+    {
+      "text": "All told, Monsterhearts 2 is a real credit to designer/author Avery Alder.",
+      "author": "Strange Assembly"
+    },
+    // VERIFIED-AT: https://jamesdavisnicoll.com/review/ill-be-your-animal
+    {
+      "text": "It's very nicely done. Alder's art is atmospheric, reminiscent (to my untrained eye) of Tim Bradstreet.",
+      "author": "James Davis Nicoll"
+    }
+  ],
+  "ru": {
+    "tagShort": "PbtA о неуклюжих подростках-монстрах и квир-драме",
+    "tagline": "«Порок живёт в твоём сердце, голод течёт по венам».",
+    "description": "Monsterhearts 2 — ролевая игра на движке Powered by the Apocalypse о неуклюжей и опасной жизни подростков-монстров. Вампиры, оборотни, ведьмы и призраки ходят в обычную старшую школу, скрывая чудовищную природу за подростковой драмой. Игра о желании, власти, взрослении и квир-идентичности: тело меняется без твоего согласия, а настоящий хоррор рождается не из монстров, а из отношений между ними.",
+    "setting": "Захолустный американский городок и его старшая школа. Днём — уроки, вечеринки, сплетни и разбитые сердца; под этим — голод, порок и тайные силы. Здесь монструозность и половое созревание неотличимы: каждый герой скрывает опасную природу, и любой всплеск чувств может обернуться катастрофой.",
+    "vignette": "Ты зажимаешь квотербека у его шкафчика и пускаешь в ход обаяние — ход «Соблазнить», 2d6 + Жар. На кубиках выпадает 8, это результат 7–9. Он смущён и увлечён, но открылась именно ты — так что он получает Ниточку на тебя. Теперь он может дёрнуть за неё в любой момент. Ты добилась своего; расплата придёт позже.",
+    "prep": "~15 мин",
+    "mechanics": [
+      { "title": "Ходы на 2d6 (PbtA)", "text": "Любое рискованное действие запускает ход: 2d6 + характеристика (Жар, Холод, Пыл или Тьма). 10+ — успех, 7–9 — успех с ценой, 6 и ниже — провал и жёсткий ход Мастера Церемоний." },
+      { "title": "Ниточки", "text": "Ниточки (Strings) — социальная валюта игры: эмоциональная власть над другим. Потрать её ради +1, чтобы навредить или вынудить к выбору. В итоге все опутаны ниточками всех." },
+      { "title": "Ход на секс", "text": "У каждого Обличья свой уникальный Ход на секс — он срабатывает только после близости по обоюдному согласию со значимым персонажем, превращая самые уязвимые сцены в конкретные механические последствия." },
+      { "title": "Обличья и Тёмное «я»", "text": "Играй за Вампира, Оборотня, Призрака, Фейри, Ведьму и других. У каждого Обличья свои ходы и Тёмное «я» — чудовищный срыв, в который герой проваливается, когда всё идёт не так." }
+    ],
+    "gallery": [
+      { "cap": "Обложка" },
+      { "cap": "Книга в мягкой обложке" },
+      { "cap": "Задняя обложка и завязка" }
+    ],
+    "resources": [
+      { "name": "Официальная страница — Buried Without Ceremony" },
+      { "name": "Купить на itch.io (плати сколько хочешь)" },
+      { "name": "Магазин: печать и PDF" },
+      { "name": "Foundry VTT — модуль сообщества" }
+    ],
+    "quotes": [
+      { "text": "В итоге Monsterhearts 2 делает честь дизайнеру и автору Эйвери Олдер." },
+      { "text": "Сделано очень славно. Графика Олдер атмосферна и напоминает — на мой неискушённый взгляд — Тима Брэдстрита." }
+    ]
+  },
+  "en": {
+    "tagShort": "PbtA of messy teenage monsters and queer drama",
+    "tagline": "\"Wickedness dwells within your heart, hunger courses through your veins.\"",
+    "description": "Monsterhearts 2 is a Powered by the Apocalypse RPG about the messy, dangerous lives of teenage monsters. Vampires, werewolves, witches, and ghosts attend an ordinary high school, hiding a monstrous nature beneath adolescent drama. It's a game about desire, power, growing up, and queer identity — where your body changes without permission and the real horror grows out of the relationships between characters, not the monsters themselves.",
+    "setting": "A small American town and its high school. By day: classes, parties, gossip, and broken hearts; underneath it all: hunger, wickedness, and secret power. Here monstrosity and puberty are indistinguishable — every character hides a dangerous nature, and any surge of feeling can turn catastrophic.",
+    "vignette": "You corner the quarterback by his locker and pour on the charm — Turn Someone On, 2d6 + Hot. The dice come up 8, a 7–9. He's flustered and into it, but you're the one left exposed, so he takes a String on you. Now he can pull that thread whenever he likes. You got what you wanted; it'll cost you later.",
+    "prep": "~15 min",
+    "mechanics": [
+      { "title": "2d6 moves (PbtA)", "text": "Every risky action triggers a move: roll 2d6 + a stat (Hot, Cold, Volatile, or Dark). 10+ succeeds, 7–9 succeeds with a cost, and 6 or under misses as the MC makes a hard move against you." },
+      { "title": "Strings", "text": "Strings are the game's social currency — emotional holds you gain over others. Spend one for a +1, to inflict harm, or to force a hard choice. Everyone ends up tangled in everyone else's threads." },
+      { "title": "The Sex Move", "text": "Each Skin carries a unique Sex Move that fires only after consensual intimacy with another significant character, turning the most vulnerable scenes into concrete mechanical consequences." },
+      { "title": "Skins & the Darkest Self", "text": "Play a Vampire, Werewolf, Ghost, Fae, Witch, and more. Each Skin brings its own moves and a Darkest Self — the monstrous spiral you fall into when everything goes wrong." }
+    ],
+    "gallery": [
+      { "cap": "Cover" },
+      { "cap": "The softcover book" },
+      { "cap": "Back cover & premise" }
+    ],
+    "resources": [
+      { "name": "Official page — Buried Without Ceremony" },
+      { "name": "Buy on itch.io (pay what you want)" },
+      { "name": "Print & PDF store" },
+      { "name": "Foundry VTT — community module" }
+    ],
+    "quotes": [
+      { "text": "All told, Monsterhearts 2 is a real credit to designer/author Avery Alder." },
+      { "text": "It's very nicely done. Alder's art is atmospheric, reminiscent (to my untrained eye) of Tim Bradstreet." }
     ]
   }
 });
@@ -6390,7 +10494,7 @@ registerSystem("mythic-bastionland", {
   "players": "2–5",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6a2f0bf6-1328-488d-a457-aa66a531ca55_1064x566.png",
+  "heroImage": "https://sessionzero.games/images/systems/mythic-bastionland-hero.jpg",
   "playstyleTags": [
     "explore",
     "narrative",
@@ -6399,10 +10503,10 @@ registerSystem("mythic-bastionland", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6a2f0bf6-1328-488d-a457-aa66a531ca55_1064x566.png"
+      "src": "https://sessionzero.games/images/systems/mythic-bastionland-hero.jpg"
     },
     {
-      "src": "https://lh7-rt.googleusercontent.com/docsz/AD_4nXcIlzbaMrweNWqQ5dyQ-73LBaVweIzXID4LnrkExRJpwlsC-DPnq4tyX_nudHSn03ahnTH4khvCid4HWgdfIxHy1dpWCWWp1TLnFilLwM-K8E5Tu477XUiGFQc62np7oGsWja4JCWwodWR3xNd2lez2ul3x=w640-h340"
+      "src": "https://cdn.shopify.com/s/files/1/0025/6006/5625/files/mythic-bastionland-book-9307117.png?v=1765482428"
     },
     {
       "src": "https://img.itch.zone/aW1hZ2UvMjY0MjkzMi8xNjA1NzI2NS5wbmc=/original/M5VEoN.png"
@@ -6732,6 +10836,185 @@ registerSystem("nimble", {
       {
         "name": "Official website"
       }
+    ]
+  }
+});
+registerSystem("numenera", {
+  "groups": {
+    "default": { "key": "narrative", "order": 30 },
+    "family": { "key": "standalone", "order": 37 },
+    "genre": { "key": "sci-fi", "order": 9.5 }
+  },
+  "name": "Numenera",
+  "publisher": "Monte Cook Games",
+  "dice": "d20 (Cypher System)",
+  "players": "3–6",
+  "complexity": 3,
+  "free": true,
+  "foundryStatus": "Official",
+  "heroImage": "https://www.montecookgames.com/store/wp-content/uploads/2018/04/N2-Slipcase-Set-Tags-2-1.jpg",
+  "playstyleTags": [
+    "narrative",
+    "combat",
+    "explore"
+  ],
+  "settingTags": ["weird"],
+  "gallery": [
+    {
+      "src": "https://www.montecookgames.com/store/wp-content/uploads/2015/11/Ninth-World-Bestiary.jpg"
+    },
+    {
+      "src": "https://www.montecookgames.com/store/wp-content/uploads/2015/11/Ninth-World-Guidebook.jpg"
+    },
+    {
+      "src": "https://www.montecookgames.com/store/wp-content/uploads/2016/11/NSS-3D-Cover-Tags.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://www.montecookgames.com/numenera/",
+      "fmt": "Web"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://www.montecookgames.com/numenera-primer/",
+      "fmt": "Web"
+    },
+    {
+      "type": "link",
+      "url": "https://www.montecookgames.com/store/product-category/numenera/",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "sparkles"
+    },
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "book-open"
+    },
+    {
+      "icon": "scroll"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.shutupandsitdown.com/rpg-review-numenera/
+    {
+      "text": "Shut Up and Sit Down highly recommends that you leap into the vast abyss of Numenera, which might be packed with more sheer, marvelous, possibility than any other RPG.",
+      "author": "Cynthia, Shut Up & Sit Down"
+    },
+    // VERIFIED-AT: https://www.livingdice.com/8327/review-numenera-the-role-playing-game-from-monte-cook/
+    {
+      "text": "Numenera is literally the best role-playing game effort I have played in the past 10 years.",
+      "author": "Trask, Living Dice"
+    }
+  ],
+  "ru": {
+    "tagShort": "Cypher System — «Я есть descriptor type who focus»",
+    "tagline": "«Одинокий ученый, который ищет правду. Девятый мир ждет».",
+    "description": "Numenera — настольная RPG от Monte Cook Games (2013, Discovery/Destiny 2018), действие в Девятом Мире — Земле через миллиард лет, где цивилизации возводили и исчезали, оставляя нуменеру (артефакты). Система Cypher: персонаж создаётся фразой «I am a (descriptor) (type) who (focus)» — например, «Одинокий ученый, который ищет правду». Бросок d20, но НЕ d20-система. GM никогда не бросает кубики. Игроки тратят очки Способности (Might, Speed, Intellect) на «усилие» (effort), снижая сложность задачи.",
+    "setting": "Девятый Мир — мир через миллиард лет после нашего. Земля, на которой возводились и исчезали целые эпохи. Остатки технологий — нуменера — повсюду: от городов до лесов. Люди живут в средневековье, но используют артефакты, не понимая их. Три типа персонажей: Glaive (воин), Jack (авантюрист), Nano (ученый/колдун).",
+    "vignette": "ГМ объявляет: Сложность 6 (целевое число 18). Игрок тратит 2 очка Интеллекта на усилие (снижает до 4), использует тренировку (снижает до 3). Бросает d20: 14. Успех! Но ГМ делает «вторжение» (GM intrusion): внезапно появляется ещё один враг. Игрок получает 2 XP, один из которых отдаёт союзнику.",
+    "prep": "~20 мин",
+    "mechanics": [
+      {
+        "title": "Cypher System (d20)",
+        "text": "Бросок d20 vs целевого числа (сложность ×3). Игроки ТРАТЯТ очки способностей на снижение сложности, а не добавляют бонусы к броску. GM никогда не бросает кубики."
+      },
+      {
+        "title": "Фраза-создание",
+        "text": "«I am a (descriptor) (type) who (focus)». Пример: «Tough Glaive who Rides the Lightning». Три выбора определяют всё."
+      },
+      {
+        "title": "Усилие и тренировка",
+        "text": "Тратя очки, игрок снижает сложность на 1 шаг. Тренировка снижает ещё. Вместе — до 0 (авто-успех)."
+      },
+      {
+        "title": "GM Intrusions",
+        "text": "ГМ предлагает неожиданное событие. Игрок получает 2 XP (один отдаёт другу). ГМ получает свободу для драмы."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Numenera Discovery + Destiny (слэйкейс)"
+      },
+      {
+        "cap": "Numenera Player's Guide"
+      },
+      {
+        "cap": "Numenera — обложка"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт — Monte Cook Games"
+      },
+      {
+        "name": "Бесплатный Primer (введение)"
+      },
+      {
+        "name": "Каталог продуктов Numenera"
+      }
+    ],
+    "quotes": [
+      { "text": "Shut Up & Sit Down настоятельно рекомендует нырнуть в бескрайнюю бездну Numenera — возможно, в ней больше чистых, восхитительных возможностей, чем в любой другой RPG." },
+      { "text": "Numenera — буквально лучшая ролевая игра, в которую я играл за последние 10 лет." }
+    ]
+  },
+  "en": {
+    "tagShort": "Cypher System — 'I am a descriptor type who focus'",
+    "tagline": "\"A lonely scholar who seeks truth. The Ninth World awaits.\"",
+    "description": "Numenera is a tabletop RPG from Monte Cook Games (2013, Discovery/Destiny 2018), set in the Ninth World — Earth a billion years hence, where civilizations have risen and fallen, leaving behind numenera (artifacts). The Cypher System: characters are built from the sentence 'I am a (descriptor) (type) who (focus)' — e.g. 'A tough glaive who rides the lightning.' d20 roll, but NOT the d20 system. The GM never rolls dice. Players spend Ability points (Might, Speed, Intellect) on Effort, lowering task difficulty.",
+    "setting": "The Ninth World — Earth a billion years after our era. The remnants of past civilizations are numenera: artifacts of incomprehensible power scattered everywhere. People live in a medieval state but use artifacts without understanding them. Three character types: Glaive (warrior), Jack (adventurer), Nano (scientist/witch).",
+    "vignette": "The GM announces: Difficulty 6 (target number 18). The player spends 2 Intellect points on Effort (lowers to 4), uses training (lowers to 3). Rolls d20: 14. Success! But the GM makes an intrusion: another enemy appears. The player gets 2 XP, one of which goes to an ally.",
+    "prep": "~20 min",
+    "mechanics": [
+      {
+        "title": "Cypher System (d20)",
+        "text": "Roll d20 vs target number (difficulty ×3). Players SPEND ability points to lower difficulty, rather than adding bonuses. The GM never rolls dice."
+      },
+      {
+        "title": "Sentence Creation",
+        "text": "'I am a (descriptor) (type) who (focus).' Example: 'Tough Glaive who Rides the Lightning.' Three choices define everything."
+      },
+      {
+        "title": "Effort and Training",
+        "text": "Spending points lowers difficulty by 1 step. Training lowers it further. Combined — down to 0 (auto-succeed)."
+      },
+      {
+        "title": "GM Intrusions",
+        "text": "The GM introduces a sudden twist. The player gets 2 XP (gives one to a friend). The GM gets freedom for drama."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Numenera Discovery + Destiny (slipcase)"
+      },
+      {
+        "cap": "Numenera Player's Guide"
+      },
+      {
+        "cap": "Numenera — cover"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official site — Monte Cook Games"
+      },
+      {
+        "name": "Free Numenera Primer"
+      },
+      {
+        "name": "Numenera product catalog"
+      }
+    ],
+    "quotes": [
+      { "text": "Shut Up and Sit Down highly recommends that you leap into the vast abyss of Numenera, which might be packed with more sheer, marvelous, possibility than any other RPG." },
+      { "text": "Numenera is literally the best role-playing game effort I have played in the past 10 years." }
     ]
   }
 });
@@ -7433,16 +11716,16 @@ registerSystem("outgunned", {
   "settingTags": ["modern"],
   "gallery": [
     {
-      "src": "https://www.drivethrurpg.com/images/18374/_product_images/449021/Car.jpeg"
+      "src": "https://twolittlemice.net/wp-content/uploads/2024/01/Cover_OG_Site.jpg"
     },
     {
-      "src": "https://i.pinimg.com/736x/c3/2f/d9/c32fd93ef75f374d83d3519ea822c128.jpg"
+      "src": "https://sessionzero.games/images/systems/outgunned-g1.jpg"
     },
     {
-      "src": "https://i0.wp.com/twolittlemice.net/wp-content/uploads/2024/01/DL_Hero_Sheets.jpg"
+      "src": "https://twolittlemice.net/wp-content/uploads/2024/01/DL_Hero_Sheets.jpg"
     },
     {
-      "src": "https://i0.wp.com/twolittlemice.net/wp-content/uploads/2024/01/DL_Schede-Eroe-1.jpg"
+      "src": "https://twolittlemice.net/wp-content/uploads/2024/01/Download_QS_Site.jpg"
     }
   ],
   "resources": [
@@ -7593,6 +11876,456 @@ registerSystem("outgunned", {
       {
         "name": "Quickstart"
       }
+    ]
+  }
+});
+registerSystem("paranoia", {
+  "groups": {
+    "default": { "key": "narrative", "order": 38 },
+    "family": { "key": "standalone", "order": 46 },
+    "genre": { "key": "sci-fi", "order": 17 }
+  },
+  "name": "Paranoia",
+  "publisher": "Mongoose Publishing",
+  "dice": "d6 pool (NODE) + Computer Die",
+  "players": "4–6",
+  "complexity": 2,
+  "foundryStatus": "Community",
+  "heroImage": "https://www.mongoosepublishing.com/cdn/shop/files/ParanoiaCoreCoverEbook_1317x.jpg?v=1694683887",
+  "playstyleTags": [
+    "social",
+    "combat",
+    "narrative"
+  ],
+  "settingTags": ["postapoc", "weird"],
+  "gallery": [
+    {
+      "src": "https://www.mongoosepublishing.com/cdn/shop/files/Spread1_32fd11ed-e1e2-4b52-b6a4-0c2a29cc769b_1530x.jpg?v=1694683895"
+    },
+    {
+      "src": "https://www.mongoosepublishing.com/cdn/shop/files/Spread2_3431dc85-32c3-469d-8fed-c556587eb96e_1530x.jpg?v=1694683894"
+    },
+    {
+      "src": "https://www.mongoosepublishing.com/cdn/shop/files/Spread3_a177d5d6-a299-4069-adba-5f12cac67c6f_1530x.jpg?v=1694683895"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://www.mongoosepublishing.com/collections/paranoia",
+      "fmt": "Web"
+    },
+    {
+      "type": "link",
+      "url": "https://www.drivethrurpg.com/en/product/453042/the-paranoia-core-book",
+      "fmt": "PDF"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "cpu"
+    },
+    {
+      "icon": "skull"
+    },
+    {
+      "icon": "drama"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://cannibalhalflinggaming.com/2023/11/29/paranoia-the-core-book-review/
+    {
+      "text": "This is a good edition of Paranoia, and moves the needle in the right direction from Red Clearance Edition.",
+      "author": "Aaron Marks, Cannibal Halfling Gaming"
+    },
+    // VERIFIED-AT: https://cannibalhalflinggaming.com/2023/11/29/paranoia-the-core-book-review/
+    {
+      "text": "The rules cleanup is kept and largely not messed with, but the game regains a bit of its self-awareness and edge.",
+      "author": "Aaron Marks, Cannibal Halfling Gaming"
+    }
+  ],
+  "ru": {
+    "tagShort": "Сатирическая антиутопия чёрного юмора",
+    "tagline": "«Компьютер — твой друг. Компьютер счастлив. Будь счастлив и ты. Или это измена».",
+    "description": "Paranoia — комедийная RPG об абсурдной антиутопии Альфа-Комплекса, которым правит безумный Компьютер. Вы — Устранители (Troubleshooters): находите неполадки и устраняете их, а заодно друг друга. У каждого шесть клонов, тайное членство в запрещённом обществе и куча измен за пазухой. Правила намеренно лёгкие — всё держится на паранойе, доносах и чёрном юморе.",
+    "setting": "Альфа-Комплекс — герметичный подземный бункер будущего под управлением параноидального ИИ по имени Компьютер. Общество разделено на цветовые уровни допуска; знать о вещах не своего уровня — измена. Мутанты — измена. Тайные общества — измена. И почти все — мутанты в тайных обществах. Снаружи — Внешний Мир, о котором Компьютер предпочитает не думать.",
+    "vignette": "Компьютер: «Гражданин, ваш допуск КРАСНЫЙ. Почему у вас СИНЯЯ карточка?» Ты: «Это... улика, я конфисковал её у изменника». Сосед по команде тихо тянется к лазеру. Ты бросаешь NODE: четыре кубика плюс Компьютерный. Две шестёрки — успех! Но Компьютерный кубик показывает 1. «Гражданин, зафиксирован сбой. Отправляю ремонтную бригаду... и клона на замену».",
+    "prep": "~30 мин",
+    "mechanics": [
+      {
+        "title": "NODE-кубики",
+        "text": "Характеристика + навык = число кубиков (Number Of DicE). Бросаешь пул d6, 5 и 6 — успехи. Просто и быстро — система не мешает балагану."
+      },
+      {
+        "title": "Компьютерный кубик",
+        "text": "Красный кубик в каждом броске. Единица на нём — вмешательство Компьютера: сбой, донос, внезапная «помощь». Хаос строго по расписанию."
+      },
+      {
+        "title": "Шесть клонов и Мокси",
+        "text": "У персонажа шесть сменных клонов и запас Мокси на трюки и выживание. Смерть — не конец, а неудобство и бумажная волокита."
+      },
+      {
+        "title": "Измена и тайные общества",
+        "text": "У каждого своя скрытая повестка и запрещённое членство. Доноси первым — пока не донесли на тебя. Предательство встроено прямо в правила."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Разворот — арт Альфа-Комплекса"
+      },
+      {
+        "cap": "Разворот — Устранители"
+      },
+      {
+        "cap": "Разворот — правила и Компьютер"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Страница Paranoia (Mongoose)"
+      },
+      {
+        "name": "Core Book (DriveThruRPG)"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "Хорошее издание Paranoia — движется в правильном направлении относительно Red Clearance Edition." },
+      { "text": "Чистка правил сохранена, но игра вернула себе самоиронию и остроту." }
+    ]
+  },
+  "en": {
+    "tagShort": "Satirical dystopian dark-comedy RPG",
+    "tagline": "\"The Computer is your friend. The Computer is happy. Be happy too. Or it's treason.\"",
+    "description": "Paranoia is a comedic RPG set in the absurd dystopia of Alpha Complex, ruled by an insane Computer. You are Troubleshooters: you find trouble and shoot it — often each other. Everyone has six clones, secret membership in an illegal society, and a pile of treason to hide. The rules are deliberately light; everything runs on paranoia, backstabbing, and dark humour.",
+    "setting": "Alpha Complex is a sealed underground bunker of the future run by a paranoid AI called The Computer. Society is split into colour-coded security clearances; knowing about things above your clearance is treason. Mutants are treason. Secret societies are treason. And nearly everyone is a mutant in a secret society. Outside lies the Outdoors, which The Computer prefers not to think about.",
+    "vignette": "The Computer: 'Citizen, your clearance is RED. Why do you hold a BLUE card?' You: 'It's... evidence, I confiscated it from a traitor.' Your teammate quietly reaches for their laser. You roll NODE: four dice plus the Computer Die. Two sixes — success! But the Computer Die shows a 1. 'Citizen, malfunction logged. Dispatching a repair crew... and a replacement clone.'",
+    "prep": "~30 min",
+    "mechanics": [
+      {
+        "title": "NODE dice",
+        "text": "Stat + skill = the Number Of DicE. Roll that d6 pool; 5s and 6s are successes. Simple and fast — the system stays out of the farce's way."
+      },
+      {
+        "title": "The Computer Die",
+        "text": "A red die in every roll. A 1 on it is the Computer intervening: a malfunction, a denouncement, sudden 'help'. Chaos strictly on schedule."
+      },
+      {
+        "title": "Six clones and Moxie",
+        "text": "Each character has six replacement clones and a pool of Moxie for stunts and survival. Death isn't the end, just an inconvenience and paperwork."
+      },
+      {
+        "title": "Treason and secret societies",
+        "text": "Everyone has a hidden agenda and forbidden membership. Denounce first — before you're denounced. Betrayal is built right into the rules."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Spread — Alpha Complex art"
+      },
+      {
+        "cap": "Spread — the Troubleshooters"
+      },
+      {
+        "cap": "Spread — rules and The Computer"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Paranoia page (Mongoose)"
+      },
+      {
+        "name": "Core Book (DriveThruRPG)"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "This is a good edition of Paranoia, and moves the needle in the right direction from Red Clearance Edition." },
+      { "text": "The rules cleanup is kept and largely not messed with, but the game regains a bit of its self-awareness and edge." }
+    ]
+  }
+});
+registerSystem("pathfinder", {
+  "groups": {
+    "default": { "key": "tactical", "order": 8 },
+    "family": { "key": "standalone", "order": 27 },
+    "genre": { "key": "tactical", "order": 6 }
+  },
+  "name": "Pathfinder 2e",
+  "publisher": "Paizo",
+  "dice": "d20 + modifiers",
+  "players": "3–6",
+  "complexity": 4,
+  "free": true,
+  "foundryStatus": "Community",
+  "heroImage": "https://cdn11.bigcommerce.com/s-e0sdfpgiwh/images/stencil/1280x1280/products/13791/458/XmlXLh1R__42781.1757988737.jpg?c=1",
+  "playstyleTags": [
+    "combat",
+    "explore",
+    "tactical"
+  ],
+  "settingTags": ["fantasy"],
+  "gallery": [
+    {
+      "src": "https://cdn11.bigcommerce.com/s-e0sdfpgiwh/images/stencil/1280x1280/products/13791/458/XmlXLh1R__42781.1757988737.jpg?c=1"
+    },
+    {
+      "src": "https://cdn11.bigcommerce.com/s-e0sdfpgiwh/images/stencil/1280x1280/products/13806/467/H2_5tOuE__42476.1755060900.jpg?c=1"
+    },
+    {
+      "src": "https://cdn11.bigcommerce.com/s-e0sdfpgiwh/images/stencil/1280x1280/products/184/472/2P9NAHsZ__09634.1755061996.jpg?c=1"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://paizo.com/pathfinder/getstarted",
+      "fmt": "Web"
+    },
+    {
+      "type": "link",
+      "url": "https://2e.aonprd.com/PlayersGuide.aspx",
+      "fmt": "Web"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://paizo.com/pathfinder/getstarted",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "swords"
+    },
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "book-open"
+    },
+    {
+      "icon": "scroll"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.polygon.com/reviews/2019/8/1/20727563/pathfinder-2e-review-second-edition/
+    {
+      "text": "Second Edition refines Pathfinder's tactical combat without losing the complexity that makes it so much fun at the table.",
+      "author": "Charlie Hall, Polygon"
+    },
+    // VERIFIED-AT: https://www.rpg.net/reviews/view-printable.phtml?reviewNumber=18265
+    {
+      "text": "I love this system. The mechanics of 2nd edition Pathfinder are a mix of 3.5, Pathfinder, and 4th edition and 5th edition DnD. Since I love all those games, I had no issues with all the best being blended together to make the best of everything.",
+      "author": "Edward Kabara, RPGnet"
+    }
+  ],
+  "ru": {
+    "tagShort": "Тактическое d20-фэнтези",
+    "tagline": "«Глубина кастомизации и три действия — вот что делает бой живым».",
+    "description": "Pathfinder Second Edition — тактическая RPG от Paizo, вышедшая в 2019 году и обновлённая в рамках Remaster Project (2023–2024). d20-система с тремя действиями за ход, 16+ классами, десятками рас и архетипов, сотнями заклинаний. Полный SRD доступен бесплатно на Archives of Nethys. Игра, созданная из любви к D&D 3.5, ставшая самостоятельным гигантом.",
+    "setting": "Golarion — мир, где высокое фэнтези соседствует с пиратскими регионами, нежитью, стимпанком и мифическими царствами. Каждый континент — отдельный жанр: от Гаrunда (африканское вдохновение) до Мана-Пустошей (постапокалипсис). Другие планы и звёзды доступны через Planescapes.",
+    "vignette": "Три действия. Варвар берёт одно на рывок, второе — на удар топором, третье — на Regain Stamina. Жрец тратит два на Heal, одно на поддержку щита. Враг — огненный элементаль — атакует реакций. Бой быстр, но каждый бросок весомый: +10 к результату даёт критическое попадание.",
+    "prep": "~20 мин",
+    "mechanics": [
+      {
+        "title": "Три действия (3-Action Economy)",
+        "text": "Каждый ход — ровно три действия. Рывок, атака, магия — всё стоит по одному. Никаких полудействий и конфигураций. Просто и элегантно."
+      },
+      {
+        "title": "Четыре градации успеха",
+        "text": "Критический провал → провал → успех → критический успех. Разница в 10 и более результатов меняет всё. Каждый +1 имеет значение."
+      },
+      {
+        "title": "Глубокая кастомизация",
+        "text": "Каждый класс с подклассами, наследия, архетипы, фиты на каждом уровне. Ваш варвар может стать заклинателем через мультикласс, а воровка — паладином."
+      },
+      {
+        "title": "Сбалансованная математика",
+        "text": "Уровень персонажа добавляется ко всем проверкам. Враг на 5 уровней выше почти неуязвим. Encounter-building математика — одна из лучших в индустрии."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Player Core (Remaster, 2023)"
+      },
+      {
+        "cap": "Core Rulebook (2019)"
+      },
+      {
+        "cap": "Player Core 2 (2024)"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт — Paizo"
+      },
+      {
+        "name": "Archives of Nethys (SRD)"
+      },
+      {
+        "name": "Beginner Box (быстрый старт)"
+      }
+    ],
+    "quotes": [
+      { "text": "Второе издание усовершенствовало тактический бой Pathfinder, не теряя глубины, которая делает эту игру такой увлекательной за столом." },
+      { "text": "Я обожаю эту систему. Механики второго издания — это смесь 3.5, Pathfinder, 4-го и 5-го изданий DnD. Всё лучшее собрано воедино." }
+    ]
+  },
+  "en": {
+    "tagShort": "Tactical d20 fantasy with deep customization",
+    "tagline": "\"Three actions, four degrees of success — every roll matters.\"",
+    "description": "Pathfinder Second Edition is a tactical tabletop RPG from Paizo, released in 2019 and refreshed through the Remaster Project (2023–2024). A d20 system with a 3-action economy, 16+ classes, dozens of ancestries and archetypes, and hundreds of spells. The full SRD is free on Archives of Nethys. Born from love of D&D 3.5, it became a giant in its own right.",
+    "setting": "Golarion — a world where high fantasy sits alongside pirate kingdoms, undead realms, steampunk, and mythic planes. Each continent is its own genre: from Arcadia to the Mwangi Expanse to the Lands of the Linnorm Kings. Other planes and stars are reachable through Planescape-like portals.",
+    "vignette": "Three actions. The barbarian spends one to Rage, one to Strike with his axe, one to Regain Stamina. The cleric burns two on Heal, one to raise a shield. The enemy — an fire elemental — attacks with a reaction. Combat is fast, but every roll carries weight: +10 to the result means a critical hit.",
+    "prep": "~20 min",
+    "mechanics": [
+      {
+        "title": "3-Action Economy",
+        "text": "Every turn is exactly three actions. Stride, Strike, cast — each costs one. No half-actions, no configurations. Simple and elegant."
+      },
+      {
+        "title": "Four Degrees of Success",
+        "text": "Critical failure → failure → success → critical success. A 10+ difference in the result changes everything. Every +1 matters."
+      },
+      {
+        "title": "Deep Customization",
+        "text": "Every class with subclasses, heritages, archetypes, feats at every level. Your barbarian can become a caster through multiclassing, your rogue can become a paladin."
+      },
+      {
+        "title": "Balanced Math",
+        "text": "Character level adds to all checks. An enemy 5 levels higher is nearly invulnerable. Encounter-building math is among the best in the industry."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Player Core (Remaster, 2023)"
+      },
+      {
+        "cap": "Core Rulebook (2019)"
+      },
+      {
+        "cap": "Player Core 2 (2024)"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official site — Paizo"
+      },
+      {
+        "name": "Archives of Nethys (SRD)"
+      },
+      {
+        "name": "Beginner Box (quick start)"
+      }
+    ],
+    "quotes": [
+      { "text": "Second Edition refines Pathfinder's tactical combat without losing the complexity that makes it so much fun at the table." },
+      { "text": "I love this system. The mechanics of 2nd edition Pathfinder are a mix of 3.5, Pathfinder, and 4th edition and 5th edition DnD. All the best being blended together." }
+    ]
+  }
+});
+registerSystem("pendragon", {
+  "groups": {
+    "default": { "key": "narrative", "order": 42 },
+    "family": { "key": "standalone", "order": 50 },
+    "genre": { "key": "historical", "order": 1 }
+  },
+  "name": "Pendragon",
+  "publisher": "Chaosium",
+  "dice": "d20 roll-under",
+  "players": "2–6",
+  "complexity": 4,
+  "free": false,
+  "edition": "6th ed. (2024)",
+  "foundryStatus": "Community",
+  "heroImage": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x996/products/2413/6075/Pendragon_Core_Rulebook_-_Front_Cover_-_700x900__17451.1714992659.png?c=2",
+  "playstyleTags": ["narrative", "social", "combat"],
+  "settingTags": ["historical", "fantasy"],
+  "gallery": [
+    { "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x996/products/2413/6116/Pendragon_-_Core_-_Spread_1__48660.1715007255.png?c=2" },
+    { "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x996/products/2413/6117/Pendragon_-_Core_-_Spread_2__38931.1715007255.png?c=2" },
+    { "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x996/products/2413/6073/Pendragon_Core_Rulebook_-_Introduction_1_-_700x900__83987.1707309893.1280.1280__57661.1715007253.png?c=2" }
+  ],
+  "resources": [
+    { "type": "quickstart", "url": "https://www.chaosium.com/pendragon-quick-start/", "fmt": "PDF" },
+    { "type": "rules", "url": "https://www.chaosium.com/pendragon-core-rulebook-hardcover/", "fmt": "Print/PDF" },
+    { "type": "link", "url": "https://foundryvtt.com/packages/pendragon", "fmt": "Foundry VTT" }
+  ],
+  "mechanics": [
+    { "icon": "scale" },
+    { "icon": "heart" },
+    { "icon": "crown" },
+    { "icon": "hourglass" }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://thegaminggang.com/our_reviews/pendragon-6th-edition-core-rulebook-reviewed
+    {
+      "text": "This new edition of the classic Pendragon roleplaying game is absolutely terrific and is no doubt going to be the crowning achievement in the series.",
+      "author": "Jeff McAleer, The Gaming Gang"
+    },
+    // VERIFIED-AT: https://gnomestew.com/pendragon-core-rulebook-6th-edition-review/
+    {
+      "text": "It's a flawed restatement of a game that has earned its place in the pantheon of foundational RPGs.",
+      "author": "Jared Rascher, Gnome Stew"
+    }
+  ],
+  "ru": {
+    "tagShort": "Рыцарство Артура сквозь поколения",
+    "tagline": "«Добывайте Славу, чтите свои Страсти и передавайте меч наследнику».",
+    "description": "Pendragon делает вас рыцарем легендарной Британии короля Артура, начиная с бурного периода Юного Короля. Вместо добычи из подземелий вы стремитесь к Славе, боретесь с противоположными добродетелями и позволяете Страстям — любви, верности — вести вас к героическим и трагическим решениям. Игра охватывает десятилетия: рыцари стареют, женятся и гибнут, передавая хронику наследникам. Итоговое шестое издание Chaosium оттачивает прославленную систему Грега Стаффорда в широкое повествование о чести, войне и любви.",
+    "setting": "Постримская Британия, переосмысленная через артуровский роман. Рыцари игроков происходят из Солсбери в королевстве Логрия и служат среди саксонских вторжений, распрей знати, колдовства фей и медленного восхода Камелота — хроника, разворачивающаяся год за годом.",
+    "vignette": "Саксонский берсерк бросается на вашего рыцаря у брода. Вы объявляете попытку вдохновения по Страсти Верность (Сеньору) 15 и бросаете d20 — выпадает 9, ниже значения. Вдохновлённый, вы прибавляете +10 к Мечу 18; ваш встречный бросок сокрушает его защиту, и вы выбиваете его из седла с одного захода.",
+    "prep": "~45 мин",
+    "mechanics": [
+      { "title": "Черты характера", "text": "Тринадцать пар противоположных добродетелей, каждая в сумме даёт 20 — например, Отважный против Трусливого. Бросок ниже Черты может заставить рыцаря повести себя благородно или постыдно, хотели вы того или нет." },
+      { "title": "Страсти", "text": "Любовь, Верность, Гостеприимство и Ненависть отражают глубинные порывы рыцаря. Призовите одну и бросьте ниже её значения ради прилива вдохновения в кризис — но провал оставит вас в унынии или безумии." },
+      { "title": "Слава", "text": "Каждый подвиг, пир и акт щедрости приносит Славу вместо опыта. Она измеряет известность рыцаря за всю жизнь и может даже возвысить целый род до легендарного статуса." },
+      { "title": "Игра поколений", "text": "Каждый игровой год завершается Зимней фазой: старение, раны, урожай и рождение детей. Рыцари стареют и гибнут, и кампания переходит к сыновьям, дочерям и наследникам сквозь десятилетия." }
+    ],
+    "gallery": [
+      { "cap": "Разворот из основной книги шестого издания." },
+      { "cap": "Правила и артуровские иллюстрации бок о бок." },
+      { "cap": "Внутренний арт, передающий дух легендарной Британии." }
+    ],
+    "resources": [
+      { "name": "Быстрый старт Pendragon (бесплатно)" },
+      { "name": "Основная книга правил (твёрдый переплёт + PDF)" },
+      { "name": "Любительская система для Foundry VTT" }
+    ],
+    "quotes": [
+      { "text": "Это новое издание классической ролевой игры Pendragon совершенно великолепно и, без сомнения, станет вершиной серии." },
+      { "text": "Это небезупречное переизложение игры, заслужившей своё место в пантеоне основополагающих настольных ролевых игр." }
+    ]
+  },
+  "en": {
+    "tagShort": "Arthurian chivalry across generations",
+    "tagline": "\"Win Glory, honor your Passions, and pass the sword to your heir.\"",
+    "description": "Pendragon casts you as a knight in the legendary Britain of King Arthur, from the turbulent Boy King period onward. Rather than dungeon loot, you chase Glory, wrestle with opposed virtues, and let Passions like love and loyalty drive heroic and tragic choices. Play spans decades: knights age, marry, and die, handing the campaign to their heirs. Chaosium's definitive 6th edition refines Greg Stafford's celebrated system into a sweeping chronicle of honor, war, and romance.",
+    "setting": "Sub-Roman Britain reimagined through Arthurian romance. Player-knights hail from Salisbury in the kingdom of Logres, serving amid Saxon invasions, feuding nobles, faerie enchantment, and the slow rise of Camelot across a chronicle that unfolds year by year.",
+    "vignette": "A Saxon berserker charges your knight at the ford. You declare an inspiration attempt on your Passion Loyalty (Lord) 15 and roll a d20 — a 9, under the value. Inspired, you add +10 to your Sword of 18; your opposed roll crushes his defense and you unhorse him in a single pass.",
+    "prep": "~45 min",
+    "mechanics": [
+      { "title": "Personality Traits", "text": "Thirteen opposed virtue pairs, each summing to 20 — like Valorous versus Cowardly. A roll under your Trait can compel your knight to act nobly or shamefully, whether you wanted it or not." },
+      { "title": "Passions", "text": "Love, Loyalty, Hospitality, and Hate rate your knight's deepest drives. Invoke one and roll under it for a surge of inspiration in a crisis — but failure can leave you melancholic or maddened." },
+      { "title": "Glory", "text": "Every deed, feast, and act of largesse earns Glory instead of experience. It measures a knight's renown across a lifetime and can even raise a whole family line toward legendary status." },
+      { "title": "Generational Play", "text": "Each game year closes with a Winter Phase resolving aging, wounds, harvests, and childbirth. Knights grow old and fall, so the campaign passes to sons, daughters, and heirs across decades." }
+    ],
+    "gallery": [
+      { "cap": "A double-page spread from the 6th edition core rulebook." },
+      { "cap": "Rules and Arthurian illustration set side by side." },
+      { "cap": "Interior art evoking the legendary Britain of the setting." }
+    ],
+    "resources": [
+      { "name": "Pendragon Quick-Start (free)" },
+      { "name": "Core Rulebook (hardcover + PDF)" },
+      { "name": "Community Foundry VTT system" }
+    ],
+    "quotes": [
+      { "text": "This new edition of the classic Pendragon roleplaying game is absolutely terrific and is no doubt going to be the crowning achievement in the series." },
+      { "text": "It's a flawed restatement of a game that has earned its place in the pantheon of foundational RPGs." }
     ]
   }
 });
@@ -7929,6 +12662,343 @@ registerSystem("runequest", {
     ]
   }
 });
+registerSystem("savage-worlds", {
+  "groups": {
+    "default": { "key": "tactical", "order": 13 },
+    "family": { "key": "standalone", "order": 34 },
+    "genre": { "key": "tactical", "order": 9 }
+  },
+  "name": "Savage Worlds",
+  "publisher": "Pinnacle Entertainment Group",
+  "dice": "step-dice (d4–d12)",
+  "players": "3–5",
+  "complexity": 2,
+  "free": true,
+  "foundryStatus": "Official",
+  "heroImage": "https://www.belloflostsouls.net/wp-content/uploads/2020/05/savage-worlds.png",
+  "playstyleTags": [
+    "combat",
+    "narrative",
+    "explore"
+  ],
+  "settingTags": [],
+  "gallery": [
+    {
+      "src": "https://www.seekpng.com/png/detail/890-8905220_savage-worlds-savage-worlds-adventure-edition.png"
+    },
+    {
+      "src": "https://sessionzero.games/images/systems/savage-worlds-g1.jpeg"
+    },
+    {
+      "src": "https://www.belloflostsouls.net/wp-content/uploads/2020/05/savage-worlds.png"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://peginc.com/savage-settings/savage-worlds/",
+      "fmt": "Web"
+    },
+    {
+      "type": "link",
+      "url": "https://shop.peginc.com/collections/savage-worlds-adventure-edition",
+      "fmt": "Web"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://peginc.com/store/deadlands-the-weird-west-blood-on-the-range-savage-worlds-test-drive-swade/",
+      "fmt": "PDF"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "swords"
+    },
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "book-open"
+    },
+    {
+      "icon": "scroll"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.rpg.net/reviews/archive/9/9349.phtml
+    {
+      "text": "Got a life? d20 becoming too much work? Savage Worlds is a lean, mean gaming machine. If you've been looking for an rpg that combines a minimum of prep time with a maximum of useful, crunchy bits — this one's for you.",
+      "author": "Creel, RPGnet"
+    },
+    // VERIFIED-AT: https://www.rpg.net/reviews/archive/9/9637.phtml
+    {
+      "text": "Fast, Furious, Fun — it's not just a tagline, it's a mission statement!",
+      "author": "Jamie Herbert, RPGnet"
+    }
+  ],
+  "ru": {
+    "tagShort": "Универсальная pulpy на step-dice",
+    "tagline": "«Быстро, яростно, весело! — это не слоган, это манифест».",
+    "description": "Savage Worlds — универсальная настольная RPG от Pinnacle Entertainment Group (Adventure Edition, 2018). Step-dice система: персонажи (Wild Cards) бросают свой трейт-кубик + d6 (Wild Die), оставляя больший. Кубики взрываются (Aces) на максимуме. Цель — 4, превышение на +4+ даёт Raise. Инициатива — через колоду карт. Бенни — мета-валюта для перебросов. Мир Deadlands, Rifts, Pathfinder — всё на одном движке.",
+    "setting": "Жанр-agnostic. Savage Worlds не привязана к миру — она создаёт мир через Setting Rules и модульные Edge/Hindrances. Официальные сеттинги: Deadlands (хоррор-вестерн), Rifts (межпространственный хаос), Pathfinder (фэнтези), Necessary Evil (суперзлодеи), 50 Fathoms (пиратское фэнтези).",
+    "vignette": "Ковбой бросает d8 (Shooting) + Wild Die d6. Взрыв на d8: 8+6+4 = 18! Два Raise! Пуля прошивает.bandit'а насквозь. Бенни лежит на столе — ждёт следующего хода. Карты инициативы разложены: туз — первый ход. Добро пожаловать в Дикую Запад.",
+    "prep": "~10 мин",
+    "mechanics": [
+      {
+        "title": "Step-Dice (d4–d12)",
+        "text": "Каждый трейт — от d4 до d12. Бросаешь трейт + Wild Die d6, оставляешь больший. Кубики взрываются (Aces) на максимуме. Простая, но драматичная математика."
+      },
+      {
+        "title": "Wild Cards и Extras",
+        "text": "Игроки — Wild Cards (3 Wounds до incapacitate). Враги — Extras (up, down, или off the table). Простая эскалация: от одиночек до армий."
+      },
+      {
+        "title": "Бенни",
+        "text": "Мета-валюта: перебрось провал, впитай урон, получи Raise. Заработай через ролеплей или щедрость MC."
+      },
+      {
+        "title": "Колода инициативы",
+        "text": "Стандартная колода карт для определения порядка ходов. Туз — первый. Джокер — +2 ко всему и ход когда хочешь."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "SWADE — логотип"
+      },
+      {
+        "cap": "Обложка (Geekerati)"
+      },
+      {
+        "cap": "SWADE Core Rulebook"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт — Pinnacle Entertainment Group"
+      },
+      {
+        "name": "Магазин — купить SWADE"
+      },
+      {
+        "name": "Test Drive (бесплатный квикстарт PDF)"
+      }
+    ],
+    "quotes": [
+      { "text": "Есть жизнь? d20 стало слишком сложно? Savage Worlds — это стройная, голодная игровая машина. Если вы искали RPG, совмещающую минимум подготовки с максимумом полезных, хрунчевых деталей — это для вас." },
+      { "text": "Быстро, яростно, весело — это не просто слоган, это манифест!" }
+    ]
+  },
+  "en": {
+    "tagShort": "Universal pulpy step-dice — Fast! Furious! Fun!",
+    "tagline": "\"Fast, Furious, Fun — it's not just a tagline, it's a mission statement!\"",
+    "description": "Savage Worlds is a universal tabletop RPG from Pinnacle Entertainment Group (Adventure Edition, 2018). Step-dice system: Wild Cards roll their trait die + a Wild Die d6, keeping the higher. Dice explode (Ace) on their max. Target is 4; beating by +4+ gives a Raise. Initiative via playing cards. Bennies are metagame currency for rerolls. Settings include Deadlands, Rifts, Pathfinder — all on one engine.",
+    "setting": "Genre-agnostic. Savage Worlds builds worlds through Setting Rules and modular Edges/Hindrances. Official settings: Deadlands (horror-western), Rifts (dimensional chaos), Pathfinder (fantasy), Necessary Evil (supervillains), 50 Fathoms (swashbuckling fantasy).",
+    "vignette": "The cowboy rolls d8 (Shooting) + Wild Die d6. Ace on d8: 8+6+4 = 18! Two Raises! The bullet tears through the bandit. Bennies sit on the table — waiting for the next turn. Initiative cards spread: Ace goes first. Welcome to the Weird West.",
+    "prep": "~10 min",
+    "mechanics": [
+      {
+        "title": "Step-Dice (d4–d12)",
+        "text": "Each trait runs from d4 to d12. Roll trait + Wild Die d6, keep higher. Dice explode (Ace) on max. Simple but dramatic math."
+      },
+      {
+        "title": "Wild Cards & Extras",
+        "text": "Players are Wild Cards (3 Wounds to incapacitate). Enemies are Extras (up, down, or off the table). Simple escalation: from loners to armies."
+      },
+      {
+        "title": "Bennies",
+        "text": "Metagame currency: reroll a failure, soak damage, get a Raise. Earned through roleplay or GM generosity."
+      },
+      {
+        "title": "Initiative Deck",
+        "text": "Standard poker deck determines turn order. Ace goes first. Joker = +2 to everything and go whenever you want."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "SWADE — logo"
+      },
+      {
+        "cap": "Cover art (Geekerati)"
+      },
+      {
+        "cap": "SWADE Core Rulebook"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official site — Pinnacle Entertainment Group"
+      },
+      {
+        "name": "Store — buy SWADE"
+      },
+      {
+        "name": "Test Drive (free quickstart PDF)"
+      }
+    ],
+    "quotes": [
+      { "text": "Got a life? d20 becoming too much work? Savage Worlds is a lean, mean gaming machine. If you've been looking for an rpg that combines a minimum of prep time with a maximum of useful, crunchy bits — this one's for you." },
+      { "text": "Fast, Furious, Fun — it's not just a tagline, it's a mission statement!" }
+    ]
+  }
+});
+registerSystem("scum-and-villainy", {
+  "groups": {
+    "default": { "key": "narrative", "order": 37 },
+    "family": { "key": "pbta-fitd", "order": 29 },
+    "genre": { "key": "sci-fi", "order": 15 }
+  },
+  "name": "Scum and Villainy",
+  "publisher": "Evil Hat Productions",
+  "dice": "Forged in the Dark (d6 pools)",
+  "players": "3–5",
+  "complexity": 2,
+  "foundryStatus": "Community",
+  "heroImage": "https://evilhat.com/wp-content/uploads/2018/06/SV_1.jpg",
+  "playstyleTags": [
+    "narrative",
+    "social",
+    "combat"
+  ],
+  "settingTags": ["space"],
+  "gallery": [
+    {
+      "src": "https://evilhat.com/wp-content/uploads/2018/06/SV_2.jpg"
+    },
+    {
+      "src": "https://evilhat.com/wp-content/uploads/2018/06/SV_3.jpg"
+    },
+    {
+      "src": "https://evilhat.com/wp-content/uploads/2018/06/SV_4.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://evilhat.com/product/scum-and-villainy/",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "rocket"
+    },
+    {
+      "icon": "target"
+    },
+    {
+      "icon": "users"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://gnomestew.com/scum-and-villainy-review/
+    {
+      "text": "It captures the feel of being a space criminal, bound for fortune and glory, while providing some substantive rules on which to hang a narrative.",
+      "author": "Jared Rascher, Gnome Stew"
+    },
+    // VERIFIED-AT: https://therewillbe.games/articles-ttrpg-reviews/8314-scum-and-villainy-rpg-review
+    {
+      "text": "If you love Firefly, Star Wars, or Killjoys I can really recommend this as a great introduction to what I think is one of the finest systems around.",
+      "author": "Iain McAllister, There Will Be Games"
+    }
+  ],
+  "ru": {
+    "tagShort": "Космические жулики на движке Forged in the Dark",
+    "tagline": "«Разношёрстный экипаж, ушатанный корабль и работа, от которой не отказываются».",
+    "description": "Scum and Villainy — космическая опера на движке Forged in the Dark (том же, что в Blades in the Dark). Вы — экипаж потрёпанного звездолёта на окраине сектора Проциона: контрабандисты, охотники за головами и бунтари, что берутся за рискованные дела. Дух «Светлячка» и «Звёздных войн»: слишком много долгов, слишком мало топлива и слишком опасная работа.",
+    "setting": "Сектор Проциона под железной пятой Галактической Гегемонии. Криминальные синдикаты, враждующие благородные дома, чужие расы и странные мистики. Ваш корабль — дом и главный актив, а Гегемония дышит в спину. Романтика космических отбросов: свобода дорого стоит, а каждый удачный куш лишь оттягивает расплату.",
+    "vignette": "Груз спрятан, но патруль Гегемонии стыкуется для досмотра. Пилот хочет проскочить: бросок действия — пул d6 по рейтингу. Позиция рискованная, эффект стандартный. Выпало 4 — успех с осложнением. Вы отрываетесь, но сжигаете последнее топливо и получаете Жар. В FitD провалов «в пустоту» нет — есть цена, которую платит экипаж.",
+    "prep": "~15 мин",
+    "mechanics": [
+      {
+        "title": "Forged in the Dark",
+        "text": "Действие — пул d6 с Позицией и Эффектом; 6 — успех, 4–5 — успех с ценой, 1–3 — провал. Последствия можно сопротивляться через Стресс. Тот же движок, что в Blades in the Dark."
+      },
+      {
+        "title": "Корабль как персонаж",
+        "text": "Звездолёт (Stardancer, Cerberus…) — полноценный «герой» со своими апгрейдами, характером и уроном. Это дом экипажа, его гордость и вечная статья расходов."
+      },
+      {
+        "title": "Дела и передышки",
+        "text": "Структура «дело → передышка»: берёте рискованный заказ, затем восстанавливаетесь, лечите Стресс и ведёте проекты. Жар и Гегемония преследуют вас между кушами."
+      },
+      {
+        "title": "Плейбуки космических отбросов",
+        "text": "Механик, Мускул, Пилот, Пройдоха, Оратор, Штопальщик, Мистик — архетипы прямиком из «Светлячка» и «Звёздных войн». Каждый задаёт свою роль в экипаже."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Интерьерный арт"
+      },
+      {
+        "cap": "Сцена в секторе Проциона"
+      },
+      {
+        "cap": "Экипаж и корабль"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальная страница — Evil Hat"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "Игра ухватывает ощущение космического преступника в погоне за богатством и славой, при этом давая содержательные правила, на которые можно опереть повествование." },
+      { "text": "Если вы любите «Светлячка», «Звёздные войны» или «Killjoys» — от всей души рекомендую это как отличное знакомство с одной из лучших, на мой взгляд, систем." }
+    ]
+  },
+  "en": {
+    "tagShort": "Space scoundrels on the Forged in the Dark engine",
+    "tagline": "\"A ragtag crew, a beat-up ship, and a job you can't turn down.\"",
+    "description": "Scum and Villainy is a space opera on the Forged in the Dark engine (the same one behind Blades in the Dark). You're the crew of a battered starship on the edge of the Procyon Sector: smugglers, bounty hunters, and rebels taking on risky jobs. The vibe is Firefly and Star Wars: too much debt, too little fuel, and work that's far too dangerous.",
+    "setting": "The Procyon Sector under the iron heel of the Galactic Hegemony. Criminal syndicates, feuding noble houses, dangerous aliens, and strange mystics. Your ship is home and your main asset, and the Hegemony breathes down your neck. The romance of space scum: freedom is costly, and every big score just delays the reckoning.",
+    "vignette": "The cargo is hidden, but a Hegemony patrol docks for inspection. The pilot wants to run: an action roll — a d6 pool by rating. Risky position, standard effect. A 4 — success with a complication. You break away, but burn the last of your fuel and take Heat. In FitD there are no failures 'into the void' — only a price the crew pays.",
+    "prep": "~15 min",
+    "mechanics": [
+      {
+        "title": "Forged in the Dark",
+        "text": "An action is a d6 pool with Position and Effect; a 6 succeeds, 4–5 succeeds at a cost, 1–3 fails. Consequences can be resisted with Stress. The same engine as Blades in the Dark."
+      },
+      {
+        "title": "The ship as a character",
+        "text": "The starship (the Stardancer, the Cerberus…) is a full 'character' with its own upgrades, personality, and damage. It's the crew's home, their pride, and a permanent line of expenses."
+      },
+      {
+        "title": "Jobs and downtime",
+        "text": "A 'score → downtime' structure: take a risky job, then recover, heal Stress, and run projects. Heat and the Hegemony hound you between scores."
+      },
+      {
+        "title": "Space-scoundrel playbooks",
+        "text": "Mechanic, Muscle, Pilot, Scoundrel, Speaker, Stitch, Mystic — archetypes straight out of Firefly and Star Wars. Each frames your role in the crew."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Interior art"
+      },
+      {
+        "cap": "A scene in the Procyon Sector"
+      },
+      {
+        "cap": "Crew and ship"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official page — Evil Hat"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "It captures the feel of being a space criminal, bound for fortune and glory, while providing some substantive rules on which to hang a narrative." },
+      { "text": "If you love Firefly, Star Wars, or Killjoys I can really recommend this as a great introduction to what I think is one of the finest systems around." }
+    ]
+  }
+});
 registerSystem("shadowdark", {
   "groups": {
     "default": { "key": "osr", "order": 8 },
@@ -8105,6 +13175,185 @@ registerSystem("shadowdark", {
     ]
   }
 });
+registerSystem("shadowrun", {
+  "groups": {
+    "default": { "key": "tactical", "order": 12 },
+    "family": { "key": "standalone", "order": 33 },
+    "genre": { "key": "sci-fi", "order": 8.5 }
+  },
+  "name": "Shadowrun",
+  "publisher": "Catalyst Game Labs",
+  "dice": "d6 pool",
+  "players": "3–6",
+  "complexity": 4,
+  "free": true,
+  "foundryStatus": "Community",
+  "heroImage": "https://cdn11.bigcommerce.com/s-ua4dd/images/stencil/500x659/products/36460/415229/Copy_of_Website_Image_Template3360__18385.1751897343.png?c=2",
+  "playstyleTags": [
+    "tactical",
+    "combat",
+    "narrative"
+  ],
+  "settingTags": ["cyberpunk", "fantasy"],
+  "gallery": [
+    {
+      "src": "https://seaofstarsrpg.wordpress.com/wp-content/uploads/2021/05/sr-sw.png"
+    },
+    {
+      "src": "https://seaofstarsrpg.wordpress.com/wp-content/uploads/2020/06/cat28002_firing-squad.png"
+    },
+    {
+      "src": "https://cdn11.bigcommerce.com/s-ua4dd/images/stencil/500x659/products/36460/415229/Copy_of_Website_Image_Template3360__18385.1751897343.png?c=2"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://shadowrunsixthworld.com/",
+      "fmt": "Web"
+    },
+    {
+      "type": "link",
+      "url": "https://store.catalystgamelabs.com/collections/shadowrun",
+      "fmt": "Web"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://pages.roll20.net/shadowrun",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "swords"
+    },
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "book-open"
+    },
+    {
+      "icon": "scroll"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.rpg.net/reviews/archive/19/19140.phtml
+    {
+      "text": "While Shadowrun players may not like all the mechanical choices from the system, almost everyone loves the fluff the world provides. It's deep and engaging with lots of short stories. This will make you want some cyberpunk tabletop in your life.",
+      "author": "Edward Kabara, RPGnet"
+    },
+    // VERIFIED-AT: https://www.rpg.net/reviews/archive/12/12161.phtml
+    {
+      "text": "The roleplaying classic of magic and cybertech comes of age with a streamlined, unified system that produces a fluid and fun game. Sets a real benchmark for how to layout, write and design a game.",
+      "author": "Conan McKegg, RPGnet"
+    }
+  ],
+  "ru": {
+    "tagShort": "Киберпанк + фэнтези на d6-пуле",
+    "tagline": "«Киберимпланты, магия и драконы в мире корпораций».",
+    "description": "Shadowrun — настольная RPG от Catalyst Game Labs (6-е издание, 2019), уникальный гибрид киберпанка и фэнтези. Действие в 2080 году (Sixth World): магия вернулась на Землю, металюди (эльфы, орки, тролли, дварфы) сосуществуют с киберимплантами и Матрицей. Система d6-пула: бросок Атрибут + Навык, успехи на 5 и 6. Шаодраннеры — наёмники, выполняющие теневые задания для корпораций.",
+    "setting": "Шестой Мир, 2080 — мегакорпорации правят миром, магия вернулась, метлюди — полноправные граждане. Seattle — основной сеттинг. Три жанра в одном: киберпанк (хакинг, киберимпланты), фэнтези (магия, драконы, эльфы) и хист (наёмные операции).",
+    "vignette": "Шаодраннер-шаман вызывает духов ветра. Пять d6: 3, 5, 1, 6, 2 = два хита. Хакер подключается к Матрице — его decks блокирует ICE. Сэмurai с катаной прорезает путь через охрану. Дилер кричит: «Время уходит!» Дракон-мегамагнат смотрит из башни Aztechnology. Добро пожаловать в Шестой Мир.",
+    "prep": "~25 мин",
+    "mechanics": [
+      {
+        "title": "d6-пул",
+        "text": "Бросок Атрибут + Навык в d6. Успехи на 5 и 6. Простая, но элегантная математика. Криты на шести в пуле."
+      },
+      {
+        "title": "Edge",
+        "text": "Уникальный ресурс: удача, интуиция, дерзость. Позволяет перебросить кубики, добавить хиты или активировать особые способности. Пополняется через Историю персонажа."
+      },
+      {
+        "title": "Четыре слоя",
+        "text": "Физический мир, Магия, Матрица (хакинг), Риггинг (меха). Каждый слой — отдельная подсистема. Вместе — сложная, но увлекательная механика."
+      },
+      {
+        "title": "Метлюди",
+        "text": "Эльфы, орки, дварфы, тролли, люди — каждый с уникальными модификаторами атрибутов и чертами. Магия и киберимпланты конфликтуют через Essence."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Street Wyrd — магический справочник"
+      },
+      {
+        "cap": "Firing Squad — боевой справочник"
+      },
+      {
+        "cap": "Core Rulebook (Seattle Edition)"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт — Shadowrun Sixth World"
+      },
+      {
+        "name": "Catalyst Game Labs — магазин"
+      },
+      {
+        "name": "Бесплатные правила на Roll20"
+      }
+    ],
+    "quotes": [
+      { "text": "Хотя игроки Shadowrun могут не любить все механические выборы системы, почти все обожают сеттинг. Он глубокий и захватывающий, с множеством рассказов. Это захочется стола в вашей жизни." },
+      { "text": "Классика RPG — магия и кибертех — повзрослела с потоковой, единой системой, создающей плавную и весёлую игру. Настоящий benchmark для того, как оформлять, писать и проектировать игру." }
+    ]
+  },
+  "en": {
+    "tagShort": "Cyberpunk + fantasy d6-pool — magic meets the Matrix",
+    "tagline": "\"Cyberware, magic, and dragons in a world of megacorps.\"",
+    "description": "Shadowrun is a tabletop RPG from Catalyst Game Labs (6th Edition, 2019), a unique hybrid of cyberpunk and fantasy. Set in 2080 (the Sixth World) — magic has returned to Earth, metahumans (elves, orks, trolls, dwarves) coexist with cyberware and the Matrix. d6 pool system: roll Attribute + Skill, count hits on 5s and 6s. Shadowrunners are deniable assets who take illegal jobs from corporations.",
+    "setting": "The Sixth World, 2080 — megacorporations rule, magic has returned, metahumans are full citizens. Seattle is the primary setting. Three genres in one: cyberpunk (hacking, cyberware), fantasy (magic, dragons, elves), and heist (shadow operations).",
+    "vignette": "A shaman Shadowrunner summons a wind spirit. Five d6: 3, 5, 1, 6, 2 = two hits. A decker jacks into the Matrix — ICE locks him out. A street samurai with a katana carves through security. The dealer screams: 'Time's running out!' A dragon-megamogul watches from the Aztechnology tower. Welcome to the Sixth World.",
+    "prep": "~25 min",
+    "mechanics": [
+      {
+        "title": "d6 Pool",
+        "text": "Roll Attribute + Skill in d6s. Hits on 5s and 6s. Simple but elegant math. Crits on sixes in the pool."
+      },
+      {
+        "title": "Edge",
+        "text": "A unique resource: luck, intuition, daring. Lets you reroll dice, add hits, or activate special abilities. Replenished through character backstory."
+      },
+      {
+        "title": "Four Layers",
+        "text": "Physical world, Magic, Matrix (hacking), Rigging (mecha). Each layer is its own subsystem. Together — complex but rewarding mechanics."
+      },
+      {
+        "title": "Metahumans",
+        "text": "Elves, orks, dwarves, trolls, humans — each with unique attribute modifiers and traits. Magic and cyberware clash through Essence."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Street Wyrd — magic sourcebook"
+      },
+      {
+        "cap": "Firing Squad — combat sourcebook"
+      },
+      {
+        "cap": "Core Rulebook (Seattle Edition)"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official site — Shadowrun Sixth World"
+      },
+      {
+        "name": "Catalyst Game Labs — store"
+      },
+      {
+        "name": "Free rules on Roll20"
+      }
+    ],
+    "quotes": [
+      { "text": "While Shadowrun players may not like all the mechanical choices from the system, almost everyone loves the fluff the world provides. It's deep and engaging with lots of short stories. This will make you want some cyberpunk tabletop in your life." },
+      { "text": "The roleplaying classic of magic and cybertech comes of age with a streamlined, unified system that produces a fluid and fun game. Sets a real benchmark for how to layout, write and design a game." }
+    ]
+  }
+});
 registerSystem("spire", {
   "groups": {
     "default": { "key": "narrative", "order": 2 },
@@ -8277,6 +13526,176 @@ registerSystem("spire", {
       {
         "name": "Character sheet"
       }
+    ]
+  }
+});
+registerSystem("star-trek-adventures", {
+  "groups": {
+    "default": { "key": "tactical", "order": 34 },
+    "family": { "key": "standalone", "order": 38 },
+    "genre": { "key": "sci-fi", "order": 13 }
+  },
+  "name": "Star Trek Adventures",
+  "publisher": "Modiphius Entertainment",
+  "dice": "2d20 System",
+  "players": "3–6",
+  "complexity": 3,
+  "free": true,
+  "foundryStatus": "Community",
+  "heroImage": "https://cdn.shopify.com/s/files/1/0225/4035/files/star-trek-adventures-second-edition-core-rulebook-star-trek-adventures-modiphius-entertainment-267752.jpg",
+  "playstyleTags": [
+    "narrative",
+    "social",
+    "explore"
+  ],
+  "settingTags": ["space"],
+  "gallery": [
+    {
+      "src": "https://cdn.shopify.com/s/files/1/0225/4035/files/star-trek-adventures-second-edition-core-rulebook-star-trek-adventures-modiphius-entertainment-759196.jpg"
+    },
+    {
+      "src": "https://modiphius.net/cdn/shop/files/star-trek-adventures-second-edition-exploration-guide-star-trek-adventures-modiphius-entertainment-894023.jpg"
+    },
+    {
+      "src": "https://modiphius.net/cdn/shop/files/star-trek-adventures-second-edition-technical-manual-star-trek-adventures-modiphius-entertainment-380562.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://www.modiphius.net/pages/star-trek-adventures",
+      "fmt": "Web"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://modiphius.net/en-us/products/star-trek-adventures-the-roleplaying-game-second-edition-quickstart-guide-pdf",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "activity"
+    },
+    {
+      "icon": "star"
+    },
+    {
+      "icon": "rocket"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://spruesandbrews.com/2024/06/27/star-trek-adventures-2nd-edition-core-rulebook-review-modiphius/
+    {
+      "text": "Star Trek Adventures 2nd Edition finds the right balance, and really leans more into creativity and story telling.",
+      "author": "Matt Crowther, Sprues & Brews"
+    },
+    // VERIFIED-AT: https://spruesandbrews.com/2024/06/27/star-trek-adventures-2nd-edition-core-rulebook-review-modiphius/
+    {
+      "text": "even Star Trek fans who have never dabbled with an RPG before will find this worth adding to their collection.",
+      "author": "Matt Crowther, Sprues & Brews"
+    }
+  ],
+  "ru": {
+    "tagShort": "Официальная ролёвка по «Стартреку» на 2d20",
+    "tagline": "«Смело идите туда, где не ступала нога человека — целым экипажем звездолёта».",
+    "description": "Star Trek Adventures — официальная RPG по вселенной «Звёздного пути» от Modiphius на движке 2d20. Играете экипажем звездолёта Флота: капитан, наука, инженерия, тактика. Упор на исследование, дипломатию и моральные дилеммы в духе сериалов, а не на пострелушки. 2-е издание (2024) отшлифовало систему до чистого «трек-фила».",
+    "setting": "Галактика «Звёздного пути»: Объединённая Федерация Планет, Звёздный Флот, Главная Директива. Клингоны, ромуланцы, борг и неизведанный космос. Тон — оптимистичная научная фантастика: проблемы решаются умом, эмпатией и наукой чаще, чем фазером. От эпохи TOS до TNG и дальше.",
+    "vignette": "Мостик. Неизвестный корабль не отвечает. Капитан приказывает офицеру по науке просканировать: проверка Разума + Науки — бросок 2d20, каждый кубик ниже цели даёт успех. Нужно 2 успеха, выпало 1. Офицер тратит Momentum из общего пула — ещё d20, ещё успех. Сенсоры оживают: корабль полон споровой формы жизни. Теперь — что с этим делать по Главной Директиве?",
+    "prep": "~30 мин",
+    "mechanics": [
+      {
+        "title": "Движок 2d20",
+        "text": "Проверка: 2d20, каждый кубик «меньше» суммы Атрибут+Дисциплина — успех. Нужное число успехов задаёт сложность. Можно докупать кубики за Momentum или рискуя."
+      },
+      {
+        "title": "Momentum и Threat",
+        "text": "Успехи сверх нормы копятся в общий пул Momentum — тратится на бонусы всей командой. У ведущего зеркальный пул Threat для осложнений. Экономика драмы за столом."
+      },
+      {
+        "title": "Ценности и Решимость",
+        "text": "У героя есть Values — убеждения в духе трековских монологов. Действуя по ним (или против), персонаж получает Determination на героические свершения."
+      },
+      {
+        "title": "Звездолёт как персонаж",
+        "text": "Корабль — полноценный «герой» со своими характеристиками и уроном по системам. Космический бой — командная работа: каждый на своём посту решает исход."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Core Rulebook (2-е издание)"
+      },
+      {
+        "cap": "Exploration Guide"
+      },
+      {
+        "cap": "Technical Manual"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальная страница — Modiphius"
+      },
+      {
+        "name": "Бесплатный Quickstart"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "Второе издание Star Trek Adventures нашло верный баланс и по-настоящему делает упор на творчество и рассказывание истории." },
+      { "text": "Даже фанаты «Стартрека», никогда не игравшие в RPG, сочтут это достойным пополнением коллекции." }
+    ]
+  },
+  "en": {
+    "tagShort": "The official Star Trek RPG on the 2d20 System",
+    "tagline": "\"Boldly go where no one has gone before — as a whole starship crew.\"",
+    "description": "Star Trek Adventures is Modiphius's official RPG of the Star Trek universe, on the 2d20 System. You play a Starfleet crew — captain, science, engineering, tactical. The emphasis is exploration, diplomacy, and moral dilemmas in the spirit of the shows, not shootouts. The 2nd edition (2024) polished the system into clean 'Trek feel.'",
+    "setting": "The galaxy of Star Trek: the United Federation of Planets, Starfleet, the Prime Directive. Klingons, Romulans, the Borg, and uncharted space. The tone is optimistic science fiction — problems solved with intellect, empathy, and science more often than a phaser. From the TOS era to TNG and beyond.",
+    "vignette": "The bridge. An unknown ship won't answer hails. The captain orders a scan: a Reason + Science test — roll 2d20, each die under the target scores a success. You need 2, you roll 1. The officer spends Momentum from the shared pool — another d20, another success. Sensors light up: the ship is full of a spore-based life form. Now — what does the Prime Directive say about that?",
+    "prep": "~30 min",
+    "mechanics": [
+      {
+        "title": "The 2d20 engine",
+        "text": "A test: roll 2d20; each die under your Attribute+Discipline total is a success. The successes required set the difficulty. Buy extra dice with Momentum or by taking risks."
+      },
+      {
+        "title": "Momentum & Threat",
+        "text": "Successes beyond the requirement bank into a shared Momentum pool the whole crew spends on bonuses. The GM has a mirror Threat pool for complications. A shared economy of drama."
+      },
+      {
+        "title": "Values & Determination",
+        "text": "A hero has Values — beliefs in the vein of Trek monologues. Acting on (or against) them earns Determination for heroic feats when it matters most."
+      },
+      {
+        "title": "The starship as a character",
+        "text": "The ship is a full 'character' with its own stats and system damage. Space combat is teamwork — everyone at their station shapes the outcome."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Core Rulebook (2nd edition)"
+      },
+      {
+        "cap": "Exploration Guide"
+      },
+      {
+        "cap": "Technical Manual"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official page — Modiphius"
+      },
+      {
+        "name": "Free Quickstart"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "Star Trek Adventures 2nd Edition finds the right balance, and really leans more into creativity and story telling." },
+      { "text": "even Star Trek fans who have never dabbled with an RPG before will find this worth adding to their collection." }
     ]
   }
 });
@@ -8742,10 +14161,10 @@ registerSystem("starforged", {
       "src": "https://assetsio.gnwcdn.com/starforged-ironsworn-ship-alien-art.png?width=690&quality=85&format=jpg&dpr=3&auto=webp"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMTQzMzQxNy84OTAzMzYwLnBuZw==/original/kWJNFl.png"
+      "src": "https://cdn.shopify.com/s/files/1/0712/0329/1447/files/ironsworn-starforged-digital-main.png?v=1767637357"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMTQzMzQxNy84OTAzMzYxLnBuZw==/original/3VZ%2BAO.png"
+      "src": "https://cdn.shopify.com/s/files/1/0712/0329/1447/files/starforged-asset-deck-1.png?v=1760647856"
     }
   ],
   "resources": [
@@ -9203,6 +14622,108 @@ registerSystem("sword-and-wizardry", {
     ]
   }
 });
+registerSystem("symbaroum", {
+  "groups": {
+    "default": { "key": "narrative", "order": 44 },
+    "family": { "key": "standalone", "order": 52 },
+    "genre": { "key": "dark-fantasy", "order": 27 }
+  },
+  "name": "Symbaroum",
+  "publisher": "Free League Publishing (Järnringen)",
+  "dice": "d20 roll-under",
+  "players": "2–6",
+  "complexity": 3,
+  "free": false,
+  "edition": null,
+  "foundryStatus": "Official",
+  "heroImage": "https://image.nobleknight.com/i/jpg1500/impmuh100001.jpg",
+  "playstyleTags": ["explore", "mystery", "horror"],
+  "settingTags": ["fantasy", "weird"],
+  "gallery": [
+    { "src": "https://image.nobleknight.com/i/jpg1500/impmuh051001.jpg" },
+    { "src": "https://image.nobleknight.com/i/jpg1500/impmuh050550.jpg" },
+    { "src": "https://image.nobleknight.com/i/jpg1500/impmuh051614.jpg" }
+  ],
+  "resources": [
+    { "type": "link", "url": "https://freeleaguepublishing.com/games/symbaroum/", "fmt": "Web" },
+    { "type": "link", "url": "https://freeleaguepublishing.com/shop/symbaroum/core-rulebook/", "fmt": "Web" },
+    { "type": "link", "url": "https://foundryvtt.com/packages/symbaroum/", "fmt": "VTT" }
+  ],
+  "mechanics": [
+    { "icon": "dices" },
+    { "icon": "skull" },
+    { "icon": "trees" },
+    { "icon": "eye" }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://thetabletopalmanac.wordpress.com/2021/10/16/rpg-reviews-symbaroum-starter-set-free-league/
+    {
+      "text": "Symbaroum is a really cool dark fantasy game. It's not only a gorgeous and evocative product with brilliant art and design, it's also a setting that evokes strong melancholia and has a strong philosophical component.",
+      "author": "SKaye, The Tabletop Almanac"
+    },
+    // VERIFIED-AT: https://gamingrespawn.com/tabletop/64091/symbaroum-review/
+    {
+      "text": "The artwork is fantastic and a great accompaniment to the intricate lore of the setting.",
+      "author": "Will Worrall, Gaming Respawn"
+    }
+  ],
+  "ru": {
+    "tagShort": "тёмное фэнтези Давокара",
+    "tagline": "«Приключения ждут в глубинах Давокара — но за жадными следует порча».",
+    "description": "Symbaroum — ролевая игра в жанре тёмного фэнтези, действие которой разворачивается вокруг Давокара, древнего леса, скрывающего руины погибшей цивилизации. Амбрийские беженцы углубляются в чащу в погоне за сокровищами, а варварские кланы и эльфы Железного Пакта предупреждают: под корнями пробуждается нечто древнее. Игра сочетает экспедиции за сокровищами, тревожную политику и наползающую порчу. Система знаменита тем, что кубики бросают только игроки: вы кидаете один d20 под свои характеристики, а монстры не бросают вовсе.",
+    "setting": "Королевство беженцев Амбрия расположено на южной кромке Давокара — огромного сумрачного леса. Под его пологом лежат руины Симбарума, павшей империи, чьи реликвии манят охотников за сокровищами, а погребённое зло отравляет всякого, кто копает слишком глубоко. Варварские кланы, ведьмы и эльфийский Железный Пакт хранят тайны чащи.",
+    "vignette": "Ваш охотник берёт на прицел искажённого порчей оленя, преградившего тропу. Меткость — 13, значит нужно выбросить 13 или меньше на d20 — вы кидаете 6. Чистое попадание. Но порча зверя растекается по поляне, и ведущий требует проверки. Ваша Решимость — 11; на d20 выпадает 15. Провал — вы получаете единицу временной порчи, и шёпот заползает вам в голову.",
+    "prep": "~30 мин",
+    "mechanics": [
+      { "title": "Броски только у игроков", "text": "Кубики бросают лишь игроки. Вы кидаете один d20 и должны выбросить не больше нужной характеристики; монстры ведущего используют фиксированные значения и не бросают против вас." },
+      { "title": "Порча", "text": "Колдовство и тёмные реликвии пятнают душу. За сцену копится временная порча, а превышение вашего порога делает вас Полностью Порченым — путь к превращению в чудовище." },
+      { "title": "Экспедиции в Давокар", "text": "Кампании строятся вокруг вылазок за сокровищами в живой, опасный лес. Руины вознаграждают смелых, но каждый добытый артефакт грозит порчей и гневом Железного Пакта." },
+      { "title": "Сборка без классов", "text": "Никаких жёстких классов. Персонажи смешивают архетипы и свободно покупают способности, силы и ритуалы, углубляя нишу или осваивая новые по мере роста опыта." }
+    ],
+    "gallery": [
+      { "cap": "Расширенное руководство игрока" },
+      { "cap": "Тистл-Холд: Гнев Стража" },
+      { "cap": "Набор приключений" }
+    ],
+    "resources": [
+      { "name": "Официальный сайт" },
+      { "name": "Базовая книга (магазин Free League)" },
+      { "name": "Система для Foundry VTT" }
+    ],
+    "quotes": [
+      { "text": "Symbaroum — по-настоящему классная игра в жанре тёмного фэнтези. Это не только великолепный и выразительный продукт с блестящим артом и дизайном, но и сеттинг, пронизанный глубокой меланхолией и сильной философской составляющей." },
+      { "text": "Иллюстрации великолепны и прекрасно дополняют богатый, детально проработанный лор сеттинга." }
+    ]
+  },
+  "en": {
+    "tagShort": "dark fantasy of Davokar",
+    "tagline": "\"Adventure awaits in the depths of Davokar — but corruption follows the greedy.\"",
+    "description": "Symbaroum is a dark fantasy RPG set around Davokar, an ancient forest hiding the ruins of a lost civilization. Ambrian refugees push into the wood chasing treasure, while barbarian clans and the elven Iron Pact warn that something old is stirring beneath the roots. Play blends treasure-hunting expeditions, uneasy politics, and creeping corruption. The system is famously player-facing: you roll a single d20 under your attributes, while monsters never roll at all.",
+    "setting": "The refugee kingdom of Ambria sits on the southern edge of Davokar, a vast, shadowed forest. Beneath its canopy lie the ruins of Symbaroum, a fallen empire whose relics tempt treasure hunters and whose buried evil poisons anyone who digs too deep. Barbarian clans, witches, and the elven Iron Pact all guard the wood's secrets.",
+    "vignette": "Your hunter draws a bead on the blight-twisted stag blocking the trail. Accurate is 13, so you need 13 or lower on the d20 — you roll a 6. Clean hit. But the beast's corruption leaks into the glade and the GM calls for a test. Your Resolute is 11; the d20 shows 15. Failure — you take a point of temporary corruption as whispers crawl into your skull.",
+    "prep": "~30 min",
+    "mechanics": [
+      { "title": "Player-facing d20", "text": "Only players roll dice. You roll a single d20 and must land at or under the relevant attribute; the GM's monsters use fixed values and never roll against you." },
+      { "title": "Corruption", "text": "Sorcery and dark relics stain the soul. Temporary corruption builds through a scene, and crossing your threshold turns you Thoroughly Corrupt — a slide toward becoming an abomination." },
+      { "title": "Davokar expeditions", "text": "Campaigns revolve around treasure-hunting forays into a living, dangerous forest. Ruins reward the bold, but every unearthed artifact risks corruption and the wrath of the Iron Pact." },
+      { "title": "Classless builds", "text": "No rigid classes. Characters mix archetypes and buy abilities, powers, and rituals freely, deepening a niche or branching into new ones as experience accrues." }
+    ],
+    "gallery": [
+      { "cap": "Advanced Player's Guide" },
+      { "cap": "Thistle Hold: Wrath of the Warden" },
+      { "cap": "Adventure Pack" }
+    ],
+    "resources": [
+      { "name": "Official website" },
+      { "name": "Core Rulebook (Free League shop)" },
+      { "name": "Foundry VTT system" }
+    ],
+    "quotes": [
+      { "text": "Symbaroum is a really cool dark fantasy game. It's not only a gorgeous and evocative product with brilliant art and design, it's also a setting that evokes strong melancholia and has a strong philosophical component." },
+      { "text": "The artwork is fantastic and a great accompaniment to the intricate lore of the setting." }
+    ]
+  }
+});
 registerSystem("tales-loop", {
   "groups": {
     "default": { "key": "fl", "order": 6 },
@@ -9528,6 +15049,154 @@ registerSystem("tales-of-argosa", {
     "quotes": [
       { "text": "If high-octane Sword & Sorcery action with little downtime and low-to-no-prep are what you want, Tales of Argosa is an ideal system." },
       { "text": "I find myself fighting the urge to play Tales of Argosa right away, which is usually a good sign." }
+    ]
+  }
+});
+registerSystem("ten-candles", {
+  "groups": {
+    "default": { "key": "narrative", "order": 39 },
+    "family": { "key": "standalone", "order": 47 },
+    "genre": { "key": "horror", "order": 12 }
+  },
+  "name": "Ten Candles",
+  "publisher": "Cavalry Games",
+  "dice": "d6 пулы + десять свечей-таймер",
+  "players": "3–5",
+  "complexity": 1,
+  "foundryStatus": "None",
+  "heroImage": "https://images.squarespace-cdn.com/content/v1/54cbdf08e4b0b8ab2e74ea9f/1619467732729-5U8IZCJMY3ZTMC6KKUR8/tencandles-10.png",
+  "playstyleTags": [
+    "narrative",
+    "horror",
+    "survival"
+  ],
+  "settingTags": ["modern"],
+  "gallery": [
+    {
+      "src": "https://images.squarespace-cdn.com/content/v1/54cbdf08e4b0b8ab2e74ea9f/1619466008887-TFKCOGXSSKRLUUQG3G9J/Cv5dI7TWgAARHRY.jpg"
+    },
+    {
+      "src": "https://images.squarespace-cdn.com/content/v1/54cbdf08e4b0b8ab2e74ea9f/1619466008888-MX1KUUI84H0EQYIB52O9/CvPrqdxWIAAhsop.jpg"
+    },
+    {
+      "src": "https://images.squarespace-cdn.com/content/v1/54cbdf08e4b0b8ab2e74ea9f/1619466009391-V22S8NCG26F2XWDCAWTW/CwIWn07XgAEuJsH.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://cavalrygames.com/ten-candles-info",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "flame"
+    },
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "hourglass"
+    },
+    {
+      "icon": "skull"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.shutupandsitdown.com/review-ten-candles/
+    {
+      "text": "Ten Candles is as much ritual as game.",
+      "author": "Cynthia Hornbeck, Shut Up & Sit Down"
+    },
+    // VERIFIED-AT: https://thealexandrian.net/wordpress/38589/roleplaying-games/review-ten-candles
+    {
+      "text": "Ten Candles is a masterful storytelling game by Stephen Dewey.",
+      "author": "Justin Alexander, The Alexandrian"
+    }
+  ],
+  "ru": {
+    "tagShort": "Трагический хоррор при свете десяти свечей",
+    "tagline": "«Вы точно погибнете. Игра — о том, как именно».",
+    "description": "Ten Candles — трагический сторигейм-хоррор Стивена Дьюи для одного вечера. Мир погрузился во тьму десять дней назад, и в темноте что-то охотится. Играется буквально при свете десяти свечей: они гаснут по ходу истории и служат таймером обречённости. Без подготовки, без хэппи-энда — только то, как ваши герои встретят конец.",
+    "setting": "Через десять дней после того, как погас весь свет солнца. В темноте живут «Они» — то, что охотится на выживших. Электричество мертво, надежда тает. Это не игра о победе: финал предрешён, все персонажи погибнут. Ценность — в достоинстве, любви и страхе последних часов, рассказанных как послание тем, кто, может быть, ещё жив.",
+    "vignette": "Пять свечей ещё горят. Ваш герой пытается завести заглохшую машину, пока Они приближаются. Собираете пул d6 по числу горящих свечей; шестёрка — успех. Ни одной шестёрки — провал, и вы гасите свечу. Комната темнеет ещё на одну ступень. Осталось четыре огонька. Голосом, дрожащим в темноте, вы описываете, как надежда утекает сквозь пальцы.",
+    "prep": "~0 мин",
+    "mechanics": [
+      {
+        "title": "Десять свечей — таймер",
+        "text": "На столе горят десять настоящих свечей. Они гаснут по ходу игры (при провалах и в конце сцен) и отсчитывают гибель. Когда погаснет последняя — умирают все. Буквальный обратный отсчёт до конца."
+      },
+      {
+        "title": "Тающий пул кубиков",
+        "text": "Проверки — пул d6 по числу горящих свечей и черт. С каждой погасшей свечой пул сжимается: механически надежда угасает, и мир вокруг темнеет вместе с ней."
+      },
+      {
+        "title": "Ноль подготовки, гарантированная гибель",
+        "text": "Ведущему не нужна подготовка. Игра честно говорит: вы погибнете. Карточки Добродетелей, Пороков, Моментов и Граней задают, за что персонаж цепляется — и что его сломает."
+      },
+      {
+        "title": "Ритуал и послание",
+        "text": "Сессия — почти обряд: приглушённый свет, записанные «на плёнку» голоса героев как послание будущим выжившим. Атмосфера важнее правил; один вечер — одна законченная трагедия."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "За столом при свечах"
+      },
+      {
+        "cap": "Игровая сцена"
+      },
+      {
+        "cap": "Атмосфера"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальная страница — Cavalry Games"
+      }
+    ]
+  },
+  "en": {
+    "tagShort": "Tragic horror told by the light of ten candles",
+    "tagline": "\"You are going to die. The game is about how.\"",
+    "description": "Ten Candles is Stephen Dewey's tragic story-horror game for a single evening. The world went dark ten days ago, and something hunts in the darkness. It's played by the literal light of ten candles: they go out as the story unfolds, serving as a timer of doom. Zero prep, no happy ending — only how your characters meet the end.",
+    "setting": "Ten days after all the sun's light went out. In the dark live 'Them' — the things that hunt survivors. The power is dead, hope is fading. This isn't a game about winning: the ending is fixed, every character will die. The value is in the dignity, love, and fear of the final hours, told as a message for those who might still be alive.",
+    "vignette": "Five candles still burn. Your character tries to start a dead car as They close in. You gather a d6 pool equal to the burning candles; a six is a success. No sixes — a failure, and you snuff a candle. The room darkens one step further. Four flames left. In a voice trembling in the dark, you describe hope slipping through your fingers.",
+    "prep": "~0 min",
+    "mechanics": [
+      {
+        "title": "Ten candles — the timer",
+        "text": "Ten real candles burn on the table. They go out as play goes on (on failures and at scene ends), counting down to doom. When the last dies, everyone dies. A literal countdown to the end."
+      },
+      {
+        "title": "A dwindling dice pool",
+        "text": "Tests are a d6 pool sized by the burning candles and traits. With each snuffed candle the pool shrinks: hope mechanically fades, and the world darkens with it."
+      },
+      {
+        "title": "Zero prep, guaranteed death",
+        "text": "The GM needs no prep. The game tells you plainly: you will die. Cards for Virtues, Vices, Moments, and Brinks define what a character clings to — and what will break them."
+      },
+      {
+        "title": "Ritual and message",
+        "text": "A session is almost a rite: dimmed light, the heroes' voices 'recorded' as a message to future survivors. Atmosphere over rules; one evening, one complete tragedy."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "At the candlelit table"
+      },
+      {
+        "cap": "A scene of play"
+      },
+      {
+        "cap": "Atmosphere"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official page — Cavalry Games"
+      }
     ]
   }
 });
@@ -9984,6 +15653,169 @@ registerSystem("thousand-year-old-vampire", {
       { "name": "Official website" },
       { "name": "Itch.io (PDF, $15)" },
       { "name": "Buy PDF" }
+    ]
+  }
+});
+registerSystem("trail-of-cthulhu", {
+  "groups": {
+    "default": { "key": "narrative", "order": 33 },
+    "family": { "key": "standalone", "order": 42 },
+    "genre": { "key": "horror", "order": 10 }
+  },
+  "name": "Trail of Cthulhu",
+  "publisher": "Pelgrane Press",
+  "dice": "GUMSHOE (d6, clue-driven)",
+  "players": "3–5",
+  "complexity": 2,
+  "free": true,
+  "foundryStatus": "Community",
+  "heroImage": "https://pelgranepress.com/wp-content/uploads/2020/04/Softcover-PELGT01-scaled.jpg",
+  "playstyleTags": [
+    "mystery",
+    "horror",
+    "narrative"
+  ],
+  "settingTags": ["historical", "weird"],
+  "gallery": [
+    {
+      "src": "https://pelgranepress.com/wp-content/uploads/2020/04/Hardcover-PELGT16.jpg"
+    },
+    {
+      "src": "https://pelgranepress.com/wp-content/uploads/2020/04/Hardcover-PELGT34.jpg"
+    },
+    {
+      "src": "https://pelgranepress.com/wp-content/uploads/2020/04/Hardcover-PELGT37.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://pelgranepress.com/trail-of-cthulhu/",
+      "fmt": "Web"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://pelgranepress.com/trail-of-cthulhu-second-edition/",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "search"
+    },
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "brain"
+    },
+    {
+      "icon": "skull"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.wired.com/2011/11/in-depth-rpg-review-trail-of-cthulhu/
+    {
+      "text": "GUMSHOE is a perfect fit for investigating the supernatural mysteries and horrors associated with the Cthulhu Mythos.",
+      "author": "MJ Harnish, Wired"
+    }
+  ],
+  "ru": {
+    "tagShort": "GUMSHOE-хоррор: ключи всегда находятся",
+    "tagline": "«Проблема не в том, чтобы найти улику. Проблема — что делать с тем, что она значит».",
+    "description": "Trail of Cthulhu — детективный хоррор Кеннета Хайта на движке GUMSHOE. Его гениальная идея: базовые улики находятся автоматически, если у героя есть нужный навык. Расследование никогда не встаёт из-за проваленного броска — напряжение в интерпретации найденного и в цене, которую платит рассудок. Лавкрафт 1930-х без тупиков.",
+    "setting": "1930-е: мировая депрессия, тень тоталитаризма и лавкрафтовский Мифос за фасадом реальной истории. Сыщики, профессора и журналисты идут по следу культов и тварей извне. Два режима: Purist (безнадёжный космический ужас) и Pulp (героическое приключение с револьвером против Ктулху).",
+    "vignette": "Библиотека покойного профессора. У вас есть навык «Библиотечное дело» — значит, ключевую книгу вы находите автоматически, без броска. Вопрос не «найдёте ли», а «выдержит ли рассудок то, что в ней». Проверка Стабильности: тратите очки General-навыка. Формула на полях страницы шевелится, будто живая. Минус к Стабильности. Что вы запишете в блокнот — и стоит ли?",
+    "prep": "~30 мин",
+    "mechanics": [
+      {
+        "title": "GUMSHOE: улики находятся",
+        "text": "Есть нужный Расследовательский навык — базовая улика ваша автоматически. Расследование не буксует из-за кубика. Драма — в том, что улики значат и куда ведут."
+      },
+      {
+        "title": "Расследовательские и Общие навыки",
+        "text": "Investigative-навыки дают улики без броска; можно тратить их очки для дополнительных деталей. General-навыки (стрельба, побег, Стабильность) бросаются d6 с тратой пула — ресурс, а не удача."
+      },
+      {
+        "title": "Стабильность и Рассудок",
+        "text": "Две шкалы психики: краткосрочная Стабильность и долгосрочный Рассудок. Столкновение с Мифосом подтачивает обе. Знание освобождает и разрушает — фирменный лавкрафтовский маятник."
+      },
+      {
+        "title": "Purist или Pulp",
+        "text": "Один движок, два тона: Purist — беспомощный космический ужас, где герои обречены; Pulp — героика, где против твари можно и с револьвером. Выбираете под настроение группы."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Core Rulebook"
+      },
+      {
+        "cap": "Материалы линейки"
+      },
+      {
+        "cap": "Приключения"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальная страница — Pelgrane Press"
+      },
+      {
+        "name": "Бесплатный Quickstart"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "GUMSHOE идеально подходит для расследования сверхъестественных тайн и ужасов, связанных с Мифосом Ктулху." }
+    ]
+  },
+  "en": {
+    "tagShort": "GUMSHOE horror: the clues are always found",
+    "tagline": "\"The problem isn't finding the clue. It's what to do with what it means.\"",
+    "description": "Trail of Cthulhu is Kenneth Hite's investigative horror on the GUMSHOE engine. Its brilliant idea: core clues are found automatically if a character has the right ability. The investigation never stalls on a failed roll — the tension is in interpreting what you find, and the price your sanity pays. 1930s Lovecraft without the dead ends.",
+    "setting": "The 1930s: global depression, the shadow of totalitarianism, and the Lovecraftian Mythos behind the facade of real history. Investigators, professors, and journalists trail cults and things from beyond. Two modes: Purist (hopeless cosmic horror) and Pulp (heroic adventure, revolver against Cthulhu).",
+    "vignette": "The dead professor's library. You have the Library Use ability — so you find the key book automatically, no roll. The question isn't whether you'll find it, but whether your mind survives what's inside. A Stability test: spend from a General-ability pool. A formula in the page's margin seems to writhe, as if alive. Stability drops. What will you write in your notebook — and should you?",
+    "prep": "~30 min",
+    "mechanics": [
+      {
+        "title": "GUMSHOE: clues are found",
+        "text": "Have the right Investigative ability and the core clue is yours automatically. The investigation never bogs down on a die roll. The drama is in what the clues mean and where they lead."
+      },
+      {
+        "title": "Investigative & General abilities",
+        "text": "Investigative abilities give clues without a roll, and you can spend their points for extra detail. General abilities (shooting, fleeing, Stability) roll a d6 with a spendable pool — a resource, not luck."
+      },
+      {
+        "title": "Stability & Sanity",
+        "text": "Two tracks of the mind: short-term Stability and long-term Sanity. Contact with the Mythos erodes both. Knowledge frees and destroys — the signature Lovecraftian pendulum."
+      },
+      {
+        "title": "Purist or Pulp",
+        "text": "One engine, two tones: Purist — helpless cosmic horror where heroes are doomed; Pulp — heroics where a revolver against the beast is on the table. Choose to fit your group's mood."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Core Rulebook"
+      },
+      {
+        "cap": "Line materials"
+      },
+      {
+        "cap": "Adventures"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official page — Pelgrane Press"
+      },
+      {
+        "name": "Free Quickstart"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "GUMSHOE is a perfect fit for investigating the supernatural mysteries and horrors associated with the Cthulhu Mythos." }
     ]
   }
 });
@@ -10875,7 +16707,7 @@ registerSystem("uvg", {
   "players": "2–5",
   "complexity": 2,
   "foundryStatus": "Community (SDM)",
-  "heroImage": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcbd0f960-e54b-438b-a2a2-4021279bba97_1600x900.jpeg",
+  "heroImage": "https://sessionzero.games/images/systems/uvg-hero.jpeg",
   "playstyleTags": [
     "explore",
     "worldbuild",
@@ -10884,13 +16716,13 @@ registerSystem("uvg", {
   "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
-      "src": "https://i.kickstarter.com/assets/027/487/468/c840ff8095f7e5aae9da7674703ee23d_original.jpg?anim=false&fit=scale-down&origin=ugc&q=92&v=1576152739&width=700"
+      "src": "https://cdn.shopify.com/s/files/1/0025/6006/5625/products/reanimated-damage-the-ultra-violet-grasslands-and-the-black-city-warning-book-1347321.jpg?v=1753228007"
     },
     {
-      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4u2A8fuE6SMEBsYZMJjVNW2EJ8oBkqz0RSQ&s"
+      "src": "https://sessionzero.games/images/systems/uvg-g1.jpg"
     },
     {
-      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzWazJyHA_IvXOKETmI7XSv--JCCXiGhudOw&s"
+      "src": "https://sessionzero.games/images/systems/uvg-g2.jpg"
     },
     {
       "src": "https://www.exaltedfuneral.com/cdn/shop/files/uvg-2e-book-463900.jpg?v=1720802815"
@@ -11204,6 +17036,757 @@ registerSystem("vaesen", {
       {
         "name": "Official sheet"
       }
+    ]
+  }
+});
+registerSystem("vampire-the-masquerade", {
+  "groups": {
+    "default": { "key": "narrative", "order": 26 },
+    "family": { "key": "standalone", "order": 30 },
+    "genre": { "key": "horror", "order": 3.5 }
+  },
+  "name": "Vampire: The Masquerade",
+  "publisher": "Renegade Game Studios",
+  "dice": "d10 pool",
+  "players": "3–5",
+  "complexity": 3,
+  "free": false,
+  "foundryStatus": "Community",
+  "heroImage": "https://cdn11.bigcommerce.com/s-kftzvkkgjv/images/stencil/500x659/products/292/1534/V5_CoreRulebook_FrontCover__22095.1657225192.jpg",
+  "playstyleTags": [
+    "narrative",
+    "combat",
+    "explore"
+  ],
+  "settingTags": ["modern", "urban-fantasy"],
+  "gallery": [
+    {
+      "src": "https://static.wikia.nocookie.net/whitewolf/images/7/78/VampireMasqueradeV5Logo.png/revision/latest"
+    },
+    {
+      "src": "https://www.grimdarkmagazine.com/wp-content/uploads/2019/09/V5-1.jpeg"
+    },
+    {
+      "src": "https://cdn11.bigcommerce.com/s-kftzvkkgjv/images/stencil/500x659/products/292/1534/V5_CoreRulebook_FrontCover__22095.1657225192.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://www.worldofdarkness.com/vampire-the-masquerade",
+      "fmt": "Web"
+    },
+    {
+      "type": "link",
+      "url": "https://store.worldofdarkness.com/products/vampire-the-masquerade-5th-edition-core-book.html",
+      "fmt": "Web"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://www.drivethrurpg.com/en/product/266095/vampire-the-masquerade-5th-edition-the-monster-s",
+      "fmt": "PDF"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "sparkles"
+    },
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "book-open"
+    },
+    {
+      "icon": "scroll"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.rpg.net/reviews/archive/18/18065.phtml
+    {
+      "text": "The system is timeless and extremely easy to learn. It all boils down to 'roll dice, you succeed at 50% per die'. Vampire is a game that thrives on drama. Hunger deserves a special mention, since it is not something to brush aside.",
+      "author": "Antonios S, RPGnet"
+    }
+  ],
+  "ru": {
+    "tagShort": "Готический хоррор на d10-пуле",
+    "tagline": "«Ты — чудовище. Голод — твой закон. Маскарад — твоя тюрьма».",
+    "description": "Vampire: The Masquerade — настольная RPG в жанре готического хоррора от Renegade Game Studios (5-е издание, V5, 2018). Система Storyteller: бросок пула d10, успехи на 6+. Два десятка = крит (4 успеха). Голод (Hunger) заменяет часть пула — жажда крови становится механикой. Играешь вампиром (Kindred), балансируя между Humanity и зверем внутри.",
+    "setting": "Современный мир — тёмное отражение нашей реальности. Камилла (консервативный вампирский истеблишмент) рушится, Анархи поднимаются, Вторая Инквизиция (секретные правительственные охотники) ищет вампиров. Каждый клан — отдельная политика, каждый город — арена.",
+    "vignette": "Третья Точка. Новобранец-вампир чувствует Голод — красный кубик в пуле. Бросок на сопротивление: 3+5+7+8+Hunger(10!) = 5 успехов. Крит! Но... крит с Hunger-кубиком = Hunger Rises. Человечество падает. Ты только что убил того, кого хотел спасти. Добро пожаловать в Ночь.",
+    "prep": "~20 мин",
+    "mechanics": [
+      {
+        "title": "Storyteller System (d10 pool)",
+        "text": "Бросок Атрибут + Навык в d10. Успехи на 6+. Два десятка = крит (4 успеха). Простая, но элегантная математика."
+      },
+      {
+        "title": "Голод (Hunger)",
+        "text": "Красный кубик в пуле заменяет обычный. Hunger растёт, если не пить кровь. Высокий Hunger = неконтролируемые действия, провалы на критах, и в итоге — потеря Humanity."
+      },
+      {
+        "title": "Humanity",
+        "text": "Шкала от 0 до 10. Потеря Humanity = потеря контроля. На нуле — вы становитесь Зверем, NPC управляют вашим персонажем. Конец истории."
+      },
+      {
+        "title": "Кланы",
+        "text": "13 кланов с уникальными дисциплинами (способностями), слабостями и культурой. Brujah — ярость, Ventrue — амбиции, Malkavian — безумие..."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Core Rulebook (V5, 2018)"
+      },
+      {
+        "cap": "Логотип V5"
+      },
+      {
+        "cap": "Арт из обзора Grimdark Magazine"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальный сайт — World of Darkness"
+      },
+      {
+        "name": "Магазин — купить Core Rulebook"
+      },
+      {
+        "name": "The Monsters (бесплатный квикстарт PDF)"
+      }
+    ],
+    "quotes": [
+      { "text": "Система вечна и невероятно проста для обучения. Всё сводится к 'бросай кубики, у тебя 50% шанс на кость'. Vampire процветает на драме. Голод заслуживает особого упоминания." }
+    ]
+  },
+  "en": {
+    "tagShort": "Gothic horror d10-pool — you are the monster",
+    "tagline": "\"You are the monster. Hunger is your law. The Masquerade is your prison.\"",
+    "description": "Vampire: The Masquerade is a gothic horror tabletop RPG from Renegade Game Studios (5th Edition / V5, 2018). Storyteller System: roll a pool of d10s, count successes on 6+. Two 10s = critical (4 successes). Hunger dice replace part of the pool — the thirst for blood becomes a core mechanic. You play a Kindred (vampire), balancing Humanity against the Beast within.",
+    "setting": "The modern world — a dark reflection of our reality. The Camarilla (conservative vampire establishment) crumbles, the Anarchs rise, and the Second Inquisition (secret government hunters) stalks the night. Every clan is its own politics, every city is an arena.",
+    "vignette": "Third Point. A neonate vampire feels Hunger — a red die in the pool. Resistance roll: 3+5+7+8+Hunger(10!) = 5 successes. Critical! But... a critical with the Hunger die = Hunger Rises. Humanity drops. You just killed the one you tried to save. Welcome to the Night.",
+    "prep": "~20 min",
+    "mechanics": [
+      {
+        "title": "Storyteller System (d10 pool)",
+        "text": "Roll Attribute + Skill in d10s. Success on 6+. Two 10s = critical (4 successes). Simple but elegant math."
+      },
+      {
+        "title": "Hunger",
+        "text": "A red die replaces a normal one in your pool. Hunger grows if you don't feed. High Hunger = uncontrollable actions, crit failures, and eventually — Humanity loss."
+      },
+      {
+        "title": "Humanity",
+        "text": "A scale from 0 to 10. Lose Humanity = lose control. At zero — you become the Beast, NPCs run your character. End of story."
+      },
+      {
+        "title": "Clans",
+        "text": "13 clans with unique Disciplines (powers), weaknesses, and culture. Brujah — rage, Ventrue — ambition, Malkavian — madness..."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Core Rulebook (V5, 2018)"
+      },
+      {
+        "cap": "V5 Logo"
+      },
+      {
+        "cap": "Art from Grimdark Magazine review"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official site — World of Darkness"
+      },
+      {
+        "name": "Store — buy Core Rulebook"
+      },
+      {
+        "name": "The Monsters (free quickstart PDF)"
+      }
+    ],
+    "quotes": [
+      { "text": "The system is timeless and extremely easy to learn. It all boils down to 'roll dice, you succeed at 50% per die'. Vampire is a game that thrives on drama. Hunger deserves a special mention." }
+    ]
+  }
+});
+registerSystem("vaults-of-vaarn", {
+  "groups": {
+    "default": { "key": "osr", "order": 25 },
+    "family": { "key": "osr-modern", "order": 5 },
+    "genre": { "key": "narrative-weird", "order": 11 }
+  },
+  "name": "Vaults of Vaarn",
+  "publisher": "Leo Hunt",
+  "dice": "d20, rules-light (Knave-based)",
+  "players": "3–6",
+  "complexity": 2,
+  "edition": null,
+  "free": true,
+  "foundryStatus": "None",
+  "heroImage": "https://iglootree.com/cdn/shop/files/VaultsofVaarnIssue4_1.jpg",
+  "playstyleTags": [
+    "explore",
+    "survival",
+    "sandbox"
+  ],
+  "settingTags": ["fantasy", "weird"],
+  "gallery": [
+    {
+      "src": "https://iglootree.com/cdn/shop/files/VaultsofVaarnIssue4_2.jpg"
+    },
+    {
+      "src": "https://iglootree.com/cdn/shop/files/VaultsofVaarnIssue4_3.jpg"
+    },
+    {
+      "src": "https://iglootree.com/cdn/shop/files/VaultsofVaarnIssue4_4.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://iglootree.com/products/gme384",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "backpack"
+    },
+    {
+      "icon": "sun"
+    },
+    {
+      "icon": "dna"
+    },
+    {
+      "icon": "shuffle"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.rascal.news/donevaults-of-vaarn-second-edition/
+    {
+      "text": "A real masterclass in how to pack a bunch of flavour and setting into some very very small packages.",
+      "author": "Chris McDowall, author of Into the Odd"
+    },
+    // VERIFIED-AT: https://www.rascal.news/donevaults-of-vaarn-second-edition/
+    {
+      "text": "An electric shock to the creative parts of the brain... A sleek game as excellent as it is blue.",
+      "author": "Joel Hines, author of Desert Moon of Karth"
+    }
+  ],
+  "ru": {
+    "tagShort": "Синяя пустыня на краю времени, science-fantasy OSR",
+    "tagline": "«Постлюди-изгои копаются в руинах будущего под лазурным песком».",
+    "description": "Vaults of Vaarn — правила-лёгкая science-fantasy OSR-игра Лео Ханта на движке Knave. Вы — постчеловеческие изгои, что исследуют погребённые под песком руины далёкого будущего: тепловые волны, мутировавшие твари, свихнувшиеся роботы. Меланхоличная странность в духе «Дюны», «Книги Нового Солнца» и Мёбиуса, с богатым набором генераторов контента.",
+    "setting": "Ваарн — бескрайняя лазурно-синяя пустыня на краю времени. Цивилизации пали, остались руины Предтеч, обломки ИИ и мутанты. Постлюди, киборги и странные народы бредут между оазисами, торгуя памятью и водой. Красивый, печальный и абсолютно чуждый мир — science-fantasy, где технология неотличима от магии.",
+    "vignette": "Отряд спускается в вскрытый песком бункер Предтеч. Взломщик проверяет древний замок: d20 + бонус, против сложности. Успех — люк со скрежетом отходит. Внутри — не сокровище, а спящий сервитор с треснувшим ядром. Один из героев тянется к нему; таблица мутаций Ваарна уже наготове. В синей пустыне любопытство меняет тебя — иногда буквально.",
+    "prep": "~10 мин",
+    "mechanics": [
+      {
+        "title": "Лёгкое ядро на Knave",
+        "text": "Движок Knave: бесклассовость, d20 + бонус против сложности, инвентарь по слотам. Правил — минимум, порог входа — нулевой. Вся глубина в сеттинге и генераторах."
+      },
+      {
+        "title": "Синяя пустыня science-fantasy",
+        "text": "Готовый мир Ваарна: лазурные пески на краю времени, руины будущего, оазисы и павшие ИИ. Технология как магия, меланхолия как тон. Сеттинг — главная звезда игры."
+      },
+      {
+        "title": "Мутации и постлюди",
+        "text": "Персонажи — постчеловеческие изгои. Обширные таблицы мутаций и странных черт делают каждого героя причудливым, а контакт с реликтами будущего может изменить тело и разум."
+      },
+      {
+        "title": "Процедурные генераторы",
+        "text": "Сердце игры — таблицы: NPC, руины, фракции, находки, чудеса. Ваарн собирается на лету, выдавая ту самую печальную странность без долгой подготовки ведущего."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Разворот зина"
+      },
+      {
+        "cap": "Арт Ваарна"
+      },
+      {
+        "cap": "Интерьер"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Магазин — Iglootree"
+      }
+    ]
+  },
+  "en": {
+    "tagShort": "A blue desert at the end of time — science-fantasy OSR",
+    "tagline": "\"Post-human misfits delve future ruins beneath the sky-blue sand.\"",
+    "description": "Vaults of Vaarn is Leo Hunt's rules-light science-fantasy OSR game on the Knave engine. You play post-human misfits delving the far-future ruins buried beneath the sand: heatwaves, mutated beasts, crazed robots. Melancholy weirdness in the vein of Dune, The Book of the New Sun, and Moebius, with a rich set of content-generation tools.",
+    "setting": "Vaarn — a vast sky-blue desert at the end of time. Civilizations have fallen, leaving Precursor ruins, shards of AI, and mutants. Post-humans, cyborgs, and strange peoples wander between oases, trading memory and water. A beautiful, sorrowful, utterly alien world — science-fantasy where technology is indistinguishable from magic.",
+    "vignette": "The party descends into a Precursor bunker cracked open by the sand. The delver tests an ancient lock: d20 + bonus against a difficulty. Success — the hatch grinds open. Inside isn't treasure but a sleeping servitor with a cracked core. One of the heroes reaches for it; Vaarn's mutation table is already waiting. In the blue desert, curiosity changes you — sometimes literally.",
+    "prep": "~10 min",
+    "mechanics": [
+      {
+        "title": "Light Knave-based core",
+        "text": "The Knave engine: classless, d20 + bonus against a difficulty, slot-based inventory. Minimal rules, a zero-cost on-ramp. All the depth lives in the setting and the generators."
+      },
+      {
+        "title": "Blue-desert science-fantasy",
+        "text": "A ready-made world of Vaarn: sky-blue sands at the end of time, future ruins, oases, and fallen AIs. Technology as magic, melancholy as tone. The setting is the game's real star."
+      },
+      {
+        "title": "Mutations & post-humans",
+        "text": "Characters are post-human misfits. Extensive mutation and weird-trait tables make every hero strange, and contact with future relics can reshape body and mind."
+      },
+      {
+        "title": "Procedural generators",
+        "text": "The heart of the game is its tables: NPCs, ruins, factions, finds, wonders. Vaarn assembles on the fly, spitting out that signature sorrowful weirdness with little GM prep."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Zine spread"
+      },
+      {
+        "cap": "Vaarn art"
+      },
+      {
+        "cap": "Interior"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Store — Iglootree"
+      }
+    ]
+  }
+});
+registerSystem("wanderhome", {
+  "groups": {
+    "default": { "key": "narrative", "order": 40 },
+    "family": { "key": "pbta-fitd", "order": 30 },
+    "genre": { "key": "adventure", "order": 26 }
+  },
+  "name": "Wanderhome",
+  "publisher": "Possum Creek Games",
+  "dice": "Без кубиков (жетоны, на основе PbtA)",
+  "players": "2–5",
+  "complexity": 1,
+  "foundryStatus": "None",
+  "heroImage": "https://possumcreekgames.com/cdn/shop/files/wanderhome_Sylvia_2_1500x.png?v=1625780744",
+  "playstyleTags": [
+    "narrative",
+    "social",
+    "explore"
+  ],
+  "settingTags": ["fantasy"],
+  "gallery": [
+    {
+      "src": "https://cdn.shopify.com/s/files/1/0569/2912/4552/files/Parade_of_small_and_forgotten_gods_600x600.jpg?v=1637781495"
+    },
+    {
+      "src": "https://cdn.shopify.com/s/files/1/0569/2912/4552/files/Candlefeast-9x18_low-res-JPG_600x600.jpg?v=1637781564"
+    },
+    {
+      "src": "https://cdn.shopify.com/s/files/1/0569/2912/4552/files/2021_Wanderhome_Oneshot-1536x1536_480x480.png?v=1637783341"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://possumcreekgames.com/products/wanderhome",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "leaf"
+    },
+    {
+      "icon": "coins"
+    },
+    {
+      "icon": "users"
+    },
+    {
+      "icon": "sun"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.polygon.com/reviews/22387450/wanderhome-rpg-tabletop-game-review
+    {
+      "text": "It positions the drama of the Redwall series alongside Animal Crossing's endless Sunday afternoons, and displays the competence to juggle both of those vibes in a single game.",
+      "author": "Chase Carter, Polygon"
+    },
+    // VERIFIED-AT: https://www.polygon.com/reviews/22387450/wanderhome-rpg-tabletop-game-review
+    {
+      "text": "Once conflict arises, it is most often settled with dialogue and not daggers.",
+      "author": "Chase Carter, Polygon"
+    }
+  ],
+  "ru": {
+    "tagShort": "Уютная пастораль о зверолюдях-странниках",
+    "tagline": "«Игра о временах года, маленьких историях и покое после войны».",
+    "description": "Wanderhome — умиротворяющая ролевая игра Джея Дракона о зверолюдях, что странствуют по нежному миру Хэта. Без кубиков и почти без ведущего: играете жетонами и ходами, а конфликты решаются разговором, а не клинком. Это игра про отдых, дружбу, смену сезонов и тихое исцеление после большой войны. Cozy-жанр в чистейшем виде.",
+    "setting": "Хэт — тёплый пасторальный мир антропоморфных зверей: лягушки-поэты, ежи-паломники, кошки-бродяги. Год делится на пять сезонов, и группа путешествует от места к месту, оставляя за собой маленькие истории. В прошлом была война, её эхо ещё живёт, но игра — о том, как мир и герои восстанавливаются, находя красоту в простом.",
+    "vignette": "Ваша компания приходит в деревню в разгар осеннего праздника. Кубиков нет — вы просто описываете сцену. Ваш герой, старый барсук-сказитель, тратит жетон Уюта, чтобы утешить местного, потерявшего дом на войне. За доброту вы получаете жетон Природы. Ведущего нет — вы вместе решаете, каким будет это место и кто в нём живёт. История растёт из тишины и внимания друг к другу.",
+    "prep": "~5 мин",
+    "mechanics": [
+      {
+        "title": "Без кубиков, на жетонах",
+        "text": "Никаких бросков. Ходы тратят и приносят жетоны, а исход сцены рождается из фикшена. Мягкая, ненапряжная резолюция — ставки здесь эмоциональные, а не боевые."
+      },
+      {
+        "title": "Ведущий опционален",
+        "text": "Традиционного ГМа нет: игроки вместе строят мир через карты мест, природы и сезонов. Ответственность за историю распределена — каждый привносит свой кусочек Хэта."
+      },
+      {
+        "title": "Плейбуки-зверолюди",
+        "text": "Вы играете конкретного зверя-архетипа (Оборванец, Поэт, Свет Очага и др.), у каждого — свои уютные ходы и своя маленькая драма. Персонаж задаёт тон, а не набор сил."
+      },
+      {
+        "title": "Уют без насилия",
+        "text": "Конфликты решаются разговором, а не кинжалом. Игра — о покое, заботе, временах года и восстановлении после войны. Redwall встречает бесконечные воскресенья Animal Crossing."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Парад маленьких забытых богов"
+      },
+      {
+        "cap": "Праздник свечей"
+      },
+      {
+        "cap": "Материалы игры"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Официальная страница — Possum Creek Games"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "Игра ставит драму «Рэдволла» рядом с бесконечными воскресными вечерами Animal Crossing — и умело жонглирует обоими настроениями в одной книге." },
+      { "text": "Когда конфликт всё же возникает, чаще всего он решается диалогом, а не кинжалами." }
+    ]
+  },
+  "en": {
+    "tagShort": "A cozy pastoral of animal-folk travelers",
+    "tagline": "\"A game of the seasons, small stories, and peace after a war.\"",
+    "description": "Wanderhome is Jay Dragon's serene RPG about animal-folk wandering the gentle world of Hæth. Diceless and nearly GM-less: you play with tokens and moves, and conflicts are settled with conversation, not a blade. It's a game about rest, friendship, the turning of seasons, and quiet healing after a great war. The cozy genre in its purest form.",
+    "setting": "Hæth is a warm, pastoral world of anthropomorphic animals: poet frogs, pilgrim hedgehogs, wandering cats. The year has five seasons, and the group travels place to place, leaving small stories behind. There was a war in the past, and its echoes linger, but the game is about how the world and its people recover, finding beauty in the simple.",
+    "vignette": "Your company arrives at a village mid-autumn festival. There are no dice — you simply describe the scene. Your character, an old badger storyteller, spends a Comfort token to console a local who lost their home to the war. For the kindness, you gain a Nature token. There's no GM — together you decide what this place is and who lives here. The story grows from quiet and attention to one another.",
+    "prep": "~5 min",
+    "mechanics": [
+      {
+        "title": "Diceless, token-based",
+        "text": "No rolls. Moves spend and earn tokens, and a scene's outcome grows from the fiction. Gentle, low-pressure resolution — the stakes here are emotional, not martial."
+      },
+      {
+        "title": "GM optional",
+        "text": "There's no traditional GM: players build the world together through place, nature, and season cards. Authorship is shared — everyone brings their own piece of Hæth."
+      },
+      {
+        "title": "Animal-folk playbooks",
+        "text": "You play a specific animal archetype (the Ragamuffin, the Poet, the Firelight, and more), each with its own cozy moves and small drama. Character sets the tone, not a power set."
+      },
+      {
+        "title": "Cozy, without violence",
+        "text": "Conflicts are settled with conversation, not a dagger. The game is about peace, care, the seasons, and recovery after a war. Redwall meets Animal Crossing's endless Sundays."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Parade of small and forgotten gods"
+      },
+      {
+        "cap": "Candlefeast"
+      },
+      {
+        "cap": "Game materials"
+      }
+    ],
+    "resources": [
+      {
+        "name": "Official page — Possum Creek Games"
+      }
+    ]
+  ,
+    "quotes": [
+      { "text": "It positions the drama of the Redwall series alongside Animal Crossing's endless Sunday afternoons, and displays the competence to juggle both of those vibes in a single game." },
+      { "text": "Once conflict arises, it is most often settled with dialogue and not daggers." }
+    ]
+  }
+});
+registerSystem("werewolf-the-apocalypse", {
+  "groups": {
+    "default": { "key": "narrative", "order": 41 },
+    "family": { "key": "standalone", "order": 49 },
+    "genre": { "key": "horror", "order": 14 }
+  },
+  "name": "Werewolf: The Apocalypse",
+  "publisher": "Onyx Path Publishing / White Wolf",
+  "dice": "d10 dice pool (Storyteller System)",
+  "players": "3–5",
+  "complexity": 3,
+  "free": false,
+  "edition": null,
+  "foundryStatus": "Community",
+  "heroImage": "https://image.nobleknight.com/w/jpg1500/wta20onyx.jpg",
+  "playstyleTags": ["combat", "narrative", "horror"],
+  "settingTags": ["modern", "urban-fantasy"],
+  "gallery": [
+    { "src": "https://image.nobleknight.com/w/jpg1500/wendigorev.jpg" },
+    { "src": "https://image.nobleknight.com/w/jpg1500/w20apocalypticrecorddx.jpg" },
+    { "src": "https://image.nobleknight.com/i/jpg1500/iprop-w-de.jpg" }
+  ],
+  "resources": [
+    { "type": "link", "url": "https://theonyxpath.com/category/worlds/werewolftheapocalypse/", "fmt": "Web" },
+    { "type": "link", "url": "https://www.drivethrurpg.com/en/product/149136/werewolf-the-apocalypse-20th-anniversary-edition", "fmt": "PDF" }
+  ],
+  "mechanics": [
+    { "icon": "dices" },
+    { "icon": "flame" },
+    { "icon": "moon" },
+    { "icon": "skull" }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.grimdarkmagazine.com/review-werewolf-the-apocalypse/
+    {
+      "text": "Werewolf is a fantastic game and I'd argue that is probably the best written game after Vampire: The Masquerade, even more so than Mage.",
+      "author": "C.T. Phipps, Grimdark Magazine"
+    }
+  ],
+  "ru": {
+    "tagShort": "Ярость оборотней против гибели мира",
+    "tagline": "«Гея умирает. Гару — её последние воины, и они проигрывают».",
+    "description": "Werewolf: The Apocalypse — легендарная RPG Мира Тьмы о Гару, оборотнях-воинах, ведущих обречённую войну за умирающую Землю. Вы — не человек и не волк, а нечто третье, рождённое яростью и духом. На движке Storyteller (пулы d10) игра сплетает экологический хоррор, племенную мистику и трагедию борьбы, которую, возможно, уже не выиграть.",
+    "setting": "Современный мир на грани апокалипсиса. Гару служат Гее и сражаются с Вирмом — вселенской силой порчи, что расползается через корпорации, загрязнение и отчаяние. Стая — ваша семья и боевое подразделение; племя задаёт культуру и веру. Между мирами лежит Умбра, духовное отражение реальности, куда Гару уходят на охоту и паломничество.",
+    "vignette": "Фабрика Пентекса дышит ядом в реку. Ваша стая крадётся в тени, и тут — прорыв: вы призываете Ярость и переходите в Кринос, форму боевого чудовища. Мастер требует пул d10 на Ловкость + Первобытность против сложности. Пять кубов, три успеха — Делирий охватывает охранников-людей, они бегут в ужасе. Но каждая вспышка Ярости приближает вас к безумию Тени.",
+    "prep": "~45 мин",
+    "mechanics": [
+      { "title": "Storyteller System (d10)", "text": "Броски — пулы d10 по «Атрибут + Способность»; каждый кубик выше сложности — успех. Тот же движок, что в Vampire и Mage: акцент на драме и повествовании, а не на тактической сетке." },
+      { "title": "Пять форм", "text": "Гару переключаются между формами: Хомид (человек), Кринос (боевое чудовище), Луперус (волк) и две промежуточные. Форма меняет параметры и возможности — Кринос вселяет в людей первобытный ужас (Делирий)." },
+      { "title": "Ярость, Гнозис и Сила воли", "text": "Три ресурса-движителя: Ярость толкает в бой и превращения, Гнозис питает духовную магию (Дары), Сила воли удерживает от срыва. Слишком много Ярости — и герой теряет контроль." },
+      { "title": "Племена и Умбра", "text": "Тринадцать племён задают культуру, Дары и мировоззрение. Духовный мир — Умбра — реален: Гару странствуют по нему, договариваются с духами и сражаются с порождениями Вирма." }
+    ],
+    "gallery": [
+      { "cap": "Обложка 20th Anniversary Edition" },
+      { "cap": "Tribebook: Вендиго" },
+      { "cap": "Apocalyptic Record (deluxe)" }
+    ],
+    "resources": [
+      { "name": "Официальная страница — Onyx Path" },
+      { "name": "W20 Anniversary Edition (DriveThruRPG)" }
+    ],
+    "quotes": [
+      { "text": "Werewolf — фантастическая игра, и я бы сказал, что она, пожалуй, лучше всего написана после Vampire: The Masquerade — даже больше, чем Mage." }
+    ]
+  },
+  "en": {
+    "tagShort": "Werewolf warriors raging against the end of the world",
+    "tagline": "\"Gaia is dying. The Garou are her last warriors — and they are losing.\"",
+    "description": "Werewolf: The Apocalypse is the landmark World of Darkness RPG about the Garou, shapeshifting warriors waging a doomed war for a dying Earth. You are neither human nor wolf but a third thing, born of rage and spirit. On the Storyteller System (d10 pools), it braids ecological horror, tribal mysticism, and the tragedy of a fight that may already be lost.",
+    "setting": "The modern world on the edge of apocalypse. The Garou serve Gaia and battle the Wyrm — a cosmic force of corruption that spreads through corporations, pollution, and despair. Your pack is your family and combat unit; your tribe sets your culture and creed. Between worlds lies the Umbra, the spirit reflection of reality where the Garou hunt and make pilgrimage.",
+    "vignette": "A Pentex factory breathes poison into the river. Your pack slinks through the shadows — then the breach comes: you call up your Rage and shift into Crinos, the war-form. The Storyteller calls for a d10 pool of Dexterity + Primal-Urge against a difficulty. Five dice, three successes — the Delirium takes the human guards and they flee in terror. But every burst of Rage pulls you closer to the madness of the Wyrm.",
+    "prep": "~45 min",
+    "mechanics": [
+      { "title": "Storyteller System (d10)", "text": "Rolls are d10 pools of Attribute + Ability; each die over the difficulty is a success. The same engine as Vampire and Mage: the emphasis is drama and narrative, not a tactical grid." },
+      { "title": "Five forms", "text": "The Garou shift between forms: Homid (human), Crinos (war-beast), Lupus (wolf), and two in-between. Form changes your stats and options — Crinos strikes primal terror (the Delirium) into humans." },
+      { "title": "Rage, Gnosis & Willpower", "text": "Three driving resources: Rage pushes you into combat and transformation, Gnosis fuels spirit magic (Gifts), Willpower keeps you from breaking. Too much Rage and your character loses control." },
+      { "title": "Tribes & the Umbra", "text": "Thirteen tribes set culture, Gifts, and worldview. The spirit world — the Umbra — is real: the Garou travel it, bargain with spirits, and fight the Wyrm's spawn." }
+    ],
+    "gallery": [
+      { "cap": "20th Anniversary Edition cover" },
+      { "cap": "Tribebook: Wendigo" },
+      { "cap": "Apocalyptic Record (deluxe)" }
+    ],
+    "resources": [
+      { "name": "Official page — Onyx Path" },
+      { "name": "W20 Anniversary Edition (DriveThruRPG)" }
+    ],
+    "quotes": [
+      { "text": "Werewolf is a fantastic game and I'd argue that is probably the best written game after Vampire: The Masquerade, even more so than Mage." }
+    ]
+  }
+});
+registerSystem("wfrp", {
+  "groups": {
+    "default": { "key": "tactical", "order": 9 },
+    "family": { "key": "standalone", "order": 28 },
+    "genre": { "key": "dark-fantasy", "order": 2.5 }
+  },
+  "name": "Warhammer Fantasy Roleplay",
+  "publisher": "Cubicle 7",
+  "dice": "d100",
+  "players": "3–5",
+  "complexity": 3,
+  "free": true,
+  "foundryStatus": "Official",
+  "heroImage": "https://d1vzi28wh99zvq.cloudfront.net/images/54/248284.jpg",
+  "playstyleTags": [
+    "combat",
+    "explore",
+    "narrative"
+  ],
+  "settingTags": ["fantasy"],
+  "gallery": [
+    {
+      "src": "https://d1vzi28wh99zvq.cloudfront.net/images/54/261941.jpg"
+    },
+    {
+      "src": "https://manaburnt.wordpress.com/wp-content/uploads/2018/09/warhammer-4th-ed.jpg"
+    },
+    {
+      "src": "https://manaburnt.wordpress.com/wp-content/uploads/2018/09/untitled.png"
+    }
+  ],
+  "resources": [
+    {
+      "type": "link",
+      "url": "https://wfrp.wiki/",
+      "fmt": "Web"
+    },
+    {
+      "type": "link",
+      "url": "https://cubicle7games.com/en_GB/warhammer-fantasy-roleplay-rulebook-pdf",
+      "fmt": "Web"
+    },
+    {
+      "type": "quickstart",
+      "url": "https://foundryvtt.com/packages/wfrp4e",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "swords"
+    },
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "book-open"
+    },
+    {
+      "icon": "scroll"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://sablemage.blogspot.com/2025/08/review-warhammer-fantasy-roleplay-4th.html
+    {
+      "text": "The Between Adventures chapter is one of the better approaches I've seen to handling downtime. Nicely done.",
+      "author": "Andy Slack, Halfway Station"
+    },
+    // VERIFIED-AT: https://gmshoe.wordpress.com/2019/05/27/review-warhammer-fantasy-roleplay-4th-edition/
+    {
+      "text": "The full-color artwork throughout the book is both consistent and outstanding. I particularly appreciate the moody landscapes that capture the feel of the Reikland.",
+      "author": "The Hardboiled GMshoe"
+    }
+  ],
+  "ru": {
+    "tagShort": "Гримдарт-фэнтези на d100",
+    "tagline": "«Мрачный, опасный мир — карьеры, криты и безумие магии».",
+    "description": "Warhammer Fantasy Roleplay — настольная RPG в жанре гримдарк-фэнтези на системе d100 (процентные кубики), созданная Games Workshop и изданная Cubicle 7 (4-е издание, 2018). 64 карьеры с пошаговым продвижением, попадания по локациям, критические ранения, система преимуществ (Advantage) и безумная магия с таблицами исступления. Мир Старого Света — готическое средневековье с чернокнижниками, скавенами и культами.",
+    "setting": "Старый Мир — Империя, земля, где коррумпированные дворяне, фанатичные охотники на ведьм и простые крестьяне выживают между войнами, чумой и вторжениями скавенов. Каждый город — отдельная история, каждый трактир — начало приключения (или конца).",
+    "vignette": "Маг-коллегии готовит заклинание — d100, бросок Ingredients, успех! Но Wait — ещё бросок на исступление... 96! Дрожащие руки, зелёные искры. Соседи в ужасе. Охотник на ведьм уже стучит в дверь. Аwarf-шахтёр просто хочет допить своё пиво и вернуться в шахту. Добро пожаловать в Старый Мир.",
+    "prep": "~15 мин",
+    "mechanics": [
+      {
+        "title": "Процентные кубики (d100)",
+        "text": "Бросок d100 против навыка: чем меньше результат, тем лучше. Успех определяется степенью (Success Level): разница между броском и навыком. Криты — двойной успех, фалы — двойной провал."
+      },
+      {
+        "title": "Карьерная система",
+        "text": "64 карьеры от слуги до ведьмака. Каждая с 4 рангами продвижения: от ученика до мастера. Продвижение стоит XP и открывает новые навыки, таланты и социальный статус."
+      },
+      {
+        "title": "Попадания по локациям",
+        "text": "При попадании бросок по таблице определяет часть тела: голова, рука, нога... У каждой свои модификаторы. Критические ранения — от забитого пальца до мгновенной смерти."
+      },
+      {
+        "title": "Преимущество (Advantage)",
+        "text": "Каждое попадание в бою даёт 1 Advantage, который cộngуется. На максимуме — одноразовый бонусный бросок. Но лопнувший Advantage (промах) — штраф. Бой становится спиралью азарта и риска."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Обложка (Cubicle 7)"
+      },
+      {
+        "cap": "Starter Set — обложка"
+      },
+      {
+        "cap": "Сравнение 1-го и 4-го изданий"
+      }
+    ],
+    "resources": [
+      {
+        "name": "WFRP Wiki (бесплатный SRD)"
+      },
+      {
+        "name": "Cubicle 7 — PDF правила"
+      },
+      {
+        "name": "Foundry VTT — официальная система"
+      }
+    ],
+    "quotes": [
+      { "text": "Глава о межсессиях — один из лучших подходов к обработке даунтайма, которые я видел. Отлично сделано." },
+      { "text": "Цветные иллюстрации по всей книге выглядят цельно и великолепно. Особенно впечатляют мрачные пейзажи, передающие атмосферу Рейкланда." }
+    ]
+  },
+  "en": {
+    "tagShort": "Grimdark d100 fantasy with careers",
+    "tagline": "\"A grim world of perilous adventure — careers, crits, and magic miscasts.\"",
+    "description": "Warhammer Fantasy Roleplay is a grimdark fantasy tabletop RPG built on the d100 percentile system, created by Games Workshop and published by Cubicle 7 (4th Edition, 2018). 64 careers with step-by-step advancement, hit locations, critical injuries, the Advantage system, and wild magic with miscast tables. The Old World is gothic medievalism with witches, Skaven, and cults lurking in every shadow.",
+    "setting": "The Old World — the Empire, a land where corrupt nobles, fanatical Witch Hunters, and simple peasants survive between wars, plague, and Skaven incursions. Every city is its own story, every tavern the start of an adventure (or its end).",
+    "vignette": "A College wizard prepares a spell — d100, Ingredients roll, success! But wait — a miscast check... 96! Trembling hands, green sparks. Neighbors in horror. The Witch Hunter is already pounding on the door. And the Dwarf just wants to finish his beer and get back to the mine. Welcome to the Old World.",
+    "prep": "~15 min",
+    "mechanics": [
+      {
+        "title": "Percentile Dice (d100)",
+        "text": "Roll d100 against your skill: the lower the result, the better. Success is determined by Success Level — the difference between roll and skill. Doubles = critical, snake-eyes = fumble."
+      },
+      {
+        "title": "Career System",
+        "text": "64 careers from peasant to Witch Hunter. Each with 4 advancement tiers: from novice to master. Advancement costs XP and unlocks new skills, talents, and social standing."
+      },
+      {
+        "title": "Hit Locations",
+        "text": "On a hit, a roll determines the body part: head, arm, leg... Each has its own modifiers. Critical injuries range from a bruised finger to instant death."
+      },
+      {
+        "title": "Advantage",
+        "text": "Every hit in combat grants 1 Advantage, which stacks. At max — a one-time bonus roll. But a blown Advantage (miss) applies a penalty. Combat becomes a spiral of greed and risk."
+      }
+    ],
+    "gallery": [
+      {
+        "cap": "Core Rulebook (Cubicle 7)"
+      },
+      {
+        "cap": "Starter Set — cover"
+      },
+      {
+        "cap": "1st vs 4th edition cover comparison"
+      }
+    ],
+    "resources": [
+      {
+        "name": "WFRP Wiki (free SRD)"
+      },
+      {
+        "name": "Cubicle 7 — PDF rulebook"
+      },
+      {
+        "name": "Foundry VTT — official system"
+      }
+    ],
+    "quotes": [
+      { "text": "I love the Between Adventures chapter, the acknowledgement that we all have our own take on the setting, and the Small but Vicious Dog still being there." },
+      { "text": "The full-color artwork throughout the book is both consistent and outstanding. I particularly appreciate the moody landscapes that capture the feel of the Reikland." }
     ]
   }
 });
@@ -11694,6 +18277,161 @@ registerSystem("worlds-without-number", {
   ,
     "quotes": [
       { "text": "Kevin Crawford's Worlds Without Number builds on the excellent foundation established by its science fiction predecessor, Stars Without Number, to deliver a compelling and unique fantasy game with special interest for GMs." }
+    ]
+  }
+});
+registerSystem("wrath-and-glory", {
+  "groups": {
+    "default": { "key": "tactical", "order": 33 },
+    "family": { "key": "standalone", "order": 36 },
+    "genre": { "key": "sci-fi", "order": 8.7 }
+  },
+  "name": "Warhammer 40,000: Wrath & Glory",
+  "publisher": "Cubicle 7 Games",
+  "dice": "d6 pool",
+  "players": "3–6",
+  "complexity": 3,
+  "free": true,
+  "foundryStatus": "Official",
+  "heroImage": "https://image.nobleknight.com/c/jpg1500/cb72600.jpg",
+  "playstyleTags": [
+    "combat",
+    "tactical",
+    "narrative"
+  ],
+  "settingTags": ["space", "weird"],
+  "gallery": [
+    {
+      "src": "https://image.nobleknight.com/c/jpg1500/cb72618.jpg"
+    },
+    {
+      "src": "https://image.nobleknight.com/c/jpg1500/cb72627.jpg"
+    },
+    {
+      "src": "https://image.nobleknight.com/c/jpg1500/cb72626.jpg"
+    }
+  ],
+  "resources": [
+    {
+      "type": "quickstart",
+      "url": "https://www.drivethrurpg.com/en/product/370883/warhammer-40000-wrath-glory-a-bitter-promise",
+      "fmt": "PDF"
+    },
+    {
+      "type": "link",
+      "url": "https://www.cubicle7games.com/our-games/warhammer-40000-roleplay/wrath-glory/",
+      "fmt": "Web"
+    },
+    {
+      "type": "link",
+      "url": "https://www.cubicle7games.com/our-games/warhammer-40000-roleplay/wrath-glory/wrath-glory-core-rulebook/",
+      "fmt": "Web"
+    }
+  ],
+  "mechanics": [
+    {
+      "icon": "dices"
+    },
+    {
+      "icon": "zap"
+    },
+    {
+      "icon": "target"
+    },
+    {
+      "icon": "flame"
+    }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.enworld.org/threads/warhmamer-40k-wrath-glory-cubicle-7-re-release-review.672170/
+    {
+      "text": "While it has its quirks and complications, the simple fact that Wrath & Glory works at all is strangely impressive.",
+      "author": "Richard Jansen-Parkes, EN World"
+    },
+    // VERIFIED-AT: https://www.dicemonkey.net/2020/06/05/rpg-review-warhammer-40000-roleplay-wrath-glory/
+    {
+      "text": "If you're a 40k player, I definitely recommend it, and if you aren't, embrace the dark far future.",
+      "author": "Mark, Dice Monkey"
+    }
+  ],
+  "ru": {
+    "tagShort": "d6 pool — grimdark 40K в формате RPG",
+    "tagline": "«Во Гrimdark далёкого будущего нет войны — только вечная битва».",
+    "description": "Warhammer 40,000: Wrath & Glory — настольная RPG (2019 Ulisses Spiele, 2022 Cubicle 7 Games) по вселенной Warhammer 40K. Игроки берут на себя роли Имперских Агентов, Космодесантников, Культистов или Орков. Механика d6 pool: бросаете кубиков столько, сколько у вас рейтинг в атрибуте и навыке, считаете successful die (6+). Wrath dice (красные) — критические и трэш-события.",
+    "setting": "Год 41-го тысячелетия. Император Человечества — живой труп на Золотом Троне. Галактика разрывается войнами: Хаос, Орки, Тыраноиды, Эльфы. Простые люди — пешки в игре богов. Игра охватывает все аспекты 40K: от кадетов до космодесантников.",
+    "vignette": "Мастер: «Ты в коридоре космического десантного корабля. Стены покрыты кровью. Ты слышишь крики из каюты 12.» Игрок: «Иду туда с болтером наготове.» Мастер: «Брось d6 pool: 4 кубика.» Игрок: 5, 3, 1, 6. Одна шестёрка — успех! Но Wrath die (красный) показал 1 — трэш-событие: «Из стены вылезает жук-паразит и кусает тебя за ногу.»",
+    "prep": "~20 мин",
+    "mechanics": [
+      {
+        "title": "d6 Pool (Успех = 6+)",
+        "text": "Бросаете кубиков = ATTRIBUTE + SKILL. Каждая 6+ — один успех. Wrath dice (красные): 6 — крит, 1 — трэш."
+      },
+      {
+        "title": "Тир персонажа",
+        "text": "Tier 1 (кадеты) → Tier 4 (космодесантники). Мощь персонажа масштабируется с тиром."
+      },
+      {
+        "title": "Иерархия фракций",
+        "text": "Империум, Хаос, Орки, Тыраноиды, Эльфы. Каждая фракция — свой набор персонажей и механик."
+      },
+      {
+        "title": "Wrath & Glory Dice",
+        "text": "Красные Wrath dice: 6 — Wrathful (сильный крит), 1 — Malefic (трэш-событие). Создают драму."
+      }
+    ],
+    "gallery": [
+      { "cap": "Core Rulebook (Cubicle 7)" },
+      { "cap": "Warhammer 40K: Wrath & Glory — Amazon" },
+      { "cap": "Warhammer 40K: Wrath & Glory — обложка" }
+    ],
+    "resources": [
+      { "name": "Бесплатный Quickstart — A Bitter Promise (PDF)" },
+      { "name": "Официальная страница (Cubicle 7)" },
+      { "name": "Core Rulebook — Cubicle 7" }
+    ],
+    "quotes": [
+      { "text": "Несмотря на все свои причуды и сложности, сам факт, что Wrath & Glory вообще работает, странным образом впечатляет." },
+      { "text": "Если вы играете в 40k — однозначно рекомендую; а если нет — примите тёмное далёкое будущее." }
+    ]
+  },
+  "en": {
+    "tagShort": "d6 pool — grimdark 40K in RPG format",
+    "tagline": "\"In the grim darkness of the far future there is only war.\"",
+    "description": "Warhammer 40,000: Wrath & Glory is a tabletop RPG (2019 Ulisses Spiele, 2022 Cubicle 7 Games) set in the Warhammer 40K universe. Players take on the roles of Imperial Agents, Space Marines, Cultists, or Orks. d6 pool mechanic: roll dice equal to your Attribute + Skill rating, count successes (6+). Wrath dice (red) — crits and trash events.",
+    "setting": "The year is the 41st Millennium. The Emperor of Mankind is a living corpse on the Golden Throne. The galaxy is torn apart by war: Chaos, Orks, Tyranids, Elves. Ordinary people are pawns in the game of gods. The game covers every aspect of 40K: from cadets to Space Marines.",
+    "vignette": "GM: 'You're in the corridor of a Space Marine ship. Walls are covered in blood. You hear screams from Cabin 12.' Player: 'I go in with bolter ready.' GM: 'Roll d6 pool: 4 dice.' Player: 5, 3, 1, 6. One six — success! But the Wrath die (red) shows 1 — trash event: 'A parasitic bug emerges from the wall and bites your leg.'",
+    "prep": "~20 min",
+    "mechanics": [
+      {
+        "title": "d6 Pool (Success = 6+)",
+        "text": "Roll dice = ATTRIBUTE + SKILL. Each 6+ is one success. Wrath dice (red): 6 — critical, 1 — trash."
+      },
+      {
+        "title": "Character Tier",
+        "text": "Tier 1 (cadets) → Tier 4 (Space Marines). Character power scales with tier."
+      },
+      {
+        "title": "Faction Hierarchy",
+        "text": "Imperium, Chaos, Orks, Tyranids, Elves. Each faction — its own character set and mechanics."
+      },
+      {
+        "title": "Wrath & Glory Dice",
+        "text": "Red Wrath dice: 6 — Wrathful (strong crit), 1 — Malefic (trash event). Creates drama."
+      }
+    ],
+    "gallery": [
+      { "cap": "Core Rulebook (Cubicle 7)" },
+      { "cap": "Warhammer 40K: Wrath & Glory — Amazon" },
+      { "cap": "Warhammer 40K: Wrath & Glory — cover" }
+    ],
+    "resources": [
+      { "name": "Free Quickstart — A Bitter Promise (PDF)" },
+      { "name": "Official page (Cubicle 7)" },
+      { "name": "Core Rulebook — Cubicle 7" }
+    ],
+    "quotes": [
+      { "text": "While it has its quirks and complications, the simple fact that Wrath & Glory works at all is strangely impressive." },
+      { "text": "If you're a 40k player, I definitely recommend it, and if you aren't, embrace the dark far future." }
     ]
   }
 });
