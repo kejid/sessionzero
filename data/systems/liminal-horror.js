@@ -24,7 +24,7 @@ registerSystem("liminal-horror", {
   "resources": [
     { "type": "rules", "url": "https://liminalhorrorrpg.com/", "fmt": "Web" },
     { "type": "rules", "url": "https://goblinarchives.itch.io/liminal-horror", "fmt": "PDF" },
-    { "type": "srd", "url": "https://liminalhorrorrpg.com/srd/", "fmt": "Web" }
+    { "type": "rules", "url": "https://liminalhorrorrpg.com/srd/", "fmt": "Web" }
   ],
   "mechanics": [
     { "icon": "brain" },

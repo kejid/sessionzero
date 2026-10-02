@@ -57,15 +57,15 @@ registerSystem("lotfp", {
     }
   ],
   "quotes": [
-    // VERIFIED-AT: https://www.rpg.net/reviews/archive/16/16920.phtml
+    // VERIFIED-AT: http://grognardia.blogspot.com/2011/05/review-lotfp-wfrp-grindhouse-edition.html
     {
-      "text": "if you're looking for OSR-rules, through a shade darkly, then this book will deliver in spades.",
-      "author": "Endzeitgeist, RPGnet"
+      "text": "The Rules and Magic book, on the other hand, is even better than before, which is saying something. Just about everything in the original versions has been further polished and refined.",
+      "author": "James Maliszewski, Grognardia"
     },
-    // VERIFIED-AT: https://www.rpg.net/reviews/archive/16/16920.phtml
+    // VERIFIED-AT: https://save.vs.totalpartykill.ca/review/lotfp-grindhouse/
     {
-      "text": "You can complain about the aesthetics, they are a matter of taste; but I can't see any true faults with the rules presented herein.",
-      "author": "Endzeitgeist, RPGnet"
+      "text": "Magic in LotFP is dangerous and probably a little bit evil. The spell lists help reinforce that.",
+      "author": "Ramanan Sivaranjan, Save vs. Total Party Kill"
     }
   ],
   "ru": {
@@ -113,8 +113,8 @@ registerSystem("lotfp", {
       }
     ],
     "quotes": [
-      { "text": "Если вы ищете OSR-правила с тёмным оттенком — эта книга выдаст их сполна." },
-      { "text": "Можно ворчать на эстетику — это дело вкуса; но никаких настоящих изъянов в изложенных правилах я не вижу." }
+      { "text": "Книга «Правила и магия», напротив, стала ещё лучше, чем прежде, а это о многом говорит. Практически всё, что было в первых версиях, дополнительно отшлифовано и доработано." },
+      { "text": "Магия в LotFP опасна и, пожалуй, немного зловеща. Списки заклинаний это только подчёркивают." }
     ]
   },
   "en": {
@@ -160,6 +160,10 @@ registerSystem("lotfp", {
       {
         "name": "Free no-art version (PDF)"
       }
+    ],
+    "quotes": [
+      { "text": "The Rules and Magic book, on the other hand, is even better than before, which is saying something. Just about everything in the original versions has been further polished and refined." },
+      { "text": "Magic in LotFP is dangerous and probably a little bit evil. The spell lists help reinforce that." }
     ]
   }
 });

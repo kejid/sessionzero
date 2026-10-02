@@ -61,10 +61,15 @@ registerSystem("vampire-the-masquerade", {
     }
   ],
   "quotes": [
-    // VERIFIED-AT: https://www.rpg.net/reviews/archive/18/18065.phtml
+    // VERIFIED-AT: https://www.grimdarkmagazine.com/review-vampire-the-masquerade-5th-edition/
     {
-      "text": "The system is timeless and extremely easy to learn. It all boils down to 'roll dice, you succeed at 50% per die'. Vampire is a game that thrives on drama. Hunger deserves a special mention, since it is not something to brush aside.",
-      "author": "Antonios S, RPGnet"
+      "text": "If you want a horror game where you are the monster, then I think V5 is probably the best edition of the franchise.",
+      "author": "C.T. Phipps, Grimdark Magazine"
+    },
+    // VERIFIED-AT: https://therpggazette.wordpress.com/2024/12/18/a-review-of-the-5th-edition-of-vampire-the-masquarade-fangs-angst-and-a-whole-lot-of-existential-dread/
+    {
+      "text": "Vampire: The Masquerade 5th Edition is a daring and ambitious reinterpretation of a cherished classic, effectively breathing new life into its central themes of personal horror.",
+      "author": "Serban Ionita, The RPG Gazette"
     }
   ],
   "ru": {
@@ -115,7 +120,8 @@ registerSystem("vampire-the-masquerade", {
       }
     ],
     "quotes": [
-      { "text": "Система вечна и невероятно проста для обучения. Всё сводится к 'бросай кубики, у тебя 50% шанс на кость'. Vampire процветает на драме. Голод заслуживает особого упоминания." }
+      { "text": "Если вам нужна хоррор-игра, где чудовище — это вы, то V5, на мой взгляд, пожалуй, лучшая редакция во всей франшизе." },
+      { "text": "Vampire: The Masquerade 5th Edition — смелое и амбициозное переосмысление любимой классики, которое по-настоящему вдыхает новую жизнь в её главные темы личного ужаса." }
     ]
   },
   "en": {
@@ -166,7 +172,8 @@ registerSystem("vampire-the-masquerade", {
       }
     ],
     "quotes": [
-      { "text": "The system is timeless and extremely easy to learn. It all boils down to 'roll dice, you succeed at 50% per die'. Vampire is a game that thrives on drama. Hunger deserves a special mention." }
+      { "text": "If you want a horror game where you are the monster, then I think V5 is probably the best edition of the franchise." },
+      { "text": "Vampire: The Masquerade 5th Edition is a daring and ambitious reinterpretation of a cherished classic, effectively breathing new life into its central themes of personal horror." }
     ]
   }
 });

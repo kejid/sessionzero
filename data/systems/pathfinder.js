@@ -66,10 +66,10 @@ registerSystem("pathfinder", {
       "text": "Second Edition refines Pathfinder's tactical combat without losing the complexity that makes it so much fun at the table.",
       "author": "Charlie Hall, Polygon"
     },
-    // VERIFIED-AT: https://www.rpg.net/reviews/view-printable.phtml?reviewNumber=18265
+    // VERIFIED-AT: https://boardsandswords.com/blog/pathfinder-2e-review
     {
-      "text": "I love this system. The mechanics of 2nd edition Pathfinder are a mix of 3.5, Pathfinder, and 4th edition and 5th edition DnD. Since I love all those games, I had no issues with all the best being blended together to make the best of everything.",
-      "author": "Edward Kabara, RPGnet"
+      "text": "There’s been an explosion of new people and new ideas out there, and Pathfinder2e allowed Paizo to write a version of Pathfinder that fits this new dynamic.",
+      "author": "Chris Renshaw, Boards & Swords"
     }
   ],
   "ru": {
@@ -121,7 +121,7 @@ registerSystem("pathfinder", {
     ],
     "quotes": [
       { "text": "Второе издание усовершенствовало тактический бой Pathfinder, не теряя глубины, которая делает эту игру такой увлекательной за столом." },
-      { "text": "Я обожаю эту систему. Механики второго издания — это смесь 3.5, Pathfinder, 4-го и 5-го изданий DnD. Всё лучшее собрано воедино." }
+      { "text": "В хобби хлынули новые люди и новые идеи, и Pathfinder2e позволила Paizo написать версию Pathfinder, которая соответствует этой новой реальности." }
     ]
   },
   "en": {
@@ -173,7 +173,7 @@ registerSystem("pathfinder", {
     ],
     "quotes": [
       { "text": "Second Edition refines Pathfinder's tactical combat without losing the complexity that makes it so much fun at the table." },
-      { "text": "I love this system. The mechanics of 2nd edition Pathfinder are a mix of 3.5, Pathfinder, and 4th edition and 5th edition DnD. All the best being blended together." }
+      { "text": "There’s been an explosion of new people and new ideas out there, and Pathfinder2e allowed Paizo to write a version of Pathfinder that fits this new dynamic." }
     ]
   }
 });

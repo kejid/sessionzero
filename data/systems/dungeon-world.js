@@ -61,15 +61,16 @@ registerSystem("dungeon-world", {
     }
   ],
   "quotes": [
-    // VERIFIED-AT: https://www.rpg.net/reviews/archive/15/15793.phtml
-    {
-      "text": "Dungeon World is a strong game if you buy into its assumptions, values, and style. It certainly is working for me.",
-      "author": "Civil Savage, RPGnet"
-    },
+
     // VERIFIED-AT: https://dmtales.com/2023/05/23/dungeon-world-a-powered-by-the-apocalypse-review/
     {
       "text": "Dungeon World is designed so well for theater of mind combat I feel it would be weird to try to use minis with the game.",
       "author": "Calvin, DM Tales"
+    },
+    // VERIFIED-AT: https://tumbleweird.org/game-review-dw/
+    {
+      "text": "Dungeon World is almost all conversational; there’s rarely a map of any significant value, and there’s no reason to have a battle map and miniatures.",
+      "author": "Brendan Quinn, Tumbleweird"
     }
   ],
   "ru": {
@@ -120,8 +121,9 @@ registerSystem("dungeon-world", {
       }
     ],
     "quotes": [
-      { "text": "Dungeon World — сильная игра, если вы принимаете её допущения, ценности и стиль. Она определённо работает для меня." },
-      { "text": "Dungeon World настолько хорошо подходит для боя в театре разума, что было бы странно пытаться использовать миниатюры." }
+
+      { "text": "Dungeon World настолько хорошо подходит для боя в театре разума, что было бы странно пытаться использовать миниатюры." },
+      { "text": "Dungeon World почти целиком строится на разговоре: карта редко имеет хоть какое-то значение, а в боевом поле и миниатюрах нет никакой нужды." }
     ]
   },
   "en": {
@@ -172,8 +174,9 @@ registerSystem("dungeon-world", {
       }
     ],
     "quotes": [
-      { "text": "Dungeon World is a strong game if you buy into its assumptions, values, and style. It certainly is working for me." },
-      { "text": "Dungeon World is designed so well for theater of mind combat I feel it would be weird to try to use minis with the game." }
+
+      { "text": "Dungeon World is designed so well for theater of mind combat I feel it would be weird to try to use minis with the game." },
+      { "text": "Dungeon World is almost all conversational; there’s rarely a map of any significant value, and there’s no reason to have a battle map and miniatures." }
     ]
   }
 });

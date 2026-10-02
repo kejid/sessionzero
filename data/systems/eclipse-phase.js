@@ -63,7 +63,7 @@ registerSystem("eclipse-phase", {
     },
     // VERIFIED-AT: https://jonne.arjoranta.fi/2020/eclipse-phase-2-review/
     {
-      "text": "Eclipse Phase 2 successfully brings in ideas formulated fully in source books published after the first book and solves some of the problems the previous edition had.",
+      "text": "It successfully brings in ideas formulated fully in source books published after the first book and solves some of the problems the previous edition had.",
       "author": "Jonne Arjoranta"
     }
   ],
@@ -104,7 +104,7 @@ registerSystem("eclipse-phase", {
   ,
     "quotes": [
       { "text": "Сеттинг Eclipse Phase — именно та причина, по которой я обязательно беру каждое издание, и хотя во 2e в основном небольшие изменения, он не приедается." },
-      { "text": "Eclipse Phase 2 удачно вбирает идеи, полностью оформленные в дополнениях после первой книги, и решает часть проблем предыдущего издания." }
+      { "text": "Она удачно вбирает идеи, полностью оформленные в дополнениях после первой книги, и решает часть проблем предыдущего издания." }
     ]
   },
   "en": {
@@ -144,7 +144,7 @@ registerSystem("eclipse-phase", {
   ,
     "quotes": [
       { "text": "The Eclipse Phase setting has been the reason I've made sure to get a copy of every edition, and even though 2e has mostly minor changes it doesn't get old." },
-      { "text": "Eclipse Phase 2 successfully brings in ideas formulated fully in source books published after the first book and solves some of the problems the previous edition had." }
+      { "text": "It successfully brings in ideas formulated fully in source books published after the first book and solves some of the problems the previous edition had." }
     ]
   }
 });

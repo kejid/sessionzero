@@ -55,10 +55,15 @@ registerSystem("scum-and-villainy", {
       "text": "It captures the feel of being a space criminal, bound for fortune and glory, while providing some substantive rules on which to hang a narrative.",
       "author": "Jared Rascher, Gnome Stew"
     },
-    // VERIFIED-AT: https://therewillbe.games/articles-ttrpg-reviews/8314-scum-and-villainy-rpg-review
+    // VERIFIED-AT: https://mythcreants.com/blog/scum-and-villainy-shines-despite-flaws/
     {
-      "text": "If you love Firefly, Star Wars, or Killjoys I can really recommend this as a great introduction to what I think is one of the finest systems around.",
-      "author": "Iain McAllister, There Will Be Games"
+      "text": "If nothing else, Scum and Villainy is easily the best space opera RPG I’ve ever played, and I’ve played most of them.",
+      "author": "Oren Ashkenazi, Mythcreants"
+    },
+    // VERIFIED-AT: https://giantbrain.co.uk/2019/09/11/scum-villainy-review/
+    {
+      "text": "Scum & Villainy is a confident interpretation of the Blades ruleset with high production values and a good layout.",
+      "author": "Iain McAllister, The Giant Brain"
     }
   ],
   "ru": {
@@ -105,7 +110,8 @@ registerSystem("scum-and-villainy", {
   ,
     "quotes": [
       { "text": "Игра ухватывает ощущение космического преступника в погоне за богатством и славой, при этом давая содержательные правила, на которые можно опереть повествование." },
-      { "text": "Если вы любите «Светлячка», «Звёздные войны» или «Killjoys» — от всей души рекомендую это как отличное знакомство с одной из лучших, на мой взгляд, систем." }
+      { "text": "Как минимум, Scum and Villainy — безусловно лучшая НРИ в жанре космооперы, в которую я играл, а играл я почти во все." },
+      { "text": "Scum & Villainy — уверенная интерпретация правил Blades с высоким качеством издания и хорошей вёрсткой." }
     ]
   },
   "en": {
@@ -152,7 +158,8 @@ registerSystem("scum-and-villainy", {
   ,
     "quotes": [
       { "text": "It captures the feel of being a space criminal, bound for fortune and glory, while providing some substantive rules on which to hang a narrative." },
-      { "text": "If you love Firefly, Star Wars, or Killjoys I can really recommend this as a great introduction to what I think is one of the finest systems around." }
+      { "text": "If nothing else, Scum and Villainy is easily the best space opera RPG I’ve ever played, and I’ve played most of them." },
+      { "text": "Scum & Villainy is a confident interpretation of the Blades ruleset with high production values and a good layout." }
     ]
   }
 });

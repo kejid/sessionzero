@@ -61,15 +61,15 @@ registerSystem("savage-worlds", {
     }
   ],
   "quotes": [
-    // VERIFIED-AT: https://www.rpg.net/reviews/archive/9/9349.phtml
+    // VERIFIED-AT: https://pocgamer.com/archives/1477
     {
-      "text": "Got a life? d20 becoming too much work? Savage Worlds is a lean, mean gaming machine. If you've been looking for an rpg that combines a minimum of prep time with a maximum of useful, crunchy bits — this one's for you.",
-      "author": "Creel, RPGnet"
+      "text": "As a generic game, Savage Worlds offers a lot with a fairly approachable system and proven track record.",
+      "author": "Graeme Barber, POCGamer"
     },
-    // VERIFIED-AT: https://www.rpg.net/reviews/archive/9/9637.phtml
+    // VERIFIED-AT: https://thetabletopalmanac.wordpress.com/2019/05/22/rpg-reviews-savage-worlds-adventure-edition/
     {
-      "text": "Fast, Furious, Fun — it's not just a tagline, it's a mission statement!",
-      "author": "Jamie Herbert, RPGnet"
+      "text": "Savage Worlds Adventure Edition is a very comprehensive, very accessible, detailed but fast toolkit RPG suitable to run games in almost any setting/genre with just the core rulebook.",
+      "author": "SKaye, The Tabletop Almanac"
     }
   ],
   "ru": {
@@ -120,8 +120,8 @@ registerSystem("savage-worlds", {
       }
     ],
     "quotes": [
-      { "text": "Есть жизнь? d20 стало слишком сложно? Savage Worlds — это стройная, голодная игровая машина. Если вы искали RPG, совмещающую минимум подготовки с максимумом полезных, хрунчевых деталей — это для вас." },
-      { "text": "Быстро, яростно, весело — это не просто слоган, это манифест!" }
+      { "text": "Как универсальная игра Savage Worlds даёт очень многое — при довольно доступной системе и проверенной временем репутации." },
+      { "text": "Savage Worlds Adventure Edition — очень полная, очень доступная, детальная, но быстрая RPG-конструктор, с которой можно водить игры почти в любом сеттинге и жанре, имея лишь базовую книгу правил." }
     ]
   },
   "en": {
@@ -172,8 +172,8 @@ registerSystem("savage-worlds", {
       }
     ],
     "quotes": [
-      { "text": "Got a life? d20 becoming too much work? Savage Worlds is a lean, mean gaming machine. If you've been looking for an rpg that combines a minimum of prep time with a maximum of useful, crunchy bits — this one's for you." },
-      { "text": "Fast, Furious, Fun — it's not just a tagline, it's a mission statement!" }
+      { "text": "As a generic game, Savage Worlds offers a lot with a fairly approachable system and proven track record." },
+      { "text": "Savage Worlds Adventure Edition is a very comprehensive, very accessible, detailed but fast toolkit RPG suitable to run games in almost any setting/genre with just the core rulebook." }
     ]
   }
 });

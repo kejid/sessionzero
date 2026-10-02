@@ -61,10 +61,10 @@ registerSystem("kult-divinity-lost", {
       "text": "Just because I can't see running Kult: Divinity Lost with my gang doesn't mean this isn't an exceptionally well done roleplaying game.",
       "author": "Jeff McAleer, The Gaming Gang"
     },
-    // VERIFIED-AT: https://www.rpg.net/reviews/archive/18/18031.phtml
+    // VERIFIED-AT: https://www.geeknative.com/62413/uncommonly-adult-rpg-kult-divinity-lost/
     {
-      "text": "If you fall into its target group you will discover a rich and well-researched setting that will make your imagination run wild.",
-      "author": "Antonios S, RPGnet"
+      "text": "Kult is remarkable in that it has the best set of instructions and guides for a Game Master that I’ve ever seen in a core rulebook.",
+      "author": "Andrew Girdwood, Geek Native"
     }
   ],
   "ru": {
@@ -113,7 +113,7 @@ registerSystem("kult-divinity-lost", {
     ],
     "quotes": [
       { "text": "То, что я не вижу, как вести Kult: Divinity Lost со своей компанией, не значит, что это не исключительно хорошо сделанная ролевая игра." },
-      { "text": "Если вы попадаете в её целевую аудиторию, вы откроете богатый и тщательно проработанный сеттинг, который заставит воображение разгуляться." }
+      { "text": "Kult примечателен тем, что в нём лучший набор инструкций и руководств для мастера, какой я когда-либо видел в базовой книге правил." }
     ]
   },
   "en": {

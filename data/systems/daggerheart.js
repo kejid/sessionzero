@@ -69,10 +69,15 @@ registerSystem("daggerheart", {
     }
   ],
   "quotes": [
-    // VERIFIED-AT: 2026-05-07 — https://www.enworld.org/threads/daggerheart-review-the-duality-of-robust-combat-mechanics-and-freeform-narrative.713471/
+    // VERIFIED-AT: https://www.wargamer.com/daggerheart/review
     {
-      "text": "The narrative system is built around a more freeform collaboration between players and GM, where the story grows without much impediment from rules.",
-      "author": "Christian Hoffer, EN World"
+      "text": "Daggerheart is an approachable, interesting, and downright delightful tabletop RPG. Its rules are familiar yet polished, with plenty for TTRPG veterans and newcomers to get excited about.",
+      "author": "Mollie Russell, Wargamer"
+    },
+    // VERIFIED-AT: https://www.belloflostsouls.net/2025/05/critical-roles-daggerheart-a-crunchier-approach-to-fiction-first-fantasy.html
+    {
+      "text": "But it also knows exactly what it wants to be: a game about heroic characters that have meaningful stories that feel satisfying.",
+      "author": "J.R. Zambrano, Bell of Lost Souls"
     }
   ],
   "ru": {
@@ -130,7 +135,8 @@ registerSystem("daggerheart", {
     ]
   ,
     "quotes": [
-      { "text": "Нарративная система построена вокруг свободной коллаборации игроков и ГМ-а, где история растёт почти без помех со стороны правил." }
+      { "text": "Daggerheart — доступная, интересная и попросту восхитительная настольная ролевая игра. Её правила знакомы, но отшлифованы, и в них хватает поводов для восторга и у ветеранов НРИ, и у новичков." },
+      { "text": "Но она точно знает, чем хочет быть: игрой о героических персонажах со значимыми историями, которые приносят удовлетворение." }
     ]
   },
   "en": {
@@ -185,6 +191,10 @@ registerSystem("daggerheart", {
       {
         "name": "Quickstart adventure"
       }
+    ],
+    "quotes": [
+      { "text": "Daggerheart is an approachable, interesting, and downright delightful tabletop RPG. Its rules are familiar yet polished, with plenty for TTRPG veterans and newcomers to get excited about." },
+      { "text": "But it also knows exactly what it wants to be: a game about heroic characters that have meaningful stories that feel satisfying." }
     ]
   }
 });

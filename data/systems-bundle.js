@@ -182,6 +182,111 @@ registerSystem("13th-age", {
     ]
   }
 });
+registerSystem("7th-sea", {
+  "groups": {
+    "default": { "key": "narrative", "order": 58 },
+    "family": { "key": "standalone", "order": 63 },
+    "genre": { "key": "adventure", "order": 33 }
+  },
+  "name": "7th Sea",
+  "publisher": "John Wick Presents / Chaosium",
+  "dice": "d10 pool",
+  "players": "3–6",
+  "complexity": 3,
+  "free": false,
+  "edition": "2e",
+  "foundryStatus": "Community",
+  "heroImage": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x1280/products/2116/3530/JWP7001_-_7th_Sea_Core_Rulebook_-_Front_Cover_-_700x900__61779.1558209711.jpg",
+  "playstyleTags": ["action", "narrative", "social"],
+  "settingTags": ["fantasy"],
+  "gallery": [
+    { "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/500x642/products/2119/3571/Pirate_Nations_-_Front_Cover_-_700x900__58538.1558214666.png" },
+    { "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/500x642/products/2118/3559/Heroes_and_Villains_-_Front_Cover_-_700x900__38367.1558213244.jpg" },
+    { "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/500x642/products/2120/3580/Nationsof_-_Theah-_Vol_1_-_Front_Cover_-_700x900__19123.1558215550.png" }
+  ],
+  "resources": [
+    { "type": "link", "url": "https://www.chaosium.com/7th-sea/", "fmt": "Web" },
+    { "type": "quickstart", "url": "https://www.chaosium.com/content/FreePDFs/7th%20Sea/7th%20Sea%20Quickstart.pdf", "fmt": "PDF" },
+    { "type": "rules", "url": "https://www.chaosium.com/7th-sea-core-rulebook-second-edition-pdf/", "fmt": "PDF" },
+    { "type": "link", "url": "https://foundryvtt.com/packages/svnsea2e", "fmt": "Foundry" }
+  ],
+  "mechanics": [
+    { "icon": "dices" },
+    { "icon": "sparkles" },
+    { "icon": "users" },
+    { "icon": "scroll" }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://whodaresrolls.com/rpgs/7th-sea-second-edition-review/
+    {
+      "text": "If you like swashbuckling adventures and heroic characters, this is definitely the best system and a real upgrade from First Edition.",
+      "author": "Charlie Etheridge-Nunn, Who Dares Rolls"
+    },
+    // VERIFIED-AT: https://walkingmind.evilhat.com/2016/08/16/reading-7th-sea-second-edition/
+    {
+      "text": "Skipping this is skipping over one of the most interesting pieces of game technology in 7th Sea.",
+      "author": "Rob Donoghue, The Walking Mind"
+    }
+  ],
+  "ru": {
+    "tagShort": "Плащи, шпаги и магия",
+    "tagline": "«Герои плаща и шпаги, дуэли и интриги в фэнтезийной Европе XVII века».",
+    "description": "7th Sea Second Edition — ролевая игра плаща и шпаги о дуэлях, пиратстве, интригах и колдовстве в Тее, фэнтезийном отражении Европы XVII века. Игроки — Герои с большой буквы, которые почти никогда не проваливаются просто так: кубики решают не «получилось ли», а сколько всего удастся успеть за раз. Бросьте пул d10, соберите Подъёмы и потратьте их на действия, защиту от Последствий и Возможности. Развитие идёт не через опыт, а через Истории, которые игроки сами пишут своим Героям.",
+    "setting": "Тея — континент соперничающих держав, напоминающих Европу XVII века: мушкетёры и упадочные дворы Монтеня, разгул Инквизиции в Кастилии, ведьмы судьбы в Водачче, пиратские республики на морях, повсюду тайные общества и древние руины.",
+    "vignette": "Бальный зал в Монтене горит, а письмо кардинала лежит на другом конце, за отрядом из четырёх стражников. Вы перелетаете зал на люстре: Ловкость 3 + Фехтование 3 и бонусный кубик за описание — семь d10. Выпало 10, 7, 3, 6, 4, 8, 2: четыре Подъёма. Один — пересечь зал, один — схватить письмо, два — уложить двоих стражников. Оставшиеся двое наносят в ответ две Раны.",
+    "prep": "~30 мин",
+    "mechanics": [
+      { "title": "Риски и Подъёмы", "text": "Бросьте столько d10, сколько даёт Черта плюс Навык, и сложите кубики в наборы с суммой 10. Каждый набор — Подъём: им оплачивают цель, отмену Последствий или Возможности." },
+      { "title": "Очки Героя и Очки Угрозы", "text": "Очко Героя добавляет один кубик к вашему Риску или три кубика к Риску товарища. Мастер выкупает ваши неиспользованные кубики и пополняет ими свой запас Очков Угрозы." },
+      { "title": "Отряды громил", "text": "Безымянные головорезы дерутся как одно целое с единым показателем Силы. Каждый Подъём выбивает одного громилу; сколько осталось к концу раунда, столько Ран они и наносят." },
+      { "title": "Истории", "text": "Очков опыта нет. Вы записываете Историю Героя: цель и шаги к ней. Завершив её, получаете Преимущество, Навык или Черту, которые сами назвали в начале." }
+    ],
+    "gallery": [
+      { "cap": "Обложка книги Pirate Nations" },
+      { "cap": "Обложка книги Heroes & Villains" },
+      { "cap": "Обложка Nations of Théah, том 1" }
+    ],
+    "resources": [
+      { "name": "7th Sea на сайте Chaosium" },
+      { "name": "Бесплатный Quickstart (PDF)" },
+      { "name": "Базовая книга правил (PDF)" },
+      { "name": "Система для Foundry VTT (неофициальная)" }
+    ],
+    "quotes": [
+      { "text": "Если вам по душе приключения плаща и шпаги и героические персонажи, это определённо лучшая система и настоящий шаг вперёд по сравнению с первой редакцией." },
+      { "text": "Пропустить этот шаг — значит пропустить одну из самых интересных игровых технологий в 7th Sea." }
+    ]
+  },
+  "en": {
+    "tagShort": "Swashbuckling & sorcery",
+    "tagline": "\"Swashbuckling heroes, duels and intrigue in a fantasy 17th-century Europe.\"",
+    "description": "7th Sea Second Edition is a swashbuckling roleplaying game of duels, piracy, intrigue and sorcery set in Théah, a fantasy mirror of 17th-century Europe. Players are larger-than-life Heroes who almost never simply fail: instead of testing success, the dice decide how much they can accomplish at once. Roll a pool of d10s, build Raises, and spend them to act, dodge Consequences and seize Opportunities. Advancement comes not from experience points but from Stories that players write for their own Heroes.",
+    "setting": "Théah — a continent of rival nations echoing 17th-century Europe: musketeers and decadent courts in Montaigne, an Inquisition loose in Castille, fate witches in Vodacce, pirate republics on the seas, secret societies and ancient ruins everywhere.",
+    "vignette": "The Montaigne ballroom is burning and the Cardinal's letter lies across the hall behind a squad of four guards. You swing over on the chandelier: Finesse 3 + Weaponry 3, plus a bonus die for the description — seven d10s. They come up 10, 7, 3, 6, 4, 8, 2: four Raises. One to cross the hall, one to snatch the letter, two to drop two guards. The last two brutes hit back for two Wounds.",
+    "prep": "~30 min",
+    "mechanics": [
+      { "title": "Risks & Raises", "text": "Roll d10s equal to Trait plus Skill and group the dice into sets totalling 10. Each set is a Raise, spent to achieve your intent, cancel Consequences or grab Opportunities." },
+      { "title": "Hero Points & Danger Points", "text": "Spend a Hero Point to add one die to your own Risk, or three dice to a friend's. The GM buys your unused dice, feeding a pool of Danger Points." },
+      { "title": "Brute Squads", "text": "Nameless thugs fight as one unit with a single Strength rating. Each Raise removes one brute; whatever is left at the end of the round deals that many Wounds." },
+      { "title": "Stories", "text": "There are no experience points. You write your Hero's Story as a goal and a series of steps; finishing it earns the Advantage, Skill or Trait you named at the start." }
+    ],
+    "gallery": [
+      { "cap": "Pirate Nations sourcebook cover" },
+      { "cap": "Heroes & Villains sourcebook cover" },
+      { "cap": "Nations of Théah, Volume 1 cover" }
+    ],
+    "resources": [
+      { "name": "7th Sea at Chaosium" },
+      { "name": "Free Quickstart (PDF)" },
+      { "name": "Core Rulebook PDF" },
+      { "name": "Foundry VTT system (unofficial)" }
+    ],
+    "quotes": [
+      { "text": "If you like swashbuckling adventures and heroic characters, this is definitely the best system and a real upgrade from First Edition." },
+      { "text": "Skipping this is skipping over one of the most interesting pieces of game technology in 7th Sea." }
+    ]
+  }
+});
 registerSystem("advanced-fighting-fantasy", {
   "groups": {
     "default": { "key": "osr", "order": 21 },
@@ -338,6 +443,111 @@ registerSystem("advanced-fighting-fantasy", {
     "quotes": [
       { "text": "There's more than enough to run a game or campaign from just the core book, which is how I prefer to run the solo game." },
       { "text": "Advanced Fighting Fantasy is a role-playing game with simple mechanics that still provide ample detail, set in an interesting fantasy world." }
+    ]
+  }
+});
+registerSystem("alice-is-missing", {
+  "groups": {
+    "default": { "key": "narrative", "order": 59 },
+    "family": { "key": "standalone", "order": 64 },
+    "genre": { "key": "noir", "order": 36 }
+  },
+  "name": "Alice is Missing",
+  "publisher": "Hunters Entertainment / Renegade Game Studios",
+  "dice": "Cards + 90-minute timer (diceless)",
+  "players": "3–5",
+  "complexity": 1,
+  "free": false,
+  "edition": null,
+  "foundryStatus": "None",
+  "heroImage": "https://cdn11.bigcommerce.com/s-kftzvkkgjv/images/stencil/1280x1280/products/119/553/AliceIsMissing_1000%C3%97%E2%80%8A1000__77444.1611281398.jpg",
+  "playstyleTags": ["mystery", "narrative", "social"],
+  "settingTags": ["modern"],
+  "gallery": [
+    { "src": "https://cdn11.bigcommerce.com/s-kftzvkkgjv/images/stencil/1280x1280/products/119/552/AIM_Box_Skew_2000x2000__96002.1611281398.png" },
+    { "src": "https://cdn11.bigcommerce.com/s-kftzvkkgjv/images/stencil/1280x1280/products/119/554/AliceIsMissing_Setup3_1000x600__08332.1611281398.jpg" },
+    { "src": "https://cdn11.bigcommerce.com/s-kftzvkkgjv/images/stencil/1280x1280/products/1939/4043/AIM-SF-Mockup_1__73001.1696362263.png" }
+  ],
+  "resources": [
+    { "type": "link", "url": "https://renegadegamestudios.com/alice-is-missing/", "fmt": "Print" },
+    { "type": "rules", "url": "https://www.drivethrurpg.com/en/product/321387/alice-is-missing-a-silent-roleplaying-game", "fmt": "PDF" },
+    { "type": "link", "url": "https://www.aliceismissing.com/", "fmt": "Web" },
+    { "type": "tool", "url": "https://www.youtube.com/watch?v=ysOOFIOAy7A", "fmt": "Video" }
+  ],
+  "mechanics": [
+    { "icon": "message-circle" },
+    { "icon": "timer" },
+    { "icon": "search" },
+    { "icon": "lock" }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://thealexandrian.net/wordpress/50048/roleplaying-games/review-alice-is-missing
+    {
+      "text": "Alice is Missing is one of the best storytelling games ever made.",
+      "author": "Justin Alexander, The Alexandrian"
+    },
+    // VERIFIED-AT: https://www.vox.com/culture/21656220/alice-is-missing-rpg-text-message
+    {
+      "text": "Alice Is Missing takes the tabletop RPG to new, incredibly moving places.",
+      "author": "Emily St. James, Vox"
+    }
+  ],
+  "ru": {
+    "tagShort": "Безмолвный детектив в переписке",
+    "tagline": "«Девяносто минут, ни слова вслух, а девушка пропала».",
+    "description": "Alice is Missing — безмолвная ролевая игра на один вечер для трёх–пяти игроков. Старшеклассница Элис Брайарвуд исчезла из городка Сайлент-Фолс, а вы играете самых близких ей людей. После 45 минут подготовки никто больше не произносит ни слова: полтора часа под саундтрек с таймером всё происходит в общем чате и личных сообщениях. Карты улик открываются в заданные минуты, выводят на подозреваемых и места, пока правда об Элис не придёт вам на телефон.",
+    "setting": "Сайлент-Фолс — сонный городок посреди зимы. Наши дни, никакой магии и чудовищ: только объявления о пропаже, несколько местных, которые знают больше, чем говорят, и друзья и родные Элис.",
+    "vignette": "Таймер показывает 70. Вы переворачиваете свою карту улики: откройте подозреваемого — он стоит у вашей двери и задаёт странные вопросы об Элис. Вы бросаете взгляд на остальных за молчащим столом и пишете в общий чат: «ребят. он у меня на крыльце. всё спрашивает, не оставляла ли элис что-нибудь у меня». Вибрируют три телефона. Кто-то отвечает уже в личке.",
+    "prep": "~45 мин",
+    "mechanics": [
+      { "title": "Игра в тишине", "text": "Когда таймер запущен, никто не разговаривает. Весь отыгрыш идёт в сообщениях: общий чат для всех и личные переписки, где герои делятся подозрениями, ложью и признаниями, которых остальные не видят." },
+      { "title": "90-минутный таймер с саундтреком", "text": "Официальное видео совмещает обратный отсчёт и подобранную музыку, которая следует за эмоциональной дугой истории. Музыка смолкает — игра окончена, в каком бы состоянии ни было расследование." },
+      { "title": "Улики по времени", "text": "У каждого игрока есть карты улик, привязанные к минутам. Когда таймер доходит до вашей, вы открываете её, вскрываете карту подозреваемого или места, отвечаете на вопрос и пишете новость в чат." },
+      { "title": "Мотивы и секреты", "text": "У каждого из пяти персонажей-архетипов есть свой секрет, а карты мотивов добавляют побуждение и две связи с другими игроками. Ведущий тоже играет — за Чарли Барнса — и проводит подготовку." }
+    ],
+    "gallery": [
+      { "cap": "Коробка Alice is Missing" },
+      { "cap": "Карты и объявления о пропаже, разложенные для игры" },
+      { "cap": "Дополнение Silent Falls" }
+    ],
+    "resources": [
+      { "name": "Alice is Missing на сайте Renegade Game Studios" },
+      { "name": "PDF на DriveThruRPG" },
+      { "name": "Alice is Missing: Digital Edition" },
+      { "name": "Официальный 90-минутный таймер" }
+    ],
+    "quotes": [
+      { "text": "Alice is Missing — одна из лучших повествовательных игр, когда-либо созданных." },
+      { "text": "Alice Is Missing выводит настольные ролевые игры на новую, невероятно трогательную территорию." }
+    ]
+  },
+  "en": {
+    "tagShort": "Silent text-message mystery",
+    "tagline": "\"Ninety minutes, no one speaks, and a girl is gone.\"",
+    "description": "Alice is Missing is a silent one-shot RPG for three to five players. Alice Briarwood, a high school junior, has vanished from the small town of Silent Falls, and you play the people closest to her. After about 45 minutes of setup, nobody speaks again: for 90 minutes, paced by a soundtrack timer, everything happens in group and private text messages. Clue cards flip at fixed minute marks, pulling in Suspects and Locations until the truth about Alice lands on your phone.",
+    "setting": "Silent Falls, a sleepy small town in the dead of winter. Present day, no magic, no monsters: just missing-person posters, a handful of locals who know more than they say, and the friends and family Alice left behind.",
+    "vignette": "The timer hits 70. You flip your Clue card: reveal a Suspect, they are at your door asking strange questions about Alice. You glance at the others across the silent table, then type into the group chat: \"guys. he's on my porch. he keeps asking if alice left anything with me.\" Three phones buzz. Someone answers in a private thread instead.",
+    "prep": "~45 min",
+    "mechanics": [
+      { "title": "Played in silence", "text": "Once the timer starts nobody talks. All roleplay happens by text: one group chat for everyone, plus private threads where characters share suspicions, lies and confessions the others never see." },
+      { "title": "90-minute soundtrack timer", "text": "An official video combines a countdown with a curated soundtrack that tracks the story's emotional arc. When the music ends, so does the game, whatever state the investigation is in." },
+      { "title": "Timed Clue cards", "text": "Each player holds Clue cards tied to minute marks. When the timer hits yours, you flip it, reveal a Suspect or Location card, answer its prompt and text the news to the group." },
+      { "title": "Drives and Secrets", "text": "Five archetypal characters each carry a Secret, while Drive cards add a Motive and two Relationships with other players. The facilitator plays too, as Charlie Barnes, while guiding setup." }
+    ],
+    "gallery": [
+      { "cap": "The Alice is Missing box" },
+      { "cap": "Cards and missing posters laid out for play" },
+      { "cap": "Silent Falls expansion" }
+    ],
+    "resources": [
+      { "name": "Alice is Missing at Renegade Game Studios" },
+      { "name": "PDF on DriveThruRPG" },
+      { "name": "Alice is Missing: Digital Edition" },
+      { "name": "Official 90-minute animated timer" }
+    ],
+    "quotes": [
+      { "text": "Alice is Missing is one of the best storytelling games ever made." },
+      { "text": "Alice Is Missing takes the tabletop RPG to new, incredibly moving places." }
     ]
   }
 });
@@ -905,6 +1115,111 @@ registerSystem("avatar-legends", {
     "quotes": [
       { "text": "If you're looking for a game that feels like an episode of Avatar: the Last Airbender or The Legend of Korra, this is it." },
       { "text": "The game is fine, it probably plays a lot nicer than D&D to be honest." }
+    ]
+  }
+});
+registerSystem("band-of-blades", {
+  "groups": {
+    "default": { "key": "tactical", "order": 40 },
+    "family": { "key": "pbta-fitd", "order": 36 },
+    "genre": { "key": "dark-fantasy", "order": 28 }
+  },
+  "name": "Band of Blades",
+  "publisher": "Evil Hat Productions / Off Guard Games",
+  "dice": "d6 pool (Forged in the Dark)",
+  "players": "3–5",
+  "complexity": 4,
+  "free": false,
+  "edition": null,
+  "foundryStatus": "Community",
+  "heroImage": "https://evilhat.com/wp-content/uploads/2021/08/BoB_Cover_Changed.jpg",
+  "playstyleTags": ["tactical", "survival", "combat"],
+  "settingTags": ["fantasy"],
+  "gallery": [
+    { "src": "https://evilhat.com/wp-content/uploads/2021/08/Web-Band-of-Blades-3d.png" },
+    { "src": "https://evilhat.com/wp-content/uploads/2021/08/Band-of-Blades-Map-Color-rsz.webp" },
+    { "src": "https://evilhat.com/wp-content/uploads/2021/08/chosen.jpg" }
+  ],
+  "resources": [
+    { "type": "link", "url": "https://evilhat.com/product/band-of-blades/", "fmt": "Web" },
+    { "type": "sheet", "url": "https://evilhat.com/wp-content/uploads/2022/04/BoB-sheets.pdf", "fmt": "PDF" },
+    { "type": "rules", "url": "https://www.drivethrurpg.com/en/product/243347/band-of-blades", "fmt": "PDF" },
+    { "type": "link", "url": "https://foundryvtt.com/packages/band-of-blades", "fmt": "Foundry" }
+  ],
+  "mechanics": [
+    { "icon": "dices" },
+    { "icon": "crown" },
+    { "icon": "users" },
+    { "icon": "map" }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://cannibalhalflinggaming.com/2019/09/22/band-of-blades-review/
+    {
+      "text": "Band of Blades is a book that will offer a unique campaign experience where no character is safe, where both the losses and the risks matter.",
+      "author": "Seamus Conneely, Cannibal Halfling Gaming"
+    },
+    // VERIFIED-AT: https://gnomestew.com/band-of-blades-review/
+    {
+      "text": "You can very easily feel like your characters are the underdogs in a fight against an intimidating foe, but yet you still have a lot of tools to accomplish missions moving you closer to your goal.",
+      "author": "Jared Rascher, Gnome Stew"
+    }
+  ],
+  "ru": {
+    "tagShort": "Военное тёмное фэнтези об отступлении",
+    "tagline": "«Война проиграна. Доведите Легион до крепости Скайдаггер, пока мёртвые не догнали».",
+    "description": "Band of Blades — самостоятельная игра на движке Forged in the Dark в жанре военного тёмного фэнтези. Легион проиграл решающую битву с нежитью Пепельного Короля и отступает через Альдермарк к крепости Скайдаггер. Игроки проходят задания за новобранцев, солдат и специалистов, а затем командуют всем Легионом: выбирают миссии, делят припасы, считают погибших. Персонажи общие, потери неизбежны, а у кампании есть чёткий финал. Либо Легион дойдёт до крепости до зимы, либо сломается в пути.",
+    "setting": "Альдермарк — земля, которую захватывают армии нежити Пепельного Короля. Легион, наёмный отряд из Восточных королевств, идёт вместе с одним из Избранных, человеком с силой бога, а Сломленные, Избранные, совращённые Пепельным Королём, гонят его к крепости Скайдаггер.",
+    "vignette": "Ваш снайпер лежит в разрушенной мельнице, пока лейтенант Сломленной гонит гниющую пехоту к мосту, который должен удержать отряд. Вы тратите использование Прицеливания, берёте стресс ради лишнего кубика и бросаете четыре d6: старший результат — 5. Выстрел снимает лейтенанта, но вспышка выдаёт позицию, и ведущий запускает счётчик: орда разворачивается к мельнице. Двое новобранцев всё ещё на другом берегу.",
+    "prep": "~30 мин",
+    "mechanics": [
+      { "title": "Кубики Forged in the Dark", "text": "Соберите пул d6 по рейтингу действия и возьмите старший кубик. 6 — полный успех, 4-5 — успех с ценой, 1-3 — провал, и положение становится хуже." },
+      { "title": "Роли Легиона", "text": "У каждого игрока есть штабная должность: Командир выбирает миссии и маршрут, Маршал назначает отряды, Квартирмейстер ведёт припасы, а Хранитель знаний и Глава разведки добавляются в больших группах." },
+      { "title": "Игра труппой", "text": "Легионеры никому не принадлежат. Перед каждой миссией Маршал решает, кто идёт, и игроки берут специалистов, солдат или новобранцев, пока раненые лечатся, а погибших вносят в списки." },
+      { "title": "Фазы миссии и кампании", "text": "Игра чередует миссию в кадре и фазу кампании, где Легион тратит ресурсы, следит за Временем и Давлением, разрешает миссию за кадром и решает, когда идти дальше." }
+    ],
+    "gallery": [
+      { "cap": "Книга правил Band of Blades в твёрдой обложке" },
+      { "cap": "Карта Альдермарка и дорога к крепости Скайдаггер" },
+      { "cap": "Избранные — смертные, несущие силу богов" }
+    ],
+    "resources": [
+      { "name": "Band of Blades на сайте Evil Hat" },
+      { "name": "Бесплатные буклеты и листы Легиона" },
+      { "name": "Band of Blades на DriveThruRPG" },
+      { "name": "Фанатская система для Foundry VTT" }
+    ],
+    "quotes": [
+      { "text": "Band of Blades — книга, которая подарит уникальную кампанию, где ни один персонаж не в безопасности, где важны и потери, и риск." },
+      { "text": "Очень легко почувствовать, что ваши персонажи — аутсайдеры в бою с грозным врагом, и всё же у вас достаточно инструментов, чтобы выполнять миссии и приближаться к цели." }
+    ]
+  },
+  "en": {
+    "tagShort": "Military dark fantasy retreat",
+    "tagline": "\"The war is lost. Get the Legion to Skydagger Keep before the dead catch up.\"",
+    "description": "Band of Blades is a stand-alone Forged in the Dark game of dark military fantasy. The Legion lost the decisive battle against the Cinder King's undead and now retreats across Aldermark toward Skydagger Keep. Players run missions as Rookies, Soldiers and Specialists, then step back to command the whole Legion: choosing missions, rationing supplies, counting the dead. Characters are shared, casualties are expected, and the campaign has a defined end. Either the Legion reaches the keep before winter, or it breaks on the road.",
+    "setting": "Aldermark, a land being overrun by the undead armies of the Cinder King. The Legion, a mercenary company from the Eastern Kingdoms, marches with one of the Chosen, a human carrying a god's power, while the Broken, Chosen corrupted by the Cinder King, hunt them toward Skydagger Keep.",
+    "vignette": "Your Sniper lies in a ruined mill as a Broken lieutenant drives rotting infantry toward the bridge your squad must hold. You spend a use of Aim, push yourself for an extra die and roll four d6: highest is a 5. The shot drops the lieutenant, but the muzzle flash gives you away, and the GM starts a clock as the horde turns toward the mill. Two Rookies are still on the wrong side of the river.",
+    "prep": "~30 min",
+    "mechanics": [
+      { "title": "Forged in the Dark dice", "text": "Build a pool of d6s from your action rating and take the highest die. A 6 is full success, 4-5 succeeds with a cost, 1-3 fails and things get worse." },
+      { "title": "Legion roles", "text": "Every player also holds a command post: Commander picks missions and the route, Marshal assigns squads, Quartermaster manages supplies, with optional Lorekeeper and Spymaster roles for larger groups." },
+      { "title": "Troupe play", "text": "Nobody owns a legionnaire. Each mission the Marshal chooses who goes, and players pick up Specialists, Soldiers or fresh Rookies as the wounded stay behind and the dead are recorded." },
+      { "title": "Mission and campaign phases", "text": "Play alternates between a mission on screen and a campaign phase where the Legion spends resources, tracks Time and Pressure, resolves an off-screen mission and decides when to march on." }
+    ],
+    "gallery": [
+      { "cap": "The Band of Blades hardcover rulebook" },
+      { "cap": "Map of Aldermark and the road to Skydagger Keep" },
+      { "cap": "The Chosen, mortals carrying the power of the gods" }
+    ],
+    "resources": [
+      { "name": "Band of Blades at Evil Hat" },
+      { "name": "Free playbooks and Legion sheets" },
+      { "name": "Band of Blades on DriveThruRPG" },
+      { "name": "Community Foundry VTT system" }
+    ],
+    "quotes": [
+      { "text": "Band of Blades is a book that will offer a unique campaign experience where no character is safe, where both the losses and the risks matter." },
+      { "text": "You can very easily feel like your characters are the underdogs in a fight against an intimidating foe, but yet you still have a lot of tools to accomplish missions moving you closer to your goal." }
     ]
   }
 });
@@ -1658,6 +1973,108 @@ registerSystem("brindlewood-bay", {
     ]
   }
 });
+registerSystem("burning-wheel", {
+  "groups": {
+    "default": { "key": "narrative", "order": 52 },
+    "family": { "key": "standalone", "order": 58 },
+    "genre": { "key": "adventure", "order": 30 }
+  },
+  "name": "The Burning Wheel",
+  "publisher": "Burning Wheel HQ / Luke Crane",
+  "dice": "d6 pool",
+  "players": "2–5",
+  "complexity": 5,
+  "free": false,
+  "edition": "Gold Revised",
+  "foundryStatus": "Community",
+  "heroImage": "https://www.burningwheel.com/cdn/shop/files/17_BWGold__09232.1690573427.1280.1280.jpg",
+  "playstyleTags": ["narrative", "social", "tactical"],
+  "settingTags": ["fantasy"],
+  "gallery": [
+    { "src": "https://www.burningwheel.com/cdn/shop/files/BWGR_shot__49701.1690573425.1280.1280.jpg" },
+    { "src": "https://www.burningwheel.com/cdn/shop/files/18_BWCodex__25392.1690573290.1280.1280.jpg" },
+    { "src": "https://www.burningwheel.com/cdn/shop/files/19_BWAnthology__34914.1690573117.1280.1280.jpg" }
+  ],
+  "resources": [
+    { "type": "link", "url": "https://www.burningwheel.com/", "fmt": "Web" },
+    { "type": "link", "url": "https://www.burningwheel.com/products/burning-wheel-gold-revised", "fmt": "Store" },
+    { "type": "link", "url": "https://foundryvtt.com/packages/burningwheel", "fmt": "Foundry" }
+  ],
+  "mechanics": [
+    { "icon": "target" },
+    { "icon": "dices" },
+    { "icon": "sparkles" },
+    { "icon": "trending-up" }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://cannibalhalflinggaming.com/2020/07/29/burning-wheel-in-depth/
+    {
+      "text": "Burning Wheel as a game is pretty amazing. It ticks a lot of boxes for me, featuring interesting crunch, drama-driven mechanics, and lots of weighty decision points.",
+      "author": "Aaron Marks, Cannibal Halfling Gaming"
+    },
+    // VERIFIED-AT: https://www.dicemonkey.net/2019/11/05/rpg-review-burning-wheel-gold-revised-part-1/
+    {
+      "text": "My favorite RPG I've never played.",
+      "author": "Mark Meredith, Dice Monkey"
+    }
+  ],
+  "ru": {
+    "tagShort": "кранчёвое фэнтези на убеждениях",
+    "tagline": "«Скажи „да“ или бросай кубики».",
+    "description": "The Burning Wheel — детальная, характер-ориентированная фэнтезийная ролевая игра, где действие движут убеждения персонажа. Вы прописываете Убеждения, Инстинкты и Черты, а мастер безжалостно бьёт по ним в каждой сцене. Проверки решаются броском пула шестигранников: каждый результат от 4 до 6 — успех против Препятствия. Жизнь по своим идеалам приносит Артху — очки судьбы, что гнут кости, а навыки и характеристики растут только от применения. И успех, и провал одинаково толкают историю вперёд.",
+    "setting": "Суровый, приземлённый средневековый мир, явно выросший из Толкина: упрямые гномы, обречённые эльфы, для которых скорбь — физическая боль, жестокие орки, скованные ненавистью, и люди, что горят ярко и коротко. Готовой карты нет — сеттинг вы «выжигаете» сами из жизненных путей, и каждая кампания вырастает из Убеждений, с которыми персонажи в неё входят.",
+    "vignette": "Убеждение вашего рыцаря гласит: «Я вытащу брата от еретиков живым». Дорогу к часовне преграждает фанатик. Мастер ставит Препятствие 3. Ваш навык Красноречия (Экспонента 3) — бросаете три d6: выпадают 2, 4 и 5. Два успеха, одного не хватает. Тратите очко Персоны и добавляете кость от своего горя — выпадает 5. Три успеха. Let It Ride: дверь остаётся открытой всю сцену.",
+    "prep": "~30 мин",
+    "mechanics": [
+      { "title": "Убеждения, Инстинкты и Черты", "text": "У каждого персонажа три Убеждения, три Инстинкта и горсть Черт. Это двигатель игры: мастер целит сцены прямо в них, а жизнь по ним или их нарушение приносит награду." },
+      { "title": "Пулы из d6", "text": "Бросаете пул шестигранников по Экспоненте навыка или характеристики. Каждый результат 4, 5 или 6 — успех; наберите не меньше числа-Препятствия мастера, и проверка пройдена." },
+      { "title": "Артха", "text": "Отыгрыш Убеждений, Инстинктов и Черт приносит Артху — очки Судьбы, Персоны и Деяний. Тратьте их, чтобы добавить кости, раскрыть шестёрки или перебросить в решающий момент." },
+      { "title": "Let It Ride и рост", "text": "Один бросок решает всю ситуацию — переигрывать нельзя, пока не изменится фикшн. Навыки и характеристики растут только от проверок: развитие идёт от дел, а не от очков опыта." }
+    ],
+    "gallery": [
+      { "cap": "Основная книга правил Gold Revised" },
+      { "cap": "Codex — продвинутые правила и дополнения" },
+      { "cap": "Сборник дополнений The Burning Wheel Anthology" }
+    ],
+    "resources": [
+      { "name": "Официальный сайт" },
+      { "name": "Купить Gold Revised (основная книга)" },
+      { "name": "Комьюнити-система для Foundry VTT" }
+    ],
+    "quotes": [
+      { "text": "Burning Wheel как игра — просто потрясающая. Она отмечает для меня кучу галочек: интересный кранч, механики на драме и множество весомых решений." },
+      { "text": "Моя любимая ролевая игра, в которую я никогда не играл." }
+    ]
+  },
+  "en": {
+    "tagShort": "crunchy belief-driven fantasy",
+    "tagline": "\"Say yes, or roll the dice.\"",
+    "description": "The Burning Wheel is a crunchy, character-driven fantasy RPG where play is powered by what your character believes. You write Beliefs, Instincts and Traits, and the GM relentlessly tests them. Actions resolve by rolling pools of d6s, counting every 4, 5 or 6 as a success against an Obstacle. Living your convictions earns Artha, the fate points that bend the dice, while skills and stats advance only through use — success and failure alike push the story forward.",
+    "setting": "A gritty, grounded medieval world clearly descended from Tolkien: stubborn dwarves, doomed elves who feel grief as physical pain, brutal orcs bound by hatred, and humans who burn bright and short. Burning Wheel ships no fixed map — you burn your own setting from lifepaths, and every campaign grows from the Beliefs the characters carry into it.",
+    "vignette": "Your knight's Belief reads: 'I will drag my brother back from the heretics, alive.' A zealot bars the chapel door. The GM sets the Obstacle at 3. Your Persuasion is Exponent 3, so you roll three d6 — a 2, a 4 and a 5: two successes, one short. You spend a Persona point to add a die from your grief, and it lands on 5. Three successes. Let It Ride: the door stays open all scene.",
+    "prep": "~30 min",
+    "mechanics": [
+      { "title": "Beliefs, Instincts & Traits", "text": "Each character carries three Beliefs, three Instincts and a handful of Traits. They are the engine of play: the GM aims scenes straight at them, and living or breaking them earns reward." },
+      { "title": "d6 Dice Pools", "text": "Roll a pool of six-siders equal to your skill or stat Exponent. Every result of 4, 5 or 6 counts as a success; meet or beat the GM's Obstacle number and you succeed." },
+      { "title": "Artha", "text": "Roleplaying your Beliefs, Instincts and Traits earns Artha — Fate, Persona and Deeds points. Spend them to add dice, open-end your sixes or reroll, bending fortune at the crucial moment." },
+      { "title": "Let It Ride & Advancement", "text": "One roll settles a whole situation — no retrying until the fiction changes. Skills and stats improve only by being tested, so growth comes from doing, never from experience points." }
+    ],
+    "gallery": [
+      { "cap": "The Gold Revised core rulebook" },
+      { "cap": "The Codex — advanced rules and expansions" },
+      { "cap": "The Burning Wheel Anthology supplements" }
+    ],
+    "resources": [
+      { "name": "Official website" },
+      { "name": "Buy Gold Revised (core book)" },
+      { "name": "Foundry VTT community system" }
+    ],
+    "quotes": [
+      { "text": "Burning Wheel as a game is pretty amazing. It ticks a lot of boxes for me, featuring interesting crunch, drama-driven mechanics, and lots of weighty decision points." },
+      { "text": "My favorite RPG I've never played." }
+    ]
+  }
+});
 registerSystem("cairn", {
   "groups": {
     "default": { "key": "osr", "order": 4 },
@@ -2205,6 +2622,101 @@ registerSystem("castles-and-crusades", {
     "quotes": [
       { "text": "Troll Lord's recent Castles and Crusades releases get my highest recommendation." },
       { "text": "It's a terrific collection of cleverly designed and splendidly written products useful to anyone running a D&D or OE campaign." }
+    ]
+  }
+});
+registerSystem("chronicles-of-darkness", {
+  "groups": {
+    "default": { "key": "narrative", "order": 63 },
+    "family": { "key": "standalone", "order": 66 },
+    "genre": { "key": "horror", "order": 20 }
+  },
+  "name": "Chronicles of Darkness",
+  "publisher": "Onyx Path Publishing",
+  "dice": "d10 pool",
+  "players": "3–6",
+  "complexity": 3,
+  "free": false,
+  "edition": "2nd Edition",
+  "foundryStatus": "Community",
+  "heroImage": "https://theonyxpath.com/wp-content/uploads/2015/12/CofD-Front-Screen-Res-1.jpg",
+  "playstyleTags": ["horror", "mystery", "narrative"],
+  "settingTags": ["modern", "urban-fantasy"],
+  "gallery": [
+    { "src": "https://theonyxpath.com/wp-content/uploads/2013/04/113340-2.jpg" },
+    { "src": "https://theonyxpath.com/wp-content/uploads/2016/09/Gaydos_HurtLocker-Cover-1.jpg" },
+    { "src": "https://image.nobleknight.com/i/jpg1500/iprop-cd-de-pe.jpg" }
+  ],
+  "resources": [
+    { "type": "link", "url": "https://theonyxpath.com/category/worlds/chroniclesofdarkness/", "fmt": "Web" },
+    { "type": "rules", "url": "https://www.drivethrurpg.com/en/product/168428/chronicles-of-darkness", "fmt": "PDF / Print" },
+    { "type": "link", "url": "https://foundryvtt.com/packages/mta", "fmt": "Foundry" }
+  ],
+  "mechanics": [
+    { "icon": "dices" },
+    { "icon": "activity" },
+    { "icon": "heart-crack" },
+    { "icon": "cog" }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://thetabletopalmanac.wordpress.com/2019/06/26/rpg-reviews-chronicles-of-darkness/
+    {
+      "text": "There are a number of great horror roleplaying games, and the Chronicles of Darkness is among them.",
+      "author": "Simon Kaye, The Tabletop Almanac"
+    }
+  ],
+  "ru": {
+    "tagShort": "Обычные люди против сверхъестественного: современный хоррор на пулах d10",
+    "tagline": "«Вы заглянули за занавес. Теперь что-то смотрит на вас в ответ».",
+    "description": "Chronicles of Darkness — базовая книга правил второй редакции «нового Мира Тьмы» от Onyx Path. Это отдельная линейка, а не классический Vampire: The Masquerade: у неё свой сеттинг и своя система Storytelling. Вы играете обычных смертных, которые наткнулись на то, чего не должно существовать. Пулы d10 решают расследования, социальные интриги и жестокие схватки, а Состояния, Биты и Целостность превращают страх и провалы в топливо для истории. В книгу включена «Хроника Бога-Машины» — готовый каркас техногностической кампании.",
+    "setting": "Наш собственный мир в тёмном зеркале: те же города, те же новости, но под половицами что-то гниёт. Призраки, криптиды, городские легенды и нечто похуже реальны, и никто не придёт это объяснить. В отличие от классического Мира Тьмы здесь нет большого метасюжета и грядущего апокалипсиса — ужас локален, личен и необъясним. За частью происходящего вращается Бог-Машина: огромный непостижимый механизм, чьи ангелы и скрытая Инфраструктура перекраивают реальность ради целей, которые человеку не прочесть.",
+    "vignette": "Дверь в подвал заварили не просто так. За ней, в бывшей котельной, беззвучно вращаются шестерни размером с автомобиль, и ваш пропавший брат вплетён в них проводами — и улыбается. Рассказчик объявляет переломный момент. Вы бросаете Решительность + Самообладание — четыре куба, минус один за увиденное: 2, 5, 7. Ни одной восьмёрки. Целостность падает до 6, вы получаете Состояние «Потрясён» и отмечаете Бит, пока руки начинают дрожать.",
+    "prep": "~60 мин",
+    "mechanics": [
+      { "title": "Пулы Атрибут + Навык", "text": "Сложите Атрибут и Навык и бросьте столько d10. Каждая 8 и выше — успех, десятки перебрасываются, а пять и более успехов дают исключительный успех." },
+      { "title": "Состояния и Помехи", "text": "Состояния вроде «Виновен», «Потрясён» или «Вдохновлён» фиксируют, как история отметила героя, и приносят Бит при разрешении. Помехи (Tilts) — их краткие боевые родственники: «Сбит с ног», «Ослеплён»." },
+      { "title": "Биты и Опыт", "text": "Биты дают за исполнение Стремлений, разрешение Состояний и превращение провала в драматический провал. Пять Битов становятся одним очком Опыта, так что неприятности и невезение напрямую двигают развитие персонажа." },
+      { "title": "Целостность и Бог-Машина", "text": "Целостность измеряет психическую устойчивость смертного. Насилие, травмы и встречи со сверхъестественным вызывают переломные моменты, способные её подточить. «Хроника Бога-Машины» даёт ангелов, Инфраструктуру и двадцать сюжетных завязок." }
+    ],
+    "gallery": [
+      { "cap": "Обложка The God-Machine Chronicle — кампании, вошедшей в эту книгу правил" },
+      { "cap": "Иллюстрация с обложки Hurt Locker, дополнения о насилии и травмах" },
+      { "cap": "Dark Eras (Prestige Edition) — Chronicles of Darkness в разных эпохах" }
+    ],
+    "resources": [
+      { "name": "Chronicles of Darkness на сайте Onyx Path" },
+      { "name": "Купить на DriveThruRPG" },
+      { "name": "Фанатская система для Foundry VTT (Chronicles of Darkness 2e)" }
+    ],
+    "quotes": [
+      { "text": "Есть немало отличных хоррор-ролёвок, и Chronicles of Darkness — одна из них." }
+    ]
+  },
+  "en": {
+    "tagShort": "Ordinary people against the supernatural in a d10-pool modern horror game",
+    "tagline": "\"You looked behind the curtain. Now something is looking back.\"",
+    "description": "Chronicles of Darkness is the second-edition core rulebook of Onyx Path's \"new World of Darkness\" — a separate game line from classic Vampire: The Masquerade, with its own setting and its own Storytelling System. You play ordinary mortals who stumble onto something that should not exist. Pools of d10s resolve investigation, social manoeuvring and brutal violence, while Conditions, Beats and Integrity turn fear and failure into story fuel. The book also includes The God-Machine Chronicle, a full techgnostic campaign framework.",
+    "setting": "Our own world, seen through a dark mirror: the same cities, the same headlines, but with something rotten under the floorboards. Ghosts, cryptids, urban legends and worse are real, and nobody is coming to explain them. Unlike the classic World of Darkness there is no grand metaplot or looming apocalypse — horror is local, personal and unexplained. Behind some of it turns the God-Machine, a vast, unknowable mechanism whose angels and hidden Infrastructure rearrange reality for purposes no human can read.",
+    "vignette": "The basement door was welded shut for a reason. Behind it, gears the size of cars turn silently inside what should be a boiler room, and your missing brother is wired into them, smiling. The Storyteller calls it a breaking point. You roll Resolve + Composure — four dice, minus one for what you've seen: 2, 5, 7. No 8s. Your Integrity drops to 6, you take the Shaken Condition, and you mark a Beat as your hands begin to tremble.",
+    "prep": "~60 min",
+    "mechanics": [
+      { "title": "Attribute + Skill dice pools", "text": "Add an Attribute and a Skill, roll that many d10s. Every 8 or higher is a success, 10s are rolled again, and five or more successes make an exceptional success." },
+      { "title": "Conditions and Tilts", "text": "Conditions such as Guilty, Shaken or Inspired record how the story has marked a character and pay out a Beat when resolved. Tilts are their short-lived combat cousins, like Knocked Down or Blinded." },
+      { "title": "Beats and Experiences", "text": "Beats are earned for fulfilling Aspirations, resolving Conditions and turning a failed roll into a dramatic failure. Five Beats become one Experience, so trouble and bad luck directly drive character growth." },
+      { "title": "Integrity and the God-Machine", "text": "Integrity measures a mortal's psychological stability. Violence, trauma and brushes with the supernatural trigger breaking points that can erode it. The included God-Machine Chronicle supplies angels, Infrastructure and twenty story seeds." }
+    ],
+    "gallery": [
+      { "cap": "Cover of The God-Machine Chronicle, the campaign folded into this rulebook" },
+      { "cap": "Cover art from Hurt Locker, the line's violence and trauma supplement" },
+      { "cap": "Dark Eras (Prestige Edition) — Chronicles of Darkness across history" }
+    ],
+    "resources": [
+      { "name": "Chronicles of Darkness at Onyx Path" },
+      { "name": "Buy on DriveThruRPG" },
+      { "name": "Community Foundry VTT system (Chronicles of Darkness 2e)" }
+    ],
+    "quotes": [
+      { "text": "There are a number of great horror roleplaying games, and the Chronicles of Darkness is among them." }
     ]
   }
 });
@@ -3143,10 +3655,15 @@ registerSystem("daggerheart", {
     }
   ],
   "quotes": [
-    // VERIFIED-AT: 2026-05-07 — https://www.enworld.org/threads/daggerheart-review-the-duality-of-robust-combat-mechanics-and-freeform-narrative.713471/
+    // VERIFIED-AT: https://www.wargamer.com/daggerheart/review
     {
-      "text": "The narrative system is built around a more freeform collaboration between players and GM, where the story grows without much impediment from rules.",
-      "author": "Christian Hoffer, EN World"
+      "text": "Daggerheart is an approachable, interesting, and downright delightful tabletop RPG. Its rules are familiar yet polished, with plenty for TTRPG veterans and newcomers to get excited about.",
+      "author": "Mollie Russell, Wargamer"
+    },
+    // VERIFIED-AT: https://www.belloflostsouls.net/2025/05/critical-roles-daggerheart-a-crunchier-approach-to-fiction-first-fantasy.html
+    {
+      "text": "But it also knows exactly what it wants to be: a game about heroic characters that have meaningful stories that feel satisfying.",
+      "author": "J.R. Zambrano, Bell of Lost Souls"
     }
   ],
   "ru": {
@@ -3204,7 +3721,8 @@ registerSystem("daggerheart", {
     ]
   ,
     "quotes": [
-      { "text": "Нарративная система построена вокруг свободной коллаборации игроков и ГМ-а, где история растёт почти без помех со стороны правил." }
+      { "text": "Daggerheart — доступная, интересная и попросту восхитительная настольная ролевая игра. Её правила знакомы, но отшлифованы, и в них хватает поводов для восторга и у ветеранов НРИ, и у новичков." },
+      { "text": "Но она точно знает, чем хочет быть: игрой о героических персонажах со значимыми историями, которые приносят удовлетворение." }
     ]
   },
   "en": {
@@ -3259,6 +3777,10 @@ registerSystem("daggerheart", {
       {
         "name": "Quickstart adventure"
       }
+    ],
+    "quotes": [
+      { "text": "Daggerheart is an approachable, interesting, and downright delightful tabletop RPG. Its rules are familiar yet polished, with plenty for TTRPG veterans and newcomers to get excited about." },
+      { "text": "But it also knows exactly what it wants to be: a game about heroic characters that have meaningful stories that feel satisfying." }
     ]
   }
 });
@@ -3302,10 +3824,10 @@ registerSystem("deadlands", {
       "text": "The Savage World rules are fast and entertaining with a focus on replicating cinematic Wild West action pieces.",
       "author": "C.T. Phipps, Grimdark Magazine"
     },
-    // VERIFIED-AT: https://www.d20radio.com/main/rpg-view-copy-deadlands-the-weird-west/
+    // VERIFIED-AT: https://thegaminggang.com/our_reviews/deadlands-the-weird-west-box-set-reviewed
     {
-      "text": "SWAdE feels designed for this setting and this setting feels like it inspired SWAdE, it's that good of a combination.",
-      "author": "Egg Embry, d20 Radio"
+      "text": "I've always been a fan of the setting and I think the core book is chock full of wild and weird old western goodness, although you'll need a copy of the core SWADE book too.",
+      "author": "Jeff McAleer, The Gaming Gang"
     }
   ],
   "ru": {
@@ -3334,7 +3856,7 @@ registerSystem("deadlands", {
     ],
     "quotes": [
       { "text": "Правила Savage Worlds быстрые и увлекательные, с упором на воспроизведение кинематографичных экшен-сцен Дикого Запада." },
-      { "text": "SWAdE словно создан для этого сеттинга, а сеттинг словно вдохновил SWAdE — настолько хорошо они сочетаются." }
+      { "text": "Мне всегда нравился этот сеттинг, и, по-моему, основная книга доверху набита диким и странным духом старого Запада — правда, вам понадобится ещё и базовая книга SWADE." }
     ]
   },
   "en": {
@@ -3363,7 +3885,7 @@ registerSystem("deadlands", {
     ],
     "quotes": [
       { "text": "The Savage World rules are fast and entertaining with a focus on replicating cinematic Wild West action pieces." },
-      { "text": "SWAdE feels designed for this setting and this setting feels like it inspired SWAdE, it's that good of a combination." }
+      { "text": "I've always been a fan of the setting and I think the core book is chock full of wild and weird old western goodness, although you'll need a copy of the core SWADE book too." }
     ]
   }
 });
@@ -3772,15 +4294,16 @@ registerSystem("dnd-5e", {
     }
   ],
   "quotes": [
-    // VERIFIED-AT: https://www.rpg.net/reviews/archive/16/16138.phtml
-    {
-      "text": "D&D 5e is an extremely well put together game. It makes use of some very elegant and simple mechanics, and best of all, it is recognisably 'Dungeons and Dragons'.",
-      "author": "M. T. Black, RPGnet"
-    },
+
     // VERIFIED-AT: https://www.rockpapershotgun.com/cardboard-children-dungeons-dragons-fifth-edition
     {
       "text": "This edition of D&D is an arm round your shoulder, a word in your ear, a warm invitation to the world of role-playing. The rules, covered in the Player's Handbook, are dealt with in a handful of pages.",
       "author": "Robert Florence, Rock Paper Shotgun"
+    },
+    // VERIFIED-AT: https://comicbook.com/gaming/news/dungeons-dragons-2024-players-handbook-review/
+    {
+      "text": "The entry point for the game is better than it was 10 years ago and the rules are easier to understand and improved in countless small ways.",
+      "author": "Christian Hoffer, ComicBook.com"
     }
   ],
   "ru": {
@@ -3831,8 +4354,9 @@ registerSystem("dnd-5e", {
       }
     ],
     "quotes": [
-      { "text": "D&D 5e — невероятно хорошо собранная игра. Она использует элегантные и простые механики, и, что важнее всего, она безусловно похожа на «Подземелья и Драконов»." },
-      { "text": "Это издание D&D — дружеское пожатие плеч, слово на ухо, тёплое приглашение в мир ролевых игр. Правила умещаются в десятках страниц." }
+
+      { "text": "Это издание D&D — дружеское пожатие плеч, слово на ухо, тёплое приглашение в мир ролевых игр. Правила умещаются в десятках страниц." },
+      { "text": "Порог входа в игру стал ниже, чем десять лет назад, а правила — понятнее и лучше во множестве мелочей." }
     ]
   },
   "en": {
@@ -3883,8 +4407,9 @@ registerSystem("dnd-5e", {
       }
     ],
     "quotes": [
-      { "text": "D&D 5e is an extremely well put together game. It makes use of some very elegant and simple mechanics, and best of all, it is recognisably 'Dungeons and Dragons'." },
-      { "text": "This edition of D&D is an arm round your shoulder, a word in your ear, a warm invitation to the world of role-playing. The rules are dealt with in a handful of pages." }
+
+      { "text": "This edition of D&D is an arm round your shoulder, a word in your ear, a warm invitation to the world of role-playing. The rules are dealt with in a handful of pages." },
+      { "text": "The entry point for the game is better than it was 10 years ago and the rules are easier to understand and improved in countless small ways." }
     ]
   }
 });
@@ -4398,6 +4923,210 @@ registerSystem("draw-steel", {
     ]
   }
 });
+registerSystem("dread", {
+  "groups": {
+    "default": { "key": "narrative", "order": 56 },
+    "family": { "key": "standalone", "order": 60 },
+    "genre": { "key": "horror", "order": 19 }
+  },
+  "name": "Dread",
+  "publisher": "The Impossible Dream",
+  "dice": "Jenga tower (diceless)",
+  "players": "3–6",
+  "complexity": 1,
+  "free": false,
+  "edition": null,
+  "foundryStatus": "None",
+  "heroImage": "https://image.nobleknight.com/i/jpg1500/iprtid1.jpg",
+  "playstyleTags": ["horror", "narrative", "survival"],
+  "settingTags": ["modern", "weird"],
+  "gallery": [
+    { "src": "https://wp.tiltingatwindmills.net/wp-content/uploads/2014/10/playing-dread-at-Gencon.png" },
+    { "src": "https://www.tiltingatwindmills.net/wp-content/uploads/2014/10/golden-ennie-2006.png" },
+    { "src": "https://wp.tiltingatwindmills.net/wp-content/uploads/2014/10/dread_standard_front_cover2.png" }
+  ],
+  "resources": [
+    { "type": "link", "url": "https://www.tiltingatwindmills.net/games/", "fmt": "Web" },
+    { "type": "rules", "url": "https://www.drivethrurpg.com/en/product/83854/dread", "fmt": "PDF / Print" },
+    { "type": "rules", "url": "http://eakett.ca/dread_srd/", "fmt": "SRD" }
+  ],
+  "mechanics": [
+    { "icon": "blocks" },
+    { "icon": "grab" },
+    { "icon": "clipboard-list" },
+    { "icon": "skull" }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.dreadcentral.com/news/287010/dread-review-towering-fun-for-horror-fans/
+    {
+      "text": "The core concept of the game is simple, and the execution is a lot of fun.",
+      "author": "Rachel Beck, Dread Central"
+    },
+    // VERIFIED-AT: https://www.monsterlibrarian.com/ReadingBites/?p=1903
+    {
+      "text": "It's ease of play and adaptability make it a must have.",
+      "author": "Michele Lee, The Monster Librarian"
+    }
+  ],
+  "ru": {
+    "tagShort": "Бескубиковый хоррор: судьбу решает башня из Дженги",
+    "tagline": "«Тянешь блок или отказываешься — но башня рано или поздно рухнет».",
+    "description": "Dread — бескубиковый хоррор Эпидайи Равачола и Натаниэля Бармора на один вечер. Здесь нет ни кубиков, ни характеристик: единственный генератор случайности — башня из деревянных брусков. Когда персонаж рискует, вы вытягиваете блок. Откажетесь — действие проваливается; вытянете — получится, пока держатся нервы и башня. Опрокинете её — и персонаж выбывает, обычно погибая. Игра рассчитана на один напряжённый хоррор-вечер.",
+    "setting": "У Dread нет фиксированного сеттинга. Ведущий сам выбирает ужас — дом с привидениями, брошенный космический корабль, летний лагерь со слэшером, культ в лесу — и пишет под него сценарий. Готовые приключения ведут от оборотней в полнолуние до обречённого звездолёта и маскарада, обернувшегося кошмаром. Где бы ни разворачивалась история, обещание одно: обычные люди, нарастающий ужас и ночь, которую большинство из них не переживёт.",
+    "vignette": "Тварь уже в коридоре, и вы решаете рвануть к двери. «Тяни», — говорит Ведущий. Вы осторожно высвобождаете брусок — башня вздрагивает, но стоит, и вы проскакиваете. Позже, загнанный в угол, вы тянетесь заложить дверь: теперь три вытягивания. На втором вся башня с грохотом рассыпается по столу. Тишина. Ваш персонаж мёртв, и вы описываете его последний страшный миг, прежде чем выйти из игры.",
+    "prep": "~30 мин",
+    "mechanics": [
+      { "title": "Башня вместо кубиков", "text": "Ни кубиков, ни характеристик — единственный генератор случайности — башня из деревянных брусков. С каждым вытянутым блоком она становится всё неустойчивее: напряжение буквально видно и слышно за столом." },
+      { "title": "Тянешь, чтобы преуспеть", "text": "Чтобы сделать что-то рискованное, персонаж вытягивает бруски из башни. Получилось — действие удаётся; отказаться от вытягивания можно всегда, но тогда действие просто проваливается, и история оборачивается против вас." },
+      { "title": "Анкета вместо листа", "text": "Вместо листа персонажа каждый игрок отвечает на личный список вопросов, составленный Ведущим. Ответы определяют, кто вы, чего боитесь, и незаметно закладывают будущие ужасы." },
+      { "title": "Падение — это смерть", "text": "Опрокинете башню — персонаж выбывает из игры, почти всегда погибая. Любой может и намеренно её обрушить ради гарантированного успеха, купив триумф ценой собственной жизни." }
+    ],
+    "gallery": [
+      { "cap": "Партия в Dread на Gen Con — башня заменяет кубики" },
+      { "cap": "Золотая премия ENnie 2006 за новаторство" },
+      { "cap": "Лаконичная обложка Dread" }
+    ],
+    "resources": [
+      { "name": "Официальная страница — The Impossible Dream" },
+      { "name": "Купить на DriveThruRPG" },
+      { "name": "Неофициальный SRD по Dread" }
+    ],
+    "quotes": [
+      { "text": "Основная идея игры проста, а её воплощение — море удовольствия." },
+      { "text": "Простота освоения и гибкость делают её обязательной к покупке." }
+    ]
+  },
+  "en": {
+    "tagShort": "Diceless one-shot horror resolved by a Jenga tower",
+    "tagline": "\"Pull a block, or refuse — but the tower always falls in the end.\"",
+    "description": "Dread is a diceless one-shot horror RPG by Epidiah Ravachol and Nathaniel Barmore. There are no dice and no stats: a wooden block tower is the only randomizer. When your character attempts something risky, you pull a block. Refuse and you fail; pull and you succeed — until your nerve or the tower gives out. Knock it over and your character is gone, usually dead. Built for a single tense evening of horror.",
+    "setting": "Dread has no fixed setting. The Host chooses the horror — a haunted house, a derelict spaceship, a slasher's summer camp, a cult in the woods — and writes a scenario to fit. The sample adventures range from werewolves under a full moon to a doomed starship and a masquerade gone wrong. Wherever it's set, the promise is the same: ordinary people, mounting dread, and a night most of them will not survive.",
+    "vignette": "The thing is in the hallway and you decide to run for the door. \"Pull,\" says the Host. You ease a block free — the tower shivers but holds, and you make it through. Later, cornered, you reach to bar the door: three pulls this time. On the second, the whole tower clatters across the table. Silence. Your character is dead, and you narrate their last terrible moment before leaving the game.",
+    "prep": "~30 min",
+    "mechanics": [
+      { "title": "The tower, not dice", "text": "There are no dice or stats. A single wooden block tower is the game's only randomizer, and it grows more unstable with every pull — tension you can literally see and hear at the table." },
+      { "title": "Pull to succeed", "text": "To do something risky your character makes pulls from the tower. Succeed and the action works; you can always refuse a pull, but then the action simply fails and the story turns against you." },
+      { "title": "The Questionnaire", "text": "Instead of a character sheet, each player answers a personalised list of questions written by the Host. The answers define who you are, what you fear, and quietly seed the horrors to come." },
+      { "title": "Collapse means death", "text": "Knock the tower over and your character is removed from play — almost always killed. Anyone can also topple it deliberately for a guaranteed success, buying triumph at the cost of their life." }
+    ],
+    "gallery": [
+      { "cap": "Playing Dread at Gen Con — the tower replaces the dice" },
+      { "cap": "Gold ENnie 2006 for Innovation" },
+      { "cap": "The stark Dread cover" }
+    ],
+    "resources": [
+      { "name": "Official page — The Impossible Dream" },
+      { "name": "Buy on DriveThruRPG" },
+      { "name": "Unofficial Dread SRD" }
+    ],
+    "quotes": [
+      { "text": "The core concept of the game is simple, and the execution is a lot of fun." },
+      { "text": "It's ease of play and adaptability make it a must have." }
+    ]
+  }
+});
+registerSystem("dresden-files-accelerated", {
+  "groups": {
+    "default": { "key": "narrative", "order": 57 },
+    "family": { "key": "standalone", "order": 62 },
+    "genre": { "key": "noir", "order": 35 }
+  },
+  "name": "Dresden Files Accelerated",
+  "publisher": "Evil Hat Productions",
+  "dice": "4dF + Approach (Fate Accelerated)",
+  "players": "3–6",
+  "complexity": 3,
+  "free": false,
+  "edition": null,
+  "foundryStatus": "Official",
+  "heroImage": "https://evilhat.com/wp-content/uploads/2021/10/products-DFA-Cover-3d.png",
+  "playstyleTags": ["narrative", "mystery", "action"],
+  "settingTags": ["urban-fantasy", "modern"],
+  "gallery": [
+    { "src": "https://evilhat.com/wp-content/uploads/2017/02/Alphas-Take-Advantage-FINAL.jpg" },
+    { "src": "https://evilhat.com/wp-content/uploads/2017/02/Butters-Attack-FINAL.jpg" },
+    { "src": "https://evilhat.com/wp-content/uploads/2017/02/page-232-necromantic-surges-150dpi.jpg" }
+  ],
+  "resources": [
+    { "type": "link", "url": "https://evilhat.com/product/dresden-files-accelerated/", "fmt": "Web" },
+    { "type": "rules", "url": "https://www.drivethrurpg.com/en/product/213844/dresden-files-accelerated", "fmt": "PDF" },
+    { "type": "link", "url": "https://foundryvtt.com/packages/fate-core-official", "fmt": "Foundry" }
+  ],
+  "mechanics": [
+    { "icon": "dices" },
+    { "icon": "sparkles" },
+    { "icon": "crown" },
+    { "icon": "scale" }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://whatdoiknowjr.com/2017/05/15/what-do-i-know-about-reviews-dresden-files-accelerated-fate/
+    {
+      "text": "Dresden Accelerated just feels like it sings on every level where it engages.",
+      "author": "Jared Rascher, What Do I Know?"
+    },
+    // VERIFIED-AT: https://cannibalhalflinggaming.com/2018/03/19/dresden-files-accelerated-review/
+    {
+      "text": "In conclusion, I think that Dresden Files Accelerated is an upgrade over the original DF RPG.",
+      "author": "Aki, Cannibal Halfling Gaming"
+    }
+  ],
+  "ru": {
+    "tagShort": "Вселенная Дрездена на Fate Accelerated",
+    "tagline": "«Чародеи, вампиры и неоплаченные долги на улицах города, который не задаёт вопросов».",
+    "description": "Dresden Files Accelerated — быстрая ролевая игра от Evil Hat по «Досье Дрездена» Джима Батчера на движке Fate Accelerated. Она наследует более тяжёлой Dresden Files RPG (Your Story / Our World), но играется быстрее: бросьте четыре кубика Fate, прибавьте один из шести Подходов и тратьте жетоны судьбы на Аспекты. Мантии — чародей, вампир Белой Коллегии, Рыцарь Креста, осведомлённый смертный — собирают Трюки и Состояния в готовые роли, а Масштаб позволяет полицейскому и владыке фейри играть за одним столом.",
+    "setting": "Современный мир, за фасадом которого прячется сверхъестественное. Чародеи Белого Совета следят за Законами Магии, вампирские Коллегии враждуют, сидхе торгуют услугами, а фоморы занимают опустевшие ниши. Группа выбирает город, населяет его фракциями и их лицами и играет за тех — смертных и не только, — кто стоит между ними.",
+    "vignette": "Гуль вышибает дверь морга. Вашему чародею не до тонкостей: вы атакуете Силой, бросаете 4dF и получаете +1, прибавляете Силу +3 и за жетон судьбы призываете аспект «Короткий запал, длинный посох» — ещё +2. Итого 6 против 2 у гуля. Удар впечатывает тварь в стену, но за такую мощь вы отмечаете ячейку состояния «Истощён», а в сцене появляется аспект «Сработала пожарная тревога».",
+    "prep": "~20 мин",
+    "mechanics": [
+      { "title": "4dF + Подход", "text": "Бросьте четыре кубика Fate и прибавьте один из шести Подходов: Блеск, Сосредоточенность, Сила, Хитрость, Скорость или Интеллект. Подход описывает, как вы действуете, а не что умеете, и задаёт характер результата." },
+      { "title": "Аспекты и жетоны судьбы", "text": "Короткие фразы описывают героев, сцены и фракции. Потратьте жетон, чтобы призвать аспект и получить +2 или переброс; согласитесь на осложнение от аспекта — и жетон вернётся к вам." },
+      { "title": "Мантии, Состояния и Трюки", "text": "Мантия — ваша роль в мире Дрездена: набор уникальных Трюков и Состояний. Отмеченные ячейки вроде «Истощён», «В долгу» или «Голоден» питают способности и определяют цену восстановления." },
+      { "title": "Масштаб", "text": "Существа делятся на ступени — от Обыденного через Сверхъестественное и Потустороннее до Божественного. Действуя против того, кто стоит ниже, вы получаете бонус к броску или дополнительные сдвиги." }
+    ],
+    "gallery": [
+      { "cap": "Игроки бросают кубики Fate за столом — иллюстрация из книги." },
+      { "cap": "Уолдо Баттерс верхом на Сью, зомби-тираннозавре — иллюстрация из книги." },
+      { "cap": "Чародеи против волны призраков — иллюстрация из книги." }
+    ],
+    "resources": [
+      { "name": "Evil Hat — официальная страница игры" },
+      { "name": "Dresden Files Accelerated на DriveThruRPG" },
+      { "name": "Fate Core Official — система Fate от Evil Hat для Foundry VTT" }
+    ],
+    "quotes": [
+      { "text": "Dresden Accelerated будто поёт на каждом уровне, за который берётся." },
+      { "text": "В итоге я считаю, что Dresden Files Accelerated — шаг вперёд по сравнению с оригинальной DF RPG." }
+    ]
+  },
+  "en": {
+    "tagShort": "Dresdenverse on Fate Accelerated",
+    "tagline": "\"Wizards, vampires and bad debts on the streets of a city that never asks questions.\"",
+    "description": "Dresden Files Accelerated is Evil Hat's pick-up-and-play RPG set in Jim Butcher's Dresdenverse, built on Fate Accelerated. It follows the heavier Dresden Files RPG (Your Story / Our World) with a faster engine: roll four Fate dice, add one of six Approaches, and spend Fate points on Aspects. Mantles — wizard, White Court vampire, Knight of the Cross, clued-in mortal — bundle Stunts and Conditions into ready-made roles, while Scale lets a cop and a fae lord share one table.",
+    "setting": "The modern world, with the supernatural hiding just behind it. Wizards of the White Council enforce the Laws of Magic, vampire Courts feud, the Sidhe trade in favors, and the Fomor move into the gaps. Your group picks a city, fills it with factions and their faces, and plays the people — mortal or otherwise — who stand between them.",
+    "vignette": "A ghoul crashes through the morgue door. Your wizard has no time for subtlety: you attack with Force, roll 4dF for +1, add Force +3, and invoke your aspect Short Fuse, Long Staff with a Fate point for +2 — a total of 6 against the ghoul's 2. The blast pins it to the wall, but to push the spell that hard you mark a box on your Exhausted condition, and the fire alarm is now a scene aspect.",
+    "prep": "~20 min",
+    "mechanics": [
+      { "title": "4dF + Approach", "text": "Roll four Fate dice and add one of six Approaches — Flair, Focus, Force, Guile, Haste or Intellect. The Approach describes how you act, not what you know, and colors the outcome." },
+      { "title": "Aspects & Fate Points", "text": "Short phrases describe characters, scenes and factions. Spend a Fate point to invoke one for +2 or a reroll; accept a compel that complicates your life and you earn a point back." },
+      { "title": "Mantles, Conditions & Stunts", "text": "A Mantle is your role in the Dresdenverse: a package of unique Stunts and Conditions. Checking off boxes like Exhausted, Indebted or Hungry fuels your powers and sets the price of recovery." },
+      { "title": "Scale", "text": "Beings are ranked from Mundane through Supernatural and Otherworldly up to Godlike. Acting against someone lower on the ladder grants a bonus to the roll or extra shifts, so power gaps matter." }
+    ],
+    "gallery": [
+      { "cap": "Players throwing Fate dice at the table — interior art from the book." },
+      { "cap": "Waldo Butters rides Sue, the zombie T. rex — interior art." },
+      { "cap": "Wizards face a tide of ghosts — interior art." }
+    ],
+    "resources": [
+      { "name": "Evil Hat — official product page" },
+      { "name": "Dresden Files Accelerated on DriveThruRPG" },
+      { "name": "Fate Core Official — Evil Hat's Fate system for Foundry VTT" }
+    ],
+    "quotes": [
+      { "text": "Dresden Accelerated just feels like it sings on every level where it engages." },
+      { "text": "In conclusion, I think that Dresden Files Accelerated is an upgrade over the original DF RPG." }
+    ]
+  }
+});
 registerSystem("dune-imperium", {
   "groups": {
     "default": { "key": "tactical", "order": 35 },
@@ -4803,15 +5532,16 @@ registerSystem("dungeon-world", {
     }
   ],
   "quotes": [
-    // VERIFIED-AT: https://www.rpg.net/reviews/archive/15/15793.phtml
-    {
-      "text": "Dungeon World is a strong game if you buy into its assumptions, values, and style. It certainly is working for me.",
-      "author": "Civil Savage, RPGnet"
-    },
+
     // VERIFIED-AT: https://dmtales.com/2023/05/23/dungeon-world-a-powered-by-the-apocalypse-review/
     {
       "text": "Dungeon World is designed so well for theater of mind combat I feel it would be weird to try to use minis with the game.",
       "author": "Calvin, DM Tales"
+    },
+    // VERIFIED-AT: https://tumbleweird.org/game-review-dw/
+    {
+      "text": "Dungeon World is almost all conversational; there’s rarely a map of any significant value, and there’s no reason to have a battle map and miniatures.",
+      "author": "Brendan Quinn, Tumbleweird"
     }
   ],
   "ru": {
@@ -4862,8 +5592,9 @@ registerSystem("dungeon-world", {
       }
     ],
     "quotes": [
-      { "text": "Dungeon World — сильная игра, если вы принимаете её допущения, ценности и стиль. Она определённо работает для меня." },
-      { "text": "Dungeon World настолько хорошо подходит для боя в театре разума, что было бы странно пытаться использовать миниатюры." }
+
+      { "text": "Dungeon World настолько хорошо подходит для боя в театре разума, что было бы странно пытаться использовать миниатюры." },
+      { "text": "Dungeon World почти целиком строится на разговоре: карта редко имеет хоть какое-то значение, а в боевом поле и миниатюрах нет никакой нужды." }
     ]
   },
   "en": {
@@ -4914,8 +5645,9 @@ registerSystem("dungeon-world", {
       }
     ],
     "quotes": [
-      { "text": "Dungeon World is a strong game if you buy into its assumptions, values, and style. It certainly is working for me." },
-      { "text": "Dungeon World is designed so well for theater of mind combat I feel it would be weird to try to use minis with the game." }
+
+      { "text": "Dungeon World is designed so well for theater of mind combat I feel it would be weird to try to use minis with the game." },
+      { "text": "Dungeon World is almost all conversational; there’s rarely a map of any significant value, and there’s no reason to have a battle map and miniatures." }
     ]
   }
 });
@@ -4984,7 +5716,7 @@ registerSystem("eclipse-phase", {
     },
     // VERIFIED-AT: https://jonne.arjoranta.fi/2020/eclipse-phase-2-review/
     {
-      "text": "Eclipse Phase 2 successfully brings in ideas formulated fully in source books published after the first book and solves some of the problems the previous edition had.",
+      "text": "It successfully brings in ideas formulated fully in source books published after the first book and solves some of the problems the previous edition had.",
       "author": "Jonne Arjoranta"
     }
   ],
@@ -5025,7 +5757,7 @@ registerSystem("eclipse-phase", {
   ,
     "quotes": [
       { "text": "Сеттинг Eclipse Phase — именно та причина, по которой я обязательно беру каждое издание, и хотя во 2e в основном небольшие изменения, он не приедается." },
-      { "text": "Eclipse Phase 2 удачно вбирает идеи, полностью оформленные в дополнениях после первой книги, и решает часть проблем предыдущего издания." }
+      { "text": "Она удачно вбирает идеи, полностью оформленные в дополнениях после первой книги, и решает часть проблем предыдущего издания." }
     ]
   },
   "en": {
@@ -5065,7 +5797,7 @@ registerSystem("eclipse-phase", {
   ,
     "quotes": [
       { "text": "The Eclipse Phase setting has been the reason I've made sure to get a copy of every edition, and even though 2e has mostly minor changes it doesn't get old." },
-      { "text": "Eclipse Phase 2 successfully brings in ideas formulated fully in source books published after the first book and solves some of the problems the previous edition had." }
+      { "text": "It successfully brings in ideas formulated fully in source books published after the first book and solves some of the problems the previous edition had." }
     ]
   }
 });
@@ -5512,10 +6244,10 @@ registerSystem("fate", {
       "text": "I think this game is today's standard-bearer for tabletop roleplaying, and why every game that's come out since can and should be compared to it.",
       "author": "Ed, Geek Native"
     },
-    // VERIFIED-AT: https://www.rpg.net/reviews/archive/15/15882.phtml
+    // VERIFIED-AT: https://michaelduxbury.com/2014/12/22/mini-review-fate-core/
     {
-      "text": "Fate Core is an astoundingly well done product. Not only is it a well-produced book, but the system has been refined and distilled to be the best version of Fate so far.",
-      "author": "Wil Hutton, RPGnet"
+      "text": "Consistency and clarity became the design goals of the new Fate edition, and combined with not-insubstantial tweaks made to gameplay both central and peripheral, they have transformed something promising into the best RPG release of the last four years.",
+      "author": "Michael Duxbury, Roll Plus Hot"
     }
   ],
   "ru": {
@@ -5567,7 +6299,7 @@ registerSystem("fate", {
     ],
     "quotes": [
       { "text": "Я считаю эту игру сегодняшним знаменосцем настольных RPG — и почему каждая игра, вышедшая с тех пор, может и должна быть с ней сравнена." },
-      { "text": "Fate Core — потрясающе хорошо сделанный продукт. Не только отличная книга, но и система, отточенная и очищенная до лучшей версии Fate на сегодня." }
+      { "text": "Целями новой редакции Fate стали последовательность и ясность, и вместе с весьма существенными правками игрового процесса — и в ядре, и на периферии — они превратили нечто многообещающее в лучший RPG-релиз последних четырёх лет." }
     ]
   },
   "en": {
@@ -5619,7 +6351,7 @@ registerSystem("fate", {
     ],
     "quotes": [
       { "text": "I think this game is today's standard-bearer for tabletop roleplaying, and why every game that's come out since can and should be compared to it." },
-      { "text": "Fate Core is an astoundingly well done product. Not only is it a well-produced book, but the system has been refined and distilled to be the best version of Fate so far." }
+      { "text": "Consistency and clarity became the design goals of the new Fate edition, and combined with not-insubstantial tweaks made to gameplay both central and peripheral, they have transformed something promising into the best RPG release of the last four years." }
     ]
   }
 });
@@ -6263,6 +6995,101 @@ registerSystem("genesys", {
     ]
   }
 });
+registerSystem("godbound", {
+  "groups": {
+    "default": { "key": "osr", "order": 29 },
+    "family": { "key": "standalone", "order": 61 },
+    "genre": { "key": "adventure", "order": 32 }
+  },
+  "name": "Godbound",
+  "publisher": "Sine Nomine Publishing",
+  "dice": "d20",
+  "players": "2–6",
+  "complexity": 3,
+  "free": true,
+  "edition": null,
+  "foundryStatus": "Community",
+  "heroImage": "https://image.nobleknight.com/g/jpg1500/godbound.jpg",
+  "playstyleTags": ["action", "worldbuild", "combat"],
+  "settingTags": ["fantasy"],
+  "gallery": [
+    { "src": "https://image.nobleknight.com/l/jpg1500/lexicoofthro.jpg" },
+    { "src": "https://image.nobleknight.com/1/jpg1500/10blades.jpg" },
+    { "src": "https://image.nobleknight.com/2/jpg1500/2370011105765worlds.jpg" }
+  ],
+  "resources": [
+    { "type": "rules", "url": "https://www.drivethrurpg.com/en/product/185959/godbound-a-game-of-divine-heroes-free-edition", "fmt": "PDF (free)" },
+    { "type": "rules", "url": "https://www.drivethrurpg.com/en/product/185960/godbound-a-game-of-divine-heroes-deluxe-edition", "fmt": "PDF / Print" },
+    { "type": "link", "url": "https://sine-nomine-publishing.myshopify.com/collections/godbound", "fmt": "Web" }
+  ],
+  "mechanics": [
+    { "icon": "swords" },
+    { "icon": "sparkles" },
+    { "icon": "flame" },
+    { "icon": "crown" }
+  ],
+  "quotes": [
+    // VERIFIED-AT: http://daystarchronicles.blogspot.com/2016/03/review-actual-play-godbound-part-1.html
+    {
+      "text": "I genuinely love this game. I haven't been so hooked and in love with an RPG in a long while",
+      "author": "Matías N. Caruso, Daystar Chronicles"
+    }
+  ],
+  "ru": {
+    "tagShort": "OSR про полубогов",
+    "tagline": "«Присвойте орудия исчезнувшего Бога и перепишите мир».",
+    "description": "Godbound делает игроков юными богами в надломленном мире, покинутом Творцом. В основе — привычный движок OSR: бросок d20 на попадание, спасброски, Класс брони. Но поверх лежит божественный масштаб: атаки наносят фиксированный прямой урон, сметающий смертные армии, Слова Творения дают чудесные Дары, а вложенное Усилие питает чудеса. Между схватками Владычество позволяет вашим деяниям навсегда менять королевства, переписывать Факты реальности и вести за собой целые фракции.",
+    "setting": "Мир по умолчанию, Арцем, — это падшее царство угасающих чудес и зыбких законов природы, оставшееся без владыки, когда его Бог исчез, а орудия творения выскользнули на свободу. Пустоты заполняют руины империй, враждующие теократии и интригующие небожители. В этот мир вы восходите как Godbound — смертный, внезапно наделённый осколком божественной власти, вольный спасти мир, править им или сжечь его дотла.",
+    "vignette": "Отряд хобгоблинов заполоняет мост. Вы призываете Дар Меча, бросаете d20 против их вожака и попадаете — никаких костей урона, лишь неизменные 8 прямого урона вашей божественной силы, чтобы свалить его наповал. Вы вкладываете единицу Усилия, чтобы Дар горел до конца хода. Затем вы произносите своё Слово Огня: это чудо, а не готовая способность, и весь пролёт вспыхивает белым пламенем, отрезая остаток орды на дальнем берегу.",
+    "prep": "~30 мин",
+    "mechanics": [
+      { "title": "Атаки d20 и прямой урон", "text": "Бой сохраняет дух OSR: бросок d20 против Класса брони врага. Но божественные атаки наносят фиксированный прямой урон вместо костей, позволяя одному богу прорубаться сквозь смертные армии." },
+      { "title": "Слова Творения", "text": "Каждый Godbound владеет Словами — Огонь, Меч, Время, Смерть. Слова дают Дары, фирменные силы, и позволяют импровизировать чудеса, подчиняя их стихию своей воле." },
+      { "title": "Усилие", "text": "Усилие — ваш источник божественной энергии. Вы вкладываете его, чтобы поддерживать Дары, отменять провальные спасброски и творить чудеса, а затем восстанавливаете в конце сцены или дня." },
+      { "title": "Владычество", "text": "Вне боя тратьте Владычество, чтобы менять мир: основывать королевства, переписывать Факты реальности и склонять целые фракции — так ваша легенда оставляет вечные следы на карте." }
+    ],
+    "gallery": [
+      { "cap": "«Лексикон Престола» расширяет игру новыми Словами и инструментами для создания религий." },
+      { "cap": "«Десять погребённых клинков» — готовое приключение о войне бессмертных." },
+      { "cap": "Worlds Without Number — фэнтезийный собрат Кевина Кроуфорда с той же дизайнерской ДНК." }
+    ],
+    "resources": [
+      { "name": "Godbound: бесплатное издание (DriveThruRPG)" },
+      { "name": "Godbound: делюкс-издание (DriveThruRPG)" },
+      { "name": "Магазин Sine Nomine Publishing" }
+    ],
+    "quotes": [
+      { "text": "Я искренне обожаю эту игру. Давно ни одна ролевая система так меня не захватывала и не влюбляла в себя." }
+    ]
+  },
+  "en": {
+    "tagShort": "Demigod-tier OSR",
+    "tagline": "\"Seize the tools of an absent God and rewrite the world.\"",
+    "description": "Godbound casts players as nascent gods in a broken world abandoned by its Creator. It runs on a familiar OSR chassis — roll a d20 to hit, make saves, watch your Armor Class — but layers on divine scale: attacks deal fixed straight damage that shreds mortal armies, Words of Creation grant world-bending Gifts, and committed Effort powers miracles. Between fights, Dominion lets your deeds permanently reshape kingdoms, rewrite the Facts of reality, and steer whole factions across the campaign map.",
+    "setting": "The default world of Arcem is a fallen realm of decaying wonders and uncertain natural law, left leaderless when its God vanished and the tools of creation slipped free. Ruined empires, warring theocracies, and scheming celestials fill the gaps. Into this you rise as a Godbound: a mortal suddenly graced with a shard of divine authority, free to save the world, rule it, or burn it down.",
+    "vignette": "A hobgoblin warband floods the bridge. You call on your Sword Gift, roll a d20 against their leader, and connect — no damage dice, just the straight 8 your divine strength always deals, enough to drop him outright. You commit a point of Effort to keep the Gift burning through the turn. Then you speak your Word of Fire: a miracle, not a listed power, and the whole span erupts in white flame, stranding the rest of the host on the far bank.",
+    "prep": "~30 min",
+    "mechanics": [
+      { "title": "d20 Attacks, Straight Damage", "text": "Combat keeps the OSR feel: roll a d20 against a foe's Armor Class. But divine attacks deal fixed straight damage instead of dice, letting one god carve through whole mortal armies." },
+      { "title": "Words of Creation", "text": "Each Godbound wields Words like Fire, Sword, Time, or Death. Words grant Gifts — signature powers — and let you improvise miracles by bending their domain to your will." },
+      { "title": "Effort", "text": "Effort is your well of divine energy. You commit it to sustain Gifts, shrug off failed saves, and pour it into miracles, then recover it when the scene or day ends." },
+      { "title": "Dominion", "text": "Beyond battle, spend Dominion to reshape the world: found kingdoms, rewrite the Facts of reality, and swing entire factions, so your legend leaves permanent marks on the map." }
+    ],
+    "gallery": [
+      { "cap": "The Lexicon of the Throne expands the game with new Words and religion-building tools." },
+      { "cap": "Ten Buried Blades, a ready-to-run Godbound adventure of warring immortals." },
+      { "cap": "Worlds Without Number, Kevin Crawford's fantasy cousin sharing the same design DNA." }
+    ],
+    "resources": [
+      { "name": "Godbound: Free Edition (DriveThruRPG)" },
+      { "name": "Godbound: Deluxe Edition (DriveThruRPG)" },
+      { "name": "Sine Nomine Publishing store" }
+    ],
+    "quotes": [
+      { "text": "I genuinely love this game. I haven't been so hooked and in love with an RPG in a long while" }
+    ]
+  }
+});
 registerSystem("gurps", {
   "groups": {
     "default": { "key": "tactical", "order": 11 },
@@ -6872,6 +7699,108 @@ registerSystem("hyperborea-3", {
       {
         "name": "Character sheet (PDF)"
       }
+    ]
+  }
+});
+registerSystem("imperium-maledictum", {
+  "groups": {
+    "default": { "key": "tactical", "order": 39 },
+    "family": { "key": "standalone", "order": 56 },
+    "genre": { "key": "sci-fi", "order": 19 }
+  },
+  "name": "Warhammer 40,000: Imperium Maledictum",
+  "publisher": "Cubicle 7",
+  "dice": "d100",
+  "players": "2–5",
+  "complexity": 3,
+  "free": false,
+  "edition": null,
+  "foundryStatus": "Official",
+  "heroImage": "https://image.nobleknight.com/c/jpg1500/cb72700.jpg",
+  "playstyleTags": ["combat", "mystery", "tactical"],
+  "settingTags": ["space"],
+  "gallery": [
+    { "src": "https://image.nobleknight.com/c/jpg1500/cb72707.jpg" },
+    { "src": "https://image.nobleknight.com/c/jpg1500/cb72711.jpg" },
+    { "src": "https://image.nobleknight.com/c/jpg1500/cb72712.jpg" }
+  ],
+  "resources": [
+    { "type": "link", "url": "https://cubicle7games.com/our-games/warhammer-40k-roleplay-imperium-maledictum", "fmt": "Web" },
+    { "type": "rules", "url": "https://www.drivethrurpg.com/en/product/305328/Warhammer-40000-Roleplay-Imperium-Maledictum-Core-Rulebook", "fmt": "PDF / Print" },
+    { "type": "link", "url": "https://foundryvtt.com/packages/impmal", "fmt": "Foundry" }
+  ],
+  "mechanics": [
+    { "icon": "dices" },
+    { "icon": "gauge" },
+    { "icon": "flame" },
+    { "icon": "crown" }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://rpgbot.net/warhammer-40000-roleplay-imperium-maledictum-a-review/
+    {
+      "text": "Imperium Maledictum's mechanics are solid, well-explained, and extremely approachable.",
+      "author": "RPGBOT"
+    },
+    // VERIFIED-AT: https://www.nodiceunrolled.com/en/warhammer-40000-roleplay-imperium-maledictum-review/
+    {
+      "text": "Cubicle 7 has succeeded in the difficult task of taking a role-playing game that has its mechanics in the 1980s and giving it a current and fresh tone.",
+      "author": "Stefano Buonocore, No Dice Unrolled"
+    }
+  ],
+  "ru": {
+    "tagShort": "Мрачные d100-интриги в 41-м тысячелетии",
+    "tagline": "«Служи коварному патрону и выживи в гниющем Империуме».",
+    "description": "Мрачное научно-фантастическое ролевое приключение от Cubicle 7, где вы играете расходными агентами, выдернутыми из недр Империума на службу могущественному патрону в истерзанном войной секторе Махариан. В основе — отточенный движок d100, унаследованный от Warhammer Fantasy Roleplay 4-й редакции, с упором на расследования, предательство и медленно тлеющие заговоры. Вы бросаете под сумму Характеристики и Навыка, считаете Уровни Успеха и взвешиваете драгоценную Судьбу против нарастающей Скверны. Это процентная линейка 40k, в отличие от кубикового Wrath & Glory.",
+    "setting": "Сектор Махариан — тысяча миров, покорённых Лордом Соларом Махарием, а ныне пронизанных ересью, порчей и фракционными интригами. Отряды подчиняются патронам из Инквизиции, Адептус Администратум, Министорума, Астра Милитарум, Флота или благородных домов и берутся за опасные, неофициальные задания.",
+    "vignette": "Ваш отряд служит коварному Инквизитору. Чтобы протащить поддельный указ мимо подозрительного адепта Администратума, Мастер объявляет Сложную проверку Обмана против вашего значения 45. Вы бросаете d100 и получаете 22 — ниже цели, успех с двумя Уровнями Успеха. Писарь пропускает вас. Но агенты патрона-соперника следят, и, сжёгши очко Судьбы, вы понимаете: сам указ и был ловушкой.",
+    "prep": "~30 мин",
+    "mechanics": [
+      { "title": "Бросок под цель на d100", "text": "Каждая проверка — бросок процентных кубиков против суммы Характеристики и Навыка. Выбросьте равно или меньше цели, чтобы преуспеть; сложность сдвигает цель вверх или вниз." },
+      { "title": "Уровни Успеха", "text": "Важна разница. Каждая полная десятка, на которую вы обошли или недотянули до цели, — это Уровень Успеха, сравнивающий степени успеха в противостояниях, бою и длительных задачах." },
+      { "title": "Судьба и Скверна", "text": "Очки Судьбы позволяют перебрасывать кубики или обмануть смерть, если их сжечь, а Скверна отражает, насколько глубоко Хаос исказил тело и душу. И то, и другое куда легче потратить, чем восстановить." },
+      { "title": "Патроны и фракции", "text": "Отряд служит могущественному патрону из имперской фракции, получая Влияние и Превосходство. Неофициальные задания преследуют непостижимые интересы среди предательства и вражеских интриг." }
+    ],
+    "gallery": [
+      { "cap": "Обложка Inquisition Player's Guide" },
+      { "cap": "Дополнение Macharian Requisition Guide" },
+      { "cap": "Обложка антологии приключений Voll" }
+    ],
+    "resources": [
+      { "name": "Официальная страница игры Cubicle 7" },
+      { "name": "Основная книга правил на DriveThruRPG" },
+      { "name": "Официальная система для Foundry VTT" }
+    ],
+    "quotes": [
+      { "text": "Механики Imperium Maledictum надёжны, хорошо объяснены и предельно доступны." },
+      { "text": "Cubicle 7 справилась с непростой задачей: взяла ролевую игру, чьи механики родом из 1980-х, и придала им современное, свежее звучание." }
+    ]
+  },
+  "en": {
+    "tagShort": "Grimdark d100 intrigue in the 41st Millennium",
+    "tagline": "\"Serve a scheming patron and survive the Imperium's rot.\"",
+    "description": "Cubicle 7's grimdark sci-fi RPG casts you as expendable agents plucked from the Imperium's ranks to serve a powerful patron in the war-torn Macharian Sector. Built on a refined d100 engine derived from Warhammer Fantasy Roleplay 4th Edition, it leans hard into investigation, betrayal, and slow-burning conspiracy. You roll under a Characteristic plus Skill, count Success Levels, and weigh precious Fate against creeping Corruption. This is the percentile game of the two 40k lines, distinct from the dice-pool Wrath & Glory.",
+    "setting": "The Macharian Sector, a thousand worlds conquered by Lord Solar Macharius and now rife with heresy, corruption, and factional scheming. Warbands answer to patrons drawn from the Inquisition, Adeptus Administratum, Ministorum, Astra Militarum, the Navy, or the noble houses, undertaking perilous missions off the books.",
+    "vignette": "Your warband serves a scheming Inquisitor. To bluff a forged writ past a suspicious Administratum adept, the GM calls a Challenging Deception test against your 45. You roll d100 and get 22 — under target, a success with two Success Levels. The clerk waves you through. But your rival patron's agents are watching, and one burnt Fate point later you realise the writ itself was the trap.",
+    "prep": "~30 min",
+    "mechanics": [
+      { "title": "d100 Roll-Under", "text": "Every test rolls percentile dice against a Characteristic plus Skill total. Roll equal to or under the target and you succeed; difficulty shifts the target up or down." },
+      { "title": "Success Levels", "text": "The margin matters. Each full ten by which you beat or miss the target is a Success Level, comparing degrees of success in opposed tests, combat, and extended tasks." },
+      { "title": "Fate & Corruption", "text": "Fate points reroll dice or cheat death when burnt, while Corruption tracks how deeply Chaos has warped body and soul. Both are far easier to spend than to recover." },
+      { "title": "Patrons & Factions", "text": "Warbands serve a powerful patron from an Imperial faction, gaining Influence and Superiority. Off-the-books missions further inscrutable interests amid betrayal and rival intrigue." }
+    ],
+    "gallery": [
+      { "cap": "Inquisition Player's Guide cover art" },
+      { "cap": "Macharian Requisition Guide supplement" },
+      { "cap": "Voll adventure anthology cover" }
+    ],
+    "resources": [
+      { "name": "Cubicle 7 official game page" },
+      { "name": "Core Rulebook on DriveThruRPG" },
+      { "name": "Official Foundry VTT system" }
+    ],
+    "quotes": [
+      { "text": "Imperium Maledictum's mechanics are solid, well-explained, and extremely approachable." },
+      { "text": "Cubicle 7 has succeeded in the difficult task of taking a role-playing game that has its mechanics in the 1980s and giving it a current and fresh tone." }
     ]
   }
 });
@@ -7778,10 +8707,10 @@ registerSystem("kult-divinity-lost", {
       "text": "Just because I can't see running Kult: Divinity Lost with my gang doesn't mean this isn't an exceptionally well done roleplaying game.",
       "author": "Jeff McAleer, The Gaming Gang"
     },
-    // VERIFIED-AT: https://www.rpg.net/reviews/archive/18/18031.phtml
+    // VERIFIED-AT: https://www.geeknative.com/62413/uncommonly-adult-rpg-kult-divinity-lost/
     {
-      "text": "If you fall into its target group you will discover a rich and well-researched setting that will make your imagination run wild.",
-      "author": "Antonios S, RPGnet"
+      "text": "Kult is remarkable in that it has the best set of instructions and guides for a Game Master that I’ve ever seen in a core rulebook.",
+      "author": "Andrew Girdwood, Geek Native"
     }
   ],
   "ru": {
@@ -7830,7 +8759,7 @@ registerSystem("kult-divinity-lost", {
     ],
     "quotes": [
       { "text": "То, что я не вижу, как вести Kult: Divinity Lost со своей компанией, не значит, что это не исключительно хорошо сделанная ролевая игра." },
-      { "text": "Если вы попадаете в её целевую аудиторию, вы откроете богатый и тщательно проработанный сеттинг, который заставит воображение разгуляться." }
+      { "text": "Kult примечателен тем, что в нём лучший набор инструкций и руководств для мастера, какой я когда-либо видел в базовой книге правил." }
     ]
   },
   "en": {
@@ -8729,7 +9658,7 @@ registerSystem("liminal-horror", {
   "resources": [
     { "type": "rules", "url": "https://liminalhorrorrpg.com/", "fmt": "Web" },
     { "type": "rules", "url": "https://goblinarchives.itch.io/liminal-horror", "fmt": "PDF" },
-    { "type": "srd", "url": "https://liminalhorrorrpg.com/srd/", "fmt": "Web" }
+    { "type": "rules", "url": "https://liminalhorrorrpg.com/srd/", "fmt": "Web" }
   ],
   "mechanics": [
     { "icon": "brain" },
@@ -8858,15 +9787,15 @@ registerSystem("lotfp", {
     }
   ],
   "quotes": [
-    // VERIFIED-AT: https://www.rpg.net/reviews/archive/16/16920.phtml
+    // VERIFIED-AT: http://grognardia.blogspot.com/2011/05/review-lotfp-wfrp-grindhouse-edition.html
     {
-      "text": "if you're looking for OSR-rules, through a shade darkly, then this book will deliver in spades.",
-      "author": "Endzeitgeist, RPGnet"
+      "text": "The Rules and Magic book, on the other hand, is even better than before, which is saying something. Just about everything in the original versions has been further polished and refined.",
+      "author": "James Maliszewski, Grognardia"
     },
-    // VERIFIED-AT: https://www.rpg.net/reviews/archive/16/16920.phtml
+    // VERIFIED-AT: https://save.vs.totalpartykill.ca/review/lotfp-grindhouse/
     {
-      "text": "You can complain about the aesthetics, they are a matter of taste; but I can't see any true faults with the rules presented herein.",
-      "author": "Endzeitgeist, RPGnet"
+      "text": "Magic in LotFP is dangerous and probably a little bit evil. The spell lists help reinforce that.",
+      "author": "Ramanan Sivaranjan, Save vs. Total Party Kill"
     }
   ],
   "ru": {
@@ -8914,8 +9843,8 @@ registerSystem("lotfp", {
       }
     ],
     "quotes": [
-      { "text": "Если вы ищете OSR-правила с тёмным оттенком — эта книга выдаст их сполна." },
-      { "text": "Можно ворчать на эстетику — это дело вкуса; но никаких настоящих изъянов в изложенных правилах я не вижу." }
+      { "text": "Книга «Правила и магия», напротив, стала ещё лучше, чем прежде, а это о многом говорит. Практически всё, что было в первых версиях, дополнительно отшлифовано и доработано." },
+      { "text": "Магия в LotFP опасна и, пожалуй, немного зловеща. Списки заклинаний это только подчёркивают." }
     ]
   },
   "en": {
@@ -8961,6 +9890,10 @@ registerSystem("lotfp", {
       {
         "name": "Free no-art version (PDF)"
       }
+    ],
+    "quotes": [
+      { "text": "The Rules and Magic book, on the other hand, is even better than before, which is saying something. Just about everything in the original versions has been further polished and refined." },
+      { "text": "Magic in LotFP is dangerous and probably a little bit evil. The spell lists help reinforce that." }
     ]
   }
 });
@@ -9179,15 +10112,15 @@ registerSystem("marvel-multiverse", {
     }
   ],
   "quotes": [
-    // VERIFIED-AT: https://www.forbes.com/sites/robwieland/2023/07/30/marvels-new-tabletop-role-playing-game-brings-the-multiverse-home/
+    // VERIFIED-AT: https://www.gamesradar.com/marvel-multiverse-role-playing-game-review/
     {
-      "text": "Marvel Multiverse Role-Playing Game is an excellent choice for fans of Marvel comics who want to try out an RPG or Dungeons & Dragons fans who want to move onto a system that's different while still having familiar elements.",
-      "author": "Rob Wieland, Forbes"
+      "text": "If the idea of embodying a Marvel hero in the Marvel Universe is exciting to you, there's not a better option on the market.",
+      "author": "George Marston, GamesRadar+"
     },
-    // VERIFIED-AT: https://www.polygon.com/23989775/best-tabletop-rpgs-2023/
+    // VERIFIED-AT: https://thegaminggang.com/our_reviews/marvel-multiverse-role-playing-game-core-rulebook-reviewed
     {
-      "text": "The system is easy, streamlined, and really carries the four-color comic book flavor — this is a must-have book that will bring hours of enjoyment.",
-      "author": "Polygon"
+      "text": "Thankfully, I'm pleasantly surprised by this Core Rulebook. A solid effort all around which will more than likely get even better with expansions.",
+      "author": "Jeff McAleer, The Gaming Gang"
     }
   ],
   "ru": {
@@ -9238,8 +10171,8 @@ registerSystem("marvel-multiverse", {
       }
     ],
     "quotes": [
-      { "text": "Marvel Multiverse Role-Playing Game — отличный выбор для фанатов комиксов Marvel, которые хотят попробовать RPG, или фанатов D&D, которые хотят перейти на систему с знакомыми элементами." },
-      { "text": "Система простая, удобная и передаёт дух четырёхцветных комиксов — этоmust-have книга, которая подарит часы удовольствия." }
+      { "text": "Если вас захватывает идея воплотиться в героя Marvel во вселенной Marvel, лучшего варианта на рынке нет." },
+      { "text": "К счастью, базовая книга правил меня приятно удивила. Добротная во всех отношениях работа, которая с дополнениями, скорее всего, станет ещё лучше." }
     ]
   },
   "en": {
@@ -9290,8 +10223,8 @@ registerSystem("marvel-multiverse", {
       }
     ],
     "quotes": [
-      { "text": "Marvel Multiverse Role-Playing Game is an excellent choice for fans of Marvel comics who want to try out an RPG or Dungeons & Dragons fans who want to move onto a system that's different while still having familiar elements." },
-      { "text": "The system is easy, streamlined, and really carries the four-color comic book flavor — this is a must-have book that will bring hours of enjoyment." }
+      { "text": "If the idea of embodying a Marvel hero in the Marvel Universe is exciting to you, there's not a better option on the market." },
+      { "text": "Thankfully, I'm pleasantly surprised by this Core Rulebook. A solid effort all around which will more than likely get even better with expansions." }
     ]
   }
 });
@@ -10674,6 +11607,115 @@ registerSystem("mythic-bastionland", {
       {
         "name": "Character sheet"
       }
+    ]
+  }
+});
+registerSystem("nights-black-agents", {
+  "groups": {
+    "default": { "key": "narrative", "order": 51 },
+    "family": { "key": "standalone", "order": 57 },
+    "genre": { "key": "horror", "order": 18 }
+  },
+  "name": "Night's Black Agents",
+  "publisher": "Pelgrane Press",
+  "dice": "d6 (GUMSHOE)",
+  "players": "2–5",
+  "complexity": 3,
+  "free": false,
+  "edition": null,
+  "foundryStatus": "Official",
+  "heroImage": "https://pelgranepress.com/wp-content/uploads/2020/04/PELGN01-1-scaled.jpg",
+  "playstyleTags": ["mystery", "action", "horror"],
+  "settingTags": ["modern", "weird"],
+  "gallery": [
+    { "src": "https://pelgranepress.com/wp-content/uploads/2020/04/Hardcover-PELGN05.jpg" },
+    { "src": "https://pelgranepress.com/wp-content/uploads/2011/12/Draculas-Castle_350.png" },
+    { "src": "https://pelgranepress.com/wp-content/uploads/2011/12/ZZ_Spread-pages-186_187-Carfax1.png" }
+  ],
+  "resources": [
+    { "type": "link", "url": "https://pelgranepress.com/product/nights-black-agents/", "fmt": "Web" },
+    { "type": "link", "url": "https://foundryvtt.com/packages/gumshoe", "fmt": "Foundry" },
+    { "type": "rules", "url": "https://www.dmsguild.com/en/product/106783/night-s-black-agents", "fmt": "PDF" }
+  ],
+  "mechanics": [
+    { "icon": "fingerprint" },
+    { "icon": "dices" },
+    { "icon": "flame" },
+    { "icon": "skull" }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://critical-hits.com/blog/2013/07/03/review-nights-black-agents/
+    {
+      "text": "However, if you ever wanted to play James Bond beating the crap out of Dracula, you're never going to find a better game for it than this.",
+      "author": "Dave Chalker, Critical Hits"
+    },
+    // VERIFIED-AT: https://thealexandrian.net/wordpress/49659/roleplaying-games/review-nights-black-agents
+    {
+      "text": "Night's Black Agents comes bearing gifts. And you should invite it in.",
+      "author": "Justin Alexander, The Alexandrian"
+    },
+    // VERIFIED-AT: https://www.flamesrising.com/nights-black-agents-rpg-review/
+    {
+      "text": "Every version of the GUMSHOE rules improves on the last and Night’s Black Agents is no exception.",
+      "author": "Rob Wieland, Flames Rising"
+    }
+  ],
+  "ru": {
+    "tagShort": "Вампирский шпионский триллер",
+    "tagline": "«Сожги прикрытие. Убей заговор».",
+    "description": "Night's Black Agents бросает списанных шпионов в теневую войну против вампирского заговора, проникшего в разведки Европы. На движке GUMSHOE игра соединяет борновскую агентурную работу с хоррором в духе Стокера: расследовательские способности гарантируют улики, двигающие тайну вперёд, а насыщенные подсистемы боя, погонь и триллера отвечают за насилие. Жар, Доверие и Прикрытие отражают паранойю жизни «в холоде». Директор собирает своих вампиров из четырёх тайных природ, и ни один заговор не раскрывается одинаково.",
+    "setting": "Никакого фиксированного метасюжета. Действие разворачивается в современной Европе конспиративных квартир, ночных поездов и офшорных счетов — от доков Марселя до балтийских столиц. Где-то под разведслужбами, банками и криминальными сетями вампирский заговор дёргает за ниточки, а его истинную природу — Сверхъестественную, Проклятую, Инопланетную или Мутантскую — определяет Директор. Агенты выстраивают карту контактов и легенд прикрытия, а затем идут по следу крови вверх по «конспирамиде» к монстру на вершине.",
+    "vignette": "Ваш агент склоняется над трупом на венской конспиративной квартире. У вас есть «Судебная патология», поэтому броска нет — Директор просто сообщает, что укусы нанесены уже после смерти, а трата 1 очка выявляет следы антикоагулянта из банка крови. Через минуту в дверь врывается вампир-отпрыск. Теперь всё решает риск: вы вкладываете три очка из пула «Стрельбы» в атаку, бросаете d6, прибавляете три и превосходите Сложность 4 — ваши пули бьют раньше, чем он сокращает дистанцию.",
+    "prep": "~30 мин",
+    "mechanics": [
+      { "title": "Расследовательские способности", "text": "Способности вроде «Криминалистики», «Улиц» и «Внимания» не проваливаются. Если у агента есть навык и он ищет в нужном месте, Директор выдаёт ключевую улику автоматически — без броска." },
+      { "title": "Общие способности и d6", "text": "Бой, вождение и взлом рискованны. Вы тратите очки из пула, бросаете один d6 и складываете их, чтобы превзойти Сложность, которую Директор может держать в секрете." },
+      { "title": "Жар, Доверие и Прикрытие", "text": "Шумные операции повышают Жар и приводят за вами власти. Доверие сплачивает ячейку, но его можно «сжечь» ради предательства. Раскрытое Прикрытие потеряно навсегда." },
+      { "title": "Четыре природы вампиров", "text": "Враг не задан заранее. Директор тайно делает вампиров Сверхъестественными, Проклятыми, Инопланетными или Мутантами, решая, какие легенды правдивы, а какие — смертельная дезинформация." }
+    ],
+    "gallery": [
+      { "cap": "«The Dracula Dossier: Director's Handbook» — флагманская кампания игры" },
+      { "cap": "Внутренняя иллюстрация: логово заговора нависает над операцией" },
+      { "cap": "Разворот с аннотациями из «Дракулианского досье»" }
+    ],
+    "resources": [
+      { "name": "Официальная страница продукта Pelgrane Press" },
+      { "name": "Официальная система GUMSHOE для Foundry VTT" },
+      { "name": "Night's Black Agents на DMs Guild" }
+    ],
+    "quotes": [
+      { "text": "Но если вы когда-нибудь хотели сыграть Джеймса Бонда, вышибающего дух из Дракулы, лучшей игры для этого вам не найти." },
+      { "text": "Night's Black Agents приходит с дарами. И вам стоит впустить её." },
+      { "text": "Каждая версия правил GUMSHOE лучше предыдущей, и Night’s Black Agents — не исключение." }
+    ]
+  },
+  "en": {
+    "tagShort": "Vampire spy thriller",
+    "tagline": "\"Burn your cover. Kill the conspiracy.\"",
+    "description": "Night's Black Agents drops burned spies into a shadow war against a vampire conspiracy that has infiltrated Europe's intelligence services. Built on the GUMSHOE engine, it fuses Bourne-style tradecraft with Stoker-style horror: Investigative abilities guarantee the clues that keep the mystery moving, while crunchy combat, chase, and thriller subsystems handle the violence. Heat, Trust, and Cover track the paranoia of life out in the cold. Directors kitbash their own vampires from four secret natures, so no two conspiracies unravel the same way.",
+    "setting": "There is no fixed metaplot. The action ranges across a contemporary Europe of safehouses, night trains, and offshore accounts, from the Marseilles docks to Baltic capitals. Somewhere beneath the intelligence agencies, banks, and criminal networks, a vampire conspiracy pulls the strings, and its true nature — Supernatural, Damned, Alien, or Mutant — is decided by the Director. Agents map their contacts and cover identities, then follow the blood upward through the conspyramid to the monster at the top.",
+    "vignette": "Your agent crouches over the corpse in the Vienna safehouse. You have Forensic Pathology, so there is no roll — the Director simply tells you the bite wounds were made after death, and a 1-point spend reveals traces of an anticoagulant used in blood banks. Minutes later a vampire scion crashes through the door. Now the risk bites: you push three points from your Shooting pool into the attack, roll a d6, add three, and beat Difficulty 4 — your rounds punch home before it closes the distance.",
+    "prep": "~30 min",
+    "mechanics": [
+      { "title": "Investigative Abilities", "text": "Abilities like Forensics, Streetwise, and Notice never fail. If your agent has the skill and looks in the right place, the Director hands over the core clue automatically — no roll required." },
+      { "title": "General Abilities & the d6", "text": "Fighting, driving, and hacking are risky. You spend points from an ability pool, roll a single d6, and add them together to beat a Difficulty the Director may keep hidden." },
+      { "title": "Heat, Trust & Cover", "text": "Loud jobs raise Heat and draw the authorities down on you. Trust binds the cell together but can be burned to betray it. A blown Cover identity is gone for good." },
+      { "title": "Four Vampire Natures", "text": "The enemy is never fixed. Directors secretly build their vampires as Supernatural, Damned, Alien, or Mutant, deciding which legends are true and which are lethal misdirection." }
+    ],
+    "gallery": [
+      { "cap": "The Dracula Dossier: Director's Handbook, the game's flagship campaign" },
+      { "cap": "Interior art: the conspiracy's lair looms over the operation" },
+      { "cap": "A two-page annotated spread from the Dracula Dossier" }
+    ],
+    "resources": [
+      { "name": "Official Pelgrane Press product page" },
+      { "name": "Official GUMSHOE system for Foundry VTT" },
+      { "name": "Night's Black Agents on DMs Guild" }
+    ],
+    "quotes": [
+      { "text": "However, if you ever wanted to play James Bond beating the crap out of Dracula, you're never going to find a better game for it than this." },
+      { "text": "Night's Black Agents comes bearing gifts. And you should invite it in." },
+      { "text": "Every version of the GUMSHOE rules improves on the last and Night’s Black Agents is no exception." }
     ]
   }
 });
@@ -12116,10 +13158,10 @@ registerSystem("pathfinder", {
       "text": "Second Edition refines Pathfinder's tactical combat without losing the complexity that makes it so much fun at the table.",
       "author": "Charlie Hall, Polygon"
     },
-    // VERIFIED-AT: https://www.rpg.net/reviews/view-printable.phtml?reviewNumber=18265
+    // VERIFIED-AT: https://boardsandswords.com/blog/pathfinder-2e-review
     {
-      "text": "I love this system. The mechanics of 2nd edition Pathfinder are a mix of 3.5, Pathfinder, and 4th edition and 5th edition DnD. Since I love all those games, I had no issues with all the best being blended together to make the best of everything.",
-      "author": "Edward Kabara, RPGnet"
+      "text": "There’s been an explosion of new people and new ideas out there, and Pathfinder2e allowed Paizo to write a version of Pathfinder that fits this new dynamic.",
+      "author": "Chris Renshaw, Boards & Swords"
     }
   ],
   "ru": {
@@ -12171,7 +13213,7 @@ registerSystem("pathfinder", {
     ],
     "quotes": [
       { "text": "Второе издание усовершенствовало тактический бой Pathfinder, не теряя глубины, которая делает эту игру такой увлекательной за столом." },
-      { "text": "Я обожаю эту систему. Механики второго издания — это смесь 3.5, Pathfinder, 4-го и 5-го изданий DnD. Всё лучшее собрано воедино." }
+      { "text": "В хобби хлынули новые люди и новые идеи, и Pathfinder2e позволила Paizo написать версию Pathfinder, которая соответствует этой новой реальности." }
     ]
   },
   "en": {
@@ -12223,7 +13265,7 @@ registerSystem("pathfinder", {
     ],
     "quotes": [
       { "text": "Second Edition refines Pathfinder's tactical combat without losing the complexity that makes it so much fun at the table." },
-      { "text": "I love this system. The mechanics of 2nd edition Pathfinder are a mix of 3.5, Pathfinder, and 4th edition and 5th edition DnD. All the best being blended together." }
+      { "text": "There’s been an explosion of new people and new ideas out there, and Pathfinder2e allowed Paizo to write a version of Pathfinder that fits this new dynamic." }
     ]
   }
 });
@@ -12463,6 +13505,108 @@ registerSystem("pirate-borg", {
       {
         "name": "Free League Publishing page"
       }
+    ]
+  }
+});
+registerSystem("root-rpg", {
+  "groups": {
+    "default": { "key": "narrative", "order": 53 },
+    "family": { "key": "pbta-fitd", "order": 34 },
+    "genre": { "key": "adventure", "order": 31 }
+  },
+  "name": "Root: The Roleplaying Game",
+  "publisher": "Magpie Games",
+  "dice": "2d6 + stat (PbtA)",
+  "players": "3–5",
+  "complexity": 3,
+  "free": false,
+  "edition": null,
+  "foundryStatus": "Official",
+  "heroImage": "https://magpiegames.com/cdn/shop/files/Root-Core_1.jpg?v=1734448179",
+  "playstyleTags": ["narrative", "action", "explore"],
+  "settingTags": ["fantasy"],
+  "gallery": [
+    { "src": "https://magpiegames.com/cdn/shop/files/Root-Core_2.jpg?v=1734448179" },
+    { "src": "https://magpiegames.com/cdn/shop/files/Root-Core_3.jpg?v=1734448179" },
+    { "src": "https://magpiegames.com/cdn/shop/files/Root-Core_4.jpg?v=1734448179" }
+  ],
+  "resources": [
+    { "type": "link", "url": "https://magpiegames.com/collections/root", "fmt": "Web" },
+    { "type": "quickstart", "url": "https://magpiegames.com/products/bertrams-cove-quickstart", "fmt": "PDF" },
+    { "type": "link", "url": "https://foundryvtt.com/packages/magpie-root-core", "fmt": "Foundry" }
+  ],
+  "mechanics": [
+    { "icon": "dices" },
+    { "icon": "swords" },
+    { "icon": "scale" },
+    { "icon": "map" }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://cannibalhalflinggaming.com/2022/03/30/root-the-roleplaying-game-review/
+    {
+      "text": "Root is a solid game at the baseline",
+      "author": "Aaron Marks, Cannibal Halfling Gaming"
+    },
+    // VERIFIED-AT: https://www.enworld.org/threads/root-the-roleplaying-game-core-rulebook-a-review.684511/
+    {
+      "text": "Root: The Roleplaying Game Core Rulebook is worth adding to your gaming library.",
+      "author": "Egg Embry, EN World"
+    }
+  ],
+  "ru": {
+    "tagShort": "PbtA о бродягах между враждующими фракциями леса",
+    "tagline": "«Лес охвачен войной — а вы не подчиняетесь никому».",
+    "description": "Root: The Roleplaying Game переносит настольную игру о лесных зверях от Leder Games на движок Powered by the Apocalypse. Пока великие фракции — Маркизат, Династии Гнезда и Лесной Альянс — делят лес войной, вы играете Бродяг, зажатых между ними: пройдох, воров, следопытов и механиков со своими целями. Бросайте 2d6 плюс характеристику, следите за Репутацией у каждой фракции и пробирайтесь от поляны к поляне через плутовские приёмы, странствия и боевые ходы.",
+    "setting": "Лес — это мир мышей, лис, кроликов и птиц, охваченный войной империи, восстания и выживания. Кошачий Маркизат правит сталью и налогами, Династии Гнезда цепляются за древнее право, а Лесной Альянс поднимает угнетённых. Между ними снуют Бродяги — чужаки без родины, чьи мелкие дела способны качнуть большую войну.",
+    "vignette": "Вы — лис-Вор, что крадётся по занятой Маркизатом поляне в сумерках. Вы запускаете плутовской приём «Красться»: 2d6 + Ловкость. Выпадает 8 — успех с осложнением: вы внутри, но патруль котов настораживается. Клинок наголо, боевой ход в ближнем бою — вы отмечаете Урон в их клетке, ваша Репутация у Маркизата падает на ступень, а Лесной Альянс, прознав об этом, проникается к вам симпатией.",
+    "prep": "~15 мин",
+    "mechanics": [
+      { "title": "Ходы на 2d6 (PbtA)", "text": "Любое рискованное действие — это ход: 2d6 плюс характеристика. 10+ — чистый успех, 7–9 — успех с ценой, 6 и ниже отдаёт ход ведущему. Лёгкие правила, драма в фикшене." },
+      { "title": "Репутация и фракции", "text": "У вас есть трек Репутации с каждой великой фракцией — Маркизатом, Гнездом, Лесным Альянсом. Помощь или вред им двигают ваше положение, открывая поддержку, цены и последствия по мере войны в лесу." },
+      { "title": "Боевые ходы и Урон", "text": "Бой идёт через боевые ходы — клинок, лук или трюки вашего плейбука. Вы отмечаете Урон и Истощение на листе, выбирая тактику: парировать, теснить, бить, — вместо простого обмена очками здоровья." },
+      { "title": "Плутовские приёмы и странствия", "text": "Плутовские приёмы — вскрыть замок, красться, ударить исподтишка; ходы странствий ведут вас между полянами по карте. Жители, цены и опасности каждой поляны держат исследование в центре игры." }
+    ],
+    "gallery": [
+      { "cap": "Обложка" },
+      { "cap": "Разворот" },
+      { "cap": "Арт мира" }
+    ],
+    "resources": [
+      { "name": "Официальная страница — Magpie Games" },
+      { "name": "Бесплатный квикстарт — Bertram's Cove" },
+      { "name": "Модуль для Foundry VTT (официальный)" }
+    ],
+    "quotes": [
+      { "text": "Root — крепкая игра в своей основе." },
+      { "text": "Root: The Roleplaying Game Core Rulebook стоит добавить в вашу коллекцию." }
+    ]
+  },
+  "en": {
+    "tagShort": "PbtA woodland fantasy of vagabonds between warring factions",
+    "tagline": "\"The Woodland is at war — and you answer to no one.\"",
+    "description": "Root: The Roleplaying Game adapts Leder Games' woodland board game into a Powered by the Apocalypse RPG. While great factions — the Marquisate, the Eyrie Dynasties, the Woodland Alliance — wage war over the forest, you play the Vagabonds caught between them: scoundrels, thieves, rangers, and tinkers with their own agendas. Roll 2d6 plus a stat, manage your Reputation with each faction, and let roguish feats, travel, and weapon moves carry you clearing to clearing.",
+    "setting": "The Woodland is a world of mice, foxes, rabbits, and birds locked in a war of empire, rebellion, and survival. The cat Marquisate rules through steel and taxes, the Eyrie Dynasties cling to ancient right, and the Woodland Alliance rallies the downtrodden. Between them roam the Vagabonds — rootless outsiders whose small deeds can tip a very large war.",
+    "vignette": "You're a fox Thief slipping through a Marquisate-held clearing at dusk. You trigger a roguish feat — Sneak — rolling 2d6 + Finesse. An 8: success with a cost, you're in, but a patrol of cats stirs. Blade drawn, you use a Weapon Move in melee; you mark Harm on their box, your Reputation with the Marquisate drops a notch — and the Woodland Alliance, hearing of it, warms to you.",
+    "prep": "~15 min",
+    "mechanics": [
+      { "title": "Moves on 2d6 (PbtA)", "text": "Every risky action is a move: roll 2d6 plus a stat. 10+ succeeds cleanly, 7–9 succeeds with a cost, 6 or under hands the GM trouble. Light rules, fiction-first drama." },
+      { "title": "Reputation & factions", "text": "You carry a Reputation track with each great faction — Marquisate, Eyrie, Woodland Alliance. Helping or harming them shifts your standing, unlocking aid, prices, and consequences as the Woodland's war grinds on." },
+      { "title": "Weapon Moves & Harm", "text": "Combat runs on Weapon Moves — your playbook's blade, bow, or improvised tricks. You mark Harm and Exhaustion on your sheet, choosing tactics like parry, storm, or strike instead of trading raw hit points." },
+      { "title": "Roguish feats & travel", "text": "Roguish feats cover picking locks, sneaking, and blindsiding; travel moves carry you between clearings across the map. The denizens, prices, and dangers of each clearing keep exploration front and center." }
+    ],
+    "gallery": [
+      { "cap": "Cover art" },
+      { "cap": "Interior spread" },
+      { "cap": "Woodland artwork" }
+    ],
+    "resources": [
+      { "name": "Official page — Magpie Games" },
+      { "name": "Free quickstart — Bertram's Cove" },
+      { "name": "Foundry VTT module (official)" }
+    ],
+    "quotes": [
+      { "text": "Root is a solid game at the baseline" },
+      { "text": "Root: The Roleplaying Game Core Rulebook is worth adding to your gaming library." }
     ]
   }
 });
@@ -12725,15 +13869,15 @@ registerSystem("savage-worlds", {
     }
   ],
   "quotes": [
-    // VERIFIED-AT: https://www.rpg.net/reviews/archive/9/9349.phtml
+    // VERIFIED-AT: https://pocgamer.com/archives/1477
     {
-      "text": "Got a life? d20 becoming too much work? Savage Worlds is a lean, mean gaming machine. If you've been looking for an rpg that combines a minimum of prep time with a maximum of useful, crunchy bits — this one's for you.",
-      "author": "Creel, RPGnet"
+      "text": "As a generic game, Savage Worlds offers a lot with a fairly approachable system and proven track record.",
+      "author": "Graeme Barber, POCGamer"
     },
-    // VERIFIED-AT: https://www.rpg.net/reviews/archive/9/9637.phtml
+    // VERIFIED-AT: https://thetabletopalmanac.wordpress.com/2019/05/22/rpg-reviews-savage-worlds-adventure-edition/
     {
-      "text": "Fast, Furious, Fun — it's not just a tagline, it's a mission statement!",
-      "author": "Jamie Herbert, RPGnet"
+      "text": "Savage Worlds Adventure Edition is a very comprehensive, very accessible, detailed but fast toolkit RPG suitable to run games in almost any setting/genre with just the core rulebook.",
+      "author": "SKaye, The Tabletop Almanac"
     }
   ],
   "ru": {
@@ -12784,8 +13928,8 @@ registerSystem("savage-worlds", {
       }
     ],
     "quotes": [
-      { "text": "Есть жизнь? d20 стало слишком сложно? Savage Worlds — это стройная, голодная игровая машина. Если вы искали RPG, совмещающую минимум подготовки с максимумом полезных, хрунчевых деталей — это для вас." },
-      { "text": "Быстро, яростно, весело — это не просто слоган, это манифест!" }
+      { "text": "Как универсальная игра Savage Worlds даёт очень многое — при довольно доступной системе и проверенной временем репутации." },
+      { "text": "Savage Worlds Adventure Edition — очень полная, очень доступная, детальная, но быстрая RPG-конструктор, с которой можно водить игры почти в любом сеттинге и жанре, имея лишь базовую книгу правил." }
     ]
   },
   "en": {
@@ -12836,8 +13980,8 @@ registerSystem("savage-worlds", {
       }
     ],
     "quotes": [
-      { "text": "Got a life? d20 becoming too much work? Savage Worlds is a lean, mean gaming machine. If you've been looking for an rpg that combines a minimum of prep time with a maximum of useful, crunchy bits — this one's for you." },
-      { "text": "Fast, Furious, Fun — it's not just a tagline, it's a mission statement!" }
+      { "text": "As a generic game, Savage Worlds offers a lot with a fairly approachable system and proven track record." },
+      { "text": "Savage Worlds Adventure Edition is a very comprehensive, very accessible, detailed but fast toolkit RPG suitable to run games in almost any setting/genre with just the core rulebook." }
     ]
   }
 });
@@ -12898,10 +14042,15 @@ registerSystem("scum-and-villainy", {
       "text": "It captures the feel of being a space criminal, bound for fortune and glory, while providing some substantive rules on which to hang a narrative.",
       "author": "Jared Rascher, Gnome Stew"
     },
-    // VERIFIED-AT: https://therewillbe.games/articles-ttrpg-reviews/8314-scum-and-villainy-rpg-review
+    // VERIFIED-AT: https://mythcreants.com/blog/scum-and-villainy-shines-despite-flaws/
     {
-      "text": "If you love Firefly, Star Wars, or Killjoys I can really recommend this as a great introduction to what I think is one of the finest systems around.",
-      "author": "Iain McAllister, There Will Be Games"
+      "text": "If nothing else, Scum and Villainy is easily the best space opera RPG I’ve ever played, and I’ve played most of them.",
+      "author": "Oren Ashkenazi, Mythcreants"
+    },
+    // VERIFIED-AT: https://giantbrain.co.uk/2019/09/11/scum-villainy-review/
+    {
+      "text": "Scum & Villainy is a confident interpretation of the Blades ruleset with high production values and a good layout.",
+      "author": "Iain McAllister, The Giant Brain"
     }
   ],
   "ru": {
@@ -12948,7 +14097,8 @@ registerSystem("scum-and-villainy", {
   ,
     "quotes": [
       { "text": "Игра ухватывает ощущение космического преступника в погоне за богатством и славой, при этом давая содержательные правила, на которые можно опереть повествование." },
-      { "text": "Если вы любите «Светлячка», «Звёздные войны» или «Killjoys» — от всей души рекомендую это как отличное знакомство с одной из лучших, на мой взгляд, систем." }
+      { "text": "Как минимум, Scum and Villainy — безусловно лучшая НРИ в жанре космооперы, в которую я играл, а играл я почти во все." },
+      { "text": "Scum & Villainy — уверенная интерпретация правил Blades с высоким качеством издания и хорошей вёрсткой." }
     ]
   },
   "en": {
@@ -12995,7 +14145,113 @@ registerSystem("scum-and-villainy", {
   ,
     "quotes": [
       { "text": "It captures the feel of being a space criminal, bound for fortune and glory, while providing some substantive rules on which to hang a narrative." },
-      { "text": "If you love Firefly, Star Wars, or Killjoys I can really recommend this as a great introduction to what I think is one of the finest systems around." }
+      { "text": "If nothing else, Scum and Villainy is easily the best space opera RPG I’ve ever played, and I’ve played most of them." },
+      { "text": "Scum & Villainy is a confident interpretation of the Blades ruleset with high production values and a good layout." }
+    ]
+  }
+});
+registerSystem("sentinel-comics", {
+  "groups": {
+    "default": { "key": "narrative", "order": 62 },
+    "family": { "key": "standalone", "order": 65 },
+    "genre": { "key": "adventure", "order": 35 }
+  },
+  "name": "Sentinel Comics: The Roleplaying Game",
+  "publisher": "Greater Than Games",
+  "dice": "3 dice per roll (d6–d12)",
+  "players": "3–6",
+  "complexity": 3,
+  "free": false,
+  "edition": null,
+  "foundryStatus": "Community",
+  "heroImage": "https://shop.greaterthangames.com/cdn/shop/files/SRPG-CORE-1.jpg",
+  "playstyleTags": ["action", "combat", "narrative"],
+  "settingTags": ["modern"],
+  "gallery": [
+    { "src": "https://shop.greaterthangames.com/cdn/shop/files/SRPG-CORE-2.jpg" },
+    { "src": "https://shop.greaterthangames.com/cdn/shop/files/SRPG-CORE-3.jpg" },
+    { "src": "https://shop.greaterthangames.com/cdn/shop/files/SRPG-CORE-4.jpg" }
+  ],
+  "resources": [
+    { "type": "link", "url": "https://shop.greaterthangames.com/pages/sentinel-comics", "fmt": "Web" },
+    { "type": "rules", "url": "https://shop.greaterthangames.com/products/sentinel-comics-the-roleplaying-game-core-rulebook-pdf-only", "fmt": "PDF" },
+    { "type": "rules", "url": "https://shop.greaterthangames.com/products/sentinel-comics-the-roleplaying-game-starter-kit-2nd-edition-pdf-only", "fmt": "PDF" },
+    { "type": "link", "url": "https://foundryvtt.com/packages/scrpg", "fmt": "Foundry" }
+  ],
+  "mechanics": [
+    { "icon": "dices" },
+    { "icon": "gauge" },
+    { "icon": "swords" },
+    { "icon": "shuffle" }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://www.enworld.org/threads/save-the-day-with-the-sentinel-comics-rpg.678120/
+    {
+      "text": "Sentinel Comics RPG is a fantastic comic book roleplaying game that offers depth without the massive point buys of yesteryear.",
+      "author": "Rob Wieland, EN World"
+    },
+    // VERIFIED-AT: https://gnomestew.com/sentinel-comics-the-roleplaying-game-core-rulebook-review/
+    {
+      "text": "The Scene Tracker is what really helps to pull all these concepts together and sets this game apart from other supers RPGs.",
+      "author": "Jared Rascher, Gnome Stew"
+    }
+  ],
+  "ru": {
+    "tagShort": "Супергерои из комиксов против таймера сцены",
+    "tagline": "«Три кубика, тикающий трекер сцены и герои, которые бьют сильнее всего, когда дела совсем плохи».",
+    "description": "Sentinel Comics: The Roleplaying Game — игра о команде супергероев в мире карточной игры Sentinels of the Multiverse. На каждое действие бросают три кубика — Силы, Качества и Статуса — и обычно берут средний результат. Система GYRO ведёт и сцену, и здоровье героя из зелёной зоны в жёлтую и красную, открывая всё более мощные способности по мере того, как положение ухудшается. Герои редко проваливаются полностью: чаще они соглашаются на осложнение, которое меняет историю. Тон — яркий Серебряный век комиксов, темп — быстрый.",
+    "setting": "Вселенная Sentinel Comics сразу после события OblivAeon, потрясшего мультивселенную. Freedom Five стали Sentinels of Freedom и открыли в Мегаполисе школу для молодых героев, а злодеи вроде Барона Блейда готовят возвращение.",
+    "vignette": "Из портала на площадь валят роботы, а трекер сцены только что перешёл в жёлтую зону. Вы делаете Overcome, чтобы захлопнуть портал: Огонь d10, Акробатика d8 и жёлтый кубик статуса d8 дают 9, 3 и 6. Средний кубик — 6: успех, но с малым осложнением. Портал схлопывается, а взрывная волна срывает рекламный щит прямо на толпу внизу.",
+    "prep": "~30 мин",
+    "mechanics": [
+      { "title": "Min, Mid, Max", "text": "Выберите одну Силу и одно Качество, добавьте текущий кубик Статуса и бросьте все три. Обычно действие использует средний результат, а особые способности требуют наименьший или наибольший кубик." },
+      { "title": "Зоны GYRO", "text": "Зелёная, жёлтая, красная, выбыл. По зонам движутся и трекер сцены, и здоровье каждого героя; та шкала, что ушла дальше, задаёт кубик статуса и открывает более сильные способности." },
+      { "title": "Пять базовых действий", "text": "Каждый ход — это Attack, Overcome, Boost, Hinder или Defend. Boost и Hinder создают бонусы и штрафы, которые можно отдать союзнику или повесить на врага, так что командная игра выгоднее одиночного урона." },
+      { "title": "Принципы и осложнения", "text": "У каждого героя два Принципа: они дают сюжетные права и подсказывают осложнения. Если Overcome не дотянул, можно всё равно добиться успеха, приняв малое или большое осложнение, меняющее сцену." }
+    ],
+    "gallery": [
+      { "cap": "Разворот базовой книги: таблицы сил из создания героя" },
+      { "cap": "Лист героя Legacy: способности разложены по зелёной, жёлтой и красной зонам" },
+      { "cap": "Статья о злодее Бароне Блейде в главе «Архивы»" }
+    ],
+    "resources": [
+      { "name": "Раздел Sentinel Comics на сайте Greater Than Games" },
+      { "name": "Базовая книга правил (PDF)" },
+      { "name": "Стартовый набор, 2-я редакция (PDF)" },
+      { "name": "Неофициальная система для Foundry VTT" }
+    ],
+    "quotes": [
+      { "text": "Sentinel Comics RPG — отличная ролевая игра по комиксам, которая даёт глубину без громоздкой покупки за очки, как в играх прошлых лет." },
+      { "text": "Трекер сцены — вот что по-настоящему связывает все эти идеи воедино и отличает игру от других супергеройских RPG." }
+    ]
+  },
+  "en": {
+    "tagShort": "Comic-book superheroes against the clock",
+    "tagline": "\"Three dice, a ticking scene tracker, and heroes who hit hardest when things look worst.\"",
+    "description": "Sentinel Comics: The Roleplaying Game puts a team of superheroes into the world of the Sentinels of the Multiverse card game. Every action rolls three dice — a Power, a Quality and a Status die — and usually keeps the middle result. The GYRO system moves both the scene and each hero's health from Green to Yellow to Red, unlocking stronger abilities as the situation worsens. Heroes rarely fail outright; instead they accept twists that complicate the story. The tone is bright Silver Age comics, and the pace is fast.",
+    "setting": "The Sentinel Comics universe just after the multiverse-shaking OblivAeon event. The Freedom Five have become the Sentinels of Freedom and opened a school for young heroes in Megalopolis, while villains such as Baron Blade plot their return.",
+    "vignette": "A portal is pouring robots into the plaza and the scene tracker has just ticked into Yellow. You Overcome to slam it shut: Fire d10, Acrobatics d8 and your Yellow status die d8 come up 9, 3 and 6. The Mid die is 6 — success, but with a minor twist. The portal collapses, and the blast drops a billboard toward the crowd below.",
+    "prep": "~30 min",
+    "mechanics": [
+      { "title": "Min, Mid, Max", "text": "Pick one Power and one Quality, add your current Status die, and roll all three. Most actions use the Mid result, while special abilities call for the Min or Max die instead." },
+      { "title": "GYRO zones", "text": "Green, Yellow, Red, Out. The scene tracker and each hero's health both move through the zones, and whichever is further along sets your status die and unlocks your stronger abilities." },
+      { "title": "Five basic actions", "text": "Every turn is an Attack, Overcome, Boost, Hinder or Defend. Boosts and Hinders create bonuses and penalties that can be handed to allies or pinned on enemies, which rewards teamwork over solo damage." },
+      { "title": "Principles and twists", "text": "Each hero has two Principles that grant narrative permissions and suggest complications. When an Overcome falls short, you may still succeed by accepting a minor or major twist that changes the scene." }
+    ],
+    "gallery": [
+      { "cap": "Core Rulebook spread: power tables from hero creation" },
+      { "cap": "Legacy's hero sheet, with abilities sorted into Green, Yellow and Red zones" },
+      { "cap": "Baron Blade's villain entry in the Archives chapter" }
+    ],
+    "resources": [
+      { "name": "Sentinel Comics hub at Greater Than Games" },
+      { "name": "Core Rulebook (PDF)" },
+      { "name": "Starter Kit, 2nd Edition (PDF)" },
+      { "name": "Unofficial Foundry VTT system" }
+    ],
+    "quotes": [
+      { "text": "Sentinel Comics RPG is a fantastic comic book roleplaying game that offers depth without the massive point buys of yesteryear." },
+      { "text": "The Scene Tracker is what really helps to pull all these concepts together and sets this game apart from other supers RPGs." }
     ]
   }
 });
@@ -13238,15 +14494,10 @@ registerSystem("shadowrun", {
     }
   ],
   "quotes": [
-    // VERIFIED-AT: https://www.rpg.net/reviews/archive/19/19140.phtml
+    // VERIFIED-AT: https://cannibalhalflinggaming.com/2019/09/25/shadowrun-sixth-world-review/
     {
-      "text": "While Shadowrun players may not like all the mechanical choices from the system, almost everyone loves the fluff the world provides. It's deep and engaging with lots of short stories. This will make you want some cyberpunk tabletop in your life.",
-      "author": "Edward Kabara, RPGnet"
-    },
-    // VERIFIED-AT: https://www.rpg.net/reviews/archive/12/12161.phtml
-    {
-      "text": "The roleplaying classic of magic and cybertech comes of age with a streamlined, unified system that produces a fluid and fun game. Sets a real benchmark for how to layout, write and design a game.",
-      "author": "Conan McKegg, RPGnet"
+      "text": "With the cumulative improvements over the last three editions, the game has maintained its unique style while actually becoming accessible, not a small achievement if you consider where the game was for Third Edition.",
+      "author": "Aaron Marks, Cannibal Halfling Gaming"
     }
   ],
   "ru": {
@@ -13297,8 +14548,7 @@ registerSystem("shadowrun", {
       }
     ],
     "quotes": [
-      { "text": "Хотя игроки Shadowrun могут не любить все механические выборы системы, почти все обожают сеттинг. Он глубокий и захватывающий, с множеством рассказов. Это захочется стола в вашей жизни." },
-      { "text": "Классика RPG — магия и кибертех — повзрослела с потоковой, единой системой, создающей плавную и весёлую игру. Настоящий benchmark для того, как оформлять, писать и проектировать игру." }
+      { "text": "Благодаря улучшениям, накопившимся за три последние редакции, игра сохранила свой неповторимый стиль и при этом действительно стала доступной — немалое достижение, если вспомнить, какой она была в третьей редакции." }
     ]
   },
   "en": {
@@ -13349,8 +14599,112 @@ registerSystem("shadowrun", {
       }
     ],
     "quotes": [
-      { "text": "While Shadowrun players may not like all the mechanical choices from the system, almost everyone loves the fluff the world provides. It's deep and engaging with lots of short stories. This will make you want some cyberpunk tabletop in your life." },
-      { "text": "The roleplaying classic of magic and cybertech comes of age with a streamlined, unified system that produces a fluid and fun game. Sets a real benchmark for how to layout, write and design a game." }
+      { "text": "With the cumulative improvements over the last three editions, the game has maintained its unique style while actually becoming accessible, not a small achievement if you consider where the game was for Third Edition." }
+    ]
+  }
+});
+registerSystem("slugblaster", {
+  "groups": {
+    "default": { "key": "narrative", "order": 61 },
+    "family": { "key": "pbta-fitd", "order": 38 },
+    "genre": { "key": "sci-fi", "order": 20 }
+  },
+  "name": "Slugblaster: Kickflip Over a Quantum Centipede",
+  "publisher": "Wilkie's Candy Lab / Mythworks",
+  "dice": "d6 pool",
+  "players": "2–4",
+  "complexity": 2,
+  "free": false,
+  "edition": "Game of the Year Edition",
+  "foundryStatus": "Community",
+  "heroImage": "https://cdn.shopify.com/s/files/1/0666/7668/7154/files/SlugFinal.png?v=1742962431",
+  "playstyleTags": ["action", "narrative", "sandbox"],
+  "settingTags": ["weird", "modern"],
+  "gallery": [
+    { "src": "https://cdn.shopify.com/s/files/1/0666/7668/7154/files/Slug5.png?v=1733947851" },
+    { "src": "https://cdn.shopify.com/s/files/1/0666/7668/7154/files/Slug3.png?v=1733947851" },
+    { "src": "https://cdn.shopify.com/s/files/1/0666/7668/7154/files/Slug4.png?v=1733947851" }
+  ],
+  "resources": [
+    { "type": "link", "url": "https://slugblaster.com", "fmt": "Web" },
+    { "type": "rules", "url": "https://www.myth.works/products/slugblaster", "fmt": "Print / PDF" },
+    { "type": "quickstart", "url": "https://wilkies.itch.io/turbo-x", "fmt": "PDF" },
+    { "type": "link", "url": "https://foundryvtt.com/packages/slugblaster", "fmt": "Foundry" }
+  ],
+  "mechanics": [
+    { "icon": "dices" },
+    { "icon": "sparkles" },
+    { "icon": "bandage" },
+    { "icon": "clapperboard" }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://giantbrain.co.uk/2025/04/12/slugblasting-across-the-universe/
+    {
+      "text": "Those niggles aside I think Slugblaster is an absolute masterpiece.",
+      "author": "Iain McAllister, The Giant Brain"
+    },
+    // VERIFIED-AT: https://www.enworld.org/threads/kids-these-days-with-their-tiktoks-and-slugblasting.708315/
+    {
+      "text": "The relatability of the game is one of its strongest selling points.",
+      "author": "Rob Wieland, EN World"
+    }
+  ],
+  "ru": {
+    "tagShort": "Подростки на ховербордах против мультивселенной",
+    "tagline": "«Проскользни в портал, сделай трюк, стань вирусным — и успей домой к ужину».",
+    "description": "Slugblaster — научно-фантастическая игра о взрослении: подростки на ховербордах из сонного городка Хиллвью тайком пробираются в другие измерения, чтобы исследовать их, снимать трюки и гнаться за славой. Облегчённый движок Forged in the Dark полностью обходится без характеристик и навыков: вы бросаете небольшой пул d6, тратите буст и кик, принимаете вызовы. За вылазки в мультивселенную вы получаете стиль и неприятности, а дома тратите их на сюжетные биты, которые двигают личную арку каждого героя.",
+    "setting": "Хиллвью — скучный маленький городок, где ничего не происходит, если не считать того, что местные подростки взломали портальные технологии и проводят вечера в мультивселенной. За порталами — постапокалиптические пустоши Вастиша, киберпанковый Оперэблум, соперничающие команды, корпоративные спонсоры, гигантские жуки и власти, мечтающие отобрать вашу доску. А потом — обратно к домашке и родителям.",
+    "vignette": "Команда соперников снимает на видео, как ваш Упорный заходит на грайнд по хребту квантовой сороконожки в Вастише. Вы говорите «Зацени!», тратите буст ради второго кубика и принимаете вызов ради третьего: сороконожка просыпается. На кубиках 2, 4 и 5 — частичный успех. Трюк удался, стиль ваш, но неприятности за вызов остаются, а ведущий выдаёт вам слэм: «подвёрнутая лодыжка».",
+    "prep": "~20 мин",
+    "mechanics": [
+      { "title": "Бросок действия, буст и кик", "text": "Ни характеристик, ни навыков. Бросьте один d6, добавьте кубики за буст и возьмите лучший результат: 6 — успех, 4-5 — частичный успех, 1-3 — провал. Кик усиливает эффект действия." },
+      { "title": "Вызовы и «Зацени!»", "text": "Примите вызов — получите дополнительный кубик, но заработаете неприятности. Скажите «Зацени!» перед трюком, чтобы получить стиль, однако при падении последствия окажутся намного хуже обычных." },
+      { "title": "Слэмы и неприятности", "text": "Неудачные броски оборачиваются слэмами — короткими травмами от содранной коленки до разбитого сердца или домашнего ареста. Параллельно копятся неприятности, и когда их слишком много, жизнь героя летит под откос." },
+      { "title": "Биты, арки и фирменный девайс", "text": "Вернувшись в Хиллвью, тратьте стиль и неприятности на биты — заготовленные сцены, из которых складывается арка героя, ведущая к наследию или року. У каждого подростка есть улучшаемый фирменный девайс." }
+    ],
+    "gallery": [
+      { "cap": "Разворот буклета «Сердце»: настрой, черты и биты арки" },
+      { "cap": "Фирменный девайс: кроссовки Riftninja и их модификации" },
+      { "cap": "Внутримировая социальная реклама: «Это твой мозг под порталами»" }
+    ],
+    "resources": [
+      { "name": "Официальный сайт Slugblaster" },
+      { "name": "Магазин Mythworks — книга и PDF" },
+      { "name": "Slugblaster Turbo X — бесплатное демо на один вечер" },
+      { "name": "Система для Foundry VTT (от сообщества)" }
+    ],
+    "quotes": [
+      { "text": "Если не считать этих мелких придирок, я считаю Slugblaster абсолютным шедевром." },
+      { "text": "Узнаваемость происходящего — одно из главных достоинств игры." }
+    ]
+  },
+  "en": {
+    "tagShort": "Teen hoverboarders vs. the multiverse",
+    "tagline": "\"Sneak through a portal, land the trick, go viral — and be home in time for dinner.\"",
+    "description": "Slugblaster is a coming-of-age sci-fi RPG about teenage hoverboarders from the sleepy town of Hillview who slip into other dimensions to explore, film tricks and chase fame. A stripped-down Forged in the Dark engine drops stats and skills entirely: you roll a small pool of d6s, spend boost and kick, and take dares. Runs through the multiverse earn style and trouble, which you then spend at home on story beats that drive each character's personal arc.",
+    "setting": "Hillview is a boring small town where nothing happens — except that its teenagers have hacked portal tech and spend their evenings in the multiverse. Beyond the doorways lie the post-apocalyptic wastes of Vastiche, the cyberpunk sprawl of Operaeblum, rival crews, corporate sponsors, giant bugs and authorities who would love to confiscate your board. Then you go back to homework and parents.",
+    "vignette": "A rival crew is filming as your Grit lines up a rail grind along the spine of a quantum centipede in Vastiche. You say \"Check it!\", spend a boost for a second die and take a dare for a third: the centipede is waking up. The dice show 2, 4 and 5 — a mixed success. You land the trick and bank the style, but the dare's trouble sticks, and the GM hands you a slam: \"twisted ankle\".",
+    "prep": "~20 min",
+    "mechanics": [
+      { "title": "Action roll, boost and kick", "text": "No stats or skills. Roll one d6, add dice by spending boost, and keep the highest: 6 succeeds, 4-5 is mixed, 1-3 fails. Spend kick to make the result hit harder." },
+      { "title": "Dares and \"Check it!\"", "text": "Accept a dare to gain an extra die at the price of trouble. Call \"Check it!\" before a trick to earn style, while inviting far nastier fallout if you bail." },
+      { "title": "Slams and trouble", "text": "Bad rolls cause slams, short harms from scraped knees to broken hearts or being grounded. Trouble piles up alongside them, and too much of either sends your life spinning into disaster." },
+      { "title": "Beats, arcs and signature gear", "text": "Back in Hillview, spend style and trouble on beats, scripted downtime scenes that form your character's arc and lead to legacy or doom. Each teen also owns one moddable signature device." }
+    ],
+    "gallery": [
+      { "cap": "The Heart playbook spread: attitude, traits and arc beats" },
+      { "cap": "Signature gear: Riftninja Sneakers and their mods" },
+      { "cap": "In-fiction PSA: \"This is your brain on portals\"" }
+    ],
+    "resources": [
+      { "name": "Official Slugblaster site" },
+      { "name": "Mythworks store — hardcover and PDF" },
+      { "name": "Slugblaster Turbo X — free one-shot demo" },
+      { "name": "Foundry VTT system (community)" }
+    ],
+    "quotes": [
+      { "text": "Those niggles aside I think Slugblaster is an absolute masterpiece." },
+      { "text": "The relatability of the game is one of its strongest selling points." }
     ]
   }
 });
@@ -15342,6 +16696,214 @@ registerSystem("the-black-hack", {
     ]
   }
 });
+registerSystem("the-expanse", {
+  "groups": {
+    "default": { "key": "narrative", "order": 50 },
+    "family": { "key": "standalone", "order": 55 },
+    "genre": { "key": "sci-fi", "order": 18 }
+  },
+  "name": "The Expanse Roleplaying Game",
+  "publisher": "Green Ronin Publishing",
+  "dice": "3d6 (AGE)",
+  "players": "3–6",
+  "complexity": 2,
+  "free": false,
+  "edition": null,
+  "foundryStatus": "Community",
+  "heroImage": "https://greenroninstore.com/cdn/shop/products/GRR6601_square.jpg?v=1670277014&width=1946",
+  "playstyleTags": ["narrative", "action", "explore"],
+  "settingTags": ["space"],
+  "gallery": [
+    { "src": "https://greenroninstore.com/cdn/shop/products/TheExpanse-SgtDraper.jpg?v=1670277014&width=1946" },
+    { "src": "https://greenroninstore.com/cdn/shop/products/TheExpanse-OriginBackground.jpg?v=1670277014&width=1946" },
+    { "src": "https://greenroninstore.com/cdn/shop/products/the-expanse-core-rulebook-TOC.jpg?v=1670277014&width=1946" }
+  ],
+  "resources": [
+    { "type": "link", "url": "https://greenroninstore.com/products/the-expanse-roleplaying-game", "fmt": "Print / PDF" },
+    { "type": "rules", "url": "https://www.drivethrurpg.com/en/product/268471/the-expanse-roleplaying-game", "fmt": "PDF / Print" },
+    { "type": "link", "url": "https://foundryvtt.com/packages/the-expanse", "fmt": "Foundry" }
+  ],
+  "mechanics": [
+    { "icon": "dices" },
+    { "icon": "sparkles" },
+    { "icon": "clover" },
+    { "icon": "rocket" }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://gnomestew.com/the-expanse-roleplaying-game-review/
+    {
+      "text": "Not only is it a solid game for presenting The Expanse, but it is a good ruleset for hard sci-fi games in general.",
+      "author": "Jared Rascher, Gnome Stew"
+    },
+    // VERIFIED-AT: https://www.geeknative.com/128831/coming-full-circle-reviewing-the-expanse-rpg-and-age/
+    {
+      "text": "I also enjoyed my first encounter with the AGE system and thought it worked very well here.",
+      "author": "Graham Gibson, Geek Native"
+    },
+    // VERIFIED-AT: https://droplowest.com/2019/07/16/review-the-expanse-rpg/
+    {
+      "text": "It’s a smart game that gives a slick sci-fi experience without veering into the realms of fantasy-with-laser-beams or leaning too heavily on the complex, rules-hungry aspects of the genre.",
+      "author": "R.M. Jansen-Parkes, Drop Lowest"
+    }
+  ],
+  "ru": {
+    "tagShort": "Жёсткая фантастика на движке AGE",
+    "tagline": "«Команда, груз и заговор в расколотой Солнечной системе».",
+    "description": "«The Expanse» переносит жёсткую научную фантастику Джеймса Кори за игровой стол на движке Adventure Game Engine от Green Ronin. Вы играете за пёструю команду белтеров, марсиан и землян, гоняющихся за работой, тайнами и выживанием в разделённой Солнечной системе. Каждая проверка — это 3d6 плюс характеристика и фокус против целевого числа, где одна Драма-кость запускает кинематографичные стунты. Фортуна смягчает удары вместо очков здоровья, а Замес (Churn) Мастера постепенно закручивает гайки, пока продуманные планы команды не летят под откос.",
+    "setting": "Это обжитое будущее, где человечество распространилось лишь в пределах Солнечной системы. Миллиарды землян, милитаризованный независимый Марс и эксплуатируемые белтеры Внешних планет кружат друг вокруг друга в холодном противостоянии за ресурсы. В центре игры — команда обычного корабля, зажатая между этими силами: нехватка воздуха и воды, тайны протомолекулы и политика, способная превратить рейс за металлоломом в межпланетный инцидент.",
+    "vignette": "Наоми подключается к консоли шлюза, пока охрана станции приближается. Мастер задаёт целевое число 13; вы берёте 3d6 — одна из них красная Драма-кость — и добавляете Интеллект и фокус «Технологии». На костях выпадает 5, 5 и 4 на Драма-кости: 14 превышает цель, а парные пятёрки дают стунты на 4 очка стунтов, равные значению Драма-кости. Вы тратите их на «Мастерский трюк» и «Дополнительное время», запечатывая люк и зацикливая сигнализацию раньше, чем морпехи выйдут из-за угла.",
+    "prep": "~30 мин",
+    "mechanics": [
+      { "title": "3d6 и Драма-кость", "text": "Каждая проверка — бросок трёх шестигранников плюс характеристика и подходящий фокус против целевого числа. Одна кость, Драма-кость, выделяется и питает фирменные стунты игры." },
+      { "title": "Стунты", "text": "Выпали дубли при успешной проверке — вы получаете очки стунтов, равные Драма-кости, и тратите их из списков, чтобы обезоружить врага, нанести лишний удар или перехватить сцену." },
+      { "title": "Фортуна", "text": "Вместо очков здоровья персонажи тратят Фортуну, чтобы стряхивать почти-попадания, усиливать броски и подкручивать удачу, изображая кинематографичные счастливые случаи вместо медленного истощения." },
+      { "title": "Корабли и Замес", "text": "Детальные космические корабли и бой в космосе соседствуют с Замесом — счётчиком Мастера, отслеживающим нарастающие проблемы и решающим, когда именно планы команды рухнут." }
+    ],
+    "gallery": [
+      { "cap": "Сержант Дрейпер, марсианская морпех, в узнаваемом приземлённом стиле интерьерных иллюстраций." },
+      { "cap": "Иллюстрации происхождения и предыстории, связывающие персонажей с Землёй, Марсом или Поясом." },
+      { "cap": "Оглавление 224-страничного полноцветного базового руководства." }
+    ],
+    "resources": [
+      { "name": "Официальная страница магазина Green Ronin" },
+      { "name": "The Expanse RPG на DriveThruRPG" },
+      { "name": "Система The Expanse (AGE) для Foundry VTT" }
+    ],
+    "quotes": [
+      { "text": "Это не только крепкая игра для передачи духа «The Expanse», но и хороший свод правил для жёсткой научной фантастики в целом." },
+      { "text": "Мне также понравилось моё первое знакомство с системой AGE, и здесь она отработала очень хорошо." },
+      { "text": "Это умная игра, которая даёт гладкий научно-фантастический опыт, не скатываясь в «фэнтези с лазерными лучами» и не слишком налегая на сложные, прожорливые до правил стороны жанра." }
+    ]
+  },
+  "en": {
+    "tagShort": "Hard sci-fi on the AGE engine",
+    "tagline": "\"Crew, cargo, and conspiracy across a fractured Sol system.\"",
+    "description": "The Expanse Roleplaying Game brings James S.A. Corey's hard science-fiction saga to the table using Green Ronin's Adventure Game Engine. You play a scrappy crew of Belters, Martians, and Earthers chasing work, secrets, and survival across a divided Sol system. Every test rolls 3d6 plus an ability and focus against a Target Number, with one Drama Die driving cinematic Stunts. Fortune softens the blows instead of hit points, while the GM's Churn steadily tightens the screws until the crew's careful plans go sideways.",
+    "setting": "It is a lived-in future where humanity has spread only as far as the Sol system. Earth's teeming billions, a militarized independent Mars, and the exploited Belters of the Outer Planets circle one another in a cold, resource-hungry standoff. Play centres on an ordinary ship's crew caught between these powers, navigating scarce air and water, protomolecule mysteries, and politics that can turn a salvage run into an interplanetary incident.",
+    "vignette": "Naomi jacks into the airlock console as station security closes in. The GM sets a Target Number of 13; you gather 3d6 — one of them the red Drama Die — and add Intelligence plus the Technology focus. The dice come up 5, 5, and a 4 on the Drama Die: 14 beats the TN, and the doubled fives trigger Stunts worth 4 Stunt Points, the Drama Die's value. You spend them on 'Skill Stunt' and 'Take Extra Time', sealing the hatch and looping the alarm before the marines round the corner.",
+    "prep": "~30 min",
+    "mechanics": [
+      { "title": "3d6 and the Drama Die", "text": "Every test rolls three six-sided dice plus an ability and any relevant focus against a Target Number. One die, the Drama Die, stands apart and powers the game's signature Stunts." },
+      { "title": "Stunts", "text": "Roll doubles on a successful test and you earn Stunt Points equal to the Drama Die, spent from menus to disarm foes, land extra hits, or seize the narrative spotlight." },
+      { "title": "Fortune", "text": "Instead of hit points, characters spend Fortune to shrug off near-misses, boost rolls, and bend luck, modelling cinematic close scrapes rather than slow, grinding attrition." },
+      { "title": "Ships and the Churn", "text": "Detailed spaceships and space combat sit beside the Churn, a GM meter that tracks rising trouble and decides exactly when the crew's plans go sideways." }
+    ],
+    "gallery": [
+      { "cap": "Sergeant Draper, a Martian marine rendered in the series' grounded interior art." },
+      { "cap": "Origin and background art tying characters to Earth, Mars, or the Belt." },
+      { "cap": "The 224-page full-colour core rulebook's table of contents." }
+    ],
+    "resources": [
+      { "name": "Green Ronin official store page" },
+      { "name": "The Expanse RPG on DriveThruRPG" },
+      { "name": "The Expanse (AGE) system for Foundry VTT" }
+    ],
+    "quotes": [
+      { "text": "Not only is it a solid game for presenting The Expanse, but it is a good ruleset for hard sci-fi games in general." },
+      { "text": "I also enjoyed my first encounter with the AGE system and thought it worked very well here." },
+      { "text": "It’s a smart game that gives a slick sci-fi experience without veering into the realms of fantasy-with-laser-beams or leaning too heavily on the complex, rules-hungry aspects of the genre." }
+    ]
+  }
+});
+registerSystem("the-quiet-year", {
+  "groups": {
+    "default": { "key": "narrative", "order": 54 },
+    "family": { "key": "standalone", "order": 59 },
+    "genre": { "key": "narrative-weird", "order": 13 }
+  },
+  "name": "The Quiet Year",
+  "publisher": "Buried Without Ceremony",
+  "dice": "Deck of cards (diceless)",
+  "players": "2–4",
+  "complexity": 1,
+  "free": false,
+  "edition": "2nd ed. (2019)",
+  "foundryStatus": "None",
+  "heroImage": "https://buriedwithoutceremony.com/wp-content/uploads/2019/11/quiet-year-banner-scaled.jpg",
+  "playstyleTags": ["worldbuild", "narrative", "survival"],
+  "settingTags": ["postapoc", "fantasy"],
+  "gallery": [
+    { "src": "https://buriedwithoutceremony.com/wp-content/uploads/2019/11/The-Quiet-Year.png" },
+    { "src": "https://buriedwithoutceremony.com/wp-content/uploads/2026/01/Box-Contents-scaled.png" },
+    { "src": "https://buriedwithoutceremony.com/wp-content/uploads/2020/04/The-Quiet-Year-PDF.png" }
+  ],
+  "resources": [
+    { "type": "link", "url": "https://buriedwithoutceremony.com/the-quiet-year", "fmt": "Web" },
+    { "type": "rules", "url": "https://www.drivethrurpg.com/en/product/110152/the-quiet-year", "fmt": "PDF" }
+  ],
+  "mechanics": [
+    { "icon": "calendar-days" },
+    { "icon": "map" },
+    { "icon": "hammer" },
+    { "icon": "skull" }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://thealexandrian.net/wordpress/44594/roleplaying-games/review-the-quiet-year
+    {
+      "text": "The Quiet Year is a beautiful game that creates beautiful stories.",
+      "author": "Justin Alexander, The Alexandrian"
+    },
+    // VERIFIED-AT: https://cannibalhalflinggaming.com/2019/02/13/the-independents-the-quiet-year/
+    {
+      "text": "I would highly recommend The Quiet Year for groups interested in collaborative world-building, stories of community, and intriguing system design.",
+      "author": "Jason Brown, Cannibal Halfling Gaming"
+    }
+  ],
+  "ru": {
+    "tagShort": "Игра без ведущего: рисуем карту",
+    "tagline": "«У вас есть один тихий год — потом придут Морозные Пастухи».",
+    "description": "The Quiet Year — игра без ведущего и без кубиков для двух-четырёх игроков, где вы вместе рисуете карту. Общая колода из 52 карт отмечает недели одного года, от весенней оттепели до убийственных морозов. Каждую неделю кто-то переворачивает карту, отвечает на её вопрос и дорисовывает карту общины — начинает проекты, тратит скудные ресурсы и молча копит жетоны Презрения, когда растёт напряжение. Победить нельзя: вы строите нечто хрупкое и полное надежды, а потом всё кончается.",
+    "setting": "Община только что отбилась от Шакалов после долгой жестокой войны. Теперь у неё есть один тихий год, чтобы отстроиться, запастись и подготовиться, прежде чем явятся загадочные Морозные Пастухи и всё оборвётся. Мир после краха: нехватка всего, маленькие надежды и тихий страх — а конкретные руины вы рисуете сами.",
+    "vignette": "Идёт 31-я неделя. Вы переворачиваете карту: кто-то вернулся из долгого странствия — что он принёс? Вы рисуете одинокую фигуру на краю карты, тянущую тележку с добытыми лекарствами, начинаете Проект и ставите кубик на отсчёт в четыре недели. За столом другой игрок молча берёт жетон Презрения.",
+    "prep": "~5 мин",
+    "mechanics": [
+      { "title": "52 недели", "text": "Обычная колода из 52 карт — это ваш календарь. Каждую неделю вы переворачиваете верхнюю карту и отвечаете на один из двух её вопросов: примета, задержка или внезапная удача." },
+      { "title": "Рисуем карту", "text": "Печатного поля нет. Вы вместе рисуете земли своей общины на общем листе, добавляя реки, руины и ресурсы, пока каждая неделя перекраивает местность и историю." },
+      { "title": "Проекты и кубики", "text": "Крупные начинания становятся Проектами, срок которых отсчитывает кубик, убывая по неделям. Когда кубик обнуляется, вы наконец узнаёте, оправдался ли труд." },
+      { "title": "Жетоны Презрения", "text": "Спорить вслух во время игры нельзя. Когда решение задевает, вы молча берёте жетон Презрения — тихую летопись обид, тлеющих под хрупким миром общины." }
+    ],
+    "gallery": [
+      { "cap": "Обложка" },
+      { "cap": "Содержимое коробки" },
+      { "cap": "PDF-издание" }
+    ],
+    "resources": [
+      { "name": "Официальная страница" },
+      { "name": "DriveThruRPG" }
+    ],
+    "quotes": [
+      { "text": "The Quiet Year — прекрасная игра, которая рождает прекрасные истории." },
+      { "text": "Я горячо рекомендую The Quiet Year группам, которым интересны совместное создание мира, истории о сообществе и любопытный геймдизайн." }
+    ]
+  },
+  "en": {
+    "tagShort": "GMless map-drawing survival game",
+    "tagline": "\"You have one quiet year — then the Frost Shepherds arrive.\"",
+    "description": "The Quiet Year is a GMless, diceless map-drawing game for two to four players. A shared 52-card deck marks the weeks of a single year, from spring thaw to the killing frost. Each week someone flips a card, answers its prompt, and redraws the community's map — founding projects, spending scarce resources, and silently stacking Contempt tokens when tensions rise. There is no winning: you build something fragile and hopeful together, and then it ends.",
+    "setting": "A community has just driven off the Jackals after a long, brutal war. Now it has one quiet year to rebuild, forage, and prepare before the mysterious Frost Shepherds arrive and everything ends. A post-collapse world of scarcity, small hopes, and quiet dread — the exact ruins are yours to draw.",
+    "vignette": "It is Week 31. You flip a card: someone returns from a long journey — what did they bring back? You sketch a lone figure at the map's edge dragging a cart of salvaged medicine, then start a Project and set a die counting down four weeks. Across the table, another player silently takes a Contempt token.",
+    "prep": "~5 min",
+    "mechanics": [
+      { "title": "The 52 weeks", "text": "A standard 52-card deck is your calendar. Each week you flip the top card and answer one of its two prompts — an omen, a delay, or a sudden stroke of luck." },
+      { "title": "Draw the map", "text": "There is no printed board. Together you sketch your community's land on a shared sheet, adding rivers, ruins, and resources as each week reshapes the terrain and the story." },
+      { "title": "Projects & dice", "text": "Big undertakings become Projects, timed with a die that counts down the weeks until completion. When the die runs out, you finally learn whether the work paid off." },
+      { "title": "Contempt tokens", "text": "You may never argue aloud during play. When a decision stings, you silently take a Contempt token — a quiet record of resentment festering beneath the community's fragile peace." }
+    ],
+    "gallery": [
+      { "cap": "Cover art" },
+      { "cap": "Boxed set contents" },
+      { "cap": "PDF edition" }
+    ],
+    "resources": [
+      { "name": "Official page" },
+      { "name": "DriveThruRPG" }
+    ],
+    "quotes": [
+      { "text": "The Quiet Year is a beautiful game that creates beautiful stories." },
+      { "text": "I would highly recommend The Quiet Year for groups interested in collaborative world-building, stories of community, and intriguing system design." }
+    ]
+  }
+});
 registerSystem("the-wretched", {
   "groups": {
     "default": { "key": "narrative", "order": 18 },
@@ -15509,6 +17071,108 @@ registerSystem("the-wretched", {
       {
         "name": "DriveThruRPG"
       }
+    ]
+  }
+});
+registerSystem("thirsty-sword-lesbians", {
+  "groups": {
+    "default": { "key": "narrative", "order": 60 },
+    "family": { "key": "pbta-fitd", "order": 37 },
+    "genre": { "key": "adventure", "order": 34 }
+  },
+  "name": "Thirsty Sword Lesbians",
+  "publisher": "Evil Hat Productions",
+  "dice": "2d6 + stat (PbtA)",
+  "players": "2–5",
+  "complexity": 2,
+  "free": false,
+  "edition": null,
+  "foundryStatus": "Community",
+  "heroImage": "https://evilhat.com/wp-content/uploads/2021/10/products-TSL-Cover-Mockup-front-900px.jpg",
+  "playstyleTags": ["narrative", "social", "action"],
+  "settingTags": ["fantasy"],
+  "gallery": [
+    { "src": "https://evilhat.com/wp-content/uploads/2021/08/TSL-Cover-3d-web.png" },
+    { "src": "https://evilhat.com/wp-content/uploads/2021/10/Advanced-Lovers-and-Lesbians-Front-for-web.jpg" }
+  ],
+  "resources": [
+    { "type": "link", "url": "https://evilhat.com/product/thirsty-sword-lesbians/", "fmt": "Web" },
+    { "type": "rules", "url": "https://evilhat.itch.io/thirsty-sword-lesbians", "fmt": "PDF" },
+    { "type": "link", "url": "https://evilhat.com/product/advanced-lovers-lesbians/", "fmt": "Web" },
+    { "type": "link", "url": "https://foundryvtt.com/packages/tsl-content", "fmt": "Foundry" }
+  ],
+  "mechanics": [
+    { "icon": "dices" },
+    { "icon": "heart-handshake" },
+    { "icon": "heart-crack" },
+    { "icon": "swords" }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://gaymingmag.com/2022/01/thirsty-sword-lesbians-offers-a-fun-queer-time/
+    {
+      "text": "As long as you’re doing the type of dramatic and highly emotional storytelling that the game is designed for, you’ll have a good time.",
+      "author": "Hylke Jorrit Langhout, Gayming Magazine"
+    },
+    // VERIFIED-AT: https://matthewjconstantine.com/2023/08/27/tabletop-rpg-review-thirsty-sword-lesbians/
+    {
+      "text": "The writing by April Kit Walsh is clear, and again, the rules are explained quite well.",
+      "author": "Matthew J. Constantine"
+    }
+  ],
+  "ru": {
+    "tagShort": "Квир-романтика плаща и шпаги",
+    "tagline": "«Клинки скрещиваются, сердца бьются чаще, а дуэль может закончиться поцелуем».",
+    "description": "Thirsty Sword Lesbians — игра Эйприл Кит Уолш на движке Powered by the Apocalypse о квир-героинях, которые сражаются с угнетением клинком и чувствами. Девять буклетов построены вокруг внутреннего конфликта — от Зверя до Трикстера. Поединок здесь наполовину флирт, врага можно перевоспитать или влюбить в себя, а Нити и Состояния показывают, кто над кем имеет власть. Игра не привязана к сеттингу, содержит дюжину готовых миров и получила премию «Небьюла» за игровой сценарий и две золотые ENNIE.",
+    "setting": "Фиксированного мира нет. В книге около дюжины готовых сеттингов — киберпанковый Neon City 2099, стимфанк-поэты Les Violettes Dangereuses, галактика Starcross с лазерными мечами — и лист для создания собственного мира, где скрещиваются клинки и замирают сердца.",
+    "vignette": "На крыше дворца ваша Плутовка опускает рапиру и усмехается Инквизитору, которая охотилась за ней неделями. Вы пытаетесь её Соблазнить: 2d6 + Сердце дают 8. Частичный успех — Инквизитор смущается и медлит, но тоже получает на вас Нить. Теперь каждая держит другую за сердце, а стража уже на лестнице.",
+    "prep": "~20 мин",
+    "mechanics": [
+      { "title": "Ходы на 2d6 + характеристика", "text": "Бросьте 2d6 и прибавьте Дерзость, Грацию, Сердце, Ум или Дух. 10+ — полный успех, 7-9 — успех с ценой или осложнением, 6 и меньше — ход делает ведущий." },
+      { "title": "Нити", "text": "Нити — это эмоциональное влияние на другого персонажа. Их получают ходами вроде «Соблазнить» или «Раскусить человека», а тратят, чтобы подтолкнуть кого-то к поступку или изменить результат броска." },
+      { "title": "Состояния вместо хитов", "text": "Урон приходит чувствами: Злость, Страх, Вина, Безнадёжность, Неуверенность. Каждое даёт штраф к определённым ходам, пока его не снимет Эмоциональная поддержка или подходящий разрушительный поступок." },
+      { "title": "Буклеты на внутреннем конфликте", "text": "Зверь, Избранная, Преданная, Печально известная, Ведьма природы, Плутовка, Искательница, Жуткая ведьма и Трикстер — у каждого буклета своё эмоциональное противоречие и уникальные ходы, которые выносят его в каждую сцену." }
+    ],
+    "gallery": [
+      { "cap": "Базовая книга правил в твёрдой обложке от Evil Hat" },
+      { "cap": "Advanced Lovers & Lesbians — дополнение с новыми буклетами и сеттингами" }
+    ],
+    "resources": [
+      { "name": "Thirsty Sword Lesbians — страница на сайте Evil Hat" },
+      { "name": "PDF Thirsty Sword Lesbians на itch.io" },
+      { "name": "Дополнение Advanced Lovers & Lesbians" },
+      { "name": "Sassy Sword Saphics — фанатский модуль для Foundry VTT" }
+    ],
+    "quotes": [
+      { "text": "Если вы рассказываете именно такие драматичные и предельно эмоциональные истории, для которых создана игра, вы отлично проведёте время." },
+      { "text": "Эйприл Кит Уолш пишет ясно, и правила, опять же, объяснены весьма хорошо." }
+    ]
+  },
+  "en": {
+    "tagShort": "Queer swashbuckling romance",
+    "tagline": "\"Swords cross, hearts race, and a duel can end in a kiss.\"",
+    "description": "Thirsty Sword Lesbians is a Powered by the Apocalypse game by April Kit Walsh about queer heroes who fight oppression with blades and feelings. Nine playbooks each centre on an emotional conflict, from the Beast to the Trickster. Fights are as much flirtation as violence, enemies can be redeemed or romanced, and Strings and Conditions track who holds sway over whom. Setting-agnostic, it ships with a dozen sample settings and won the Nebula Award for game writing plus two gold ENNIEs.",
+    "setting": "No fixed world. The book offers about a dozen ready settings — cyberpunk Neon City 2099, the steamfunk poets of Les Violettes Dangereuses, the laser-sword Starcross Galaxy — plus a worldbuilding worksheet for any place where swords cross and hearts race.",
+    "vignette": "On the palace rooftop, your Scoundrel lowers her rapier and smirks at the Inquisitor who has hunted her for weeks. You Entice: 2d6 + Heart comes up 8. A mixed result — the Inquisitor flusters and hesitates, but takes a String on you too. Now each of you has a hold on the other's heart, and the guards are on the stairs.",
+    "prep": "~20 min",
+    "mechanics": [
+      { "title": "2d6 + stat moves", "text": "Roll 2d6 and add Daring, Grace, Heart, Wit or Spirit. A 10+ is a full success, 7-9 succeeds with a cost or complication, and 6 or less lets the GM make a move." },
+      { "title": "Strings", "text": "Strings measure emotional leverage over another character. Gain them through moves like Entice or Figure Out a Person, then spend them to tempt someone into action or shift a roll." },
+      { "title": "Conditions instead of hit points", "text": "Harm lands as feelings: Angry, Frightened, Guilty, Hopeless, Insecure. Each one penalises certain moves until you clear it through Emotional Support or by acting out in a suitably destructive way." },
+      { "title": "Playbooks built on inner conflict", "text": "Beast, Chosen, Devoted, Infamous, Nature Witch, Scoundrel, Seeker, Spooky Witch and Trickster each revolve around one emotional tension, with unique moves that drag that struggle into every scene." }
+    ],
+    "gallery": [
+      { "cap": "The hardcover core rulebook from Evil Hat" },
+      { "cap": "Advanced Lovers & Lesbians, the expansion with new playbooks and settings" }
+    ],
+    "resources": [
+      { "name": "Thirsty Sword Lesbians — Evil Hat product page" },
+      { "name": "Thirsty Sword Lesbians PDF on itch.io" },
+      { "name": "Advanced Lovers & Lesbians expansion" },
+      { "name": "Sassy Sword Saphics — community Foundry VTT module" }
+    ],
+    "quotes": [
+      { "text": "As long as you’re doing the type of dramatic and highly emotional storytelling that the game is designed for, you’ll have a good time." },
+      { "text": "The writing by April Kit Walsh is clear, and again, the rules are explained quite well." }
     ]
   }
 });
@@ -16244,15 +17908,16 @@ registerSystem("troika", {
     }
   ],
   "quotes": [
-    // VERIFIED-AT: https://therewillbe.games/articles-ttrpg-reviews/8251-the-edge-of-specificity-troika-and-acid-death-fantasy-review
-    {
-      "text": "Light but limitless role-playing among the best in the RPG field today.",
-      "author": "Michael Barnes, There Will Be Games"
-    },
+
     // VERIFIED-AT: https://www.tabletopgaming.co.uk/reviews/review-troika-rpg/
     {
       "text": "A masterpiece. The perfect place to start for anyone looking for a game of real adventure.",
       "author": "Christopher Eggett, Tabletop Gaming"
+    },
+    // VERIFIED-AT: https://www.enworld.org/threads/troika-a-played-it-review.691088/
+    {
+      "text": "The RPG is tightly built and runs well and the setting is open but defined and overflowing with terrifying wonder, wondrous terror, and madness.",
+      "author": "Charles Dunwoody, EN World"
     }
   ],
   "ru": {
@@ -16301,8 +17966,9 @@ registerSystem("troika", {
     ]
   ,
     "quotes": [
-      { "text": "Лёгкая, но безграничная ролевая игра — одна из лучших в поле RPG на сегодня." },
-      { "text": "Шедевр. Идеальная отправная точка для всех, кто ищет игру о настоящем приключении." }
+
+      { "text": "Шедевр. Идеальная отправная точка для всех, кто ищет игру о настоящем приключении." },
+      { "text": "Игра крепко сбита и хорошо идёт за столом, а сеттинг открыт, но очерчен и переполнен ужасающими чудесами, чудесным ужасом и безумием." }
     ]
   },
   "en": {
@@ -16351,8 +18017,9 @@ registerSystem("troika", {
     ]
   ,
     "quotes": [
-      { "text": "Light but limitless role-playing among the best in the RPG field today." },
-      { "text": "A masterpiece. The perfect place to start for anyone looking for a game of real adventure." }
+
+      { "text": "A masterpiece. The perfect place to start for anyone looking for a game of real adventure." },
+      { "text": "The RPG is tightly built and runs well and the setting is open but defined and overflowing with terrifying wonder, wondrous terror, and madness." }
     ]
   }
 });
@@ -16692,6 +18359,115 @@ registerSystem("twilight", {
       {
         "name": "Character sheets"
       }
+    ]
+  }
+});
+registerSystem("urban-shadows", {
+  "groups": {
+    "default": { "key": "narrative", "order": 55 },
+    "family": { "key": "pbta-fitd", "order": 35 },
+    "genre": { "key": "narrative-weird", "order": 14 }
+  },
+  "name": "Urban Shadows",
+  "publisher": "Magpie Games",
+  "dice": "2d6 + stat (PbtA)",
+  "players": "3–5",
+  "complexity": 3,
+  "free": false,
+  "edition": "2nd Edition (2022)",
+  "foundryStatus": "Community",
+  "heroImage": "https://magpiegames.com/cdn/shop/files/Urban-Shadows-Core_1.jpg",
+  "playstyleTags": ["narrative", "social", "horror"],
+  "settingTags": ["urban-fantasy", "modern"],
+  "gallery": [
+    { "src": "https://magpiegames.com/cdn/shop/files/Urban-Shadows-Core_2.jpg" },
+    { "src": "https://magpiegames.com/cdn/shop/files/Urban-Shadows-Core_3.jpg" },
+    { "src": "https://magpiegames.com/cdn/shop/files/Urban-Shadows-Core_4.jpg" }
+  ],
+  "resources": [
+    { "type": "link", "url": "https://magpiegames.com/products/core-book-urban-shadows-1", "fmt": "Web" },
+    { "type": "quickstart", "url": "https://www.drivethrurpg.com/en/product/333500/Urban-Shadows-2nd-Ed-Quickstart", "fmt": "PDF" },
+    { "type": "link", "url": "https://foundryvtt.com/packages/urban-shadows-pbta", "fmt": "Foundry" }
+  ],
+  "mechanics": [
+    { "icon": "dice-6" },
+    { "icon": "network" },
+    { "icon": "handshake" },
+    { "icon": "skull" }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://gamingtrend.com/reviews/urban-shadows-2nd-edition-review-feeling-the-weight-of-ambition/
+    {
+      "text": "Urban Shadows' vision of city-based fantasy horror sets a dense web of relationships and obligations.",
+      "author": "John Farrell, Gaming Trend"
+    },
+    // VERIFIED-AT: https://gertlushgaming.co.uk/urban-shadows-2e-tabletop-review-why-everyone-is-talking-about-it/
+    {
+      "text": "Debt plays a massive role in the game, and it's not just about borrowing money; it also includes blood, favours, and magic as debt.",
+      "author": "Jim Smale, GertLush Gaming"
+    },
+    // VERIFIED-AT: https://thegaminggang.com/our_reviews/urban-shadows-2e-reviewed
+    {
+      "text": "If the mechanics of a Powered by the Apocalypse game is a good fit for you and your players - and you're fans of urban fantasy/urban horror - then this second edition of Urban Shadows is a must own.",
+      "author": "Jeff McAleer, The Gaming Gang"
+    }
+  ],
+  "ru": {
+    "tagShort": "Политическое городское фэнтези",
+    "tagline": "«Сверхъестественная политика в городе, который всегда взыщет долги».",
+    "description": "Urban Shadows — игра на движке Powered by the Apocalypse о политическом городском фэнтези от Magpie Games. Вампиры, маги, фейри, охотники и смертные плетут интриги за власть в современном мегаполисе, где любые отношения — это рычаг давления. Игроки бросают 2d6 плюс характеристику, принадлежат к одной из четырёх Фракций — Смертность, Ночь, Сила и Дикость — и обмениваются Долгами, связывая союзников и врагов. Порча постоянно искушает каждого героя большей властью ценой души.",
+    "setting": "Мрачный, нуарный мегаполис, где сверхъестественное скрывается у всех на виду. Древние вампиры держат ночные клубы, маги заключают запретные сделки, а фейри торгуются на жестоких условиях, пока смертные власти и охотники давят в ответ. Сам город — персонаж: его районы становятся спорной территорией между четырьмя Фракциями в бесконечной холодной войне услуг, угроз и предательств.",
+    "vignette": "Вашему вампиру нужно молчание архонта фейри, и вы убеждаете её — бросок 2d6+Сердце. Выпадает 9, попадание в диапазон 7-9: она соглашается, но называет цену. Теперь вы должны Долг Фракции Дикости, а ваш Статус в Ночи падает за давление на потенциального союзника. Спустя несколько сессий посредник Силы требует вернуть этот Долг. Заплатите, отметьте Порчу или наживите нового врага — каждый выбор отзывается по всем четырём Фракциям: Смертность, Ночь, Сила, Дикость.",
+    "prep": "~15 мин",
+    "mechanics": [
+      { "title": "2d6 + характеристика", "text": "Каждый ход — бросок двух кубиков плюс одна из четырёх характеристик: Кровь, Сердце, Разум или Дух. 10+ — чистый успех, 7-9 — успех с осложнением, 6 и меньше отдаёт ход Мастеру." },
+      { "title": "Четыре Фракции", "text": "Каждый герой принадлежит к Смертности, Ночи, Силе или Дикости. Ходы фракций и Статус отражают ваше положение, и рост влияния в одном круге обычно означает его потерю в другом." },
+      { "title": "Экономика Долгов", "text": "Персонажи и фракции должны друг другу Долги — кровь, магию, услуги, секреты. Взыскание Долга позволяет принудить к действию, превращая городскую паутину обязательств в твёрдую валюту." },
+      { "title": "Порча", "text": "Тяга к сверхъестественной силе искушает Порчей. Отмечая её, вы получаете тёмное развитие, но толкаете героя к чудовищному финалу — амбиции награждаются и караются одним и тем же движением." }
+    ],
+    "gallery": [
+      { "cap": "Обложка основной книги правил Urban Shadows, второе издание." },
+      { "cap": "Разворот из основной книги правил." },
+      { "cap": "Дополнительные иллюстрации и вёрстка." }
+    ],
+    "resources": [
+      { "name": "Magpie Games — официальная страница магазина" },
+      { "name": "Бесплатный квикстарт второго издания" },
+      { "name": "Модуль сообщества Urban Shadows 2E для Foundry VTT" }
+    ],
+    "quotes": [
+      { "text": "Видение Urban Shadows — городское фэнтези-хоррор — сплетает плотную сеть отношений и обязательств." },
+      { "text": "Долг играет огромную роль в игре, и речь не только о деньгах: это ещё и кровь, услуги и магия." },
+      { "text": "Если механики Powered by the Apocalypse подходят вам и вашим игрокам — и вы любите городское фэнтези и городской хоррор — то вторая редакция Urban Shadows обязательна к покупке." }
+    ]
+  },
+  "en": {
+    "tagShort": "Political urban fantasy",
+    "tagline": "\"Supernatural politics in a city that always collects.\"",
+    "description": "Urban Shadows is a Powered by the Apocalypse game of political urban fantasy from Magpie Games. Vampires, wizards, fae, hunters, and mortals scheme for dominance across a modern city where every relationship is leverage. Players roll 2d6 plus a stat, belong to one of four Factions — Mortality, Night, Power, and Wild — and trade Debts to bind allies and enemies alike. Corruption constantly tempts each character toward more power at the cost of their soul.",
+    "setting": "A gritty, noir-tinged metropolis where the supernatural hides in plain sight. Ancient vampires run nightclubs, wizards broker forbidden pacts, and faeries cut cruel bargains, while mortal authorities and hunters press back. The city itself is a character, its neighborhoods contested turf between four Factions locked in an endless cold war of favors, threats, and betrayal.",
+    "vignette": "Your vampire needs the fae archon's silence, so you persuade her — roll 2d6+Heart. A 9 lands in the 7-9 band: she agrees, but names her price. Now you owe the Wild Faction a Debt, and your Status with Night slips for strong-arming a would-be ally. Sessions later the Power broker calls that Debt in. Pay it, mark Corruption, or make a fresh enemy — every choice ripples across Mortality, Night, Power, and Wild.",
+    "prep": "~15 min",
+    "mechanics": [
+      { "title": "2d6 + Stat", "text": "Every move rolls two dice plus one of four stats — Blood, Heart, Mind, or Spirit. A 10+ succeeds cleanly, 7-9 succeeds with a cost, and a 6 or lower hands the MC the reins." },
+      { "title": "Four Factions", "text": "Every character belongs to Mortality, Night, Power, or Wild. Faction moves and Status track your standing, and gaining favor with one circle usually means losing it with another." },
+      { "title": "The Debt Economy", "text": "Characters and factions owe each other Debts — blood, magic, favors, secrets. Calling in a Debt lets you compel action, turning the city's web of obligations into hard currency." },
+      { "title": "Corruption", "text": "Reaching for supernatural power tempts Corruption. Marking it fuels dark advancement but pushes your character toward a monstrous endgame, rewarding and punishing ambition in the same breath." }
+    ],
+    "gallery": [
+      { "cap": "Urban Shadows Second Edition core rulebook cover." },
+      { "cap": "Interior page spread from the core rulebook." },
+      { "cap": "Additional interior artwork and layout." }
+    ],
+    "resources": [
+      { "name": "Magpie Games — official store page" },
+      { "name": "Free Second Edition Quickstart" },
+      { "name": "Urban Shadows 2E community module for Foundry VTT" }
+    ],
+    "quotes": [
+      { "text": "Urban Shadows' vision of city-based fantasy horror sets a dense web of relationships and obligations." },
+      { "text": "Debt plays a massive role in the game, and it's not just about borrowing money; it also includes blood, favours, and magic as debt." },
+      { "text": "If the mechanics of a Powered by the Apocalypse game is a good fit for you and your players - and you're fans of urban fantasy/urban horror - then this second edition of Urban Shadows is a must own." }
     ]
   }
 });
@@ -17102,10 +18878,15 @@ registerSystem("vampire-the-masquerade", {
     }
   ],
   "quotes": [
-    // VERIFIED-AT: https://www.rpg.net/reviews/archive/18/18065.phtml
+    // VERIFIED-AT: https://www.grimdarkmagazine.com/review-vampire-the-masquerade-5th-edition/
     {
-      "text": "The system is timeless and extremely easy to learn. It all boils down to 'roll dice, you succeed at 50% per die'. Vampire is a game that thrives on drama. Hunger deserves a special mention, since it is not something to brush aside.",
-      "author": "Antonios S, RPGnet"
+      "text": "If you want a horror game where you are the monster, then I think V5 is probably the best edition of the franchise.",
+      "author": "C.T. Phipps, Grimdark Magazine"
+    },
+    // VERIFIED-AT: https://therpggazette.wordpress.com/2024/12/18/a-review-of-the-5th-edition-of-vampire-the-masquarade-fangs-angst-and-a-whole-lot-of-existential-dread/
+    {
+      "text": "Vampire: The Masquerade 5th Edition is a daring and ambitious reinterpretation of a cherished classic, effectively breathing new life into its central themes of personal horror.",
+      "author": "Serban Ionita, The RPG Gazette"
     }
   ],
   "ru": {
@@ -17156,7 +18937,8 @@ registerSystem("vampire-the-masquerade", {
       }
     ],
     "quotes": [
-      { "text": "Система вечна и невероятно проста для обучения. Всё сводится к 'бросай кубики, у тебя 50% шанс на кость'. Vampire процветает на драме. Голод заслуживает особого упоминания." }
+      { "text": "Если вам нужна хоррор-игра, где чудовище — это вы, то V5, на мой взгляд, пожалуй, лучшая редакция во всей франшизе." },
+      { "text": "Vampire: The Masquerade 5th Edition — смелое и амбициозное переосмысление любимой классики, которое по-настоящему вдыхает новую жизнь в её главные темы личного ужаса." }
     ]
   },
   "en": {
@@ -17207,7 +18989,8 @@ registerSystem("vampire-the-masquerade", {
       }
     ],
     "quotes": [
-      { "text": "The system is timeless and extremely easy to learn. It all boils down to 'roll dice, you succeed at 50% per die'. Vampire is a game that thrives on drama. Hunger deserves a special mention." }
+      { "text": "If you want a horror game where you are the monster, then I think V5 is probably the best edition of the franchise." },
+      { "text": "Vampire: The Masquerade 5th Edition is a daring and ambitious reinterpretation of a cherished classic, effectively breathing new life into its central themes of personal horror." }
     ]
   }
 });

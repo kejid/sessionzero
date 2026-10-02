@@ -62,15 +62,16 @@ registerSystem("dnd-5e", {
     }
   ],
   "quotes": [
-    // VERIFIED-AT: https://www.rpg.net/reviews/archive/16/16138.phtml
-    {
-      "text": "D&D 5e is an extremely well put together game. It makes use of some very elegant and simple mechanics, and best of all, it is recognisably 'Dungeons and Dragons'.",
-      "author": "M. T. Black, RPGnet"
-    },
+
     // VERIFIED-AT: https://www.rockpapershotgun.com/cardboard-children-dungeons-dragons-fifth-edition
     {
       "text": "This edition of D&D is an arm round your shoulder, a word in your ear, a warm invitation to the world of role-playing. The rules, covered in the Player's Handbook, are dealt with in a handful of pages.",
       "author": "Robert Florence, Rock Paper Shotgun"
+    },
+    // VERIFIED-AT: https://comicbook.com/gaming/news/dungeons-dragons-2024-players-handbook-review/
+    {
+      "text": "The entry point for the game is better than it was 10 years ago and the rules are easier to understand and improved in countless small ways.",
+      "author": "Christian Hoffer, ComicBook.com"
     }
   ],
   "ru": {
@@ -121,8 +122,9 @@ registerSystem("dnd-5e", {
       }
     ],
     "quotes": [
-      { "text": "D&D 5e — невероятно хорошо собранная игра. Она использует элегантные и простые механики, и, что важнее всего, она безусловно похожа на «Подземелья и Драконов»." },
-      { "text": "Это издание D&D — дружеское пожатие плеч, слово на ухо, тёплое приглашение в мир ролевых игр. Правила умещаются в десятках страниц." }
+
+      { "text": "Это издание D&D — дружеское пожатие плеч, слово на ухо, тёплое приглашение в мир ролевых игр. Правила умещаются в десятках страниц." },
+      { "text": "Порог входа в игру стал ниже, чем десять лет назад, а правила — понятнее и лучше во множестве мелочей." }
     ]
   },
   "en": {
@@ -173,8 +175,9 @@ registerSystem("dnd-5e", {
       }
     ],
     "quotes": [
-      { "text": "D&D 5e is an extremely well put together game. It makes use of some very elegant and simple mechanics, and best of all, it is recognisably 'Dungeons and Dragons'." },
-      { "text": "This edition of D&D is an arm round your shoulder, a word in your ear, a warm invitation to the world of role-playing. The rules are dealt with in a handful of pages." }
+
+      { "text": "This edition of D&D is an arm round your shoulder, a word in your ear, a warm invitation to the world of role-playing. The rules are dealt with in a handful of pages." },
+      { "text": "The entry point for the game is better than it was 10 years ago and the rules are easier to understand and improved in countless small ways." }
     ]
   }
 });

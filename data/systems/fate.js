@@ -66,10 +66,10 @@ registerSystem("fate", {
       "text": "I think this game is today's standard-bearer for tabletop roleplaying, and why every game that's come out since can and should be compared to it.",
       "author": "Ed, Geek Native"
     },
-    // VERIFIED-AT: https://www.rpg.net/reviews/archive/15/15882.phtml
+    // VERIFIED-AT: https://michaelduxbury.com/2014/12/22/mini-review-fate-core/
     {
-      "text": "Fate Core is an astoundingly well done product. Not only is it a well-produced book, but the system has been refined and distilled to be the best version of Fate so far.",
-      "author": "Wil Hutton, RPGnet"
+      "text": "Consistency and clarity became the design goals of the new Fate edition, and combined with not-insubstantial tweaks made to gameplay both central and peripheral, they have transformed something promising into the best RPG release of the last four years.",
+      "author": "Michael Duxbury, Roll Plus Hot"
     }
   ],
   "ru": {
@@ -121,7 +121,7 @@ registerSystem("fate", {
     ],
     "quotes": [
       { "text": "Я считаю эту игру сегодняшним знаменосцем настольных RPG — и почему каждая игра, вышедшая с тех пор, может и должна быть с ней сравнена." },
-      { "text": "Fate Core — потрясающе хорошо сделанный продукт. Не только отличная книга, но и система, отточенная и очищенная до лучшей версии Fate на сегодня." }
+      { "text": "Целями новой редакции Fate стали последовательность и ясность, и вместе с весьма существенными правками игрового процесса — и в ядре, и на периферии — они превратили нечто многообещающее в лучший RPG-релиз последних четырёх лет." }
     ]
   },
   "en": {
@@ -173,7 +173,7 @@ registerSystem("fate", {
     ],
     "quotes": [
       { "text": "I think this game is today's standard-bearer for tabletop roleplaying, and why every game that's come out since can and should be compared to it." },
-      { "text": "Fate Core is an astoundingly well done product. Not only is it a well-produced book, but the system has been refined and distilled to be the best version of Fate so far." }
+      { "text": "Consistency and clarity became the design goals of the new Fate edition, and combined with not-insubstantial tweaks made to gameplay both central and peripheral, they have transformed something promising into the best RPG release of the last four years." }
     ]
   }
 });

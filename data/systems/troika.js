@@ -56,15 +56,16 @@ registerSystem("troika", {
     }
   ],
   "quotes": [
-    // VERIFIED-AT: https://therewillbe.games/articles-ttrpg-reviews/8251-the-edge-of-specificity-troika-and-acid-death-fantasy-review
-    {
-      "text": "Light but limitless role-playing among the best in the RPG field today.",
-      "author": "Michael Barnes, There Will Be Games"
-    },
+
     // VERIFIED-AT: https://www.tabletopgaming.co.uk/reviews/review-troika-rpg/
     {
       "text": "A masterpiece. The perfect place to start for anyone looking for a game of real adventure.",
       "author": "Christopher Eggett, Tabletop Gaming"
+    },
+    // VERIFIED-AT: https://www.enworld.org/threads/troika-a-played-it-review.691088/
+    {
+      "text": "The RPG is tightly built and runs well and the setting is open but defined and overflowing with terrifying wonder, wondrous terror, and madness.",
+      "author": "Charles Dunwoody, EN World"
     }
   ],
   "ru": {
@@ -113,8 +114,9 @@ registerSystem("troika", {
     ]
   ,
     "quotes": [
-      { "text": "Лёгкая, но безграничная ролевая игра — одна из лучших в поле RPG на сегодня." },
-      { "text": "Шедевр. Идеальная отправная точка для всех, кто ищет игру о настоящем приключении." }
+
+      { "text": "Шедевр. Идеальная отправная точка для всех, кто ищет игру о настоящем приключении." },
+      { "text": "Игра крепко сбита и хорошо идёт за столом, а сеттинг открыт, но очерчен и переполнен ужасающими чудесами, чудесным ужасом и безумием." }
     ]
   },
   "en": {
@@ -163,8 +165,9 @@ registerSystem("troika", {
     ]
   ,
     "quotes": [
-      { "text": "Light but limitless role-playing among the best in the RPG field today." },
-      { "text": "A masterpiece. The perfect place to start for anyone looking for a game of real adventure." }
+
+      { "text": "A masterpiece. The perfect place to start for anyone looking for a game of real adventure." },
+      { "text": "The RPG is tightly built and runs well and the setting is open but defined and overflowing with terrifying wonder, wondrous terror, and madness." }
     ]
   }
 });

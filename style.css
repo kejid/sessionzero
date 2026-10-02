@@ -683,6 +683,8 @@ body:not(.presentation) .pres-counter { display: none; }
 .tag-worldbuild { background: var(--accent-bg); color: var(--accent); }
 .tag-tactical { background: var(--red-bg); color: var(--red); }
 .tag-sandbox { background: var(--green-bg); color: var(--green); }
+.tag-action { background: var(--orange-bg); color: #fb923c; }
+.tag-solo { background: var(--stone-bg); color: #a8a29e; }
 
 /* Voting */
 .vote-section {

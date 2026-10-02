@@ -286,13 +286,14 @@ const TAG_LABELS = {
     explore: 'Exploration', combat: 'Combat', narrative: 'Narrative',
     horror: 'Horror', social: 'Social', mystery: 'Mystery',
     survival: 'Survival', tactical: 'Tactical', sandbox: 'Sandbox',
-    worldbuild: 'Worldbuilding', solo: 'Solo',
+    worldbuild: 'Worldbuilding', action: 'Action', solo: 'Solo',
     space: 'Space', fantasy: 'Fantasy', cyberpunk: 'Cyberpunk',
     modern: 'Modern', postapoc: 'Post-Apoc', historical: 'Historical',
     weird: 'Weird', 'urban-fantasy': 'Urban Fantasy', 'sword-and-sorcery': 'Sword & Sorcery',
   },
   ru: {
     explore: 'Исследование',
+    action: 'Экшн',
     combat: 'Боёвка',
     narrative: 'Нарратив',
     horror: 'Хоррор',
@@ -537,6 +538,7 @@ function renderSystemPage(id, sys, lang) {
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap"></noscript>
 <link rel="stylesheet" href="/style.min.css">
 <script defer src="/lib/lucide.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded',function(){if(window.lucide)lucide.createIcons();});</script>
 <script type="application/ld+json">${JSON.stringify(jsonLdArticle)}</script>
 <script type="application/ld+json">${JSON.stringify(jsonLdBreadcrumb)}</script>
 </head>
@@ -716,6 +718,7 @@ function renderAbout(lang) {
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap"></noscript>
 <link rel="stylesheet" href="/style.min.css">
 <script defer src="/lib/lucide.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded',function(){if(window.lucide)lucide.createIcons();});</script>
 <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 </head>
 <body class="static-page">
@@ -827,6 +830,7 @@ function renderCollectionPage(slug, cfg, lang) {
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap"></noscript>
 <link rel="stylesheet" href="/style.min.css">
 <script defer src="/lib/lucide.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded',function(){if(window.lucide)lucide.createIcons();});</script>
 <script type="application/ld+json">${JSON.stringify(jsonLdList)}</script>
 <script type="application/ld+json">${JSON.stringify(jsonLdBreadcrumb)}</script>
 </head>
@@ -946,6 +950,7 @@ function renderRuHome() {
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap"></noscript>
 <link rel="stylesheet" href="/style.min.css">
 <script defer src="/lib/lucide.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded',function(){if(window.lucide)lucide.createIcons();});</script>
 <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 </head>
 <body class="static-page">
@@ -1208,6 +1213,7 @@ function renderGuidePage(lang) {
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap"></noscript>
 <link rel="stylesheet" href="/style.min.css">
 <script defer src="/lib/lucide.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded',function(){if(window.lucide)lucide.createIcons();});</script>
 <script type="application/ld+json">${JSON.stringify(articleLd)}</script>
 <script type="application/ld+json">${JSON.stringify(faqLd)}</script>
 </head>

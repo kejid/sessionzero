@@ -61,15 +61,10 @@ registerSystem("shadowrun", {
     }
   ],
   "quotes": [
-    // VERIFIED-AT: https://www.rpg.net/reviews/archive/19/19140.phtml
+    // VERIFIED-AT: https://cannibalhalflinggaming.com/2019/09/25/shadowrun-sixth-world-review/
     {
-      "text": "While Shadowrun players may not like all the mechanical choices from the system, almost everyone loves the fluff the world provides. It's deep and engaging with lots of short stories. This will make you want some cyberpunk tabletop in your life.",
-      "author": "Edward Kabara, RPGnet"
-    },
-    // VERIFIED-AT: https://www.rpg.net/reviews/archive/12/12161.phtml
-    {
-      "text": "The roleplaying classic of magic and cybertech comes of age with a streamlined, unified system that produces a fluid and fun game. Sets a real benchmark for how to layout, write and design a game.",
-      "author": "Conan McKegg, RPGnet"
+      "text": "With the cumulative improvements over the last three editions, the game has maintained its unique style while actually becoming accessible, not a small achievement if you consider where the game was for Third Edition.",
+      "author": "Aaron Marks, Cannibal Halfling Gaming"
     }
   ],
   "ru": {
@@ -120,8 +115,7 @@ registerSystem("shadowrun", {
       }
     ],
     "quotes": [
-      { "text": "Хотя игроки Shadowrun могут не любить все механические выборы системы, почти все обожают сеттинг. Он глубокий и захватывающий, с множеством рассказов. Это захочется стола в вашей жизни." },
-      { "text": "Классика RPG — магия и кибертех — повзрослела с потоковой, единой системой, создающей плавную и весёлую игру. Настоящий benchmark для того, как оформлять, писать и проектировать игру." }
+      { "text": "Благодаря улучшениям, накопившимся за три последние редакции, игра сохранила свой неповторимый стиль и при этом действительно стала доступной — немалое достижение, если вспомнить, какой она была в третьей редакции." }
     ]
   },
   "en": {
@@ -172,8 +166,7 @@ registerSystem("shadowrun", {
       }
     ],
     "quotes": [
-      { "text": "While Shadowrun players may not like all the mechanical choices from the system, almost everyone loves the fluff the world provides. It's deep and engaging with lots of short stories. This will make you want some cyberpunk tabletop in your life." },
-      { "text": "The roleplaying classic of magic and cybertech comes of age with a streamlined, unified system that produces a fluid and fun game. Sets a real benchmark for how to layout, write and design a game." }
+      { "text": "With the cumulative improvements over the last three editions, the game has maintained its unique style while actually becoming accessible, not a small achievement if you consider where the game was for Third Edition." }
     ]
   }
 });

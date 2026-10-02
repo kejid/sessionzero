@@ -38,10 +38,10 @@ registerSystem("deadlands", {
       "text": "The Savage World rules are fast and entertaining with a focus on replicating cinematic Wild West action pieces.",
       "author": "C.T. Phipps, Grimdark Magazine"
     },
-    // VERIFIED-AT: https://www.d20radio.com/main/rpg-view-copy-deadlands-the-weird-west/
+    // VERIFIED-AT: https://thegaminggang.com/our_reviews/deadlands-the-weird-west-box-set-reviewed
     {
-      "text": "SWAdE feels designed for this setting and this setting feels like it inspired SWAdE, it's that good of a combination.",
-      "author": "Egg Embry, d20 Radio"
+      "text": "I've always been a fan of the setting and I think the core book is chock full of wild and weird old western goodness, although you'll need a copy of the core SWADE book too.",
+      "author": "Jeff McAleer, The Gaming Gang"
     }
   ],
   "ru": {
@@ -70,7 +70,7 @@ registerSystem("deadlands", {
     ],
     "quotes": [
       { "text": "Правила Savage Worlds быстрые и увлекательные, с упором на воспроизведение кинематографичных экшен-сцен Дикого Запада." },
-      { "text": "SWAdE словно создан для этого сеттинга, а сеттинг словно вдохновил SWAdE — настолько хорошо они сочетаются." }
+      { "text": "Мне всегда нравился этот сеттинг, и, по-моему, основная книга доверху набита диким и странным духом старого Запада — правда, вам понадобится ещё и базовая книга SWADE." }
     ]
   },
   "en": {
@@ -99,7 +99,7 @@ registerSystem("deadlands", {
     ],
     "quotes": [
       { "text": "The Savage World rules are fast and entertaining with a focus on replicating cinematic Wild West action pieces." },
-      { "text": "SWAdE feels designed for this setting and this setting feels like it inspired SWAdE, it's that good of a combination." }
+      { "text": "I've always been a fan of the setting and I think the core book is chock full of wild and weird old western goodness, although you'll need a copy of the core SWADE book too." }
     ]
   }
 });

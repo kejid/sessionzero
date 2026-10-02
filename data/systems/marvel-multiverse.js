@@ -61,15 +61,15 @@ registerSystem("marvel-multiverse", {
     }
   ],
   "quotes": [
-    // VERIFIED-AT: https://www.forbes.com/sites/robwieland/2023/07/30/marvels-new-tabletop-role-playing-game-brings-the-multiverse-home/
+    // VERIFIED-AT: https://www.gamesradar.com/marvel-multiverse-role-playing-game-review/
     {
-      "text": "Marvel Multiverse Role-Playing Game is an excellent choice for fans of Marvel comics who want to try out an RPG or Dungeons & Dragons fans who want to move onto a system that's different while still having familiar elements.",
-      "author": "Rob Wieland, Forbes"
+      "text": "If the idea of embodying a Marvel hero in the Marvel Universe is exciting to you, there's not a better option on the market.",
+      "author": "George Marston, GamesRadar+"
     },
-    // VERIFIED-AT: https://www.polygon.com/23989775/best-tabletop-rpgs-2023/
+    // VERIFIED-AT: https://thegaminggang.com/our_reviews/marvel-multiverse-role-playing-game-core-rulebook-reviewed
     {
-      "text": "The system is easy, streamlined, and really carries the four-color comic book flavor — this is a must-have book that will bring hours of enjoyment.",
-      "author": "Polygon"
+      "text": "Thankfully, I'm pleasantly surprised by this Core Rulebook. A solid effort all around which will more than likely get even better with expansions.",
+      "author": "Jeff McAleer, The Gaming Gang"
     }
   ],
   "ru": {
@@ -120,8 +120,8 @@ registerSystem("marvel-multiverse", {
       }
     ],
     "quotes": [
-      { "text": "Marvel Multiverse Role-Playing Game — отличный выбор для фанатов комиксов Marvel, которые хотят попробовать RPG, или фанатов D&D, которые хотят перейти на систему с знакомыми элементами." },
-      { "text": "Система простая, удобная и передаёт дух четырёхцветных комиксов — этоmust-have книга, которая подарит часы удовольствия." }
+      { "text": "Если вас захватывает идея воплотиться в героя Marvel во вселенной Marvel, лучшего варианта на рынке нет." },
+      { "text": "К счастью, базовая книга правил меня приятно удивила. Добротная во всех отношениях работа, которая с дополнениями, скорее всего, станет ещё лучше." }
     ]
   },
   "en": {
@@ -172,8 +172,8 @@ registerSystem("marvel-multiverse", {
       }
     ],
     "quotes": [
-      { "text": "Marvel Multiverse Role-Playing Game is an excellent choice for fans of Marvel comics who want to try out an RPG or Dungeons & Dragons fans who want to move onto a system that's different while still having familiar elements." },
-      { "text": "The system is easy, streamlined, and really carries the four-color comic book flavor — this is a must-have book that will bring hours of enjoyment." }
+      { "text": "If the idea of embodying a Marvel hero in the Marvel Universe is exciting to you, there's not a better option on the market." },
+      { "text": "Thankfully, I'm pleasantly surprised by this Core Rulebook. A solid effort all around which will more than likely get even better with expansions." }
     ]
   }
 });
