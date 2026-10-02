@@ -703,10 +703,15 @@ function szUpdatePickUI() {
   szSyncGroupChecks();
 }
 
-function szOpenCreate() {
+// `presetIds` (optional array) replaces the selection — used by the results
+// "Share" button to hand over the currently filtered systems.
+function szOpenCreate(presetIds) {
   szView = 'create';
   const el = szEnsureOverlay();
-  if (szPick === null) szPick = szLoadPick(); // restore last selection, else all on
+  if (Array.isArray(presetIds)) {
+    szPick = new Set(presetIds.filter(id => SYSTEMS_DATA[id]));
+    szSavePick();
+  } else if (szPick === null) szPick = szLoadPick(); // restore last selection, else all on
   const myRooms = szMyRooms();
 
   // Inline picker — collapsed by default into a summary so the share actions stay

@@ -344,9 +344,10 @@ let vetoes = JSON.parse(localStorage.getItem('ttrpg-vetoes') || '{}');
 let deferred = JSON.parse(localStorage.getItem('ttrpg-deferred') || '[]');
 let manualOrder = JSON.parse(localStorage.getItem('ttrpg-order') || '[]');
 // Tri-state tag filter. Keys can be playstyle/setting tags, complexity buckets
-// ("cx:light" | "cx:medium" | "cx:heavy"), or "free". Includes are ANDed (a system
-// must have every included tag); complexity-bucket includes are ORed among themselves
-// (a system has exactly one bucket). Excludes remove a system if it matches any of them.
+// ("cx:light" | "cx:medium" | "cx:heavy"), engine families ("fam:<family key>"),
+// or "free". Includes are ANDed (a system must have every included tag); complexity
+// and engine includes are each ORed among themselves (a system has exactly one bucket
+// and one family). Excludes remove a system if it matches any of them.
 let tagInclude = new Set(
     JSON.parse(localStorage.getItem('ttrpg-tag-include') || 'null')
     // migrate legacy single-set OR filter → treat old selections as includes
@@ -369,22 +370,65 @@ function complexityBucketKey(c) {
     return 'cx:heavy';
 }
 
-// Predicate shared by results grid + export. `s` carries tagKeys, settingKeys,
-// complexity, free.
+// Engine family key of an official system ("year-zero", "pbta-fitd", …), prefixed
+// for the tag filter. Custom systems have no family.
+function familyFilterKey(id) {
+    const fam = SYSTEMS_DATA[id] && SYSTEMS_DATA[id].groups && SYSTEMS_DATA[id].groups.family;
+    return fam && fam.key ? 'fam:' + fam.key : null;
+}
+
+// Fields matchesTagFilter() reads, for any system (official or custom).
+function systemFilterFields(id) {
+    const sysData = SYSTEMS_DATA[id];
+    const customSys = sysData ? null : CustomSystems.find(id);
+    return {
+        ...getSystemTags(id),
+        complexity: sysData ? sysData.complexity : customSys?.complexity,
+        free: sysData ? !!sysData.free : !!customSys?.free,
+        family: familyFilterKey(id)
+    };
+}
+
+// Predicate shared by results grid + export + share. `s` carries tagKeys,
+// settingKeys, complexity, free, family.
 function matchesTagFilter(s) {
     if (tagFilterCount() === 0) return true;
     const has = (key) => {
         if (key === 'free') return s.free === true;
         if (key.slice(0, 3) === 'cx:') return complexityBucketKey(s.complexity) === key;
+        if (key.slice(0, 4) === 'fam:') return s.family === key;
         return (s.tagKeys || []).indexOf(key) !== -1 || (s.settingKeys || []).indexOf(key) !== -1;
     };
     const inc = [...tagInclude];
     const cxInc = inc.filter(k => k.slice(0, 3) === 'cx:');
-    const otherInc = inc.filter(k => k.slice(0, 3) !== 'cx:');
+    const famInc = inc.filter(k => k.slice(0, 4) === 'fam:');
+    const otherInc = inc.filter(k => k.slice(0, 3) !== 'cx:' && k.slice(0, 4) !== 'fam:');
     if (otherInc.length && !otherInc.every(has)) return false;   // AND across tag/free includes
     if (cxInc.length && !cxInc.some(has)) return false;          // OR across mutually-exclusive buckets
+    if (famInc.length && !famInc.some(has)) return false;        // OR across mutually-exclusive families
     for (const k of tagExclude) { if (has(k)) return false; }
     return true;
+}
+
+// Official systems currently passing the results filter — what "Share" sends.
+// Custom systems live in localStorage only, so they can't be shared.
+function filteredShareIds() {
+    return SYSTEM_IDS.filter(id => !hiddenSystems.includes(id) && SYSTEMS_DATA[id])
+        .filter(id => matchesTagFilter(systemFilterFields(id)));
+}
+
+// Results "Share" button: with a filter active, preselect exactly the filtered
+// systems in the share panel; otherwise keep the user's last selection.
+function shareFromResults() {
+    if (typeof szOpenCreate !== 'function') return;
+    // An empty preset would wipe the saved selection — fall back to it instead.
+    const ids = tagFilterCount() > 0 ? filteredShareIds() : [];
+    szOpenCreate(ids.length ? ids : undefined);
+}
+
+function updateShareFilteredCount() {
+    const label = tagFilterCount() > 0 ? ` (${filteredShareIds().length})` : '';
+    document.querySelectorAll('.share-filtered-n').forEach(el => { el.textContent = label; });
 }
 
 // ============ SETUP SCREEN ============
@@ -695,9 +739,7 @@ function exportResults() {
         const customSys = sysData ? null : CustomSystems.find(id);
         return {
             id, name: SYSTEM_NAMES[id],
-            ...getSystemTags(id),
-            complexity: sysData ? sysData.complexity : customSys?.complexity,
-            free: sysData ? !!sysData.free : !!customSys?.free,
+            ...systemFilterFields(id),
             count: (votes[id] || []).length,
             vetoCount: (vetoes[id] || []).length,
             score: (votes[id] || []).length - (vetoes[id] || []).length,
@@ -803,16 +845,28 @@ function renderTagFilter(allSystems) {
     const playCounts = {};
     const setCounts = {};
     const cxCounts = { 'cx:light': 0, 'cx:medium': 0, 'cx:heavy': 0 };
+    const famCounts = {};
     let freeCount = 0;
     allSystems.forEach(s => {
         (s.tagKeys || []).forEach(k => { playCounts[k] = (playCounts[k] || 0) + 1; });
         (s.settingKeys || []).forEach(k => { setCounts[k] = (setCounts[k] || 0) + 1; });
         const cx = complexityBucketKey(s.complexity);
         if (cx) cxCounts[cx]++;
+        if (s.family) famCounts[s.family] = (famCounts[s.family] || 0) + 1;
         if (s.free) freeCount++;
+    });
+    // Keep a button for every active engine key, even with no visible systems,
+    // so a persisted filter can always be toggled off.
+    const famActive = (k) => tagInclude.has(k) || tagExclude.has(k);
+    [...tagInclude, ...tagExclude].forEach(k => {
+        if (k.slice(0, 4) === 'fam:' && !(k in famCounts)) famCounts[k] = 0;
     });
     const sortedPlay = Object.keys(playCounts).sort((a, b) => playCounts[b] - playCounts[a]);
     const sortedSet = Object.keys(setCounts).sort((a, b) => setCounts[b] - setCounts[a]);
+    // "Standalone" is the catch-all, not an engine — keep it last regardless of size.
+    const sortedFam = Object.keys(famCounts).sort((a, b) =>
+        (a === 'fam:standalone') - (b === 'fam:standalone') || famCounts[b] - famCounts[a]);
+    const showFam = sortedFam.length > 1 || sortedFam.some(famActive);
     const cxKeys = COMPLEXITY_BUCKET_KEYS.filter(k => cxCounts[k] > 0);
     const totalCount = allSystems.length;
 
@@ -824,6 +878,8 @@ function renderTagFilter(allSystems) {
         p: sortedPlay.map(k => [k, playCounts[k]]),
         s: sortedSet.map(k => [k, setCounts[k]]),
         c: cxKeys.map(k => [k, cxCounts[k]]),
+        e: sortedFam.map(k => [k, famCounts[k]]),
+        es: showFam,
         f: freeCount
     });
     if (panel.dataset.tagFingerprint === fingerprint) {
@@ -875,6 +931,13 @@ function renderTagFilter(allSystems) {
         });
     }
 
+    if (showFam) {
+        html += section('tag_filter_engine');
+        sortedFam.forEach(key => {
+            html += btn(key, 'git-branch', t('nav_group_' + key.slice(4)), famCounts[key], 'engine');
+        });
+    }
+
     if (freeCount > 0) {
         html += section('tag_filter_access');
         html += btn('free', 'gift', t('badge_free'), freeCount, 'access');
@@ -911,6 +974,7 @@ function renderResults() {
             id, name: SYSTEM_NAMES[id], heroImg, tagline, tags, tagKeys, settingKeys,
             complexity: sysData ? sysData.complexity : customSys?.complexity,
             free: sysData ? !!sysData.free : !!customSys?.free,
+            family: familyFilterKey(id),
             edition: sysData ? sysData.edition : customSys?.edition,
             voters: PLAYERS ? (votes[id] || []).map(vid => PLAYERS.find(p => p.id === vid)).filter(Boolean) : [],
             vetoers: PLAYERS ? (vetoes[id] || []).map(vid => PLAYERS.find(p => p.id === vid)).filter(Boolean) : [],
@@ -925,6 +989,7 @@ function renderResults() {
 
     // Apply tri-state filter (includes ANDed, complexity buckets ORed, excludes removed)
     const systems = allSystems.filter(matchesTagFilter);
+    updateShareFilteredCount();
 
     sortSystems(systems, browseMode);
 
