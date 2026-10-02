@@ -196,6 +196,23 @@ def fit_font(font_path: Path, text: str, max_size: int, min_size: int,
     return load_font(font_path, min_size)
 
 
+def wrap_two_lines(font_path: Path, text: str, max_size: int, min_size: int,
+                   max_width: int) -> tuple[list[str], ImageFont.FreeTypeFont]:
+    """Split text at the word break that balances the two lines best, then pick
+    the largest font at which both lines fit."""
+    words = text.split()
+    if len(words) < 2:
+        return [text], load_font(font_path, min_size)
+    probe = load_font(font_path, min_size)
+    splits = [(" ".join(words[:i]), " ".join(words[i:])) for i in range(1, len(words))]
+    a, b = min(splits, key=lambda s: max(probe.getlength(s[0]), probe.getlength(s[1])))
+    for size in range(max_size, min_size, -4):
+        f = load_font(font_path, size)
+        if max(f.getlength(a), f.getlength(b)) <= max_width:
+            return [a, b], f
+    return [a, b], probe
+
+
 def text_h(draw: ImageDraw.ImageDraw, text: str,
            font: ImageFont.FreeTypeFont) -> int:
     bbox = draw.textbbox((0, 0), text, font=font)
@@ -247,17 +264,27 @@ def draw_text_block(img: Image.Image, name: str, publisher: str, lang: str):
     sub_text = COPY[lang]["sub"]
     pub_font = load_font(FONTS_DIR / "Unbounded-Bold.ttf", 20)
     sub_font = load_font(FONTS_DIR / "Unbounded-Bold.ttf", 17)
-    name_font = fit_font(FONTS_DIR / "Unbounded-Black.ttf", name,
-                         max_size=104, min_size=56, max_width=max_w)
+    name_path = FONTS_DIR / "Unbounded-Black.ttf"
+    name_font = fit_font(name_path, name, max_size=104, min_size=56, max_width=max_w)
+    lines = [name]
+    if name_font.getlength(name) > max_w:
+        # Too long for one line even at min size — wrap onto two lines.
+        lines, name_font = wrap_two_lines(name_path, name, max_size=72,
+                                          min_size=36, max_width=max_w)
 
+    line_gap = 12
     sub_y = H - PAD_BOTTOM - text_h(draw, sub_text, sub_font)
-    name_y = sub_y - text_h(draw, name, name_font) - 16
+    name_h = sum(text_h(draw, ln, name_font) for ln in lines) + line_gap * (len(lines) - 1)
+    name_y = sub_y - name_h - 16
     pub_y = name_y - text_h(draw, pub_text, pub_font) - 18
     bar_y = pub_y - 18
 
     draw.rectangle((PAD_X, bar_y, PAD_X + 56, bar_y + 4), fill=ACCENT)
     draw_top(draw, PAD_X, pub_y, pub_text, pub_font, DIM, spacing=2)
-    draw_top(draw, PAD_X, name_y, name, name_font, WHITE)
+    y = name_y
+    for ln in lines:
+        draw_top(draw, PAD_X, y, ln, name_font, WHITE)
+        y += text_h(draw, ln, name_font) + line_gap
     draw_top(draw, PAD_X, sub_y, sub_text, sub_font, ACCENT, spacing=1)
 
 

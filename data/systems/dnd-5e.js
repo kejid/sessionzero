@@ -11,7 +11,7 @@ registerSystem("dnd-5e", {
   "complexity": 3,
   "free": true,
   "foundryStatus": "Official",
-  "heroImage": "https://static.wikia.nocookie.net/dungeonsdragons/images/2/27/PHB5e.jpg/revision/latest?cb=20191127044344",
+  "heroImage": "https://sessionzero.games/images/heroes/dnd-5e.jpg",
   "playstyleTags": [
     "combat",
     "explore",
