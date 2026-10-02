@@ -12,7 +12,7 @@ registerSystem("the-expanse", {
   "free": false,
   "edition": null,
   "foundryStatus": "Community",
-  "heroImage": "https://greenroninstore.com/cdn/shop/products/GRR6601_square.jpg?v=1670277014&width=1946",
+  "heroImage": "https://sessionzero.games/images/heroes/the-expanse.jpg",
   "playstyleTags": ["narrative", "action", "explore"],
   "settingTags": ["space"],
   "gallery": [

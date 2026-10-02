@@ -12,7 +12,7 @@ registerSystem("urban-shadows", {
   "free": false,
   "edition": "2nd Edition (2022)",
   "foundryStatus": "Community",
-  "heroImage": "https://magpiegames.com/cdn/shop/files/Urban-Shadows-Core_1.jpg",
+  "heroImage": "https://magpiegames.com/cdn/shop/collections/US2Ecollection.png?v=1746477095",
   "playstyleTags": ["narrative", "social", "horror"],
   "settingTags": ["urban-fantasy", "modern"],
   "gallery": [

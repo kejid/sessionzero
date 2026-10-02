@@ -12,7 +12,7 @@ registerSystem("godbound", {
   "free": true,
   "edition": null,
   "foundryStatus": "Community",
-  "heroImage": "https://image.nobleknight.com/g/jpg1500/godbound.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/godbound.jpg",
   "playstyleTags": ["action", "worldbuild", "combat"],
   "settingTags": ["fantasy"],
   "gallery": [

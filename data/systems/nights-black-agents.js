@@ -12,7 +12,7 @@ registerSystem("nights-black-agents", {
   "free": false,
   "edition": null,
   "foundryStatus": "Official",
-  "heroImage": "https://pelgranepress.com/wp-content/uploads/2020/04/PELGN01-1-scaled.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/nights-black-agents.jpg",
   "playstyleTags": ["mystery", "action", "horror"],
   "settingTags": ["modern", "weird"],
   "gallery": [

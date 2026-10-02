@@ -12,7 +12,7 @@ registerSystem("dread", {
   "free": false,
   "edition": null,
   "foundryStatus": "None",
-  "heroImage": "https://image.nobleknight.com/i/jpg1500/iprtid1.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/dread.jpg",
   "playstyleTags": ["horror", "narrative", "survival"],
   "settingTags": ["modern", "weird"],
   "gallery": [

@@ -1987,7 +1987,7 @@ registerSystem("burning-wheel", {
   "free": false,
   "edition": "Gold Revised",
   "foundryStatus": "Community",
-  "heroImage": "https://www.burningwheel.com/cdn/shop/files/17_BWGold__09232.1690573427.1280.1280.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/burning-wheel.jpg",
   "playstyleTags": ["narrative", "social", "tactical"],
   "settingTags": ["fantasy"],
   "gallery": [
@@ -4937,7 +4937,7 @@ registerSystem("dread", {
   "free": false,
   "edition": null,
   "foundryStatus": "None",
-  "heroImage": "https://image.nobleknight.com/i/jpg1500/iprtid1.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/dread.jpg",
   "playstyleTags": ["horror", "narrative", "survival"],
   "settingTags": ["modern", "weird"],
   "gallery": [
@@ -7009,7 +7009,7 @@ registerSystem("godbound", {
   "free": true,
   "edition": null,
   "foundryStatus": "Community",
-  "heroImage": "https://image.nobleknight.com/g/jpg1500/godbound.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/godbound.jpg",
   "playstyleTags": ["action", "worldbuild", "combat"],
   "settingTags": ["fantasy"],
   "gallery": [
@@ -7716,7 +7716,7 @@ registerSystem("imperium-maledictum", {
   "free": false,
   "edition": null,
   "foundryStatus": "Official",
-  "heroImage": "https://image.nobleknight.com/c/jpg1500/cb72700.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/imperium-maledictum.jpg",
   "playstyleTags": ["combat", "mystery", "tactical"],
   "settingTags": ["space"],
   "gallery": [
@@ -11624,7 +11624,7 @@ registerSystem("nights-black-agents", {
   "free": false,
   "edition": null,
   "foundryStatus": "Official",
-  "heroImage": "https://pelgranepress.com/wp-content/uploads/2020/04/PELGN01-1-scaled.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/nights-black-agents.jpg",
   "playstyleTags": ["mystery", "action", "horror"],
   "settingTags": ["modern", "weird"],
   "gallery": [
@@ -13522,7 +13522,7 @@ registerSystem("root-rpg", {
   "free": false,
   "edition": null,
   "foundryStatus": "Official",
-  "heroImage": "https://magpiegames.com/cdn/shop/files/Root-Core_1.jpg?v=1734448179",
+  "heroImage": "https://magpiegames.com/cdn/shop/collections/MPG-Website-slider-Root-colored-1.jpg?v=1724344612",
   "playstyleTags": ["narrative", "action", "explore"],
   "settingTags": ["fantasy"],
   "gallery": [
@@ -16710,7 +16710,7 @@ registerSystem("the-expanse", {
   "free": false,
   "edition": null,
   "foundryStatus": "Community",
-  "heroImage": "https://greenroninstore.com/cdn/shop/products/GRR6601_square.jpg?v=1670277014&width=1946",
+  "heroImage": "https://sessionzero.games/images/heroes/the-expanse.jpg",
   "playstyleTags": ["narrative", "action", "explore"],
   "settingTags": ["space"],
   "gallery": [
@@ -16819,7 +16819,7 @@ registerSystem("the-quiet-year", {
   "free": false,
   "edition": "2nd ed. (2019)",
   "foundryStatus": "None",
-  "heroImage": "https://buriedwithoutceremony.com/wp-content/uploads/2019/11/quiet-year-banner-scaled.jpg",
+  "heroImage": "https://buriedwithoutceremony.com/wp-content/uploads/2019/11/The-Quiet-Year.png",
   "playstyleTags": ["worldbuild", "narrative", "survival"],
   "settingTags": ["postapoc", "fantasy"],
   "gallery": [
@@ -18376,7 +18376,7 @@ registerSystem("urban-shadows", {
   "free": false,
   "edition": "2nd Edition (2022)",
   "foundryStatus": "Community",
-  "heroImage": "https://magpiegames.com/cdn/shop/files/Urban-Shadows-Core_1.jpg",
+  "heroImage": "https://magpiegames.com/cdn/shop/collections/US2Ecollection.png?v=1746477095",
   "playstyleTags": ["narrative", "social", "horror"],
   "settingTags": ["urban-fantasy", "modern"],
   "gallery": [

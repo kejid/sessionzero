@@ -12,7 +12,7 @@ registerSystem("imperium-maledictum", {
   "free": false,
   "edition": null,
   "foundryStatus": "Official",
-  "heroImage": "https://image.nobleknight.com/c/jpg1500/cb72700.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/imperium-maledictum.jpg",
   "playstyleTags": ["combat", "mystery", "tactical"],
   "settingTags": ["space"],
   "gallery": [

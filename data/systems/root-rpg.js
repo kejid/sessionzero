@@ -12,7 +12,7 @@ registerSystem("root-rpg", {
   "free": false,
   "edition": null,
   "foundryStatus": "Official",
-  "heroImage": "https://magpiegames.com/cdn/shop/files/Root-Core_1.jpg?v=1734448179",
+  "heroImage": "https://magpiegames.com/cdn/shop/collections/MPG-Website-slider-Root-colored-1.jpg?v=1724344612",
   "playstyleTags": ["narrative", "action", "explore"],
   "settingTags": ["fantasy"],
   "gallery": [

@@ -12,7 +12,7 @@ registerSystem("the-quiet-year", {
   "free": false,
   "edition": "2nd ed. (2019)",
   "foundryStatus": "None",
-  "heroImage": "https://buriedwithoutceremony.com/wp-content/uploads/2019/11/quiet-year-banner-scaled.jpg",
+  "heroImage": "https://buriedwithoutceremony.com/wp-content/uploads/2019/11/The-Quiet-Year.png",
   "playstyleTags": ["worldbuild", "narrative", "survival"],
   "settingTags": ["postapoc", "fantasy"],
   "gallery": [
