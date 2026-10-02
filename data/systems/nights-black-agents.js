@@ -16,9 +16,9 @@ registerSystem("nights-black-agents", {
   "playstyleTags": ["mystery", "action", "horror"],
   "settingTags": ["modern", "weird"],
   "gallery": [
-    { "src": "https://pelgranepress.com/wp-content/uploads/2020/04/Hardcover-PELGN05.jpg" },
-    { "src": "https://pelgranepress.com/wp-content/uploads/2011/12/Draculas-Castle_350.png" },
-    { "src": "https://pelgranepress.com/wp-content/uploads/2011/12/ZZ_Spread-pages-186_187-Carfax1.png" }
+    { "src": "https://sessionzero.games/images/systems/nights-black-agents-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/nights-black-agents-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/nights-black-agents-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://pelgranepress.com/product/nights-black-agents/", "fmt": "Web" },

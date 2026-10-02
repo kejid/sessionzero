@@ -21,13 +21,13 @@ registerSystem("13th-age", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://pelgranepress.com/wp-content/uploads/2020/04/Hardcover-PEL13A02.jpg"
+      "src": "https://sessionzero.games/images/systems/13th-age-g1.jpg"
     },
     {
-      "src": "https://pelgranepress.com/wp-content/uploads/2020/04/Hardcover-PEL13A04.jpg"
+      "src": "https://sessionzero.games/images/systems/13th-age-g2.jpg"
     },
     {
-      "src": "https://pelgranepress.com/wp-content/uploads/2020/04/Softcover-PEL13A06.jpg"
+      "src": "https://sessionzero.games/images/systems/13th-age-g3.jpg"
     }
   ],
   "resources": [

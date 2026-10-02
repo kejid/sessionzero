@@ -39,13 +39,13 @@ registerSystem("13th-age", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://pelgranepress.com/wp-content/uploads/2020/04/Hardcover-PEL13A02.jpg"
+      "src": "https://sessionzero.games/images/systems/13th-age-g1.jpg"
     },
     {
-      "src": "https://pelgranepress.com/wp-content/uploads/2020/04/Hardcover-PEL13A04.jpg"
+      "src": "https://sessionzero.games/images/systems/13th-age-g2.jpg"
     },
     {
-      "src": "https://pelgranepress.com/wp-content/uploads/2020/04/Softcover-PEL13A06.jpg"
+      "src": "https://sessionzero.games/images/systems/13th-age-g3.jpg"
     }
   ],
   "resources": [
@@ -11628,9 +11628,9 @@ registerSystem("nights-black-agents", {
   "playstyleTags": ["mystery", "action", "horror"],
   "settingTags": ["modern", "weird"],
   "gallery": [
-    { "src": "https://pelgranepress.com/wp-content/uploads/2020/04/Hardcover-PELGN05.jpg" },
-    { "src": "https://pelgranepress.com/wp-content/uploads/2011/12/Draculas-Castle_350.png" },
-    { "src": "https://pelgranepress.com/wp-content/uploads/2011/12/ZZ_Spread-pages-186_187-Carfax1.png" }
+    { "src": "https://sessionzero.games/images/systems/nights-black-agents-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/nights-black-agents-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/nights-black-agents-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://pelgranepress.com/product/nights-black-agents/", "fmt": "Web" },
@@ -17342,13 +17342,13 @@ registerSystem("trail-of-cthulhu", {
   "settingTags": ["historical", "weird"],
   "gallery": [
     {
-      "src": "https://pelgranepress.com/wp-content/uploads/2020/04/Hardcover-PELGT16.jpg"
+      "src": "https://sessionzero.games/images/systems/trail-of-cthulhu-g1.jpg"
     },
     {
-      "src": "https://pelgranepress.com/wp-content/uploads/2020/04/Hardcover-PELGT34.jpg"
+      "src": "https://sessionzero.games/images/systems/trail-of-cthulhu-g2.jpg"
     },
     {
-      "src": "https://pelgranepress.com/wp-content/uploads/2020/04/Hardcover-PELGT37.jpg"
+      "src": "https://sessionzero.games/images/systems/trail-of-cthulhu-g3.jpg"
     }
   ],
   "resources": [

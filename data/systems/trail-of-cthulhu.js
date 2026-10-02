@@ -20,13 +20,13 @@ registerSystem("trail-of-cthulhu", {
   "settingTags": ["historical", "weird"],
   "gallery": [
     {
-      "src": "https://pelgranepress.com/wp-content/uploads/2020/04/Hardcover-PELGT16.jpg"
+      "src": "https://sessionzero.games/images/systems/trail-of-cthulhu-g1.jpg"
     },
     {
-      "src": "https://pelgranepress.com/wp-content/uploads/2020/04/Hardcover-PELGT34.jpg"
+      "src": "https://sessionzero.games/images/systems/trail-of-cthulhu-g2.jpg"
     },
     {
-      "src": "https://pelgranepress.com/wp-content/uploads/2020/04/Hardcover-PELGT37.jpg"
+      "src": "https://sessionzero.games/images/systems/trail-of-cthulhu-g3.jpg"
     }
   ],
   "resources": [
