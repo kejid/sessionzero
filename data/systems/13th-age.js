@@ -12,7 +12,7 @@ registerSystem("13th-age", {
   "edition": null,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://pelgranepress.com/wp-content/uploads/2020/04/Hardcover-PEL13A01.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/13th-age.jpg",
   "playstyleTags": [
     "combat",
     "tactical",

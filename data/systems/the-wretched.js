@@ -10,7 +10,7 @@ registerSystem("the-wretched", {
   "dice": "d6 + playing cards + Jenga tower",
   "players": "1",
   "complexity": 1,
-  "heroImage": "https://img.itch.zone/aW1nLzMyNjgzOTMucG5n/original/kYEj5R.png",
+  "heroImage": "https://img.itch.zone/aW1nLzQ2OTEyMjkucG5n/original/frNUeL.png",
   "playstyleTags": [
     "horror",
     "survival",

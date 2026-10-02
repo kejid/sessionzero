@@ -11,7 +11,7 @@ registerSystem("trail-of-cthulhu", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://pelgranepress.com/wp-content/uploads/2020/04/Softcover-PELGT01-scaled.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/trail-of-cthulhu.jpg",
   "playstyleTags": [
     "mystery",
     "horror",

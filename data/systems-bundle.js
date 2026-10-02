@@ -30,7 +30,7 @@ registerSystem("13th-age", {
   "edition": null,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://pelgranepress.com/wp-content/uploads/2020/04/Hardcover-PEL13A01.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/13th-age.jpg",
   "playstyleTags": [
     "combat",
     "tactical",
@@ -16418,7 +16418,7 @@ registerSystem("ten-candles", {
   "players": "3–5",
   "complexity": 1,
   "foundryStatus": "None",
-  "heroImage": "https://images.squarespace-cdn.com/content/v1/54cbdf08e4b0b8ab2e74ea9f/1619467732729-5U8IZCJMY3ZTMC6KKUR8/tencandles-10.png",
+  "heroImage": "https://sessionzero.games/images/heroes/ten-candles.jpg",
   "playstyleTags": [
     "narrative",
     "horror",
@@ -16916,7 +16916,7 @@ registerSystem("the-wretched", {
   "dice": "d6 + playing cards + Jenga tower",
   "players": "1",
   "complexity": 1,
-  "heroImage": "https://img.itch.zone/aW1nLzMyNjgzOTMucG5n/original/kYEj5R.png",
+  "heroImage": "https://img.itch.zone/aW1nLzQ2OTEyMjkucG5n/original/frNUeL.png",
   "playstyleTags": [
     "horror",
     "survival",
@@ -17333,7 +17333,7 @@ registerSystem("trail-of-cthulhu", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://pelgranepress.com/wp-content/uploads/2020/04/Softcover-PELGT01-scaled.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/trail-of-cthulhu.jpg",
   "playstyleTags": [
     "mystery",
     "horror",
