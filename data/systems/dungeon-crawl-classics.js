@@ -11,7 +11,7 @@ registerSystem("dungeon-crawl-classics", {
   "players": "3–6",
   "complexity": 3,
   "foundryStatus": "Community",
-  "heroImage": "https://image.nobleknight.com/g/jpg1500/gmg5070.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/dungeon-crawl-classics.jpg",
   "playstyleTags": [
     "combat",
     "explore",

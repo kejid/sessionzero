@@ -11,7 +11,7 @@ registerSystem("dune-imperium", {
   "complexity": 3,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://i.shgcdn.com/04c4131a-6b3d-4501-af47-140c1f068af9/-/format/auto/-/preview/3000x3000/-/quality/lighter/",
+  "heroImage": "https://sessionzero.games/images/heroes/dune-imperium.jpg",
   "playstyleTags": [
     "social",
     "narrative",

@@ -12,7 +12,7 @@ registerSystem("deadlands", {
   "free": false,
   "edition": "Weird West (2021, SWADE)",
   "foundryStatus": "Official",
-  "heroImage": "https://image.nobleknight.com/s/jpg1500/s2p10227.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/deadlands.jpg",
   "playstyleTags": ["action", "horror", "combat"],
   "settingTags": ["weird", "historical"],
   "gallery": [

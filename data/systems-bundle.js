@@ -300,7 +300,7 @@ registerSystem("advanced-fighting-fantasy", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Official",
-  "heroImage": "https://image.nobleknight.com/p/jpg1500/psicb7001.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/advanced-fighting-fantasy.jpg",
   "playstyleTags": [
     "combat",
     "explore",
@@ -928,7 +928,7 @@ registerSystem("ars-magica", {
   "free": true,
   "edition": "Definitive (5E)",
   "foundryStatus": "Community",
-  "heroImage": "https://www.atlas-games.com/atlas-cms/resources/armdef-3d-full-white.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/ars-magica.jpg",
   "playstyleTags": ["worldbuild", "narrative", "explore"],
   "settingTags": ["fantasy", "historical"],
   "gallery": [
@@ -1033,7 +1033,7 @@ registerSystem("avatar-legends", {
   "free": false,
   "edition": null,
   "foundryStatus": "Community",
-  "heroImage": "https://magpiegames.com/cdn/shop/files/Avatar-Core_1.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/avatar-legends.jpg",
   "playstyleTags": ["narrative", "action", "social"],
   "settingTags": ["fantasy"],
   "gallery": [
@@ -1237,7 +1237,7 @@ registerSystem("basic-fantasy", {
   "edition": "B/X",
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://image.nobleknight.com/b/jpg1500/basicfantasy4thed.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/basic-fantasy.jpg",
   "playstyleTags": [
     "explore",
     "combat",
@@ -1377,7 +1377,7 @@ registerSystem("black-sword-hack", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://www.themerrymushmen.com/wp-content/uploads/2023/01/BSH-COVER.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/black-sword-hack.jpg",
   "playstyleTags": [
     "combat",
     "explore",
@@ -1885,7 +1885,7 @@ registerSystem("brindlewood-bay", {
   "free": false,
   "edition": null,
   "foundryStatus": "Community",
-  "heroImage": "https://image.nobleknight.com/2/jpg1500/24090740087h.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/brindlewood-bay.jpg",
   "playstyleTags": ["mystery", "narrative", "social"],
   "settingTags": ["modern", "weird"],
   "gallery": [
@@ -2468,7 +2468,7 @@ registerSystem("castles-and-crusades", {
   "edition": "AD&D",
   "free": true,
   "foundryStatus": "Official",
-  "heroImage": "https://image.nobleknight.com/i/jpg1500/imptlg80107.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/castles-and-crusades.jpg",
   "playstyleTags": [
     "combat",
     "explore",
@@ -3798,7 +3798,7 @@ registerSystem("deadlands", {
   "free": false,
   "edition": "Weird West (2021, SWADE)",
   "foundryStatus": "Official",
-  "heroImage": "https://image.nobleknight.com/s/jpg1500/s2p10227.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/deadlands.jpg",
   "playstyleTags": ["action", "horror", "combat"],
   "settingTags": ["weird", "historical"],
   "gallery": [
@@ -5140,7 +5140,7 @@ registerSystem("dune-imperium", {
   "complexity": 3,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://i.shgcdn.com/04c4131a-6b3d-4501-af47-140c1f068af9/-/format/auto/-/preview/3000x3000/-/quality/lighter/",
+  "heroImage": "https://sessionzero.games/images/heroes/dune-imperium.jpg",
   "playstyleTags": [
     "social",
     "narrative",
@@ -5303,7 +5303,7 @@ registerSystem("dungeon-crawl-classics", {
   "players": "3–6",
   "complexity": 3,
   "foundryStatus": "Community",
-  "heroImage": "https://image.nobleknight.com/g/jpg1500/gmg5070.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/dungeon-crawl-classics.jpg",
   "playstyleTags": [
     "combat",
     "explore",
@@ -5482,7 +5482,7 @@ registerSystem("dungeon-world", {
   "complexity": 1,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://www.burningwheel.com/cdn/shop/files/20_DungeonWorld__54219.1690575123.1280.1280.jpg?v=1770530451",
+  "heroImage": "https://sessionzero.games/images/heroes/dungeon-world.jpg",
   "playstyleTags": [
     "narrative",
     "explore",
@@ -6368,7 +6368,7 @@ registerSystem("fiasco", {
   "complexity": 1,
   "free": false,
   "foundryStatus": "None",
-  "heroImage": "https://bullypulpitgames.com/cdn/shop/products/FiascoClassic-grey.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/fiasco.jpg",
   "playstyleTags": [
     "narrative",
     "combat",
@@ -6904,7 +6904,7 @@ registerSystem("genesys", {
   "free": false,
   "edition": null,
   "foundryStatus": "Community",
-  "heroImage": "https://image.nobleknight.com/f/jpg1500/ffggns01.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/genesys.jpg",
   "playstyleTags": ["narrative", "action", "social"],
   "settingTags": ["fantasy", "cyberpunk"],
   "gallery": [
@@ -8973,7 +8973,7 @@ registerSystem("labyrinth-lord", {
   "edition": "B/X",
   "free": true,
   "foundryStatus": "None",
-  "heroImage": "https://image.nobleknight.com/i/jpg1500/impgbn1001.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/labyrinth-lord.jpg",
   "playstyleTags": [
     "combat",
     "explore",
@@ -9742,7 +9742,7 @@ registerSystem("lotfp", {
   "edition": "B/X",
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://us.lotfp.com/store/image/cache/catalog/CoverDisplay2-500x500.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/lotfp.jpg",
   "playstyleTags": [
     "horror",
     "explore",
@@ -9909,7 +9909,7 @@ registerSystem("mage-the-ascension", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Community",
-  "heroImage": "https://image.nobleknight.com/m/jpg1500/mta20thpremium.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/mage-the-ascension.jpg",
   "playstyleTags": [
     "narrative",
     "social",
@@ -10240,7 +10240,7 @@ registerSystem("masks", {
   "players": "3–5",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://magpiegames.com/cdn/shop/files/Masks-Core-softcover_1.jpg?v=1734448458",
+  "heroImage": "https://sessionzero.games/images/heroes/masks.jpg",
   "playstyleTags": [
     "narrative",
     "social",
@@ -11894,7 +11894,7 @@ registerSystem("numenera", {
   "complexity": 3,
   "free": true,
   "foundryStatus": "Official",
-  "heroImage": "https://www.montecookgames.com/store/wp-content/uploads/2018/04/N2-Slipcase-Set-Tags-2-1.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/numenera.jpg",
   "playstyleTags": [
     "narrative",
     "combat",
@@ -12403,7 +12403,7 @@ registerSystem("osric-3", {
   "edition": "AD&D 1e",
   "free": true,
   "foundryStatus": "Official",
-  "heroImage": "https://www.mythmeregames.com/cdn/shop/files/PDFCovers3.png",
+  "heroImage": "https://sessionzero.games/images/heroes/osric-3.jpg",
   "playstyleTags": [
     "explore",
     "combat",
@@ -13997,7 +13997,7 @@ registerSystem("scum-and-villainy", {
   "players": "3–5",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://evilhat.com/wp-content/uploads/2018/06/SV_1.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/scum-and-villainy.jpg",
   "playstyleTags": [
     "narrative",
     "social",
@@ -14164,7 +14164,7 @@ registerSystem("sentinel-comics", {
   "free": false,
   "edition": null,
   "foundryStatus": "Community",
-  "heroImage": "https://shop.greaterthangames.com/cdn/shop/files/SRPG-CORE-1.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/sentinel-comics.jpg",
   "playstyleTags": ["action", "combat", "narrative"],
   "settingTags": ["modern"],
   "gallery": [
@@ -14896,7 +14896,7 @@ registerSystem("star-trek-adventures", {
   "complexity": 3,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://cdn.shopify.com/s/files/1/0225/4035/files/star-trek-adventures-second-edition-core-rulebook-star-trek-adventures-modiphius-entertainment-267752.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/star-trek-adventures.jpg",
   "playstyleTags": [
     "narrative",
     "social",
@@ -15660,7 +15660,7 @@ registerSystem("stars-without-number", {
   "edition": "B/X",
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://image.nobleknight.com/s/jpg1500/swnrevised.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/stars-without-number.jpg",
   "playstyleTags": [
     "explore",
     "sandbox",
@@ -15813,7 +15813,7 @@ registerSystem("sword-and-wizardry", {
   "edition": "OD&D",
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://www.mythmeregames.com/cdn/shop/files/Swords_Wizardry_f97618b8-689a-4b99-a580-ca1a2182a1cc.png?v=1707749908",
+  "heroImage": "https://sessionzero.games/images/heroes/sword-and-wizardry.jpg",
   "playstyleTags": [
     "combat",
     "explore",
@@ -15990,7 +15990,7 @@ registerSystem("symbaroum", {
   "free": false,
   "edition": null,
   "foundryStatus": "Official",
-  "heroImage": "https://image.nobleknight.com/i/jpg1500/impmuh100001.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/symbaroum.jpg",
   "playstyleTags": ["explore", "mystery", "horror"],
   "settingTags": ["fantasy", "weird"],
   "gallery": [
@@ -16566,7 +16566,7 @@ registerSystem("the-black-hack", {
   "players": "3–6",
   "complexity": 1,
   "foundryStatus": "Community",
-  "heroImage": "https://image.nobleknight.com/b/jpg1500/blackhack2.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/the-black-hack.jpg",
   "playstyleTags": [
     "combat",
     "explore",
@@ -19316,7 +19316,7 @@ registerSystem("werewolf-the-apocalypse", {
   "free": false,
   "edition": null,
   "foundryStatus": "Community",
-  "heroImage": "https://image.nobleknight.com/w/jpg1500/wta20onyx.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/werewolf-the-apocalypse.jpg",
   "playstyleTags": ["combat", "narrative", "horror"],
   "settingTags": ["modern", "urban-fantasy"],
   "gallery": [
@@ -19587,7 +19587,7 @@ registerSystem("white-box-fmag", {
   "edition": "OD&D",
   "free": true,
   "foundryStatus": "None",
-  "heroImage": "https://image.nobleknight.com/w/jpg1500/whiteboxfmag.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/white-box-fmag.jpg",
   "playstyleTags": [
     "combat",
     "explore",
@@ -19922,7 +19922,7 @@ registerSystem("worlds-without-number", {
   "edition": "B/X",
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://image.nobleknight.com/2/jpg1500/2370011105765worlds.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/worlds-without-number.jpg",
   "playstyleTags": [
     "explore",
     "combat",
@@ -20076,7 +20076,7 @@ registerSystem("wrath-and-glory", {
   "complexity": 3,
   "free": true,
   "foundryStatus": "Official",
-  "heroImage": "https://image.nobleknight.com/c/jpg1500/cb72600.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/wrath-and-glory.jpg",
   "playstyleTags": [
     "combat",
     "tactical",

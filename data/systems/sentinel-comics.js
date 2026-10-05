@@ -12,7 +12,7 @@ registerSystem("sentinel-comics", {
   "free": false,
   "edition": null,
   "foundryStatus": "Community",
-  "heroImage": "https://shop.greaterthangames.com/cdn/shop/files/SRPG-CORE-1.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/sentinel-comics.jpg",
   "playstyleTags": ["action", "combat", "narrative"],
   "settingTags": ["modern"],
   "gallery": [

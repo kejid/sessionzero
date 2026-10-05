@@ -12,7 +12,7 @@ registerSystem("genesys", {
   "free": false,
   "edition": null,
   "foundryStatus": "Community",
-  "heroImage": "https://image.nobleknight.com/f/jpg1500/ffggns01.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/genesys.jpg",
   "playstyleTags": ["narrative", "action", "social"],
   "settingTags": ["fantasy", "cyberpunk"],
   "gallery": [

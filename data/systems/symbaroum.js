@@ -12,7 +12,7 @@ registerSystem("symbaroum", {
   "free": false,
   "edition": null,
   "foundryStatus": "Official",
-  "heroImage": "https://image.nobleknight.com/i/jpg1500/impmuh100001.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/symbaroum.jpg",
   "playstyleTags": ["explore", "mystery", "horror"],
   "settingTags": ["fantasy", "weird"],
   "gallery": [

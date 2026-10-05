@@ -12,7 +12,7 @@ registerSystem("avatar-legends", {
   "free": false,
   "edition": null,
   "foundryStatus": "Community",
-  "heroImage": "https://magpiegames.com/cdn/shop/files/Avatar-Core_1.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/avatar-legends.jpg",
   "playstyleTags": ["narrative", "action", "social"],
   "settingTags": ["fantasy"],
   "gallery": [

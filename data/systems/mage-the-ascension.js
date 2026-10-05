@@ -10,7 +10,7 @@ registerSystem("mage-the-ascension", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Community",
-  "heroImage": "https://image.nobleknight.com/m/jpg1500/mta20thpremium.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/mage-the-ascension.jpg",
   "playstyleTags": [
     "narrative",
     "social",

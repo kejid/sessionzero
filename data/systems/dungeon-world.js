@@ -11,7 +11,7 @@ registerSystem("dungeon-world", {
   "complexity": 1,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://www.burningwheel.com/cdn/shop/files/20_DungeonWorld__54219.1690575123.1280.1280.jpg?v=1770530451",
+  "heroImage": "https://sessionzero.games/images/heroes/dungeon-world.jpg",
   "playstyleTags": [
     "narrative",
     "explore",

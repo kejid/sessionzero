@@ -12,7 +12,7 @@ registerSystem("werewolf-the-apocalypse", {
   "free": false,
   "edition": null,
   "foundryStatus": "Community",
-  "heroImage": "https://image.nobleknight.com/w/jpg1500/wta20onyx.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/werewolf-the-apocalypse.jpg",
   "playstyleTags": ["combat", "narrative", "horror"],
   "settingTags": ["modern", "urban-fantasy"],
   "gallery": [

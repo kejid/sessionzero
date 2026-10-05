@@ -12,7 +12,7 @@ registerSystem("labyrinth-lord", {
   "edition": "B/X",
   "free": true,
   "foundryStatus": "None",
-  "heroImage": "https://image.nobleknight.com/i/jpg1500/impgbn1001.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/labyrinth-lord.jpg",
   "playstyleTags": [
     "combat",
     "explore",

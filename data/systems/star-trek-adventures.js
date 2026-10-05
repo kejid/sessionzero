@@ -11,7 +11,7 @@ registerSystem("star-trek-adventures", {
   "complexity": 3,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://cdn.shopify.com/s/files/1/0225/4035/files/star-trek-adventures-second-edition-core-rulebook-star-trek-adventures-modiphius-entertainment-267752.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/star-trek-adventures.jpg",
   "playstyleTags": [
     "narrative",
     "social",

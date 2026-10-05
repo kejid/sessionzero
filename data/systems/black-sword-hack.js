@@ -11,7 +11,7 @@ registerSystem("black-sword-hack", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://www.themerrymushmen.com/wp-content/uploads/2023/01/BSH-COVER.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/black-sword-hack.jpg",
   "playstyleTags": [
     "combat",
     "explore",

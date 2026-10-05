@@ -10,7 +10,7 @@ registerSystem("scum-and-villainy", {
   "players": "3–5",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://evilhat.com/wp-content/uploads/2018/06/SV_1.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/scum-and-villainy.jpg",
   "playstyleTags": [
     "narrative",
     "social",

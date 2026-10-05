@@ -11,7 +11,7 @@ registerSystem("advanced-fighting-fantasy", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Official",
-  "heroImage": "https://image.nobleknight.com/p/jpg1500/psicb7001.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/advanced-fighting-fantasy.jpg",
   "playstyleTags": [
     "combat",
     "explore",

@@ -11,7 +11,7 @@ registerSystem("fiasco", {
   "complexity": 1,
   "free": false,
   "foundryStatus": "None",
-  "heroImage": "https://bullypulpitgames.com/cdn/shop/products/FiascoClassic-grey.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/fiasco.jpg",
   "playstyleTags": [
     "narrative",
     "combat",

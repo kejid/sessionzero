@@ -12,7 +12,7 @@ registerSystem("osric-3", {
   "edition": "AD&D 1e",
   "free": true,
   "foundryStatus": "Official",
-  "heroImage": "https://www.mythmeregames.com/cdn/shop/files/PDFCovers3.png",
+  "heroImage": "https://sessionzero.games/images/heroes/osric-3.jpg",
   "playstyleTags": [
     "explore",
     "combat",

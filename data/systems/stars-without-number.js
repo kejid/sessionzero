@@ -13,7 +13,7 @@ registerSystem("stars-without-number", {
   "edition": "B/X",
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://image.nobleknight.com/s/jpg1500/swnrevised.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/stars-without-number.jpg",
   "playstyleTags": [
     "explore",
     "sandbox",

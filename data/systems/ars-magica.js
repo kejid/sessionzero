@@ -12,7 +12,7 @@ registerSystem("ars-magica", {
   "free": true,
   "edition": "Definitive (5E)",
   "foundryStatus": "Community",
-  "heroImage": "https://www.atlas-games.com/atlas-cms/resources/armdef-3d-full-white.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/ars-magica.jpg",
   "playstyleTags": ["worldbuild", "narrative", "explore"],
   "settingTags": ["fantasy", "historical"],
   "gallery": [

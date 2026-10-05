@@ -10,7 +10,7 @@ registerSystem("the-black-hack", {
   "players": "3–6",
   "complexity": 1,
   "foundryStatus": "Community",
-  "heroImage": "https://image.nobleknight.com/b/jpg1500/blackhack2.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/the-black-hack.jpg",
   "playstyleTags": [
     "combat",
     "explore",

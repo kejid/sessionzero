@@ -12,7 +12,7 @@ registerSystem("sword-and-wizardry", {
   "edition": "OD&D",
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://www.mythmeregames.com/cdn/shop/files/Swords_Wizardry_f97618b8-689a-4b99-a580-ca1a2182a1cc.png?v=1707749908",
+  "heroImage": "https://sessionzero.games/images/heroes/sword-and-wizardry.jpg",
   "playstyleTags": [
     "combat",
     "explore",

@@ -11,7 +11,7 @@ registerSystem("wrath-and-glory", {
   "complexity": 3,
   "free": true,
   "foundryStatus": "Official",
-  "heroImage": "https://image.nobleknight.com/c/jpg1500/cb72600.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/wrath-and-glory.jpg",
   "playstyleTags": [
     "combat",
     "tactical",

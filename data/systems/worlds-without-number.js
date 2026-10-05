@@ -13,7 +13,7 @@ registerSystem("worlds-without-number", {
   "edition": "B/X",
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://image.nobleknight.com/2/jpg1500/2370011105765worlds.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/worlds-without-number.jpg",
   "playstyleTags": [
     "explore",
     "combat",

@@ -10,7 +10,7 @@ registerSystem("masks", {
   "players": "3–5",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://magpiegames.com/cdn/shop/files/Masks-Core-softcover_1.jpg?v=1734448458",
+  "heroImage": "https://sessionzero.games/images/heroes/masks.jpg",
   "playstyleTags": [
     "narrative",
     "social",

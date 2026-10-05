@@ -11,7 +11,7 @@ registerSystem("numenera", {
   "complexity": 3,
   "free": true,
   "foundryStatus": "Official",
-  "heroImage": "https://www.montecookgames.com/store/wp-content/uploads/2018/04/N2-Slipcase-Set-Tags-2-1.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/numenera.jpg",
   "playstyleTags": [
     "narrative",
     "combat",

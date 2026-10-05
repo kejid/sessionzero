@@ -12,7 +12,7 @@ registerSystem("white-box-fmag", {
   "edition": "OD&D",
   "free": true,
   "foundryStatus": "None",
-  "heroImage": "https://image.nobleknight.com/w/jpg1500/whiteboxfmag.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/white-box-fmag.jpg",
   "playstyleTags": [
     "combat",
     "explore",

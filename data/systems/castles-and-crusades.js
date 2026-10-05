@@ -12,7 +12,7 @@ registerSystem("castles-and-crusades", {
   "edition": "AD&D",
   "free": true,
   "foundryStatus": "Official",
-  "heroImage": "https://image.nobleknight.com/i/jpg1500/imptlg80107.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/castles-and-crusades.jpg",
   "playstyleTags": [
     "combat",
     "explore",

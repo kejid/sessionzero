@@ -12,7 +12,7 @@ registerSystem("basic-fantasy", {
   "edition": "B/X",
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://image.nobleknight.com/b/jpg1500/basicfantasy4thed.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/basic-fantasy.jpg",
   "playstyleTags": [
     "explore",
     "combat",

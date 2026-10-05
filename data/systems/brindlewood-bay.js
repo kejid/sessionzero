@@ -12,7 +12,7 @@ registerSystem("brindlewood-bay", {
   "free": false,
   "edition": null,
   "foundryStatus": "Community",
-  "heroImage": "https://image.nobleknight.com/2/jpg1500/24090740087h.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/brindlewood-bay.jpg",
   "playstyleTags": ["mystery", "narrative", "social"],
   "settingTags": ["modern", "weird"],
   "gallery": [
