@@ -59,6 +59,7 @@ const SZ_STR = {
     pick_none: 'Clear',
     pick_search: 'Search systems…',
     edit_list: 'Edit list',
+    pick_empty_hint: 'Your shortlist is empty. Tap + on games in the catalog, or tick them below.',
     list_block_title: 'Just a list',
     list_block_desc: 'Read-only — they browse the games and open full pages. No voting, no signup, no server.',
     vote_block_title: 'Collect votes',
@@ -123,6 +124,7 @@ const SZ_STR = {
     pick_none: 'Снять все',
     pick_search: 'Поиск систем…',
     edit_list: 'Изменить список',
+    pick_empty_hint: 'Шортлист пуст. Нажми + на играх в каталоге или отметь их ниже.',
     list_block_title: 'Просто список',
     list_block_desc: 'Только просмотр — листают игры и открывают полные страницы. Без голосования, регистрации и сервера.',
     vote_block_title: 'Собрать голоса',
@@ -544,7 +546,7 @@ function szListUrl(ids) {
   return SZ_API ? (SZ_API + '/l/' + ids.join(',') + '?l=' + szShareLang()) : (location.origin + location.pathname + '#list=' + ids.join(','));
 }
 function szCopyListLink() {
-  const ids = szListIds || (szPick ? [...szPick] : szSelectedSystems());
+  const ids = szListIds || [...szGetPick()];
   if (!ids.length) return;
   const url = szListUrl(ids);
   const done = () => { if (typeof showToast === 'function') showToast(szT('copy_list_done')); };
@@ -589,14 +591,6 @@ document.addEventListener('langchange', () => {
 });
 
 // ============================ CREATE flow ============================
-function szSelectedSystems() {
-  // Official, currently-visible systems only. Custom systems live in the GM's
-  // localStorage and won't resolve for anyone else, so they can't be shared.
-  const hidden = (typeof hiddenSystems !== 'undefined') ? hiddenSystems : [];
-  const all = (typeof SYSTEM_IDS !== 'undefined') ? SYSTEM_IDS : [];
-  const visible = all.filter(id => !hidden.includes(id));
-  return visible.length ? visible : all;
-}
 
 // ---- inline system picker (edit the shared list right in the panel) ----
 // All official systems, grouped exactly like the catalog (localized via t()).
@@ -608,19 +602,36 @@ function szAllPickIds() {
   szPickGroups().forEach(g => g.ids.forEach(id => { if (SYSTEMS_DATA[id]) ids.push(id); }));
   return ids;
 }
-// Persist the share selection across reloads.
+// The share selection doubles as the catalog's shortlist: "+" on cards, the
+// shortlist bar and this panel all edit the same set. Persisted across reloads.
+// It starts empty — the GM builds it — so an untouched catalog never shares
+// all 100+ games by accident.
 function szLoadPick() {
   try {
-    const raw = JSON.parse(localStorage.getItem('sz-picker-selection') || 'null');
-    if (Array.isArray(raw)) {
-      const f = raw.filter(id => SYSTEMS_DATA[id]);
-      if (f.length) return new Set(f);
+    const raw = JSON.parse(localStorage.getItem('sz-shortlist') || 'null');
+    if (Array.isArray(raw)) return new Set(raw.filter(id => SYSTEMS_DATA[id]));
+    // Migrate the old picker selection, unless it was just the old "all on" default.
+    const old = JSON.parse(localStorage.getItem('sz-picker-selection') || 'null');
+    if (Array.isArray(old)) {
+      const f = old.filter(id => SYSTEMS_DATA[id]);
+      if (f.length && f.length < szAllPickIds().length) return new Set(f);
     }
   } catch (e) {}
-  return new Set(szAllPickIds());
+  return new Set();
 }
+function szGetPick() {
+  if (szPick === null) szPick = szLoadPick();
+  return szPick;
+}
+// Persist, then let the catalog refresh its "+" buttons and shortlist bar.
 function szSavePick() {
-  try { localStorage.setItem('sz-picker-selection', JSON.stringify([...szPick])); } catch (e) {}
+  try { localStorage.setItem('sz-shortlist', JSON.stringify([...szPick])); } catch (e) {}
+  if (typeof updateShortlistUI === 'function') updateShortlistUI();
+}
+function szAddPicks(ids) {
+  const pick = szGetPick();
+  ids.forEach(id => { if (SYSTEMS_DATA[id]) pick.add(id); });
+  szSavePick();
 }
 // Selection count label — handles EN singular without declension headaches.
 function szCountLabel(n) {
@@ -649,7 +660,8 @@ function szPickerHTML() {
   }).join('');
 }
 function szTogglePick(id, on) {
-  if (on) szPick.add(id); else szPick.delete(id);
+  const pick = szGetPick();
+  if (on) pick.add(id); else pick.delete(id);
   szSavePick();
   szUpdatePickUI();
 }
@@ -695,6 +707,8 @@ function szFilterPicker(q) {
   });
 }
 function szUpdatePickUI() {
+  const hint = document.querySelector('#sz-room .sz-pick-empty');
+  if (hint) hint.hidden = szPick.size > 0;
   const c = document.getElementById('sz-pick-count');
   if (c) c.textContent = szCountLabel(szPick.size);
   const disabled = szPick.size === 0;
@@ -711,17 +725,19 @@ function szOpenCreate(presetIds) {
   if (Array.isArray(presetIds)) {
     szPick = new Set(presetIds.filter(id => SYSTEMS_DATA[id]));
     szSavePick();
-  } else if (szPick === null) szPick = szLoadPick(); // restore last selection, else all on
+  } else szGetPick(); // restore the shortlist (empty on first visit)
   const myRooms = szMyRooms();
+  const empty = szPick.size === 0;
 
   // Inline picker — collapsed by default into a summary so the share actions stay
   // above the fold; expand to curate. Native <details> = free a11y + keyboard.
   const picker = `
-    <details class="sz-share-block sz-pick-details">
+    <details class="sz-share-block sz-pick-details"${empty ? ' open' : ''}>
       <summary class="sz-pick-summary">
         <span class="sz-count" id="sz-pick-count">${szEsc(szCountLabel(szPick.size))}</span>
         <span class="sz-pick-toggle">${szEsc(szT('edit_list'))} <i data-lucide="chevron-down"></i></span>
       </summary>
+      <p class="sz-hint sz-pick-empty"${empty ? '' : ' hidden'}>${szEsc(szT('pick_empty_hint'))}</p>
       <div class="sz-pick-tools">
         <input class="sz-name-input sz-pick-search" type="text" placeholder="${szEsc(szT('pick_search'))}" oninput="szFilterPicker(this.value)">
         <span class="sz-pick-allnone">
@@ -777,7 +793,7 @@ function szOpenCreate(presetIds) {
 async function szDoCreate() {
   const titleEl = document.getElementById('sz-room-title');
   const title = titleEl ? titleEl.value.trim() : '';
-  const list = szPick ? [...szPick] : szSelectedSystems();
+  const list = [...szGetPick()];
   if (!list.length) return;
   try {
     const { roomId } = await szApi('/room', { method: 'POST', body: JSON.stringify({ title, list }) });
@@ -840,6 +856,7 @@ function szInit() {
   // sharing needs no backend. (Vote creation inside is gated on the API.)
   const btn = document.getElementById('sz-create-btn');
   if (btn) btn.style.display = '';
+  if (typeof updateShortlistUI === 'function') updateShortlistUI();
   szRoute();
 }
 window.addEventListener('hashchange', szRoute);

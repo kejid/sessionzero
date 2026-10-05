@@ -211,6 +211,10 @@ function renderSystemPage(id, sys) {
     return `<section id="${id}" class="system-page">
     ${buildHeroBanner(id, sys)}
     <p class="tagline">${localField(sys, 'tagline')}</p>
+    <button type="button" class="sys-pick-btn" data-pick-id="${id}" onclick="toggleShortlist('${id}', event)">
+        <i data-lucide="plus" class="ic-add" aria-hidden="true"></i><i data-lucide="check" class="ic-on" aria-hidden="true"></i>
+        <span class="lbl-add" data-i18n="shortlist_add">${t('shortlist_add')}</span><span class="lbl-on" data-i18n="shortlist_in">${t('shortlist_in')}</span>
+    </button>
     ${(sys.free || sys.edition) ? `<div class="system-badges">
         ${sys.free ? `<span class="sys-badge sys-badge-free"><i data-lucide="gift"></i> ${t('badge_free')}</span>` : ''}
         ${sys.edition ? `<span class="sys-badge sys-badge-edition"><i data-lucide="git-fork"></i> ${sys.edition}</span>` : ''}
@@ -259,6 +263,7 @@ function ensureSystemRendered(id) {
     const container = document.getElementById('systems-container');
     container.insertAdjacentHTML('beforeend', renderSystemPage(id, sys));
     _renderedSystems.add(id);
+    updateShortlistUI();
     // Render gallery and resources for this system
     const section = container.querySelector(`.vote-section[data-system="${id}"]`);
     if (section) {
@@ -417,18 +422,67 @@ function filteredShareIds() {
         .filter(id => matchesTagFilter(systemFilterFields(id)));
 }
 
-// Results "Share" button: with a filter active, preselect exactly the filtered
-// systems in the share panel; otherwise keep the user's last selection.
+// ============ SHORTLIST ============
+// The shortlist is the share panel's selection (room.js `szPick`) surfaced in
+// the catalog: "+" on cards and system pages, a sticky bar, and the Share
+// buttons all read and edit the same set.
+function shortlistSet() {
+    return typeof szGetPick === 'function' ? szGetPick() : new Set();
+}
+
+function toggleShortlist(id, event) {
+    if (event) { event.preventDefault(); event.stopPropagation(); }
+    if (typeof szTogglePick === 'function') szTogglePick(id, !shortlistSet().has(id));
+}
+
+function addShownToShortlist() {
+    if (typeof szAddPicks === 'function') szAddPicks(filteredShareIds());
+}
+
+function clearShortlist() {
+    if (typeof szPickAll === 'function') szPickAll(false);
+}
+
+// Share buttons send the shortlist. With an empty shortlist and a filter
+// active, the filtered systems become the shortlist; with neither, the share
+// panel opens on its empty-state hint.
 function shareFromResults() {
     if (typeof szOpenCreate !== 'function') return;
-    // An empty preset would wipe the saved selection — fall back to it instead.
-    const ids = tagFilterCount() > 0 ? filteredShareIds() : [];
+    const ids = shortlistSet().size === 0 && tagFilterCount() > 0 ? filteredShareIds() : [];
     szOpenCreate(ids.length ? ids : undefined);
 }
 
-function updateShareFilteredCount() {
-    const label = tagFilterCount() > 0 ? ` (${filteredShareIds().length})` : '';
-    document.querySelectorAll('.share-filtered-n').forEach(el => { el.textContent = label; });
+// Sync every shortlist affordance with the current set, in place (no grid
+// re-render, so cards don't replay their reveal animation).
+function updateShortlistUI() {
+    const pick = shortlistSet();
+    document.querySelectorAll('[data-pick-id]').forEach(btn => {
+        const on = pick.has(btn.dataset.pickId);
+        btn.classList.toggle('on', on);
+        btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+        btn.title = on ? t('shortlist_remove') : t('shortlist_add');
+        const card = btn.closest('.result-card');
+        if (card) card.classList.toggle('picked', on);
+    });
+
+    const filtered = tagFilterCount() > 0 ? filteredShareIds() : [];
+    const shareN = pick.size || filtered.length;
+    document.querySelectorAll('.share-filtered-n').forEach(el => {
+        el.textContent = shareN ? ` (${shareN})` : '';
+    });
+
+    const bar = document.getElementById('shortlist-bar');
+    if (!bar) return;
+    const notIn = filtered.filter(id => !pick.has(id)).length;
+    bar.hidden = pick.size === 0 && notIn === 0;
+    bar.querySelector('.slb-text').textContent = pick.size
+        ? t('shortlist_count').replace('{n}', pick.size)
+        : t('shortlist_empty');
+    const add = bar.querySelector('.slb-add');
+    add.hidden = notIn === 0;
+    add.textContent = t('shortlist_add_shown').replace('{n}', notIn);
+    bar.querySelector('.slb-clear').hidden = pick.size === 0;
+    bar.querySelector('.slb-send').disabled = pick.size === 0 && notIn === 0;
 }
 
 // ============ SETUP SCREEN ============
@@ -989,7 +1043,6 @@ function renderResults() {
 
     // Apply tri-state filter (includes ANDed, complexity buckets ORed, excludes removed)
     const systems = allSystems.filter(matchesTagFilter);
-    updateShareFilteredCount();
 
     sortSystems(systems, browseMode);
 
@@ -1028,9 +1081,14 @@ function renderResults() {
         const posHTML = votingMode ? `<div class="result-card-pos">${posNum}</div>` : '';
         const dragAttrs = votingMode ? `draggable="true" data-system-id="${s.id}"` : '';
         const leftColHTML = votingMode ? `<div class="result-card-left">${posHTML}${actionsHTML}</div>` : posHTML;
+        // Shortlist toggle — browse mode only; custom systems can't be shared.
+        const pickHTML = !votingMode && !isCustom
+            ? `<button type="button" class="rc-pick" data-pick-id="${s.id}" onclick="toggleShortlist('${s.id}', event)" aria-label="${t('shortlist_add')}: ${s.name}"><i data-lucide="plus" class="ic-add" aria-hidden="true"></i><i data-lucide="check" class="ic-on" aria-hidden="true"></i></button>`
+            : '';
         return `<div class="result-card ${isDef ? 'result-card-deferred' : ''}" ${dragAttrs} onclick="if(typeof _didDrag!=='undefined'&&_didDrag){_didDrag=false;return}showPage('${s.id}')">
             ${leftColHTML}
             ${badgeHTML}
+            ${pickHTML}
             <img class="result-card-img" src="${heroThumb(s.heroImg)}" alt="${s.name}" loading="lazy" decoding="async" onerror="this.style.background='linear-gradient(135deg,#1a1a2e,#0f3460)'">
             <div class="result-card-body">
                 <div class="result-card-name">${s.name}</div>
@@ -1046,6 +1104,7 @@ function renderResults() {
         : `<div class="results-empty">${t('results_empty')}</div>`;
 
     grid.innerHTML = html;
+    updateShortlistUI();
     refreshIcons();
     if (votingMode) initDragAndDrop(grid);
 }
@@ -2109,6 +2168,18 @@ document.addEventListener('langchange', function() {
 
 // First-visit intro banner (browse mode only). Visibility is CSS-gated on
 // body.browse-mode:not(.intro-dismissed); this just records the dismissal.
+// Intro "Start picking": scroll to the catalog and pulse the "+" buttons so
+// the first step is obvious.
+function startPicking() {
+    const grid = document.getElementById('results-grid');
+    if (!grid) return;
+    grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    grid.classList.remove('pick-hint');
+    void grid.offsetWidth; // restart the animation on repeat clicks
+    grid.classList.add('pick-hint');
+    setTimeout(() => grid.classList.remove('pick-hint'), 2600);
+}
+
 function dismissIntro() {
     try { localStorage.setItem('ttrpg-intro-dismissed', '1'); } catch (e) {}
     document.body.classList.add('intro-dismissed');

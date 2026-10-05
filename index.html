@@ -384,11 +384,15 @@
         <button class="intro-dismiss" onclick="dismissIntro()" aria-label="Закрыть" data-i18n-aria="aria_close_menu"><i data-lucide="x" aria-hidden="true"></i></button>
         <div class="intro-emoji" aria-hidden="true">🎲</div>
         <div class="intro-content">
-            <h2 class="intro-title" data-i18n="intro_title">Не знаете, во что играть?</h2>
-            <p class="intro-body" data-i18n="intro_body">Session Zero помогает группе выбрать настолку — листайте каталог, голосуйте вместе или поделитесь списком.</p>
+            <h2 class="intro-title" data-i18n="intro_title">Выберите игру всей группой за 3 шага</h2>
+            <ol class="intro-steps">
+                <li><span class="intro-step-n">1</span><span data-i18n="intro_step1">Нажмите + на играх, которые готовы вести</span></li>
+                <li><span class="intro-step-n">2</span><span data-i18n="intro_step2">Отправьте шортлист игрокам одной ссылкой</span></li>
+                <li><span class="intro-step-n">3</span><span data-i18n="intro_step3">Каждый голосует со своего телефона — вы видите рейтинг</span></li>
+            </ol>
             <div class="intro-ctas">
-                <button class="intro-cta primary" onclick="enableVoting()" data-i18n="intro_cta_vote">Голосование группой</button>
-                <button class="intro-cta" onclick="szOpenCreate()" data-i18n="intro_cta_share">Поделиться списком</button>
+                <button class="intro-cta primary" onclick="startPicking()" data-i18n="intro_cta_pick">Начать выбор</button>
+                <button class="intro-cta" onclick="enableVoting()" data-i18n="intro_cta_vote">Все за одним столом? Голосуйте здесь</button>
             </div>
         </div>
     </div>
@@ -396,6 +400,14 @@
     <div class="results-layout">
         <aside id="results-tag-filter" class="tag-filter"></aside>
         <div id="results-grid" class="results-grid"></div>
+    </div>
+
+    <!-- Shortlist bar: shows once something is shortlisted (or a filter offers games to add) -->
+    <div id="shortlist-bar" class="shortlist-bar" hidden>
+        <span class="slb-info"><i data-lucide="list-checks" aria-hidden="true"></i><span class="slb-text"></span></span>
+        <button type="button" class="slb-btn slb-add" onclick="addShownToShortlist()"></button>
+        <button type="button" class="slb-btn slb-clear" onclick="clearShortlist()" data-i18n="shortlist_clear">Очистить</button>
+        <button type="button" class="slb-btn slb-send" onclick="shareFromResults()"><span data-i18n="shortlist_send">Отправить игрокам</span> <i data-lucide="arrow-right" aria-hidden="true"></i></button>
     </div>
 
     <footer class="seo-footer">
