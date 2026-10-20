@@ -2705,10 +2705,26 @@ body.browse-mode .sidebar .sidebar-nav-divider { display: none; }
 }
 .tag-filter-more:hover { text-decoration: underline; }
 
+
 /* Desktop: filter header is as tall as the search box, so the first filter
    row and the first card row start on the same line. */
 @media (min-width: 1200px) {
     .tag-filter-header { min-height: 38px; padding-top: 0; padding-bottom: 0; margin-bottom: 8px; }
+    /* Sticky panel taller than the viewport can't be scrolled until the page
+       ends — cap it to the screen and let it scroll on its own. */
+    .tag-filter {
+        max-height: calc(100vh - 48px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent;
+        padding-right: 4px;
+    }
+    .tag-filter:hover { scrollbar-color: var(--border-subtle) transparent; }
+    .tag-filter::-webkit-scrollbar { width: 4px; }
+    .tag-filter::-webkit-scrollbar-track { background: transparent; }
+    .tag-filter::-webkit-scrollbar-thumb { background: transparent; border-radius: 4px; }
+    .tag-filter:hover::-webkit-scrollbar-thumb { background: var(--border-subtle); }
 }
 
 /* ============ MID WIDTHS: FILTER COLLAPSES ABOVE THE GRID ============ */
@@ -2749,3 +2765,20 @@ body.browse-mode .sidebar .sidebar-nav-divider { display: none; }
     #intro-banner .intro-steps li { font-size: 13px; }
     #intro-banner .intro-cta { padding: 7px 12px; font-size: 13px; }
 }
+
+/* Voting setup: which games go on the ballot */
+.setup-ballot { display: flex; flex-wrap: wrap; gap: 8px; }
+.setup-ballot-btn {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--border-subtle);
+    background: transparent;
+    color: var(--dim);
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.setup-ballot-btn:hover { border-color: var(--accent); color: var(--text); }
+.setup-ballot-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(56,189,248,0.08); }
+.setup-ballot-btn[hidden] { display: none; }

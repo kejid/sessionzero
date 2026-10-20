@@ -418,7 +418,7 @@ function matchesTagFilter(s) {
 // Official systems currently passing the results filter — what "Share" sends.
 // Custom systems live in localStorage only, so they can't be shared.
 function filteredShareIds() {
-    return SYSTEM_IDS.filter(id => !hiddenSystems.includes(id) && SYSTEMS_DATA[id])
+    return SYSTEM_IDS.filter(id => !isHiddenNow(id) && SYSTEMS_DATA[id])
         .filter(id => matchesTagFilter(systemFilterFields(id)));
 }
 
@@ -543,6 +543,7 @@ function skipSetup() {
     localStorage.setItem('ttrpg-browse', 'true');
     document.getElementById('setup-overlay').classList.add('hidden');
     document.body.classList.add('browse-mode');
+    applySystemVisibility();
     initApp();
     track('skip-setup');
 }
@@ -553,6 +554,10 @@ function enableVoting() {
     // would put the visitor back on the catalog instead of the setup screen.
     localStorage.removeItem('ttrpg-browse');
     document.body.classList.remove('browse-mode');
+    // Default ballot = the shortlist, when one exists and nothing was chosen yet
+    if (hiddenSystems.length === 0 && shortlistSet().size > 0) setBallot('shortlist');
+    applySystemVisibility();
+    updateBallotSummary();
     const overlay = document.getElementById('setup-overlay');
     if (overlay) {
         updateSetupFields();
@@ -761,7 +766,7 @@ function updateCardsAfterReorder(grid) {
 }
 
 function initManualOrder() {
-    const systems = SYSTEM_IDS.filter(id => !hiddenSystems.includes(id)).map(id => ({
+    const systems = SYSTEM_IDS.filter(id => !isHiddenNow(id)).map(id => ({
         id,
         score: (votes[id] || []).length - (vetoes[id] || []).length
     }));
@@ -788,7 +793,7 @@ function sortSystems(systems, browseMode) {
 
 function exportResults() {
     const browseMode = document.body.classList.contains('browse-mode');
-    let systems = SYSTEM_IDS.filter(id => !hiddenSystems.includes(id)).map(id => {
+    let systems = SYSTEM_IDS.filter(id => !isHiddenNow(id)).map(id => {
         const sysData = SYSTEMS_DATA[id];
         const customSys = sysData ? null : CustomSystems.find(id);
         return {
@@ -1043,7 +1048,7 @@ function renderResults() {
     if (subtitle) subtitle.textContent = browseMode
         ? t('results_subtitle_browse')
         : t('results_subtitle_vote');
-    const allSystems = SYSTEM_IDS.filter(id => !hiddenSystems.includes(id)).map(id => {
+    const allSystems = SYSTEM_IDS.filter(id => !isHiddenNow(id)).map(id => {
         const sysData = SYSTEMS_DATA[id];
         const customSys = sysData ? null : CustomSystems.find(id);
         const page = document.getElementById(id);
@@ -1076,11 +1081,11 @@ function renderResults() {
     const systems = allSystems.filter(matchesTagFilter).filter(matchesCatalogQuery);
 
     const notice = document.getElementById('hidden-notice');
-    const hiddenCount = SYSTEM_IDS.filter(id => hiddenSystems.includes(id)).length;
+    const hiddenCount = SYSTEM_IDS.filter(isHiddenNow).length;
     if (notice) {
         notice.hidden = hiddenCount === 0;
         notice.innerHTML = hiddenCount
-            ? `<span>${t('hidden_notice').replace('{n}', hiddenCount)}</span><button type="button" onclick="showAllSystems()">${t('hidden_show_all')}</button>`
+            ? `<span>${t('ballot_notice').replace('{n}', SYSTEM_IDS.length - hiddenCount).replace('{total}', SYSTEM_IDS.length)}</span><button type="button" onclick="openSystemSelector()">${t('ballot_edit')}</button>`
             : '';
     }
 
@@ -1345,7 +1350,7 @@ function getCurrentSystemIndex() {
 }
 
 function getVisibleSystemIds() {
-    return SYSTEM_IDS.filter(id => !hiddenSystems.includes(id));
+    return SYSTEM_IDS.filter(id => !isHiddenNow(id));
 }
 
 function nextSystem() {
@@ -1906,6 +1911,50 @@ function renderCustomSystems() {
 // ============ SYSTEM SELECTOR ============
 let hiddenSystems = JSON.parse(localStorage.getItem('ttrpg-hidden-systems') || '[]');
 
+// hiddenSystems is the voting ballot: the games left out of an at-the-table
+// vote. The catalog (browse mode) ignores it and always shows every system.
+function isHiddenNow(id) {
+    return !document.body.classList.contains('browse-mode') && hiddenSystems.includes(id);
+}
+
+function saveHiddenSystems() {
+    localStorage.setItem('ttrpg-hidden-systems', JSON.stringify(hiddenSystems));
+    applySystemVisibility();
+    updateBallotSummary();
+}
+
+// Ballot presets from the voting setup screen.
+function setBallot(mode) {
+    if (mode === 'shortlist') {
+        const pick = shortlistSet();
+        if (pick.size === 0) return;
+        hiddenSystems = SYSTEM_IDS.filter(id => !pick.has(id));
+    } else {
+        hiddenSystems = [];
+    }
+    saveHiddenSystems();
+    renderResults();
+}
+
+function updateBallotSummary() {
+    const summary = document.getElementById('setup-ballot-summary');
+    if (!summary) return;
+    const total = SYSTEM_IDS.length;
+    const inVote = SYSTEM_IDS.filter(id => !hiddenSystems.includes(id)).length;
+    summary.textContent = t('setup_ballot_summary').replace('{n}', inVote).replace('{total}', total);
+    const pick = shortlistSet();
+    const slBtn = document.getElementById('setup-ballot-shortlist');
+    if (slBtn) {
+        slBtn.hidden = pick.size === 0;
+        slBtn.textContent = t('setup_ballot_shortlist').replace('{n}', pick.size);
+        const isShortlist = pick.size > 0 && inVote === pick.size
+            && SYSTEM_IDS.every(id => pick.has(id) !== hiddenSystems.includes(id));
+        slBtn.classList.toggle('active', isShortlist);
+    }
+    const allBtn = document.getElementById('setup-ballot-all');
+    if (allBtn) allBtn.classList.toggle('active', inVote === total);
+}
+
 // Nav group definitions for the selector UI
 function getNavGroups(scheme) {
     var src = scheme ? buildGroupsForScheme(scheme) : SYSTEM_GROUPS;
@@ -2157,12 +2206,7 @@ function sysSetAll(checked) {
 function sysSelectAll() { sysSetAll(true); }
 function sysDeselectAll() { sysSetAll(false); }
 
-function showAllSystems() {
-    hiddenSystems = [];
-    localStorage.setItem('ttrpg-hidden-systems', '[]');
-    applySystemVisibility();
-    renderResults();
-}
+
 
 function saveSystemSelection() {
     // Visible (rendered) checkboxes are authoritative for systems matching the filter.
@@ -2178,12 +2222,11 @@ function saveSystemSelection() {
         if (!visibleIds.has(id)) newHidden.add(id);
     });
     hiddenSystems = [...newHidden];
-    localStorage.setItem('ttrpg-hidden-systems', JSON.stringify(hiddenSystems));
-    applySystemVisibility();
+    saveHiddenSystems();
     closeSystemSelector();
     // If currently viewing a hidden system, navigate to results
     const activePage = document.querySelector('.system-page.active');
-    if (activePage && hiddenSystems.includes(activePage.id)) {
+    if (activePage && isHiddenNow(activePage.id)) {
         showPage('results');
     }
     renderResults();
@@ -2193,12 +2236,13 @@ function applySystemVisibility() {
     // Nav items
     document.querySelectorAll('.nav-item[data-page]').forEach(item => {
         const pageId = item.dataset.page;
-        item.style.display = hiddenSystems.includes(pageId) ? 'none' : '';
+        item.style.display = isHiddenNow(pageId) ? 'none' : '';
     });
 }
 
 // ============ LANGUAGE CHANGE HANDLER ============
 document.addEventListener('langchange', function() {
+    updateBallotSummary();
     var activePage = document.querySelector('.system-page.active');
     var activeId = activePage ? activePage.id : null;
 

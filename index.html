@@ -123,6 +123,14 @@
             <label data-i18n="setup_names_label">Имена</label>
             <div id="setup-players" class="setup-players-list"></div>
         </div>
+        <div class="setup-field">
+            <label><span data-i18n="setup_ballot_label">Игры в голосовании</span>: <span id="setup-ballot-summary"></span></label>
+            <div class="setup-ballot">
+                <button type="button" id="setup-ballot-shortlist" class="setup-ballot-btn" onclick="setBallot('shortlist')" hidden></button>
+                <button type="button" id="setup-ballot-all" class="setup-ballot-btn" onclick="setBallot('all')" data-i18n="setup_ballot_all">Все</button>
+                <button type="button" class="setup-ballot-btn" onclick="openSystemSelector()" data-i18n="setup_ballot_choose">Выбрать…</button>
+            </div>
+        </div>
         <button class="setup-start-btn" id="setup-start" onclick="startApp()" data-i18n="setup_start">Начать</button>
         <button class="setup-start-btn secondary" onclick="skipSetup()" data-i18n="setup_skip">Просто посмотреть без голосования</button>
         <div class="setup-faq">
@@ -175,9 +183,6 @@
 
     <button class="setup-players-btn" onclick="enableVoting()">
         <i data-lucide="users"></i> <span data-i18n="btn_setup_players">Настроить игроков и голосование</span>
-    </button>
-    <button class="pres-toggle" onclick="openSystemSelector()">
-        <i data-lucide="list-checks"></i> <span data-i18n="btn_manage_systems">Управление списком</span>
     </button>
 
     <details class="sidebar-more">
@@ -327,7 +332,7 @@
 <div id="sys-selector-overlay" class="sys-selector-overlay hidden">
     <div class="sys-selector-card">
         <div class="sys-selector-header">
-            <h2 data-i18n="sys_selector_title">Управление списком</h2>
+            <h2 data-i18n="sys_selector_title">Игры в голосовании</h2>
             <div class="setup-lang-toggle">
                 <button onclick="setLang('en')" class="setup-lang-btn" id="sel-lang-en">EN</button>
                 <button onclick="setLang('ru')" class="setup-lang-btn" id="sel-lang-ru">RU</button>
