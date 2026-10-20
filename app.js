@@ -862,6 +862,14 @@ function clearTagFilter() {
     renderResults();
 }
 
+function toggleAllTags() {
+    const panel = document.getElementById('results-tag-filter');
+    if (!panel) return;
+    panel.classList.toggle('tf-all');
+    panel.dataset.tagFingerprint = '';  // force re-render so the toggle label flips
+    renderResults();
+}
+
 function toggleTagFilterPanel() {
     const panel = document.getElementById('results-tag-filter');
     if (panel) panel.classList.toggle('expanded');
@@ -942,6 +950,7 @@ function renderTagFilter(allSystems) {
     }
 
     // Renders one tri-state tag button. State classes are applied afterwards.
+    const TAG_FILTER_TOP = 6;
     const btn = (key, icon, label, count, extraClass) =>
         `<button class="tag-filter-btn ${extraClass || ''}" data-tag-key="${key}" onclick="cycleTagFilter('${key}')" title="${t('tag_filter_cycle_hint')}">
             ${icon ? `<i data-lucide="${icon}"></i>` : ''}
@@ -964,17 +973,17 @@ function renderTagFilter(allSystems) {
 
     if (sortedPlay.length > 0) {
         html += section('tag_filter_playstyle');
-        sortedPlay.forEach(tag => {
+        sortedPlay.forEach((tag, i) => {
             const cfg = TAG_CONFIG[tag];
-            html += btn(tag, cfg.icon, cfg.label, playCounts[tag], '');
+            html += btn(tag, cfg.icon, cfg.label, playCounts[tag], i >= TAG_FILTER_TOP ? 'tf-extra' : '');
         });
     }
 
     if (sortedSet.length > 0) {
         html += section('tag_filter_setting');
-        sortedSet.forEach(tag => {
+        sortedSet.forEach((tag, i) => {
             const cfg = SETTING_TAG_CONFIG[tag];
-            html += btn(tag, cfg.icon, cfg.label, setCounts[tag], 'setting');
+            html += btn(tag, cfg.icon, cfg.label, setCounts[tag], 'setting' + (i >= TAG_FILTER_TOP ? ' tf-extra' : ''));
         });
     }
 
@@ -987,8 +996,8 @@ function renderTagFilter(allSystems) {
 
     if (showFam) {
         html += section('tag_filter_engine');
-        sortedFam.forEach(key => {
-            html += btn(key, 'git-branch', t('nav_group_' + key.slice(4)), famCounts[key], 'engine');
+        sortedFam.forEach((key, i) => {
+            html += btn(key, 'git-branch', t('nav_group_' + key.slice(4)), famCounts[key], 'engine' + (i >= TAG_FILTER_TOP ? ' tf-extra' : ''));
         });
     }
 
@@ -996,12 +1005,33 @@ function renderTagFilter(allSystems) {
         html += section('tag_filter_access');
         html += btn('free', 'gift', t('badge_free'), freeCount, 'access');
     }
+    const extraCount = Math.max(0, sortedPlay.length - TAG_FILTER_TOP)
+        + Math.max(0, sortedSet.length - TAG_FILTER_TOP)
+        + (showFam ? Math.max(0, sortedFam.length - TAG_FILTER_TOP) : 0);
+    if (extraCount > 0) {
+        html += `<button type="button" class="tag-filter-more" onclick="toggleAllTags()">${t(panel.classList.contains('tf-all') ? 'tag_filter_less' : 'tag_filter_more').replace('{n}', extraCount)}</button>`;
+    }
     html += `</div>`;
 
     panel.innerHTML = html;
     panel.dataset.tagFingerprint = fingerprint;
     applyTagFilterStates(panel);
     refreshIcons();
+}
+
+let catalogQuery = '';
+let _catalogSearchTimer = null;
+
+function setCatalogQuery(value) {
+    catalogQuery = value.trim().toLowerCase();
+    clearTimeout(_catalogSearchTimer);
+    _catalogSearchTimer = setTimeout(renderResults, 120);
+}
+
+function matchesCatalogQuery(s) {
+    if (!catalogQuery) return true;
+    const hay = [s.name, s.tagline, s.edition, ...(s.tags || [])].join(' ').toLowerCase();
+    return catalogQuery.split(/\s+/).every(w => hay.includes(w));
 }
 
 function renderResults() {
@@ -1041,8 +1071,18 @@ function renderResults() {
     // Render tag filter sidebar (uses unfiltered system list for stable counts)
     renderTagFilter(allSystems);
 
-    // Apply tri-state filter (includes ANDed, complexity buckets ORed, excludes removed)
-    const systems = allSystems.filter(matchesTagFilter);
+    // Apply tri-state filter (includes ANDed, complexity buckets ORed, excludes removed),
+    // then the catalog search box.
+    const systems = allSystems.filter(matchesTagFilter).filter(matchesCatalogQuery);
+
+    const notice = document.getElementById('hidden-notice');
+    const hiddenCount = SYSTEM_IDS.filter(id => hiddenSystems.includes(id)).length;
+    if (notice) {
+        notice.hidden = hiddenCount === 0;
+        notice.innerHTML = hiddenCount
+            ? `<span>${t('hidden_notice').replace('{n}', hiddenCount)}</span><button type="button" onclick="showAllSystems()">${t('hidden_show_all')}</button>`
+            : '';
+    }
 
     sortSystems(systems, browseMode);
 
@@ -1101,7 +1141,7 @@ function renderResults() {
 
     const html = systems.length
         ? systems.map((s, i) => renderCard(s, i, systems.length)).join('')
-        : `<div class="results-empty">${t('results_empty')}</div>`;
+        : `<div class="results-empty">${t(catalogQuery ? 'catalog_search_empty' : 'results_empty')}</div>`;
 
     grid.innerHTML = html;
     updateShortlistUI();
@@ -2044,6 +2084,8 @@ function rebuildSelectorList() {
             var isChecked = (id in checked) ? checked[id] : !isHidden;
             container.appendChild(buildSelectorItem(id, name, isChecked));
         });
+        title.querySelector('.group-toggle-cb').checked =
+            !container.querySelector('input[data-sys-id]:not(:checked)');
         list.appendChild(container);
     });
 
@@ -2067,7 +2109,18 @@ function rebuildSelectorList() {
             list.appendChild(container);
         }
     }
+    updateSelectorActionCounts();
     refreshIcons();
+}
+
+// With a tag filter on, Select/Deselect all act only on the listed systems —
+// the count on the buttons makes that visible.
+function updateSelectorActionCounts() {
+    const n = document.querySelectorAll('#sys-selector-list input[data-sys-id]').length;
+    const all = document.querySelector('[data-i18n="sys_selector_all"]');
+    const none = document.querySelector('[data-i18n="sys_selector_none"]');
+    if (all) all.textContent = `${t('sys_selector_all')} (${n})`;
+    if (none) none.textContent = `${t('sys_selector_none')} (${n})`;
 }
 
 function openSystemSelector() {
@@ -2091,18 +2144,24 @@ document.getElementById('sys-selector-overlay').addEventListener('click', e => {
     if (e.target === e.currentTarget) closeSystemSelector();
 });
 
-function sysSelectAll() {
-    document.querySelectorAll('#sys-selector-list input[type="checkbox"]').forEach(cb => {
-        cb.checked = true;
-        cb.closest('.sys-selector-item').classList.remove('disabled-sys');
+// Group-title checkboxes have no .sys-selector-item parent, so system boxes and
+// group boxes are set separately.
+function sysSetAll(checked) {
+    document.querySelectorAll('#sys-selector-list input[data-sys-id]').forEach(cb => {
+        cb.checked = checked;
+        cb.closest('.sys-selector-item').classList.toggle('disabled-sys', !checked);
     });
+    document.querySelectorAll('#sys-selector-list .group-toggle-cb').forEach(cb => { cb.checked = checked; });
 }
 
-function sysDeselectAll() {
-    document.querySelectorAll('#sys-selector-list input[type="checkbox"]').forEach(cb => {
-        cb.checked = false;
-        cb.closest('.sys-selector-item').classList.add('disabled-sys');
-    });
+function sysSelectAll() { sysSetAll(true); }
+function sysDeselectAll() { sysSetAll(false); }
+
+function showAllSystems() {
+    hiddenSystems = [];
+    localStorage.setItem('ttrpg-hidden-systems', '[]');
+    applySystemVisibility();
+    renderResults();
 }
 
 function saveSystemSelection() {

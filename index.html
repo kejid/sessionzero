@@ -168,35 +168,39 @@
         <i data-lucide="layout-grid" aria-hidden="true"></i><span data-i18n="btn_catalog">КАТАЛОГ СИСТЕМ</span>
     </button>
 
-    <div class="sidebar-divider"></div>
-
-    <button class="pres-toggle" onclick="openSystemSelector()">
-        <i data-lucide="list-checks"></i> <span data-i18n="btn_manage_systems">Управление списком</span>
-    </button>
-    <button class="pres-toggle" onclick="openEditor()">
-        <i data-lucide="plus-circle"></i> <span data-i18n="btn_add_system">Добавить систему</span>
-    </button>
-    <button class="pres-toggle" id="sz-create-btn" style="display:none;" onclick="shareFromResults()">
+    <!-- Primary action: shown by room.js once the shortlist has games -->
+    <button class="pres-toggle sidebar-primary" id="sz-create-btn" style="display:none;" onclick="shareFromResults()">
         <i data-lucide="share-2"></i> <span data-i18n="btn_shared_vote">Поделиться списком</span><span class="share-filtered-n"></span>
     </button>
-
-    <div class="sidebar-divider"></div>
 
     <button class="setup-players-btn" onclick="enableVoting()">
         <i data-lucide="users"></i> <span data-i18n="btn_setup_players">Настроить игроков и голосование</span>
     </button>
-    <button class="pres-toggle" onclick="togglePresentation()">
-        <i data-lucide="presentation"></i> <span data-i18n="btn_presentation">Режим презентации</span>
+    <button class="pres-toggle" onclick="openSystemSelector()">
+        <i data-lucide="list-checks"></i> <span data-i18n="btn_manage_systems">Управление списком</span>
     </button>
-    <button class="pres-toggle" onclick="setLang(currentLang === 'ru' ? 'en' : 'ru')">
+
+    <details class="sidebar-more">
+        <summary class="pres-toggle">
+            <i data-lucide="more-horizontal"></i> <span data-i18n="btn_more">Ещё</span>
+            <i data-lucide="chevron-down" class="sidebar-more-chev"></i>
+        </summary>
+        <button class="pres-toggle" onclick="openEditor()">
+            <i data-lucide="plus-circle"></i> <span data-i18n="btn_add_system">Добавить систему</span>
+        </button>
+        <button class="pres-toggle" onclick="togglePresentation()">
+            <i data-lucide="presentation"></i> <span data-i18n="btn_presentation">Режим презентации</span>
+        </button>
+        <button class="reset-btn-sidebar reset-btn" onclick="resetPlayers()">
+            <i data-lucide="rotate-ccw" aria-hidden="true"></i> <span data-i18n="btn_reset">Сбросить игроков и голоса</span>
+        </button>
+    </details>
+
+    <button class="lang-toggle" onclick="setLang(currentLang === 'ru' ? 'en' : 'ru')">
         <i data-lucide="languages"></i> <span data-i18n="btn_lang">EN / RU</span>
     </button>
 
-    <div class="sidebar-divider"></div>
-
-    <button class="reset-btn-sidebar reset-btn" onclick="resetPlayers()">
-        <i data-lucide="rotate-ccw" aria-hidden="true"></i> <span data-i18n="btn_reset">Сбросить игроков и голоса</span>
-    </button>
+    <div class="sidebar-divider sidebar-nav-divider"></div>
 
     <div class="grouping-toggle">
         <button class="grouping-btn active" data-grouping="default" onclick="setGrouping('default')">
@@ -373,7 +377,7 @@
         <div class="view-toggle">
             <button class="view-toggle-btn active" data-view="cards" onclick="setView('cards')" aria-label="Вид карточками" data-i18n-aria="aria_view_cards"><i data-lucide="layout-grid" aria-hidden="true"></i></button>
             <button class="view-toggle-btn" data-view="list" onclick="setView('list')" aria-label="Вид списком" data-i18n-aria="aria_view_list"><i data-lucide="list" aria-hidden="true"></i></button>
-            <button class="export-btn" onclick="exportResults()" title="Export"><i data-lucide="clipboard-copy"></i> <span data-i18n="btn_export">Экспорт</span></button>
+            <button class="export-btn" onclick="exportResults()" title="Results as text"><i data-lucide="clipboard-copy"></i> <span data-i18n="btn_export">Итоги текстом</span></button>
             <button class="export-btn share-cta" onclick="shareFromResults()" title="Share"><i data-lucide="share-2"></i> <span data-i18n="btn_share">Поделиться</span><span class="share-filtered-n"></span></button>
         </div>
     </div>
@@ -399,7 +403,14 @@
 
     <div class="results-layout">
         <aside id="results-tag-filter" class="tag-filter"></aside>
-        <div id="results-grid" class="results-grid"></div>
+        <div class="results-main">
+            <div class="catalog-search">
+                <i data-lucide="search" aria-hidden="true"></i>
+                <input type="search" id="catalog-search-input" data-i18n-placeholder="catalog_search" placeholder="Поиск по названию или описанию..." oninput="setCatalogQuery(this.value)" autocomplete="off">
+            </div>
+            <div id="hidden-notice" class="hidden-notice" hidden></div>
+            <div id="results-grid" class="results-grid"></div>
+        </div>
     </div>
 
     <!-- Shortlist bar: shows once something is shortlisted (or a filter offers games to add) -->

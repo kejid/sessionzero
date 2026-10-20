@@ -11,18 +11,13 @@ async function skipSetup(page) {
   }
 }
 
-// Helper: navigate to a system by clicking sidebar
+// Helper: navigate to a system by clicking its catalog card
+// (in browse mode the sidebar no longer lists systems — the grid is the nav)
 async function goToSystem(page, systemId) {
   await skipSetup(page);
-  // Open sidebar
-  const hamburger = page.locator('.hamburger');
-  if (await hamburger.isVisible()) {
-    await hamburger.click();
-    await page.waitForTimeout(300);
-  }
-  // Click system in nav
-  const navItem = page.locator(`.nav-item[data-page="${systemId}"]`);
-  await navItem.click();
+  const card = page.locator(`.result-card:has([data-pick-id="${systemId}"]) .result-card-name`);
+  await card.scrollIntoViewIfNeeded();
+  await card.click();
   await page.waitForTimeout(500);
 }
 
