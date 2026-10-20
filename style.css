@@ -2844,3 +2844,37 @@ body.browse-mode .sidebar .sidebar-nav-divider { display: none; }
 .sz-tab { display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
 .sz-tab-lock { width: 14px; height: 14px; }
 #sz-room.sz-results-open .sz-tab-lock { display: none; }
+
+/* ============ ROOM: SPACING + ALIGNMENT PASS ============ */
+/* One rhythm: 12px inside a block, 24px between blocks, 10px between list items. */
+#sz-room { scrollbar-gutter: stable; }  /* no 4px jump when a tab is shorter than the screen */
+.sz-topbar { padding-left: max(20px, calc((100% - 720px) / 2)); padding-right: max(20px, calc((100% - 720px) / 2)); }
+.sz-head { margin-bottom: 24px; }
+.sz-title { margin-bottom: 12px; }
+.sz-faq { margin-top: 12px; }
+#sz-room .sz-tabs { margin-bottom: 24px; }
+.sz-namebar { margin: 0 0 24px; }
+.sz-cards { gap: 10px; }
+.sz-card { padding: 12px 14px; }
+
+/* Results header: title and share buttons share one centre line */
+.sz-tally-head { align-items: center; margin-bottom: 16px; }
+.sz-tally-head .sz-tally-title { margin: 0; }
+.sz-tally-list { gap: 10px; }
+
+/* Results row: rank in its own column, voters under the game name, score right */
+.sz-tally-row {
+    display: grid; grid-template-columns: 22px minmax(0, 1fr); column-gap: 8px; row-gap: 8px;
+    align-items: center; padding: 12px 14px;
+}
+.sz-tally-row::before { grid-row: 1; grid-column: 1; margin: 0; }
+.sz-tally-main { grid-column: 2; display: flex; align-items: center; gap: 8px; min-width: 0; }
+.sz-tally-name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sz-tally-score { margin-left: auto; flex-shrink: 0; }
+.sz-tally-chips { grid-column: 2; margin-top: 0; }
+.sz-tally-chips:empty { display: none; }
+@media (max-width: 560px) {
+    .sz-tally-head { flex-wrap: wrap; row-gap: 12px; }
+    .sz-share-actions { width: 100%; }
+    .sz-share-actions .sz-share-img { flex: 1; }
+}
