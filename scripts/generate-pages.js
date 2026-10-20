@@ -66,6 +66,9 @@ for (const f of files) {
 
 const ids = Object.keys(SYSTEMS).sort();
 const SYSTEM_COUNT = ids.length;
+// Suggestion limit shown in the FAQs comes from the rooms API, so copy can't drift from it.
+const SUGGEST_LIMIT = Number((fs.readFileSync(path.join(ROOT, 'server', 'index.js'), 'utf8')
+  .match(/const MAX_SUGGEST = (\d+)/) || [])[1]) || 3;
 console.log(`[generate-pages] loaded ${ids.length} systems`);
 
 // Intent / decision landing pages ("best solo TTRPGs", "OSR vs PbtA", ...).
@@ -865,11 +868,46 @@ ${CTA_TRACK_SCRIPT}
 `;
 }
 
+// ---------- 5b2. English homepage FAQ ----------
+// index.html is hand-written, but its FAQ (visible + FAQPage JSON-LD) is rendered
+// here from one array so the two blocks and the RU landing can't drift apart.
+const FAQ_EN = [
+  ['How does the group voting work?', "The GM taps + on the games they'd be happy to run, then sends the group one link. Everyone votes from their own phone — Up for it or Veto. Results stay hidden until you vote (you can peek with a separate button), so nobody just piles onto the leader. Sitting at one table instead? Set up players and vote on one screen."],
+  ['Can players suggest a game?', `Yes. Anyone in the vote can add up to ${SUGGEST_LIMIT} games from the catalog. The whole group sees who suggested them and can vote on them like any other game.`],
+  ['Can we see what the GM wants to run?', "Yes. The GM ticks \u201cI'm the GM\u201d, and their picks show on every card as \u201cGM wants to run\u201d (or \u201cGM is against\u201d), so players know which games can actually happen."],
+  ['Is this the same as a session-zero prep meeting?', 'No. A session-zero meeting is where a group sets expectations, agrees on safety tools and makes characters — that happens after you have chosen the game. Session Zero (this tool) is for the step before: deciding which TTRPG to actually play. Use it to pick the system, then run your prep session.'],
+  ['Do we need to sign up?', 'No signup and no login — a vote is just a link, and you only type a name. For link votes, your name and picks are stored on our server with that vote; at-the-table votes stay in your browser. The tool is completely free and works in English and Russian.'],
+  ['Which tabletop RPGs can we vote on?', `${SYSTEM_COUNT}+ systems across OSR, Powered by the Apocalypse, the Year Zero Engine, narrative, solo and sci-fi/horror — from Mothership and Blades in the Dark to Mörk Borg, Dragonbane and Call of Cthulhu. When the vote is done, share the results as an image in your group chat.`],
+];
+
+function syncEnHomeFaq() {
+  const file = path.join(ROOT, 'index.html');
+  let html = fs.readFileSync(file, 'utf8');
+  const ld = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': FAQ_EN.map(([q, a]) => ({ '@type': 'Question', 'name': q, 'acceptedAnswer': { '@type': 'Answer', 'text': a } })),
+  };
+  const ldBlock = `<script type="application/ld+json">\n    ${JSON.stringify(ld, null, 2).replace(/\n/g, '\n    ')}\n    </script>`;
+  const items = FAQ_EN.map(([q, a]) => `            <div class="seo-faq-item">
+                <h3>${escBody(q)}</h3>
+                <p>${escBody(a)}</p>
+            </div>`).join('\n');
+  const swap = (src, name, body) => {
+    const re = new RegExp(`(<!-- ${name}:start[^>]*-->)[\\s\\S]*?(\\s*<!-- ${name}:end -->)`);
+    if (!re.test(src)) throw new Error(`index.html: missing ${name} markers`);
+    return src.replace(re, (_, open, close) => `${open}\n${body}${close}`);
+  };
+  html = swap(html, 'faq-ld', '    ' + ldBlock);
+  html = swap(html, 'faq-html', items);
+  fs.writeFileSync(file, html, 'utf8');
+}
+
 // ---------- 5c. Russian homepage landing (static, indexable; funnels to /) ----------
 // Copy here is condensed from the author's hand-written RU about page.
 function renderRuHome() {
   const title = 'Во что поиграть всей группой? Голосование по TTRPG | Session Zero';
-  const metaDesc = `Не можете выбрать настольную ролевую игру для следующей кампании? Session Zero — бесплатный инструмент: каждый игрок голосует за системы, а группа видит общий шортлист. ${SYSTEM_COUNT}+ систем, без регистрации.`;
+  const metaDesc = `Не можете выбрать настольную ролевую игру для следующей кампании? Соберите шортлист из ${SYSTEM_COUNT}+ систем, отправьте группе одну ссылку — каждый проголосует с телефона. Бесплатно, без регистрации.`;
   const canonical = `${SITE}/ru/`;
   const ogImage = `${SITE}/og/ru/home.jpg`;
 
@@ -900,10 +938,12 @@ function renderRuHome() {
   };
 
   const faq = [
-    ['Как работает голосование?', 'Настройте группу — только имена, без аккаунтов. Каждый игрок листает каталог из ' + SYSTEM_COUNT + '+ систем и голосует за те, в которые хочет сыграть. Страница результатов показывает шортлист по голосам — выбираете одну или спорите за топ-3 под пиццу.'],
+    ['Как работает голосование?', 'Мастер отмечает + игры, которые готов вести, и отправляет группе одну ссылку. Каждый голосует со своего телефона — «за» или «вето». Итоги по умолчанию скрыты, пока ты не проголосуешь (подсмотреть можно отдельной кнопкой), чтобы никто не голосовал просто за лидера. Сидите за одним столом? Настройте игроков и голосуйте с одного экрана.'],
+    ['Может ли игрок предложить свою игру?', 'Да. Любой участник может добавить в голосование до ' + SUGGEST_LIMIT + ' игр из каталога. Все видят, кто предложил игру, и голосуют за неё как за остальные.'],
+    ['Видно ли, что хочет вести мастер?', 'Да. Мастер ставит галочку «Я мастер», и его выбор виден на каждой карточке: «Мастер хочет вести» или «Мастер против». Так игроки сразу понимают, что реально сыграть.'],
     ['Это то же самое, что нулевая сессия (session zero) с safety tools?', 'Нет. Нулевая сессия — это когда вы уже выбрали игру и обсуждаете ожидания, безопасность и создаёте персонажей. Этот инструмент — про шаг раньше: какую систему вообще взять. Сначала выберите систему здесь, потом проводите нулевую сессию.'],
-    ['Нужна регистрация?', 'Нет, без логинов. Группа, голоса и свои системы хранятся в браузере. Полностью бесплатно, EN/RU.'],
-    ['Какие системы можно выбрать?', SYSTEM_COUNT + '+ настольных ролёвок: OSR, PbtA, Year Zero Engine, нарративные, соло, sci-fi и хоррор — от Mothership и Blades in the Dark до Mörk Borg, Dragonbane и Call of Cthulhu. Можно добавить свою.'],
+    ['Нужна регистрация?', 'Нет, без логинов: голосование — это просто ссылка, нужно только ввести имя. Имя и голоса при голосовании по ссылке хранятся на нашем сервере вместе с этим голосованием; голосование за одним столом остаётся в браузере. Полностью бесплатно, EN/RU.'],
+    ['Какие системы можно выбрать?', SYSTEM_COUNT + '+ настольных ролёвок: OSR, PbtA, Year Zero Engine, нарративные, соло, sci-fi и хоррор — от Mothership и Blades in the Dark до Mörk Borg, Dragonbane и Call of Cthulhu. Итоги голосования можно отправить в чат группы картинкой.'],
   ];
   const faqJsonLd = {
     '@context': 'https://schema.org',
@@ -966,13 +1006,13 @@ function renderRuHome() {
     <h1>Во что поиграть всей группой?</h1>
     <p class="tagline">Session Zero помогает TTRPG-группе выбрать систему для следующей кампании — без бесконечных споров в чате.</p>
 
-    <div class="setting-block"><p>Один игрок хочет D&amp;D, другой — что-то необычное, ГМ хочет минимум препа. Session Zero сжимает этот спор в короткое голосование: каждый отмечает системы, в которые хочет сыграть, а группа видит общий шортлист. Без регистрации, всё хранится в браузере. В каталоге ${SYSTEM_COUNT}+ систем — OSR, PbtA, Year Zero, нарративные, соло, sci-fi, хоррор.</p></div>
+    <div class="setting-block"><p>Один игрок хочет D&amp;D, другой — что-то необычное, ГМ хочет минимум препа. Session Zero сжимает этот спор в короткое голосование по ссылке: каждый отмечает игры, в которые хочет сыграть, а группа видит общий рейтинг. Без регистрации. В каталоге ${SYSTEM_COUNT}+ систем — OSR, PbtA, Year Zero, нарративные, соло, sci-fi, хоррор.</p></div>
 
     <div class="section-title">Как это работает</div>
     <div class="setting-block"><p>
-    1. Настройте группу — только имена, без логинов.<br>
-    2. Каждый игрок листает каталог и голосует за то, что хочет попробовать.<br>
-    3. Страница результатов показывает шортлист по голосам. Выбираете одну — или спорите за топ-3 под пиццу.
+    1. Мастер отмечает + игры, которые готов вести.<br>
+    2. Отправляет группе одну ссылку — игроки могут предложить и свои варианты.<br>
+    3. Каждый голосует с телефона, а итоги с победителем можно скинуть в чат картинкой.
     </p></div>
 
     <div class="setting-block"><p>Не можете договориться? Гайд: <a href="/ru/how-to-choose-a-ttrpg.html">как выбрать TTRPG всей группой</a> — четыре способа решить и три правила, чтобы спор не начался заново.</p></div>
@@ -1382,6 +1422,7 @@ for (const slug of collectionSlugs) {
 }
 
 fs.writeFileSync(RU_HOME, renderRuHome(), 'utf8');
+syncEnHomeFaq();
 written += 1;
 
 fs.writeFileSync(SITEMAP, renderSitemap(), 'utf8');

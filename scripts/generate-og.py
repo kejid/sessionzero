@@ -347,8 +347,9 @@ def draw_crown(d: ImageDraw.ImageDraw, x: int, y: int, w: int, color: tuple):
     d.polygon(pts, fill=color)
 
 
-def results_panel(lang: str) -> Image.Image:
-    pw, ph = 470, 470
+def results_panel(lang: str, header: bool = True) -> Image.Image:
+    top_pad = 84 if header else 22
+    pw, ph = 470, 470 if header else 470 - 62
     scale = 2  # supersample for smooth rounded edges
     S = lambda v: int(v * scale)
     panel = Image.new("RGBA", (S(pw), S(ph)), (0, 0, 0, 0))
@@ -359,11 +360,12 @@ def results_panel(lang: str) -> Image.Image:
     head_font = load_font(FONTS_DIR / "Unbounded-Bold.ttf", S(22))
     small_font = load_font(FONTS_DIR / "Unbounded-Bold.ttf", S(15))
     score_font = load_font(FONTS_DIR / "Unbounded-Bold.ttf", S(20))
-    draw_top(d, S(30), S(30), "Итоги" if lang == "ru" else "Results", head_font, WHITE)
-    voted = "Проголосовало: 6" if lang == "ru" else "6 voted"
-    draw_top(d, S(pw - 30) - int(small_font.getlength(voted)), S(36), voted, small_font, DIM)
+    if header:
+        draw_top(d, S(30), S(30), "Итоги" if lang == "ru" else "Results", head_font, WHITE)
+        voted = "Проголосовало: 6" if lang == "ru" else "6 voted"
+        draw_top(d, S(pw - 30) - int(small_font.getlength(voted)), S(36), voted, small_font, DIM)
 
-    row_h, gap, top = 78, 12, 84
+    row_h, gap, top = 78, 12, top_pad
     for i, (score, bar_w, ups, vetoes) in enumerate(VOTE_ROWS):
         y0 = top + i * (row_h + gap)
         lead = i == 0
@@ -486,7 +488,17 @@ def main(lang: str, only: list[str] | None = None):
         print(f"-> vote ({lang})")
         save_jpeg(make_vote_og(lang), out_dir / "vote.jpg")
         ok += 1
-    if only and set(only) <= {"home", "vote"}:
+    if only and "intro" in only:
+        # Language-neutral results panel for the catalog's first-visit banner
+        out = ROOT / "images" / "intro-results.png"
+        try:
+            results_panel(lang, header=False).save(out, "PNG", optimize=True)
+            print(f"   wrote {out.relative_to(ROOT)} ({out.stat().st_size // 1024} KB)")
+            ok += 1
+        except Exception as e:
+            print(f"   FAILED: {e}")
+            fail += 1
+    if only and set(only) <= {"home", "vote", "intro"}:
         print(f"\nDone: {ok} ok, {fail} failed")
         return
 

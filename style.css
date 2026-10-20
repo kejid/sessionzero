@@ -2341,6 +2341,8 @@ body.browse-mode:not(.intro-dismissed) #intro-banner {
     color: var(--dim); cursor: pointer; padding: 4px; line-height: 0; border-radius: 6px;
 }
 .intro-dismiss:hover { color: var(--text); }
+.intro-art { display: none; width: 240px; height: auto; flex-shrink: 0; align-self: center; margin-right: 36px; }
+@media (min-width: 1280px) { .intro-art { display: block; } }
 .intro-dismiss i[data-lucide] { width: 18px; height: 18px; }
 @media (max-width: 560px) {
     body.browse-mode:not(.intro-dismissed) #intro-banner { flex-direction: column; gap: 10px; }
