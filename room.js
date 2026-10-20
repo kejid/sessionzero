@@ -36,6 +36,11 @@ const SZ_STR = {
     tab_results: 'Results',
     share_image: 'Share results',
     save_image: 'Save as image',
+    share_short: 'Share',
+    copy_image: 'Copy image',
+    image_copied: 'Image copied — paste it into a chat (Ctrl+V)',
+    save_short: 'Image',
+    go_vote: 'Vote',
     img_results: 'Vote results',
     img_winner: 'We play',
     img_veto: 'veto',
@@ -118,6 +123,11 @@ const SZ_STR = {
     tab_results: 'Итоги',
     share_image: 'Поделиться итогами',
     save_image: 'Сохранить картинкой',
+    share_short: 'Поделиться',
+    copy_image: 'Скопировать картинку',
+    image_copied: 'Картинка скопирована — вставьте в чат (Ctrl+V)',
+    save_short: 'Картинка',
+    go_vote: 'Голосовать',
     img_results: 'Итоги голосования',
     img_winner: 'Играем в',
     img_veto: 'вето',
@@ -364,8 +374,8 @@ function szRenderRoom() {
       </header>
 
       <div class="sz-tabs" role="tablist">
-        <button class="sz-tab" data-tab="results" onclick="szSetTab('results')">${szEsc(szT('tab_results'))}</button>
         <button class="sz-tab" data-tab="vote" onclick="szSetTab('vote')">${szEsc(szT('tab_vote'))}</button>
+        <button class="sz-tab" data-tab="results" onclick="szSetTab('results')"><i data-lucide="lock" class="sz-tab-lock"></i>${szEsc(szT('tab_results'))}</button>
       </div>
 
       <div class="sz-room-layout" id="sz-room-layout">
@@ -476,15 +486,16 @@ function szResultsOpen() {
   return szPeek || szHasVoted();
 }
 
-// Two states: before voting it's just the ballot; after voting (or peeking)
-// results sit beside the ballot on desktop and behind tabs on phones.
+// Two tabs at every width: "My vote" and "Results". Results stay locked until
+// you vote (or peek); saving a vote switches to them.
 function szApplyLayout() {
   const room = document.getElementById('sz-room');
   if (!room) return;
   const open = szResultsOpen();
   room.classList.toggle('sz-split', open);
-  room.classList.toggle('sz-tab-results', open && szTab === 'results');
-  room.querySelectorAll('.sz-tab').forEach(b => b.classList.toggle('active', b.dataset.tab === (open ? szTab : 'vote')));
+  room.classList.toggle('sz-tab-results', szTab === 'results');
+  room.querySelectorAll('.sz-tab').forEach(b => b.classList.toggle('active', b.dataset.tab === szTab));
+  room.classList.toggle('sz-results-open', open);  // hides the tab's lock icon
   const teaser = document.getElementById('sz-teaser');
   if (teaser) {
     const n = (szData && szData.voters || []).length;
@@ -497,6 +508,7 @@ function szApplyLayout() {
 function szSetTab(tab) {
   szTab = tab;
   szApplyLayout();
+  szRenderTally();
   const room = document.getElementById('sz-room');
   if (room) room.scrollTop = 0;
 }
@@ -565,7 +577,7 @@ async function szSaveBallot() {
     szApplyLayout();
     szRenderTally();
     const room = document.getElementById('sz-room');
-    if (room && window.matchMedia('(max-width: 899px)').matches) room.scrollTop = 0;
+    if (room) room.scrollTop = 0;
     if (typeof refreshIcons === 'function') refreshIcons();
     setTimeout(() => { const b = document.getElementById('sz-save'); if (b) { b.textContent = szT('save_vote'); b.disabled = false; szUpdateSaveBtn(); } }, 1500);
   } catch (e) {
@@ -600,10 +612,29 @@ function szRenderTally() {
       </li>`;
   }).join('');
 
+  if (!szResultsOpen()) {
+    wrap.innerHTML = `
+      <div class="sz-locked">
+        <i data-lucide="lock"></i>
+        <p>${szEsc(szT('results_locked', { n: voters.length }))}</p>
+        <button class="sz-btn sz-save" onclick="szSetTab('vote')">${szEsc(szT('go_vote'))}</button>
+        <button type="button" class="sz-link-btn" onclick="szPeekResults()">${szEsc(szT('peek_results'))}</button>
+      </div>`;
+    if (typeof refreshIcons === 'function') refreshIcons();
+    return;
+  }
+  const mode = szImageMode();
+  const label = { share: 'share_short', copy: 'copy_image', download: 'save_short' }[mode];
+  const icon = { share: 'share-2', copy: 'copy', download: 'download' }[mode];
   wrap.innerHTML = `
-    <h2 class="sz-tally-title">${szEsc(szT('tally_title'))} <span class="sz-voted">${szEsc(szT('voted_count', { n: voters.length }))}</span></h2>
-    ${ranked.length ? `<ol class="sz-tally-list">${rows}</ol>` : `<p class="sz-empty">${szEsc(szT('no_votes_yet'))}</p>`}
-    ${ranked.length ? `<button class="sz-btn sz-ghost sz-share-img" onclick="szShareResultsImage(this)"><i data-lucide="${szCanShareFiles() ? 'share-2' : 'download'}"></i> ${szEsc(szT(szCanShareFiles() ? 'share_image' : 'save_image'))}</button>` : ''}`;
+    <div class="sz-tally-head">
+      <h2 class="sz-tally-title">${szEsc(szT('tally_title'))} <span class="sz-voted">${szEsc(szT('voted_count', { n: voters.length }))}</span></h2>
+      ${ranked.length ? `<div class="sz-share-actions">
+        <button class="sz-btn sz-ghost sz-btn-sm sz-share-img" onclick="szShareResultsImage(this, '${mode}')"><i data-lucide="${icon}"></i><span>${szEsc(szT(label))}</span></button>
+        ${mode === 'copy' ? `<button class="sz-btn sz-ghost sz-btn-sm sz-share-dl" onclick="szShareResultsImage(this, 'download')" title="${szEsc(szT('save_image'))}" aria-label="${szEsc(szT('save_image'))}"><i data-lucide="download"></i></button>` : ''}
+      </div>` : ''}
+    </div>
+    ${ranked.length ? `<ol class="sz-tally-list">${rows}</ol>` : `<p class="sz-empty">${szEsc(szT('no_votes_yet'))}</p>`}`;
   if (typeof refreshIcons === 'function') refreshIcons();
 }
 
@@ -770,16 +801,34 @@ async function szDrawResults() {
   return canvas;
 }
 
-async function szShareResultsImage(btn) {
+// Phones get the native share sheet; desktops copy the image to the
+// clipboard (paste straight into a chat); download is the last resort.
+function szImageMode() {
+  const touch = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+  if (touch && szCanShareFiles()) return 'share';
+  if (window.ClipboardItem && navigator.clipboard && navigator.clipboard.write) return 'copy';
+  return szCanShareFiles() ? 'share' : 'download';
+}
+
+async function szShareResultsImage(btn, mode) {
   if (!szData) return;
+  mode = mode || szImageMode();
   if (btn) btn.disabled = true;
   try {
-    const canvas = await szDrawResults();
-    const blob = await new Promise(res => canvas.toBlob(res, 'image/png'));
+    // Clipboard writes must start inside the click, so hand it a promise of the blob.
+    const blobP = szDrawResults().then(c => new Promise(res => c.toBlob(res, 'image/png')));
+    if (typeof track === 'function') track('room-share-image-' + mode);
+    if (mode === 'copy') {
+      try {
+        await navigator.clipboard.write([new ClipboardItem({ 'image/png': blobP })]);
+        if (typeof showToast === 'function') showToast(szT('image_copied'));
+        return;
+      } catch (e) { /* fall through to download */ }
+    }
+    const blob = await blobP;
     if (!blob) return;
     const file = new File([blob], 'session-zero-results.png', { type: 'image/png' });
-    if (typeof track === 'function') track('room-share-image');
-    if (szCanShareFiles()) {
+    if (mode === 'share') {
       try {
         await navigator.share({ files: [file], title: szData.title || szT('room_default_title'), text: szRoomUrl(szRoomId) });
         return;
