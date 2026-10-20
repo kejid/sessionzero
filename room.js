@@ -33,6 +33,10 @@ const SZ_STR = {
     unsaved: 'not saved yet',
     all_saved: 'saved',
     see_results: 'Results',
+    tab_results: 'Results',
+    tab_vote: 'My vote',
+    results_locked: '{n} voted so far. Results open after you vote.',
+    peek_results: 'See results without voting',
     leave_unsaved: 'Your vote is not saved yet. Leave anyway?',
     room_default_title: 'What should we play next?',
     room_intro: 'Vote for the games you\'d be up for. Veto the ones you definitely won\'t. Come back any time to change your mind.',
@@ -104,6 +108,10 @@ const SZ_STR = {
     unsaved: 'не сохранено',
     all_saved: 'сохранено',
     see_results: 'Итоги',
+    tab_results: 'Итоги',
+    tab_vote: 'Мой голос',
+    results_locked: 'Уже проголосовали: {n}. Итоги откроются после твоего голоса.',
+    peek_results: 'Посмотреть итоги без голоса',
     leave_unsaved: 'Голос ещё не сохранён. Всё равно уйти?',
     room_default_title: 'Во что играем дальше?',
     room_intro: 'Голосуй за игры, в которые готов сыграть. Вето — за те, в которые точно нет. Можно вернуться и передумать в любой момент.',
@@ -193,6 +201,8 @@ let szMyVeto = new Set();
 let szPollTimer = null;
 let szDirty = false;           // unsaved local changes
 let szView = null;             // active overlay view: 'room' | 'list' | 'create'
+let szPeek = false;            // results opened without voting (e.g. the GM)
+let szTab = 'vote';            // phone tab once results are open: 'vote' | 'results'
 let szPick = null;             // Set of system ids selected to share (create view)
 
 function szVoterName() {
@@ -275,6 +285,8 @@ function szMarkLang() {
 async function szEnterRoom(id) {
   szRoomId = id;
   szView = 'room';
+  szPeek = false;
+  szTab = 'vote';
   const el = szEnsureOverlay();
   el.innerHTML = szTopBar() + `<div class="sz-body"><div class="sz-loading">…</div></div>`;
   szMarkLang();
@@ -286,6 +298,7 @@ async function szEnterRoom(id) {
   }
   try {
     await szLoadRoom();
+    if (szHasVoted()) szTab = 'results';  // returning voters land on results
     szRenderRoom();
     szStartPolling();
   } catch (e) {
@@ -333,8 +346,16 @@ function szRenderRoom() {
         <p class="sz-intro">${szEsc(szT('room_intro'))}</p>
         ${missing ? `<p class="sz-warn">${szEsc(szT('missing_systems', { n: missing }))}</p>` : ''}
         ${szFaqHTML('room')}
+        <p class="sz-teaser" id="sz-teaser"></p>
       </header>
 
+      <div class="sz-tabs" role="tablist">
+        <button class="sz-tab" data-tab="results" onclick="szSetTab('results')">${szEsc(szT('tab_results'))}</button>
+        <button class="sz-tab" data-tab="vote" onclick="szSetTab('vote')">${szEsc(szT('tab_vote'))}</button>
+      </div>
+
+      <div class="sz-room-layout" id="sz-room-layout">
+      <div class="sz-col-vote">
       <div class="sz-namebar">
         <label class="sz-name-label" for="sz-name">${szEsc(szT('your_name'))}</label>
         <input id="sz-name" class="sz-name-input" type="text" maxlength="40"
@@ -350,18 +371,20 @@ function szRenderRoom() {
           <span class="sz-save-hint" id="sz-save-hint">${szEsc(szT('save_need_name'))}</span>
         </div>
         <div class="sz-savebar-actions">
-          <button class="sz-btn sz-ghost sz-btn-sm" onclick="szScrollToTally()" title="${szEsc(szT('see_results'))}"><i data-lucide="bar-chart-3"></i><span class="sz-btn-label">${szEsc(szT('see_results'))}</span></button>
           <button class="sz-btn sz-ghost sz-btn-sm" onclick="szCopyLink()" title="${szEsc(szT('copy_link'))}"><i data-lucide="link"></i><span class="sz-btn-label">${szEsc(szT('copy_link'))}</span></button>
           <button id="sz-save" class="sz-btn sz-save" onclick="szSaveBallot()">${szEsc(szT('save_vote'))}</button>
         </div>
       </div>
 
-      <section class="sz-tally" id="sz-tally"></section>
+      </div>
+      <aside class="sz-col-results"><section class="sz-tally" id="sz-tally"></section></aside>
+      </div>
     </div>`;
 
   szMarkLang();
   szSyncCardButtons();
   szUpdateSaveBtn();
+  szApplyLayout();
   szRenderTally();
   if (typeof refreshIcons === 'function') refreshIcons();
 }
@@ -428,9 +451,47 @@ function szToggle(id, kind) {
   szUpdateSaveBtn();
 }
 
-function szScrollToTally() {
-  const tally = document.getElementById('sz-tally');
-  if (tally) tally.scrollIntoView({ behavior: 'smooth', block: 'start' });
+// Has the person on this device already voted in this room?
+function szHasVoted() {
+  const me = szVoterName();
+  return !!(me && szData && szData.ballots.some(b => b.voter === me));
+}
+
+// Results stay hidden until you vote, so the ranking can't sway your ballot.
+function szResultsOpen() {
+  return szPeek || szHasVoted();
+}
+
+// Two states: before voting it's just the ballot; after voting (or peeking)
+// results sit beside the ballot on desktop and behind tabs on phones.
+function szApplyLayout() {
+  const room = document.getElementById('sz-room');
+  if (!room) return;
+  const open = szResultsOpen();
+  room.classList.toggle('sz-split', open);
+  room.classList.toggle('sz-tab-results', open && szTab === 'results');
+  room.querySelectorAll('.sz-tab').forEach(b => b.classList.toggle('active', b.dataset.tab === (open ? szTab : 'vote')));
+  const teaser = document.getElementById('sz-teaser');
+  if (teaser) {
+    const n = (szData && szData.voters || []).length;
+    teaser.hidden = open;
+    teaser.innerHTML = open ? '' :
+      `<i data-lucide="lock"></i> ${szEsc(szT('results_locked', { n }))} <button type="button" class="sz-link-btn" onclick="szPeekResults()">${szEsc(szT('peek_results'))}</button>`;
+  }
+}
+
+function szSetTab(tab) {
+  szTab = tab;
+  szApplyLayout();
+  const room = document.getElementById('sz-room');
+  if (room) room.scrollTop = 0;
+}
+
+function szPeekResults() {
+  szPeek = true;
+  szTab = 'results';
+  szApplyLayout();
+  szRenderTally();
 }
 
 // Don't let a voter close the tab or leave the room with an unsaved ballot.
@@ -486,7 +547,11 @@ async function szSaveBallot() {
     if (btn) btn.textContent = szT('saved');
     await szLoadRoom();
     szSyncCardButtons();
+    szTab = 'results';
+    szApplyLayout();
     szRenderTally();
+    const room = document.getElementById('sz-room');
+    if (room && window.matchMedia('(max-width: 899px)').matches) room.scrollTop = 0;
     if (typeof refreshIcons === 'function') refreshIcons();
     setTimeout(() => { const b = document.getElementById('sz-save'); if (b) { b.textContent = szT('save_vote'); b.disabled = false; szUpdateSaveBtn(); } }, 1500);
   } catch (e) {
