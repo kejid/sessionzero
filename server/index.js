@@ -199,6 +199,11 @@ function ogImage(firstId, ru) {
   const dir = ru ? '/og/ru/' : '/og/';
   return (firstId && /^[a-z0-9_-]+$/i.test(firstId)) ? `${SITE}${dir}${firstId}.jpg` : `${SITE}/og/home.jpg`;
 }
+// Room links get the dedicated "group vote" card, so the preview reads as an
+// invitation to vote rather than as a link to the first game on the list.
+function voteOgImage(ru) {
+  return `${SITE}${ru ? '/og/ru/' : '/og/'}vote.jpg`;
+}
 // Crawlers rarely forward the end user's locale, so the sharer's language is
 // baked into the link (?l=ru); Accept-Language is a weak fallback.
 function wantsRu(req) {
@@ -247,7 +252,7 @@ app.get('/r/:id', async (req, res) => {
     res.set('Content-Type', 'text/html; charset=utf-8')
        .set('Cache-Control', 'public, max-age=300')
        .set('Vary', 'Accept-Language')
-       .send(ogPage({ title, desc, image: ogImage(list[0], ru), redirect: `${SITE}/#room=${id}` }));
+       .send(ogPage({ title, desc, image: voteOgImage(ru), redirect: `${SITE}/#room=${id}` }));
   } catch (e) {
     console.error('GET /r/:id', e);
     res.redirect(302, SITE + '/');

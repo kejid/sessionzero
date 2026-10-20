@@ -23,11 +23,17 @@ const SZ_STR = {
     create_placeholder: 'e.g. What do we play after Strahd?',
     create_btn: 'Create link',
     create_cancel: 'Cancel',
-    create_none: 'Your list is empty — pick some systems first (Manage list).',
+    create_none: 'Your shortlist is empty — tap + on games in the catalog first.',
     link_ready: 'Share this link with your group',
     open_room: 'Open the vote',
     copy: 'Copy',
     copied: 'Copied!',
+    copy_link: 'Copy link',
+    ballot_counts: 'Up: {up} · Veto: {veto}',
+    unsaved: 'not saved yet',
+    all_saved: 'saved',
+    see_results: 'Results',
+    leave_unsaved: 'Your vote is not saved yet. Leave anyway?',
     room_default_title: 'What should we play next?',
     room_intro: 'Vote for the games you\'d be up for. Veto the ones you definitely won\'t. Come back any time to change your mind.',
     your_name: 'Your name',
@@ -88,11 +94,17 @@ const SZ_STR = {
     create_placeholder: 'напр. Во что играем после Страда?',
     create_btn: 'Создать ссылку',
     create_cancel: 'Отмена',
-    create_none: 'Список пуст — сначала выбери системы («Управление списком»).',
+    create_none: 'Шортлист пуст — сначала нажми + на играх в каталоге.',
     link_ready: 'Отправь эту ссылку своей группе',
     open_room: 'Открыть голосование',
     copy: 'Копировать',
     copied: 'Скопировано!',
+    copy_link: 'Скопировать ссылку',
+    ballot_counts: 'За: {up} · Вето: {veto}',
+    unsaved: 'не сохранено',
+    all_saved: 'сохранено',
+    see_results: 'Итоги',
+    leave_unsaved: 'Голос ещё не сохранён. Всё равно уйти?',
     room_default_title: 'Во что играем дальше?',
     room_intro: 'Голосуй за игры, в которые готов сыграть. Вето — за те, в которые точно нет. Можно вернуться и передумать в любой момент.',
     your_name: 'Твоё имя',
@@ -332,11 +344,17 @@ function szRenderRoom() {
 
       <div class="sz-cards">${cards}</div>
 
-      <div class="sz-savebar">
-        <button id="sz-save" class="sz-btn sz-save" onclick="szSaveBallot()">${szEsc(szT('save_vote'))}</button>
-        <button class="sz-btn sz-ghost" onclick="szCopyLink()"><i data-lucide="link"></i> ${szEsc(szT('copy'))}</button>
+      <div class="sz-savebar sz-savebar-sticky">
+        <div class="sz-savebar-status">
+          <span id="sz-status"></span>
+          <span class="sz-save-hint" id="sz-save-hint">${szEsc(szT('save_need_name'))}</span>
+        </div>
+        <div class="sz-savebar-actions">
+          <button class="sz-btn sz-ghost sz-btn-sm" onclick="szScrollToTally()" title="${szEsc(szT('see_results'))}"><i data-lucide="bar-chart-3"></i><span class="sz-btn-label">${szEsc(szT('see_results'))}</span></button>
+          <button class="sz-btn sz-ghost sz-btn-sm" onclick="szCopyLink()" title="${szEsc(szT('copy_link'))}"><i data-lucide="link"></i><span class="sz-btn-label">${szEsc(szT('copy_link'))}</span></button>
+          <button id="sz-save" class="sz-btn sz-save" onclick="szSaveBallot()">${szEsc(szT('save_vote'))}</button>
+        </div>
       </div>
-      <p class="sz-save-hint" id="sz-save-hint">${szEsc(szT('save_need_name'))}</p>
 
       <section class="sz-tally" id="sz-tally"></section>
     </div>`;
@@ -410,6 +428,16 @@ function szToggle(id, kind) {
   szUpdateSaveBtn();
 }
 
+function szScrollToTally() {
+  const tally = document.getElementById('sz-tally');
+  if (tally) tally.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// Don't let a voter close the tab or leave the room with an unsaved ballot.
+window.addEventListener('beforeunload', e => {
+  if (szView === 'room' && szDirty) { e.preventDefault(); e.returnValue = ''; }
+});
+
 function szOnName(name) {
   szSetVoterName(name.trim());
   szUpdateSaveBtn();
@@ -422,6 +450,12 @@ function szUpdateSaveBtn() {
   // Save stays enabled even without a name — clicking guides the user to the
   // name field instead of dead-ending on a greyed button.
   btn.classList.toggle('sz-dirty', szDirty);
+  const status = document.getElementById('sz-status');
+  if (status) {
+    const counts = szT('ballot_counts', { up: szMyUp.size, veto: szMyVeto.size });
+    const state = szDirty ? szT('unsaved') : (szMyUp.size || szMyVeto.size ? szT('all_saved') : '');
+    status.innerHTML = szEsc(counts) + (state ? ` · <span class="${szDirty ? 'sz-unsaved' : 'sz-saved'}">${szEsc(state)}</span>` : '');
+  }
   const hint = document.getElementById('sz-save-hint');
   if (hint) hint.style.display = hasName ? 'none' : '';
   if (hasName) {
@@ -446,6 +480,7 @@ async function szSaveBallot() {
       body: JSON.stringify({ voter, up: [...szMyUp], veto: [...szMyVeto] }),
     });
     szDirty = false;
+    szUpdateSaveBtn();
     if (typeof track === 'function') track('room-vote');
     szRememberRoom(szRoomId, szData && szData.title);
     if (btn) btn.textContent = szT('saved');
@@ -453,7 +488,7 @@ async function szSaveBallot() {
     szSyncCardButtons();
     szRenderTally();
     if (typeof refreshIcons === 'function') refreshIcons();
-    setTimeout(() => { const b = document.getElementById('sz-save'); if (b) { b.textContent = szT('save_vote'); szUpdateSaveBtn(); } }, 1500);
+    setTimeout(() => { const b = document.getElementById('sz-save'); if (b) { b.textContent = szT('save_vote'); b.disabled = false; szUpdateSaveBtn(); } }, 1500);
   } catch (e) {
     if (typeof showToast === 'function') showToast(szT('load_error'));
     if (btn) { btn.textContent = szT('save_vote'); btn.disabled = false; }
@@ -469,14 +504,18 @@ function szRenderTally() {
   szData.list.forEach(id => { const r = szResolve(id); if (r) nameById[id] = r.name; });
 
   const ranked = (szData.tally || []).filter(row => row.up > 0 || row.veto > 0);
+  const top = ranked.length && ranked[0].score > 0 ? ranked[0].score : null;
   const rows = ranked.map(row => {
+    const lead = top !== null && row.score === top;
+    const tone = row.score > 0 ? 'pos' : row.score < 0 ? 'neg' : 'zero';
     const upChips = szData.ballots.filter(b => b.up.includes(row.id)).map(b => `<span class="sz-chip sz-chip-up">${szEsc(b.voter)}</span>`).join('');
     const vetoChips = szData.ballots.filter(b => b.veto.includes(row.id)).map(b => `<span class="sz-chip sz-chip-veto">${szEsc(b.voter)}</span>`).join('');
     return `
-      <li class="sz-tally-row">
+      <li class="sz-tally-row${lead ? ' sz-tally-lead' : ''}">
         <div class="sz-tally-main">
+          ${lead ? '<i data-lucide="crown" class="sz-tally-crown"></i>' : ''}
           <span class="sz-tally-name">${szEsc(nameById[row.id] || row.id)}</span>
-          <span class="sz-tally-score" title="up − veto">${row.score > 0 ? '+' : ''}${row.score}</span>
+          <span class="sz-tally-score sz-score-${tone}" title="up − veto">${row.score > 0 ? '+' : ''}${row.score}</span>
         </div>
         <div class="sz-tally-chips">${upChips}${vetoChips}</div>
       </li>`;
@@ -485,6 +524,7 @@ function szRenderTally() {
   wrap.innerHTML = `
     <h2 class="sz-tally-title">${szEsc(szT('tally_title'))} <span class="sz-voted">${szEsc(szT('voted_count', { n: voters.length }))}</span></h2>
     ${ranked.length ? `<ol class="sz-tally-list">${rows}</ol>` : `<p class="sz-empty">${szEsc(szT('no_votes_yet'))}</p>`}`;
+  if (typeof refreshIcons === 'function') refreshIcons();
 }
 
 function szStartPolling() {
@@ -577,6 +617,7 @@ function szSetLang(lang) {
 }
 function szExit(event) {
   if (event) event.preventDefault();
+  if (szView === 'room' && szDirty && !confirm(szT('leave_unsaved'))) return;
   szCloseOverlay();
   szRoomId = null; szData = null; szDirty = false; szListIds = null; szView = null;
   history.replaceState({ page: 'results' }, '', location.pathname + '#results');

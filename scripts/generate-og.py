@@ -43,11 +43,17 @@ COPY = {
         "sub": "Group voting tool · sessionzero.games",
         "home_pretitle": "TTRPG GROUP VOTING TOOL",
         "home_tagline": "Pick what to play with your group →",
+        "vote_pretitle": "GROUP VOTE",
+        "vote_title": "What do we play next?",
+        "vote_tagline": "Tap to vote · no sign-up",
     },
     "ru": {
         "sub": "Инструмент группового выбора · sessionzero.games",
         "home_pretitle": "ГРУППОВОЕ ГОЛОСОВАНИЕ TTRPG",
         "home_tagline": "Выберите во что играть всей группой →",
+        "vote_pretitle": "ГОЛОСОВАНИЕ",
+        "vote_title": "Во что играем дальше?",
+        "vote_tagline": "Голосуйте в один клик · без регистрации",
     },
 }
 
@@ -323,6 +329,122 @@ def make_homepage_og(lang: str) -> Image.Image:
     return bg
 
 
+# Vote card art is drawn, not borrowed: an abstract results panel in the
+# site's own UI language (no game covers or names).
+UP_GREEN = (74, 222, 128)
+VETO_RED = (248, 113, 113)
+GOLD = (250, 204, 21)
+PLAYER_COLORS = [(56, 189, 248), (74, 222, 128), (192, 132, 252), (253, 224, 71),
+                 (248, 113, 113), (251, 146, 60)]
+# (score, bar width, voter colour indexes, vetoed-by indexes)
+VOTE_ROWS = [(3, 230, [0, 1, 2], []), (2, 180, [3, 4], []), (1, 205, [5, 0], [2]), (-1, 150, [], [1])]
+
+
+def draw_crown(d: ImageDraw.ImageDraw, x: int, y: int, w: int, color: tuple):
+    h = int(w * 0.72)
+    pts = [(x, y + h), (x, y + h * 0.3), (x + w * 0.27, y + h * 0.58), (x + w * 0.5, y),
+           (x + w * 0.73, y + h * 0.58), (x + w, y + h * 0.3), (x + w, y + h)]
+    d.polygon(pts, fill=color)
+
+
+def results_panel(lang: str) -> Image.Image:
+    pw, ph = 470, 470
+    scale = 2  # supersample for smooth rounded edges
+    S = lambda v: int(v * scale)
+    panel = Image.new("RGBA", (S(pw), S(ph)), (0, 0, 0, 0))
+    d = ImageDraw.Draw(panel)
+    d.rounded_rectangle((0, 0, S(pw) - 1, S(ph) - 1), radius=S(26),
+                        fill=(16, 18, 24, 255), outline=(48, 52, 62, 255), width=S(2))
+
+    head_font = load_font(FONTS_DIR / "Unbounded-Bold.ttf", S(22))
+    small_font = load_font(FONTS_DIR / "Unbounded-Bold.ttf", S(15))
+    score_font = load_font(FONTS_DIR / "Unbounded-Bold.ttf", S(20))
+    draw_top(d, S(30), S(30), "Итоги" if lang == "ru" else "Results", head_font, WHITE)
+    voted = "Проголосовало: 6" if lang == "ru" else "6 voted"
+    draw_top(d, S(pw - 30) - int(small_font.getlength(voted)), S(36), voted, small_font, DIM)
+
+    row_h, gap, top = 78, 12, 84
+    for i, (score, bar_w, ups, vetoes) in enumerate(VOTE_ROWS):
+        y0 = top + i * (row_h + gap)
+        lead = i == 0
+        d.rounded_rectangle((S(22), S(y0), S(pw - 22), S(y0 + row_h)), radius=S(14),
+                            fill=(20, 40, 28, 255) if lead else (24, 26, 32, 255),
+                            outline=UP_GREEN if lead else (44, 48, 56, 255), width=S(2))
+        x = 40
+        draw_top(d, S(x), S(y0 + 16), str(i + 1), small_font, (110, 116, 130))
+        x += 26
+        if lead:
+            draw_crown(d, S(x), S(y0 + 16), S(22), GOLD)
+            x += 32
+        # Name placeholder bar
+        d.rounded_rectangle((S(x), S(y0 + 17), S(x + bar_w), S(y0 + 31)), radius=S(7),
+                            fill=(226, 232, 240, 230 if lead else 150))
+        # Score
+        label = f"+{score}" if score > 0 else ("−" + str(abs(score)) if score < 0 else "0")
+        col = UP_GREEN if score > 0 else VETO_RED if score < 0 else DIM
+        draw_top(d, S(pw - 40) - int(score_font.getlength(label)), S(y0 + 14), label, score_font, col)
+        # Voter chips
+        cx = 66
+        for idx in ups:
+            c = PLAYER_COLORS[idx]
+            d.rounded_rectangle((S(cx), S(y0 + 44), S(cx + 46), S(y0 + 62)), radius=S(9),
+                                fill=c + (60,), outline=c + (255,), width=S(2))
+            cx += 54
+        for idx in vetoes:
+            c = VETO_RED
+            d.rounded_rectangle((S(cx), S(y0 + 44), S(cx + 46), S(y0 + 62)), radius=S(9),
+                                fill=c + (40,), outline=c + (255,), width=S(2))
+            d.line((S(cx + 8), S(y0 + 53), S(cx + 38), S(y0 + 53)), fill=c + (255,), width=S(2))
+            cx += 54
+    return panel.resize((pw, ph), Image.LANCZOS)
+
+
+def make_vote_og(lang: str) -> Image.Image:
+    """Room share card: headline on the left, a drawn results panel on the right."""
+    bg = Image.new("RGBA", (W, H), BG_DARK + (255,))
+    bg.alpha_composite(radial_glow(W, H, ACCENT, cx=int(W * 0.76),
+                                   cy=int(H * 0.5), max_r=620, max_alpha=42))
+    bg.alpha_composite(vertical_gradient(W, H, top_alpha=0, bottom_alpha=90))
+
+    panel = results_panel(lang)
+    pad = 50
+    layer = Image.new("RGBA", (panel.width + pad * 2, panel.height + pad * 2), (0, 0, 0, 0))
+    layer.alpha_composite(Image.new("RGBA", panel.size, (0, 0, 0, 190)), (pad + 8, pad + 16))
+    layer = layer.filter(ImageFilter.GaussianBlur(18))
+    layer.alpha_composite(panel, (pad, pad))
+    layer = layer.rotate(-4, resample=Image.BICUBIC, expand=True)
+    bg.alpha_composite(layer, (W - layer.width + 20, (H - layer.height) // 2))
+
+    # Text block on the left
+    draw = ImageDraw.Draw(bg)
+    max_w = 500
+    pretitle = COPY[lang]["vote_pretitle"]
+    lines, title_font = wrap_two_lines(FONTS_DIR / "Unbounded-Black.ttf",
+                                       COPY[lang]["vote_title"], max_size=76,
+                                       min_size=44, max_width=max_w)
+    tagline = COPY[lang]["vote_tagline"]
+    pt_font = load_font(FONTS_DIR / "Unbounded-Bold.ttf", 22)
+    tag_font = fit_font(FONTS_DIR / "Unbounded-Bold.ttf", tagline, 26, 18, max_w)
+
+    line_h = int(title_font.size * 1.12)
+    block_h = text_h(draw, pretitle, pt_font) + 26 + line_h * len(lines) + 28 + text_h(draw, tagline, tag_font)
+    y = (H - block_h) // 2
+    draw.rectangle((PAD_X, y - 22, PAD_X + 56, y - 18), fill=ACCENT)
+    draw_top(draw, PAD_X, y, pretitle, pt_font, ACCENT, spacing=2)
+    y += text_h(draw, pretitle, pt_font) + 26
+    for line in lines:
+        draw_top(draw, PAD_X, y, line, title_font, WHITE)
+        y += line_h
+    y += 28 - (line_h - title_font.size)
+    draw_top(draw, PAD_X, y, tagline, tag_font, DIM)
+
+    brand_font = load_font(FONTS_DIR / "Unbounded-Bold.ttf", 18)
+    draw_top(draw, PAD_X, BADGE_PAD, "SESSION ZERO", brand_font, WHITE)
+    url = "sessionzero.games"
+    draw_top(draw, PAD_X, H - BADGE_PAD - 18, url, brand_font, ACCENT)
+    return bg
+
+
 def make_og(system: dict, lang: str) -> Image.Image:
     hero_url = system.get("heroImage") or ""
     hero = fetch_image(hero_url) if hero_url else None
@@ -360,9 +482,13 @@ def main(lang: str, only: list[str] | None = None):
         except Exception as e:
             print(f"   FAILED: {e}")
             fail += 1
-        if only and set(only) <= {"home"}:
-            print(f"\nDone: {ok} ok, {fail} failed")
-            return
+    if only and "vote" in only:
+        print(f"-> vote ({lang})")
+        save_jpeg(make_vote_og(lang), out_dir / "vote.jpg")
+        ok += 1
+    if only and set(only) <= {"home", "vote"}:
+        print(f"\nDone: {ok} ok, {fail} failed")
+        return
 
     files = sorted(p for p in SYSTEMS_DIR.glob("*.js") if not p.name.startswith("_"))
     for path in files:

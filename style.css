@@ -2443,8 +2443,9 @@ body.sz-room-open { overflow: hidden; }
 .sz-brand {
     font-family: 'Unbounded', sans-serif; font-weight: 900;
     letter-spacing: 1px; font-size: 15px; color: var(--text);
-    text-decoration: none;
+    text-decoration: none; white-space: nowrap;
 }
+@media (max-width: 420px) { .sz-brand { font-size: 13px; letter-spacing: 0.5px; } }
 .sz-topbar-actions { display: flex; align-items: center; gap: 12px; }
 .sz-lang { display: flex; gap: 4px; }
 .sz-lang-btn {
@@ -2571,6 +2572,11 @@ body.sz-room-open { overflow: hidden; }
 .sz-tally-main { display: inline-flex; align-items: baseline; gap: 10px; }
 .sz-tally-name { font-weight: 800; font-size: 15px; }
 .sz-tally-score { color: var(--accent); font-weight: 800; font-size: 14px; }
+.sz-score-pos { color: var(--green); }
+.sz-score-neg { color: var(--red); }
+.sz-score-zero { color: var(--dim); }
+.sz-tally-lead { border-color: var(--green); background: linear-gradient(90deg, var(--green-bg), var(--card) 60%); }
+.sz-tally-crown { width: 16px; height: 16px; color: #facc15; align-self: center; }
 .sz-tally-chips { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
 .sz-chip { font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 999px; }
 .sz-chip-up { color: var(--green); background: var(--green-bg); }
@@ -2782,3 +2788,26 @@ body.browse-mode .sidebar .sidebar-nav-divider { display: none; }
 .setup-ballot-btn:hover { border-color: var(--accent); color: var(--text); }
 .setup-ballot-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(56,189,248,0.08); }
 .setup-ballot-btn[hidden] { display: none; }
+
+/* Room: save bar sticks to the bottom so the vote can't be lost below the fold */
+.sz-savebar-sticky {
+    position: sticky; bottom: 0; z-index: 2;
+    margin: 22px -20px 0; padding: 12px 20px calc(12px + env(safe-area-inset-bottom));
+    justify-content: space-between;
+    background: rgba(5,5,5,0.92); backdrop-filter: blur(8px);
+    border-top: 1px solid var(--border-subtle);
+}
+.sz-savebar-status { display: flex; flex-direction: column; gap: 2px; font-size: 13px; color: var(--dim); min-width: 0; }
+.sz-savebar-status .sz-save-hint { margin: 0; }
+.sz-unsaved { color: #facc15; font-weight: 700; }
+.sz-saved { color: var(--green); font-weight: 700; }
+.sz-savebar-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.sz-btn-sm { padding: 10px 14px; font-size: 13px; }
+.sz-btn-sm i[data-lucide] { width: 14px; height: 14px; }
+@media (max-width: 560px) {
+    .sz-savebar-sticky { flex-direction: column; align-items: stretch; gap: 8px; padding-top: 10px; }
+    .sz-savebar-actions { display: grid; grid-template-columns: 1fr auto auto; }
+    .sz-savebar-actions .sz-save { grid-column: 1; grid-row: 1; }
+    .sz-btn-sm { padding: 12px; }
+    .sz-btn-sm .sz-btn-label { display: none; }
+}
