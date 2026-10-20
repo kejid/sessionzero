@@ -272,9 +272,15 @@ function ogPage({ title, desc, image, redirect }) {
 <meta name="twitter:image" content="${img}">
 <link rel="canonical" href="${r}">
 <meta http-equiv="refresh" content="0; url=${r}">
-</head><body>
-<p>Opening Session Zero… <a href="${r}">Continue</a></p>
+<meta name="color-scheme" content="dark">
 <script>location.replace(${JSON.stringify(redirect)});</script>
+<style>
+  html,body{margin:0;height:100%;background:#050505;color:#94a3b8;font:15px/1.5 system-ui,sans-serif}
+  body{display:flex;align-items:center;justify-content:center}
+  a{color:#38bdf8}
+</style>
+</head><body>
+<noscript><p><a href="${r}">Open Session Zero</a></p></noscript>
 </body></html>`;
 }
 
