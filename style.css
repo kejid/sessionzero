@@ -2842,3 +2842,6 @@ body.browse-mode .sidebar .sidebar-nav-divider { display: none; }
     #sz-room.sz-split.sz-tab-results .sz-col-vote { display: none; }
     #sz-room.sz-split:not(.sz-tab-results) .sz-col-results { display: none; }
 }
+
+.sz-share-img { margin-top: 14px; width: 100%; }
+.sz-share-img i[data-lucide], .sz-share-img svg { width: 16px; height: 16px; }

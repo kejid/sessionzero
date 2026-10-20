@@ -34,6 +34,13 @@ const SZ_STR = {
     all_saved: 'saved',
     see_results: 'Results',
     tab_results: 'Results',
+    share_image: 'Share results',
+    save_image: 'Save as image',
+    img_results: 'Vote results',
+    img_winner: 'We play',
+    img_veto: 'veto',
+    img_more: '+{n} more',
+    img_footer: 'Pick your next TTRPG as a group',
     tab_vote: 'My vote',
     results_locked: '{n} voted so far. Results open after you vote.',
     peek_results: 'See results without voting',
@@ -109,6 +116,13 @@ const SZ_STR = {
     all_saved: 'сохранено',
     see_results: 'Итоги',
     tab_results: 'Итоги',
+    share_image: 'Поделиться итогами',
+    save_image: 'Сохранить картинкой',
+    img_results: 'Итоги голосования',
+    img_winner: 'Играем в',
+    img_veto: 'вето',
+    img_more: 'и ещё {n}',
+    img_footer: 'Выбирайте настольную ролёвку всей группой',
     tab_vote: 'Мой голос',
     results_locked: 'Уже проголосовали: {n}. Итоги откроются после твоего голоса.',
     peek_results: 'Посмотреть итоги без голоса',
@@ -588,8 +602,199 @@ function szRenderTally() {
 
   wrap.innerHTML = `
     <h2 class="sz-tally-title">${szEsc(szT('tally_title'))} <span class="sz-voted">${szEsc(szT('voted_count', { n: voters.length }))}</span></h2>
-    ${ranked.length ? `<ol class="sz-tally-list">${rows}</ol>` : `<p class="sz-empty">${szEsc(szT('no_votes_yet'))}</p>`}`;
+    ${ranked.length ? `<ol class="sz-tally-list">${rows}</ol>` : `<p class="sz-empty">${szEsc(szT('no_votes_yet'))}</p>`}
+    ${ranked.length ? `<button class="sz-btn sz-ghost sz-share-img" onclick="szShareResultsImage(this)"><i data-lucide="${szCanShareFiles() ? 'share-2' : 'download'}"></i> ${szEsc(szT(szCanShareFiles() ? 'share_image' : 'save_image'))}</button>` : ''}`;
   if (typeof refreshIcons === 'function') refreshIcons();
+}
+
+// ============================ results as an image ============================
+// Drawn on a canvas at 1080×1350 — the 4:5 size Instagram/Telegram feeds show
+// uncropped. The leader's cover comes through the wsrv.nl proxy, which sends
+// CORS headers, so the canvas stays exportable; if it fails we draw without it.
+function szCanShareFiles() {
+  try {
+    return !!(navigator.canShare && navigator.canShare({ files: [new File([''], 'x.png', { type: 'image/png' })] }));
+  } catch (e) { return false; }
+}
+
+function szFitText(ctx, text, maxW) {
+  if (ctx.measureText(text).width <= maxW) return text;
+  let t = text;
+  while (t.length > 1 && ctx.measureText(t + '…').width > maxW) t = t.slice(0, -1);
+  return t + '…';
+}
+
+function szRoundRect(ctx, x, y, w, h, r) {
+  ctx.beginPath();
+  if (ctx.roundRect) ctx.roundRect(x, y, w, h, r);
+  else ctx.rect(x, y, w, h);
+}
+
+function szLoadImage(url) {
+  return new Promise(resolve => {
+    if (!url) return resolve(null);
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = () => resolve(img);
+    img.onerror = () => resolve(null);
+    img.src = url;
+    setTimeout(() => resolve(null), 6000);
+  });
+}
+
+function szDrawCover(ctx, img, x, y, w, h) {
+  const s = Math.max(w / img.width, h / img.height);
+  const sw = w / s, sh = h / s;
+  ctx.drawImage(img, (img.width - sw) / 2, (img.height - sh) / 2, sw, sh, x, y, w, h);
+}
+
+function szDrawCrown(ctx, x, base, color) {
+  ctx.fillStyle = color; ctx.beginPath();
+  ctx.moveTo(x, base); ctx.lineTo(x, base - 26); ctx.lineTo(x + 11, base - 12); ctx.lineTo(x + 20, base - 34);
+  ctx.lineTo(x + 29, base - 12); ctx.lineTo(x + 40, base - 26); ctx.lineTo(x + 40, base); ctx.closePath(); ctx.fill();
+}
+
+async function szDrawResults() {
+  const W = 1080, H = 1350, P = 72;
+  const C = { bg: '#050505', card: '#121419', border: '#2a2d35', text: '#f1f5f9', dim: '#94a3b8',
+              accent: '#38bdf8', green: '#4ade80', red: '#f87171', gold: '#facc15' };
+  const names = {}, heroes = {};
+  szData.list.forEach(id => { const r = szResolve(id); if (r) { names[id] = r.name; heroes[id] = r.hero; } });
+  const ranked = (szData.tally || []).filter(r => r.up > 0 || r.veto > 0);
+  const top = ranked.length && ranked[0].score > 0 ? ranked[0].score : null;
+  const leaders = top === null ? [] : ranked.filter(r => r.score === top);
+  const winner = leaders.length === 1 ? leaders[0] : null;
+  const rest = ranked.filter(r => r !== winner);
+
+  const [cover] = await Promise.all([
+    winner && typeof imgProxy === 'function'
+      ? szLoadImage(imgProxy(heroes[winner.id], { w: 1080, h: 540, fit: 'cover', q: 85 }).replace('output=webp', 'output=jpg'))
+      : Promise.resolve(null),
+    Promise.all(['900 64px Unbounded', '700 32px Unbounded', '600 28px Manrope', '800 28px Manrope']
+      .map(f => document.fonts.load(f).catch(() => null))),
+  ]);
+  const head = 'Unbounded, system-ui, sans-serif', body = 'Manrope, system-ui, sans-serif';
+  const who = id => {
+    const ups = szData.ballots.filter(b => b.up.includes(id)).map(b => b.voter);
+    const vetoes = szData.ballots.filter(b => b.veto.includes(id)).map(b => b.voter);
+    return [ups.join(', '), vetoes.length ? szT('img_veto') + ': ' + vetoes.join(', ') : ''].filter(Boolean).join(' · ');
+  };
+  const scoreText = s => (s > 0 ? '+' : s < 0 ? '−' : '') + Math.abs(s);
+
+  const canvas = document.createElement('canvas');
+  canvas.width = W; canvas.height = H;
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = C.bg; ctx.fillRect(0, 0, W, H);
+  const glow = ctx.createRadialGradient(W * 0.8, 160, 0, W * 0.8, 160, 700);
+  glow.addColorStop(0, 'rgba(56,189,248,0.16)'); glow.addColorStop(1, 'rgba(56,189,248,0)');
+  ctx.fillStyle = glow; ctx.fillRect(0, 0, W, H);
+
+  // Brand + heading
+  ctx.fillStyle = C.text; ctx.font = `900 28px ${head}`;
+  ctx.fillText('SESSION ZERO', P, P + 22);
+  ctx.fillStyle = C.accent; ctx.font = `700 24px ${head}`;
+  ctx.fillText(szT('img_results').toUpperCase(), P, 190);
+  ctx.fillStyle = C.text; ctx.font = `900 54px ${head}`;
+  ctx.fillText(szFitText(ctx, szData.title || szT('room_default_title'), W - P * 2), P, 258);
+  ctx.fillStyle = C.dim; ctx.font = `600 28px ${body}`;
+  ctx.fillText(szT('voted_count', { n: (szData.voters || []).length }), P, 304);
+
+  let y = 350;
+  // Winner: big card, with the game's cover when it loaded
+  if (winner) {
+    const h = 400, w = W - P * 2;
+    ctx.save();
+    szRoundRect(ctx, P, y, w, h, 28); ctx.clip();
+    ctx.fillStyle = C.card; ctx.fillRect(P, y, w, h);
+    if (cover) {
+      szDrawCover(ctx, cover, P, y, w, h);
+      const shade = ctx.createLinearGradient(0, y, 0, y + h);
+      shade.addColorStop(0, 'rgba(5,5,5,0.15)'); shade.addColorStop(0.45, 'rgba(5,5,5,0.35)'); shade.addColorStop(1, 'rgba(5,5,5,0.92)');
+      ctx.fillStyle = shade; ctx.fillRect(P, y, w, h);
+    }
+    ctx.restore();
+    szRoundRect(ctx, P, y, w, h, 28);
+    ctx.lineWidth = 4; ctx.strokeStyle = C.green; ctx.stroke();
+
+    szDrawCrown(ctx, P + 36, y + h - 150, C.gold);
+    ctx.fillStyle = C.gold; ctx.font = `700 24px ${head}`;
+    ctx.fillText(szT('img_winner').toUpperCase(), P + 92, y + h - 152);
+    ctx.font = `900 56px ${head}`;
+    const st = scoreText(winner.score), sw = ctx.measureText(st).width;
+    ctx.fillStyle = C.green; ctx.fillText(st, P + w - 36 - sw, y + h - 78);
+    ctx.fillStyle = C.text;
+    ctx.fillText(szFitText(ctx, names[winner.id] || winner.id, w - 72 - sw - 30), P + 36, y + h - 78);
+    ctx.fillStyle = '#cbd5e1'; ctx.font = `600 26px ${body}`;
+    ctx.fillText(szFitText(ctx, who(winner.id), w - 72), P + 36, y + h - 32);
+    y += h + 24;
+  }
+
+  // The rest (or every leader when it's a tie)
+  const maxY = H - P - 120;  // keep clear of the footer
+  let shown = 0;
+  for (const row of rest) {
+    const h = 104, w = W - P * 2;
+    if (y + h > maxY) break;
+    shown++;
+    const tie = !winner && top !== null && row.score === top;
+    szRoundRect(ctx, P, y, w, h, 20);
+    ctx.fillStyle = tie ? 'rgba(74,222,128,0.10)' : C.card; ctx.fill();
+    ctx.lineWidth = tie ? 3 : 2; ctx.strokeStyle = tie ? C.green : C.border; ctx.stroke();
+    let x = P + 32;
+    const mid = y + 54;
+    ctx.fillStyle = C.dim; ctx.font = `800 26px ${body}`;
+    ctx.fillText(String(ranked.indexOf(row) + 1), x, mid);
+    x += 44;
+    if (tie) { szDrawCrown(ctx, x, mid, C.gold); x += 56; }
+    ctx.font = `700 32px ${head}`;
+    const st = scoreText(row.score), sw = ctx.measureText(st).width;
+    ctx.fillStyle = row.score > 0 ? C.green : row.score < 0 ? C.red : C.dim;
+    ctx.fillText(st, W - P - 32 - sw, mid);
+    ctx.fillStyle = C.text;
+    ctx.fillText(szFitText(ctx, names[row.id] || row.id, W - P - 32 - sw - 24 - x), x, mid);
+    ctx.fillStyle = C.dim; ctx.font = `600 22px ${body}`;
+    ctx.fillText(szFitText(ctx, who(row.id), w - 108), P + 76, y + h - 18);
+    y += h + 14;
+  }
+  const more = ranked.length - (winner ? 1 : 0) - shown;
+  if (more > 0) {
+    ctx.fillStyle = C.dim; ctx.font = `600 24px ${body}`;
+    ctx.fillText(szT('img_more', { n: more }), P + 32, y + 22);
+  }
+
+  // Footer
+  ctx.fillStyle = C.dim; ctx.font = `600 26px ${body}`;
+  ctx.fillText(szT('img_footer'), P, H - P - 42);
+  ctx.fillStyle = C.accent; ctx.font = `700 30px ${head}`;
+  ctx.fillText('sessionzero.games', P, H - P);
+  return canvas;
+}
+
+async function szShareResultsImage(btn) {
+  if (!szData) return;
+  if (btn) btn.disabled = true;
+  try {
+    const canvas = await szDrawResults();
+    const blob = await new Promise(res => canvas.toBlob(res, 'image/png'));
+    if (!blob) return;
+    const file = new File([blob], 'session-zero-results.png', { type: 'image/png' });
+    if (typeof track === 'function') track('room-share-image');
+    if (szCanShareFiles()) {
+      try {
+        await navigator.share({ files: [file], title: szData.title || szT('room_default_title'), text: szRoomUrl(szRoomId) });
+        return;
+      } catch (e) {
+        if (e && e.name === 'AbortError') return;  // user closed the share sheet
+      }
+    }
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = file.name;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+  } finally {
+    if (btn) btn.disabled = false;
+  }
 }
 
 function szStartPolling() {
