@@ -37,6 +37,20 @@ const SZ_STR = {
     share_image: 'Share results',
     save_image: 'Save as image',
     share_short: 'Share',
+    gm_toggle: 'I\'m the GM',
+    gm_toggle_hint: '— I\'ll run the game. Your "up" votes show as "GM wants to run".',
+    gm_short: 'GM',
+    gm_up: 'GM wants to run',
+    gm_veto: 'GM is against',
+    suggest_btn: 'Suggest a game',
+    suggest_left: '{n} left',
+    suggest_title: 'Add a game to this vote',
+    suggest_hint: 'Everyone will see it and can vote on it. You can add {n} more.',
+    suggest_search: 'Search the catalog…',
+    suggest_none: 'Nothing found — try another name.',
+    suggest_added: 'Added to the vote. Don\'t forget to save your vote.',
+    suggest_limit: 'You\'ve already suggested the maximum number of games.',
+    suggested_by: 'Suggested by {name}',
     copy_image: 'Copy image',
     image_copied: 'Image copied — paste it into a chat (Ctrl+V)',
     save_short: 'Image',
@@ -124,6 +138,20 @@ const SZ_STR = {
     share_image: 'Поделиться итогами',
     save_image: 'Сохранить картинкой',
     share_short: 'Поделиться',
+    gm_toggle: 'Я мастер',
+    gm_toggle_hint: '— буду вести игру. Мои «за» видны всем как «мастер хочет вести».',
+    gm_short: 'мастер',
+    gm_up: 'Мастер хочет вести',
+    gm_veto: 'Мастер против',
+    suggest_btn: 'Предложить игру',
+    suggest_left: 'осталось {n}',
+    suggest_title: 'Добавить игру в голосование',
+    suggest_hint: 'Её увидят все и смогут за неё голосовать. Можно добавить ещё {n}.',
+    suggest_search: 'Поиск по каталогу…',
+    suggest_none: 'Ничего не нашлось — попробуй другое название.',
+    suggest_added: 'Игра добавлена. Не забудь сохранить голос.',
+    suggest_limit: 'Ты уже предложил максимум игр.',
+    suggested_by: 'Предложил(а) {name}',
     copy_image: 'Скопировать картинку',
     image_copied: 'Картинка скопирована — вставьте в чат (Ctrl+V)',
     save_short: 'Картинка',
@@ -222,6 +250,7 @@ let szRoomId = null;
 let szData = null;              // last server payload
 let szMyUp = new Set();
 let szMyVeto = new Set();
+let szMyGm = false;            // "I'm the GM" on my ballot
 let szPollTimer = null;
 let szDirty = false;           // unsaved local changes
 let szView = null;             // active overlay view: 'room' | 'list' | 'create'
@@ -241,10 +270,11 @@ function szSetVoterName(name) {
 function szMyRooms() {
   try { return JSON.parse(localStorage.getItem('sz-my-rooms') || '[]'); } catch (e) { return []; }
 }
-function szRememberRoom(id, title) {
+function szRememberRoom(id, title, created) {
   try {
+    const prev = szMyRooms().find(r => r.id === id);
     const rooms = szMyRooms().filter(r => r.id !== id);
-    rooms.unshift({ id, title: title || '', at: Date.now() });
+    rooms.unshift({ id, title: title || '', at: Date.now(), created: !!(created || (prev && prev.created)) });
     localStorage.setItem('sz-my-rooms', JSON.stringify(rooms.slice(0, 50)));
   } catch (e) {}
 }
@@ -308,6 +338,7 @@ function szMarkLang() {
 // ============================ ROOM (voting) view ============================
 async function szEnterRoom(id) {
   szRoomId = id;
+  szSuggestOpen = false;
   szView = 'room';
   szPeek = false;
   szTab = 'vote';
@@ -340,6 +371,8 @@ async function szLoadRoom() {
     const mine = me ? szData.ballots.find(b => b.voter === me) : null;
     szMyUp = new Set(mine ? mine.up : []);
     szMyVeto = new Set(mine ? mine.veto : []);
+    // No ballot yet: whoever created the room here is most likely the GM
+    szMyGm = mine ? !!mine.gm : szMyRooms().some(r => r.id === szRoomId && r.created);
   }
 }
 
@@ -385,9 +418,14 @@ function szRenderRoom() {
         <input id="sz-name" class="sz-name-input" type="text" maxlength="40"
                placeholder="${szEsc(szT('name_placeholder'))}" value="${szEsc(szVoterName())}"
                oninput="szOnName(this.value)">
+        <label class="sz-gm-toggle">
+          <input type="checkbox" id="sz-gm" ${szMyGm ? 'checked' : ''} onchange="szSetGm(this.checked)">
+          <span><strong>${szEsc(szT('gm_toggle'))}</strong> ${szEsc(szT('gm_toggle_hint'))}</span>
+        </label>
       </div>
 
       <div class="sz-cards">${cards}</div>
+      <div class="sz-suggest" id="sz-suggest">${szSuggestHTML()}</div>
 
       <div class="sz-savebar sz-savebar-sticky">
         <div class="sz-savebar-status">
@@ -446,6 +484,8 @@ function szCardHTML(s, readOnly) {
         <div class="sz-card-body">
           <div class="sz-card-name">${szEsc(s.name)} <i data-lucide="external-link" class="sz-card-ext"></i></div>
           <div class="sz-card-tagline">${szEsc(s.tagline)}</div>
+          ${readOnly ? '' : szGmTag(s.id)}
+          ${!readOnly && szData && szData.suggested && szData.suggested[s.id] ? `<span class="sz-suggested-by"><i data-lucide="user-plus"></i>${szEsc(szT('suggested_by', { name: szData.suggested[s.id] }))}</span>` : ''}
         </div>
       </a>
       ${vote}
@@ -453,13 +493,26 @@ function szCardHTML(s, readOnly) {
 }
 
 function szSyncCardButtons() {
+  let tagsChanged = false;
   document.querySelectorAll('#sz-room .sz-card').forEach(card => {
     const id = card.dataset.id;
+    // Keep the "GM would run it" tag in step with the latest server ballots
+    const body = card.querySelector('.sz-card-body');
+    if (body && card.querySelector('.sz-card-vote')) {
+      const want = szGmStance(id) || '';
+      const old = body.querySelector('.sz-gm-tag');
+      if ((old ? old.dataset.st : '') !== want) {
+        if (old) old.remove();
+        if (want) body.insertAdjacentHTML('beforeend', szGmTag(id));
+        tagsChanged = true;
+      }
+    }
     const up = card.querySelector('.sz-up');
     const veto = card.querySelector('.sz-veto');
     if (up) up.classList.toggle('active', szMyUp.has(id));
     if (veto) veto.classList.toggle('active', szMyVeto.has(id));
   });
+  if (tagsChanged && typeof refreshIcons === 'function') refreshIcons();
 }
 
 function szToggle(id, kind) {
@@ -525,9 +578,116 @@ window.addEventListener('beforeunload', e => {
   if (szView === 'room' && szDirty) { e.preventDefault(); e.returnValue = ''; }
 });
 
+// ---- players add games to the room ----
+let szSuggestOpen = false;
+
+function szSuggestLeft() {
+  const max = (szData && szData.maxSuggest) || 3;
+  const me = szVoterName();
+  const used = Object.values((szData && szData.suggested) || {}).filter(v => v === me).length;
+  return me ? Math.max(0, max - used) : max;
+}
+
+function szSuggestHTML() {
+  const left = szSuggestLeft();
+  if (!szSuggestOpen) {
+    return `<button class="sz-btn sz-ghost sz-suggest-btn" onclick="szToggleSuggest(true)" ${left ? '' : 'disabled'}>
+      <i data-lucide="plus"></i> ${szEsc(szT('suggest_btn'))} <span class="sz-suggest-left">${szEsc(szT('suggest_left', { n: left }))}</span>
+    </button>`;
+  }
+  return `
+    <div class="sz-suggest-panel">
+      <div class="sz-suggest-head">
+        <strong>${szEsc(szT('suggest_title'))}</strong>
+        <button class="sz-link-btn" onclick="szToggleSuggest(false)">${szEsc(szT('create_cancel'))}</button>
+      </div>
+      <p class="sz-suggest-hint">${szEsc(szT('suggest_hint', { n: left }))}</p>
+      <input class="sz-name-input" id="sz-suggest-q" type="search" autocomplete="off"
+             placeholder="${szEsc(szT('suggest_search'))}" oninput="szRenderSuggestResults(this.value)">
+      <div class="sz-suggest-results" id="sz-suggest-results"></div>
+    </div>`;
+}
+
+function szToggleSuggest(open) {
+  if (open && !szVoterName()) {
+    const inp = document.getElementById('sz-name');
+    if (inp) { inp.classList.add('sz-name-needed'); inp.focus(); inp.scrollIntoView({ block: 'center', behavior: 'smooth' }); }
+    if (typeof showToast === 'function') showToast(szT('name_first'));
+    return;
+  }
+  szSuggestOpen = open;
+  const el = document.getElementById('sz-suggest');
+  if (!el) return;
+  el.innerHTML = szSuggestHTML();
+  if (open) { szRenderSuggestResults(''); const q = document.getElementById('sz-suggest-q'); if (q) q.focus(); }
+  if (typeof refreshIcons === 'function') refreshIcons();
+}
+
+function szRenderSuggestResults(q) {
+  const box = document.getElementById('sz-suggest-results');
+  if (!box || !szData) return;
+  const inList = new Set(szData.list);
+  const query = (q || '').trim().toLowerCase();
+  const ids = szAllPickIds().filter(id => !inList.has(id));
+  const hits = ids.map(szResolve).filter(Boolean)
+    .filter(s => !query || s.name.toLowerCase().includes(query) || (s.tagline || '').toLowerCase().includes(query))
+    .slice(0, 8);
+  box.innerHTML = hits.length ? hits.map(s => `
+    <button class="sz-suggest-item" onclick="szSuggest('${szEsc(s.id)}')">
+      <img src="${szEsc(szThumb(s.hero))}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+      <span><strong>${szEsc(s.name)}</strong><small>${szEsc(s.tagline)}</small></span>
+      <i data-lucide="plus"></i>
+    </button>`).join('') : `<p class="sz-empty">${szEsc(szT('suggest_none'))}</p>`;
+  if (typeof refreshIcons === 'function') refreshIcons();
+}
+
+async function szSuggest(id) {
+  const voter = szVoterName();
+  if (!voter) return szToggleSuggest(true);
+  try {
+    await szApi('/room/' + encodeURIComponent(szRoomId) + '/suggest', {
+      method: 'POST', body: JSON.stringify({ voter, id }),
+    });
+    if (typeof track === 'function') track('room-suggest');
+    // You suggested it, so you're up for it — counts once you save your vote
+    szMyUp.add(id); szMyVeto.delete(id); szDirty = true;
+    szSuggestOpen = false;
+    await szLoadRoom();
+    szRenderRoom();
+    const card = document.querySelector(`#sz-room .sz-card[data-id="${CSS.escape(id)}"]`);
+    if (card) { card.scrollIntoView({ block: 'center', behavior: 'smooth' }); card.classList.add('sz-card-new'); }
+    if (typeof showToast === 'function') showToast(szT('suggest_added'));
+  } catch (e) {
+    const msg = e.status === 429 ? 'suggest_limit' : 'load_error';
+    if (typeof showToast === 'function') showToast(szT(msg));
+  }
+}
+
+function szSetGm(on) {
+  szMyGm = on;
+  szDirty = true;
+  szUpdateSaveBtn();
+}
+
+// What the GM(s) think of a game: 'up' if any GM would run it, 'veto' if a GM
+// vetoed it (and none is up for it), else null.
+function szGmStance(id) {
+  const gms = (szData && szData.ballots || []).filter(b => b.gm);
+  if (gms.some(b => b.up.includes(id))) return 'up';
+  if (gms.some(b => b.veto.includes(id))) return 'veto';
+  return null;
+}
+
+function szGmTag(id) {
+  const st = szGmStance(id);
+  if (!st) return '';
+  return `<span class="sz-gm-tag sz-gm-tag-${st}" data-st="${st}"><i data-lucide="dices"></i>${szEsc(szT(st === 'up' ? 'gm_up' : 'gm_veto'))}</span>`;
+}
+
 function szOnName(name) {
   szSetVoterName(name.trim());
   szUpdateSaveBtn();
+  if (!szSuggestOpen) { const el = document.getElementById('sz-suggest'); if (el) { el.innerHTML = szSuggestHTML(); if (typeof refreshIcons === 'function') refreshIcons(); } }
 }
 
 function szUpdateSaveBtn() {
@@ -564,7 +724,7 @@ async function szSaveBallot() {
   try {
     await szApi('/room/' + encodeURIComponent(szRoomId) + '/ballot', {
       method: 'PUT',
-      body: JSON.stringify({ voter, up: [...szMyUp], veto: [...szMyVeto] }),
+      body: JSON.stringify({ voter, up: [...szMyUp], veto: [...szMyVeto], gm: szMyGm }),
     });
     szDirty = false;
     szUpdateSaveBtn();
@@ -599,8 +759,11 @@ function szRenderTally() {
   const rows = ranked.map(row => {
     const lead = top !== null && row.score === top;
     const tone = row.score > 0 ? 'pos' : row.score < 0 ? 'neg' : 'zero';
-    const upChips = szData.ballots.filter(b => b.up.includes(row.id)).map(b => `<span class="sz-chip sz-chip-up">${szEsc(b.voter)}</span>`).join('');
-    const vetoChips = szData.ballots.filter(b => b.veto.includes(row.id)).map(b => `<span class="sz-chip sz-chip-veto">${szEsc(b.voter)}</span>`).join('');
+    const chip = (b, kind) => `<span class="sz-chip sz-chip-${kind}${b.gm ? ' sz-chip-gm' : ''}">${b.gm ? '<i data-lucide="dices"></i>' : ''}${szEsc(b.voter)}${b.gm ? ` · ${szEsc(szT('gm_short'))}` : ''}</span>`;
+    // GM first: their pick is the one that decides what can actually run
+    const byGm = (a, b) => (b.gm ? 1 : 0) - (a.gm ? 1 : 0);
+    const upChips = szData.ballots.filter(b => b.up.includes(row.id)).sort(byGm).map(b => chip(b, 'up')).join('');
+    const vetoChips = szData.ballots.filter(b => b.veto.includes(row.id)).sort(byGm).map(b => chip(b, 'veto')).join('');
     return `
       <li class="sz-tally-row${lead ? ' sz-tally-lead' : ''}">
         <div class="sz-tally-main">
@@ -705,9 +868,10 @@ async function szDrawResults() {
       .map(f => document.fonts.load(f).catch(() => null))),
   ]);
   const head = 'Unbounded, system-ui, sans-serif', body = 'Manrope, system-ui, sans-serif';
+  const nm = b => b.gm ? `${b.voter} (${szT('gm_short')})` : b.voter;
   const who = id => {
-    const ups = szData.ballots.filter(b => b.up.includes(id)).map(b => b.voter);
-    const vetoes = szData.ballots.filter(b => b.veto.includes(id)).map(b => b.voter);
+    const ups = szData.ballots.filter(b => b.up.includes(id)).map(nm);
+    const vetoes = szData.ballots.filter(b => b.veto.includes(id)).map(nm);
     return [ups.join(', '), vetoes.length ? szT('img_veto') + ': ' + vetoes.join(', ') : ''].filter(Boolean).join(' · ');
   };
   const scoreText = s => (s > 0 ? '+' : s < 0 ? '−' : '') + Math.abs(s);
@@ -1158,7 +1322,7 @@ async function szDoCreate() {
   try {
     const { roomId } = await szApi('/room', { method: 'POST', body: JSON.stringify({ title, list }) });
     if (typeof track === 'function') track('room-create');
-    szRememberRoom(roomId, title);
+    szRememberRoom(roomId, title, true);
     const url = szRoomUrl(roomId);
     const el = document.getElementById('sz-room');
     el.innerHTML = szTopBar() + `

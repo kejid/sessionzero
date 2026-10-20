@@ -30,6 +30,7 @@ const MAX_TITLE = 120;
 const MAX_LIST = 80;        // systems in a single shared list
 const MAX_ID = 48;          // length of a single system id
 const MAX_VOTER = 40;       // voter display name
+const MAX_SUGGEST = 3;      // games one voter may add to a room
 
 const { Pool } = pg;
 const pool = new Pool({
@@ -53,6 +54,10 @@ async function initDb() {
       updated_at TIMESTAMPTZ NOT NULL DEFAULT now(),
       PRIMARY KEY (room_id, voter)
     );
+    -- "I'm the GM" flag on a ballot (added after launch, so migrate in place).
+    ALTER TABLE ballots ADD COLUMN IF NOT EXISTS gm BOOLEAN NOT NULL DEFAULT false;
+    -- Games players added to the room: { systemId: voterName }.
+    ALTER TABLE rooms ADD COLUMN IF NOT EXISTS suggested JSONB NOT NULL DEFAULT '{}';
   `);
 }
 
@@ -71,6 +76,17 @@ export function cleanIdList(value, allowed) {
     out.push(id);
   }
   return out;
+}
+
+// Can this voter add another game? (exported for tests)
+export function suggestError(room, voter, id) {
+  if (!voter) return 'voter_required';
+  if (typeof id !== 'string' || !/^[a-z0-9_-]+$/i.test(id) || id.length > MAX_ID) return 'bad_id';
+  if (room.list.includes(id)) return 'already_listed';
+  if (room.list.length >= MAX_LIST) return 'list_full';
+  const mine = Object.values(room.suggested || {}).filter(v => v === voter).length;
+  if (mine >= MAX_SUGGEST) return 'suggest_limit';
+  return null;
 }
 
 // Aggregate ballots into a ranked tally: score = upvotes − vetoes.
@@ -129,22 +145,24 @@ app.post('/room', async (req, res) => {
 // Read a room: its list plus every ballot and the live tally.
 app.get('/room/:id', async (req, res) => {
   try {
-    const roomRes = await pool.query('SELECT title, list, created_at FROM rooms WHERE id = $1', [req.params.id]);
+    const roomRes = await pool.query('SELECT title, list, suggested, created_at FROM rooms WHERE id = $1', [req.params.id]);
     if (roomRes.rowCount === 0) return res.status(404).json({ error: 'not_found' });
     const room = roomRes.rows[0];
 
     const ballotsRes = await pool.query(
-      'SELECT voter, up, veto, updated_at FROM ballots WHERE room_id = $1 ORDER BY updated_at ASC',
+      'SELECT voter, up, veto, gm, updated_at FROM ballots WHERE room_id = $1 ORDER BY updated_at ASC',
       [req.params.id]
     );
     const ballots = ballotsRes.rows.map(r => ({
-      voter: r.voter, up: r.up, veto: r.veto, updatedAt: r.updated_at,
+      voter: r.voter, up: r.up, veto: r.veto, gm: !!r.gm, updatedAt: r.updated_at,
     }));
 
     res.json({
       roomId: req.params.id,
       title: room.title || '',
       list: room.list,
+      suggested: room.suggested || {},
+      maxSuggest: MAX_SUGGEST,
       createdAt: room.created_at,
       voters: ballots.map(b => b.voter),
       ballots,
@@ -168,17 +186,42 @@ app.put('/room/:id/ballot', async (req, res) => {
 
     const up = cleanIdList(req.body?.up, allowed);
     const veto = cleanIdList(req.body?.veto, allowed).filter(id => !up.includes(id)); // up wins over veto
+    const gm = req.body?.gm === true;
 
     await pool.query(
-      `INSERT INTO ballots (room_id, voter, up, veto, updated_at)
-       VALUES ($1, $2, $3, $4, now())
+      `INSERT INTO ballots (room_id, voter, up, veto, gm, updated_at)
+       VALUES ($1, $2, $3, $4, $5, now())
        ON CONFLICT (room_id, voter)
-       DO UPDATE SET up = EXCLUDED.up, veto = EXCLUDED.veto, updated_at = now()`,
-      [req.params.id, voter, JSON.stringify(up), JSON.stringify(veto)]
+       DO UPDATE SET up = EXCLUDED.up, veto = EXCLUDED.veto, gm = EXCLUDED.gm, updated_at = now()`,
+      [req.params.id, voter, JSON.stringify(up), JSON.stringify(veto), gm]
     );
-    res.json({ ok: true, voter, up, veto });
+    res.json({ ok: true, voter, up, veto, gm });
   } catch (e) {
     console.error('PUT /room/:id/ballot', e);
+    res.status(500).json({ error: 'server_error' });
+  }
+});
+
+// A voter adds a game to the room's list (anyone can then vote on it; the GM
+// can veto it like any other game).
+app.post('/room/:id/suggest', async (req, res) => {
+  try {
+    const roomRes = await pool.query('SELECT list, suggested FROM rooms WHERE id = $1', [req.params.id]);
+    if (roomRes.rowCount === 0) return res.status(404).json({ error: 'not_found' });
+    const room = roomRes.rows[0];
+    const voter = typeof req.body?.voter === 'string' ? req.body.voter.trim().slice(0, MAX_VOTER) : '';
+    const id = typeof req.body?.id === 'string' ? req.body.id.trim() : '';
+    const err = suggestError(room, voter, id);
+    if (err) return res.status(err === 'suggest_limit' ? 429 : 400).json({ error: err });
+
+    await pool.query(
+      `UPDATE rooms SET list = list || $2::jsonb, suggested = suggested || $3::jsonb
+       WHERE id = $1 AND NOT (list ? $4)`,
+      [req.params.id, JSON.stringify([id]), JSON.stringify({ [id]: voter }), id]
+    );
+    res.status(201).json({ ok: true, id, voter });
+  } catch (e) {
+    console.error('POST /room/:id/suggest', e);
     res.status(500).json({ error: 'server_error' });
   }
 });

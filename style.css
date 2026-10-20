@@ -2878,3 +2878,47 @@ body.browse-mode .sidebar .sidebar-nav-divider { display: none; }
     .sz-share-actions { width: 100%; }
     .sz-share-actions .sz-share-img { flex: 1; }
 }
+
+/* GM: toggle on the ballot, tags on cards/results, marked chips */
+.sz-gm-toggle {
+    display: flex; align-items: flex-start; gap: 10px; margin-top: 12px; cursor: pointer;
+    font-size: 13px; color: var(--dim); line-height: 1.45;
+}
+.sz-gm-toggle input { margin: 2px 0 0; width: 16px; height: 16px; accent-color: #c084fc; flex-shrink: 0; }
+.sz-gm-toggle strong { color: var(--text); }
+.sz-gm-tag {
+    display: inline-flex; align-items: center; gap: 5px; margin-top: 6px;
+    font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap;
+}
+.sz-gm-tag i[data-lucide], .sz-gm-tag svg { width: 13px; height: 13px; }
+.sz-gm-tag-up { color: #c084fc; background: rgba(192,132,252,0.14); }
+.sz-gm-tag-veto { color: var(--red); background: var(--red-bg); }
+.sz-tally-chips .sz-gm-tag { margin-top: 0; }
+.sz-chip-gm { display: inline-flex; align-items: center; gap: 4px; box-shadow: inset 0 0 0 1px #c084fc; }
+.sz-chip-gm i[data-lucide], .sz-chip-gm svg { width: 12px; height: 12px; }
+
+/* Players suggest games */
+.sz-suggest { margin-top: 10px; }
+.sz-suggest-btn { width: 100%; border-style: dashed; color: var(--dim); }
+.sz-suggest-btn:hover:not(:disabled) { color: var(--text); border-color: var(--accent); }
+.sz-suggest-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.sz-suggest-btn i[data-lucide], .sz-suggest-btn svg { width: 16px; height: 16px; }
+.sz-suggest-left { font-weight: 600; font-size: 13px; color: var(--dim); }
+.sz-suggest-panel { border: 1px solid var(--border-subtle); border-radius: 12px; padding: 14px; background: var(--card); }
+.sz-suggest-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.sz-suggest-hint { margin: 6px 0 12px; font-size: 13px; color: var(--dim); }
+.sz-suggest-results { display: flex; flex-direction: column; gap: 6px; margin-top: 10px; }
+.sz-suggest-item {
+    display: grid; grid-template-columns: 64px minmax(0, 1fr) 20px; gap: 12px; align-items: center;
+    padding: 8px; border-radius: 10px; border: 1px solid transparent; background: transparent;
+    color: var(--text); text-align: left; cursor: pointer; font: inherit;
+}
+.sz-suggest-item:hover { border-color: var(--accent); background: rgba(56,189,248,0.06); }
+.sz-suggest-item img { width: 64px; height: 40px; object-fit: cover; border-radius: 6px; background: var(--border-subtle); }
+.sz-suggest-item span { display: flex; flex-direction: column; min-width: 0; }
+.sz-suggest-item strong { font-size: 14px; }
+.sz-suggest-item small { font-size: 12px; color: var(--dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sz-suggest-item i[data-lucide], .sz-suggest-item svg { width: 18px; height: 18px; color: var(--accent); }
+.sz-suggested-by { display: inline-flex; align-items: center; gap: 5px; margin-top: 6px; margin-left: 6px; font-size: 12px; color: var(--dim); }
+.sz-suggested-by i[data-lucide], .sz-suggested-by svg { width: 13px; height: 13px; }
+.sz-card-new { box-shadow: 0 0 0 2px var(--accent); transition: box-shadow 0.4s; }

@@ -1,7 +1,7 @@
 // Unit tests for the pure logic (validation + tally). No DB needed.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { cleanIdList, buildTally } from './index.js';
+import { cleanIdList, buildTally, suggestError } from './index.js';
 
 test('cleanIdList drops non-strings, blanks, dupes, and over-long ids', () => {
   const out = cleanIdList(['cairn', 'cairn', '', 42, null, '  blades  ', 'x'.repeat(100)]);
@@ -43,4 +43,15 @@ test('buildTally includes systems with zero ballots', () => {
 test('buildTally ignores ids not in the list', () => {
   const tally = buildTally(['a'], [{ up: ['a', 'ghost'], veto: ['ghost'] }]);
   assert.deepEqual(tally, [{ id: 'a', up: 1, veto: 0, score: 1 }]);
+});
+
+test('suggestError allows a new game and enforces id, duplicates and the per-voter limit', () => {
+  const room = { list: ['cairn'], suggested: {} };
+  assert.equal(suggestError(room, 'Ann', 'mothership'), null);
+  assert.equal(suggestError(room, '', 'mothership'), 'voter_required');
+  assert.equal(suggestError(room, 'Ann', 'bad id!'), 'bad_id');
+  assert.equal(suggestError(room, 'Ann', 'cairn'), 'already_listed');
+  const full = { list: ['a', 'b', 'c', 'd'], suggested: { b: 'Ann', c: 'Ann', d: 'Ann' } };
+  assert.equal(suggestError(full, 'Ann', 'e'), 'suggest_limit');
+  assert.equal(suggestError(full, 'Bob', 'e'), null);
 });
