@@ -8,6 +8,7 @@
     --green: #4ade80;
     --yellow: #fde047;
     --red: #f87171;
+    --orange: #fb923c;
     --purple: #c084fc;
     --border-subtle: #2a2a2a;
     --bg-subtle: #111;
@@ -700,10 +701,7 @@ body:not(.presentation) .pres-counter { display: none; }
     margin-bottom: 16px;
     color: var(--dim);
 }
-.vote-players { display: flex; gap: 12px; flex-wrap: wrap; }
-.vote-player-group { display: flex; gap: 0; }
-.vote-player-group .vote-btn:first-child { border-radius: 10px 0 0 10px; }
-.vote-player-group .veto-btn { border-radius: 0 10px 10px 0; border-left: none; padding: 10px 12px; }
+.vote-players { display: block; }
 .vote-btn {
     display: flex;
     align-items: center;
@@ -1622,7 +1620,6 @@ body.browse-mode .setup-players-btn { display: flex; }
     .vote-section { padding: 16px; }
     .vote-players { gap: 8px; }
     .vote-btn { padding: 12px 16px; font-size: 13px; min-height: 44px; }
-    .vote-player-group .veto-btn { padding: 12px 10px; }
 
     /* Presentation mode on mobile */
     body.presentation .system-page { padding: 24px 16px; }
@@ -2924,3 +2921,63 @@ body.browse-mode .sidebar .sidebar-nav-divider { display: none; }
 .sz-suggested-by { display: inline-flex; align-items: center; gap: 5px; margin-top: 6px; margin-left: 6px; font-size: 12px; color: var(--dim); }
 .sz-suggested-by i[data-lucide], .sz-suggested-by svg { width: 13px; height: 13px; }
 .sz-card-new { box-shadow: 0 0 0 2px var(--accent); transition: box-shadow 0.4s; }
+
+/* Vetoed games: out of the running */
+.sz-tally-subtitle {
+    display: flex; align-items: center; gap: 8px; margin: 24px 0 10px;
+    font-size: 13px; font-weight: 700; color: var(--red); text-transform: uppercase; letter-spacing: 0.5px;
+}
+.sz-tally-subtitle i[data-lucide], .sz-tally-subtitle svg { width: 15px; height: 15px; }
+.sz-tally-out .sz-tally-row { opacity: 0.7; }
+.sz-tally-out .sz-tally-row::before { content: '\2715'; color: var(--red); }
+.sz-tally-out .sz-tally-name { text-decoration: line-through; text-decoration-color: rgba(248,113,113,0.6); }
+.result-card-vetoed { opacity: 0.5; }
+.result-card-vetoed:hover { opacity: 0.8; }
+
+/* "Against" (soft −1), between up and veto */
+.sz-down.active { color: var(--orange); border-color: var(--orange); background: var(--orange-bg); }
+.sz-chip-down { color: var(--orange); background: var(--orange-bg); }
+.sz-gm-tag-down { color: var(--orange); background: var(--orange-bg); }
+.result-card-down-count { color: var(--orange); font-weight: 800; font-size: 12px; }
+.result-downer-chip { text-decoration: none; opacity: 0.85; }
+
+/* At-the-table vote: name column + segmented Up / Against / Veto.
+   One outer border; the chosen segment is filled, so edges never double up. */
+.vote-title { display: flex; align-items: center; gap: 8px; }
+.vote-title svg, .vote-title i[data-lucide] { width: 16px; height: 16px; }
+.vote-table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+.vote-table th, .vote-table td { padding: 0; }
+.vote-table thead th {
+    width: 76px; padding-bottom: 6px; text-align: center; vertical-align: bottom;
+    font-size: 12px; font-weight: 600; color: var(--dim);
+}
+.vote-table thead th:first-child { width: auto; }
+.vote-table thead th svg, .vote-table thead th i[data-lucide] { display: block; width: 15px; height: 15px; margin: 0 auto 4px; }
+.vote-table tbody tr { border-top: 1px solid var(--border-subtle); }
+.vote-player {
+    text-align: left; font-size: 14px; font-weight: 600; color: var(--text);
+    height: 48px; vertical-align: middle;
+}
+.vote-player-inner { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.vote-player-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.vote-player-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+/* The whole cell is the tap target; the dot shows the choice */
+.vote-cell {
+    width: 100%; height: 48px; display: flex; align-items: center; justify-content: center;
+    background: transparent; border: none; cursor: pointer; padding: 0;
+}
+.vote-dot-mark {
+    width: 20px; height: 20px; border-radius: 50%; border: 2px solid var(--border-subtle);
+    transition: background 0.15s, border-color 0.15s, transform 0.15s;
+}
+.vote-cell:hover .vote-dot-mark { border-color: var(--dim); }
+.vote-cell:focus-visible { outline: 2px solid var(--accent); outline-offset: -4px; border-radius: 8px; }
+.vote-cell.on .vote-dot-mark { transform: scale(1.1); }
+.vote-cell-up.on .vote-dot-mark { background: var(--green); border-color: var(--green); }
+.vote-cell-down.on .vote-dot-mark { background: var(--orange); border-color: var(--orange); }
+.vote-cell-veto.on .vote-dot-mark { background: var(--red); border-color: var(--red); }
+@media (max-width: 480px) { .vote-table thead th { width: 62px; } }
+.sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}

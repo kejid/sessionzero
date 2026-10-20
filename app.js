@@ -241,7 +241,7 @@ function renderSystemPage(id, sys) {
     <div class="section-title" data-i18n="section_reviews">${t('section_reviews')}</div>
     <div class="reddit-quotes">${quotesHTML}</div>
     <div class="vote-section" data-system="${id}">
-        <div class="vote-title" data-i18n="vote_title"><i data-lucide="thumbs-up"></i> ${t('vote_title')}</div>
+        <div class="vote-title"><i data-lucide="thumbs-up"></i> <span data-i18n="vote_title">${t('vote_title')}</span></div>
         <div class="vote-players"></div>
     </div>
 </section>`;
@@ -346,6 +346,15 @@ function setGrouping(scheme) {
 let PLAYERS = JSON.parse(localStorage.getItem('ttrpg-players') || 'null');
 let votes = JSON.parse(localStorage.getItem('ttrpg-votes') || '{}');
 let vetoes = JSON.parse(localStorage.getItem('ttrpg-vetoes') || '{}');
+// Soft "against" votes. Before vetoes knocked games out, the thumbs-down button
+// stored "against" under ttrpg-vetoes — move those over once so they stay soft.
+let downs = JSON.parse(localStorage.getItem('ttrpg-downs') || 'null');
+if (downs === null) {
+    downs = vetoes;
+    vetoes = {};
+    localStorage.setItem('ttrpg-downs', JSON.stringify(downs));
+    localStorage.setItem('ttrpg-vetoes', '{}');
+}
 let deferred = JSON.parse(localStorage.getItem('ttrpg-deferred') || '[]');
 let manualOrder = JSON.parse(localStorage.getItem('ttrpg-order') || '[]');
 // Tri-state tag filter. Keys can be playstyle/setting tags, complexity buckets
@@ -528,6 +537,7 @@ function resetPlayers() {
     localStorage.removeItem('ttrpg-players');
     localStorage.removeItem('ttrpg-votes');
     localStorage.removeItem('ttrpg-vetoes');
+    localStorage.removeItem('ttrpg-downs');
     localStorage.removeItem('ttrpg-deferred');
     localStorage.removeItem('ttrpg-order');
     localStorage.removeItem('ttrpg-browse');
@@ -581,25 +591,7 @@ function setView(view) {
 
 // ============ VOTING LOGIC ============
 function toggleVote(systemId, playerId) {
-    if (!votes[systemId]) votes[systemId] = [];
-    const idx = votes[systemId].indexOf(playerId);
-    let added = false;
-    if (idx === -1) {
-        votes[systemId].push(playerId);
-        added = true;
-        // Remove veto if voting for
-        if (vetoes[systemId]) {
-            const vi = vetoes[systemId].indexOf(playerId);
-            if (vi !== -1) vetoes[systemId].splice(vi, 1);
-            localStorage.setItem('ttrpg-vetoes', JSON.stringify(vetoes));
-        }
-    } else {
-        votes[systemId].splice(idx, 1);
-    }
-    localStorage.setItem('ttrpg-votes', JSON.stringify(votes));
-    renderVoteButtons(systemId);
-    updateNavVotes();
-    if (document.getElementById('results').classList.contains('active')) renderResults();
+    const added = setPlayerVote(systemId, playerId, 'up');
 
     // Unanimous celebration: triggered when last player upvotes a system in a group
     if (added && PLAYERS && PLAYERS.length >= 2 && votes[systemId].length === PLAYERS.length) {
@@ -628,24 +620,10 @@ function celebrateUnanimous(systemId) {
     setTimeout(() => burst.remove(), 2200);
 }
 
-function toggleVeto(systemId, playerId) {
-    if (!vetoes[systemId]) vetoes[systemId] = [];
-    const idx = vetoes[systemId].indexOf(playerId);
-    if (idx === -1) {
-        vetoes[systemId].push(playerId);
-        // Remove upvote if vetoing
-        if (votes[systemId]) {
-            const vi = votes[systemId].indexOf(playerId);
-            if (vi !== -1) votes[systemId].splice(vi, 1);
-            localStorage.setItem('ttrpg-votes', JSON.stringify(votes));
-        }
-    } else {
-        vetoes[systemId].splice(idx, 1);
-    }
-    localStorage.setItem('ttrpg-vetoes', JSON.stringify(vetoes));
-    renderVoteButtons(systemId);
-    updateNavVotes();
-    if (document.getElementById('results').classList.contains('active')) renderResults();
+function toggleVeto(systemId, playerId) { setPlayerVote(systemId, playerId, 'veto'); }
+
+function escHtml(s) {
+    return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
 
 function renderVoteButtons(systemId) {
@@ -655,20 +633,20 @@ function renderVoteButtons(systemId) {
     const systemVotes = votes[systemId] || [];
     const systemVetoes = vetoes[systemId] || [];
     const sysName = SYSTEM_NAMES[systemId] || systemId;
-    container.innerHTML = PLAYERS.map(p => {
-        const voted = systemVotes.includes(p.id);
-        const vetoed = systemVetoes.includes(p.id);
-        return `<div class="vote-player-group">
-            <button class="vote-btn ${voted ? 'voted' : ''}" onclick="toggleVote('${systemId}', '${p.id}')" aria-label="${p.name}: ${voted ? 'voted' : 'vote'} ${sysName}" style="${voted ? `border-color:${p.color};color:${p.color};background:${p.color}15` : ''}">
-                <i data-lucide="thumbs-up"></i>
-                <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${p.color};flex-shrink:0"></span>
-                ${p.name}
-            </button>
-            <button class="vote-btn veto-btn ${vetoed ? 'vetoed' : ''}" onclick="toggleVeto('${systemId}', '${p.id}')" aria-label="${p.name}: veto ${sysName}" title="${t('veto_title')}">
-                <i data-lucide="thumbs-down"></i>
-            </button>
-        </div>`;
-    }).join('');
+    // A table: choice labels once in the header, one row of radio-like cells per player
+    const cell = (p, kind, on, label, fn) =>
+        `<td><button type="button" class="vote-cell vote-cell-${kind} ${on ? 'on' : ''}" aria-pressed="${on}" onclick="${fn}('${systemId}', '${p.id}')" aria-label="${escHtml(p.name)}: ${label} — ${escHtml(sysName)}"><span class="vote-dot-mark"></span></button></td>`;
+    const head = (icon, label) => `<th scope="col"><i data-lucide="${icon}"></i><span>${label}</span></th>`;
+    container.innerHTML = `<table class="vote-table">
+        <thead><tr><th scope="col"><span class="sr-only">${t('vote_title')}</span></th>
+            ${head('thumbs-up', t('opt_up'))}${head('thumbs-down', t('opt_down'))}${head('ban', t('opt_veto'))}</tr></thead>
+        <tbody>${PLAYERS.map(p => `<tr>
+            <th scope="row" class="vote-player"><span class="vote-player-inner"><span class="vote-player-dot" style="background:${escHtml(p.color)}"></span><span class="vote-player-name">${escHtml(p.name)}</span></span></th>
+            ${cell(p, 'up', systemVotes.includes(p.id), t('opt_up'), 'toggleVote')}
+            ${cell(p, 'down', (downs[systemId] || []).includes(p.id), t('opt_down'), 'toggleDown')}
+            ${cell(p, 'veto', systemVetoes.includes(p.id), t('opt_veto'), 'toggleVeto')}
+        </tr>`).join('')}</tbody>
+    </table>`;
     refreshIcons();
 }
 
@@ -676,12 +654,14 @@ function updateNavVotes() {
     document.querySelectorAll('.nav-item[data-page]').forEach(item => {
         const page = item.dataset.page;
         const upCount = (votes[page] || []).length;
-        const downCount = (vetoes[page] || []).length;
+        const downCount = (downs[page] || []).length;
+        const vetoCount = (vetoes[page] || []).length;
         const badge = item.querySelector('.nav-votes');
         if (badge) {
             let text = '';
             if (upCount > 0) text += `${upCount} \u2665`;
             if (downCount > 0) text += `${text ? ' ' : ''}${downCount} \u2717`;
+            if (vetoCount > 0) text += `${text ? ' ' : ''}${vetoCount} \u2298`;
             badge.textContent = text;
         }
     });
@@ -710,13 +690,18 @@ function toggleDeferred(id, e) {
 function moveSystem(id, dir, e) {
     e.stopPropagation();
     if (!manualOrder.length) initManualOrder();
-    const idx = manualOrder.indexOf(id);
-    const swapIdx = idx + dir;
-    if (swapIdx < 0 || swapIdx >= manualOrder.length) return;
-
+    // Neighbour on screen, not in manualOrder: vetoed games are shown last,
+    // so the two orders can differ. A move never crosses into the vetoed group.
     const grid = document.getElementById('results-grid');
-    const cardA = grid.querySelector(`[data-system-id="${manualOrder[idx]}"]`);
-    const cardB = grid.querySelector(`[data-system-id="${manualOrder[swapIdx]}"]`);
+    const shown = [...grid.querySelectorAll('[data-system-id]')].map(c => c.dataset.systemId);
+    const otherId = shown[shown.indexOf(id) + dir];
+    if (!otherId || isVetoed(otherId) !== isVetoed(id)) return;
+    const idx = manualOrder.indexOf(id);
+    const swapIdx = manualOrder.indexOf(otherId);
+    if (idx === -1 || swapIdx === -1) return;
+
+    const cardA = grid.querySelector(`[data-system-id="${id}"]`);
+    const cardB = grid.querySelector(`[data-system-id="${otherId}"]`);
     if (!cardA || !cardB) return;
 
     // Capture positions for FLIP
@@ -768,12 +753,42 @@ function updateCardsAfterReorder(grid) {
 function initManualOrder() {
     const systems = SYSTEM_IDS.filter(id => !isHiddenNow(id)).map(id => ({
         id,
-        score: (votes[id] || []).length - (vetoes[id] || []).length
+        score: voteScore(id)
     }));
-    systems.sort((a, b) => b.score - a.score);
+    systems.sort((a, b) => isVetoed(a.id) - isVetoed(b.id) || b.score - a.score);
     manualOrder = systems.map(s => s.id);
     localStorage.setItem('ttrpg-order', JSON.stringify(manualOrder));
 }
+
+// Score = up − against.
+function voteScore(id) {
+    return (votes[id] || []).length - (downs[id] || []).length;
+}
+
+// A veto knocks a game out: vetoed games sort below every non-vetoed one,
+// whatever their score or manual position.
+function isVetoed(id) {
+    return (vetoes[id] || []).length > 0;
+}
+
+// One choice per player per game: up, against or veto (tap again to clear).
+function setPlayerVote(systemId, playerId, kind) {
+    const maps = { up: votes, down: downs, veto: vetoes };
+    const was = (maps[kind][systemId] || []).includes(playerId);
+    Object.values(maps).forEach(m => {
+        if (m[systemId]) m[systemId] = m[systemId].filter(p => p !== playerId);
+    });
+    if (!was) (maps[kind][systemId] = maps[kind][systemId] || []).push(playerId);
+    localStorage.setItem('ttrpg-votes', JSON.stringify(votes));
+    localStorage.setItem('ttrpg-downs', JSON.stringify(downs));
+    localStorage.setItem('ttrpg-vetoes', JSON.stringify(vetoes));
+    renderVoteButtons(systemId);
+    updateNavVotes();
+    if (document.getElementById('results').classList.contains('active')) renderResults();
+    return !was;
+}
+
+function toggleDown(systemId, playerId) { setPlayerVote(systemId, playerId, 'down'); }
 
 function sortSystems(systems, browseMode) {
     if (browseMode || !PLAYERS) return systems;
@@ -783,10 +798,10 @@ function sortSystems(systems, browseMode) {
             let ib = manualOrder.indexOf(b.id);
             if (ia === -1) ia = 9999;
             if (ib === -1) ib = 9999;
-            return ia - ib;
+            return isVetoed(a.id) - isVetoed(b.id) || ia - ib;
         });
     } else {
-        systems.sort((a, b) => b.score - a.score);
+        systems.sort((a, b) => isVetoed(a.id) - isVetoed(b.id) || b.score - a.score);
     }
     return systems;
 }
@@ -800,8 +815,9 @@ function exportResults() {
             id, name: SYSTEM_NAMES[id],
             ...systemFilterFields(id),
             count: (votes[id] || []).length,
+            downCount: (downs[id] || []).length,
             vetoCount: (vetoes[id] || []).length,
-            score: (votes[id] || []).length - (vetoes[id] || []).length,
+            score: voteScore(id),
             voters: PLAYERS ? (votes[id] || []).map(vid => PLAYERS.find(p => p.id === vid)).filter(Boolean) : [],
             vetoers: PLAYERS ? (vetoes[id] || []).map(vid => PLAYERS.find(p => p.id === vid)).filter(Boolean) : []
         };
@@ -818,7 +834,8 @@ function exportResults() {
             let info = isDef ? `\u23f3 ${s.name}` : s.name;
             const parts = [];
             if (s.count > 0) parts.push(`+${s.count}`);
-            if (s.vetoCount > 0) parts.push(`\u2212${s.vetoCount}`);
+            if (s.downCount > 0) parts.push(`\u2212${s.downCount}`);
+            if (s.vetoCount > 0) parts.push(t('veto_out'));
             if (parts.length) info += ` (${parts.join(' / ')})`;
             if (s.voters.length) info += ` \u2014 ${s.voters.map(v => v.name).join(', ')}`;
             if (isDef) info += ` \u2014 ${t('status_play_later').toLowerCase()}`;
@@ -1068,8 +1085,10 @@ function renderResults() {
             voters: PLAYERS ? (votes[id] || []).map(vid => PLAYERS.find(p => p.id === vid)).filter(Boolean) : [],
             vetoers: PLAYERS ? (vetoes[id] || []).map(vid => PLAYERS.find(p => p.id === vid)).filter(Boolean) : [],
             count: (votes[id] || []).length,
+            downCount: (downs[id] || []).length,
             vetoCount: (vetoes[id] || []).length,
-            score: (votes[id] || []).length - (vetoes[id] || []).length
+            downers: PLAYERS ? (downs[id] || []).map(vid => PLAYERS.find(p => p.id === vid)).filter(Boolean) : [],
+            score: voteScore(id)
         };
     });
 
@@ -1106,12 +1125,14 @@ function renderResults() {
 
     function renderCard(s, idx, total) {
         posNum++;
-        const hasVotes = s.count > 0 || s.vetoCount > 0;
+        const hasVotes = s.count > 0 || s.downCount > 0 || s.vetoCount > 0;
         const votesHTML = votingMode && hasVotes ? `
             <div class="result-card-votes">
                 ${s.count > 0 ? `<span class="result-card-vote-count">+${s.count}</span>` : ''}
                 ${s.voters.map(v => `<span class="result-voter-chip" style="background:${v.color}20;color:${v.color}">${v.name}</span>`).join('')}
-                ${s.vetoCount > 0 ? `<span class="result-card-veto-count">\u2212${s.vetoCount}</span>` : ''}
+                ${s.downCount > 0 ? `<span class="result-card-down-count">\u2212${s.downCount}</span>` : ''}
+                ${s.downers.map(v => `<span class="result-voter-chip result-downer-chip" style="background:${v.color}20;color:${v.color}">${v.name}</span>`).join('')}
+                ${s.vetoCount > 0 ? `<span class="result-card-veto-count">${t('veto_out')}</span>` : ''}
                 ${s.vetoers.map(v => `<span class="result-voter-chip result-vetoer-chip" style="background:${v.color}20;color:${v.color}">${v.name}</span>`).join('')}
             </div>` : '';
         const isCustom = !!CustomSystems.find(s.id);
@@ -1130,7 +1151,7 @@ function renderResults() {
         const pickHTML = !votingMode && !isCustom
             ? `<button type="button" class="rc-pick" data-pick-id="${s.id}" onclick="toggleShortlist('${s.id}', event)" aria-label="${t('shortlist_add')}: ${s.name}"><i data-lucide="plus" class="ic-add" aria-hidden="true"></i><i data-lucide="check" class="ic-on" aria-hidden="true"></i></button>`
             : '';
-        return `<div class="result-card ${isDef ? 'result-card-deferred' : ''}" ${dragAttrs} onclick="if(typeof _didDrag!=='undefined'&&_didDrag){_didDrag=false;return}showPage('${s.id}')">
+        return `<div class="result-card ${isDef ? 'result-card-deferred' : ''} ${votingMode && s.vetoCount > 0 ? 'result-card-vetoed' : ''}" ${dragAttrs} onclick="if(typeof _didDrag!=='undefined'&&_didDrag){_didDrag=false;return}showPage('${s.id}')">
             ${leftColHTML}
             ${badgeHTML}
             ${pickHTML}
@@ -1580,8 +1601,10 @@ const CustomSystems = {
         this._unregister(id);
         delete votes[id];
         delete vetoes[id];
+        delete downs[id];
         localStorage.setItem('ttrpg-votes', JSON.stringify(votes));
         localStorage.setItem('ttrpg-vetoes', JSON.stringify(vetoes));
+        localStorage.setItem('ttrpg-downs', JSON.stringify(downs));
     },
 
     loadAll() {
@@ -1821,7 +1844,7 @@ function buildCustomSystemPage(sys) {
         (sys.vignette ? '<div class="section-title" data-i18n="section_vignette">' + t('section_vignette') + '</div><div class="setting-block" style="border-left:3px solid var(--accent);font-style:italic;">' + sys.vignette + '</div>' : '') +
         (allTagsHTML ? '<div class="section-title" data-i18n="section_playstyle">' + t('section_playstyle') + '</div><div class="playstyle-tags">' + allTagsHTML + '</div>' : '') +
         '<div class="vote-section" data-system="' + sys.id + '">' +
-        '<div class="vote-title" data-i18n="vote_title"><i data-lucide="thumbs-up"></i> ' + t('vote_title') + '</div>' +
+        '<div class="vote-title"><i data-lucide="thumbs-up"></i> <span data-i18n="vote_title">' + t('vote_title') + '</span></div>' +
         '<div class="vote-players"></div>' +
         '</div>' +
         '</section>';

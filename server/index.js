@@ -56,6 +56,8 @@ async function initDb() {
     );
     -- "I'm the GM" flag on a ballot (added after launch, so migrate in place).
     ALTER TABLE ballots ADD COLUMN IF NOT EXISTS gm BOOLEAN NOT NULL DEFAULT false;
+    -- Soft "against" votes (−1), separate from vetoes that knock a game out.
+    ALTER TABLE ballots ADD COLUMN IF NOT EXISTS down JSONB NOT NULL DEFAULT '[]';
     -- Games players added to the room: { systemId: voterName }.
     ALTER TABLE rooms ADD COLUMN IF NOT EXISTS suggested JSONB NOT NULL DEFAULT '{}';
   `);
@@ -89,16 +91,18 @@ export function suggestError(room, voter, id) {
   return null;
 }
 
-// Aggregate ballots into a ranked tally: score = upvotes − vetoes.
+// Aggregate ballots into a ranked tally: score = up − down ("against").
+// A veto knocks a game out: vetoed games rank below every non-vetoed one.
 export function buildTally(list, ballots) {
-  const counts = new Map(list.map(id => [id, { id, up: 0, veto: 0 }]));
+  const counts = new Map(list.map(id => [id, { id, up: 0, down: 0, veto: 0 }]));
   for (const b of ballots) {
     for (const id of b.up) if (counts.has(id)) counts.get(id).up++;
+    for (const id of b.down || []) if (counts.has(id)) counts.get(id).down++;
     for (const id of b.veto) if (counts.has(id)) counts.get(id).veto++;
   }
   return [...counts.values()]
-    .map(c => ({ ...c, score: c.up - c.veto }))
-    .sort((a, b) => b.score - a.score || b.up - a.up || a.id.localeCompare(b.id));
+    .map(c => ({ ...c, score: c.up - c.down, vetoed: c.veto > 0 }))
+    .sort((a, b) => a.vetoed - b.vetoed || b.score - a.score || b.up - a.up || a.id.localeCompare(b.id));
 }
 
 const app = express();
@@ -150,11 +154,11 @@ app.get('/room/:id', async (req, res) => {
     const room = roomRes.rows[0];
 
     const ballotsRes = await pool.query(
-      'SELECT voter, up, veto, gm, updated_at FROM ballots WHERE room_id = $1 ORDER BY updated_at ASC',
+      'SELECT voter, up, down, veto, gm, updated_at FROM ballots WHERE room_id = $1 ORDER BY updated_at ASC',
       [req.params.id]
     );
     const ballots = ballotsRes.rows.map(r => ({
-      voter: r.voter, up: r.up, veto: r.veto, gm: !!r.gm, updatedAt: r.updated_at,
+      voter: r.voter, up: r.up, down: r.down || [], veto: r.veto, gm: !!r.gm, updatedAt: r.updated_at,
     }));
 
     res.json({
@@ -185,17 +189,19 @@ app.put('/room/:id/ballot', async (req, res) => {
     if (!voter) return res.status(400).json({ error: 'voter_required' });
 
     const up = cleanIdList(req.body?.up, allowed);
-    const veto = cleanIdList(req.body?.veto, allowed).filter(id => !up.includes(id)); // up wins over veto
+    // One choice per game: up wins over veto, veto over "against"
+    const veto = cleanIdList(req.body?.veto, allowed).filter(id => !up.includes(id));
+    const down = cleanIdList(req.body?.down, allowed).filter(id => !up.includes(id) && !veto.includes(id));
     const gm = req.body?.gm === true;
 
     await pool.query(
-      `INSERT INTO ballots (room_id, voter, up, veto, gm, updated_at)
-       VALUES ($1, $2, $3, $4, $5, now())
+      `INSERT INTO ballots (room_id, voter, up, down, veto, gm, updated_at)
+       VALUES ($1, $2, $3, $4, $5, $6, now())
        ON CONFLICT (room_id, voter)
-       DO UPDATE SET up = EXCLUDED.up, veto = EXCLUDED.veto, gm = EXCLUDED.gm, updated_at = now()`,
-      [req.params.id, voter, JSON.stringify(up), JSON.stringify(veto), gm]
+       DO UPDATE SET up = EXCLUDED.up, down = EXCLUDED.down, veto = EXCLUDED.veto, gm = EXCLUDED.gm, updated_at = now()`,
+      [req.params.id, voter, JSON.stringify(up), JSON.stringify(down), JSON.stringify(veto), gm]
     );
-    res.json({ ok: true, voter, up, veto, gm });
+    res.json({ ok: true, voter, up, down, veto, gm });
   } catch (e) {
     console.error('PUT /room/:id/ballot', e);
     res.status(500).json({ error: 'server_error' });

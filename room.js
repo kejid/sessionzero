@@ -29,7 +29,7 @@ const SZ_STR = {
     copy: 'Copy',
     copied: 'Copied!',
     copy_link: 'Copy link',
-    ballot_counts: 'Up: {up} · Veto: {veto}',
+    ballot_counts: 'Up: {up} · Against: {down} · Veto: {veto}',
     unsaved: 'not saved yet',
     all_saved: 'saved',
     see_results: 'Results',
@@ -37,11 +37,14 @@ const SZ_STR = {
     share_image: 'Share results',
     save_image: 'Save as image',
     share_short: 'Share',
+    down_not_saved: '"Against" votes are not saved yet — the rest of your vote is saved.',
     gm_toggle: 'I\'m the GM',
     gm_toggle_hint: '— I\'ll run the game. Your "up" votes show as "GM wants to run".',
     gm_short: 'GM',
     gm_up: 'GM wants to run',
-    gm_veto: 'GM is against',
+    gm_veto: 'GM vetoed',
+    gm_down: 'GM is against',
+    img_down: 'against',
     suggest_btn: 'Suggest a game',
     suggest_left: '{n} left',
     suggest_title: 'Add a game to this vote',
@@ -65,10 +68,13 @@ const SZ_STR = {
     peek_results: 'See results without voting',
     leave_unsaved: 'Your vote is not saved yet. Leave anyway?',
     room_default_title: 'What should we play next?',
-    room_intro: 'Vote for the games you\'d be up for. Veto the ones you definitely won\'t. Come back any time to change your mind.',
+    room_intro: 'Up for it is +1, Against is −1. Veto is for games you won\'t play at all: one veto takes a game out. Come back any time to change your mind.',
+    veto_out: 'vetoed',
+    vetoed_title: 'Vetoed — out of the running',
     your_name: 'Your name',
     name_placeholder: 'Enter your name to vote',
     up: 'Up for it',
+    down: 'Against',
     veto: 'Veto',
     open_page: 'Open game page (new tab)',
     save_vote: 'Save my vote',
@@ -130,7 +136,7 @@ const SZ_STR = {
     copy: 'Копировать',
     copied: 'Скопировано!',
     copy_link: 'Скопировать ссылку',
-    ballot_counts: 'За: {up} · Вето: {veto}',
+    ballot_counts: 'За: {up} · Против: {down} · Вето: {veto}',
     unsaved: 'не сохранено',
     all_saved: 'сохранено',
     see_results: 'Итоги',
@@ -138,11 +144,14 @@ const SZ_STR = {
     share_image: 'Поделиться итогами',
     save_image: 'Сохранить картинкой',
     share_short: 'Поделиться',
+    down_not_saved: 'Голоса «против» пока не сохранились — остальной голос сохранён.',
     gm_toggle: 'Я мастер',
     gm_toggle_hint: '— буду вести игру. Мои «за» видны всем как «мастер хочет вести».',
     gm_short: 'мастер',
     gm_up: 'Мастер хочет вести',
-    gm_veto: 'Мастер против',
+    gm_veto: 'Вето мастера',
+    gm_down: 'Мастер против',
+    img_down: 'против',
     suggest_btn: 'Предложить игру',
     suggest_left: 'осталось {n}',
     suggest_title: 'Добавить игру в голосование',
@@ -166,10 +175,13 @@ const SZ_STR = {
     peek_results: 'Посмотреть итоги без голоса',
     leave_unsaved: 'Голос ещё не сохранён. Всё равно уйти?',
     room_default_title: 'Во что играем дальше?',
-    room_intro: 'Голосуй за игры, в которые готов сыграть. Вето — за те, в которые точно нет. Можно вернуться и передумать в любой момент.',
+    room_intro: '«За» — плюс очко, «Против» — минус очко. «Вето» — для игр, в которые ты точно не будешь играть: одно вето убирает игру из выбора. Можно вернуться и передумать в любой момент.',
+    veto_out: 'вето',
+    vetoed_title: 'Вето — выбывают',
     your_name: 'Твоё имя',
     name_placeholder: 'Введи имя, чтобы голосовать',
     up: 'За',
+    down: 'Против',
     veto: 'Вето',
     open_page: 'Открыть страницу игры (новая вкладка)',
     save_vote: 'Сохранить голос',
@@ -250,6 +262,8 @@ let szRoomId = null;
 let szData = null;              // last server payload
 let szMyUp = new Set();
 let szMyVeto = new Set();
+let szMyDown = new Set();      // soft "against" (−1); a veto knocks the game out
+let szDownUnsupported = false; // server didn't echo `down` → keep against votes locally
 let szMyGm = false;            // "I'm the GM" on my ballot
 let szPollTimer = null;
 let szDirty = false;           // unsaved local changes
@@ -339,6 +353,7 @@ function szMarkLang() {
 async function szEnterRoom(id) {
   szRoomId = id;
   szSuggestOpen = false;
+  szDownUnsupported = false;
   szView = 'room';
   szPeek = false;
   szTab = 'vote';
@@ -371,6 +386,7 @@ async function szLoadRoom() {
     const mine = me ? szData.ballots.find(b => b.voter === me) : null;
     szMyUp = new Set(mine ? mine.up : []);
     szMyVeto = new Set(mine ? mine.veto : []);
+    if (!szDownUnsupported) szMyDown = new Set(mine ? (mine.down || []) : []);
     // No ballot yet: whoever created the room here is most likely the GM
     szMyGm = mine ? !!mine.gm : szMyRooms().some(r => r.id === szRoomId && r.created);
   }
@@ -473,6 +489,9 @@ function szCardHTML(s, readOnly) {
         <button class="sz-vbtn sz-up" data-id="${szEsc(s.id)}" onclick="szToggle('${szEsc(s.id)}','up')">
           <i data-lucide="thumbs-up"></i><span>${szEsc(szT('up'))}</span>
         </button>
+        <button class="sz-vbtn sz-down" data-id="${szEsc(s.id)}" onclick="szToggle('${szEsc(s.id)}','down')">
+          <i data-lucide="thumbs-down"></i><span>${szEsc(szT('down'))}</span>
+        </button>
         <button class="sz-vbtn sz-veto" data-id="${szEsc(s.id)}" onclick="szToggle('${szEsc(s.id)}','veto')">
           <i data-lucide="ban"></i><span>${szEsc(szT('veto'))}</span>
         </button>
@@ -509,20 +528,20 @@ function szSyncCardButtons() {
     }
     const up = card.querySelector('.sz-up');
     const veto = card.querySelector('.sz-veto');
+    const down = card.querySelector('.sz-down');
+    if (down) down.classList.toggle('active', szMyDown.has(id));
     if (up) up.classList.toggle('active', szMyUp.has(id));
     if (veto) veto.classList.toggle('active', szMyVeto.has(id));
   });
   if (tagsChanged && typeof refreshIcons === 'function') refreshIcons();
 }
 
+// One choice per game: up, against or veto (tap again to clear).
 function szToggle(id, kind) {
-  if (kind === 'up') {
-    if (szMyUp.has(id)) szMyUp.delete(id);
-    else { szMyUp.add(id); szMyVeto.delete(id); }
-  } else {
-    if (szMyVeto.has(id)) szMyVeto.delete(id);
-    else { szMyVeto.add(id); szMyUp.delete(id); }
-  }
+  const sets = { up: szMyUp, down: szMyDown, veto: szMyVeto };
+  const was = sets[kind].has(id);
+  Object.values(sets).forEach(s => s.delete(id));
+  if (!was) sets[kind].add(id);
   szDirty = true;
   szSyncCardButtons();
   szUpdateSaveBtn();
@@ -675,13 +694,14 @@ function szGmStance(id) {
   const gms = (szData && szData.ballots || []).filter(b => b.gm);
   if (gms.some(b => b.up.includes(id))) return 'up';
   if (gms.some(b => b.veto.includes(id))) return 'veto';
+  if (gms.some(b => (b.down || []).includes(id))) return 'down';
   return null;
 }
 
 function szGmTag(id) {
   const st = szGmStance(id);
   if (!st) return '';
-  return `<span class="sz-gm-tag sz-gm-tag-${st}" data-st="${st}"><i data-lucide="dices"></i>${szEsc(szT(st === 'up' ? 'gm_up' : 'gm_veto'))}</span>`;
+  return `<span class="sz-gm-tag sz-gm-tag-${st}" data-st="${st}"><i data-lucide="dices"></i>${szEsc(szT('gm_' + st))}</span>`;
 }
 
 function szOnName(name) {
@@ -699,8 +719,8 @@ function szUpdateSaveBtn() {
   btn.classList.toggle('sz-dirty', szDirty);
   const status = document.getElementById('sz-status');
   if (status) {
-    const counts = szT('ballot_counts', { up: szMyUp.size, veto: szMyVeto.size });
-    const state = szDirty ? szT('unsaved') : (szMyUp.size || szMyVeto.size ? szT('all_saved') : '');
+    const counts = szT('ballot_counts', { up: szMyUp.size, down: szMyDown.size, veto: szMyVeto.size });
+    const state = szDirty ? szT('unsaved') : (szMyUp.size || szMyDown.size || szMyVeto.size ? szT('all_saved') : '');
     status.innerHTML = szEsc(counts) + (state ? ` · <span class="${szDirty ? 'sz-unsaved' : 'sz-saved'}">${szEsc(state)}</span>` : '');
   }
   const hint = document.getElementById('sz-save-hint');
@@ -722,10 +742,15 @@ async function szSaveBallot() {
   const btn = document.getElementById('sz-save');
   if (btn) { btn.disabled = true; btn.textContent = szT('saving'); }
   try {
-    await szApi('/room/' + encodeURIComponent(szRoomId) + '/ballot', {
+    const saved = await szApi('/room/' + encodeURIComponent(szRoomId) + '/ballot', {
       method: 'PUT',
-      body: JSON.stringify({ voter, up: [...szMyUp], veto: [...szMyVeto], gm: szMyGm }),
+      body: JSON.stringify({ voter, up: [...szMyUp], down: [...szMyDown], veto: [...szMyVeto], gm: szMyGm }),
     });
+    // A server without "against" support doesn't echo `down`: keep those votes
+    // local and marked unsaved rather than letting the reload wipe them.
+    const downLost = szMyDown.size > 0 && !(saved && Array.isArray(saved.down));
+    if (downLost && !szDownUnsupported && typeof showToast === 'function') showToast(szT('down_not_saved'));
+    if (downLost) szDownUnsupported = true;
     szDirty = false;
     szUpdateSaveBtn();
     if (typeof track === 'function') track('room-vote');
@@ -747,6 +772,23 @@ async function szSaveBallot() {
 }
 
 // ============================ tally ============================
+// A veto knocks a game out. Games nobody vetoed rank by score = up − against
+// (then by ups); vetoed ones are listed separately. Computed from the ballots so it doesn't depend on
+// which ranking rule the server's tally uses.
+function szRank() {
+  const ballots = (szData && szData.ballots) || [];
+  const rows = ((szData && szData.list) || []).map(id => {
+    const up = ballots.filter(b => b.up.includes(id)).length;
+    const down = ballots.filter(b => (b.down || []).includes(id)).length;
+    return { id, up, down, veto: ballots.filter(b => b.veto.includes(id)).length, score: up - down };
+  });
+  const byScore = (a, b) => b.score - a.score || b.up - a.up || a.id.localeCompare(b.id);
+  const active = rows.filter(r => r.veto === 0 && (r.up > 0 || r.down > 0)).sort(byScore);
+  const vetoed = rows.filter(r => r.veto > 0).sort(byScore);
+  const top = active.length && active[0].score > 0 ? active[0].score : null;
+  return { active, vetoed, top };
+}
+
 function szRenderTally() {
   const wrap = document.getElementById('sz-tally');
   if (!wrap || !szData) return;
@@ -754,26 +796,31 @@ function szRenderTally() {
   const nameById = {};
   szData.list.forEach(id => { const r = szResolve(id); if (r) nameById[id] = r.name; });
 
-  const ranked = (szData.tally || []).filter(row => row.up > 0 || row.veto > 0);
-  const top = ranked.length && ranked[0].score > 0 ? ranked[0].score : null;
-  const rows = ranked.map(row => {
-    const lead = top !== null && row.score === top;
-    const tone = row.score > 0 ? 'pos' : row.score < 0 ? 'neg' : 'zero';
+  const { active, vetoed, top } = szRank();
+  const ranked = active.concat(vetoed);
+  const rowHTML = (row, out) => {
+    const lead = !out && row.score === top;
     const chip = (b, kind) => `<span class="sz-chip sz-chip-${kind}${b.gm ? ' sz-chip-gm' : ''}">${b.gm ? '<i data-lucide="dices"></i>' : ''}${szEsc(b.voter)}${b.gm ? ` · ${szEsc(szT('gm_short'))}` : ''}</span>`;
     // GM first: their pick is the one that decides what can actually run
     const byGm = (a, b) => (b.gm ? 1 : 0) - (a.gm ? 1 : 0);
     const upChips = szData.ballots.filter(b => b.up.includes(row.id)).sort(byGm).map(b => chip(b, 'up')).join('');
+    const downChips = szData.ballots.filter(b => (b.down || []).includes(row.id)).sort(byGm).map(b => chip(b, 'down')).join('');
     const vetoChips = szData.ballots.filter(b => b.veto.includes(row.id)).sort(byGm).map(b => chip(b, 'veto')).join('');
+    const tone = row.score > 0 ? 'pos' : row.score < 0 ? 'neg' : 'zero';
     return `
       <li class="sz-tally-row${lead ? ' sz-tally-lead' : ''}">
         <div class="sz-tally-main">
           ${lead ? '<i data-lucide="crown" class="sz-tally-crown"></i>' : ''}
           <span class="sz-tally-name">${szEsc(nameById[row.id] || row.id)}</span>
-          <span class="sz-tally-score sz-score-${tone}" title="up − veto">${row.score > 0 ? '+' : ''}${row.score}</span>
+          ${out
+            ? `<span class="sz-tally-score sz-score-neg">${szEsc(szT('veto_out'))}</span>`
+            : `<span class="sz-tally-score sz-score-${tone}">${row.score > 0 ? '+' : row.score < 0 ? '\u2212' : ''}${Math.abs(row.score)}</span>`}
         </div>
-        <div class="sz-tally-chips">${upChips}${vetoChips}</div>
+        <div class="sz-tally-chips">${upChips}${downChips}${vetoChips}</div>
       </li>`;
-  }).join('');
+  };
+  const rows = active.map(r => rowHTML(r, false)).join('');
+  const outRows = vetoed.map(r => rowHTML(r, true)).join('');
 
   if (!szResultsOpen()) {
     wrap.innerHTML = `
@@ -797,7 +844,10 @@ function szRenderTally() {
         ${mode === 'copy' ? `<button class="sz-btn sz-ghost sz-btn-sm sz-share-dl" onclick="szShareResultsImage(this, 'download')" title="${szEsc(szT('save_image'))}" aria-label="${szEsc(szT('save_image'))}"><i data-lucide="download"></i></button>` : ''}
       </div>` : ''}
     </div>
-    ${ranked.length ? `<ol class="sz-tally-list">${rows}</ol>` : `<p class="sz-empty">${szEsc(szT('no_votes_yet'))}</p>`}`;
+    ${ranked.length ? '' : `<p class="sz-empty">${szEsc(szT('no_votes_yet'))}</p>`}
+    ${rows ? `<ol class="sz-tally-list">${rows}</ol>` : ''}
+    ${outRows ? `<h3 class="sz-tally-subtitle"><i data-lucide="ban"></i>${szEsc(szT('vetoed_title'))}</h3>
+      <ul class="sz-tally-list sz-tally-out">${outRows}</ul>` : ''}`;
   if (typeof refreshIcons === 'function') refreshIcons();
 }
 
@@ -854,9 +904,9 @@ async function szDrawResults() {
               accent: '#38bdf8', green: '#4ade80', red: '#f87171', gold: '#facc15' };
   const names = {}, heroes = {};
   szData.list.forEach(id => { const r = szResolve(id); if (r) { names[id] = r.name; heroes[id] = r.hero; } });
-  const ranked = (szData.tally || []).filter(r => r.up > 0 || r.veto > 0);
-  const top = ranked.length && ranked[0].score > 0 ? ranked[0].score : null;
-  const leaders = top === null ? [] : ranked.filter(r => r.score === top);
+  const { active, vetoed, top } = szRank();
+  const ranked = active.concat(vetoed);
+  const leaders = top === null ? [] : active.filter(r => r.score === top);
   const winner = leaders.length === 1 ? leaders[0] : null;
   const rest = ranked.filter(r => r !== winner);
 
@@ -871,8 +921,11 @@ async function szDrawResults() {
   const nm = b => b.gm ? `${b.voter} (${szT('gm_short')})` : b.voter;
   const who = id => {
     const ups = szData.ballots.filter(b => b.up.includes(id)).map(nm);
+    const downs = szData.ballots.filter(b => (b.down || []).includes(id)).map(nm);
     const vetoes = szData.ballots.filter(b => b.veto.includes(id)).map(nm);
-    return [ups.join(', '), vetoes.length ? szT('img_veto') + ': ' + vetoes.join(', ') : ''].filter(Boolean).join(' · ');
+    return [ups.join(', '),
+      downs.length ? szT('img_down') + ': ' + downs.join(', ') : '',
+      vetoes.length ? szT('img_veto') + ': ' + vetoes.join(', ') : ''].filter(Boolean).join(' · ');
   };
   const scoreText = s => (s > 0 ? '+' : s < 0 ? '−' : '') + Math.abs(s);
 
@@ -931,24 +984,25 @@ async function szDrawResults() {
     const h = 104, w = W - P * 2;
     if (y + h > maxY) break;
     shown++;
-    const tie = !winner && top !== null && row.score === top;
+    const out = row.veto > 0;
+    const tie = !winner && !out && row.score === top;
     szRoundRect(ctx, P, y, w, h, 20);
     ctx.fillStyle = tie ? 'rgba(74,222,128,0.10)' : C.card; ctx.fill();
     ctx.lineWidth = tie ? 3 : 2; ctx.strokeStyle = tie ? C.green : C.border; ctx.stroke();
     let x = P + 32;
-    const mid = y + 54;
+    const mid = y + 46;  // name baseline; with the voters line below, the block sits centred
     ctx.fillStyle = C.dim; ctx.font = `800 26px ${body}`;
-    ctx.fillText(String(ranked.indexOf(row) + 1), x, mid);
+    ctx.fillText(out ? '\u2715' : String(ranked.indexOf(row) + 1), x, mid);
     x += 44;
     if (tie) { szDrawCrown(ctx, x, mid, C.gold); x += 56; }
     ctx.font = `700 32px ${head}`;
-    const st = scoreText(row.score), sw = ctx.measureText(st).width;
-    ctx.fillStyle = row.score > 0 ? C.green : row.score < 0 ? C.red : C.dim;
-    ctx.fillText(st, W - P - 32 - sw, mid);
+    const st = out ? szT('veto_out').toUpperCase() : scoreText(row.score), sw = ctx.measureText(st).width;
+    ctx.fillStyle = out || row.score < 0 ? C.red : row.score > 0 ? C.green : C.dim;
+    ctx.fillText(st, W - P - 32 - sw, y + h / 2 + 12);  // centred in the row, not on the name line
     ctx.fillStyle = C.text;
     ctx.fillText(szFitText(ctx, names[row.id] || row.id, W - P - 32 - sw - 24 - x), x, mid);
     ctx.fillStyle = C.dim; ctx.font = `600 22px ${body}`;
-    ctx.fillText(szFitText(ctx, who(row.id), w - 108), P + 76, y + h - 18);
+    ctx.fillText(szFitText(ctx, who(row.id), w - 108), P + 76, y + h - 26);
     y += h + 14;
   }
   const more = ranked.length - (winner ? 1 : 0) - shown;
