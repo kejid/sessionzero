@@ -11,7 +11,7 @@ registerSystem("savage-worlds", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Official",
-  "heroImage": "https://www.belloflostsouls.net/wp-content/uploads/2020/05/savage-worlds.png",
+  "heroImage": "https://sessionzero.games/images/heroes/savage-worlds.jpg",
   "playstyleTags": [
     "combat",
     "narrative",

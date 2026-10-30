@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://sessionzero.games/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/"/>
@@ -66,7 +66,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/system/7th-sea.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/7th-sea.html"/>
@@ -75,7 +75,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/ru/system/7th-sea.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/7th-sea.html"/>
@@ -174,7 +174,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/system/avatar-legends.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/avatar-legends.html"/>
@@ -183,7 +183,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/ru/system/avatar-legends.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/avatar-legends.html"/>
@@ -372,7 +372,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/system/chronicles-of-darkness.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/chronicles-of-darkness.html"/>
@@ -381,7 +381,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/ru/system/chronicles-of-darkness.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/chronicles-of-darkness.html"/>
@@ -441,6 +441,24 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/cortex-prime.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/system/cortex-prime.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/system/cortex-prime.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/system/curseborne.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/curseborne.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/system/curseborne.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/system/curseborne.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/ru/system/curseborne.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/curseborne.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/system/curseborne.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/system/curseborne.html"/>
   </url>
   <url>
     <loc>https://sessionzero.games/system/cy-borg.html</loc>
@@ -750,7 +768,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/system/fabula-ultima.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/fabula-ultima.html"/>
@@ -759,7 +777,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/ru/system/fabula-ultima.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/fabula-ultima.html"/>
@@ -894,7 +912,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/system/heart.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/heart.html"/>
@@ -903,7 +921,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/ru/system/heart.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/heart.html"/>
@@ -1236,7 +1254,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/system/masks.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/masks.html"/>
@@ -1245,7 +1263,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/ru/system/masks.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/masks.html"/>
@@ -1254,7 +1272,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/system/mausritter.html</loc>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/mausritter.html"/>
@@ -1263,7 +1281,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/ru/system/mausritter.html</loc>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/mausritter.html"/>
@@ -1416,7 +1434,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/system/numenera.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/numenera.html"/>
@@ -1425,7 +1443,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/ru/system/numenera.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/numenera.html"/>
@@ -1632,7 +1650,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/system/savage-worlds.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/savage-worlds.html"/>
@@ -1641,12 +1659,30 @@
   </url>
   <url>
     <loc>https://sessionzero.games/ru/system/savage-worlds.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/savage-worlds.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/system/savage-worlds.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/system/savage-worlds.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/system/scion.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/scion.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/system/scion.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/system/scion.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/ru/system/scion.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/scion.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/system/scion.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/system/scion.html"/>
   </url>
   <url>
     <loc>https://sessionzero.games/system/scum-and-villainy.html</loc>
@@ -1686,7 +1722,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/system/shadowdark.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/shadowdark.html"/>
@@ -1695,7 +1731,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/ru/system/shadowdark.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/shadowdark.html"/>
@@ -1740,7 +1776,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/system/spire.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/spire.html"/>
@@ -1749,7 +1785,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/ru/system/spire.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/spire.html"/>
@@ -1758,7 +1794,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/system/star-trek-adventures.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/star-trek-adventures.html"/>
@@ -1767,7 +1803,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/ru/system/star-trek-adventures.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/star-trek-adventures.html"/>
@@ -1866,7 +1902,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/system/symbaroum.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/symbaroum.html"/>
@@ -1875,7 +1911,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/ru/system/symbaroum.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/symbaroum.html"/>
@@ -2097,6 +2133,24 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/triangle.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/system/triangle.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/system/triangle.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/system/trinity-continuum.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/trinity-continuum.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/system/trinity-continuum.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/system/trinity-continuum.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/ru/system/trinity-continuum.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/system/trinity-continuum.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/system/trinity-continuum.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/system/trinity-continuum.html"/>
   </url>
   <url>
     <loc>https://sessionzero.games/system/troika.html</loc>

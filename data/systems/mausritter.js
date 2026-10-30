@@ -11,7 +11,7 @@ registerSystem("mausritter", {
   "complexity": 1,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://preview.redd.it/about-mausritter-v0-9ddnjzceq2gf1.png?width=820&format=png&auto=webp&s=4720e331d3fc15268eadfcf8aa1a42a16b917bef",
+  "heroImage": "https://sessionzero.games/images/heroes/mausritter.jpg",
   "playstyleTags": [
     "explore",
     "survival",

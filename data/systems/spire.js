@@ -10,7 +10,7 @@ registerSystem("spire", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Community",
-  "heroImage": "https://rowanrookanddecard.com/wp-content/uploads/2018/09/Necropolis2-1.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/spire.jpg",
   "playstyleTags": [
     "narrative",
     "social",

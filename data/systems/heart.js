@@ -10,7 +10,7 @@ registerSystem("heart", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Community",
-  "heroImage": "https://rowanrookanddecard.com/wp-content/uploads/2020/07/THE-WORLD-OF-HEART-scaled-e1595931454162.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/heart.jpg",
   "playstyleTags": [
     "narrative",
     "horror",

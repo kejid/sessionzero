@@ -12,7 +12,7 @@ registerSystem("7th-sea", {
   "free": false,
   "edition": "2e",
   "foundryStatus": "Community",
-  "heroImage": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x1280/products/2116/3530/JWP7001_-_7th_Sea_Core_Rulebook_-_Front_Cover_-_700x900__61779.1558209711.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/7th-sea.jpg",
   "playstyleTags": ["action", "narrative", "social"],
   "settingTags": ["fantasy"],
   "gallery": [

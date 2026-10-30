@@ -11,7 +11,7 @@ registerSystem("shadowdark", {
   "players": "3–6",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://www.rpgtabletopgames.com/wp-content/uploads/shadowdark-780x400.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/shadowdark.jpg",
   "playstyleTags": [
     "explore",
     "combat",
