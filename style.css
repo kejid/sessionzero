@@ -2833,6 +2833,16 @@ body.browse-mode .sidebar .sidebar-nav-divider { display: none; }
 .sz-tally-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
 .sz-tally-head .sz-tally-title { margin-bottom: 14px; }
 .sz-share-actions { display: flex; gap: 6px; flex-shrink: 0; }
+.sz-share-panel { margin-bottom: 20px; padding: 14px; background: var(--card); border: 1px solid var(--border-subtle); border-radius: 12px; }
+.sz-share-kinds { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.sz-share-kind {
+    background: transparent; border: 1px solid var(--border-subtle); color: var(--dim);
+    border-radius: 8px; padding: 6px 12px; font-size: 13px; font-weight: 700; font-family: inherit; cursor: pointer;
+}
+.sz-share-kind.active { color: var(--accent); border-color: var(--accent); }
+.sz-share-preview { max-width: 320px; aspect-ratio: 4 / 5; margin: 0 auto 12px; background: var(--border-subtle); border-radius: 10px; overflow: hidden; }
+.sz-share-preview img { display: block; width: 100%; height: 100%; }
+.sz-share-panel .sz-share-actions { justify-content: center; }
 .sz-share-dl { padding: 10px 12px; }
 .sz-locked {
     display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center;
@@ -2874,7 +2884,7 @@ body.browse-mode .sidebar .sidebar-nav-divider { display: none; }
 .sz-tally-chips:empty { display: none; }
 @media (max-width: 560px) {
     .sz-tally-head { flex-wrap: wrap; row-gap: 12px; }
-    .sz-share-actions { width: 100%; }
+    .sz-share-open { width: 100%; }
     .sz-share-actions .sz-share-img { flex: 1; }
 }
 

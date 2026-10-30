@@ -51,6 +51,12 @@ const SZ_STR = {
     tables_unpin: 'Unpin',
     tables_unpin_q: 'Unpin this line-up? Players will stop seeing it.',
     img_tables: 'Tables',
+    img_my_vote: 'My vote · {name}',
+    img_my_table: 'My table · {name}',
+    card_tables: 'Tables',
+    card_results: 'Results',
+    card_my_table: 'My table',
+    card_my_vote: 'My vote',
     img_gm: 'GM',
     create_btn: 'Create link',
     create_cancel: 'Cancel',
@@ -197,6 +203,12 @@ const SZ_STR = {
     tables_unpin: 'Снять',
     tables_unpin_q: 'Снять закреплённый состав? Игроки перестанут его видеть.',
     img_tables: 'Столы',
+    img_my_vote: 'Мой голос · {name}',
+    img_my_table: 'Мой стол · {name}',
+    card_tables: 'Столы',
+    card_results: 'Итоги',
+    card_my_table: 'Мой стол',
+    card_my_vote: 'Мой голос',
     img_gm: 'Мастер',
     create_btn: 'Создать ссылку',
     create_cancel: 'Отмена',
@@ -953,17 +965,12 @@ function szRenderTally() {
     if (typeof refreshIcons === 'function') refreshIcons();
     return;
   }
-  const mode = szImageMode();
-  const label = { share: 'share_short', copy: 'copy_image', download: 'save_short' }[mode];
-  const icon = { share: 'share-2', copy: 'copy', download: 'download' }[mode];
   wrap.innerHTML = `
     <div class="sz-tally-head">
       <h2 class="sz-tally-title">${szEsc(szT('tally_title'))} <span class="sz-voted">${szEsc(szVotedText('voted_count'))}</span></h2>
-      ${ranked.length ? `<div class="sz-share-actions">
-        <button class="sz-btn sz-ghost sz-btn-sm sz-share-img" onclick="szShareResultsImage(this, '${mode}')"><i data-lucide="${icon}"></i><span>${szEsc(szT(label))}</span></button>
-        ${mode === 'copy' ? `<button class="sz-btn sz-ghost sz-btn-sm sz-share-dl" onclick="szShareResultsImage(this, 'download')" title="${szEsc(szT('save_image'))}" aria-label="${szEsc(szT('save_image'))}"><i data-lucide="download"></i></button>` : ''}
-      </div>` : ''}
+      ${ranked.length ? `<button class="sz-btn sz-ghost sz-btn-sm sz-share-open" aria-expanded="${szShare.open}" onclick="szShareToggle()"><i data-lucide="share-2"></i><span>${szEsc(szT('share_short'))}</span></button>` : ''}
     </div>
+    ${ranked.length ? szSharePanelHTML() : ''}
     ${szSeatingHTML()}
     ${ranked.length ? '' : `<p class="sz-empty">${szEsc(szT('no_votes_yet'))}</p>`}
     ${rows ? `<ol class="sz-tally-list">${rows}</ol>` : ''}
@@ -971,6 +978,7 @@ function szRenderTally() {
       <ul class="sz-tally-list sz-tally-out">${outRows}</ul>` : ''}
     ${szTablesHTML()}`;
   if (typeof refreshIcons === 'function') refreshIcons();
+  szSharePreview();
 }
 
 // ============================ split the pool into tables ============================
@@ -1345,6 +1353,22 @@ function szFitText(ctx, text, maxW) {
   return t + '…';
 }
 
+// Break text at spaces; the last allowed line ends in an ellipsis if it doesn't all fit.
+function szWrapLines(ctx, text, maxW, maxLines) {
+  const lines = [];
+  let line = '';
+  const words = text.split(' ').filter(Boolean);
+  for (let i = 0; i < words.length; i++) {
+    const next = line ? line + ' ' + words[i] : words[i];
+    if (line && ctx.measureText(next).width > maxW) {
+      if (lines.length === maxLines - 1) return lines.concat(szFitText(ctx, words.slice(i - line.split(' ').length, words.length).join(' '), maxW));
+      lines.push(line);
+      line = words[i];
+    } else line = next;
+  }
+  return line ? lines.concat(szFitText(ctx, line, maxW)) : lines;
+}
+
 function szRoundRect(ctx, x, y, w, h, r) {
   ctx.beginPath();
   if (ctx.roundRect) ctx.roundRect(x, y, w, h, r);
@@ -1367,6 +1391,28 @@ function szDrawCover(ctx, img, x, y, w, h) {
   const s = Math.max(w / img.width, h / img.height);
   const sw = w / s, sh = h / s;
   ctx.drawImage(img, (img.width - sw) / 2, (img.height - sh) / 2, sw, sh, x, y, w, h);
+}
+
+// Cover art carries logos and titles, so these cards never crop it: the whole
+// picture is shown, on a dimmed, blurred copy of itself that fills the rest.
+function szDrawWhole(ctx, img, x, y, w, h) {
+  ctx.save();
+  ctx.beginPath(); ctx.rect(x, y, w, h); ctx.clip();  // blur spreads past its edges
+  ctx.filter = 'blur(18px)';
+  szDrawCover(ctx, img, x - 30, y - 30, w + 60, h + 60);
+  ctx.restore();
+  ctx.fillStyle = 'rgba(5,5,5,0.55)';
+  ctx.fillRect(x, y, w, h);
+  const s = Math.min(w / img.width, h / img.height);
+  const dw = img.width * s, dh = img.height * s;
+  ctx.drawImage(img, x + (w - dw) / 2, y + (h - dh) / 2, dw, dh);
+}
+
+// The art at a given width, uncropped.
+function szWholeImage(hero, w) {
+  return hero && typeof imgProxy === 'function'
+    ? szLoadImage(imgProxy(hero, { w, q: 85 }).replace('output=webp', 'output=jpg'))
+    : Promise.resolve(null);
 }
 
 function szDrawCrown(ctx, x, base, color) {
@@ -1522,9 +1568,7 @@ async function szDrawSeating() {
   const out = szUnseated(s);
   const info = s.tables.map(t => szResolve(t.game) || { name: t.game });
   const [covers] = await Promise.all([
-    Promise.all(info.map(r => r.hero && typeof imgProxy === 'function'
-      ? szLoadImage(imgProxy(r.hero, { w: 440, h: 520, fit: 'cover', q: 85 }).replace('output=webp', 'output=jpg'))
-      : Promise.resolve(null))),
+    Promise.all(info.map(r => szWholeImage(r.hero, 720))),
     szImageFonts(),
   ]);
   const { canvas, ctx } = szImageFrame(szT('img_tables'));
@@ -1532,13 +1576,13 @@ async function szDrawSeating() {
   const top = 350, gap = 18, outH = out.length ? 56 : 0;
   const room = H - P - 120 - top - outH;
   const h = Math.min(300, Math.floor((room - gap * (s.tables.length - 1)) / s.tables.length));
-  const w = W - P * 2, thumb = Math.round(h * 0.85);
+  const w = W - P * 2, thumb = Math.min(420, Math.round(h * 1.6));
   let y = top;
   s.tables.forEach((t, i) => {
     ctx.save();
     szRoundRect(ctx, P, y, w, h, 24); ctx.clip();
     ctx.fillStyle = C.card; ctx.fillRect(P, y, w, h);
-    if (covers[i]) szDrawCover(ctx, covers[i], P, y, thumb, h);
+    if (covers[i]) szDrawWhole(ctx, covers[i], P, y, thumb, h);
     ctx.restore();
     szRoundRect(ctx, P, y, w, h, 24);
     ctx.lineWidth = 2; ctx.strokeStyle = C.border; ctx.stroke();
@@ -1546,26 +1590,22 @@ async function szDrawSeating() {
     const x = P + thumb + 32, tw = w - thumb - 64;
     const small = h < 170;
     const lh = small ? 30 : 36;
-    let ty = y + (small ? 44 : 58);
-    ctx.fillStyle = C.text; ctx.font = `700 ${small ? 28 : 34}px ${head}`;
+    const nameSize = small ? 28 : 34;
+    ctx.font = `600 ${small ? 24 : 28}px ${body}`;
+    const fits = Math.max(1, Math.floor((h - 24 - nameSize - lh - 4) / lh));
+    const lines = szWrapLines(ctx, t.players.join(', '), tw, fits);
+    // Centre the text block on the cover beside it
+    let ty = y + Math.round((h - (nameSize + lh + 4 + lines.length * lh)) / 2) + nameSize;
+    ctx.fillStyle = C.text; ctx.font = `700 ${nameSize}px ${head}`;
     ctx.fillText(szFitText(ctx, info[i].name, tw), x, ty);
     ty += lh + 4;
     ctx.fillStyle = C.purple; ctx.font = `800 ${small ? 24 : 28}px ${body}`;
     ctx.fillText(szFitText(ctx, `${szT('img_gm')}: ${t.gm}`, tw), x, ty);
-    // Players wrap; whatever doesn't fit the card ends in an ellipsis
     ctx.fillStyle = '#cbd5e1'; ctx.font = `600 ${small ? 24 : 28}px ${body}`;
-    let line = '';
-    const words = t.players.map((p, n) => p + (n < t.players.length - 1 ? ', ' : ''));
-    for (let n = 0; n < words.length; n++) {
-      if (line && ctx.measureText(line + words[n]).width > tw) {
-        ty += lh;
-        if (ty + lh > y + h - 12) { line = words.slice(n - 1).join(''); break; }
-        ctx.fillText(line.trim(), x, ty);
-        line = '';
-      }
-      line += words[n];
+    for (const line of lines) {
+      ty += lh;
+      ctx.fillText(line, x, ty);
     }
-    if (line) { ty = Math.min(ty + lh, y + h - 22); ctx.fillText(szFitText(ctx, line.trim(), tw), x, ty); }
     y += h + gap;
   });
   if (out.length) {
@@ -1574,6 +1614,164 @@ async function szDrawSeating() {
   }
   szImageFooter(ctx);
   return canvas;
+}
+
+// A card for one person: what they voted for.
+async function szDrawMyVote() {
+  const { W, H, P, C, head, body } = SZ_IMG;
+  const me = szVoterName();
+  const mine = szData.ballots.find(b => b.voter === me);
+  const name = id => { const r = szResolve(id); return r ? r.name : id; };
+  const rowH = 112, rowGap = 12, top = 350;
+  const lines = [[szT('img_down'), mine.down || [], '#fb923c'], [szT('img_veto'), mine.veto, C.red]].filter(l => l[1].length);
+  const room = H - P - 120 - top - lines.length * 50 - 44;
+  const fit = Math.max(1, Math.floor((room + rowGap) / (rowH + rowGap)));
+  const shown = mine.up.slice(0, fit);
+  const [covers] = await Promise.all([
+    Promise.all(shown.map(id => { const r = szResolve(id); return szWholeImage(r && r.hero, 400); })),
+    szImageFonts(),
+  ]);
+  const { canvas, ctx } = szImageFrame(szT('img_my_vote', { name: me }));
+  const w = W - P * 2, thumb = 224;
+  let y = top;
+  shown.forEach((id, i) => {
+    ctx.save();
+    szRoundRect(ctx, P, y, w, rowH, 20); ctx.clip();
+    ctx.fillStyle = C.card; ctx.fillRect(P, y, w, rowH);
+    if (covers[i]) szDrawWhole(ctx, covers[i], P, y, thumb, rowH);
+    ctx.restore();
+    szRoundRect(ctx, P, y, w, rowH, 20);
+    ctx.lineWidth = 2; ctx.strokeStyle = C.border; ctx.stroke();
+    ctx.fillStyle = C.green; ctx.font = `700 34px ${head}`;
+    const plus = '+1', pw = ctx.measureText(plus).width;
+    ctx.fillText(plus, W - P - 32 - pw, y + rowH / 2 + 12);
+    ctx.fillStyle = C.text;
+    ctx.fillText(szFitText(ctx, name(id), w - thumb - 64 - pw - 24), P + thumb + 32, y + rowH / 2 + 12);
+    y += rowH + rowGap;
+  });
+  const more = mine.up.length - shown.length;
+  if (more > 0) {
+    ctx.fillStyle = C.dim; ctx.font = `600 24px ${body}`;
+    ctx.fillText(szT('img_more', { n: more }), P, y + 22);
+    y += 44;
+  }
+  ctx.font = `600 28px ${body}`;
+  for (const [label, ids, color] of lines) {
+    y += 8;
+    ctx.fillStyle = color;
+    ctx.fillText(szFitText(ctx, `${label[0].toUpperCase()}${label.slice(1)}: ${ids.map(name).join(', ')}`, w), P, y + 26);
+    y += 42;
+  }
+  szImageFooter(ctx);
+  return canvas;
+}
+
+// A card for one person: where they sit, with the game's cover up front.
+async function szDrawMyTable() {
+  const { W, H, P, C, head, body } = SZ_IMG;
+  const me = szVoterName();
+  const t = szData.seating.tables.find(x => x.gm === me || x.players.includes(me));
+  const r = szResolve(t.game) || { name: t.game };
+  const [cover] = await Promise.all([
+    szWholeImage(r.hero, 1080),
+    szImageFonts(),
+  ]);
+  const { canvas, ctx } = szImageFrame(szT('img_my_table', { name: me }));
+  const y = 350, w = W - P * 2, h = 460;
+  ctx.save();
+  szRoundRect(ctx, P, y, w, h, 28); ctx.clip();
+  ctx.fillStyle = C.card; ctx.fillRect(P, y, w, h);
+  if (cover) szDrawWhole(ctx, cover, P, y, w, h);
+  ctx.restore();
+  szRoundRect(ctx, P, y, w, h, 28);
+  ctx.lineWidth = 4; ctx.strokeStyle = C.accent; ctx.stroke();
+
+  // The name sits under the cover: many covers carry a logo of their own
+  let ty = y + h + 80;
+  ctx.fillStyle = C.text; ctx.font = `900 56px ${head}`;
+  ctx.fillText(szFitText(ctx, r.name, w), P, ty);
+  ty += 62;
+  ctx.fillStyle = C.purple; ctx.font = `800 34px ${body}`;
+  ctx.fillText(szFitText(ctx, `${szT('img_gm')}: ${t.gm}`, w), P, ty);
+  ctx.fillStyle = '#cbd5e1'; ctx.font = `600 32px ${body}`;
+  for (const line of szWrapLines(ctx, t.players.join(', '), w, 3)) {
+    ty += 46;
+    ctx.fillText(line, P, ty);
+  }
+  szImageFooter(ctx);
+  return canvas;
+}
+
+// ---- choosing what to share ----
+let szShare = { open: false, card: null, previews: {} };
+
+// What this person can share right now. Personal cards need their name to match a ballot.
+function szShareCards() {
+  const me = szVoterName();
+  const s = szData.seating;
+  const hasVote = me && szData.ballots.some(b => b.voter === me);
+  const atTable = s && me && s.tables.some(t => t.gm === me || t.players.includes(me));
+  return [
+    s && { id: 'tables', label: 'card_tables', draw: szDrawSeating },
+    { id: 'results', label: 'card_results', draw: szDrawResults },
+    atTable && { id: 'table', label: 'card_my_table', draw: szDrawMyTable },
+    hasVote && { id: 'vote', label: 'card_my_vote', draw: szDrawMyVote },
+  ].filter(Boolean);
+}
+
+function szShareCard() {
+  const cards = szShareCards();
+  return cards.find(c => c.id === szShare.card) || cards[0];
+}
+
+function szShareToggle() {
+  szShare.open = !szShare.open;
+  szRenderTally();
+}
+
+function szSharePick(id) {
+  szShare.card = id;
+  szRenderTally();
+}
+
+function szSharePanelHTML() {
+  if (!szShare.open) return '';
+  const mode = szImageMode();
+  const label = { share: 'share_short', copy: 'copy_image', download: 'save_short' }[mode];
+  const icon = { share: 'share-2', copy: 'copy', download: 'download' }[mode];
+  const card = szShareCard();
+  return `
+    <div class="sz-share-panel">
+      <div class="sz-share-kinds">
+        ${szShareCards().map(c => `<button type="button" class="sz-share-kind${c.id === card.id ? ' active' : ''}" onclick="szSharePick('${c.id}')">${szEsc(szT(c.label))}</button>`).join('')}
+      </div>
+      <div class="sz-share-preview"><img id="sz-share-preview" alt=""></div>
+      <div class="sz-share-actions">
+        <button class="sz-btn sz-save sz-btn-sm sz-share-img" onclick="szShareResultsImage(this, '${mode}')"><i data-lucide="${icon}"></i><span>${szEsc(szT(label))}</span></button>
+        ${mode === 'copy' ? `<button class="sz-btn sz-ghost sz-btn-sm sz-share-dl" onclick="szShareResultsImage(this, 'download')" title="${szEsc(szT('save_image'))}" aria-label="${szEsc(szT('save_image'))}"><i data-lucide="download"></i></button>` : ''}
+      </div>
+    </div>`;
+}
+
+// Draws the chosen card once per state of the room; polling redraws the panel
+// every few seconds and must not make the picture flicker.
+async function szSharePreview() {
+  const el = document.getElementById('sz-share-preview');
+  if (!el) return;
+  const card = szShareCard();
+  const key = JSON.stringify([card.id, szVoterName(), szData.title, szData.ballots, szData.seating, szData.expected]);
+  const cached = szShare.previews[card.id];
+  if (cached && cached.key === key) { el.src = cached.url; return; }
+  if (szShare.drawing === key) return;
+  szShare.drawing = key;
+  const canvas = await card.draw();
+  const blob = await new Promise(res => canvas.toBlob(res, 'image/png'));
+  szShare.drawing = null;
+  if (!blob) return;
+  if (cached) URL.revokeObjectURL(cached.url);
+  szShare.previews[card.id] = { key, url: URL.createObjectURL(blob) };
+  const now = document.getElementById('sz-share-preview');
+  if (now && szShareCard().id === card.id) now.src = szShare.previews[card.id].url;
 }
 
 // Phones get the native share sheet; desktops copy the image to the
@@ -1591,8 +1789,8 @@ async function szShareResultsImage(btn, mode) {
   if (btn) btn.disabled = true;
   try {
     // Clipboard writes must start inside the click, so hand it a promise of the blob.
-    const draw = szData.seating ? szDrawSeating() : szDrawResults();
-    const blobP = draw.then(c => new Promise(res => c.toBlob(res, 'image/png')));
+    const card = szShareCard();
+    const blobP = card.draw().then(c => new Promise(res => c.toBlob(res, 'image/png')));
     if (typeof track === 'function') track('room-share-image-' + mode);
     if (mode === 'copy') {
       try {
@@ -1603,7 +1801,7 @@ async function szShareResultsImage(btn, mode) {
     }
     const blob = await blobP;
     if (!blob) return;
-    const file = new File([blob], 'session-zero-results.png', { type: 'image/png' });
+    const file = new File([blob], `session-zero-${card.id}.png`, { type: 'image/png' });
     if (mode === 'share') {
       try {
         await navigator.share({ files: [file], title: szData.title || szT('room_default_title'), text: szRoomUrl(szRoomId) });
