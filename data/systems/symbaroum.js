@@ -12,7 +12,7 @@ registerSystem("symbaroum", {
   "free": false,
   "edition": null,
   "foundryStatus": "Official",
-  "heroImage": "https://sessionzero.games/images/heroes/symbaroum.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/symbaroum.jpg?v=2",
   "playstyleTags": ["explore", "mystery", "horror"],
   "settingTags": ["fantasy", "weird"],
   "gallery": [

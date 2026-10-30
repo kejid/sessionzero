@@ -12,7 +12,7 @@ registerSystem("burning-wheel", {
   "free": false,
   "edition": "Gold Revised",
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/burning-wheel.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/burning-wheel.jpg?v=2",
   "playstyleTags": ["narrative", "social", "tactical"],
   "settingTags": ["fantasy"],
   "gallery": [

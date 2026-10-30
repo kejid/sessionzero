@@ -12,7 +12,7 @@ registerSystem("slugblaster", {
   "free": false,
   "edition": "Game of the Year Edition",
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/slugblaster.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/slugblaster.jpg?v=2",
   "playstyleTags": ["action", "narrative", "sandbox"],
   "settingTags": ["weird", "modern"],
   "gallery": [

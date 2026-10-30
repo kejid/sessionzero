@@ -11,7 +11,7 @@ registerSystem("fabula-ultima", {
   "players": "3–5",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/fabula-ultima.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/fabula-ultima.jpg?v=2",
   "playstyleTags": [
     "narrative",
     "combat",

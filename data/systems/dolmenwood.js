@@ -11,7 +11,7 @@ registerSystem("dolmenwood", {
   "complexity": 2,
   "free": false,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/dolmenwood.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/dolmenwood.jpg?v=2",
   "playstyleTags": [
     "explore",
     "combat",

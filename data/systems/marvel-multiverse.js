@@ -11,7 +11,7 @@ registerSystem("marvel-multiverse", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/marvel-multiverse.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/marvel-multiverse.jpg?v=2",
   "playstyleTags": [
     "combat",
     "narrative",

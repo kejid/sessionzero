@@ -11,7 +11,7 @@ registerSystem("gurps", {
   "complexity": 4,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/gurps.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/gurps.jpg?v=2",
   "playstyleTags": [
     "tactical",
     "explore",

@@ -11,7 +11,7 @@ registerSystem("fiasco", {
   "complexity": 1,
   "free": false,
   "foundryStatus": "None",
-  "heroImage": "https://sessionzero.games/images/heroes/fiasco.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/fiasco.jpg?v=2",
   "playstyleTags": [
     "narrative",
     "combat",

@@ -12,7 +12,7 @@ registerSystem("avatar-legends", {
   "free": false,
   "edition": null,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/avatar-legends.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/avatar-legends.jpg?v=2",
   "playstyleTags": ["narrative", "action", "social"],
   "settingTags": ["fantasy"],
   "gallery": [

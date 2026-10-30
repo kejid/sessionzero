@@ -10,7 +10,7 @@ registerSystem("paranoia", {
   "players": "4–6",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/paranoia.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/paranoia.jpg?v=2",
   "playstyleTags": [
     "social",
     "combat",

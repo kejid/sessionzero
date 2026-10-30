@@ -12,7 +12,7 @@ registerSystem("dresden-files-accelerated", {
   "free": false,
   "edition": null,
   "foundryStatus": "Official",
-  "heroImage": "https://sessionzero.games/images/heroes/dresden-files-accelerated.webp",
+  "heroImage": "https://sessionzero.games/images/heroes/dresden-files-accelerated.webp?v=2",
   "playstyleTags": ["narrative", "mystery", "action"],
   "settingTags": ["urban-fantasy", "modern"],
   "gallery": [

@@ -11,7 +11,7 @@ registerSystem("star-trek-adventures", {
   "complexity": 3,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/star-trek-adventures.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/star-trek-adventures.jpg?v=2",
   "playstyleTags": [
     "narrative",
     "social",

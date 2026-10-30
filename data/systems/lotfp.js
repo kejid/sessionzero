@@ -12,7 +12,7 @@ registerSystem("lotfp", {
   "edition": "B/X",
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/lotfp.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/lotfp.jpg?v=2",
   "playstyleTags": [
     "horror",
     "explore",

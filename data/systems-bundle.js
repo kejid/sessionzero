@@ -1033,7 +1033,7 @@ registerSystem("avatar-legends", {
   "free": false,
   "edition": null,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/avatar-legends.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/avatar-legends.jpg?v=2",
   "playstyleTags": ["narrative", "action", "social"],
   "settingTags": ["fantasy"],
   "gallery": [
@@ -1987,7 +1987,7 @@ registerSystem("burning-wheel", {
   "free": false,
   "edition": "Gold Revised",
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/burning-wheel.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/burning-wheel.jpg?v=2",
   "playstyleTags": ["narrative", "social", "tactical"],
   "settingTags": ["fantasy"],
   "gallery": [
@@ -2733,7 +2733,7 @@ registerSystem("city-of-mist", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/city-of-mist.webp",
+  "heroImage": "https://sessionzero.games/images/heroes/city-of-mist.webp?v=2",
   "playstyleTags": [
     "narrative",
     "combat",
@@ -3105,7 +3105,7 @@ registerSystem("cortex-prime", {
   "players": "3–6",
   "complexity": 3,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/cortex-prime.webp",
+  "heroImage": "https://sessionzero.games/images/heroes/cortex-prime.webp?v=2",
   "playstyleTags": [
     "narrative",
     "social",
@@ -4493,7 +4493,7 @@ registerSystem("dolmenwood", {
   "complexity": 2,
   "free": false,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/dolmenwood.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/dolmenwood.jpg?v=2",
   "playstyleTags": [
     "explore",
     "combat",
@@ -5106,7 +5106,7 @@ registerSystem("dresden-files-accelerated", {
   "free": false,
   "edition": null,
   "foundryStatus": "Official",
-  "heroImage": "https://sessionzero.games/images/heroes/dresden-files-accelerated.webp",
+  "heroImage": "https://sessionzero.games/images/heroes/dresden-files-accelerated.webp?v=2",
   "playstyleTags": ["narrative", "mystery", "action"],
   "settingTags": ["urban-fantasy", "modern"],
   "gallery": [
@@ -6060,7 +6060,7 @@ registerSystem("fabula-ultima", {
   "players": "3–5",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/fabula-ultima.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/fabula-ultima.jpg?v=2",
   "playstyleTags": [
     "narrative",
     "combat",
@@ -6435,7 +6435,7 @@ registerSystem("fiasco", {
   "complexity": 1,
   "free": false,
   "foundryStatus": "None",
-  "heroImage": "https://sessionzero.games/images/heroes/fiasco.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/fiasco.jpg?v=2",
   "playstyleTags": [
     "narrative",
     "combat",
@@ -7170,7 +7170,7 @@ registerSystem("gurps", {
   "complexity": 4,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/gurps.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/gurps.jpg?v=2",
   "playstyleTags": [
     "tactical",
     "explore",
@@ -9809,7 +9809,7 @@ registerSystem("lotfp", {
   "edition": "B/X",
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/lotfp.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/lotfp.jpg?v=2",
   "playstyleTags": [
     "horror",
     "explore",
@@ -10129,7 +10129,7 @@ registerSystem("marvel-multiverse", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/marvel-multiverse.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/marvel-multiverse.jpg?v=2",
   "playstyleTags": [
     "combat",
     "narrative",
@@ -10307,7 +10307,7 @@ registerSystem("masks", {
   "players": "3–5",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/masks.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/masks.jpg?v=2",
   "playstyleTags": [
     "narrative",
     "social",
@@ -11961,7 +11961,7 @@ registerSystem("numenera", {
   "complexity": 3,
   "free": true,
   "foundryStatus": "Official",
-  "heroImage": "https://sessionzero.games/images/heroes/numenera.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/numenera.jpg?v=2",
   "playstyleTags": [
     "narrative",
     "combat",
@@ -13000,7 +13000,7 @@ registerSystem("paranoia", {
   "players": "4–6",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/paranoia.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/paranoia.jpg?v=2",
   "playstyleTags": [
     "social",
     "combat",
@@ -13690,7 +13690,7 @@ registerSystem("runequest", {
   "players": "3–5",
   "complexity": 4,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/runequest.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/runequest.jpg?v=2",
   "playstyleTags": [
     "combat",
     "worldbuild",
@@ -14751,7 +14751,7 @@ registerSystem("slugblaster", {
   "free": false,
   "edition": "Game of the Year Edition",
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/slugblaster.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/slugblaster.jpg?v=2",
   "playstyleTags": ["action", "narrative", "sandbox"],
   "settingTags": ["weird", "modern"],
   "gallery": [
@@ -15030,7 +15030,7 @@ registerSystem("star-trek-adventures", {
   "complexity": 3,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/star-trek-adventures.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/star-trek-adventures.jpg?v=2",
   "playstyleTags": [
     "narrative",
     "social",
@@ -16124,7 +16124,7 @@ registerSystem("symbaroum", {
   "free": false,
   "edition": null,
   "foundryStatus": "Official",
-  "heroImage": "https://sessionzero.games/images/heroes/symbaroum.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/symbaroum.jpg?v=2",
   "playstyleTags": ["explore", "mystery", "horror"],
   "settingTags": ["fantasy", "weird"],
   "gallery": [
@@ -16552,7 +16552,7 @@ registerSystem("ten-candles", {
   "players": "3–5",
   "complexity": 1,
   "foundryStatus": "None",
-  "heroImage": "https://sessionzero.games/images/heroes/ten-candles.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/ten-candles.jpg?v=2",
   "playstyleTags": [
     "narrative",
     "horror",
@@ -16700,7 +16700,7 @@ registerSystem("the-black-hack", {
   "players": "3–6",
   "complexity": 1,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/the-black-hack.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/the-black-hack.jpg?v=2",
   "playstyleTags": [
     "combat",
     "explore",
@@ -19209,7 +19209,7 @@ registerSystem("vaults-of-vaarn", {
   "edition": null,
   "free": true,
   "foundryStatus": "None",
-  "heroImage": "https://sessionzero.games/images/heroes/vaults-of-vaarn.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/vaults-of-vaarn.jpg?v=2",
   "playstyleTags": [
     "explore",
     "survival",
@@ -19517,7 +19517,7 @@ registerSystem("werewolf-the-apocalypse", {
   "free": false,
   "edition": null,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/werewolf-the-apocalypse.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/werewolf-the-apocalypse.jpg?v=2",
   "playstyleTags": ["combat", "narrative", "horror"],
   "settingTags": ["modern", "urban-fantasy"],
   "gallery": [

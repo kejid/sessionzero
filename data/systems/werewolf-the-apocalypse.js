@@ -12,7 +12,7 @@ registerSystem("werewolf-the-apocalypse", {
   "free": false,
   "edition": null,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/werewolf-the-apocalypse.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/werewolf-the-apocalypse.jpg?v=2",
   "playstyleTags": ["combat", "narrative", "horror"],
   "settingTags": ["modern", "urban-fantasy"],
   "gallery": [

@@ -11,7 +11,7 @@ registerSystem("runequest", {
   "players": "3–5",
   "complexity": 4,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/runequest.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/runequest.jpg?v=2",
   "playstyleTags": [
     "combat",
     "worldbuild",

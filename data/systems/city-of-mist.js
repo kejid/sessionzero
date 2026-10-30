@@ -11,7 +11,7 @@ registerSystem("city-of-mist", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/city-of-mist.webp",
+  "heroImage": "https://sessionzero.games/images/heroes/city-of-mist.webp?v=2",
   "playstyleTags": [
     "narrative",
     "combat",

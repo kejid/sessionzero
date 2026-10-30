@@ -10,7 +10,7 @@ registerSystem("cortex-prime", {
   "players": "3–6",
   "complexity": 3,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/cortex-prime.webp",
+  "heroImage": "https://sessionzero.games/images/heroes/cortex-prime.webp?v=2",
   "playstyleTags": [
     "narrative",
     "social",

@@ -10,7 +10,7 @@ registerSystem("ten-candles", {
   "players": "3–5",
   "complexity": 1,
   "foundryStatus": "None",
-  "heroImage": "https://sessionzero.games/images/heroes/ten-candles.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/ten-candles.jpg?v=2",
   "playstyleTags": [
     "narrative",
     "horror",

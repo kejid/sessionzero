@@ -128,7 +128,7 @@ def process(path):
     hero = HERO_RE.search(new)
     if hero and hero.group(2).startswith(SITE):
         url = hero.group(2)
-        src = ROOT / url[len(SITE):]
+        src = ROOT / url[len(SITE):].split("?")[0]
         if src.exists():
             CACHE_DIR.mkdir(parents=True, exist_ok=True)
             h = hashlib.sha1(url.encode()).hexdigest()[:16]

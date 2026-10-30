@@ -11,7 +11,7 @@ registerSystem("numenera", {
   "complexity": 3,
   "free": true,
   "foundryStatus": "Official",
-  "heroImage": "https://sessionzero.games/images/heroes/numenera.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/numenera.jpg?v=2",
   "playstyleTags": [
     "narrative",
     "combat",

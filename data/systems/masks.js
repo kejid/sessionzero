@@ -10,7 +10,7 @@ registerSystem("masks", {
   "players": "3–5",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/masks.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/masks.jpg?v=2",
   "playstyleTags": [
     "narrative",
     "social",
