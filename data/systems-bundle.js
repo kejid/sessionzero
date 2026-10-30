@@ -8227,7 +8227,7 @@ registerSystem("ker-nethalas", {
   "dice": "d100 (2d10)",
   "players": "1",
   "complexity": 2,
-  "heroImage": "https://sessionzero.games/images/heroes/ker-nethalas.webp",
+  "heroImage": "https://sessionzero.games/images/heroes/ker-nethalas.jpg",
   "playstyleTags": [
     "combat",
     "explore",
@@ -9717,7 +9717,7 @@ registerSystem("liminal-horror", {
   "foundryStatus": "Community",
   "free": true,
   "edition": null,
-  "heroImage": "https://sessionzero.games/images/heroes/liminal-horror.webp",
+  "heroImage": "https://sessionzero.games/images/heroes/liminal-horror.jpg",
   "playstyleTags": ["horror", "mystery", "explore"],
   "settingTags": ["modern", "weird"],
   "gallery": [

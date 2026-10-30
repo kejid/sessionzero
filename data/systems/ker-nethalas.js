@@ -10,7 +10,7 @@ registerSystem("ker-nethalas", {
   "dice": "d100 (2d10)",
   "players": "1",
   "complexity": 2,
-  "heroImage": "https://sessionzero.games/images/heroes/ker-nethalas.webp",
+  "heroImage": "https://sessionzero.games/images/heroes/ker-nethalas.jpg",
   "playstyleTags": [
     "combat",
     "explore",

@@ -13,7 +13,7 @@ registerSystem("liminal-horror", {
   "foundryStatus": "Community",
   "free": true,
   "edition": null,
-  "heroImage": "https://sessionzero.games/images/heroes/liminal-horror.webp",
+  "heroImage": "https://sessionzero.games/images/heroes/liminal-horror.jpg",
   "playstyleTags": ["horror", "mystery", "explore"],
   "settingTags": ["modern", "weird"],
   "gallery": [
