@@ -27,6 +27,7 @@ const SZ_STR = {
     opt_veto_hint: 'One veto takes a game out of the running.',
     tables_open: 'Split into tables',
     tables_title: 'Tables',
+    tables_intro: 'Choose the number of tables and seats, adjust the suggested line-up, then pin it so everyone sees their table at this link.',
     tables_hide: 'Hide',
     tables_count: 'Tables',
     tables_seats: 'Seats per table, GM included',
@@ -40,8 +41,9 @@ const SZ_STR = {
     tables_out: 'Not seated',
     tables_move_here: 'Move here',
     tables_summary: 'Seated {n} of {all}, {up} on a game they voted for.',
-    tables_edit_hint: 'Tap a name to move that player.',
-    tables_edit_hint_drag: 'Drag a name to another table, or click it.',
+    tables_edit_hint: 'Tap a name to move that player to another table.',
+    tables_pick_hint: 'Where should {name} go? Choose a table below.',
+    tables_edit_hint_drag: 'Drag a name to another table to move that player.',
     tables_next: 'Another option ({i} of {n})',
     tables_copy: 'Copy line-up',
     tables_copied: 'Line-up copied',
@@ -169,6 +171,14 @@ const SZ_STR = {
     faq_vote_a: 'Type your name, mark the games you have an opinion on, then hit “Save my vote”.',
     faq_change_q: 'Can I change my mind?',
     faq_change_a: 'Yes — come back to this link anytime and update your vote.',
+    faq_device_q: 'I opened the link on another device. Where is my vote?',
+    faq_device_a: 'Type the same name, exactly as before, and your vote comes back.',
+    faq_gm_q: 'I\'m the GM. What do I do?',
+    faq_gm_a: 'Tick “I\'m the GM” above your vote and save it. Everyone then sees which games you would run, and the site can put you at a table as its GM.',
+    faq_tables_q: 'We are a big group. How do we split into tables?',
+    faq_tables_a: 'Once three people have voted, open Results and press “Split into tables”. Set the number of tables and seats, and the site suggests a line-up: every table gets a GM, one GM can run several, and nobody lands on a game they voted against. Drag or press names to move people, then press “Pin line-up” so everyone sees their table at this same link.',
+    faq_share_q: 'How do I share the result?',
+    faq_share_a: 'In Results, press “Share” and pick a card: Results, Tables, My table or My vote. You see a preview before you copy or send it.',
   },
   ru: {
     create_title: 'Создать общее голосование',
@@ -182,6 +192,7 @@ const SZ_STR = {
     opt_veto_hint: 'Одно вето убирает игру из выбора.',
     tables_open: 'Разбить на столы',
     tables_title: 'Столы',
+    tables_intro: 'Выбери число столов и мест, поправь предложенный состав и закрепи его: все увидят свой стол по этой ссылке.',
     tables_hide: 'Скрыть',
     tables_count: 'Столов',
     tables_seats: 'Мест за столом, вместе с мастером',
@@ -195,8 +206,9 @@ const SZ_STR = {
     tables_out: 'Не вошли',
     tables_move_here: 'Пересадить сюда',
     tables_summary: 'За столами {n} из {all}, на игре, за которую голосовали: {up}.',
-    tables_edit_hint: 'Нажми на имя, чтобы пересадить игрока.',
-    tables_edit_hint_drag: 'Перетащи имя за другой стол или нажми на него.',
+    tables_edit_hint: 'Нажми на имя, чтобы пересадить игрока за другой стол.',
+    tables_pick_hint: 'Куда пересадить: {name}? Выбери стол ниже.',
+    tables_edit_hint_drag: 'Перетащи имя за другой стол, чтобы пересадить игрока.',
     tables_next: 'Другой вариант ({i} из {n})',
     tables_copy: 'Скопировать состав',
     tables_copied: 'Состав скопирован',
@@ -324,6 +336,14 @@ const SZ_STR = {
     faq_vote_a: 'Введи имя, отметь игры, по которым есть мнение, и нажми «Сохранить голос».',
     faq_change_q: 'Можно передумать?',
     faq_change_a: 'Да — вернись по ссылке в любой момент и поменяй голос.',
+    faq_device_q: 'Ссылка открыта на другом устройстве. Где мой голос?',
+    faq_device_a: 'Введи то же имя, символ в символ, и голос подтянется.',
+    faq_gm_q: 'Я мастер. Что мне делать?',
+    faq_gm_a: 'Поставь галочку «Я мастер» над своим голосом и сохрани его. Все увидят, какие игры ты хочешь вести, а сайт сможет посадить тебя мастером за стол.',
+    faq_tables_q: 'Нас много. Как разбиться на столы?',
+    faq_tables_a: 'Когда проголосуют хотя бы трое, открой «Итоги» и нажми «Разбить на столы». Укажи число столов и мест, и сайт предложит состав: за каждым столом мастер (один может вести несколько), и никто не попадёт на игру, против которой голосовал. Людей можно пересаживать, перетаскивая имена или нажимая на них. Потом нажми «Закрепить состав», и все увидят свой стол по этой же ссылке.',
+    faq_share_q: 'Как поделиться результатом?',
+    faq_share_a: 'В «Итогах» нажми «Поделиться» и выбери карточку: «Итоги», «Столы», «Мой стол» или «Мой голос». Перед отправкой видно превью.',
   },
 };
 function szT(key, vars) {
@@ -589,7 +609,7 @@ function szRenderRoom() {
 
 // Collapsible newcomer FAQ shown on shared-link landings (room + shortlist).
 function szFaqHTML(mode) {
-  const keys = mode === 'room' ? ['what', 'vote', 'change', 'acct'] : ['what', 'acct'];
+  const keys = mode === 'room' ? ['what', 'vote', 'change', 'device', 'gm', 'tables', 'share', 'acct'] : ['what', 'acct'];
   const rows = keys.map(k =>
     `<div class="sz-faq-item"><strong>${szEsc(szT('faq_' + k + '_q'))}</strong><p>${szEsc(szT('faq_' + k + '_a'))}</p></div>`
   ).join('');
@@ -1166,9 +1186,14 @@ function szSeatDragStart(e, voter) {
   e.dataTransfer.effectAllowed = 'move';
   e.dataTransfer.setData('text/plain', voter);
   // Changing layout inside dragstart can make a browser cancel the drag
+  const chip = e.target;
   setTimeout(() => {
     const panel = document.querySelector('.sz-tables');
-    if (panel && szTables.dragging) panel.classList.add('sz-dragging');
+    if (!panel || !szTables.dragging) return;
+    panel.classList.add('sz-dragging');
+    chip.classList.add('sz-seat-dragging');
+    const from = chip.closest('.sz-table');
+    if (from) from.classList.add('sz-drag-source');
   });
 }
 
@@ -1358,9 +1383,11 @@ function szTablesHTML() {
   const byName = {};
   szData.ballots.forEach(b => { byName[b.voter] = b; });
   // A span, not a button: Firefox won't start a drag from a <button>
-  const drag = szFinePointer() ? 'draggable="true"' : '';
+  const fine = szFinePointer();
+  const drag = fine ? 'draggable="true"' : '';
+  const moveIcon = fine ? 'grip-vertical' : 'arrow-right-left';
   const chipFor = (voter, game) => {
-    return `<span role="button" tabindex="0" ${drag} class="sz-chip ${szSeatChip(voter, game)} sz-seat${szTables.picked === voter ? ' sz-seat-picked' : ''}" data-v="${szEsc(voter)}" onclick="szTablesPick(this.dataset.v)" onkeydown="szSeatKey(event, this.dataset.v)" ondragstart="szSeatDragStart(event, this.dataset.v)" ondragend="szSeatDragEnd()">${szEsc(voter)}</span>`;
+    return `<span role="button" tabindex="0" ${drag} class="sz-chip ${szSeatChip(voter, game)} sz-seat${szTables.picked === voter ? ' sz-seat-picked' : ''}" data-v="${szEsc(voter)}" onclick="szTablesPick(this.dataset.v)" onkeydown="szSeatKey(event, this.dataset.v)" ondragstart="szSeatDragStart(event, this.dataset.v)" ondragend="szSeatDragEnd()"><i data-lucide="${moveIcon}"></i>${szEsc(voter)}</span>`;
   };
   const dropZone = i => `ondragover="szSeatDragOver(event, this)" ondragleave="if (!this.contains(event.relatedTarget)) this.classList.remove('sz-drop')" ondrop="szSeatDrop(event, ${i})"`;
   const moveBtn = i => szTables.picked
@@ -1395,14 +1422,17 @@ function szTablesHTML() {
     }).join('');
     const unseated = szUnseated(opt);
     const pickedOut = unseated.includes(szTables.picked);
+    const moveHint = szTables.picked ? szT('tables_pick_hint', { name: szTables.picked })
+      : szT(fine ? 'tables_edit_hint_drag' : 'tables_edit_hint');
     body = `
+      <p class="sz-tables-move"><i data-lucide="${moveIcon}"></i>${szEsc(moveHint)}</p>
       <div class="sz-tables-grid">${cards}</div>
       <div class="sz-tables-out${unseated.length || szTables.picked ? '' : ' sz-tables-out-empty'}" ${dropZone(-1)}>
         <span class="sz-table-n">${szEsc(szT('tables_out'))}</span>
         <div class="sz-tally-chips">${unseated.map(v => chipFor(v, null)).join('')}</div>
         ${pickedOut ? '' : moveBtn(-1)}
       </div>
-      <p class="sz-hint sz-tables-sum">${szEsc(szT('tables_summary', { n: seated, all: szData.ballots.length, up: wanted }))} ${szEsc(szT(szFinePointer() ? 'tables_edit_hint_drag' : 'tables_edit_hint'))}</p>
+      <p class="sz-hint sz-tables-sum">${szEsc(szT('tables_summary', { n: seated, all: szData.ballots.length, up: wanted }))}</p>
       <div class="sz-tables-actions">
         <button class="sz-btn sz-save sz-btn-sm" onclick="szTablesPin()"><i data-lucide="pin"></i>${szEsc(szT('tables_pin'))}</button>
         ${built.options.length > 1 ? `<button class="sz-btn sz-ghost sz-btn-sm" onclick="szTablesNext()"><i data-lucide="refresh-cw"></i>${szEsc(szT('tables_next', { i: szTables.option + 1, n: built.options.length }))}</button>` : ''}
@@ -1416,6 +1446,7 @@ function szTablesHTML() {
         <h3 class="sz-tables-title">${szEsc(szT('tables_title'))}</h3>
         <button type="button" class="sz-link-btn" onclick="szTablesToggle()">${szEsc(szT('tables_hide'))}</button>
       </div>
+      <p class="sz-hint sz-tables-wait">${szEsc(szT('tables_intro'))}</p>
       <div class="sz-tables-controls">
         ${[['count', 'tables_count'], ['seats', 'tables_seats']].map(([field, label]) => `
           <div class="sz-opt">
