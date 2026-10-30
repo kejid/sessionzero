@@ -39,6 +39,7 @@ const SZ_STR = {
     tables_move_here: 'Move here',
     tables_summary: 'Seated {n} of {all}, {up} on a game they voted for.',
     tables_edit_hint: 'Tap a name to move that player.',
+    tables_edit_hint_drag: 'Drag a name to another table, or click it.',
     tables_next: 'Another option ({i} of {n})',
     tables_copy: 'Copy line-up',
     tables_copied: 'Line-up copied',
@@ -191,6 +192,7 @@ const SZ_STR = {
     tables_move_here: 'Пересадить сюда',
     tables_summary: 'За столами {n} из {all}, на игре, за которую голосовали: {up}.',
     tables_edit_hint: 'Нажми на имя, чтобы пересадить игрока.',
+    tables_edit_hint_drag: 'Перетащи имя за другой стол или нажми на него.',
     tables_next: 'Другой вариант ({i} из {n})',
     tables_copy: 'Скопировать состав',
     tables_copied: 'Состав скопирован',
@@ -466,6 +468,9 @@ async function szEnterRoom(id) {
   szView = 'room';
   szPeek = false;
   szTab = 'vote';
+  // Panels and hand-made seatings belong to the room they were opened in
+  Object.assign(szTables, { open: false, option: 0, key: '', built: null, picked: null, edited: false, dragging: false });
+  Object.assign(szShare, { open: false, card: null });
   const el = szEnsureOverlay();
   el.innerHTML = szTopBar() + `<div class="sz-body"><div class="sz-loading">…</div></div>`;
   szMarkLang();
@@ -923,6 +928,8 @@ function szRank() {
 }
 
 function szRenderTally() {
+  // A redraw removes the dragged chip, and its dragend may never arrive
+  if (szTables.dragging) { szTables.dragging = false; szTables.picked = null; }
   const wrap = document.getElementById('sz-tally');
   if (!wrap || !szData) return;
   const nameById = {};
@@ -968,15 +975,18 @@ function szRenderTally() {
   wrap.innerHTML = `
     <div class="sz-tally-head">
       <h2 class="sz-tally-title">${szEsc(szT('tally_title'))} <span class="sz-voted">${szEsc(szVotedText('voted_count'))}</span></h2>
-      ${ranked.length ? `<button class="sz-btn sz-ghost sz-btn-sm sz-share-open" aria-expanded="${szShare.open}" onclick="szShareToggle()"><i data-lucide="share-2"></i><span>${szEsc(szT('share_short'))}</span></button>` : ''}
+      ${ranked.length ? `<div class="sz-share-actions">
+        ${szTablesOpenBtn()}
+        <button class="sz-btn sz-ghost sz-btn-sm sz-share-open" aria-expanded="${szShare.open}" onclick="szShareToggle()"><i data-lucide="share-2"></i><span>${szEsc(szT('share_short'))}</span></button>
+      </div>` : ''}
     </div>
     ${ranked.length ? szSharePanelHTML() : ''}
     ${szSeatingHTML()}
+    ${szTablesHTML()}
     ${ranked.length ? '' : `<p class="sz-empty">${szEsc(szT('no_votes_yet'))}</p>`}
     ${rows ? `<ol class="sz-tally-list">${rows}</ol>` : ''}
     ${outRows ? `<h3 class="sz-tally-subtitle"><i data-lucide="ban"></i>${szEsc(szT('vetoed_title'))}</h3>
-      <ul class="sz-tally-list sz-tally-out">${outRows}</ul>` : ''}
-    ${szTablesHTML()}`;
+      <ul class="sz-tally-list sz-tally-out">${outRows}</ul>` : ''}`;
   if (typeof refreshIcons === 'function') refreshIcons();
   szSharePreview();
 }
@@ -1116,8 +1126,11 @@ function szTablesToggle() {
 function szTablesSet(field, value) {
   const limits = { count: [2, 6], seats: [2, 12] }[field];
   const n = parseInt(value, 10);
-  if (n) szTables[field] = Math.min(limits[1], Math.max(limits[0], n));
-  szTables.edited = false;
+  const next = n ? Math.min(limits[1], Math.max(limits[0], n)) : szTables[field];
+  if (next !== szTables[field]) {
+    szTables[field] = next;
+    szTables.edited = false;
+  }
   szRenderTally();
 }
 
@@ -1133,16 +1146,73 @@ function szTablesPick(voter) {
   szRenderTally();
 }
 
-// Seat the picked player at table i, or out of the seating when i is -1.
-function szTablesMove(i) {
-  const opt = szTablesBuilt().options[szTables.option];
-  const voter = szTables.picked;
-  opt.out = opt.out.filter(v => v !== voter);
-  opt.tables.forEach(t => { t.players = t.players.filter(v => v !== voter); });
-  (i < 0 ? opt.out : opt.tables[i].players).push(voter);
-  szTables.edited = true;
+// Dragging is the desktop shortcut for the same move; touch screens and the
+// keyboard keep using pick + "Move here". No redraw until the drop: replacing
+// the dragged element would cancel the drag.
+function szSeatDragStart(e, voter) {
+  szTables.picked = voter;
+  szTables.dragging = true;
+  e.dataTransfer.effectAllowed = 'move';
+  e.dataTransfer.setData('text/plain', voter);
+  // Changing layout inside dragstart can make a browser cancel the drag
+  setTimeout(() => {
+    const panel = document.querySelector('.sz-tables');
+    if (panel && szTables.dragging) panel.classList.add('sz-dragging');
+  });
+}
+
+function szSeatDragEnd() {
+  if (!szTables.dragging) return;
+  szTables.dragging = false;
   szTables.picked = null;
   szRenderTally();
+}
+
+function szSeatDragOver(e, zone) {
+  if (!szTables.dragging) return;
+  e.preventDefault();
+  e.dataTransfer.dropEffect = 'move';
+  zone.classList.add('sz-drop');
+}
+
+function szSeatDrop(e, i) {
+  if (!szTables.dragging) return;
+  e.preventDefault();
+  szTables.dragging = false;
+  szTablesMove(i);
+}
+
+function szSeatKey(e, voter) {
+  if (e.key !== 'Enter' && e.key !== ' ') return;
+  e.preventDefault();
+  szTablesPick(voter);
+  const here = document.querySelector('.sz-seat-here');
+  if (here) here.focus(); else szSeatFocus(voter);
+}
+
+// A redraw replaces the chips; put focus back so keyboard users keep their place.
+function szSeatFocus(voter) {
+  const chip = [...document.querySelectorAll('.sz-seat')].find(c => c.dataset.v === voter);
+  if (chip) chip.focus();
+}
+
+// Seat the picked player at table i, or out of the seating when i is -1.
+function szTablesMove(i) {
+  // Read first: a ballot that arrived mid-drag makes szTablesBuilt rebuild and clear the pick
+  const voter = szTables.picked;
+  const built = szTablesBuilt();
+  szTables.picked = null;
+  if (voter === null || built.error) return szRenderTally();
+  const opt = built.options[szTables.option];
+  const from = opt.tables.findIndex(t => t.players.includes(voter));
+  if (from !== i) {
+    opt.out = opt.out.filter(v => v !== voter);
+    opt.tables.forEach(t => { t.players = t.players.filter(v => v !== voter); });
+    (i < 0 ? opt.out : opt.tables[i].players).push(voter);
+    szTables.edited = true;
+  }
+  szRenderTally();
+  szSeatFocus(voter);
 }
 
 // People who voted after this seating was made have no place in it yet.
@@ -1260,18 +1330,26 @@ function szSeatingHTML() {
     </section>`;
 }
 
+function szFinePointer() {
+  return !!(window.matchMedia && window.matchMedia('(pointer: fine)').matches);
+}
+
+function szTablesOpenBtn() {
+  if (szTables.open || szData.seating || szData.ballots.length < SZ_MIN_AT_TABLE) return '';
+  return `<button class="sz-btn sz-ghost sz-btn-sm" onclick="szTablesToggle()"><i data-lucide="users"></i><span>${szEsc(szT('tables_open'))}</span></button>`;
+}
+
 function szTablesHTML() {
-  if (szData.ballots.length < SZ_MIN_AT_TABLE) return '';
-  if (!szTables.open) {
-    if (szData.seating) return '';
-    return `<button class="sz-btn sz-ghost sz-tables-open" onclick="szTablesToggle()"><i data-lucide="users"></i> ${szEsc(szT('tables_open'))}</button>`;
-  }
+  if (!szTables.open) return '';
   const built = szTablesBuilt();
   const byName = {};
   szData.ballots.forEach(b => { byName[b.voter] = b; });
+  // A span, not a button: Firefox won't start a drag from a <button>
+  const drag = szFinePointer() ? 'draggable="true"' : '';
   const chipFor = (voter, game) => {
-    return `<button type="button" class="sz-chip ${szSeatChip(voter, game)} sz-seat${szTables.picked === voter ? ' sz-seat-picked' : ''}" data-v="${szEsc(voter)}" onclick="szTablesPick(this.dataset.v)">${szEsc(voter)}</button>`;
+    return `<span role="button" tabindex="0" ${drag} class="sz-chip ${szSeatChip(voter, game)} sz-seat${szTables.picked === voter ? ' sz-seat-picked' : ''}" data-v="${szEsc(voter)}" onclick="szTablesPick(this.dataset.v)" onkeydown="szSeatKey(event, this.dataset.v)" ondragstart="szSeatDragStart(event, this.dataset.v)" ondragend="szSeatDragEnd()">${szEsc(voter)}</span>`;
   };
+  const dropZone = i => `ondragover="szSeatDragOver(event, this)" ondragleave="if (!this.contains(event.relatedTarget)) this.classList.remove('sz-drop')" ondrop="szSeatDrop(event, ${i})"`;
   const moveBtn = i => szTables.picked
     ? `<button type="button" class="sz-link-btn sz-seat-here" onclick="szTablesMove(${i})">${szEsc(szT('tables_move_here'))}</button>` : '';
 
@@ -1289,7 +1367,7 @@ function szTablesHTML() {
       const r = szResolve(t.game);
       const here = t.players.includes(szTables.picked);
       return `
-        <div class="sz-table">
+        <div class="sz-table" ${dropZone(i)}>
           <div class="sz-table-head">
             <span class="sz-tally-name">${szEsc(r ? r.name : t.game)}</span>
             <span class="sz-table-n">${szEsc(szT('tables_people', { n: t.players.length + 1 }))}</span>
@@ -1305,13 +1383,12 @@ function szTablesHTML() {
     const pickedOut = unseated.includes(szTables.picked);
     body = `
       <div class="sz-tables-grid">${cards}</div>
-      ${unseated.length || szTables.picked ? `
-        <div class="sz-tables-out">
-          <span class="sz-table-n">${szEsc(szT('tables_out'))}</span>
-          <div class="sz-tally-chips">${unseated.map(v => chipFor(v, null)).join('')}</div>
-          ${pickedOut ? '' : moveBtn(-1)}
-        </div>` : ''}
-      <p class="sz-hint sz-tables-sum">${szEsc(szT('tables_summary', { n: seated, all: szData.ballots.length, up: wanted }))} ${szEsc(szT('tables_edit_hint'))}</p>
+      <div class="sz-tables-out${unseated.length || szTables.picked ? '' : ' sz-tables-out-empty'}" ${dropZone(-1)}>
+        <span class="sz-table-n">${szEsc(szT('tables_out'))}</span>
+        <div class="sz-tally-chips">${unseated.map(v => chipFor(v, null)).join('')}</div>
+        ${pickedOut ? '' : moveBtn(-1)}
+      </div>
+      <p class="sz-hint sz-tables-sum">${szEsc(szT('tables_summary', { n: seated, all: szData.ballots.length, up: wanted }))} ${szEsc(szT(szFinePointer() ? 'tables_edit_hint_drag' : 'tables_edit_hint'))}</p>
       <div class="sz-tables-actions">
         <button class="sz-btn sz-save sz-btn-sm" onclick="szTablesPin()"><i data-lucide="pin"></i>${szEsc(szT('tables_pin'))}</button>
         ${built.options.length > 1 ? `<button class="sz-btn sz-ghost sz-btn-sm" onclick="szTablesNext()"><i data-lucide="refresh-cw"></i>${szEsc(szT('tables_next', { i: szTables.option + 1, n: built.options.length }))}</button>` : ''}
@@ -1824,9 +1901,10 @@ function szStartPolling() {
   if (szPollTimer) clearInterval(szPollTimer);
   szPollTimer = setInterval(async () => {
     if (document.hidden) return;
-    // Don't redraw the panel under someone typing in its fields
-    const typing = document.activeElement && document.activeElement.closest('.sz-tables');
-    try { await szLoadRoom(); szSyncCardButtons(); if (!typing) szRenderTally(); }
+    // Don't redraw the panel under someone typing or moving around it by keyboard
+    const el = document.activeElement;
+    const typing = el && el.closest('.sz-tables') && el.matches(':focus-visible');
+    try { await szLoadRoom(); szSyncCardButtons(); if (!typing && !szTables.dragging) szRenderTally(); }
     catch (e) { /* transient; next tick retries */ }
   }, 5000);
 }

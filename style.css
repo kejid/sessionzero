@@ -2884,7 +2884,8 @@ body.browse-mode .sidebar .sidebar-nav-divider { display: none; }
 .sz-tally-chips:empty { display: none; }
 @media (max-width: 560px) {
     .sz-tally-head { flex-wrap: wrap; row-gap: 12px; }
-    .sz-share-open { width: 100%; }
+    .sz-tally-head .sz-share-actions { width: 100%; }
+    .sz-tally-head .sz-share-actions .sz-btn { flex: 1; }
     .sz-share-actions .sz-share-img { flex: 1; }
 }
 
@@ -2898,8 +2899,7 @@ body.browse-mode .sidebar .sidebar-nav-divider { display: none; }
 .sz-opt input[type="checkbox"] { margin: 0; width: 18px; height: 18px; accent-color: var(--accent); flex-shrink: 0; }
 .sz-opt .sz-opt-count { width: 72px; margin: 0; flex-shrink: 0; text-align: center; }
 /* Results: split the pool into tables */
-.sz-tables-open { margin-top: 16px; }
-.sz-tables { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border-subtle); }
+.sz-tables { margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--border-subtle); }
 .sz-tables-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
 .sz-tables-title { font-family: 'Unbounded', sans-serif; font-size: 16px; font-weight: 700; margin: 0; }
 .sz-tables-controls { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
@@ -2910,7 +2910,11 @@ body.browse-mode .sidebar .sidebar-nav-divider { display: none; }
 .sz-tables-out { margin-top: 10px; padding: 12px 14px; border: 1px dashed var(--border-subtle); border-radius: 10px; }
 .sz-tables-out .sz-tally-chips { margin-top: 8px; }
 .sz-tally-chips:empty { display: none; }
-.sz-seat { border: none; font-family: inherit; cursor: pointer; }
+.sz-seat { cursor: pointer; }
+@media (pointer: fine) { .sz-seat { cursor: grab; } .sz-seat:active { cursor: grabbing; } }
+.sz-tables-out-empty { display: none; }
+.sz-dragging .sz-tables-out-empty { display: block; }
+.sz-table.sz-drop, .sz-tables-out.sz-drop { border-color: var(--accent); background: rgba(56,189,248,0.08); }
 .sz-chip-plain { color: var(--text); background: var(--border-subtle); }
 .sz-seat-picked { outline: 2px solid var(--accent); outline-offset: 1px; }
 .sz-seat-here { display: block; margin-top: 10px; }
