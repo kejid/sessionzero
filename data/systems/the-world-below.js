@@ -19,7 +19,8 @@ registerSystem("the-world-below", {
   ],
   "resources": [
     { "type": "link", "url": "https://theonyxpath.com/now-available-the-world-below/", "fmt": "Web" },
-    { "type": "link", "url": "https://www.backerkit.com/c/projects/onyx-path/the-world-below", "fmt": "Web" }
+    { "type": "link", "url": "https://www.backerkit.com/c/projects/onyx-path/the-world-below", "fmt": "Web" },
+    { "type": "rules", "url": "https://www.drivethrurpg.com/en/product/500655", "fmt": "PDF / Print" }
   ],
   "mechanics": [
     { "icon": "dices" },
@@ -47,7 +48,8 @@ registerSystem("the-world-below", {
     ],
     "resources": [
       { "name": "Анонс выхода на сайте Onyx Path" },
-      { "name": "Страница кампании на BackerKit" }
+      { "name": "Страница кампании на BackerKit" },
+      { "name": "Купить на DriveThruRPG" }
     ]
   },
   "en": {
@@ -69,7 +71,8 @@ registerSystem("the-world-below", {
     ],
     "resources": [
       { "name": "Release announcement at Onyx Path" },
-      { "name": "Campaign page on BackerKit" }
+      { "name": "Campaign page on BackerKit" },
+      { "name": "Buy on DriveThruRPG" }
     ]
   }
 });

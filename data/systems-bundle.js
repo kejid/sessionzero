@@ -1019,6 +1019,78 @@ registerSystem("ars-magica", {
     ]
   }
 });
+registerSystem("at-the-gates", {
+  "groups": {
+    "default": { "key": "narrative", "order": 73 },
+    "family": { "key": "standalone", "order": 76 },
+    "genre": { "key": "adventure", "order": 41 }
+  },
+  "name": "At the Gates",
+  "publisher": "Onyx Path Publishing",
+  "dice": "d10 pool",
+  "players": "3–5",
+  "complexity": 3,
+  "foundryStatus": "None",
+  "heroImage": "https://sessionzero.games/images/heroes/at-the-gates.jpg",
+  "playstyleTags": ["combat", "explore", "social"],
+  "settingTags": ["fantasy"],
+  "gallery": [
+    { "src": "https://sessionzero.games/images/systems/at-the-gates-g1.jpg" }
+  ],
+  "resources": [
+    { "type": "link", "url": "https://theonyxpath.com/now-available-at-the-gates-plus-dead-family-t-shirts/", "fmt": "Web" },
+    { "type": "rules", "url": "https://www.drivethrurpg.com/en/product/578315", "fmt": "PDF / Print" }
+  ],
+  "mechanics": [
+    { "icon": "dices" },
+    { "icon": "route" },
+    { "icon": "wand-sparkles" },
+    { "icon": "skull" }
+  ],
+  "quotes": [],
+  "ru": {
+    "tagShort": "Высокое фэнтези в духе JRPG на Storypath Ultra",
+    "tagline": "«Вы стоите у врат, сдерживая прилив и меняя ход истории».",
+    "description": "At the Gates — высокое фэнтези от Onyx Path, вдохновлённое японскими ролевыми играми, вторая линия цикла Earthbane. Семь стран континента Эверенд столетиями хранили хрупкий мир, пока одна из них не призвала демонов из Пустоты. Теперь все спешат заполучить ту же силу, а герои пытаются остановить войну и спасти мир. Книга вышла в сентябре 2026 года в PDF и печати на DriveThruRPG.",
+    "setting": "В мире Гайя магия есть во всём, от пшеничных полей до тех, кто их засевает. Там, где Пустота встречается с миром, растут Внешние земли: искажённые края, а в них врата, настоящие разрывы реальности. Звери там превращаются в чудовищ, а простые люди живут в страхе перед войной и силой, которую не могут понять.",
+    "vignette": "Луг у вашей деревни теперь чёрный, а из разлома в нём выходит демон. Ваша Воительница встаёт перед ним, а Маг ищет слабое место в заклятии. Вы собираете пул d10 и считаете каждую 8 и выше: успехов хватает, чтобы задержать тварь, но не убить. Придётся решать: добивать её здесь или попробовать договориться.",
+    "prep": "~60 мин",
+    "mechanics": [
+      { "title": "Storypath Ultra", "text": "Кубы бросают только тогда, когда исход неясен, а неудача может повернуть сюжет. Пул d10, каждая 8 и выше — успех. Герои компетентны, но последствия настоящие." },
+      { "title": "Три Пути", "text": "Персонаж собирается из Наследия (откуда он родом), Воспитания (какой жизнью жил и что умеет) и Профессии. Профессий пять: Diviner, Harrier, Mage, Warlord и Warrior." },
+      { "title": "Искусства и магия", "text": "Особые способности героя описаны как Искусства и магия. Магия коренится в живой природе мира: стихиях, разуме, теле и душе, а Пустота стоит вне его." },
+      { "title": "Демоны и чудовища", "text": "Книга описывает противников от обычных людей до демонов и объясняет, как создавать своих. С демонами можно не только драться: их можно призывать и вести с ними переговоры." }
+    ],
+    "gallery": [
+      { "cap": "Баннер кампании с книгой и героиней, надпись о кампании убрана" }
+    ],
+    "resources": [
+      { "name": "Анонс выхода на сайте Onyx Path" },
+      { "name": "Купить на DriveThruRPG" }
+    ]
+  },
+  "en": {
+    "tagShort": "High fantasy in the spirit of JRPGs, on Storypath Ultra",
+    "tagline": "\"You stand at the gates, holding back the tide, changing the course of history.\"",
+    "description": "At the Gates is Onyx Path's high fantasy game inspired by Japanese RPG video games, and the second line in the Earthbane Cycle. The seven nations of the continent of Everend kept a fragile peace for centuries, until one of them called forth daemons from the Void. Now all rush to gain the same power, while the heroes try to stop the war and save the world. The book came out in September 2026 in PDF and print on DriveThruRPG.",
+    "setting": "In the world of Gaia, magic is in everything, from fields of wheat to the people who sow them. Where the Void meets the world, Outlands grow: warped places holding gates that are literal tears in reality. Wildlife there turns into ravenous beasts, while common folk live in fear of war and of a power they cannot comprehend.",
+    "vignette": "The meadow by your village is black now, and a daemon is climbing out of a rift in it. Your Warrior steps in front of it while the Mage looks for a weak point in the spell. You build a pool of d10s and count every 8 or higher: there are enough successes to hold the thing back, but not to kill it. Now you must decide whether to finish it here or try to bargain.",
+    "prep": "~60 min",
+    "mechanics": [
+      { "title": "Storypath Ultra", "text": "You roll only when the outcome is uncertain and failure could turn the story. Pool of d10s, every 8 or higher a success. Heroes are competent, but the consequences are real." },
+      { "title": "Three Paths", "text": "A character is built from Heritage (where they grew up), Upbringing (the life they lived and the trades they know) and Profession. There are five Professions: Diviner, Harrier, Mage, Warlord and Warrior." },
+      { "title": "Arts and magic", "text": "A hero's special abilities come as Arts and magic. Magic is rooted in the living nature of the world: the elements, the mind, the body and the soul, while the Void stands outside it." },
+      { "title": "Daemons and monsters", "text": "The book covers antagonists from mundane people to daemons and explains how to make your own. Daemons aren't only for fighting: you can summon them and negotiate with them." }
+    ],
+    "gallery": [
+      { "cap": "Campaign banner with the book and a heroine, campaign ribbon removed" }
+    ],
+    "resources": [
+      { "name": "Release announcement at Onyx Path" },
+      { "name": "Buy on DriveThruRPG" }
+    ]
+  }
+});
 registerSystem("avatar-legends", {
   "groups": {
     "default": { "key": "narrative", "order": 47 },
@@ -2668,7 +2740,7 @@ registerSystem("chronicles-of-darkness", {
   "ru": {
     "tagShort": "Обычные люди против сверхъестественного: современный хоррор на пулах d10",
     "tagline": "«Вы заглянули за занавес. Теперь что-то смотрит на вас в ответ».",
-    "description": "Chronicles of Darkness — базовая книга правил второй редакции «нового Мира Тьмы» от Onyx Path. Это отдельная линейка, а не классический Vampire: The Masquerade: у неё свой сеттинг и своя система Storytelling. Вы играете обычных смертных, которые наткнулись на то, чего не должно существовать. Пулы d10 решают расследования, социальные интриги и жестокие схватки, а Состояния, Биты и Целостность превращают страх и провалы в топливо для истории. В книгу включена «Хроника Бога-Машины» — готовый каркас техногностической кампании. Та же система Storytelling питает и отдельные линии: Demon: The Descent, Werewolf: The Forsaken, Changeling: The Lost и Mummy: The Curse, у каждой из которых свой сеттинг и своя книга.",
+    "description": "Chronicles of Darkness — базовая книга правил второй редакции «нового Мира Тьмы» от Onyx Path. Это отдельная линейка, а не классический Vampire: The Masquerade: у неё свой сеттинг и своя система Storytelling. Вы играете обычных смертных, которые наткнулись на то, чего не должно существовать. Пулы d10 решают расследования, социальные интриги и жестокие схватки, а Состояния, Биты и Целостность превращают страх и провалы в топливо для истории. В книгу включена «Хроника Бога-Машины» — готовый каркас техногностической кампании. Та же система Storytelling питает и отдельные линии: Demon: The Descent, Werewolf: The Forsaken, Changeling: The Lost и Mummy: The Curse, у каждой из которых свой сеттинг и своя книга. Новых книг ждать не стоит: в 2024 году Paradox прекратила согласования, и линия закрылась.",
     "setting": "Наш собственный мир в тёмном зеркале: те же города, те же новости, но под половицами что-то гниёт. Призраки, криптиды, городские легенды и нечто похуже реальны, и никто не придёт это объяснить. В отличие от классического Мира Тьмы здесь нет большого метасюжета и грядущего апокалипсиса — ужас локален, личен и необъясним. За частью происходящего вращается Бог-Машина: огромный непостижимый механизм, чьи ангелы и скрытая Инфраструктура перекраивают реальность ради целей, которые человеку не прочесть.",
     "vignette": "Дверь в подвал заварили не просто так. За ней, в бывшей котельной, беззвучно вращаются шестерни размером с автомобиль, и ваш пропавший брат вплетён в них проводами — и улыбается. Рассказчик объявляет переломный момент. Вы бросаете Решительность + Самообладание — четыре куба, минус один за увиденное: 2, 5, 7. Ни одной восьмёрки. Целостность падает до 6, вы получаете Состояние «Потрясён» и отмечаете Бит, пока руки начинают дрожать.",
     "prep": "~60 мин",
@@ -2695,7 +2767,7 @@ registerSystem("chronicles-of-darkness", {
   "en": {
     "tagShort": "Ordinary people against the supernatural in a d10-pool modern horror game",
     "tagline": "\"You looked behind the curtain. Now something is looking back.\"",
-    "description": "Chronicles of Darkness is the second-edition core rulebook of Onyx Path's \"new World of Darkness\" — a separate game line from classic Vampire: The Masquerade, with its own setting and its own Storytelling System. You play ordinary mortals who stumble onto something that should not exist. Pools of d10s resolve investigation, social manoeuvring and brutal violence, while Conditions, Beats and Integrity turn fear and failure into story fuel. The book also includes The God-Machine Chronicle, a full techgnostic campaign framework. The same Storytelling system also powers separate lines, including Demon: The Descent, Werewolf: The Forsaken, Changeling: The Lost and Mummy: The Curse, each with its own setting and its own books.",
+    "description": "Chronicles of Darkness is the second-edition core rulebook of Onyx Path's \"new World of Darkness\" — a separate game line from classic Vampire: The Masquerade, with its own setting and its own Storytelling System. You play ordinary mortals who stumble onto something that should not exist. Pools of d10s resolve investigation, social manoeuvring and brutal violence, while Conditions, Beats and Integrity turn fear and failure into story fuel. The book also includes The God-Machine Chronicle, a full techgnostic campaign framework. The same Storytelling system also powers separate lines, including Demon: The Descent, Werewolf: The Forsaken, Changeling: The Lost and Mummy: The Curse, each with its own setting and its own books. Do not expect new releases: Paradox stopped approving the line in 2024 and it came to an end.",
     "setting": "Our own world, seen through a dark mirror: the same cities, the same headlines, but with something rotten under the floorboards. Ghosts, cryptids, urban legends and worse are real, and nobody is coming to explain them. Unlike the classic World of Darkness there is no grand metaplot or looming apocalypse — horror is local, personal and unexplained. Behind some of it turns the God-Machine, a vast, unknowable mechanism whose angels and hidden Infrastructure rearrange reality for purposes no human can read.",
     "vignette": "The basement door was welded shut for a reason. Behind it, gears the size of cars turn silently inside what should be a boiler room, and your missing brother is wired into them, smiling. The Storyteller calls it a breaking point. You roll Resolve + Composure — four dice, minus one for what you've seen: 2, 5, 7. No 8s. Your Integrity drops to 6, you take the Shaken Condition, and you mark a Beat as your hands begin to tremble.",
     "prep": "~60 min",
@@ -3253,10 +3325,13 @@ registerSystem("curseborne", {
   "heroImage": "https://sessionzero.games/images/heroes/curseborne.jpg",
   "playstyleTags": ["horror", "mystery", "social"],
   "settingTags": ["modern", "urban-fantasy"],
-  "gallery": [],
+  "gallery": [
+    { "src": "https://sessionzero.games/images/systems/curseborne-g1.jpg" }
+  ],
   "resources": [
     { "type": "link", "url": "https://theonyxpath.com/curseborne/", "fmt": "Web" },
-    { "type": "link", "url": "https://foundryvtt.com/packages/curseborne", "fmt": "Foundry" }
+    { "type": "link", "url": "https://foundryvtt.com/packages/curseborne", "fmt": "Foundry" },
+    { "type": "rules", "url": "https://www.drivethrurpg.com/en/product/538277", "fmt": "PDF / Print" }
   ],
   "mechanics": [
     { "icon": "dices" },
@@ -3264,46 +3339,59 @@ registerSystem("curseborne", {
     { "icon": "search" },
     { "icon": "heart-crack" }
   ],
-  "quotes": [],
+  "quotes": [
+    // VERIFIED-AT: https://cannibalhalflinggaming.com/2026/01/22/curseborne-onyx-paths-next-dark-world/
+    {
+      "text": "Curseborne takes many of the thematic beats of the World of Darkness and gives them a more personal twist",
+      "author": "Aaron Marks, Cannibal Halfling Gaming"
+    }
+  ],
   "ru": {
     "tagShort": "Городской хоррор о проклятом современном мире на Storypath Ultra",
     "tagline": "«В этом городе проклятие не редкость. Вопрос в том, кто его несёт».",
-    "description": "Curseborne — городское хоррор-фэнтези от Onyx Path. Игра построена на Storypath Ultra, универсальной версии Storypath. Проект собрал деньги на Kickstarter в 2024 году. Основная книга вышла в PDF на DriveThruRPG в конце 2025 года; на май 2026 года печатное издание ещё готовилось.",
+    "description": "Curseborne — городское хоррор-фэнтези от Onyx Path. Игра построена на Storypath Ultra, универсальной версии Storypath. Проект собрал деньги на Kickstarter в 2024 году. Основная книга продаётся на DriveThruRPG с конца 2025 года: 31 вид проклятых в пяти линиях и полные правила.",
     "setting": "Современный мир, в котором проклятия настолько обычны, что с ними научились жить. Городские улицы, разрушающиеся районы и древние тени сплетены в один узор. Игроки расследуют странные события, сталкиваются с монстрами и решают, чем заплатить за помощь.",
     "vignette": "Ночью в старом районе пропадает ребёнок, а соседи делают вид, что ничего не случилось. Вы начинаете расследование: опрашиваете людей, ищете следы и считаете, сколько ещё можно выдержать. Рассказчик просит бросить пул Storypath Ultra, и каждый успех приближает вас к правде, а каждая ошибка — к новому проклятию.",
     "prep": "~60 мин",
     "mechanics": [
       { "title": "Storypath Ultra", "text": "Пулы d10 составляются из навыка и характеристики. Игра опирается на ту же основу, что и остальные линейки Storypath, но в универсальной версии." },
       { "title": "Расследование и интриги", "text": "Значительная часть игры посвящена расследованиям и социальному напряжению, а не только бою. Сцены разговоров и поиска улик так же важны, как схватки." },
-      { "title": "Линии и происхождение", "text": "Персонажи принадлежат к различным линиям проклятых существ. Выбор линии определяет, какие силы и какие опасности их ждут." },
+      { "title": "Линии и происхождение", "text": "Пять линий проклятых: Hungry, Primal, Sorcerers, Outcasts и Dead, а внутри них Семьи. Игрок решает, что для героя важнее: Линия или Семья." },
       { "title": "Ужас в повседневности", "text": "Хоррор здесь бытовой: монстры и проклятия встроены в знакомые городские пейзажи, а цена каждого использования силы растёт." }
     ],
-    "gallery": [],
+    "gallery": [
+      { "cap": "Морг с призраком, полная версия арта с сайта Onyx Path" }
+    ],
     "resources": [
       { "name": "Curseborne на сайте Onyx Path" },
-      { "name": "Фанатская система для Foundry VTT" }
+      { "name": "Фанатская система для Foundry VTT" },
+      { "name": "Купить на DriveThruRPG" }
     ],
-    "quotes": []
+    "quotes": [
+      { "text": "Curseborne берёт многие темы World of Darkness и делает их более личными" }
+    ]
   },
   "en": {
     "tagShort": "Urban horror in a cursed modern world on Storypath Ultra",
     "tagline": "\"In this city, curses are common. The question is who carries them.\"",
-    "description": "Curseborne is Onyx Path's urban horror and fantasy game. It runs on Storypath Ultra, the generic version of the Storypath system. The project was funded on Kickstarter in 2024. The core rulebook came out in PDF on DriveThruRPG in late 2025; as of May 2026 the print edition was still in preparation.",
+    "description": "Curseborne is Onyx Path's urban horror and fantasy game. It runs on Storypath Ultra, the generic version of the Storypath system. The project was funded on Kickstarter in 2024. The core rulebook has been on sale at DriveThruRPG since late 2025, with 31 kinds of Accursed across five Lineages and the full rules.",
     "setting": "A modern world where curses are so common that people have learned to live beside them. City streets, decaying neighbourhoods and ancient shadows are woven into one pattern. Players investigate strange events, face monsters and decide what they are willing to pay for help.",
     "vignette": "A child goes missing in an old district overnight, and the neighbours act as if nothing happened. You start investigating: you question people, look for traces and count how much you can take. The Storyteller asks for a Storypath Ultra pool, and every success brings you closer to the truth while every failure brings you closer to a new curse.",
     "prep": "~60 min",
     "mechanics": [
       { "title": "Storypath Ultra", "text": "Pools of d10 are built from a skill and an attribute. The game rests on the same foundation as other Storypath lines, in its generic form." },
       { "title": "Investigation and intrigue", "text": "Much of the game is about investigation and social pressure, not only combat. Conversations and searching for clues matter as much as fights." },
-      { "title": "Lineages", "text": "Characters belong to different lineages of cursed beings. The lineage shapes which powers and which dangers they face." },
+      { "title": "Lineages", "text": "Five Lineages of the Accursed: Hungry, Primal, Sorcerers, Outcasts and Dead, with Families inside them. Each player picks which of the two matters more to their character." },
       { "title": "Everyday horror", "text": "The horror is domestic: monsters and curses are built into familiar urban landscapes, and every use of power has a rising cost." }
     ],
-    "gallery": [],
+    "gallery": [
+      { "cap": "A haunted morgue, the full art from Onyx Path's site" }
+    ],
     "resources": [
       { "name": "Curseborne at Onyx Path" },
-      { "name": "Community Foundry VTT system" }
-    ],
-    "quotes": []
+      { "name": "Community Foundry VTT system" },
+      { "name": "Buy on DriveThruRPG" }
+    ]
   }
 });
 registerSystem("cy-borg", {
@@ -14072,10 +14160,14 @@ registerSystem("scion", {
   "heroImage": "https://sessionzero.games/images/heroes/scion.jpg",
   "playstyleTags": ["narrative", "combat", "social"],
   "settingTags": ["modern", "fantasy"],
-  "gallery": [],
+  "gallery": [
+    { "src": "https://sessionzero.games/images/systems/scion-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/scion-g2.jpg" }
+  ],
   "resources": [
     { "type": "link", "url": "https://theonyxpath.com/category/worlds/scion/", "fmt": "Web" },
-    { "type": "link", "url": "https://foundryvtt.com/packages/storypath-fvtt", "fmt": "Foundry" }
+    { "type": "link", "url": "https://foundryvtt.com/packages/storypath-fvtt", "fmt": "Foundry" },
+    { "type": "rules", "url": "https://www.drivethrurpg.com/en/product/246765", "fmt": "PDF / Print" }
   ],
   "mechanics": [
     { "icon": "sparkles" },
@@ -14083,11 +14175,17 @@ registerSystem("scion", {
     { "icon": "scroll" },
     { "icon": "crown" }
   ],
-  "quotes": [],
+  "quotes": [
+    // VERIFIED-AT: https://fantasy-faction.com/2019/scion-rpg-2nd-edition-review-part-one-scion-origin
+    {
+      "text": "It presents a huge range of possibilities and a system that’s adaptable enough to make them happen.",
+      "author": "Richard Marpole, Fantasy-Faction"
+    }
+  ],
   "ru": {
     "tagShort": "Полубоги в современном мире: мифология, Деяния и Storypath",
     "tagline": "«Ваш отец — бог. Ваша задача — сделать так, чтобы о вас помнили».",
-    "description": "Scion — фэнтези о современном мире от Onyx Path. Персонажи играют смертными потомками богов, которые действуют в человеческом мире как агенты своих родителей. Вторая редакция, вышедшая в 2019 году, перешла с системы Storytelling на Storypath, а персонажи растут, совершая Деяния, и Легенда приходит напрямую из этих свершений. Пантеоны собраны из мифологий разных народов, так что в одной кампании могут встретиться древние боги и их отпрыски.",
+    "description": "Scion — фэнтези о современном мире от Onyx Path. Персонажи играют смертными потомками богов, которые действуют в человеческом мире как агенты своих родителей. Вторая редакция, вышедшая в 2019 году, перешла с системы Storytelling на Storypath, а персонажи растут, совершая Деяния, и Легенда приходит напрямую из этих свершений. Пантеоны собраны из мифологий разных народов, так что в одной кампании могут встретиться древние боги и их отпрыски. В июне 2026 года объявлена третья редакция на Storypath Ultra, даты выхода пока нет.",
     "setting": "Наш мир, в котором боги давно вмешиваются в человеческую историю, оставив после себя детей. Полубоги живут между смертными и божественным, и путь к апофеозу проходит через их собственные поступки. Игра исследует миф, семейные конфликты и цену величия.",
     "vignette": "Ваш полубог стоит перед дверью, за которой ждёт отец-бог с требованием, которое нельзя выполнить тихо. Рассказчик предлагает решить, будете ли вы выполнять приказ буквально или найдёте обходной путь. Вы бросаете пул Storypath, чтобы понять, каким Деянием эта ночь войдёт в вашу легенду.",
     "prep": "~60 мин",
@@ -14097,17 +14195,23 @@ registerSystem("scion", {
       { "title": "Родители-боги", "text": "Каждый полубог — агент своего божественного родителя. Задания, долги и конфликты с божественной семьёй двигают сюжет." },
       { "title": "Книги и Origin", "text": "Для игры нужна базовая книга Scion: Origin. Книга Hero добавляет создание персонажей, Knacks и Boons и подробности о мире." }
     ],
-    "gallery": [],
+    "gallery": [
+      { "cap": "Баннер Scion: Demigod" },
+      { "cap": "Баннер Scion: Dragon и Masks of the Mythos" }
+    ],
     "resources": [
       { "name": "Scion на сайте Onyx Path" },
-      { "name": "Система от Onyx Path для Foundry VTT" }
+      { "name": "Система от Onyx Path для Foundry VTT" },
+      { "name": "Scion: Origin на DriveThruRPG" }
     ],
-    "quotes": []
+    "quotes": [
+      { "text": "Книга открывает огромный простор для историй, а система достаточно гибкая, чтобы всё это воплотить." }
+    ]
   },
   "en": {
     "tagShort": "Demigods in the modern world: myth, Deeds and Storypath",
     "tagline": "\"Your father is a god. Your job is to make sure the world remembers you.\"",
-    "description": "Scion is Onyx Path's contemporary fantasy game. Players take on mortal descendants of gods who act as their parents' agents in the mortal world. The second edition, released in 2019, replaced the Storytelling system with Storypath, and characters grow by completing Deeds, with Legend rising directly from those accomplishments. Its pantheons are drawn from mythologies around the world, so ancient gods and their offspring can share one campaign.",
+    "description": "Scion is Onyx Path's contemporary fantasy game. Players take on mortal descendants of gods who act as their parents' agents in the mortal world. The second edition, released in 2019, replaced the Storytelling system with Storypath, and characters grow by completing Deeds, with Legend rising directly from those accomplishments. Its pantheons are drawn from mythologies around the world, so ancient gods and their offspring can share one campaign. A third edition on Storypath Ultra was announced in June 2026, with no release date yet.",
     "setting": "Our world, where gods have long meddled in human history and left children behind. Demigods live between the mortal and the divine, and the road to apotheosis runs through their own choices. The game explores myth, family conflict and the price of greatness.",
     "vignette": "Your demigod stands before a door behind which waits a god-parent with an order that cannot be carried out quietly. The Storyteller asks whether you follow the command to the letter or find a way around it. You roll a Storypath pool to see which Deed this night adds to your legend.",
     "prep": "~60 min",
@@ -14117,12 +14221,15 @@ registerSystem("scion", {
       { "title": "God-parents", "text": "Every demigod is an agent of a divine parent. Errands, debts and clashes within the divine family drive the story." },
       { "title": "Origin and Hero", "text": "Play requires the Scion: Origin core rulebook. Book Two, Hero, adds character creation, Knacks and Boons, and more detail on the World." }
     ],
-    "gallery": [],
+    "gallery": [
+      { "cap": "Scion: Demigod banner" },
+      { "cap": "Scion: Dragon and Masks of the Mythos banner" }
+    ],
     "resources": [
       { "name": "Scion at Onyx Path" },
-      { "name": "Onyx Path's Foundry VTT system" }
-    ],
-    "quotes": []
+      { "name": "Onyx Path's Foundry VTT system" },
+      { "name": "Scion: Origin on DriveThruRPG" }
+    ]
   }
 });
 registerSystem("scum-and-villainy", {
@@ -17065,7 +17172,8 @@ registerSystem("the-world-below", {
   ],
   "resources": [
     { "type": "link", "url": "https://theonyxpath.com/now-available-the-world-below/", "fmt": "Web" },
-    { "type": "link", "url": "https://www.backerkit.com/c/projects/onyx-path/the-world-below", "fmt": "Web" }
+    { "type": "link", "url": "https://www.backerkit.com/c/projects/onyx-path/the-world-below", "fmt": "Web" },
+    { "type": "rules", "url": "https://www.drivethrurpg.com/en/product/500655", "fmt": "PDF / Print" }
   ],
   "mechanics": [
     { "icon": "dices" },
@@ -17093,7 +17201,8 @@ registerSystem("the-world-below", {
     ],
     "resources": [
       { "name": "Анонс выхода на сайте Onyx Path" },
-      { "name": "Страница кампании на BackerKit" }
+      { "name": "Страница кампании на BackerKit" },
+      { "name": "Купить на DriveThruRPG" }
     ]
   },
   "en": {
@@ -17115,7 +17224,8 @@ registerSystem("the-world-below", {
     ],
     "resources": [
       { "name": "Release announcement at Onyx Path" },
-      { "name": "Campaign page on BackerKit" }
+      { "name": "Campaign page on BackerKit" },
+      { "name": "Buy on DriveThruRPG" }
     ]
   }
 });
@@ -17310,7 +17420,10 @@ registerSystem("they-came-from", {
     { "src": "https://sessionzero.games/images/systems/they-came-from-g3.jpg" }
   ],
   "resources": [
-    { "type": "link", "url": "https://theonyxpath.com/category/worlds/they-came-from/", "fmt": "Web" }
+    { "type": "link", "url": "https://theonyxpath.com/category/worlds/they-came-from/", "fmt": "Web" },
+    { "type": "rules", "url": "https://www.drivethrurpg.com/en/product/300642", "fmt": "PDF / Print" },
+    { "type": "rules", "url": "https://www.drivethrurpg.com/en/product/371808", "fmt": "PDF / Print" },
+    { "type": "rules", "url": "https://www.drivethrurpg.com/en/product/508710", "fmt": "PDF / Print" }
   ],
   "mechanics": [
     { "icon": "dices" },
@@ -17344,7 +17457,10 @@ registerSystem("they-came-from", {
       { "cap": "Безумный учёный из They Came from Beyond the Grave!, художник Кен Мейер-младший" }
     ],
     "resources": [
-      { "name": "They Came From… на сайте Onyx Path" }
+      { "name": "They Came From… на сайте Onyx Path" },
+      { "name": "Beneath the Sea! на DriveThruRPG" },
+      { "name": "Beyond the Grave! на DriveThruRPG" },
+      { "name": "RPG Anthology на DriveThruRPG" }
     ],
     "quotes": [
       { "text": "They Came from Beneath the Sea! подарила мне чувство свободы и веселья." }
@@ -17369,7 +17485,10 @@ registerSystem("they-came-from", {
       { "cap": "A mad scientist from They Came from Beyond the Grave!, art by Ken Meyer Jr." }
     ],
     "resources": [
-      { "name": "They Came From… at Onyx Path" }
+      { "name": "They Came From… at Onyx Path" },
+      { "name": "Beneath the Sea! on DriveThruRPG" },
+      { "name": "Beyond the Grave! on DriveThruRPG" },
+      { "name": "RPG Anthology on DriveThruRPG" }
     ]
   }
 });
@@ -18171,9 +18290,14 @@ registerSystem("trinity-continuum", {
   "heroImage": "https://sessionzero.games/images/heroes/trinity-continuum.jpg",
   "playstyleTags": ["narrative", "combat", "explore"],
   "settingTags": ["space", "weird"],
-  "gallery": [],
+  "gallery": [
+    { "src": "https://sessionzero.games/images/systems/trinity-continuum-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/trinity-continuum-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/trinity-continuum-g3.jpg" }
+  ],
   "resources": [
-    { "type": "link", "url": "https://theonyxpath.com/category/worlds/trinitycontinuum/", "fmt": "Web" }
+    { "type": "link", "url": "https://theonyxpath.com/category/worlds/trinitycontinuum/", "fmt": "Web" },
+    { "type": "rules", "url": "https://www.drivethrurpg.com/en/product/260788", "fmt": "PDF / Print" }
   ],
   "mechanics": [
     { "icon": "dices" },
@@ -18181,44 +18305,61 @@ registerSystem("trinity-continuum", {
     { "icon": "users" },
     { "icon": "layers" }
   ],
-  "quotes": [],
+  "quotes": [
+    // VERIFIED-AT: https://www.enworld.org/threads/trinity-continuum-reboots-aberrant-for-the-better.680693/
+    {
+      "text": "Trinity Continuum: Aberrant is a great game for fans of modern action, deconstructionist comic book stories and sprawling multi-game chronicles.",
+      "author": "Rob Wieland, EN World"
+    }
+  ],
   "ru": {
     "tagShort": "Психические герои в будущем после войны: линейка на Storypath",
     "tagline": "«Будущее не досталось никому даром. Его придётся отстоять».",
-    "description": "Trinity Continuum — линейка Onyx Path, построенная на движке Storypath. Это продолжение классической Trinity от White Wolf: люди с психическими способностями служат разным Орденам, а мир пытается оправиться от большой войны. Линейка объединяет несколько игр: Æon — научная фантастика о будущей Земле, Aberrant — игра о сверхлюдях, Anima — киберпанк с элементами LitRPG. Всё держится на базовой книге Trinity Continuum, на которую опираются остальные части.",
-    "setting": "Далёкое будущее Земли после опустошительной войны. Психически одарённые люди ищут место в мире, где власть делят Ордена с собственными целями. Сеттинг намеренно большой: здесь есть и политика, и исследование неизвестного, и личная цена за каждую способность.",
+    "description": "Trinity Continuum — линейка Onyx Path, построенная на движке Storypath. Это продолжение классической Trinity от White Wolf. Линейка объединяет игры об одном мире в разные эпохи: Æon — космические псионики далёкого будущего, Aberrant — сверхлюди, Adventure! — пульпа, Aether — викторианская эпоха, Anima — киберпанк с элементами LitRPG. Всё держится на базовой книге Trinity Continuum, на которую опираются остальные части.",
+    "setting": "Одна история, рассказанная через эпохи: от пульпы и викторианских чудес до времени сверхлюдей и будущего после опустошительной войны. В Æon психически одарённые люди ищут место в мире, где власть делят Ордена с собственными целями. Героев можно провести через всю хронику, от игры к игре.",
     "vignette": "Ваш персонаж входит в зал переговоров Ордена и чувствует, как собеседник пытается прочесть его мысли. Вы решаете, что ответить: открыть разум или заслониться. Рассказчик просит бросить пул Storypath, и от результата зависит, останется ли сделка тайной или выйдет наружу.",
     "prep": "~60 мин",
     "mechanics": [
       { "title": "Storypath", "text": "Систему Storypath составляют пулы d10: вы бросаете кубики по сочетанию характеристики и навыка, а результат описывает сцену, а не только итог боя." },
-      { "title": "Психические способности", "text": "Психические силы — ядро мира игры. Они открывают возможности и создают риски, поэтому использование способностей требует выбора и последствий." },
-      { "title": "Ордена", "text": "Персонажи состоят в Орденах или связаны с ними. Лояльность и конфликты между Орденами дают сюжетные крючки и напряжение между игроками." },
-      { "title": "Общее ядро линейки", "text": "Базовая книга Trinity Continuum служит основой для Æon, Aberrant и Anima. Одна система позволяет играть в разные сеттинги одним набором правил." }
+      { "title": "Психические способности", "text": "Психические силы — ядро Æon, а в других играх их место занимают силы новых людей и чудеса эпохи. Они открывают возможности и создают риски, поэтому их использование требует выбора." },
+      { "title": "Ордена", "text": "В Æon персонажи состоят в Орденах или связаны с ними. Лояльность и конфликты между Орденами дают сюжетные крючки и напряжение между игроками." },
+      { "title": "Общее ядро линейки", "text": "Базовая книга Trinity Continuum служит основой для остальных игр линейки. Одна система позволяет играть в разные сеттинги одним набором правил." }
     ],
-    "gallery": [],
+    "gallery": [
+      { "cap": "Баннер Trinity Continuum: Aether" },
+      { "cap": "Баннер Trinity Continuum: Adventure!" },
+      { "cap": "Баннер Trinity Continuum: Aberrant" }
+    ],
     "resources": [
-      { "name": "Trinity Continuum на сайте Onyx Path" }
+      { "name": "Trinity Continuum на сайте Onyx Path" },
+      { "name": "Базовая книга на DriveThruRPG" }
     ],
-    "quotes": []
+    "quotes": [
+      { "text": "Trinity Continuum: Aberrant — отличная игра для любителей современного экшена, комиксов-деконструкций и больших хроник на несколько игр." }
+    ]
   },
   "en": {
     "tagShort": "Psionic heroes in a post-war future on the Storypath engine",
     "tagline": "\"The future was never handed out. Someone has to hold it.\"",
-    "description": "Trinity Continuum is Onyx Path's line built on the Storypath engine. It continues the classic Trinity from White Wolf: people with psionic powers serve rival Orders while a world tries to recover from a great war. The line covers several games under one roof: Æon, a science-fiction game about a future Earth; Aberrant, a game of superhumans; and Anima, a cyberpunk game blending LitRPG. Everything rests on the Trinity Continuum Core rulebook, which the other titles spin off from.",
-    "setting": "A distant future Earth after a devastating war. Psionically gifted people look for their place in a world where Orders divide power among their own agendas. The setting is deliberately large: it holds politics, exploration of the unknown, and a personal price for every ability.",
+    "description": "Trinity Continuum is Onyx Path's line built on the Storypath engine. It continues the classic Trinity from White Wolf. The line covers games about one world in different eras: Æon, the space psychics of the far future; Aberrant, superhumans; Adventure!, pulp heroes; Aether, the Victorian era; and Anima, a cyberpunk game blending LitRPG. Everything rests on the Trinity Continuum Core rulebook, which the other titles spin off from.",
+    "setting": "One story told across eras, from pulp and Victorian wonders through the age of superhumans to a future recovering from a devastating war. In Æon, psionically gifted people look for their place in a world where Orders divide power among their own agendas. Characters can be carried through the whole chronicle, from one game to the next.",
     "vignette": "Your character walks into an Order's negotiation room and feels the other side probing for her thoughts. You decide whether to open your mind or shield it. The Storyteller asks for a Storypath pool, and the result decides whether the deal stays secret or comes out into the open.",
     "prep": "~60 min",
     "mechanics": [
       { "title": "Storypath", "text": "Storypath runs on d10 pools: you roll dice based on an attribute and a skill, and the result describes the scene, not only the outcome of a fight." },
-      { "title": "Psionic powers", "text": "Psionic abilities sit at the core of the setting. They open options and create risk, so using a power always involves a choice and its consequences." },
-      { "title": "Orders", "text": "Characters belong to Orders or are tied to them. Loyalty and conflict between Orders supply plot hooks and tension between players." },
-      { "title": "A shared core", "text": "The Trinity Continuum Core rulebook is the foundation for Æon, Aberrant and Anima, so one set of rules covers several settings." }
+      { "title": "Psionic powers", "text": "Psionic abilities sit at the core of Æon, while other games swap in superhuman powers and the wonders of their era. They open options and create risk, so using them always involves a choice." },
+      { "title": "Orders", "text": "In Æon, characters belong to Orders or are tied to them. Loyalty and conflict between Orders supply plot hooks and tension between players." },
+      { "title": "A shared core", "text": "The Trinity Continuum Core rulebook is the foundation for the other games in the line, so one set of rules covers several settings." }
     ],
-    "gallery": [],
+    "gallery": [
+      { "cap": "Trinity Continuum: Aether banner" },
+      { "cap": "Trinity Continuum: Adventure! banner" },
+      { "cap": "Trinity Continuum: Aberrant banner" }
+    ],
     "resources": [
-      { "name": "Trinity Continuum at Onyx Path" }
-    ],
-    "quotes": []
+      { "name": "Trinity Continuum at Onyx Path" },
+      { "name": "Core rulebook on DriveThruRPG" }
+    ]
   }
 });
 registerSystem("troika", {

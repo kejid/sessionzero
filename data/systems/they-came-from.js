@@ -19,7 +19,10 @@ registerSystem("they-came-from", {
     { "src": "https://sessionzero.games/images/systems/they-came-from-g3.jpg" }
   ],
   "resources": [
-    { "type": "link", "url": "https://theonyxpath.com/category/worlds/they-came-from/", "fmt": "Web" }
+    { "type": "link", "url": "https://theonyxpath.com/category/worlds/they-came-from/", "fmt": "Web" },
+    { "type": "rules", "url": "https://www.drivethrurpg.com/en/product/300642", "fmt": "PDF / Print" },
+    { "type": "rules", "url": "https://www.drivethrurpg.com/en/product/371808", "fmt": "PDF / Print" },
+    { "type": "rules", "url": "https://www.drivethrurpg.com/en/product/508710", "fmt": "PDF / Print" }
   ],
   "mechanics": [
     { "icon": "dices" },
@@ -53,7 +56,10 @@ registerSystem("they-came-from", {
       { "cap": "Безумный учёный из They Came from Beyond the Grave!, художник Кен Мейер-младший" }
     ],
     "resources": [
-      { "name": "They Came From… на сайте Onyx Path" }
+      { "name": "They Came From… на сайте Onyx Path" },
+      { "name": "Beneath the Sea! на DriveThruRPG" },
+      { "name": "Beyond the Grave! на DriveThruRPG" },
+      { "name": "RPG Anthology на DriveThruRPG" }
     ],
     "quotes": [
       { "text": "They Came from Beneath the Sea! подарила мне чувство свободы и веселья." }
@@ -78,7 +84,10 @@ registerSystem("they-came-from", {
       { "cap": "A mad scientist from They Came from Beyond the Grave!, art by Ken Meyer Jr." }
     ],
     "resources": [
-      { "name": "They Came From… at Onyx Path" }
+      { "name": "They Came From… at Onyx Path" },
+      { "name": "Beneath the Sea! on DriveThruRPG" },
+      { "name": "Beyond the Grave! on DriveThruRPG" },
+      { "name": "RPG Anthology on DriveThruRPG" }
     ]
   }
 });
