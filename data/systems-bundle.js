@@ -3249,13 +3249,14 @@ registerSystem("curseborne", {
   "complexity": 3,
   "free": false,
   "edition": "Core Rulebook",
-  "foundryStatus": "None",
+  "foundryStatus": "Community",
   "heroImage": "https://sessionzero.games/images/heroes/curseborne.jpg",
   "playstyleTags": ["horror", "mystery", "social"],
   "settingTags": ["modern", "urban-fantasy"],
   "gallery": [],
   "resources": [
-    { "type": "link", "url": "https://theonyxpath.com/curseborne/", "fmt": "Web" }
+    { "type": "link", "url": "https://theonyxpath.com/curseborne/", "fmt": "Web" },
+    { "type": "link", "url": "https://foundryvtt.com/packages/curseborne", "fmt": "Foundry" }
   ],
   "mechanics": [
     { "icon": "dices" },
@@ -3279,7 +3280,8 @@ registerSystem("curseborne", {
     ],
     "gallery": [],
     "resources": [
-      { "name": "Curseborne на сайте Onyx Path" }
+      { "name": "Curseborne на сайте Onyx Path" },
+      { "name": "Фанатская система для Foundry VTT" }
     ],
     "quotes": []
   },
@@ -3298,7 +3300,8 @@ registerSystem("curseborne", {
     ],
     "gallery": [],
     "resources": [
-      { "name": "Curseborne at Onyx Path" }
+      { "name": "Curseborne at Onyx Path" },
+      { "name": "Community Foundry VTT system" }
     ],
     "quotes": []
   }
@@ -14065,13 +14068,14 @@ registerSystem("scion", {
   "complexity": 3,
   "free": false,
   "edition": "2nd Edition",
-  "foundryStatus": "None",
+  "foundryStatus": "Official",
   "heroImage": "https://sessionzero.games/images/heroes/scion.jpg",
-  "playstyleTags": ["narrative", "action", "social"],
+  "playstyleTags": ["narrative", "combat", "social"],
   "settingTags": ["modern", "fantasy"],
   "gallery": [],
   "resources": [
-    { "type": "link", "url": "https://theonyxpath.com/category/worlds/scion/", "fmt": "Web" }
+    { "type": "link", "url": "https://theonyxpath.com/category/worlds/scion/", "fmt": "Web" },
+    { "type": "link", "url": "https://foundryvtt.com/packages/storypath-fvtt", "fmt": "Foundry" }
   ],
   "mechanics": [
     { "icon": "sparkles" },
@@ -14095,7 +14099,8 @@ registerSystem("scion", {
     ],
     "gallery": [],
     "resources": [
-      { "name": "Scion на сайте Onyx Path" }
+      { "name": "Scion на сайте Onyx Path" },
+      { "name": "Система от Onyx Path для Foundry VTT" }
     ],
     "quotes": []
   },
@@ -14114,7 +14119,8 @@ registerSystem("scion", {
     ],
     "gallery": [],
     "resources": [
-      { "name": "Scion at Onyx Path" }
+      { "name": "Scion at Onyx Path" },
+      { "name": "Onyx Path's Foundry VTT system" }
     ],
     "quotes": []
   }
@@ -17038,6 +17044,81 @@ registerSystem("the-quiet-year", {
     ]
   }
 });
+registerSystem("the-world-below", {
+  "groups": {
+    "default": { "key": "narrative", "order": 72 },
+    "family": { "key": "standalone", "order": 75 },
+    "genre": { "key": "dark-fantasy", "order": 29 }
+  },
+  "name": "The World Below",
+  "publisher": "Onyx Path Publishing",
+  "dice": "d10 pool",
+  "players": "3–5",
+  "complexity": 3,
+  "foundryStatus": "None",
+  "heroImage": "https://sessionzero.games/images/heroes/the-world-below.jpg",
+  "playstyleTags": ["explore", "survival", "combat"],
+  "settingTags": ["fantasy", "postapoc"],
+  "gallery": [
+    { "src": "https://sessionzero.games/images/systems/the-world-below-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/the-world-below-g2.jpg" }
+  ],
+  "resources": [
+    { "type": "link", "url": "https://theonyxpath.com/now-available-the-world-below/", "fmt": "Web" },
+    { "type": "link", "url": "https://www.backerkit.com/c/projects/onyx-path/the-world-below", "fmt": "Web" }
+  ],
+  "mechanics": [
+    { "icon": "dices" },
+    { "icon": "pickaxe" },
+    { "icon": "sparkles" },
+    { "icon": "users" }
+  ],
+  "quotes": [],
+  "ru": {
+    "tagShort": "Выживание и подземелья на целые поколения, на Storypath Ultra",
+    "tagline": "«Нижний Мир даёт, но только достойным».",
+    "description": "The World Below — фэнтези о выживании от Onyx Path, первая игра на Storypath Ultra и первая книга цикла Earthbane. Мир наверху разрушен, и уцелевшие бежали под землю, где надо копать, картировать, строить и обороняться. Здесь можно вести и скромный поход по пещере, и экспедицию через весь Нижний Мир. Погибших и ушедших на покой героев сменяют их потомки, так что кампания становится историей рода.",
+    "setting": "Тьма пещер, хищники в ней и люди, одетые в панцири насекомых и шёлк. Гильдии торгуют знанием о безопасных местах и пище. В самой глубине лежит Колодец: источник Каоса, который даёт свет, чистую воду и пищу, а охраняют его Личи Колодца. Кто прорвётся к этой силе, решает, оставить её себе или разделить с другими.",
+    "vignette": "Ваш отряд картирует новый тоннель, и лампы начинают гаснуть: идёт буря Каоса. Вы бросаете пул d10, и каждая 8 и выше — успех. Успехов хватает, чтобы вывести всех, но часть карты потеряна. Вернувшись домой, вы проводите фазу Калм: получаете опыт, укрепляете поселение и растите семью. Если герой однажды не вернётся, дальше пойдёт его потомок.",
+    "prep": "~60 мин",
+    "mechanics": [
+      { "title": "Storypath Ultra", "text": "Пулы d10 из Атрибута и Навыка, каждая 8 и выше — успех. Осложнения и усиления, а также отдельные правила для приключений, расследований и влияния на других." },
+      { "title": "Копать и картировать", "text": "Цикл игры — вылазка и возвращение. В фазе Калм герои получают опыт, развивают своё жилище и семью, а снаряжение делается из того, что нашлось под землёй." },
+      { "title": "Каос и колдовство", "text": "Каос — кровь Нижнего Мира. Герои черпают его через Тезисы, Синтезы и колдовство, а непредсказуемая отдача Каоса всегда остаётся риском." },
+      { "title": "Рассветы, Диалектики, Призвания", "text": "Персонаж собирается из трёх Путей, которые дают навыки и таланты. Часть вариантов взята из классического фэнтези, часть есть только здесь. После смерти героя игру продолжает его потомок." }
+    ],
+    "gallery": [
+      { "cap": "Обложка предварительного издания (ashcan)" },
+      { "cap": "Баннер краудфандинга с обложкой основной книги" }
+    ],
+    "resources": [
+      { "name": "Анонс выхода на сайте Onyx Path" },
+      { "name": "Страница кампании на BackerKit" }
+    ]
+  },
+  "en": {
+    "tagShort": "Multi-generation survival and delving on Storypath Ultra",
+    "tagline": "\"The World Below provides, but only to the worthy.\"",
+    "description": "The World Below is Onyx Path's fantasy survival game, the first built on Storypath Ultra and the first book of the Earthbane Cycle. The world above is ruined and the survivors have fled underground, where they must dig, map, build and defend. It can run as a modest cave crawl or an expedition across the whole World Below. Heroes who die or retire are replaced by their descendants, so a campaign becomes a family history.",
+    "setting": "Pitch-dark caverns, the predators in them, and people dressed in insect carapace and silk. Guilds trade in knowledge of safe spaces and food. At the lowest mapped point lies the Well, a source of Kaos that gives light, clean water and food, guarded by the Well Liches. Whoever breaks through to that power must decide whether to keep it or share it.",
+    "vignette": "Your party is mapping a new tunnel when the lamps start to fail: a Kaos storm is coming. You roll a pool of d10s, and every 8 or higher is a success. There are enough to get everyone out, but part of the map is lost. Back home you play the Kalm phase: you take Experience, strengthen the settlement and raise your family. If a hero fails to return one day, a descendant goes down next.",
+    "prep": "~60 min",
+    "mechanics": [
+      { "title": "Storypath Ultra", "text": "Pools of d10s from an Attribute and a Skill, with every 8 or higher a success. Complications and Enhancements, plus dedicated rules for action, investigation and influence." },
+      { "title": "Dig and map", "text": "Play cycles between the delve and the return. In the Kalm phase heroes take Experience and grow their habitats and families, and gear is made from what the deep provides." },
+      { "title": "Kaos and sorcery", "text": "Kaos is the lifeblood of the World Below. Heroes draw on it through Theses, Syntheses and Sorceries, and unpredictable Kaotic Retaliations are always a risk." },
+      { "title": "Dawns, Dialectics, Callings", "text": "A character is built from three Paths that grant Skills and talents. Some options come from the traditional fantasy mold, others exist only here. When a hero dies, a descendant carries on." }
+    ],
+    "gallery": [
+      { "cap": "Cover of the ashcan preview edition" },
+      { "cap": "Crowdfunding banner showing the core book cover" }
+    ],
+    "resources": [
+      { "name": "Release announcement at Onyx Path" },
+      { "name": "Campaign page on BackerKit" }
+    ]
+  }
+});
 registerSystem("the-wretched", {
   "groups": {
     "default": { "key": "narrative", "order": 18 },
@@ -17205,6 +17286,90 @@ registerSystem("the-wretched", {
       {
         "name": "DriveThruRPG"
       }
+    ]
+  }
+});
+registerSystem("they-came-from", {
+  "groups": {
+    "default": { "key": "narrative", "order": 71 },
+    "family": { "key": "standalone", "order": 74 },
+    "genre": { "key": "narrative-weird", "order": 15 }
+  },
+  "name": "They Came From…!",
+  "publisher": "Onyx Path Publishing",
+  "dice": "d10 pool",
+  "players": "3–5",
+  "complexity": 3,
+  "foundryStatus": "None",
+  "heroImage": "https://sessionzero.games/images/heroes/they-came-from.jpg",
+  "playstyleTags": ["horror", "combat", "mystery"],
+  "settingTags": ["historical", "weird"],
+  "gallery": [
+    { "src": "https://sessionzero.games/images/systems/they-came-from-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/they-came-from-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/they-came-from-g3.jpg" }
+  ],
+  "resources": [
+    { "type": "link", "url": "https://theonyxpath.com/category/worlds/they-came-from/", "fmt": "Web" }
+  ],
+  "mechanics": [
+    { "icon": "dices" },
+    { "icon": "clapperboard" },
+    { "icon": "heart-pulse" },
+    { "icon": "drama" }
+  ],
+  "quotes": [
+    // VERIFIED-AT: https://fantasy-faction.com/2020/they-came-from-beneath-the-sea-role-playing-game-review
+    {
+      "text": "They Came from Beneath the Sea! gave me a sense of freedom and fun.",
+      "author": "Richard Marpole, Fantasy-Faction"
+    }
+  ],
+  "ru": {
+    "tagShort": "Комедийный хоррор по законам старых B-movie на Storypath",
+    "tagline": "«Лаборатория в огне, омар размером с автобус, а вы ещё не сказали свою коронную фразу».",
+    "description": "They Came From…! — серия игр Onyx Path о дешёвом жанровом кино, придуманная Мэтью Докинзом. Первая книга, They Came from Beneath the Sea!, берёт морских чудовищ 1950-х, а They Came from Beyond the Grave! — хоррор 1970-х. Герои живут в настоящем вторжении, но игроки знают, что снимается фильм, и играют по его законам: шаткие декорации, резиновые костюмы, нелепые реплики. В Beneath the Sea! включены полные правила Storypath, так что играть можно сразу по ней.",
+    "setting": "Захолустное побережье, где крабы-сектанты молятся статуе, агенты в тёмных очках допрашивают рыбаков, а учёный чинит луч смерти гаечным ключом. Угроза настоящая, но вокруг неё всё держится на картоне и энтузиазме. Каждая книга серии переносит ту же идею в другой жанр и эпоху.",
+    "vignette": "Гигантская клешня пробивает стену закусочной. Ваш Учёный уже ранен, но в этой игре раны только добавляют кубов, и вы собираете пул побольше. Бросок d10: каждая 8, 9 или 10 — успех, и успехов выходит больше, чем нужно. На лишние вы покупаете трюк, и самодельный луч срабатывает в последний момент, а вы успеваете выкрикнуть что-нибудь очень глупое про науку.",
+    "prep": "~30 мин",
+    "mechanics": [
+      { "title": "Пулы d10", "text": "Атрибут плюс Навык: бросьте столько d10 и считайте каждую 8, 9 и 10 успехом. Система умеренно хрустящая, но быстро становится понятной тем, кто играл в D&D 5E." },
+      { "title": "Действие, расследование, драма", "text": "Игра делит сцены на три вида: Action!, Investigation! и Drama!. Лишние успехи тратятся на кинематографичные трюки, и у каждого архетипа есть свои." },
+      { "title": "Спираль смерти наоборот", "text": "В Beneath the Sea! чем больше ран у героя, тем больше бонусных кубов он бросает — вплоть до смертельного удара и драматичной сцены гибели. Как в боевиках, герой только злее." },
+      { "title": "Архетипы и реплики", "text": "Персонаж — это роль из фильма: Учёный, Выживший, Простой Парень, агент в штатском. Отдельная колода Quip & Cinematic подкидывает за столом коронные фразы и киноприёмы." }
+    ],
+    "gallery": [
+      { "cap": "Обложка They Came from Beneath the Sea!" },
+      { "cap": "Схватка с гигантским омаром, иллюстрация из книги" },
+      { "cap": "Безумный учёный из They Came from Beyond the Grave!, художник Кен Мейер-младший" }
+    ],
+    "resources": [
+      { "name": "They Came From… на сайте Onyx Path" }
+    ],
+    "quotes": [
+      { "text": "They Came from Beneath the Sea! подарила мне чувство свободы и веселья." }
+    ]
+  },
+  "en": {
+    "tagShort": "Comedy horror by the rules of old B-movies, on Storypath",
+    "tagline": "\"The lab is on fire, the lobster is the size of a bus, and you haven't said your catchphrase yet.\"",
+    "description": "They Came From…! is Onyx Path's series of games about cheap genre cinema, conceived by Matthew Dawkins. The first book, They Came from Beneath the Sea!, takes on the sea monsters of the 1950s, and They Came from Beyond the Grave! covers 1970s horror. The heroes are living through a real invasion, but the players know they're in a film and play by its rules: wobbly sets, rubber costumes, ridiculous lines. Beneath the Sea! includes the full Storypath rules, so you can play straight from it.",
+    "setting": "A backwater coast where crab cultists pray to a statue, agents in dark glasses grill the fishermen and a scientist fixes a death ray with a wrench. The threat is real, but everything around it runs on cardboard and enthusiasm. Each book in the series moves the same idea to another genre and era.",
+    "vignette": "A giant claw punches through the diner wall. Your Scientist is already hurt, but in this game wounds only add dice, so you build a bigger pool. You roll d10s: every 8, 9 or 10 is a success, and you get more than you need. You spend the extras on a Stunt, the homemade ray fires at the last moment, and you have just enough time to shout something very stupid about science.",
+    "prep": "~30 min",
+    "mechanics": [
+      { "title": "d10 pools", "text": "Attribute plus Skill: roll that many d10s and count every 8, 9 and 10 as a success. The system is moderately crunchy, but anyone comfortable with D&D 5E will pick it up." },
+      { "title": "Action, investigation, drama", "text": "The game splits scenes into three kinds: Action!, Investigation! and Drama!. Extra successes buy cinematic Stunts, and each Archetype has its own." },
+      { "title": "A reversed death spiral", "text": "In Beneath the Sea! the more injuries a hero takes, the more bonus dice they roll, right up to the fatal blow and a dramatic death scene. As in action films, getting hurt only makes them angrier." },
+      { "title": "Archetypes and quips", "text": "A character is a role from the film: Scientist, Survivor, Everyman, G-Man. A separate Quip & Cinematic deck feeds the table catchphrases and film tricks." }
+    ],
+    "gallery": [
+      { "cap": "Cover of They Came from Beneath the Sea!" },
+      { "cap": "A fight with a giant lobster, art from the book" },
+      { "cap": "A mad scientist from They Came from Beyond the Grave!, art by Ken Meyer Jr." }
+    ],
+    "resources": [
+      { "name": "They Came From… at Onyx Path" }
     ]
   }
 });
@@ -17997,9 +18162,9 @@ registerSystem("trinity-continuum", {
   "complexity": 3,
   "free": false,
   "edition": "Core Rulebook",
-  "foundryStatus": "None",
+  "foundryStatus": "Community",
   "heroImage": "https://sessionzero.games/images/heroes/trinity-continuum.jpg",
-  "playstyleTags": ["narrative", "action", "explore"],
+  "playstyleTags": ["narrative", "combat", "explore"],
   "settingTags": ["space", "weird"],
   "gallery": [],
   "resources": [

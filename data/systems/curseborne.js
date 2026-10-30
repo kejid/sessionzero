@@ -11,13 +11,14 @@ registerSystem("curseborne", {
   "complexity": 3,
   "free": false,
   "edition": "Core Rulebook",
-  "foundryStatus": "None",
+  "foundryStatus": "Community",
   "heroImage": "https://sessionzero.games/images/heroes/curseborne.jpg",
   "playstyleTags": ["horror", "mystery", "social"],
   "settingTags": ["modern", "urban-fantasy"],
   "gallery": [],
   "resources": [
-    { "type": "link", "url": "https://theonyxpath.com/curseborne/", "fmt": "Web" }
+    { "type": "link", "url": "https://theonyxpath.com/curseborne/", "fmt": "Web" },
+    { "type": "link", "url": "https://foundryvtt.com/packages/curseborne", "fmt": "Foundry" }
   ],
   "mechanics": [
     { "icon": "dices" },
@@ -41,7 +42,8 @@ registerSystem("curseborne", {
     ],
     "gallery": [],
     "resources": [
-      { "name": "Curseborne на сайте Onyx Path" }
+      { "name": "Curseborne на сайте Onyx Path" },
+      { "name": "Фанатская система для Foundry VTT" }
     ],
     "quotes": []
   },
@@ -60,7 +62,8 @@ registerSystem("curseborne", {
     ],
     "gallery": [],
     "resources": [
-      { "name": "Curseborne at Onyx Path" }
+      { "name": "Curseborne at Onyx Path" },
+      { "name": "Community Foundry VTT system" }
     ],
     "quotes": []
   }

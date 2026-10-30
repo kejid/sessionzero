@@ -11,9 +11,9 @@ registerSystem("trinity-continuum", {
   "complexity": 3,
   "free": false,
   "edition": "Core Rulebook",
-  "foundryStatus": "None",
+  "foundryStatus": "Community",
   "heroImage": "https://sessionzero.games/images/heroes/trinity-continuum.jpg",
-  "playstyleTags": ["narrative", "action", "explore"],
+  "playstyleTags": ["narrative", "combat", "explore"],
   "settingTags": ["space", "weird"],
   "gallery": [],
   "resources": [

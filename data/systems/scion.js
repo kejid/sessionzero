@@ -11,13 +11,14 @@ registerSystem("scion", {
   "complexity": 3,
   "free": false,
   "edition": "2nd Edition",
-  "foundryStatus": "None",
+  "foundryStatus": "Official",
   "heroImage": "https://sessionzero.games/images/heroes/scion.jpg",
-  "playstyleTags": ["narrative", "action", "social"],
+  "playstyleTags": ["narrative", "combat", "social"],
   "settingTags": ["modern", "fantasy"],
   "gallery": [],
   "resources": [
-    { "type": "link", "url": "https://theonyxpath.com/category/worlds/scion/", "fmt": "Web" }
+    { "type": "link", "url": "https://theonyxpath.com/category/worlds/scion/", "fmt": "Web" },
+    { "type": "link", "url": "https://foundryvtt.com/packages/storypath-fvtt", "fmt": "Foundry" }
   ],
   "mechanics": [
     { "icon": "sparkles" },
@@ -41,7 +42,8 @@ registerSystem("scion", {
     ],
     "gallery": [],
     "resources": [
-      { "name": "Scion на сайте Onyx Path" }
+      { "name": "Scion на сайте Onyx Path" },
+      { "name": "Система от Onyx Path для Foundry VTT" }
     ],
     "quotes": []
   },
@@ -60,7 +62,8 @@ registerSystem("scion", {
     ],
     "gallery": [],
     "resources": [
-      { "name": "Scion at Onyx Path" }
+      { "name": "Scion at Onyx Path" },
+      { "name": "Onyx Path's Foundry VTT system" }
     ],
     "quotes": []
   }
