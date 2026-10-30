@@ -3248,7 +3248,7 @@ registerSystem("curseborne", {
   "players": "3–5",
   "complexity": 3,
   "free": false,
-  "edition": "Core Rulebook (not yet on sale)",
+  "edition": "Core Rulebook",
   "foundryStatus": "None",
   "heroImage": "https://sessionzero.games/images/heroes/curseborne.jpg",
   "playstyleTags": ["horror", "mystery", "social"],
@@ -3267,8 +3267,8 @@ registerSystem("curseborne", {
   "ru": {
     "tagShort": "Городской хоррор о проклятом современном мире на Storypath Ultra",
     "tagline": "«В этом городе проклятие не редкость. Вопрос в том, кто его несёт».",
-    "description": "Curseborne — городское хоррор-фэнтези от Onyx Path. Игра построена на Storypath Ultra, универсальной версии Storypath. Проект собрал деньги на Kickstarter в 2024 году. По данным Onyx Path на май 2026 года, основную книгу ещё готовили к печати и в продаже её не было, поэтому ссылки на покупку пока нет.",
-    "setting": "Современный мир, в котором проклятия настолько обычны, что их научились жить с ними. Городские улицы, разрушающиеся районы и древние тени сплетены в один узор. Игроки расследуют странные события, сталкиваются с монстрами и решают, чем заплатить за помощь.",
+    "description": "Curseborne — городское хоррор-фэнтези от Onyx Path. Игра построена на Storypath Ultra, универсальной версии Storypath. Проект собрал деньги на Kickstarter в 2024 году. Основная книга вышла в PDF на DriveThruRPG в конце 2025 года; на май 2026 года печатное издание ещё готовилось.",
+    "setting": "Современный мир, в котором проклятия настолько обычны, что с ними научились жить. Городские улицы, разрушающиеся районы и древние тени сплетены в один узор. Игроки расследуют странные события, сталкиваются с монстрами и решают, чем заплатить за помощь.",
     "vignette": "Ночью в старом районе пропадает ребёнок, а соседи делают вид, что ничего не случилось. Вы начинаете расследование: опрашиваете людей, ищете следы и считаете, сколько ещё можно выдержать. Рассказчик просит бросить пул Storypath Ultra, и каждый успех приближает вас к правде, а каждая ошибка — к новому проклятию.",
     "prep": "~60 мин",
     "mechanics": [
@@ -3286,7 +3286,7 @@ registerSystem("curseborne", {
   "en": {
     "tagShort": "Urban horror in a cursed modern world on Storypath Ultra",
     "tagline": "\"In this city, curses are common. The question is who carries them.\"",
-    "description": "Curseborne is Onyx Path's urban horror and fantasy game. It runs on Storypath Ultra, the generic version of the Storypath system. The project was funded on Kickstarter in 2024. According to Onyx Path's May 2026 release update, the core rulebook was still at the printer-quote stage and not on sale, so there is no buy link yet.",
+    "description": "Curseborne is Onyx Path's urban horror and fantasy game. It runs on Storypath Ultra, the generic version of the Storypath system. The project was funded on Kickstarter in 2024. The core rulebook came out in PDF on DriveThruRPG in late 2025; as of May 2026 the print edition was still in preparation.",
     "setting": "A modern world where curses are so common that people have learned to live beside them. City streets, decaying neighbourhoods and ancient shadows are woven into one pattern. Players investigate strange events, face monsters and decide what they are willing to pay for help.",
     "vignette": "A child goes missing in an old district overnight, and the neighbours act as if nothing happened. You start investigating: you question people, look for traces and count how much you can take. The Storyteller asks for a Storypath Ultra pool, and every success brings you closer to the truth while every failure brings you closer to a new curse.",
     "prep": "~60 min",
