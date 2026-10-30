@@ -12,7 +12,7 @@ registerSystem("his-majesty-the-worm", {
   "foundryStatus": "None",
   "free": false,
   "edition": null,
-  "heroImage": "https://sessionzero.games/images/heroes/his-majesty-the-worm.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/his-majesty-the-worm.jpg?v=2",
   "playstyleTags": ["explore", "combat", "mystery"],
   "settingTags": ["fantasy", "weird"],
   "gallery": [

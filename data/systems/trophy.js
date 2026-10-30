@@ -11,7 +11,7 @@ registerSystem("trophy", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/trophy.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/trophy.jpg?v=2",
   "playstyleTags": [
     "narrative",
     "horror",

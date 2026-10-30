@@ -2345,7 +2345,7 @@ registerSystem("call-of-cthulhu", {
   "players": "2–6",
   "complexity": 3,
   "foundryStatus": "Community + Official modules",
-  "heroImage": "https://sessionzero.games/images/heroes/call-of-cthulhu.jpg?v=2",
+  "heroImage": "https://sessionzero.games/images/heroes/call-of-cthulhu.jpg?v=3",
   "playstyleTags": [
     "mystery",
     "horror",
@@ -7576,7 +7576,7 @@ registerSystem("his-majesty-the-worm", {
   "foundryStatus": "None",
   "free": false,
   "edition": null,
-  "heroImage": "https://sessionzero.games/images/heroes/his-majesty-the-worm.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/his-majesty-the-worm.jpg?v=2",
   "playstyleTags": ["explore", "combat", "mystery"],
   "settingTags": ["fantasy", "weird"],
   "gallery": [
@@ -11130,7 +11130,7 @@ registerSystem("mothership", {
   "players": "3–5",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/mothership.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/mothership.jpg?v=2",
   "playstyleTags": [
     "horror",
     "survival",
@@ -13390,7 +13390,7 @@ registerSystem("pendragon", {
   "free": false,
   "edition": "6th ed. (2024)",
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/pendragon.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/pendragon.jpg?v=2",
   "playstyleTags": ["narrative", "social", "combat"],
   "settingTags": ["historical", "fantasy"],
   "gallery": [
@@ -13730,7 +13730,7 @@ registerSystem("runequest", {
   "players": "3–5",
   "complexity": 4,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/runequest.jpg?v=2",
+  "heroImage": "https://sessionzero.games/images/heroes/runequest.jpg?v=3",
   "playstyleTags": [
     "combat",
     "worldbuild",
@@ -18324,7 +18324,7 @@ registerSystem("troika", {
   "complexity": 1,
   "free": true,
   "foundryStatus": "Official",
-  "heroImage": "https://sessionzero.games/images/heroes/troika.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/troika.jpg?v=3",
   "playstyleTags": [
     "narrative",
     "explore",
@@ -18497,7 +18497,7 @@ registerSystem("trophy", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/trophy.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/trophy.jpg?v=2",
   "playstyleTags": [
     "narrative",
     "horror",
@@ -19280,7 +19280,7 @@ registerSystem("vampire-the-masquerade", {
   "complexity": 3,
   "free": false,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/vampire-the-masquerade.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/vampire-the-masquerade.jpg?v=2",
   "playstyleTags": [
     "narrative",
     "combat",

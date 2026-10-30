@@ -11,7 +11,7 @@ registerSystem("vampire-the-masquerade", {
   "complexity": 3,
   "free": false,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/vampire-the-masquerade.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/vampire-the-masquerade.jpg?v=2",
   "playstyleTags": [
     "narrative",
     "combat",

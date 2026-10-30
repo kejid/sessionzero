@@ -11,7 +11,7 @@ registerSystem("mothership", {
   "players": "3–5",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/mothership.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/mothership.jpg?v=2",
   "playstyleTags": [
     "horror",
     "survival",

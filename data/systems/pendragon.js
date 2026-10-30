@@ -12,7 +12,7 @@ registerSystem("pendragon", {
   "free": false,
   "edition": "6th ed. (2024)",
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/pendragon.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/pendragon.jpg?v=2",
   "playstyleTags": ["narrative", "social", "combat"],
   "settingTags": ["historical", "fantasy"],
   "gallery": [

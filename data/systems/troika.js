@@ -11,7 +11,7 @@ registerSystem("troika", {
   "complexity": 1,
   "free": true,
   "foundryStatus": "Official",
-  "heroImage": "https://sessionzero.games/images/heroes/troika.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/troika.jpg?v=3",
   "playstyleTags": [
     "narrative",
     "explore",
