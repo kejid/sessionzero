@@ -26,6 +26,17 @@ test('cleanSeating seats each voter once and drops strangers', () => {
   assert.deepEqual(out, { tables: [{ game: 'cairn', gm: 'Ann', players: ['Bob'] }], out: ['Cid'] });
 });
 
+test('cleanSeating lets one GM run several tables, but not also play', () => {
+  const out = cleanSeating(
+    { tables: [{ game: 'cairn', gm: 'Ann', players: ['Bob'] }, { game: 'blades', gm: 'Ann', players: ['Ann', 'Cid'] }], out: ['Ann'] },
+    ['cairn', 'blades'], ['Ann', 'Bob', 'Cid']
+  );
+  assert.deepEqual(out, {
+    tables: [{ game: 'cairn', gm: 'Ann', players: ['Bob'] }, { game: 'blades', gm: 'Ann', players: ['Cid'] }],
+    out: [],
+  });
+});
+
 test('cleanSeating rejects a line-up that cannot stand', () => {
   const list = ['cairn', 'blades'], voters = ['Ann', 'Bob'];
   const t = (game, gm) => ({ game, gm, players: [] });
@@ -34,7 +45,6 @@ test('cleanSeating rejects a line-up that cannot stand', () => {
   assert.equal(cleanSeating({ tables: [t('mork', 'Ann')] }, list, voters), null);
   assert.equal(cleanSeating({ tables: [t('cairn', 'Ghost')] }, list, voters), null);
   assert.equal(cleanSeating({ tables: [t('cairn', 'Ann'), t('cairn', 'Bob')] }, list, voters), null);
-  assert.equal(cleanSeating({ tables: [t('cairn', 'Ann'), t('blades', 'Ann')] }, list, voters), null);
 });
 
 test('cleanIdList returns [] for non-array input', () => {

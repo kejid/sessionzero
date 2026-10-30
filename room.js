@@ -33,9 +33,9 @@ const SZ_STR = {
     tables_less: 'Fewer',
     tables_more: 'More',
     tables_waiting: 'Still waiting for {n} vote(s), so this may change.',
-    tables_need_gms: 'GMs marked: {n}, tables: {t}. Every table needs a GM: ask them to tick “I\'m the GM” in their vote.',
+    tables_need_gms: 'Nobody is marked as GM yet. The GM ticks “I\'m the GM” in their vote.',
     tables_need_games: 'Fewer games have votes than there are tables.',
-    tables_gm_against: 'No way to give every table a GM who isn\'t against its game. Try fewer tables.',
+    tables_gm_against: 'No set of games works: each one needs a GM who is not against it.',
     tables_people: 'People: {n}',
     tables_out: 'Not seated',
     tables_move_here: 'Move here',
@@ -188,9 +188,9 @@ const SZ_STR = {
     tables_less: 'Меньше',
     tables_more: 'Больше',
     tables_waiting: 'Ещё ждём голосов: {n}. Состав может измениться.',
-    tables_need_gms: 'Отмечено мастеров: {n}, столов: {t}. Каждому столу нужен мастер: попроси их поставить «Я мастер» в своём голосе.',
+    tables_need_gms: 'Пока никто не отмечен мастером. Мастер ставит галочку «Я мастер» в своём голосе.',
     tables_need_games: 'Игр с голосами меньше, чем столов.',
-    tables_gm_against: 'Не получается дать каждому столу мастера, который не против этой игры. Попробуй меньше столов.',
+    tables_gm_against: 'Не получается подобрать игры: для каждой нужен мастер, который не против неё.',
     tables_people: 'Человек: {n}',
     tables_out: 'Не вошли',
     tables_move_here: 'Пересадить сюда',
@@ -1008,24 +1008,22 @@ function szSeatPoints(b, game) {
   return SZ_SEAT_NEUTRAL;
 }
 
-// Give every game a GM who isn't against it, each GM once. Backtracks, so it
-// only fails when no such assignment exists.
+// Give every game a GM who isn't against it. One GM may run several tables, since
+// a group needn't play at the same time, but the work is shared out when it can be.
+// Fails only when some game has no GM willing to run it.
 function szAssignGms(games, gms) {
-  const order = games.slice().sort((x, y) =>
-    gms.filter(g => szSeatPoints(g, x) !== null).length - gms.filter(g => szSeatPoints(g, y) !== null).length);
+  const able = game => gms.filter(g => szSeatPoints(g, game) !== null);
+  const order = games.slice().sort((x, y) => able(x).length - able(y).length);
   const picked = new Map();
-  const go = i => {
-    if (i === order.length) return true;
-    const able = gms.filter(g => ![...picked.values()].includes(g) && szSeatPoints(g, order[i]) !== null)
-      .sort((x, y) => szSeatPoints(y, order[i]) - szSeatPoints(x, order[i]));
-    for (const g of able) {
-      picked.set(order[i], g);
-      if (go(i + 1)) return true;
-      picked.delete(order[i]);
-    }
-    return false;
-  };
-  return go(0) ? picked : null;
+  const uses = new Map();
+  for (const game of order) {
+    const g = able(game).sort((x, y) =>
+      (uses.get(x) || 0) - (uses.get(y) || 0) || szSeatPoints(y, game) - szSeatPoints(x, game))[0];
+    if (!g) return null;
+    picked.set(game, g);
+    uses.set(g, (uses.get(g) || 0) + 1);
+  }
+  return picked;
 }
 
 function szSeatPlayers(games, picked, ballots, maxSeats) {
@@ -1075,7 +1073,7 @@ function szSeatPlayers(games, picked, ballots, maxSeats) {
 // first, or { error } when no seating can exist.
 function szBuildTables(ballots, games, count, maxSeats) {
   const gms = ballots.filter(b => b.gm);
-  if (gms.length < count) return { error: 'gms', gms: gms.length };
+  if (!gms.length) return { error: 'gms' };
   const pool = games.slice(0, SZ_MAX_CANDIDATES);
   if (pool.length < count) return { error: 'games' };
   const combos = [];
@@ -1308,14 +1306,15 @@ function szSeatingHTML() {
   if (!s || szTables.open) return '';
   const me = szVoterName();
   const name = id => { const r = szResolve(id); return r ? r.name : id; };
-  const mine = s.tables.find(t => t.gm === me || t.players.includes(me));
+  const myTables = s.tables.filter(t => t.gm === me || t.players.includes(me));
+  const mine = myTables[0];
   const out = szUnseated(s);
   const yours = !me || !szData.ballots.some(b => b.voter === me) ? ''
     : !mine ? szT('tables_your_out')
-    : mine.gm === me ? szT('tables_your_gm', { game: name(mine.game) })
+    : mine.gm === me ? szT('tables_your_gm', { game: myTables.map(t => name(t.game)).join(', ') })
     : szT('tables_your', { game: name(mine.game), gm: mine.gm });
   const cards = s.tables.map(t => `
-    <div class="sz-table${t === mine ? ' sz-table-mine' : ''}">
+    <div class="sz-table${myTables.includes(t) ? ' sz-table-mine' : ''}">
       <div class="sz-table-head">
         <span class="sz-tally-name">${szEsc(name(t.game))}</span>
         <span class="sz-table-n">${szEsc(szT('tables_people', { n: t.players.length + 1 }))}</span>
@@ -1369,14 +1368,15 @@ function szTablesHTML() {
 
   let body;
   if (built.error) {
-    const msg = built.error === 'gms' ? szT('tables_need_gms', { n: built.gms, t: szTables.count })
+    const msg = built.error === 'gms' ? szT('tables_need_gms')
       : built.error === 'games' ? szT('tables_need_games') : szT('tables_gm_against');
     body = `<p class="sz-warn">${szEsc(msg)}</p>`;
   } else {
     const opt = built.options[szTables.option];
-    const seated = opt.tables.reduce((n, t) => n + t.players.length + 1, 0);
-    const wanted = opt.tables.reduce((n, t) => n
-      + [t.gm, ...t.players].filter(v => szSeatPoints(byName[v], t.game) === SZ_SEAT_UP).length, 0);
+    // Counted as people: a GM running two tables is still one person
+    const seated = new Set(opt.tables.flatMap(t => [t.gm, ...t.players])).size;
+    const wanted = new Set(opt.tables.flatMap(t => [t.gm, ...t.players]
+      .filter(v => szSeatPoints(byName[v], t.game) === SZ_SEAT_UP))).size;
     const cards = opt.tables.map((t, i) => {
       const r = szResolve(t.game);
       const here = t.players.includes(szTables.picked);

@@ -116,10 +116,15 @@ test.describe('Dragging players on a desktop', () => {
       await page.waitForTimeout(300);
       expect((await plus.boundingBox()).y).toBeCloseTo(before, 0);
     };
-    await press(plus);  // 3 tables and 2 GMs: the seating turns into a short message
-    await expect(page.locator('.sz-tables .sz-warn')).toBeVisible();
+    await press(plus);
+    await expect(page.locator('.sz-table')).toHaveCount(3);
     await press(page.locator('.sz-step[data-step="count:-1"]'));
     await expect(page.locator('.sz-table')).toHaveCount(2);
+    // Fewer seats leave the seating shorter, which must not move the buttons either
+    const fewer = page.locator('.sz-step[data-step="seats:-1"]');
+    await press(fewer);
+    await press(fewer);
+    await expect(page.locator('.sz-step-value').nth(1)).toHaveText('3');
   });
 
   test('the page keeps its height when icons are swapped in', async ({ page }) => {
@@ -183,15 +188,29 @@ test.describe('Splitting a pool into tables', () => {
     expect(options[0].out.length).toBe(3);
   });
 
-  test('refuses when there are fewer GMs than tables', async ({ page }) => {
+  test('one GM can run both tables', async ({ page }) => {
     const pool = POOL.map(b => ({ ...b, gm: b.voter === 'Аня' }));
-    expect(await build(page, pool, GAMES, 2, 5)).toEqual({ error: 'gms', gms: 1 });
+    const { options } = await build(page, pool, GAMES, 2, 5);
+    const best = options[0];
+    expect(best.tables.map(t => t.gm)).toEqual(['Аня', 'Аня']);
+    const players = best.tables.flatMap(t => t.players).concat(best.out);
+    expect(players.slice().sort()).toEqual(POOL.map(b => b.voter).filter(v => v !== 'Аня').sort());
+  });
+
+  test('two GMs share the tables out', async ({ page }) => {
+    const { options } = await build(page, POOL, GAMES, 2, 5);
+    expect(options[0].tables.map(t => t.gm).sort()).toEqual(['Аня', 'Егор']);
+  });
+
+  test('refuses when nobody is marked as GM', async ({ page }) => {
+    const pool = POOL.map(b => ({ ...b, gm: false }));
+    expect(await build(page, pool, GAMES, 2, 5)).toEqual({ error: 'gms' });
   });
 
   test('refuses when a GM would have to run a game they are against', async ({ page }) => {
     const pool = [
       ballot('Аня', [], ['wildsea', 'blades'], true),
-      ballot('Егор', ['wildsea', 'blades'], [], true),
+      ballot('Егор', ['wildsea'], ['blades'], true),
       ballot('Боря', ['wildsea'], []),
     ];
     expect(await build(page, pool, ['wildsea', 'blades'], 2, 5)).toEqual({ error: 'gm_against' });

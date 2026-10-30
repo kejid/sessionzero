@@ -117,13 +117,14 @@ export function cleanExpected(value) {
   return Number.isInteger(value) && value >= 1 && value <= MAX_EXPECTED ? value : null;
 }
 
-// A line-up to pin. Games must be in the room and people must have voted; each
-// person sits once. Returns null when any table can't stand as sent.
+// A line-up to pin. Games must be in the room and people must have voted. A GM may
+// run several tables; everyone else sits once. Returns null when any table can't
+// stand as sent.
 export function cleanSeating(raw, list, voters) {
   const tables = raw && Array.isArray(raw.tables) ? raw.tables : [];
   if (!tables.length || tables.length > MAX_TABLES) return null;
   const known = new Set(voters);
-  const seated = new Set();
+  const seated = new Set(tables.map(t => t && t.gm));
   const take = v => {
     if (typeof v !== 'string' || !known.has(v) || seated.has(v)) return false;
     seated.add(v);
@@ -132,7 +133,7 @@ export function cleanSeating(raw, list, voters) {
   const games = new Set();
   const clean = [];
   for (const t of tables) {
-    if (!t || !list.includes(t.game) || games.has(t.game) || !take(t.gm)) return null;
+    if (!t || !list.includes(t.game) || games.has(t.game) || !known.has(t.gm)) return null;
     games.add(t.game);
     clean.push({ game: t.game, gm: t.gm, players: (Array.isArray(t.players) ? t.players : []).filter(take) });
   }
