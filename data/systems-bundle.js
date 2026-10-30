@@ -14578,7 +14578,7 @@ registerSystem("shadowrun", {
   "complexity": 4,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/shadowrun.webp",
+  "heroImage": "https://sessionzero.games/images/heroes/shadowrun.jpg",
   "playstyleTags": [
     "tactical",
     "combat",
