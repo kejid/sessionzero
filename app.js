@@ -425,9 +425,9 @@ function matchesTagFilter(s) {
 }
 
 // Official systems currently passing the results filter — what "Share" sends.
-// Custom systems live in localStorage only, so they can't be shared.
+// Custom systems travel with a vote (their data goes into the room).
 function filteredShareIds() {
-    return SYSTEM_IDS.filter(id => !isHiddenNow(id) && SYSTEMS_DATA[id])
+    return SYSTEM_IDS.filter(id => !isHiddenNow(id) && (SYSTEMS_DATA[id] || CustomSystems.find(id)))
         .filter(id => matchesTagFilter(systemFilterFields(id)));
 }
 
@@ -1147,8 +1147,8 @@ function renderResults() {
         const posHTML = votingMode ? `<div class="result-card-pos">${posNum}</div>` : '';
         const dragAttrs = votingMode ? `draggable="true" data-system-id="${s.id}"` : '';
         const leftColHTML = votingMode ? `<div class="result-card-left">${posHTML}${actionsHTML}</div>` : posHTML;
-        // Shortlist toggle — browse mode only; custom systems can't be shared.
-        const pickHTML = !votingMode && !isCustom
+        // Shortlist toggle — browse mode only.
+        const pickHTML = !votingMode
             ? `<button type="button" class="rc-pick" data-pick-id="${s.id}" onclick="toggleShortlist('${s.id}', event)" aria-label="${t('shortlist_add')}: ${s.name}"><i data-lucide="plus" class="ic-add" aria-hidden="true"></i><i data-lucide="check" class="ic-on" aria-hidden="true"></i></button>`
             : '';
         return `<div class="result-card ${isDef ? 'result-card-deferred' : ''} ${votingMode && s.vetoCount > 0 ? 'result-card-vetoed' : ''}" ${dragAttrs} onclick="if(typeof _didDrag!=='undefined'&&_didDrag){_didDrag=false;return}showPage('${s.id}')">

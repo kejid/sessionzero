@@ -1,7 +1,7 @@
 // Unit tests for the pure logic (validation + tally). No DB needed.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { cleanIdList, buildTally, suggestError } from './index.js';
+import { cleanIdList, buildTally, suggestError, cleanCustom } from './index.js';
 
 test('cleanIdList drops non-strings, blanks, dupes, and over-long ids', () => {
   const out = cleanIdList(['cairn', 'cairn', '', 42, null, '  blades  ', 'x'.repeat(100)]);
@@ -59,4 +59,21 @@ test('suggestError allows a new game and enforces id, duplicates and the per-vot
   const full = { list: ['a', 'b', 'c', 'd'], suggested: { b: 'Ann', c: 'Ann', d: 'Ann' } };
   assert.equal(suggestError(full, 'Ann', 'e'), 'suggest_limit');
   assert.equal(suggestError(full, 'Bob', 'e'), null);
+});
+
+test('cleanCustom keeps named custom games, caps fields and drops the rest', () => {
+  const { list, custom } = cleanCustom(
+    ['cairn', 'custom-heist', 'custom-noname', 'custom-xss'],
+    {
+      'custom-heist': { name: '  Heist Night  ', tagline: 'x'.repeat(300), image: 'https://img/a.png' },
+      'custom-noname': { tagline: 'no name' },
+      'custom-xss': { name: 'Bad', image: 'javascript:alert(1)' },
+      cairn: { name: 'Fake Cairn' },
+    },
+  );
+  assert.deepEqual(list, ['cairn', 'custom-heist', 'custom-xss']);
+  assert.equal(custom['custom-heist'].name, 'Heist Night');
+  assert.equal(custom['custom-heist'].tagline.length, 200);
+  assert.equal(custom['custom-xss'].image, '');
+  assert.equal(custom.cairn, undefined); // catalog ids can't be overridden
 });

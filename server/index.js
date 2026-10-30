@@ -60,6 +60,8 @@ async function initDb() {
     ALTER TABLE ballots ADD COLUMN IF NOT EXISTS down JSONB NOT NULL DEFAULT '[]';
     -- Games players added to the room: { systemId: voterName }.
     ALTER TABLE rooms ADD COLUMN IF NOT EXISTS suggested JSONB NOT NULL DEFAULT '{}';
+    -- The creator's own (non-catalog) games: { "custom-…": { name, tagline, image } }.
+    ALTER TABLE rooms ADD COLUMN IF NOT EXISTS custom JSONB NOT NULL DEFAULT '{}';
   `);
 }
 
@@ -78,6 +80,29 @@ export function cleanIdList(value, allowed) {
     out.push(id);
   }
   return out;
+}
+
+// The creator's own games travel with the room. Only "custom-…" ids are
+// accepted (so a catalog game can't be renamed), every field is length-capped,
+// and images must be http(s). Custom ids without a name are dropped from the list.
+export function cleanCustom(list, raw) {
+  const custom = {};
+  const src = raw && typeof raw === 'object' ? raw : {};
+  const str = (v, max) => (typeof v === 'string' ? v.trim().slice(0, max) : '');
+  const kept = list.filter(id => {
+    if (!id.startsWith('custom-')) return true;
+    const c = src[id];
+    const name = str(c && c.name, 80);
+    if (!name) return false;
+    const image = str(c.image, 500);
+    custom[id] = {
+      name,
+      tagline: str(c.tagline, 200),
+      image: /^https?:\/\//i.test(image) ? image : '',
+    };
+    return true;
+  });
+  return { list: kept, custom };
 }
 
 // Can this voter add another game? (exported for tests)
@@ -122,7 +147,7 @@ app.post('/room', async (req, res) => {
   try {
     const title = typeof req.body?.title === 'string'
       ? req.body.title.trim().slice(0, MAX_TITLE) : '';
-    const list = cleanIdList(req.body?.list).slice(0, MAX_LIST);
+    const { list, custom } = cleanCustom(cleanIdList(req.body?.list).slice(0, MAX_LIST), req.body?.custom);
     if (list.length === 0) return res.status(400).json({ error: 'list_required' });
 
     // Retry on the (astronomically unlikely) id collision.
@@ -130,8 +155,8 @@ app.post('/room', async (req, res) => {
       const id = makeId();
       try {
         await pool.query(
-          'INSERT INTO rooms (id, title, list) VALUES ($1, $2, $3)',
-          [id, title, JSON.stringify(list)]
+          'INSERT INTO rooms (id, title, list, custom) VALUES ($1, $2, $3, $4)',
+          [id, title, JSON.stringify(list), JSON.stringify(custom)]
         );
         return res.status(201).json({ roomId: id });
       } catch (e) {
@@ -149,7 +174,7 @@ app.post('/room', async (req, res) => {
 // Read a room: its list plus every ballot and the live tally.
 app.get('/room/:id', async (req, res) => {
   try {
-    const roomRes = await pool.query('SELECT title, list, suggested, created_at FROM rooms WHERE id = $1', [req.params.id]);
+    const roomRes = await pool.query('SELECT title, list, suggested, custom, created_at FROM rooms WHERE id = $1', [req.params.id]);
     if (roomRes.rowCount === 0) return res.status(404).json({ error: 'not_found' });
     const room = roomRes.rows[0];
 
@@ -166,6 +191,7 @@ app.get('/room/:id', async (req, res) => {
       title: room.title || '',
       list: room.list,
       suggested: room.suggested || {},
+      custom: room.custom || {},
       maxSuggest: MAX_SUGGEST,
       createdAt: room.created_at,
       voters: ballots.map(b => b.voter),

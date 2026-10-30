@@ -37,6 +37,8 @@ const SZ_STR = {
     share_image: 'Share results',
     save_image: 'Save as image',
     share_short: 'Share',
+    custom_game: 'custom',
+    list_custom_skipped: 'Your own games only travel in a vote, not in a list link.',
     down_not_saved: '"Against" votes are not saved yet — the rest of your vote is saved.',
     gm_toggle: 'I\'m the GM',
     gm_toggle_hint: '— I\'ll run the game. Your "up" votes show as "GM wants to run".',
@@ -144,6 +146,8 @@ const SZ_STR = {
     share_image: 'Поделиться итогами',
     save_image: 'Сохранить картинкой',
     share_short: 'Поделиться',
+    custom_game: 'своя игра',
+    list_custom_skipped: 'Свои игры попадают только в голосование, не в ссылку на список.',
     down_not_saved: 'Голоса «против» пока не сохранились — остальной голос сохранён.',
     gm_toggle: 'Я мастер',
     gm_toggle_hint: '— буду вести игру. Мои «за» видны всем как «мастер хочет вести».',
@@ -296,13 +300,32 @@ function szRememberRoom(id, title, created) {
 // Resolve a stored system id to a renderable system, skipping unknown ones.
 function szResolve(id) {
   const sys = (typeof SYSTEMS_DATA !== 'undefined') ? SYSTEMS_DATA[id] : null;
-  if (!sys) return null;
+  if (!sys) {
+    const c = (szData && szData.custom && szData.custom[id]) || szLocalCustom(id);
+    return c ? { id, name: c.name, tagline: c.tagline || '', hero: c.image || '', custom: true } : null;
+  }
   return {
     id,
     name: sys.name || (typeof SYSTEM_NAMES !== 'undefined' ? SYSTEM_NAMES[id] : id) || id,
     tagline: (typeof localField === 'function') ? localField(sys, 'tagline', '') : (sys.tagline || ''),
     hero: sys.heroImage || '',
   };
+}
+
+// ---- the user's own (non-catalog) games ----
+function szLocalCustom(id) {
+  return (typeof CustomSystems !== 'undefined' && CustomSystems.find(id)) || null;
+}
+// Catalog game or one of this browser's own games: both can go on the shortlist.
+function szPickable(id) {
+  return !!((typeof SYSTEMS_DATA !== 'undefined' && SYSTEMS_DATA[id]) || szLocalCustom(id));
+}
+// Room-safe id for a custom game: local ids can hold Cyrillic or be long.
+function szRoomCustomId(id) {
+  if (/^custom-[a-z0-9_-]{1,40}$/i.test(id)) return id;
+  let h = 5381;
+  for (const ch of id) h = ((h * 33) ^ ch.codePointAt(0)) >>> 0;
+  return 'custom-' + h.toString(36);
 }
 
 function szThumb(url) {
@@ -484,6 +507,7 @@ function szCardHTML(s, readOnly) {
   // Title + thumbnail link to the system's full page, opened in a new tab via
   // the main app's deep link (#<id>) so the voter never loses their ballot.
   const href = location.pathname + '#' + encodeURIComponent(s.id);
+  const hasPage = !s.custom || !!szLocalCustom(s.id);
   const vote = readOnly ? '' : `
       <div class="sz-card-vote">
         <button class="sz-vbtn sz-up" data-id="${szEsc(s.id)}" onclick="szToggle('${szEsc(s.id)}','up')">
@@ -498,15 +522,15 @@ function szCardHTML(s, readOnly) {
       </div>`;
   return `
     <div class="sz-card" data-id="${szEsc(s.id)}">
-      <a class="sz-card-link" href="${szEsc(href)}" target="_blank" rel="noopener" title="${szEsc(szT('open_page'))}">
+      <${hasPage ? `a class="sz-card-link" href="${szEsc(href)}" target="_blank" rel="noopener" title="${szEsc(szT('open_page'))}"` : 'div class="sz-card-link"'}>
         ${img}
         <div class="sz-card-body">
-          <div class="sz-card-name">${szEsc(s.name)} <i data-lucide="external-link" class="sz-card-ext"></i></div>
+          <div class="sz-card-name">${szEsc(s.name)} ${hasPage ? '<i data-lucide="external-link" class="sz-card-ext"></i>' : ''}${s.custom ? `<span class="sz-custom-tag">${szEsc(szT('custom_game'))}</span>` : ''}</div>
           <div class="sz-card-tagline">${szEsc(s.tagline)}</div>
           ${readOnly ? '' : szGmTag(s.id)}
           ${!readOnly && szData && szData.suggested && szData.suggested[s.id] ? `<span class="sz-suggested-by"><i data-lucide="user-plus"></i>${szEsc(szT('suggested_by', { name: szData.suggested[s.id] }))}</span>` : ''}
         </div>
-      </a>
+      </${hasPage ? 'a' : 'div'}>
       ${vote}
     </div>`;
 }
@@ -647,7 +671,7 @@ function szRenderSuggestResults(q) {
   if (!box || !szData) return;
   const inList = new Set(szData.list);
   const query = (q || '').trim().toLowerCase();
-  const ids = szAllPickIds().filter(id => !inList.has(id));
+  const ids = szAllPickIds().filter(id => !inList.has(id) && SYSTEMS_DATA[id]);
   const hits = ids.map(szResolve).filter(Boolean)
     .filter(s => !query || s.name.toLowerCase().includes(query) || (s.tagline || '').toLowerCase().includes(query))
     .slice(0, 8);
@@ -1123,7 +1147,9 @@ function szListUrl(ids) {
   return SZ_API ? (SZ_API + '/l/' + ids.join(',') + '?l=' + szShareLang()) : (location.origin + location.pathname + '#list=' + ids.join(','));
 }
 function szCopyListLink() {
-  const ids = szListIds || [...szGetPick()];
+  const all = szListIds || [...szGetPick()];
+  const ids = all.filter(id => typeof SYSTEMS_DATA !== 'undefined' && SYSTEMS_DATA[id]);
+  if (ids.length < all.length && typeof showToast === 'function') showToast(szT('list_custom_skipped'));
   if (!ids.length) return;
   const url = szListUrl(ids);
   const done = () => { if (typeof showToast === 'function') showToast(szT('copy_list_done')); };
@@ -1173,11 +1199,13 @@ document.addEventListener('langchange', () => {
 // ---- inline system picker (edit the shared list right in the panel) ----
 // All official systems, grouped exactly like the catalog (localized via t()).
 function szPickGroups() {
-  return (typeof getNavGroups === 'function') ? getNavGroups(typeof currentGrouping !== 'undefined' ? currentGrouping : 'default') : [];
+  const groups = (typeof getNavGroups === 'function') ? getNavGroups(typeof currentGrouping !== 'undefined' ? currentGrouping : 'default') : [];
+  const mine = (typeof CustomSystems !== 'undefined') ? CustomSystems.all.map(s => s.id) : [];
+  return mine.length ? groups.concat([{ key: 'nav_group_custom', ids: mine }]) : groups;
 }
 function szAllPickIds() {
   const ids = [];
-  szPickGroups().forEach(g => g.ids.forEach(id => { if (SYSTEMS_DATA[id]) ids.push(id); }));
+  szPickGroups().forEach(g => g.ids.forEach(id => { if (szPickable(id)) ids.push(id); }));
   return ids;
 }
 // The share selection doubles as the catalog's shortlist: "+" on cards, the
@@ -1187,7 +1215,7 @@ function szAllPickIds() {
 function szLoadPick() {
   try {
     const raw = JSON.parse(localStorage.getItem('sz-shortlist') || 'null');
-    if (Array.isArray(raw)) return new Set(raw.filter(id => SYSTEMS_DATA[id]));
+    if (Array.isArray(raw)) return new Set(raw.filter(szPickable));
     // Migrate the old picker selection, unless it was just the old "all on" default.
     const old = JSON.parse(localStorage.getItem('sz-picker-selection') || 'null');
     if (Array.isArray(old)) {
@@ -1208,7 +1236,7 @@ function szSavePick() {
 }
 function szAddPicks(ids) {
   const pick = szGetPick();
-  ids.forEach(id => { if (SYSTEMS_DATA[id]) pick.add(id); });
+  ids.forEach(id => { if (szPickable(id)) pick.add(id); });
   szSavePick();
 }
 // Selection count label — handles EN singular without declension headaches.
@@ -1219,11 +1247,12 @@ function szCountLabel(n) {
 
 function szPickerHTML() {
   return szPickGroups().map((g, idx) => {
-    const items = g.ids.filter(id => SYSTEMS_DATA[id]);
+    const items = g.ids.filter(szPickable);
     if (!items.length) return '';
     const title = (typeof t === 'function') ? t(g.key) : g.key;
     const rows = items.map(id => {
       const name = (SYSTEMS_DATA[id] && SYSTEMS_DATA[id].name) ||
+        (szLocalCustom(id) && szLocalCustom(id).name) ||
         (typeof SYSTEM_NAMES !== 'undefined' && SYSTEM_NAMES[id]) || id;
       return `<label class="sz-pick-item">
         <input type="checkbox" data-id="${szEsc(id)}" ${szPick.has(id) ? 'checked' : ''} onchange="szTogglePick('${szEsc(id)}', this.checked)">
@@ -1253,7 +1282,7 @@ function szPickAll(on) {
 function szToggleGroup(idx, on) {
   const g = szPickGroups()[idx];
   if (!g) return;
-  g.ids.filter(id => SYSTEMS_DATA[id]).forEach(id => { if (on) szPick.add(id); else szPick.delete(id); });
+  g.ids.filter(szPickable).forEach(id => { if (on) szPick.add(id); else szPick.delete(id); });
   const div = document.querySelector('#sz-picker .sz-pick-group[data-group="' + idx + '"]');
   if (div) div.querySelectorAll('input[data-id]').forEach(cb => { cb.checked = on; });
   szSavePick();
@@ -1301,7 +1330,7 @@ function szOpenCreate(presetIds) {
   szView = 'create';
   const el = szEnsureOverlay();
   if (Array.isArray(presetIds)) {
-    szPick = new Set(presetIds.filter(id => SYSTEMS_DATA[id]));
+    szPick = new Set(presetIds.filter(szPickable));
     szSavePick();
   } else szGetPick(); // restore the shortlist (empty on first visit)
   const myRooms = szMyRooms();
@@ -1371,10 +1400,18 @@ function szOpenCreate(presetIds) {
 async function szDoCreate() {
   const titleEl = document.getElementById('sz-room-title');
   const title = titleEl ? titleEl.value.trim() : '';
-  const list = [...szGetPick()];
-  if (!list.length) return;
+  const picked = [...szGetPick()];
+  if (!picked.length) return;
+  const custom = {};
+  const list = picked.map(id => {
+    const c = szLocalCustom(id);
+    if (!c || (typeof SYSTEMS_DATA !== 'undefined' && SYSTEMS_DATA[id])) return id;
+    const rid = szRoomCustomId(id);
+    custom[rid] = { name: c.name, tagline: c.tagline || '', image: c.image || '' };
+    return rid;
+  });
   try {
-    const { roomId } = await szApi('/room', { method: 'POST', body: JSON.stringify({ title, list }) });
+    const { roomId } = await szApi('/room', { method: 'POST', body: JSON.stringify({ title, list, custom }) });
     if (typeof track === 'function') track('room-create');
     szRememberRoom(roomId, title, true);
     const url = szRoomUrl(roomId);
