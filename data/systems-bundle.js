@@ -17504,6 +17504,9 @@ registerSystem("thousand-year-old-vampire", {
     },
     {
       "src": "https://sessionzero.games/images/systems/thousand-year-old-vampire-g3.jpg"
+    },
+    {
+      "src": "https://sessionzero.games/images/systems/thousand-year-old-vampire-g4.jpg"
     }
   ],
   "resources": [
@@ -17569,7 +17572,8 @@ registerSystem("thousand-year-old-vampire", {
     "gallery": [
       { "cap": "Обложка" },
       { "cap": "Разворот — лист персонажа" },
-      { "cap": "Страница подсказок" }
+      { "cap": "Страница подсказок" },
+      { "cap": "Разворот — примеры переживаний" }
     ],
     "resources": [
       { "name": "Официальный сайт" },
@@ -17610,7 +17614,8 @@ registerSystem("thousand-year-old-vampire", {
     "gallery": [
       { "cap": "Cover" },
       { "cap": "Spread — character sheet" },
-      { "cap": "Prompt page" }
+      { "cap": "Prompt page" },
+      { "cap": "Spread — example experiences" }
     ],
     "resources": [
       { "name": "Official website" },
