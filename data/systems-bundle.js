@@ -10610,7 +10610,7 @@ registerSystem("microscope", {
   "players": "2–5",
   "complexity": 1,
   "foundryStatus": "Не нужен",
-  "heroImage": "https://sessionzero.games/images/heroes/microscope.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/microscope-cover.jpg",
   "heroImageStyle": "object-fit: contain; padding: 80px 120px; background: linear-gradient(135deg, #0f0e2e, #1e1b4b 40%, #312e81 70%, #1a1747);",
   "playstyleTags": [
     "worldbuild",
@@ -17487,7 +17487,7 @@ registerSystem("thousand-year-old-vampire", {
   "dice": "d10 − d6",
   "players": "1",
   "complexity": 1,
-  "heroImage": "https://sessionzero.games/images/heroes/thousand-year-old-vampire.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/thousand-year-old-vampire-cover.jpg",
   "heroImageStyle": "object-fit: cover; object-position: center top; background: linear-gradient(135deg, #0a0005, #1a0010 40%, #2d0020 70%, #0f000a);",
   "playstyleTags": [
     "narrative",

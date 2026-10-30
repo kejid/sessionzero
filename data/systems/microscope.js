@@ -10,7 +10,7 @@ registerSystem("microscope", {
   "players": "2–5",
   "complexity": 1,
   "foundryStatus": "Не нужен",
-  "heroImage": "https://sessionzero.games/images/heroes/microscope.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/microscope-cover.jpg",
   "heroImageStyle": "object-fit: contain; padding: 80px 120px; background: linear-gradient(135deg, #0f0e2e, #1e1b4b 40%, #312e81 70%, #1a1747);",
   "playstyleTags": [
     "worldbuild",
