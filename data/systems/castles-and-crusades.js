@@ -21,13 +21,13 @@ registerSystem("castles-and-crusades", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://image.nobleknight.com/t/jpg1500/tlg80108.jpg"
+      "src": "https://sessionzero.games/images/systems/castles-and-crusades-g1.jpg"
     },
     {
-      "src": "https://trolllord.com/wp-content/uploads/2024/12/Pages-from-TLG-801010-Players-Handbook.pdf.jpg"
+      "src": "https://sessionzero.games/images/systems/castles-and-crusades-g2.jpg"
     },
     {
-      "src": "https://trolllord.com/wp-content/uploads/2024/12/Pages-from-TLG-801010-Players-Handbook_Page_02-1583x2048.jpg"
+      "src": "https://sessionzero.games/images/systems/castles-and-crusades-g3.jpg"
     }
   ],
   "resources": [

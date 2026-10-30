@@ -11,7 +11,7 @@ registerSystem("marvel-multiverse", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://images2.penguinrandomhouse.com/cover/9781302927837",
+  "heroImage": "https://sessionzero.games/images/heroes/marvel-multiverse.jpg",
   "playstyleTags": [
     "combat",
     "narrative",
@@ -20,13 +20,13 @@ registerSystem("marvel-multiverse", {
   "settingTags": ["modern"],
   "gallery": [
     {
-      "src": "https://images-na.ssl-images-amazon.com/images/P/1302927833.01._SCLZZZZZZZ_SX300_.jpg"
+      "src": "https://sessionzero.games/images/systems/marvel-multiverse-g1.jpg"
     },
     {
-      "src": "https://static0.cbrimages.com/wordpress/wp-content/uploads/2023/08/marvel-multiverse-rpg.jpg"
+      "src": "https://sessionzero.games/images/systems/marvel-multiverse-g2.jpg"
     },
     {
-      "src": "https://images2.penguinrandomhouse.com/cover/9781302927837"
+      "src": "https://sessionzero.games/images/heroes/marvel-multiverse.jpg"
     }
   ],
   "resources": [

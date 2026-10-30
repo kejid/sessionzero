@@ -11,7 +11,7 @@ registerSystem("mork-borg", {
   "players": "2–5",
   "complexity": 1,
   "foundryStatus": "Official + Community",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/herbmasters_crop-1440x720.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/mork-borg.jpg",
   "heroStyle": "border: 2px solid var(--yellow);",
   "playstyleTags": [
     "combat",
@@ -21,22 +21,22 @@ registerSystem("mork-borg", {
   "settingTags": ["fantasy", "weird", "postapoc"],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/MB_skeleton_kvad-1200x1200.jpg"
+      "src": "https://sessionzero.games/images/systems/mork-borg-g1.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/MB_lich-1-1200x1200.jpg"
+      "src": "https://sessionzero.games/images/systems/mork-borg-g2.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/MB_02EN_Anthelia_kvad-1200x1200.jpg"
+      "src": "https://sessionzero.games/images/systems/mork-borg-g3.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/MB_05EN_Basilisks_kvad-1200x1200.jpg"
+      "src": "https://sessionzero.games/images/systems/mork-borg-g4.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/MB_06EN_Violence_kvad-1200x1200.jpg"
+      "src": "https://sessionzero.games/images/systems/mork-borg-g5.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/MB_07EN_Troll-Zombie_kvad-1200x1200.jpg"
+      "src": "https://sessionzero.games/images/systems/mork-borg-g6.jpg"
     }
   ],
   "resources": [

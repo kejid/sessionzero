@@ -10,7 +10,7 @@ registerSystem("blade-runner", {
   "players": "2–4",
   "complexity": 3,
   "foundryStatus": "Official",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/BLADE-RUNNER-RPG-Art-01-1440x720.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/blade-runner.jpg",
   "playstyleTags": [
     "mystery",
     "narrative",
@@ -19,22 +19,22 @@ registerSystem("blade-runner", {
   "settingTags": ["cyberpunk"],
   "gallery": [
     {
-      "src": "https://newsite.freeleaguepublishing.com/wp-content/uploads/2023/08/BLADE-RUNNER-RPG-Art-03-edited.jpg"
+      "src": "https://sessionzero.games/images/systems/blade-runner-g1.jpg"
     },
     {
-      "src": "https://newsite.freeleaguepublishing.com/wp-content/uploads/2023/08/BLADE-RUNNER-RPG-Art-04-edited.jpg"
+      "src": "https://sessionzero.games/images/systems/blade-runner-g2.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/BLADE-RUNNER-RPG-Art-06.jpg"
+      "src": "https://sessionzero.games/images/systems/blade-runner-g3.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/BLADE-RUNNER-RPG-Art-08-edited.jpg"
+      "src": "https://sessionzero.games/images/systems/blade-runner-g4.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/BLADE-RUNNER-RPG-Art-13.jpg"
+      "src": "https://sessionzero.games/images/systems/blade-runner-g5.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/BLADE-RUNNER-RPG-Art-09-edited.jpg"
+      "src": "https://sessionzero.games/images/systems/blade-runner-g6.jpg"
     }
   ],
   "resources": [

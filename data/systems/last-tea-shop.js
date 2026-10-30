@@ -10,7 +10,7 @@ registerSystem("last-tea-shop", {
   "dice": "1–2d6",
   "players": "1",
   "complexity": 1,
-  "heroImage": "https://img.itch.zone/aW1nLzY4MzMyNTcuanBn/original/NOvzui.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/last-tea-shop.jpg",
   "heroImageStyle": "object-fit: cover; object-position: center; background: linear-gradient(135deg, #0d1b2a, #1b3a4b 40%, #2d6a7f 70%, #0d1b2a);",
   "playstyleTags": [
     "narrative",
@@ -20,13 +20,13 @@ registerSystem("last-tea-shop", {
   "settingTags": ["weird"],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMTE2NzU4MC83NjkwNjc1LnBuZw==/347x500/KWkPXM.png"
+      "src": "https://sessionzero.games/images/systems/last-tea-shop-g1.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMTE2NzU4MC83Njg0MzA3LnBuZw==/347x500/fubDRC.png"
+      "src": "https://sessionzero.games/images/systems/last-tea-shop-g2.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMTE2NzU4MC83Njg0MzA1LnBuZw==/347x500/XSOA2A.png"
+      "src": "https://sessionzero.games/images/systems/last-tea-shop-g3.jpg"
     }
   ],
   "resources": [

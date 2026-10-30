@@ -10,7 +10,7 @@ registerSystem("ker-nethalas", {
   "dice": "d100 (2d10)",
   "players": "1",
   "complexity": 2,
-  "heroImage": "https://img.itch.zone/aW1nLzE0OTUyOTYzLnBuZw==/original/SuUuIM.png",
+  "heroImage": "https://sessionzero.games/images/heroes/ker-nethalas.webp",
   "playstyleTags": [
     "combat",
     "explore",
@@ -19,16 +19,16 @@ registerSystem("ker-nethalas", {
   "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMjUxNTI2MS8yNjA3NzA4MC5qcGc=/347x500/c4RF8Y.jpg"
+      "src": "https://sessionzero.games/images/systems/ker-nethalas-g1.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMjUxNTI2MS8xNDk1MjkyOS5qcGc=/347x500/%2F3tKpz.jpg"
+      "src": "https://sessionzero.games/images/systems/ker-nethalas-g2.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMjUxNTI2MS8xNDk1Mjk1MC5qcGc=/347x500/x9U1UK.jpg"
+      "src": "https://sessionzero.games/images/systems/ker-nethalas-g3.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMjUxNTI2MS8xNDk1Mjk1Ny5qcGc=/347x500/1BPs3N.jpg"
+      "src": "https://sessionzero.games/images/systems/ker-nethalas-g4.jpg"
     }
   ],
   "resources": [

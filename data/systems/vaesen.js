@@ -10,7 +10,7 @@ registerSystem("vaesen", {
   "players": "3–5",
   "complexity": 2,
   "foundryStatus": "Official контент",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Vaesen_hero3-1440x720.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/vaesen.jpg",
   "playstyleTags": [
     "mystery",
     "horror",
@@ -19,10 +19,10 @@ registerSystem("vaesen", {
   "settingTags": ["historical", "urban-fantasy"],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/11/sjora.jpg"
+      "src": "https://sessionzero.games/images/systems/vaesen-g1.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/VAE_ENG_cover-1200x1200.jpg"
+      "src": "https://sessionzero.games/images/systems/vaesen-g2.jpg"
     }
   ],
   "resources": [

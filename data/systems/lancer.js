@@ -10,7 +10,7 @@ registerSystem("lancer", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Community",
-  "heroImage": "https://img.itch.zone/aW1nLzI3MzE0ODYuanBn/original/PF05J1.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/lancer.jpg",
   "playstyleTags": [
     "tactical",
     "combat",
@@ -19,7 +19,7 @@ registerSystem("lancer", {
   "settingTags": ["space"],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1nLzI3MzE0ODYuanBn/original/PF05J1.jpg"
+      "src": "https://sessionzero.games/images/heroes/lancer.jpg"
     }
   ],
   "quotes": [

@@ -11,7 +11,7 @@ registerSystem("vampire-the-masquerade", {
   "complexity": 3,
   "free": false,
   "foundryStatus": "Community",
-  "heroImage": "https://cdn11.bigcommerce.com/s-kftzvkkgjv/images/stencil/500x659/products/292/1534/V5_CoreRulebook_FrontCover__22095.1657225192.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/vampire-the-masquerade.jpg",
   "playstyleTags": [
     "narrative",
     "combat",
@@ -20,13 +20,13 @@ registerSystem("vampire-the-masquerade", {
   "settingTags": ["modern", "urban-fantasy"],
   "gallery": [
     {
-      "src": "https://static.wikia.nocookie.net/whitewolf/images/7/78/VampireMasqueradeV5Logo.png/revision/latest"
+      "src": "https://sessionzero.games/images/systems/vampire-the-masquerade-g1.webp"
     },
     {
-      "src": "https://www.grimdarkmagazine.com/wp-content/uploads/2019/09/V5-1.jpeg"
+      "src": "https://sessionzero.games/images/systems/vampire-the-masquerade-g2.jpg"
     },
     {
-      "src": "https://cdn11.bigcommerce.com/s-kftzvkkgjv/images/stencil/500x659/products/292/1534/V5_CoreRulebook_FrontCover__22095.1657225192.jpg"
+      "src": "https://sessionzero.games/images/heroes/vampire-the-masquerade.jpg"
     }
   ],
   "resources": [

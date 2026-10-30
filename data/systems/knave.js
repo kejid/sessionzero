@@ -10,7 +10,7 @@ registerSystem("knave", {
   "players": "3–6",
   "complexity": 1,
   "foundryStatus": "Community",
-  "heroImage": "https://img.itch.zone/aW1hZ2UvMjc3NTUyNy8xNjU2NDM2Ni5wbmc=/original/r0dEmj.png",
+  "heroImage": "https://sessionzero.games/images/heroes/knave.jpg",
   "playstyleTags": [
     "explore",
     "combat",
@@ -19,13 +19,13 @@ registerSystem("knave", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMjc3NTUyNy8xNjU2NDM3NC5qcGc=/original/e4mJTJ.jpg"
+      "src": "https://sessionzero.games/images/systems/knave-g1.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMjc3NTUyNy8xNjU2NDM4MC5qcGc=/original/0JHiXM.jpg"
+      "src": "https://sessionzero.games/images/systems/knave-g2.jpg"
     },
     {
-      "src": "https://image.nobleknight.com/2/jpg1500/24194440115h.jpg"
+      "src": "https://sessionzero.games/images/systems/knave-g3.jpg"
     }
   ],
   "resources": [

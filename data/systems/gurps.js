@@ -11,7 +11,7 @@ registerSystem("gurps", {
   "complexity": 4,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://www.sjgames.com/gurps/books/basic/img/basic1_lg.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/gurps.jpg",
   "playstyleTags": [
     "tactical",
     "explore",
@@ -20,13 +20,13 @@ registerSystem("gurps", {
   "settingTags": [],
   "gallery": [
     {
-      "src": "https://www.sjgames.com/gurps/books/basic/img/basic2_lg.jpg"
+      "src": "https://sessionzero.games/images/systems/gurps-g1.jpg"
     },
     {
-      "src": "https://www.sjgames.com/gurps/books/basic/img/commando.jpg"
+      "src": "https://sessionzero.games/images/systems/gurps-g2.jpg"
     },
     {
-      "src": "https://www.sjgames.com/gurps/books/basic/img/basic1_lg.jpg"
+      "src": "https://sessionzero.games/images/heroes/gurps.jpg"
     }
   ],
   "resources": [

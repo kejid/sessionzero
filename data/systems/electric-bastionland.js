@@ -10,7 +10,7 @@ registerSystem("electric-bastionland", {
   "players": "2–5",
   "complexity": 1,
   "foundryStatus": "Community",
-  "heroImage": "https://www.cursedink.es/wp-content/uploads/2023/11/2023-11-29_18h32_11-1400x700.png",
+  "heroImage": "https://sessionzero.games/images/heroes/electric-bastionland.jpg",
   "playstyleTags": [
     "explore",
     "social",
@@ -19,16 +19,16 @@ registerSystem("electric-bastionland", {
   "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
-      "src": "https://cdn.shopify.com/s/files/1/0025/6006/5625/products/electric-bastionland-pdf-book-141375.jpg?v=1688417871"
+      "src": "https://sessionzero.games/images/systems/electric-bastionland-g1.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0025/6006/5625/products/electric-bastionland-pdf-book-853175.png?v=1688417871"
+      "src": "https://sessionzero.games/images/systems/electric-bastionland-g2.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0025/6006/5625/products/electric-bastionland-pdf-book-426085.png?v=1688417871"
+      "src": "https://sessionzero.games/images/systems/electric-bastionland-g3.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0025/6006/5625/products/electric-bastionland-pdf-book-392957.png?v=1688417871"
+      "src": "https://sessionzero.games/images/systems/electric-bastionland-g4.jpg"
     }
   ],
   "resources": [

@@ -20,13 +20,13 @@ registerSystem("star-trek-adventures", {
   "settingTags": ["space"],
   "gallery": [
     {
-      "src": "https://cdn.shopify.com/s/files/1/0225/4035/files/star-trek-adventures-second-edition-core-rulebook-star-trek-adventures-modiphius-entertainment-759196.jpg"
+      "src": "https://sessionzero.games/images/systems/star-trek-adventures-g1.jpg"
     },
     {
-      "src": "https://modiphius.net/cdn/shop/files/star-trek-adventures-second-edition-exploration-guide-star-trek-adventures-modiphius-entertainment-894023.jpg"
+      "src": "https://sessionzero.games/images/systems/star-trek-adventures-g2.jpg"
     },
     {
-      "src": "https://modiphius.net/cdn/shop/files/star-trek-adventures-second-edition-technical-manual-star-trek-adventures-modiphius-entertainment-380562.jpg"
+      "src": "https://sessionzero.games/images/systems/star-trek-adventures-g3.jpg"
     }
   ],
   "resources": [

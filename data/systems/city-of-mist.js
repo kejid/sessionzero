@@ -11,7 +11,7 @@ registerSystem("city-of-mist", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://sonofoak.com/cdn/shop/files/MOCKUP-book-Core-Books-Player_s-Guide_1eeeba69-aa3c-45bb-9192-eb308407f400.png?v=1706050848",
+  "heroImage": "https://sessionzero.games/images/heroes/city-of-mist.webp",
   "playstyleTags": [
     "narrative",
     "combat",
@@ -20,13 +20,13 @@ registerSystem("city-of-mist", {
   "settingTags": ["urban-fantasy", "modern"],
   "gallery": [
     {
-      "src": "https://sonofoak.com/cdn/shop/products/Combo-Full-Sets-CoM.png?v=1762364603"
+      "src": "https://sessionzero.games/images/systems/city-of-mist-g1.webp"
     },
     {
-      "src": "https://sonofoak.com/cdn/shop/products/Slipcase-Expansions-open-1.png?v=1719841351"
+      "src": "https://sessionzero.games/images/systems/city-of-mist-g2.webp"
     },
     {
-      "src": "https://sonofoak.com/cdn/shop/files/The_Core_Set_-_Web_Square.png?v=1736160691"
+      "src": "https://sessionzero.games/images/systems/city-of-mist-g3.webp"
     }
   ],
   "resources": [

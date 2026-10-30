@@ -11,7 +11,7 @@ registerSystem("runequest", {
   "players": "3–5",
   "complexity": 4,
   "foundryStatus": "Community",
-  "heroImage": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x996/products/2008/3329/CHA4028%5F-%5FRuneQuest%5F-%5FRoleplaying%5Fin%5FGlorantha%5F-%5FFront%5FCover%5F700x900%5F-%5FPDF%5F%5F35886.1552356121.jpg?c=2",
+  "heroImage": "https://sessionzero.games/images/heroes/runequest.jpg",
   "playstyleTags": [
     "combat",
     "worldbuild",
@@ -20,16 +20,16 @@ registerSystem("runequest", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x996/products/2008/2530/CHA4028%5F-%5FRuneQuest%5F-%5FRoleplaying%5Fin%5FGlorantha%5F-%5FBack%5FCover%5F%5F80526.1527905727.jpg?c=2"
+      "src": "https://sessionzero.games/images/systems/runequest-g1.jpg"
     },
     {
-      "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x996/products/2008/2539/CHA4028%5F-%5FRuneQuest%5F-%5FRoleplaying%5Fin%5FGlorantha%5F-%5FPage%5F13%5F-%5FGlorantha%5F%5F97403.1527905728.jpg?c=2"
+      "src": "https://sessionzero.games/images/systems/runequest-g2.jpg"
     },
     {
-      "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x996/products/2008/2548/CHA4028%5F-%5FRuneQuest%5F-%5FRoleplaying%5Fin%5FGlorantha%5F-%5FPage%5F84%5F-%5FPreGen%5F%5F56787.1527905729.jpg?c=2"
+      "src": "https://sessionzero.games/images/systems/runequest-g3.jpg"
     },
     {
-      "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x996/products/2008/2531/CHA4028%5F-%5FRuneQuest%5F-%5FRoleplaying%5Fin%5FGlorantha%5F-%5FPage%5F5%5F-%5FIntroduction%5F%5F52469.1527905727.jpg?c=2"
+      "src": "https://sessionzero.games/images/systems/runequest-g4.jpg"
     }
   ],
   "resources": [

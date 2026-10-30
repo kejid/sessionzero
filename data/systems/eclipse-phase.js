@@ -11,7 +11,7 @@ registerSystem("eclipse-phase", {
   "complexity": 4,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://cdn.shopify.com/s/files/1/0253/1809/6947/products/EP2_Cover_-_Front_900px.jpg?v=1584157023",
+  "heroImage": "https://sessionzero.games/images/heroes/eclipse-phase.jpg",
   "playstyleTags": [
     "explore",
     "horror",
@@ -20,13 +20,13 @@ registerSystem("eclipse-phase", {
   "settingTags": ["space", "postapoc"],
   "gallery": [
     {
-      "src": "https://cdn.shopify.com/s/files/1/0253/1809/6947/products/EP2_CriminalOps1.jpg?v=1650146809"
+      "src": "https://sessionzero.games/images/systems/eclipse-phase-g1.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0253/1809/6947/products/EP2_XRisks_Nanoswarm.png?v=1650146809"
+      "src": "https://sessionzero.games/images/systems/eclipse-phase-g2.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0253/1809/6947/products/EP2_StartingOut.png?v=1650146810"
+      "src": "https://sessionzero.games/images/systems/eclipse-phase-g3.jpg"
     }
   ],
   "resources": [

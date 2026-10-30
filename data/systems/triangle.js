@@ -10,7 +10,7 @@ registerSystem("triangle", {
   "players": "3–5",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://img.itch.zone/aW1nLzE2NTI3MDUyLmpwZw==/original/FIDchU.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/triangle.jpg",
   "playstyleTags": [
     "mystery",
     "horror",
@@ -18,19 +18,19 @@ registerSystem("triangle", {
   ],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1nLzIzMTIyMTYzLmpwZw==/original/638fvX.jpg"
+      "src": "https://sessionzero.games/images/systems/triangle-g1.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1nLzIzMTIyMTQzLnBuZw==/original/yIrTaf.png"
+      "src": "https://sessionzero.games/images/systems/triangle-g2.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1nLzIzMTIxOTQ5LnBuZw==/original/%2F%2B9FZ8.png"
+      "src": "https://sessionzero.games/images/systems/triangle-g3.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0581/0464/3719/files/lobby_sample.jpg"
+      "src": "https://sessionzero.games/images/systems/triangle-g4.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0581/0464/3719/files/Back_Endpaper__Agents_on_Break.jpg"
+      "src": "https://sessionzero.games/images/systems/triangle-g5.jpg"
     }
   ],
   "resources": [

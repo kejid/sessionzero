@@ -10,7 +10,7 @@ registerSystem("star-wars-ffg", {
   "players": "3–6",
   "complexity": 3,
   "foundryStatus": "Community",
-  "heroImage": "https://static0.srcdn.com/wordpress/wp-content/uploads/2021/01/Star-Wars-Tabletop-RPGs-Fantasy-Flight-Games-Force-And-Destiny.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/star-wars-ffg.jpg",
   "playstyleTags": [
     "action",
     "narrative",
@@ -20,16 +20,16 @@ registerSystem("star-wars-ffg", {
   "settingTags": ["space"],
   "gallery": [
     {
-      "src": "https://ttrpgfans.com/wp-content/uploads/2025/11/star-wars-rpg-reprints-1.png"
+      "src": "https://sessionzero.games/images/systems/star-wars-ffg-g1.jpg"
     },
     {
-      "src": "https://images.steamusercontent.com/ugc/448482024259167070/88E9804631FCAE71435C83D2A119769A7A167F11/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
+      "src": "https://sessionzero.games/images/systems/star-wars-ffg-g2.jpg"
     },
     {
-      "src": "https://www.belloflostsouls.net/wp-content/uploads/2017/07/swr10_art-1.jpg"
+      "src": "https://sessionzero.games/images/systems/star-wars-ffg-g3.jpg"
     },
     {
-      "src": "https://images-cdn.fantasyflightgames.com/filer_public/79/62/79625561-208b-4e9f-b7aa-ed7976cb3930/swe14_preview3.jpg"
+      "src": "https://sessionzero.games/images/systems/star-wars-ffg-g4.jpg"
     }
   ],
   "resources": [

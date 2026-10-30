@@ -11,7 +11,7 @@ registerSystem("mothership", {
   "players": "3–5",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://www.tuesdayknightgames.com/cdn/shop/files/ms-new-header_13.jpg?v=1714335559&width=2400",
+  "heroImage": "https://sessionzero.games/images/heroes/mothership.jpg",
   "playstyleTags": [
     "horror",
     "survival",
@@ -20,16 +20,16 @@ registerSystem("mothership", {
   "settingTags": ["space"],
   "gallery": [
     {
-      "src": "https://www.tuesdayknightgames.com/cdn/shop/files/PSD-004.png?v=1713671746&width=1080"
+      "src": "https://sessionzero.games/images/systems/mothership-g1.webp"
     },
     {
-      "src": "https://www.tuesdayknightgames.com/cdn/shop/files/Mothership-PSG-armor-mockup.png?v=1713671968&width=1080"
+      "src": "https://sessionzero.games/images/systems/mothership-g2.webp"
     },
     {
-      "src": "https://www.tuesdayknightgames.com/cdn/shop/files/Mothership-Character-Sheet-mockup.png?v=1713672259&width=1080"
+      "src": "https://sessionzero.games/images/systems/mothership-g3.webp"
     },
     {
-      "src": "https://www.tuesdayknightgames.com/cdn/shop/files/CoreComponentSpread2024.jpg?v=1714488145&width=1080"
+      "src": "https://sessionzero.games/images/systems/mothership-g4.jpg"
     }
   ],
   "resources": [

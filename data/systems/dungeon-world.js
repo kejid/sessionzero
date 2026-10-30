@@ -23,10 +23,10 @@ registerSystem("dungeon-world", {
       "src": "https://www.rpg.net/pictures/cache/picthumb26348-medium.jpg"
     },
     {
-      "src": "https://dungeonworld.gplusarchive.online/wp-content/uploads/2013/06/Shifter252BRanger252BColor.jpg"
+      "src": "https://sessionzero.games/images/systems/dungeon-world-g2.jpg"
     },
     {
-      "src": "https://dungeonworld.gplusarchive.online/wp-content/uploads/2013/06/Half-Orc252BDruid252BColor.jpg"
+      "src": "https://sessionzero.games/images/systems/dungeon-world-g3.jpg"
     }
   ],
   "resources": [

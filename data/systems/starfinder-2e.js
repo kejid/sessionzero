@@ -12,7 +12,7 @@ registerSystem("starfinder-2e", {
   "complexity": 4,
   // CHECK: Foundry has an officially partnered, volunteer-developed SF2e module — endorsed by Paizo + Foundry, but not first-party.
   "foundryStatus": "Community",
-  "heroImage": "https://cdn.paizo.com/d960ad1b-9967-00f9-1158-72274b18312d/7d90d1d7-fd31-48d5-878b-a2d7ff715e64/PZO260100_SFSS1_Hero.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/starfinder-2e.jpg",
   "playstyleTags": [
     "combat",
     "tactical",
@@ -21,16 +21,16 @@ registerSystem("starfinder-2e", {
   "settingTags": ["space"],
   "gallery": [
     {
-      "src": "https://cdn.paizo.com/d960ad1b-9967-00f9-1158-72274b18312d/c1f8b24a-7e41-4f95-9c8b-08feaeff5fb7/Starfinder_2ELogo.png"
+      "src": "https://sessionzero.games/images/systems/starfinder-2e-g1.webp"
     },
     {
-      "src": "https://cdn.paizo.com/d960ad1b-9967-00f9-1158-72274b18312d/c51a30f9-3626-45b8-b844-ca166a0098a8/PZO22005-HC%20Galactic%20Ancestries%20Cover.jpg"
+      "src": "https://sessionzero.games/images/systems/starfinder-2e-g2.jpg"
     },
     {
-      "src": "https://cdn.paizo.com/d960ad1b-9967-00f9-1158-72274b18312d/6e110863-ba68-430a-a5d4-e6c862d3abf9/PZO24007_Cover-TalesfromtheVast_1920x1080.jpg"
+      "src": "https://sessionzero.games/images/systems/starfinder-2e-g3.jpg"
     },
     {
-      "src": "https://cdn.paizo.com/d960ad1b-9967-00f9-1158-72274b18312d/7d90d1d7-fd31-48d5-878b-a2d7ff715e64/PZO260100_SFSS1_Hero.jpg"
+      "src": "https://sessionzero.games/images/heroes/starfinder-2e.jpg"
     }
   ],
   "resources": [

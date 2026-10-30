@@ -12,7 +12,7 @@ registerSystem("cairn", {
   "complexity": 1,
   "free": true,
   "foundryStatus": "Official",
-  "heroImage": "https://assetsio.gnwcdn.com/cairn-2e-box-set-art-trolls-tree-header.png?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp",
+  "heroImage": "https://sessionzero.games/images/heroes/cairn.jpg",
   "playstyleTags": [
     "explore",
     "horror",
@@ -21,10 +21,10 @@ registerSystem("cairn", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://www.exaltedfuneral.com/cdn/shop/files/cairn-2e-boxed-set-boxed-set-2496979.webp?v=1764284291"
+      "src": "https://sessionzero.games/images/systems/cairn-g1.jpg"
     },
     {
-      "src": "https://www.exaltedfuneral.com/cdn/shop/files/cairn-2e-boxed-set-boxed-set-3919238.webp?v=1764284291"
+      "src": "https://sessionzero.games/images/systems/cairn-g2.jpg"
     }
   ],
   "resources": [

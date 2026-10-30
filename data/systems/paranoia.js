@@ -10,7 +10,7 @@ registerSystem("paranoia", {
   "players": "4–6",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://www.mongoosepublishing.com/cdn/shop/files/ParanoiaCoreCoverEbook_1317x.jpg?v=1694683887",
+  "heroImage": "https://sessionzero.games/images/heroes/paranoia.jpg",
   "playstyleTags": [
     "social",
     "combat",
@@ -19,13 +19,13 @@ registerSystem("paranoia", {
   "settingTags": ["postapoc", "weird"],
   "gallery": [
     {
-      "src": "https://www.mongoosepublishing.com/cdn/shop/files/Spread1_32fd11ed-e1e2-4b52-b6a4-0c2a29cc769b_1530x.jpg?v=1694683895"
+      "src": "https://sessionzero.games/images/systems/paranoia-g1.jpg"
     },
     {
-      "src": "https://www.mongoosepublishing.com/cdn/shop/files/Spread2_3431dc85-32c3-469d-8fed-c556587eb96e_1530x.jpg?v=1694683894"
+      "src": "https://sessionzero.games/images/systems/paranoia-g2.jpg"
     },
     {
-      "src": "https://www.mongoosepublishing.com/cdn/shop/files/Spread3_a177d5d6-a299-4069-adba-5f12cac67c6f_1530x.jpg?v=1694683895"
+      "src": "https://sessionzero.games/images/systems/paranoia-g3.jpg"
     }
   ],
   "resources": [

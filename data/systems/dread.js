@@ -16,9 +16,9 @@ registerSystem("dread", {
   "playstyleTags": ["horror", "narrative", "survival"],
   "settingTags": ["modern", "weird"],
   "gallery": [
-    { "src": "https://wp.tiltingatwindmills.net/wp-content/uploads/2014/10/playing-dread-at-Gencon.png" },
-    { "src": "https://www.tiltingatwindmills.net/wp-content/uploads/2014/10/golden-ennie-2006.png" },
-    { "src": "https://wp.tiltingatwindmills.net/wp-content/uploads/2014/10/dread_standard_front_cover2.png" }
+    { "src": "https://sessionzero.games/images/systems/dread-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/dread-g2.webp" },
+    { "src": "https://sessionzero.games/images/systems/dread-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://www.tiltingatwindmills.net/games/", "fmt": "Web" },

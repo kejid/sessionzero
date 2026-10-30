@@ -16,9 +16,9 @@ registerSystem("brindlewood-bay", {
   "playstyleTags": ["mystery", "narrative", "social"],
   "settingTags": ["modern", "weird"],
   "gallery": [
-    { "src": "https://netherbook.com/cdn/shop/files/brindlewood-bay-a-dark-cozy-mystery-7145627.webp?v=1765001473&width=1946" },
-    { "src": "https://netherbook.com/cdn/shop/files/brindlewood-bay-a-dark-cozy-mystery-9875193.webp?v=1765001473&width=1946" },
-    { "src": "https://www.gauntlet-rpg.com/uploads/7/7/8/1/77811662/editor/551319902.png?1733167270" }
+    { "src": "https://sessionzero.games/images/systems/brindlewood-bay-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/brindlewood-bay-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/brindlewood-bay-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://www.gauntlet-rpg.com/brindlewood-bay.html", "fmt": "Web" },

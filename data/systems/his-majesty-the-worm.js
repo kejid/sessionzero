@@ -12,13 +12,13 @@ registerSystem("his-majesty-the-worm", {
   "foundryStatus": "None",
   "free": false,
   "edition": null,
-  "heroImage": "https://www.exaltedfuneral.com/cdn/shop/files/HMtW-CA-Hero.jpg?v=1763530083&width=1920",
+  "heroImage": "https://sessionzero.games/images/heroes/his-majesty-the-worm.jpg",
   "playstyleTags": ["explore", "combat", "mystery"],
   "settingTags": ["fantasy", "weird"],
   "gallery": [
-    { "src": "https://www.exaltedfuneral.com/cdn/shop/files/his-majesty-the-worm-book-888110.jpg?v=1763412737&width=2000" },
-    { "src": "https://www.exaltedfuneral.com/cdn/shop/files/his-majesty-the-worm-book-950216.jpg?v=1763412737&width=2000" },
-    { "src": "https://www.exaltedfuneral.com/cdn/shop/files/his-majesty-the-worm-book-480645.jpg?v=1763412737&width=2000" }
+    { "src": "https://sessionzero.games/images/systems/his-majesty-the-worm-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/his-majesty-the-worm-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/his-majesty-the-worm-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://www.hismajestytheworm.games/", "fmt": "Web" },

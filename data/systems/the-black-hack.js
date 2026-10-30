@@ -19,10 +19,10 @@ registerSystem("the-black-hack", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://image.nobleknight.com/b/jpg1500/blackhack2eboxset.jpg"
+      "src": "https://sessionzero.games/images/systems/the-black-hack-g1.jpg"
     },
     {
-      "src": "https://image.nobleknight.com/b/jpg1500/blackhack2b.jpg"
+      "src": "https://sessionzero.games/images/systems/the-black-hack-g2.jpg"
     }
   ],
   "resources": [

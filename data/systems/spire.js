@@ -19,13 +19,13 @@ registerSystem("spire", {
   "settingTags": ["urban-fantasy"],
   "gallery": [
     {
-      "src": "https://rowanrookanddecard.com/wp-content/uploads/2018/09/Necropolis2-1.jpg"
+      "src": "https://sessionzero.games/images/systems/spire-g1.jpg"
     },
     {
-      "src": "https://rowanrookanddecard.com/wp-content/uploads/2018/01/Spire-1.2.jpg"
+      "src": "https://sessionzero.games/images/systems/spire-g2.jpg"
     },
     {
-      "src": "https://rowanrookanddecard.com/wp-content/uploads/2018/09/Combat_Example2.jpg"
+      "src": "https://sessionzero.games/images/systems/spire-g3.jpg"
     }
   ],
   "quotes": [

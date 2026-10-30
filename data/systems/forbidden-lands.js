@@ -11,7 +11,7 @@ registerSystem("forbidden-lands", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Official контент",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/Forbidden-Lands-cover-art_wide-1440x720.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/forbidden-lands.jpg",
   "playstyleTags": [
     "explore",
     "survival",
@@ -21,13 +21,13 @@ registerSystem("forbidden-lands", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/ForbiddenLands_drakorm_pergament_core_art-1.jpg"
+      "src": "https://sessionzero.games/images/systems/forbidden-lands-g1.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/ForbiddenLands_TheBloodmarch_Landscape.jpg"
+      "src": "https://sessionzero.games/images/systems/forbidden-lands-g2.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/ForbiddenLands_orch_pergament_kvadrat.jpg"
+      "src": "https://sessionzero.games/images/systems/forbidden-lands-g3.jpg"
     }
   ],
   "resources": [

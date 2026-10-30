@@ -10,7 +10,7 @@ registerSystem("delta-green", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Official контент",
-  "heroImage": "https://www.delta-green.com/content/images/size/w1200/2024/08/TERROR.png",
+  "heroImage": "https://sessionzero.games/images/heroes/delta-green.jpg",
   "playstyleTags": [
     "horror",
     "mystery",
@@ -19,13 +19,13 @@ registerSystem("delta-green", {
   "settingTags": ["modern", "weird"],
   "gallery": [
     {
-      "src": "https://www.delta-green.com/content/images/size/w720/2026/03/Army-spread.png"
+      "src": "https://sessionzero.games/images/systems/delta-green-g1.webp"
     },
     {
-      "src": "https://www.delta-green.com/content/images/size/w720/2026/03/1-THE-AGENT.png"
+      "src": "https://sessionzero.games/images/systems/delta-green-g2.jpg"
     },
     {
-      "src": "https://www.delta-green.com/content/images/size/w720/2026/03/THE-STRANGE-SHIP-1.png"
+      "src": "https://sessionzero.games/images/systems/delta-green-g3.jpg"
     }
   ],
   "resources": [

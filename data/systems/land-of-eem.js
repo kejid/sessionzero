@@ -20,16 +20,16 @@ registerSystem("land-of-eem", {
   "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
-      "src": "https://www.exaltedfuneral.com/cdn/shop/files/land-of-eem-deluxe-box-set-box-set-720484.jpg?v=1763753731&width=2000"
+      "src": "https://sessionzero.games/images/systems/land-of-eem-g1.jpg"
     },
     {
-      "src": "https://www.exaltedfuneral.com/cdn/shop/files/land-of-eem-deluxe-box-set-box-set-5160976.jpg?v=1763753731&width=2000"
+      "src": "https://sessionzero.games/images/systems/land-of-eem-g2.jpg"
     },
     {
-      "src": "https://www.exaltedfuneral.com/cdn/shop/files/land-of-eem-deluxe-box-set-box-set-394591.jpg?v=1763753731&width=2000"
+      "src": "https://sessionzero.games/images/systems/land-of-eem-g3.jpg"
     },
     {
-      "src": "https://www.exaltedfuneral.com/cdn/shop/files/land-of-eem-core-rulebook-book-1056389.jpg"
+      "src": "https://sessionzero.games/images/systems/land-of-eem-g4.jpg"
     }
   ],
   "resources": [

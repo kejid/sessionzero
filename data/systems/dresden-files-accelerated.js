@@ -12,13 +12,13 @@ registerSystem("dresden-files-accelerated", {
   "free": false,
   "edition": null,
   "foundryStatus": "Official",
-  "heroImage": "https://evilhat.com/wp-content/uploads/2021/10/products-DFA-Cover-3d.png",
+  "heroImage": "https://sessionzero.games/images/heroes/dresden-files-accelerated.webp",
   "playstyleTags": ["narrative", "mystery", "action"],
   "settingTags": ["urban-fantasy", "modern"],
   "gallery": [
-    { "src": "https://evilhat.com/wp-content/uploads/2017/02/Alphas-Take-Advantage-FINAL.jpg" },
-    { "src": "https://evilhat.com/wp-content/uploads/2017/02/Butters-Attack-FINAL.jpg" },
-    { "src": "https://evilhat.com/wp-content/uploads/2017/02/page-232-necromantic-surges-150dpi.jpg" }
+    { "src": "https://sessionzero.games/images/systems/dresden-files-accelerated-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/dresden-files-accelerated-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/dresden-files-accelerated-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://evilhat.com/product/dresden-files-accelerated/", "fmt": "Web" },

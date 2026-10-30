@@ -10,7 +10,7 @@ registerSystem("tales-loop", {
   "players": "3–5",
   "complexity": 2,
   "foundryStatus": "Official контент",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/TalesfromtheLoop-1440x720.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/tales-loop.jpg",
   "playstyleTags": [
     "mystery",
     "narrative",
@@ -19,19 +19,19 @@ registerSystem("tales-loop", {
   "settingTags": ["modern", "weird"],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/lokskeppt67_1920.jpg"
+      "src": "https://sessionzero.games/images/systems/tales-loop-g1.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/talesfromtheloop2-scaled.jpg"
+      "src": "https://sessionzero.games/images/systems/tales-loop-g2.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/talesfromtheloop3-scaled.jpg"
+      "src": "https://sessionzero.games/images/systems/tales-loop-g3.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/talesfromtheloop4-scaled.jpg"
+      "src": "https://sessionzero.games/images/systems/tales-loop-g4.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/talesfromtheloop5-scaled.jpg"
+      "src": "https://sessionzero.games/images/systems/tales-loop-g5.jpg"
     }
   ],
   "resources": [

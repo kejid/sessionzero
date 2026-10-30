@@ -10,7 +10,7 @@ registerSystem("into-the-odd", {
   "players": "2–5",
   "complexity": 1,
   "foundryStatus": "Community",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/into_the_odd-1440x720.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/into-the-odd.jpg",
   "playstyleTags": [
     "explore",
     "survival",
@@ -19,7 +19,7 @@ registerSystem("into-the-odd", {
   "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/ITO_standing-TM-1200x1200.jpg"
+      "src": "https://sessionzero.games/images/systems/into-the-odd-g1.jpg"
     }
   ],
   "resources": [

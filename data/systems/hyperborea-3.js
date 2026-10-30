@@ -10,7 +10,7 @@ registerSystem("hyperborea-3", {
   "players": "3–6",
   "complexity": 3,
   "foundryStatus": "Community",
-  "heroImage": "https://www.hyperborea.tv/uploads/4/4/6/6/44662451/hyperborean-scene_orig.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/hyperborea-3.jpg",
   "playstyleTags": [
     "combat",
     "explore",
@@ -21,13 +21,13 @@ registerSystem("hyperborea-3", {
   "settingTags": ["sword-and-sorcery", "fantasy"],
   "gallery": [
     {
-      "src": "https://www.hyperborea.tv/uploads/4/4/6/6/44662451/1000027114_orig.png"
+      "src": "https://sessionzero.games/images/systems/hyperborea-3-g1.jpg"
     },
     {
-      "src": "https://www.hyperborea.tv/uploads/4/4/6/6/44662451/20241016-112234_orig.jpg"
+      "src": "https://sessionzero.games/images/systems/hyperborea-3-g2.jpg"
     },
     {
-      "src": "https://www.hyperborea.tv/uploads/4/4/6/6/44662451/1000027125_orig.png"
+      "src": "https://sessionzero.games/images/systems/hyperborea-3-g3.jpg"
     }
   ],
   "resources": [

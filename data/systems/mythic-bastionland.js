@@ -22,22 +22,22 @@ registerSystem("mythic-bastionland", {
       "src": "https://sessionzero.games/images/systems/mythic-bastionland-hero.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0025/6006/5625/files/mythic-bastionland-book-9307117.png?v=1765482428"
+      "src": "https://sessionzero.games/images/systems/mythic-bastionland-g2.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMjY0MjkzMi8xNjA1NzI2NS5wbmc=/original/M5VEoN.png"
+      "src": "https://sessionzero.games/images/systems/mythic-bastionland-g3.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMzM4ODYxNy8yMDIyODgxNS5wbmc=/original/IQzFQ3.png"
+      "src": "https://sessionzero.games/images/systems/mythic-bastionland-g4.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMzM4ODYxNy8yMDIyODgwOC5wbmc=/original/GKDyIn.png"
+      "src": "https://sessionzero.games/images/systems/mythic-bastionland-g5.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMzM4ODYxNy8yMDIyODgwNy5wbmc=/original/n%2BjtLe.png"
+      "src": "https://sessionzero.games/images/systems/mythic-bastionland-g6.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMzM4ODYxNy8yMDIyODk1Mi5wbmc=/original/DrzoXq.png"
+      "src": "https://sessionzero.games/images/systems/mythic-bastionland-g7.jpg"
     }
   ],
   "resources": [

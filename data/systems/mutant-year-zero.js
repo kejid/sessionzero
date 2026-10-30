@@ -11,7 +11,7 @@ registerSystem("mutant-year-zero", {
   "players": "3–5",
   "complexity": 2,
   "foundryStatus": "Community", // CHECK: Foundry myz-core-book listing exists, community-maintained
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/11/MutantMechatron_banner.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/mutant-year-zero.jpg",
   "playstyleTags": [
     "survival",
     "explore",
@@ -20,16 +20,16 @@ registerSystem("mutant-year-zero", {
   "settingTags": ["postapoc"],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/Zone-Wars-photo-9.jpg"
+      "src": "https://sessionzero.games/images/systems/mutant-year-zero-g1.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/Zone-Wars-photo-2.jpg"
+      "src": "https://sessionzero.games/images/systems/mutant-year-zero-g2.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/Zone-Wars-photo-5.jpg"
+      "src": "https://sessionzero.games/images/systems/mutant-year-zero-g3.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/Zone-Wars-photo-7.jpg"
+      "src": "https://sessionzero.games/images/systems/mutant-year-zero-g4.jpg"
     }
   ],
   "resources": [

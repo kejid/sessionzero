@@ -21,13 +21,13 @@ registerSystem("dnd-5e", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://static.wikia.nocookie.net/dungeonsdragons/images/2/27/PHB5e.jpg/revision/latest?cb=20191127044344"
+      "src": "https://sessionzero.games/images/systems/dnd-5e-g1.jpg"
     },
     {
-      "src": "https://wrathofzombie.wordpress.com/wp-content/uploads/2014/08/phb-cover-art.jpg"
+      "src": "https://sessionzero.games/images/systems/dnd-5e-g2.jpg"
     },
     {
-      "src": "https://cdn.vox-cdn.com/thumbor/JkiyvfbW11Txi9UgK3_cZlNEaPo=/0x0:5433x3336/1920x0/filters:focal(0x0:5433x3336):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/25448127/0_DnD_PHB_ALT_Cvr_Full_Cvr.jpg"
+      "src": "https://sessionzero.games/images/systems/dnd-5e-g3.jpg"
     }
   ],
   "resources": [

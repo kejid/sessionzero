@@ -16,9 +16,9 @@ registerSystem("godbound", {
   "playstyleTags": ["action", "worldbuild", "combat"],
   "settingTags": ["fantasy"],
   "gallery": [
-    { "src": "https://image.nobleknight.com/l/jpg1500/lexicoofthro.jpg" },
-    { "src": "https://image.nobleknight.com/1/jpg1500/10blades.jpg" },
-    { "src": "https://image.nobleknight.com/2/jpg1500/2370011105765worlds.jpg" }
+    { "src": "https://sessionzero.games/images/systems/godbound-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/godbound-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/godbound-g3.jpg" }
   ],
   "resources": [
     { "type": "rules", "url": "https://www.drivethrurpg.com/en/product/185959/godbound-a-game-of-divine-heroes-free-edition", "fmt": "PDF (free)" },

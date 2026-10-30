@@ -20,13 +20,13 @@ registerSystem("advanced-fighting-fantasy", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://cdn.freewebstore.com/origin/235161/cb77001-thumb.jpg"
+      "src": "https://sessionzero.games/images/systems/advanced-fighting-fantasy-g1.jpg"
     },
     {
-      "src": "https://cdn.freewebstore.com/origin/235161/488616_1765104439277.png"
+      "src": "https://sessionzero.games/images/systems/advanced-fighting-fantasy-g2.webp"
     },
     {
-      "src": "https://cdn.freewebstore.com/origin/235161/483969_1726044220939.png"
+      "src": "https://sessionzero.games/images/systems/advanced-fighting-fantasy-g3.jpg"
     }
   ],
   "resources": [

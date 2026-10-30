@@ -20,13 +20,13 @@ registerSystem("numenera", {
   "settingTags": ["weird"],
   "gallery": [
     {
-      "src": "https://www.montecookgames.com/store/wp-content/uploads/2015/11/Ninth-World-Bestiary.jpg"
+      "src": "https://sessionzero.games/images/systems/numenera-g1.jpg"
     },
     {
-      "src": "https://www.montecookgames.com/store/wp-content/uploads/2015/11/Ninth-World-Guidebook.jpg"
+      "src": "https://sessionzero.games/images/systems/numenera-g2.jpg"
     },
     {
-      "src": "https://www.montecookgames.com/store/wp-content/uploads/2016/11/NSS-3D-Cover-Tags.jpg"
+      "src": "https://sessionzero.games/images/systems/numenera-g3.jpg"
     }
   ],
   "resources": [

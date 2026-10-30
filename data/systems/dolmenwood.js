@@ -11,7 +11,7 @@ registerSystem("dolmenwood", {
   "complexity": 2,
   "free": false,
   "foundryStatus": "Community",
-  "heroImage": "https://cdn.shopify.com/s/files/1/0017/2330/1933/files/RefScreen.jpg?v=1704807528",
+  "heroImage": "https://sessionzero.games/images/heroes/dolmenwood.jpg",
   "playstyleTags": [
     "explore",
     "combat",
@@ -20,13 +20,13 @@ registerSystem("dolmenwood", {
   "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
-      "src": "https://cdn.shopify.com/s/files/1/0017/2330/1933/files/Thumbnail_ce144c08-d39d-4fc1-88ee-4cb210bc0e20.jpg?v=1750675469"
+      "src": "https://sessionzero.games/images/systems/dolmenwood-g1.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0017/2330/1933/files/Thumbnail_fadb86b1-ec93-489a-8a1b-2a5552dcc8b3.png?v=1688756218"
+      "src": "https://sessionzero.games/images/systems/dolmenwood-g2.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0017/2330/1933/files/Thumbnail_094cd9d8-a0c2-4f50-a548-3ecd95f7ef34.png?v=1688756199"
+      "src": "https://sessionzero.games/images/systems/dolmenwood-g3.jpg"
     }
   ],
   "resources": [

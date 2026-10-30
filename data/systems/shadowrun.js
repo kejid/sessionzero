@@ -11,7 +11,7 @@ registerSystem("shadowrun", {
   "complexity": 4,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://cdn11.bigcommerce.com/s-ua4dd/images/stencil/500x659/products/36460/415229/Copy_of_Website_Image_Template3360__18385.1751897343.png?c=2",
+  "heroImage": "https://sessionzero.games/images/heroes/shadowrun.webp",
   "playstyleTags": [
     "tactical",
     "combat",
@@ -20,13 +20,13 @@ registerSystem("shadowrun", {
   "settingTags": ["cyberpunk", "fantasy"],
   "gallery": [
     {
-      "src": "https://seaofstarsrpg.wordpress.com/wp-content/uploads/2021/05/sr-sw.png"
+      "src": "https://sessionzero.games/images/systems/shadowrun-g1.webp"
     },
     {
-      "src": "https://seaofstarsrpg.wordpress.com/wp-content/uploads/2020/06/cat28002_firing-squad.png"
+      "src": "https://sessionzero.games/images/systems/shadowrun-g2.webp"
     },
     {
-      "src": "https://cdn11.bigcommerce.com/s-ua4dd/images/stencil/500x659/products/36460/415229/Copy_of_Website_Image_Template3360__18385.1751897343.png?c=2"
+      "src": "https://sessionzero.games/images/heroes/shadowrun.webp"
     }
   ],
   "resources": [

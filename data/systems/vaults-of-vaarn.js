@@ -12,7 +12,7 @@ registerSystem("vaults-of-vaarn", {
   "edition": null,
   "free": true,
   "foundryStatus": "None",
-  "heroImage": "https://iglootree.com/cdn/shop/files/VaultsofVaarnIssue4_1.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/vaults-of-vaarn.jpg",
   "playstyleTags": [
     "explore",
     "survival",
@@ -21,13 +21,13 @@ registerSystem("vaults-of-vaarn", {
   "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
-      "src": "https://iglootree.com/cdn/shop/files/VaultsofVaarnIssue4_2.jpg"
+      "src": "https://sessionzero.games/images/systems/vaults-of-vaarn-g1.jpg"
     },
     {
-      "src": "https://iglootree.com/cdn/shop/files/VaultsofVaarnIssue4_3.jpg"
+      "src": "https://sessionzero.games/images/systems/vaults-of-vaarn-g2.jpg"
     },
     {
-      "src": "https://iglootree.com/cdn/shop/files/VaultsofVaarnIssue4_4.jpg"
+      "src": "https://sessionzero.games/images/systems/vaults-of-vaarn-g3.jpg"
     }
   ],
   "resources": [

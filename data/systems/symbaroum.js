@@ -16,9 +16,9 @@ registerSystem("symbaroum", {
   "playstyleTags": ["explore", "mystery", "horror"],
   "settingTags": ["fantasy", "weird"],
   "gallery": [
-    { "src": "https://image.nobleknight.com/i/jpg1500/impmuh051001.jpg" },
-    { "src": "https://image.nobleknight.com/i/jpg1500/impmuh050550.jpg" },
-    { "src": "https://image.nobleknight.com/i/jpg1500/impmuh051614.jpg" }
+    { "src": "https://sessionzero.games/images/systems/symbaroum-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/symbaroum-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/symbaroum-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://freeleaguepublishing.com/games/symbaroum/", "fmt": "Web" },

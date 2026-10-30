@@ -16,9 +16,9 @@ registerSystem("sentinel-comics", {
   "playstyleTags": ["action", "combat", "narrative"],
   "settingTags": ["modern"],
   "gallery": [
-    { "src": "https://shop.greaterthangames.com/cdn/shop/files/SRPG-CORE-2.jpg" },
-    { "src": "https://shop.greaterthangames.com/cdn/shop/files/SRPG-CORE-3.jpg" },
-    { "src": "https://shop.greaterthangames.com/cdn/shop/files/SRPG-CORE-4.jpg" }
+    { "src": "https://sessionzero.games/images/systems/sentinel-comics-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/sentinel-comics-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/sentinel-comics-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://shop.greaterthangames.com/pages/sentinel-comics", "fmt": "Web" },

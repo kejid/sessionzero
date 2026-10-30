@@ -12,12 +12,12 @@ registerSystem("thirsty-sword-lesbians", {
   "free": false,
   "edition": null,
   "foundryStatus": "Community",
-  "heroImage": "https://evilhat.com/wp-content/uploads/2021/10/products-TSL-Cover-Mockup-front-900px.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/thirsty-sword-lesbians.jpg",
   "playstyleTags": ["narrative", "social", "action"],
   "settingTags": ["fantasy"],
   "gallery": [
-    { "src": "https://evilhat.com/wp-content/uploads/2021/08/TSL-Cover-3d-web.png" },
-    { "src": "https://evilhat.com/wp-content/uploads/2021/10/Advanced-Lovers-and-Lesbians-Front-for-web.jpg" }
+    { "src": "https://sessionzero.games/images/systems/thirsty-sword-lesbians-g1.webp" },
+    { "src": "https://sessionzero.games/images/systems/thirsty-sword-lesbians-g2.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://evilhat.com/product/thirsty-sword-lesbians/", "fmt": "Web" },

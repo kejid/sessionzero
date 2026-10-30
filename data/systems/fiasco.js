@@ -20,13 +20,13 @@ registerSystem("fiasco", {
   "settingTags": ["modern"],
   "gallery": [
     {
-      "src": "https://bullypulpitgames.com/cdn/shop/files/Fiasco_Boxed-grey.jpg"
+      "src": "https://sessionzero.games/images/systems/fiasco-g1.jpg"
     },
     {
-      "src": "https://bullypulpitgames.com/cdn/shop/products/fiascoclassiccollagecrop.jpg"
+      "src": "https://sessionzero.games/images/systems/fiasco-g2.jpg"
     },
     {
-      "src": "https://bullypulpitgames.com/cdn/shop/products/FiascoClassic-grey.jpg"
+      "src": "https://sessionzero.games/images/systems/fiasco-g3.jpg"
     }
   ],
   "resources": [

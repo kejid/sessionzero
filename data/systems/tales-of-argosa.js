@@ -11,7 +11,7 @@ registerSystem("tales-of-argosa", {
   "complexity": 3,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://lowfantasygaming.com/wp-content/uploads/2024/07/image-1.png",
+  "heroImage": "https://sessionzero.games/images/heroes/tales-of-argosa.jpg",
   "playstyleTags": [
     "combat",
     "explore",
@@ -20,10 +20,10 @@ registerSystem("tales-of-argosa", {
   "settingTags": ["fantasy", "sword-and-sorcery"],
   "gallery": [
     {
-      "src": "https://lowfantasygaming.com/wp-content/uploads/2024/07/image-8.png"
+      "src": "https://sessionzero.games/images/systems/tales-of-argosa-g1.jpg"
     },
     {
-      "src": "https://lowfantasygaming.com/wp-content/uploads/2024/01/mines-of-perinthos-thumb.png"
+      "src": "https://sessionzero.games/images/systems/tales-of-argosa-g2.jpg"
     }
   ],
   "resources": [

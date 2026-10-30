@@ -22,10 +22,10 @@ registerSystem("worlds-without-number", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://thegaminggang.com/wp-content/uploads/2021/03/Worlds-Without-Number.jpg"
+      "src": "https://sessionzero.games/images/systems/worlds-without-number-g1.jpg"
     },
     {
-      "src": "https://image.nobleknight.com/2/jpg1500/23222440222h.jpg"
+      "src": "https://sessionzero.games/images/systems/worlds-without-number-g2.jpg"
     }
   ],
   "resources": [

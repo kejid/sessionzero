@@ -11,7 +11,7 @@ registerSystem("pathfinder", {
   "complexity": 4,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://cdn11.bigcommerce.com/s-e0sdfpgiwh/images/stencil/1280x1280/products/13791/458/XmlXLh1R__42781.1757988737.jpg?c=1",
+  "heroImage": "https://sessionzero.games/images/heroes/pathfinder.jpg",
   "playstyleTags": [
     "combat",
     "explore",
@@ -20,13 +20,13 @@ registerSystem("pathfinder", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://cdn11.bigcommerce.com/s-e0sdfpgiwh/images/stencil/1280x1280/products/13791/458/XmlXLh1R__42781.1757988737.jpg?c=1"
+      "src": "https://sessionzero.games/images/heroes/pathfinder.jpg"
     },
     {
-      "src": "https://cdn11.bigcommerce.com/s-e0sdfpgiwh/images/stencil/1280x1280/products/13806/467/H2_5tOuE__42476.1755060900.jpg?c=1"
+      "src": "https://sessionzero.games/images/systems/pathfinder-g2.jpg"
     },
     {
-      "src": "https://cdn11.bigcommerce.com/s-e0sdfpgiwh/images/stencil/1280x1280/products/184/472/2P9NAHsZ__09634.1755061996.jpg?c=1"
+      "src": "https://sessionzero.games/images/systems/pathfinder-g3.jpg"
     }
   ],
   "resources": [

@@ -20,13 +20,13 @@ registerSystem("black-sword-hack", {
   "settingTags": ["fantasy", "sword-and-sorcery"],
   "gallery": [
     {
-      "src": "https://www.themerrymushmen.com/wp-content/uploads/2022/12/BSH-Book_Mockup_01BBAP.jpg"
+      "src": "https://sessionzero.games/images/systems/black-sword-hack-g1.jpg"
     },
     {
-      "src": "https://www.themerrymushmen.com/wp-content/uploads/2022/12/BSH-MockupCREA.jpg"
+      "src": "https://sessionzero.games/images/systems/black-sword-hack-g2.jpg"
     },
     {
-      "src": "https://www.themerrymushmen.com/wp-content/uploads/2022/12/BSH-MockupBASEADVS-scaled.jpg"
+      "src": "https://sessionzero.games/images/systems/black-sword-hack-g3.jpg"
     }
   ],
   "resources": [

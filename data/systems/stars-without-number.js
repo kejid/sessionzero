@@ -22,7 +22,7 @@ registerSystem("stars-without-number", {
   "settingTags": ["space"],
   "gallery": [
     {
-      "src": "https://image.nobleknight.com/s/jpg1500/swnrre.jpg"
+      "src": "https://sessionzero.games/images/systems/stars-without-number-g1.jpg"
     }
   ],
   "resources": [

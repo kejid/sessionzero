@@ -10,7 +10,7 @@ registerSystem("alien", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Official контент",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/Jacksons-Star-Col-Price-3-1440x720.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/alien.jpg",
   "playstyleTags": [
     "horror",
     "survival",
@@ -19,16 +19,16 @@ registerSystem("alien", {
   "settingTags": ["space"],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Alien_8.jpg"
+      "src": "https://sessionzero.games/images/systems/alien-g1.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/ALIEN-RPG-Colonial-Marines-Operations-Manual-1-2-green4-brighter-giant-1.jpg"
+      "src": "https://sessionzero.games/images/systems/alien-g2.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Alien_21-1.jpg"
+      "src": "https://sessionzero.games/images/systems/alien-g3.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/ALIEN-RPG-Colonial-Marines1_C-3-scaled.jpg"
+      "src": "https://sessionzero.games/images/systems/alien-g4.jpg"
     }
   ],
   "resources": [

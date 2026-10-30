@@ -10,7 +10,7 @@ registerSystem("outcast-silver-raiders", {
   "players": "3–6",
   "complexity": 2,
   "foundryStatus": "None",
-  "heroImage": "https://images.squarespace-cdn.com/content/v1/5e669e911f689d55045f96b8/41b71530-99c4-4e85-abae-6f6b7edabcff/church+battle.png",
+  "heroImage": "https://sessionzero.games/images/heroes/outcast-silver-raiders.webp",
   "playstyleTags": [
     "explore",
     "survival",
@@ -19,13 +19,13 @@ registerSystem("outcast-silver-raiders", {
   "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
-      "src": "https://images.squarespace-cdn.com/content/v1/5e669e911f689d55045f96b8/1a8bbe5d-2ba9-4488-bb91-947de0692570/warlock+tower.png"
+      "src": "https://sessionzero.games/images/systems/outcast-silver-raiders-g1.jpg"
     },
     {
-      "src": "https://images.squarespace-cdn.com/content/v1/5e669e911f689d55045f96b8/26b1d141-9da5-466a-98ef-ca74538ebb1c/warriors.png"
+      "src": "https://sessionzero.games/images/systems/outcast-silver-raiders-g2.jpg"
     },
     {
-      "src": "https://images.squarespace-cdn.com/content/v1/5e669e911f689d55045f96b8/55cdd122-0ce9-4b01-83ec-3436bec05bb6/rogues.png"
+      "src": "https://sessionzero.games/images/systems/outcast-silver-raiders-g3.jpg"
     }
   ],
   "resources": [

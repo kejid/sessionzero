@@ -11,7 +11,7 @@ registerSystem("ironsworn", {
   "players": "1–4",
   "complexity": 2,
   "free": true,
-  "heroImage": "https://img.itch.zone/aW1nLzE3OTgwODguanBn/original/gRDqF5.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/ironsworn.jpg",
   "playstyleTags": [
     "solo",
     "explore",
@@ -21,13 +21,13 @@ registerSystem("ironsworn", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMzU5NzA3LzE3OTgxMTQucG5n/347x500/4T0Q8w.png"
+      "src": "https://sessionzero.games/images/systems/ironsworn-g1.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMzU5NzA3LzE3OTgxMTUucG5n/347x500/e4qPTQ.png"
+      "src": "https://sessionzero.games/images/systems/ironsworn-g2.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMzU5NzA3LzE3OTgxMTIucG5n/347x500/A9moFn.png"
+      "src": "https://sessionzero.games/images/systems/ironsworn-g3.jpg"
     }
   ],
   "resources": [

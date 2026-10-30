@@ -11,7 +11,7 @@ registerSystem("fate", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Official",
-  "heroImage": "https://d1vzi28wh99zvq.cloudfront.net/images/2152/114903.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/fate.jpg",
   "playstyleTags": [
     "narrative",
     "explore",
@@ -20,13 +20,13 @@ registerSystem("fate", {
   "settingTags": [],
   "gallery": [
     {
-      "src": "https://d1vzi28wh99zvq.cloudfront.net/images/2152/114902.jpg"
+      "src": "https://sessionzero.games/images/systems/fate-g1.jpg"
     },
     {
-      "src": "https://static.wikia.nocookie.net/rpgtalk/images/8/8a/Fate_Accelerated_cover.jpg"
+      "src": "https://sessionzero.games/images/systems/fate-g2.jpg"
     },
     {
-      "src": "https://d1vzi28wh99zvq.cloudfront.net/images/2152/114903.jpg"
+      "src": "https://sessionzero.games/images/heroes/fate.jpg"
     }
   ],
   "resources": [

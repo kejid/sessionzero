@@ -11,7 +11,7 @@ registerSystem("troika", {
   "complexity": 1,
   "free": true,
   "foundryStatus": "Official",
-  "heroImage": "https://img.itch.zone/aW1nLzMyMjg4MDkucG5n/original/hYv6Fw.png",
+  "heroImage": "https://sessionzero.games/images/heroes/troika.jpg",
   "playstyleTags": [
     "narrative",
     "explore",
@@ -20,13 +20,13 @@ registerSystem("troika", {
   "settingTags": ["weird"],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMzkyODUxLzE5NDYwMDAuanBn/original/Wjwgpm.jpg"
+      "src": "https://sessionzero.games/images/systems/troika-g1.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMzkyODUxLzE5NDU5OTEuanBn/original/bcfBWl.jpg"
+      "src": "https://sessionzero.games/images/systems/troika-g2.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMzkyODUxLzE5NDU5OTMuanBn/original/8w8VYj.jpg"
+      "src": "https://sessionzero.games/images/systems/troika-g3.jpg"
     }
   ],
   "resources": [

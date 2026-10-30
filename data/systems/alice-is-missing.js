@@ -12,13 +12,13 @@ registerSystem("alice-is-missing", {
   "free": false,
   "edition": null,
   "foundryStatus": "None",
-  "heroImage": "https://cdn11.bigcommerce.com/s-kftzvkkgjv/images/stencil/1280x1280/products/119/553/AliceIsMissing_1000%C3%97%E2%80%8A1000__77444.1611281398.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/alice-is-missing.jpg",
   "playstyleTags": ["mystery", "narrative", "social"],
   "settingTags": ["modern"],
   "gallery": [
-    { "src": "https://cdn11.bigcommerce.com/s-kftzvkkgjv/images/stencil/1280x1280/products/119/552/AIM_Box_Skew_2000x2000__96002.1611281398.png" },
-    { "src": "https://cdn11.bigcommerce.com/s-kftzvkkgjv/images/stencil/1280x1280/products/119/554/AliceIsMissing_Setup3_1000x600__08332.1611281398.jpg" },
-    { "src": "https://cdn11.bigcommerce.com/s-kftzvkkgjv/images/stencil/1280x1280/products/1939/4043/AIM-SF-Mockup_1__73001.1696362263.png" }
+    { "src": "https://sessionzero.games/images/systems/alice-is-missing-g1.webp" },
+    { "src": "https://sessionzero.games/images/systems/alice-is-missing-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/alice-is-missing-g3.webp" }
   ],
   "resources": [
     { "type": "link", "url": "https://renegadegamestudios.com/alice-is-missing/", "fmt": "Print" },

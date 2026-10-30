@@ -20,13 +20,13 @@ registerSystem("savage-worlds", {
   "settingTags": [],
   "gallery": [
     {
-      "src": "https://www.seekpng.com/png/detail/890-8905220_savage-worlds-savage-worlds-adventure-edition.png"
+      "src": "https://sessionzero.games/images/systems/savage-worlds-g1.jpg"
     },
     {
       "src": "https://sessionzero.games/images/systems/savage-worlds-g1.jpeg"
     },
     {
-      "src": "https://www.belloflostsouls.net/wp-content/uploads/2020/05/savage-worlds.png"
+      "src": "https://sessionzero.games/images/systems/savage-worlds-g3.jpg"
     }
   ],
   "resources": [

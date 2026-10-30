@@ -22,16 +22,16 @@ registerSystem("sword-and-wizardry", {
   "settingTags": ["fantasy", "sword-and-sorcery"],
   "gallery": [
     {
-      "src": "https://www.mythmeregames.com/cdn/shop/files/Swords_Wizardry_f97618b8-689a-4b99-a580-ca1a2182a1cc.png?v=1707749908"
+      "src": "https://sessionzero.games/images/systems/sword-and-wizardry-g1.jpg"
     },
     {
-      "src": "https://www.mythmeregames.com/cdn/shop/files/SWPlayerBook20232_a8c5d191-e209-406f-878d-63f60a271a85.jpg"
+      "src": "https://sessionzero.games/images/systems/sword-and-wizardry-g2.jpg"
     },
     {
-      "src": "https://www.mythmeregames.com/cdn/shop/files/SWPlayerBook20233_b52fdac8-d4ed-4a1d-87cf-cfff19ebea7c.jpg"
+      "src": "https://sessionzero.games/images/systems/sword-and-wizardry-g3.jpg"
     },
     {
-      "src": "https://www.mythmeregames.com/cdn/shop/files/SWPlayerBook20234_08e48758-c05f-4ce8-ba9a-f67252765223.jpg"
+      "src": "https://sessionzero.games/images/systems/sword-and-wizardry-g4.jpg"
     }
   ],
   "resources": [

@@ -12,13 +12,13 @@ registerSystem("urban-shadows", {
   "free": false,
   "edition": "2nd Edition (2022)",
   "foundryStatus": "Community",
-  "heroImage": "https://magpiegames.com/cdn/shop/collections/US2Ecollection.png?v=1746477095",
+  "heroImage": "https://sessionzero.games/images/heroes/urban-shadows.jpg",
   "playstyleTags": ["narrative", "social", "horror"],
   "settingTags": ["urban-fantasy", "modern"],
   "gallery": [
-    { "src": "https://magpiegames.com/cdn/shop/files/Urban-Shadows-Core_2.jpg" },
-    { "src": "https://magpiegames.com/cdn/shop/files/Urban-Shadows-Core_3.jpg" },
-    { "src": "https://magpiegames.com/cdn/shop/files/Urban-Shadows-Core_4.jpg" }
+    { "src": "https://sessionzero.games/images/systems/urban-shadows-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/urban-shadows-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/urban-shadows-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://magpiegames.com/products/core-book-urban-shadows-1", "fmt": "Web" },

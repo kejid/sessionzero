@@ -12,13 +12,13 @@ registerSystem("monsterhearts", {
   "free": false,
   "edition": "Second Edition",
   "foundryStatus": "Community",
-  "heroImage": "https://buriedwithoutceremony.com/wp-content/uploads/2019/11/Monsterhearts-Cover-Characters-scaled.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/monsterhearts.jpg",
   "playstyleTags": ["narrative", "social", "horror"],
   "settingTags": ["urban-fantasy", "modern"],
   "gallery": [
-    { "src": "https://image.nobleknight.com/m/jpg1500/monasteryheartilytoorealllllll.jpg" },
-    { "src": "https://cdn.shopify.com/s/files/1/0271/4022/7143/files/Monsterhearts_Print.png?v=1748123322" },
-    { "src": "https://cdn.shopify.com/s/files/1/0271/4022/7143/files/Monsterhearts_PDF.png?v=1748123228" }
+    { "src": "https://sessionzero.games/images/systems/monsterhearts-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/monsterhearts-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/monsterhearts-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://buriedwithoutceremony.com/monsterhearts", "fmt": "Web" },

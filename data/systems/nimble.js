@@ -10,7 +10,7 @@ registerSystem("nimble", {
   "players": "3–6",
   "complexity": 2,
   "foundryStatus": "Нет",
-  "heroImage": "https://nimblerpg.com/cdn/shop/files/HeroesFullArt.jpg?v=1741803078&width=3840",
+  "heroImage": "https://sessionzero.games/images/heroes/nimble.jpg",
   "heroStyle": "background: linear-gradient(135deg, #1a3a2a, #0f1a0f, #2d1b00);",
   "playstyleTags": [
     "combat",
@@ -19,16 +19,16 @@ registerSystem("nimble", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://nimblerpg.com/cdn/shop/files/HeroesFullArt.jpg?v=1741803078&width=3840"
+      "src": "https://sessionzero.games/images/heroes/nimble.jpg"
     },
     {
-      "src": "https://nimblerpg.com/cdn/shop/files/Maw.jpg?v=1741832672&width=3840"
+      "src": "https://sessionzero.games/images/systems/nimble-g2.jpg"
     },
     {
-      "src": "https://nimblerpg.com/cdn/shop/files/GMScreenWrap1.jpg?v=1741797122"
+      "src": "https://sessionzero.games/images/systems/nimble-g3.jpg"
     },
     {
-      "src": "https://nimblerpg.com/cdn/shop/articles/dragonArtFullB.jpg?v=1770732852&width=300"
+      "src": "https://sessionzero.games/images/systems/nimble-g4.jpg"
     }
   ],
   "resources": [

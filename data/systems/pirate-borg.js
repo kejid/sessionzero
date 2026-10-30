@@ -10,7 +10,7 @@ registerSystem("pirate-borg", {
   "players": "2–6",
   "complexity": 1,
   "foundryStatus": "Community",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/pirateborg-1440x720.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/pirate-borg.jpg",
   "playstyleTags": [
     "explore",
     "survival",
@@ -19,7 +19,7 @@ registerSystem("pirate-borg", {
   "settingTags": ["historical", "fantasy"],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/pirateborg-1440x720.jpg"
+      "src": "https://sessionzero.games/images/heroes/pirate-borg.jpg"
     }
   ],
   "resources": [

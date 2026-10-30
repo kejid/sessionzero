@@ -10,7 +10,7 @@ registerSystem("fist", {
   "players": "2–5",
   "complexity": 1,
   "foundryStatus": "Community",
-  "heroImage": "https://img.itch.zone/aW1nLzMxMjI4NzUucG5n/original/zku5yb.png",
+  "heroImage": "https://sessionzero.games/images/heroes/fist.jpg",
   "playstyleTags": [
     "action",
     "survival",
@@ -19,7 +19,7 @@ registerSystem("fist", {
   "settingTags": ["modern", "historical"],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1nLzMxMjI4NzUucG5n/original/zku5yb.png"
+      "src": "https://sessionzero.games/images/heroes/fist.jpg"
     }
   ],
   "quotes": [

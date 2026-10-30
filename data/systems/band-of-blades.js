@@ -12,13 +12,13 @@ registerSystem("band-of-blades", {
   "free": false,
   "edition": null,
   "foundryStatus": "Community",
-  "heroImage": "https://evilhat.com/wp-content/uploads/2021/08/BoB_Cover_Changed.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/band-of-blades.jpg",
   "playstyleTags": ["tactical", "survival", "combat"],
   "settingTags": ["fantasy"],
   "gallery": [
-    { "src": "https://evilhat.com/wp-content/uploads/2021/08/Web-Band-of-Blades-3d.png" },
-    { "src": "https://evilhat.com/wp-content/uploads/2021/08/Band-of-Blades-Map-Color-rsz.webp" },
-    { "src": "https://evilhat.com/wp-content/uploads/2021/08/chosen.jpg" }
+    { "src": "https://sessionzero.games/images/systems/band-of-blades-g1.webp" },
+    { "src": "https://sessionzero.games/images/systems/band-of-blades-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/band-of-blades-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://evilhat.com/product/band-of-blades/", "fmt": "Web" },

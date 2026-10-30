@@ -11,7 +11,7 @@ registerSystem("call-of-cthulhu", {
   "players": "2–6",
   "complexity": 3,
   "foundryStatus": "Community + Official modules",
-  "heroImage": "https://www.tribality.com/wp-content/uploads/2019/04/richard-wright-cthulhu-museum1-1024x512.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/call-of-cthulhu.jpg",
   "playstyleTags": [
     "mystery",
     "horror",
@@ -21,10 +21,10 @@ registerSystem("call-of-cthulhu", {
   "settingTags": ["historical", "weird"],
   "gallery": [
     {
-      "src": "https://www.rpgtabletopgames.com/wp-content/uploads/call-of-cthulhu-rpg.jpg"
+      "src": "https://sessionzero.games/images/systems/call-of-cthulhu-g1.jpg"
     },
     {
-      "src": "https://www.tribality.com/wp-content/uploads/2019/04/richard-wright-cthulhu-museum1-1024x512.jpg"
+      "src": "https://sessionzero.games/images/heroes/call-of-cthulhu.jpg"
     },
     {
       "src": "https://sessionzero.games/images/systems/call-of-cthulhu-g2.jpg"

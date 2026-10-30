@@ -20,13 +20,13 @@ registerSystem("dune-imperium", {
   "settingTags": ["space"],
   "gallery": [
     {
-      "src": "https://i.shgcdn.com/c00c3029-a208-4425-98f5-bd18c9db95da/-/format/auto/-/preview/3000x3000/-/quality/better/"
+      "src": "https://sessionzero.games/images/systems/dune-imperium-g1.jpg"
     },
     {
-      "src": "https://i.shgcdn.com/398720aa-96dd-4754-a6f5-648cdffd2dac/-/format/auto/-/preview/3000x3000/-/quality/better/"
+      "src": "https://sessionzero.games/images/systems/dune-imperium-g2.jpg"
     },
     {
-      "src": "https://i.shgcdn.com/a5d8acc2-4854-4e22-8c65-89b9c18905a8/-/format/auto/-/preview/3000x3000/-/quality/better/"
+      "src": "https://sessionzero.games/images/systems/dune-imperium-g3.jpg"
     }
   ],
   "resources": [

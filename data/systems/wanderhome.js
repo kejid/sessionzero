@@ -10,7 +10,7 @@ registerSystem("wanderhome", {
   "players": "2–5",
   "complexity": 1,
   "foundryStatus": "None",
-  "heroImage": "https://possumcreekgames.com/cdn/shop/files/wanderhome_Sylvia_2_1500x.png?v=1625780744",
+  "heroImage": "https://sessionzero.games/images/heroes/wanderhome.jpg",
   "playstyleTags": [
     "narrative",
     "social",
@@ -19,13 +19,13 @@ registerSystem("wanderhome", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://cdn.shopify.com/s/files/1/0569/2912/4552/files/Parade_of_small_and_forgotten_gods_600x600.jpg?v=1637781495"
+      "src": "https://sessionzero.games/images/systems/wanderhome-g1.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0569/2912/4552/files/Candlefeast-9x18_low-res-JPG_600x600.jpg?v=1637781564"
+      "src": "https://sessionzero.games/images/systems/wanderhome-g2.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0569/2912/4552/files/2021_Wanderhome_Oneshot-1536x1536_480x480.png?v=1637783341"
+      "src": "https://sessionzero.games/images/systems/wanderhome-g3.jpg"
     }
   ],
   "resources": [

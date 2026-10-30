@@ -11,7 +11,7 @@ registerSystem("wfrp", {
   "complexity": 3,
   "free": true,
   "foundryStatus": "Official",
-  "heroImage": "https://d1vzi28wh99zvq.cloudfront.net/images/54/248284.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/wfrp.jpg",
   "playstyleTags": [
     "combat",
     "explore",
@@ -20,13 +20,13 @@ registerSystem("wfrp", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://d1vzi28wh99zvq.cloudfront.net/images/54/261941.jpg"
+      "src": "https://sessionzero.games/images/systems/wfrp-g1.jpg"
     },
     {
-      "src": "https://manaburnt.wordpress.com/wp-content/uploads/2018/09/warhammer-4th-ed.jpg"
+      "src": "https://sessionzero.games/images/systems/wfrp-g2.jpg"
     },
     {
-      "src": "https://manaburnt.wordpress.com/wp-content/uploads/2018/09/untitled.png"
+      "src": "https://sessionzero.games/images/systems/wfrp-g3.jpg"
     }
   ],
   "resources": [

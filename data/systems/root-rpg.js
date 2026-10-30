@@ -12,13 +12,13 @@ registerSystem("root-rpg", {
   "free": false,
   "edition": null,
   "foundryStatus": "Official",
-  "heroImage": "https://magpiegames.com/cdn/shop/collections/MPG-Website-slider-Root-colored-1.jpg?v=1724344612",
+  "heroImage": "https://sessionzero.games/images/heroes/root-rpg.jpg",
   "playstyleTags": ["narrative", "action", "explore"],
   "settingTags": ["fantasy"],
   "gallery": [
-    { "src": "https://magpiegames.com/cdn/shop/files/Root-Core_2.jpg?v=1734448179" },
-    { "src": "https://magpiegames.com/cdn/shop/files/Root-Core_3.jpg?v=1734448179" },
-    { "src": "https://magpiegames.com/cdn/shop/files/Root-Core_4.jpg?v=1734448179" }
+    { "src": "https://sessionzero.games/images/systems/root-rpg-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/root-rpg-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/root-rpg-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://magpiegames.com/collections/root", "fmt": "Web" },

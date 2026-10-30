@@ -10,7 +10,7 @@ registerSystem("twilight", {
   "players": "3–5",
   "complexity": 4,
   "foundryStatus": "Official",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Twilight_2000_RPG_Combat_3000-1440x720.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/twilight.jpg",
   "playstyleTags": [
     "survival",
     "tactical",
@@ -20,16 +20,16 @@ registerSystem("twilight", {
   "settingTags": ["modern", "postapoc"],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Twilight_2000_RPG_Factions.jpg"
+      "src": "https://sessionzero.games/images/systems/twilight-g1.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/11/1.-Rules-Gear-intro.jpg"
+      "src": "https://sessionzero.games/images/systems/twilight-g2.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/11/travel-intro.jpg"
+      "src": "https://sessionzero.games/images/systems/twilight-g3.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Twilight_2000_RPG_Scenarios.jpg"
+      "src": "https://sessionzero.games/images/systems/twilight-g4.jpg"
     }
   ],
   "resources": [

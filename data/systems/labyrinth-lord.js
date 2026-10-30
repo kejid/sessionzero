@@ -21,13 +21,13 @@ registerSystem("labyrinth-lord", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://image.nobleknight.com/g/jpg1500/gbd1003-dragon.jpg"
+      "src": "https://sessionzero.games/images/systems/labyrinth-lord-g1.jpg"
     },
     {
-      "src": "https://image.nobleknight.com/g/jpg1500/gbd1002.jpg"
+      "src": "https://sessionzero.games/images/systems/labyrinth-lord-g2.jpg"
     },
     {
-      "src": "https://image.nobleknight.com/i/jpg1500/impgbdmonlist.jpg"
+      "src": "https://sessionzero.games/images/systems/labyrinth-lord-g3.jpg"
     }
   ],
   "resources": [

@@ -20,13 +20,13 @@ registerSystem("shadowdark", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://www.thearcanelibrary.com/cdn/shop/files/ShadowdarkRPGDigitalPDF5_1200x.jpg?v=1684273611"
+      "src": "https://sessionzero.games/images/systems/shadowdark-g1.jpg"
     },
     {
-      "src": "https://www.thearcanelibrary.com/cdn/shop/files/ShadowdarkRPGDigitalPDF13_1200x.jpg?v=1684273502"
+      "src": "https://sessionzero.games/images/systems/shadowdark-g2.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1nLzE1MDUyMDQwLnBuZw==/original/j6pJeS.png"
+      "src": "https://sessionzero.games/images/systems/shadowdark-g3.jpg"
     }
   ],
   "resources": [

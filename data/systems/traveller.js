@@ -11,7 +11,7 @@ registerSystem("traveller", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Official",
-  "heroImage": "https://www.mongoosepublishing.com/cdn/shop/files/The_Core_Rulebook_2022_New_Cover_1800x.jpg?v=1733921202",
+  "heroImage": "https://sessionzero.games/images/heroes/traveller.jpg",
   "playstyleTags": [
     "explore",
     "sandbox",
@@ -20,16 +20,16 @@ registerSystem("traveller", {
   "settingTags": ["space"],
   "gallery": [
     {
-      "src": "https://www.mongoosepublishing.com/cdn/shop/files/The_Core_Rulebook_2022_New_Cover_1800x.jpg?v=1733921202"
+      "src": "https://sessionzero.games/images/heroes/traveller.jpg"
     },
     {
-      "src": "https://www.mongoosepublishing.com/cdn/shop/files/hg2022_1562x.jpg?v=1777472594"
+      "src": "https://sessionzero.games/images/systems/traveller-g2.jpg"
     },
     {
-      "src": "https://www.mongoosepublishing.com/cdn/shop/products/CSCUpdate2023frontCoverJPEG_aa9b7abf-6aad-4e3e-a506-12811312c221_1269x.jpg?v=1671718881"
+      "src": "https://sessionzero.games/images/systems/traveller-g3.jpg"
     },
     {
-      "src": "https://www.mongoosepublishing.com/cdn/shop/products/travthirdimp_2_914fc99f-1930-49cd-9b05-bf52448a0adf_1800x.jpg?v=1646393186"
+      "src": "https://sessionzero.games/images/systems/traveller-g4.jpg"
     }
   ],
   "resources": [

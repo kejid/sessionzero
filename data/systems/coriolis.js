@@ -10,7 +10,7 @@ registerSystem("coriolis", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Official контент",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/coriolis_ship-1440x720.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/coriolis.jpg",
   "playstyleTags": [
     "explore",
     "social",
@@ -20,16 +20,16 @@ registerSystem("coriolis", {
   "settingTags": ["space"],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/coriolisweb.jpg"
+      "src": "https://sessionzero.games/images/systems/coriolis-g1.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/coriolis_Kapitelbild_7-scaled.jpg"
+      "src": "https://sessionzero.games/images/systems/coriolis-g2.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/coriolis__s63.jpg"
+      "src": "https://sessionzero.games/images/systems/coriolis-g3.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/coriolis_vapenrustningar-scaled.jpg"
+      "src": "https://sessionzero.games/images/systems/coriolis-g4.jpg"
     }
   ],
   "resources": [

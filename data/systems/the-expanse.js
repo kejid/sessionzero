@@ -16,9 +16,9 @@ registerSystem("the-expanse", {
   "playstyleTags": ["narrative", "action", "explore"],
   "settingTags": ["space"],
   "gallery": [
-    { "src": "https://greenroninstore.com/cdn/shop/products/TheExpanse-SgtDraper.jpg?v=1670277014&width=1946" },
-    { "src": "https://greenroninstore.com/cdn/shop/products/TheExpanse-OriginBackground.jpg?v=1670277014&width=1946" },
-    { "src": "https://greenroninstore.com/cdn/shop/products/the-expanse-core-rulebook-TOC.jpg?v=1670277014&width=1946" }
+    { "src": "https://sessionzero.games/images/systems/the-expanse-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/the-expanse-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/the-expanse-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://greenroninstore.com/products/the-expanse-roleplaying-game", "fmt": "Print / PDF" },

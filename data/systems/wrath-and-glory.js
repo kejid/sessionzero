@@ -20,13 +20,13 @@ registerSystem("wrath-and-glory", {
   "settingTags": ["space", "weird"],
   "gallery": [
     {
-      "src": "https://image.nobleknight.com/c/jpg1500/cb72618.jpg"
+      "src": "https://sessionzero.games/images/systems/wrath-and-glory-g1.jpg"
     },
     {
-      "src": "https://image.nobleknight.com/c/jpg1500/cb72627.jpg"
+      "src": "https://sessionzero.games/images/systems/wrath-and-glory-g2.jpg"
     },
     {
-      "src": "https://image.nobleknight.com/c/jpg1500/cb72626.jpg"
+      "src": "https://sessionzero.games/images/systems/wrath-and-glory-g3.jpg"
     }
   ],
   "resources": [

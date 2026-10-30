@@ -16,9 +16,9 @@ registerSystem("burning-wheel", {
   "playstyleTags": ["narrative", "social", "tactical"],
   "settingTags": ["fantasy"],
   "gallery": [
-    { "src": "https://www.burningwheel.com/cdn/shop/files/BWGR_shot__49701.1690573425.1280.1280.jpg" },
-    { "src": "https://www.burningwheel.com/cdn/shop/files/18_BWCodex__25392.1690573290.1280.1280.jpg" },
-    { "src": "https://www.burningwheel.com/cdn/shop/files/19_BWAnthology__34914.1690573117.1280.1280.jpg" }
+    { "src": "https://sessionzero.games/images/systems/burning-wheel-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/burning-wheel-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/burning-wheel-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://www.burningwheel.com/", "fmt": "Web" },

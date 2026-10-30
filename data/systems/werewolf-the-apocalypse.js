@@ -16,9 +16,9 @@ registerSystem("werewolf-the-apocalypse", {
   "playstyleTags": ["combat", "narrative", "horror"],
   "settingTags": ["modern", "urban-fantasy"],
   "gallery": [
-    { "src": "https://image.nobleknight.com/w/jpg1500/wendigorev.jpg" },
-    { "src": "https://image.nobleknight.com/w/jpg1500/w20apocalypticrecorddx.jpg" },
-    { "src": "https://image.nobleknight.com/i/jpg1500/iprop-w-de.jpg" }
+    { "src": "https://sessionzero.games/images/systems/werewolf-the-apocalypse-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/werewolf-the-apocalypse-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/werewolf-the-apocalypse-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://theonyxpath.com/category/worlds/werewolftheapocalypse/", "fmt": "Web" },

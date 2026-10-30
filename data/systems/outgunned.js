@@ -10,7 +10,7 @@ registerSystem("outgunned", {
   "players": "3-5",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://www.belloflostsouls.net/wp-content/uploads/2023/05/Outgunned_Splash2.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/outgunned.jpg",
   "playstyleTags": [
     "combat",
     "narrative",
@@ -19,16 +19,16 @@ registerSystem("outgunned", {
   "settingTags": ["modern"],
   "gallery": [
     {
-      "src": "https://twolittlemice.net/wp-content/uploads/2024/01/Cover_OG_Site.jpg"
+      "src": "https://sessionzero.games/images/systems/outgunned-g1.jpg"
     },
     {
       "src": "https://sessionzero.games/images/systems/outgunned-g1.jpg"
     },
     {
-      "src": "https://twolittlemice.net/wp-content/uploads/2024/01/DL_Hero_Sheets.jpg"
+      "src": "https://sessionzero.games/images/systems/outgunned-g3.jpg"
     },
     {
-      "src": "https://twolittlemice.net/wp-content/uploads/2024/01/Download_QS_Site.jpg"
+      "src": "https://sessionzero.games/images/systems/outgunned-g4.jpg"
     }
   ],
   "resources": [

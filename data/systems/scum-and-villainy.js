@@ -19,13 +19,13 @@ registerSystem("scum-and-villainy", {
   "settingTags": ["space"],
   "gallery": [
     {
-      "src": "https://evilhat.com/wp-content/uploads/2018/06/SV_2.jpg"
+      "src": "https://sessionzero.games/images/systems/scum-and-villainy-g1.jpg"
     },
     {
-      "src": "https://evilhat.com/wp-content/uploads/2018/06/SV_3.jpg"
+      "src": "https://sessionzero.games/images/systems/scum-and-villainy-g2.jpg"
     },
     {
-      "src": "https://evilhat.com/wp-content/uploads/2018/06/SV_4.jpg"
+      "src": "https://sessionzero.games/images/systems/scum-and-villainy-g3.jpg"
     }
   ],
   "resources": [

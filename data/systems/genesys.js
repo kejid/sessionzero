@@ -16,9 +16,9 @@ registerSystem("genesys", {
   "playstyleTags": ["narrative", "action", "social"],
   "settingTags": ["fantasy", "cyberpunk"],
   "gallery": [
-    { "src": "https://image.nobleknight.com/f/jpg1500/ffggns03.jpg" },
-    { "src": "https://image.nobleknight.com/f/jpg1500/ffggns04.jpg" },
-    { "src": "https://image.nobleknight.com/f/jpg1500/ffggns12.jpg" }
+    { "src": "https://sessionzero.games/images/systems/genesys-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/genesys-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/genesys-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://www.edge-studio.net/games/genesys-core-rulebook/", "fmt": "Web" },

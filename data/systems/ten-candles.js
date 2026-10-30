@@ -19,13 +19,13 @@ registerSystem("ten-candles", {
   "settingTags": ["modern"],
   "gallery": [
     {
-      "src": "https://images.squarespace-cdn.com/content/v1/54cbdf08e4b0b8ab2e74ea9f/1619466008887-TFKCOGXSSKRLUUQG3G9J/Cv5dI7TWgAARHRY.jpg"
+      "src": "https://sessionzero.games/images/systems/ten-candles-g1.jpg"
     },
     {
-      "src": "https://images.squarespace-cdn.com/content/v1/54cbdf08e4b0b8ab2e74ea9f/1619466008888-MX1KUUI84H0EQYIB52O9/CvPrqdxWIAAhsop.jpg"
+      "src": "https://sessionzero.games/images/systems/ten-candles-g2.jpg"
     },
     {
-      "src": "https://images.squarespace-cdn.com/content/v1/54cbdf08e4b0b8ab2e74ea9f/1619466009391-V22S8NCG26F2XWDCAWTW/CwIWn07XgAEuJsH.jpg"
+      "src": "https://sessionzero.games/images/systems/ten-candles-g3.jpg"
     }
   ],
   "resources": [

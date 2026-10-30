@@ -16,9 +16,9 @@ registerSystem("7th-sea", {
   "playstyleTags": ["action", "narrative", "social"],
   "settingTags": ["fantasy"],
   "gallery": [
-    { "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/500x642/products/2119/3571/Pirate_Nations_-_Front_Cover_-_700x900__58538.1558214666.png" },
-    { "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/500x642/products/2118/3559/Heroes_and_Villains_-_Front_Cover_-_700x900__38367.1558213244.jpg" },
-    { "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/500x642/products/2120/3580/Nationsof_-_Theah-_Vol_1_-_Front_Cover_-_700x900__19123.1558215550.png" }
+    { "src": "https://sessionzero.games/images/systems/7th-sea-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/7th-sea-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/7th-sea-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://www.chaosium.com/7th-sea/", "fmt": "Web" },

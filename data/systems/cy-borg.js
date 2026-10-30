@@ -10,7 +10,7 @@ registerSystem("cy-borg", {
   "players": "2–6",
   "complexity": 1,
   "foundryStatus": "Community",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/CY_BORG-Banner1-1440x384.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/cy-borg.jpg",
   "playstyleTags": [
     "combat",
     "survival",
@@ -19,13 +19,13 @@ registerSystem("cy-borg", {
   "settingTags": ["cyberpunk", "postapoc"],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/CBcovermockup_small_038aec50-b06d-43ce-8712-c9077b0211b5-1200x1200-1-1200x1200.jpg"
+      "src": "https://sessionzero.games/images/systems/cy-borg-g1.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/CY_BORG_20-21-1536x1536.jpg"
+      "src": "https://sessionzero.games/images/systems/cy-borg-g2.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/CY_BORG_50-51-1536x1536.jpg"
+      "src": "https://sessionzero.games/images/systems/cy-borg-g3.jpg"
     }
   ],
   "resources": [

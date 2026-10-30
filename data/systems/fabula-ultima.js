@@ -20,16 +20,16 @@ registerSystem("fabula-ultima", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://need.games/wp-content/uploads/2024/02/fu-spread-mockup-2.jpg"
+      "src": "https://sessionzero.games/images/systems/fabula-ultima-g1.jpg"
     },
     {
-      "src": "https://need.games/wp-content/uploads/2024/02/fu-spread-mockup-3.jpg"
+      "src": "https://sessionzero.games/images/systems/fabula-ultima-g2.jpg"
     },
     {
-      "src": "https://need.games/wp-content/uploads/2024/02/fu-spread-mockup-4.jpg"
+      "src": "https://sessionzero.games/images/systems/fabula-ultima-g3.jpg"
     },
     {
-      "src": "https://need.games/wp-content/uploads/2024/02/fu-spread-mockup-5.jpg"
+      "src": "https://sessionzero.games/images/systems/fabula-ultima-g4.jpg"
     }
   ],
   "resources": [

@@ -11,7 +11,7 @@ registerSystem("one-ring", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Community",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/The_one_ring_tower-1440x720.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/one-ring.jpg",
   "playstyleTags": [
     "explore",
     "narrative",
@@ -20,16 +20,16 @@ registerSystem("one-ring", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/The_one_ring_Combat-edited-scaled.jpg"
+      "src": "https://sessionzero.games/images/systems/one-ring-g1.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/The_one_ring_20_220-Ranger-Virtue-scaled.jpg"
+      "src": "https://sessionzero.games/images/systems/one-ring-g2.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/The_one_ring_19_119_The-Nine-2-scaled.jpg"
+      "src": "https://sessionzero.games/images/systems/one-ring-g3.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/the_one_ring_019_gandalf_frodo_FINAL-scaled.jpg"
+      "src": "https://sessionzero.games/images/systems/one-ring-g4.jpg"
     }
   ],
   "resources": [

@@ -22,13 +22,13 @@ registerSystem("osric-3", {
   "settingTags": ["fantasy", "sword-and-sorcery"],
   "gallery": [
     {
-      "src": "https://www.mythmeregames.com/cdn/shop/files/PDFCovers2.png"
+      "src": "https://sessionzero.games/images/systems/osric-3-g1.jpg"
     },
     {
-      "src": "https://www.mythmeregames.com/cdn/shop/files/PDFCovers4_91571dbb-8283-418b-9d4b-42d9a1a3af3f.png"
+      "src": "https://sessionzero.games/images/systems/osric-3-g2.jpg"
     },
     {
-      "src": "https://www.mythmeregames.com/cdn/shop/files/OSRIC3.0GMScreen.png"
+      "src": "https://sessionzero.games/images/systems/osric-3-g3.jpg"
     }
   ],
   "resources": [

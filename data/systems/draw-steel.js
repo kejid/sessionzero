@@ -10,7 +10,7 @@ registerSystem("draw-steel", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Community",
-  "heroImage": "https://www.belloflostsouls.net/wp-content/uploads/2025/08/DrawSteel_Monsters_header.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/draw-steel.jpg",
   "heroStyle": "background: linear-gradient(135deg, #4a1942, #1a1a2e, #0f3460);",
   "playstyleTags": [
     "combat",
@@ -20,16 +20,16 @@ registerSystem("draw-steel", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://www.rascal.news/content/images/2025/06/Thomas-2-.png"
+      "src": "https://sessionzero.games/images/systems/draw-steel-g1.jpg"
     },
     {
-      "src": "https://i.ytimg.com/vi/5n4w7DQhXGg/maxresdefault.jpg"
+      "src": "https://sessionzero.games/images/systems/draw-steel-g2.jpg"
     },
     {
-      "src": "https://shop.mcdmproductions.com/cdn/shop/files/DrawSteel_Heroes_300x.png?v=1773949925"
+      "src": "https://sessionzero.games/images/systems/draw-steel-g3.jpg"
     },
     {
-      "src": "https://shop.mcdmproductions.com/cdn/shop/files/DrawSteel_Monsters_300x.png?v=1773949925"
+      "src": "https://sessionzero.games/images/systems/draw-steel-g4.jpg"
     }
   ],
   "resources": [

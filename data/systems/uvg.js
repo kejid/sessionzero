@@ -19,7 +19,7 @@ registerSystem("uvg", {
   "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
-      "src": "https://cdn.shopify.com/s/files/1/0025/6006/5625/products/reanimated-damage-the-ultra-violet-grasslands-and-the-black-city-warning-book-1347321.jpg?v=1753228007"
+      "src": "https://sessionzero.games/images/systems/uvg-g1.jpg"
     },
     {
       "src": "https://sessionzero.games/images/systems/uvg-g1.jpg"
@@ -28,10 +28,10 @@ registerSystem("uvg", {
       "src": "https://sessionzero.games/images/systems/uvg-g2.jpg"
     },
     {
-      "src": "https://www.exaltedfuneral.com/cdn/shop/files/uvg-2e-book-463900.jpg?v=1720802815"
+      "src": "https://sessionzero.games/images/systems/uvg-g4.jpg"
     },
     {
-      "src": "https://www.exaltedfuneral.com/cdn/shop/files/uvg-2e-book-296196.jpg?v=1720802815"
+      "src": "https://sessionzero.games/images/systems/uvg-g5.jpg"
     }
   ],
   "resources": [

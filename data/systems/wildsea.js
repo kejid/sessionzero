@@ -10,7 +10,7 @@ registerSystem("wildsea", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Community",
-  "heroImage": "https://img.itch.zone/aW1nLzgwNTI1NzYuanBn/original/jf%2BYt%2B.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/wildsea.jpg",
   "playstyleTags": [
     "explore",
     "narrative",
@@ -19,19 +19,19 @@ registerSystem("wildsea", {
   "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMTMyNjI2My84MDUxMjgyLnBuZw==/original/tY0wGS.png"
+      "src": "https://sessionzero.games/images/systems/wildsea-g1.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMTMyNjI2My84MDUxMjgzLnBuZw==/original/Zti8Xd.png"
+      "src": "https://sessionzero.games/images/systems/wildsea-g2.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMTMyNjI2My84MDUxMjg0LnBuZw==/original/jzpDEX.png"
+      "src": "https://sessionzero.games/images/systems/wildsea-g3.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMTMyNjI2My84MDUxMjg1LnBuZw==/original/FulxaS.png"
+      "src": "https://sessionzero.games/images/systems/wildsea-g4.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMTMyNjI2My84MDUyMjYwLnBuZw==/original/4WEEWR.png"
+      "src": "https://sessionzero.games/images/systems/wildsea-g5.jpg"
     }
   ],
   "resources": [

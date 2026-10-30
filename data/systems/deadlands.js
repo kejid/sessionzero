@@ -16,9 +16,9 @@ registerSystem("deadlands", {
   "playstyleTags": ["action", "horror", "combat"],
   "settingTags": ["weird", "historical"],
   "gallery": [
-    { "src": "https://image.nobleknight.com/s/jpg1500/s2p10220.jpg" },
-    { "src": "https://image.nobleknight.com/w/jpg1500/wwdiceplastic.jpg" },
-    { "src": "https://image.nobleknight.com/s/jpg1500/s2p10235.jpg" }
+    { "src": "https://sessionzero.games/images/systems/deadlands-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/deadlands-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/deadlands-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://peginc.com/savage-settings/deadlands/", "fmt": "Web" },

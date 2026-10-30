@@ -22,13 +22,13 @@ registerSystem("dungeon-crawl-classics", {
   "settingTags": ["fantasy", "sword-and-sorcery"],
   "gallery": [
     {
-      "src": "https://cdn11.bigcommerce.com/s-ua4dd/images/stencil/1280x1280/products/345696/500037/Gamenerdzimage9999-6539__01376.1770668527.png"
+      "src": "https://sessionzero.games/images/systems/dungeon-crawl-classics-g1.webp"
     },
     {
-      "src": "https://image.nobleknight.com/i/jpg1500/impgmg5070l.jpg"
+      "src": "https://sessionzero.games/images/systems/dungeon-crawl-classics-g2.jpg"
     },
     {
-      "src": "https://image.nobleknight.com/g/jpg1500/gmg5070-p7.jpg"
+      "src": "https://sessionzero.games/images/systems/dungeon-crawl-classics-g3.jpg"
     }
   ],
   "resources": [

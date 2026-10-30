@@ -16,9 +16,9 @@ registerSystem("ars-magica", {
   "playstyleTags": ["worldbuild", "narrative", "explore"],
   "settingTags": ["fantasy", "historical"],
   "gallery": [
-    { "src": "https://www.atlas-games.com/atlas-cms/resources/08laboratorycolor.jpg" },
-    { "src": "https://www.atlas-games.com/atlas-cms/resources/armdef-interior-spreads-mockup.png" },
-    { "src": "https://www.atlas-games.com/atlas-cms/resources/images/display-part-2-nocorerulebook.png" }
+    { "src": "https://sessionzero.games/images/systems/ars-magica-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/ars-magica-g2.webp" },
+    { "src": "https://sessionzero.games/images/systems/ars-magica-g3.webp" }
   ],
   "resources": [
     { "type": "link", "url": "https://www.atlas-games.com/arsmagica/", "fmt": "Web" },

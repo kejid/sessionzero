@@ -10,7 +10,7 @@ registerSystem("death-in-space", {
   "players": "2–5",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/D1_hori-1440x720.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/death-in-space.jpg",
   "playstyleTags": [
     "survival",
     "explore",
@@ -19,7 +19,7 @@ registerSystem("death-in-space", {
   "settingTags": ["space"],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/D1_hori-1440x720.jpg"
+      "src": "https://sessionzero.games/images/heroes/death-in-space.jpg"
     }
   ],
   "resources": [

@@ -12,13 +12,13 @@ registerSystem("the-quiet-year", {
   "free": false,
   "edition": "2nd ed. (2019)",
   "foundryStatus": "None",
-  "heroImage": "https://buriedwithoutceremony.com/wp-content/uploads/2019/11/The-Quiet-Year.png",
+  "heroImage": "https://sessionzero.games/images/heroes/the-quiet-year.jpg",
   "playstyleTags": ["worldbuild", "narrative", "survival"],
   "settingTags": ["postapoc", "fantasy"],
   "gallery": [
-    { "src": "https://buriedwithoutceremony.com/wp-content/uploads/2019/11/The-Quiet-Year.png" },
-    { "src": "https://buriedwithoutceremony.com/wp-content/uploads/2026/01/Box-Contents-scaled.png" },
-    { "src": "https://buriedwithoutceremony.com/wp-content/uploads/2020/04/The-Quiet-Year-PDF.png" }
+    { "src": "https://sessionzero.games/images/heroes/the-quiet-year.jpg" },
+    { "src": "https://sessionzero.games/images/systems/the-quiet-year-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/the-quiet-year-g3.webp" }
   ],
   "resources": [
     { "type": "link", "url": "https://buriedwithoutceremony.com/the-quiet-year", "fmt": "Web" },

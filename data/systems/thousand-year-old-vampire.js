@@ -10,7 +10,7 @@ registerSystem("thousand-year-old-vampire", {
   "dice": "d10 − d6",
   "players": "1",
   "complexity": 1,
-  "heroImage": "https://img.itch.zone/aW1nLzIwMjQ5MjAxLnBuZw==/original/6JceU8.png",
+  "heroImage": "https://sessionzero.games/images/heroes/thousand-year-old-vampire.jpg",
   "heroImageStyle": "object-fit: cover; object-position: center top; background: linear-gradient(135deg, #0a0005, #1a0010 40%, #2d0020 70%, #0f000a);",
   "playstyleTags": [
     "narrative",
@@ -20,13 +20,13 @@ registerSystem("thousand-year-old-vampire", {
   "settingTags": ["historical", "urban-fantasy"],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1hZ2UvNTgyMDAwLzMwNjY0NDcucG5n/347x500/UYjcQP.png"
+      "src": "https://sessionzero.games/images/systems/thousand-year-old-vampire-g1.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvNTgyMDAwLzMwNjY0NDMucG5n/347x500/ply7sR.png"
+      "src": "https://sessionzero.games/images/systems/thousand-year-old-vampire-g2.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvNTgyMDAwLzMwNjY0NDQucG5n/347x500/ecqbKs.png"
+      "src": "https://sessionzero.games/images/systems/thousand-year-old-vampire-g3.jpg"
     }
   ],
   "resources": [

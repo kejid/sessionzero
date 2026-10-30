@@ -11,7 +11,7 @@ registerSystem("trophy", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://trophyrpg.com/downloads/Trophy-Map.png",
+  "heroImage": "https://sessionzero.games/images/heroes/trophy.jpg",
   "playstyleTags": [
     "narrative",
     "horror",
@@ -20,13 +20,13 @@ registerSystem("trophy", {
   "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
-      "src": "https://trophyrpg.com/assets/images/cover-trophy-dark.jpg"
+      "src": "https://sessionzero.games/images/systems/trophy-g1.jpg"
     },
     {
-      "src": "https://trophyrpg.com/assets/images/cover-trophy-gold.jpg"
+      "src": "https://sessionzero.games/images/systems/trophy-g2.jpg"
     },
     {
-      "src": "https://trophyrpg.com/assets/images/cover-trophy-loom.jpg"
+      "src": "https://sessionzero.games/images/systems/trophy-g3.jpg"
     }
   ],
   "resources": [

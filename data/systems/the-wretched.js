@@ -10,7 +10,7 @@ registerSystem("the-wretched", {
   "dice": "d6 + playing cards + Jenga tower",
   "players": "1",
   "complexity": 1,
-  "heroImage": "https://img.itch.zone/aW1nLzQ2OTEyMjkucG5n/original/frNUeL.png",
+  "heroImage": "https://sessionzero.games/images/heroes/the-wretched.jpg",
   "playstyleTags": [
     "horror",
     "survival",
@@ -19,13 +19,13 @@ registerSystem("the-wretched", {
   "settingTags": ["space"],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1hZ2UvNjE0MjgzLzMyNjgzODkucG5n/347x500/1hYOtq.png"
+      "src": "https://sessionzero.games/images/systems/the-wretched-g1.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvNjE0MjgzLzQzMTYyMzEuanBn/347x500/p6tHSn.jpg"
+      "src": "https://sessionzero.games/images/systems/the-wretched-g2.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvNjE0MjgzLzQzMTYyMzIuanBn/347x500/sjWRTo.jpg"
+      "src": "https://sessionzero.games/images/systems/the-wretched-g3.jpg"
     }
   ],
   "resources": [

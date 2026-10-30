@@ -16,9 +16,9 @@ registerSystem("avatar-legends", {
   "playstyleTags": ["narrative", "action", "social"],
   "settingTags": ["fantasy"],
   "gallery": [
-    { "src": "https://magpiegames.com/cdn/shop/files/Avatar-Core_2.jpg" },
-    { "src": "https://magpiegames.com/cdn/shop/files/Avatar-Republic-City_1.jpg" },
-    { "src": "https://magpiegames.com/cdn/shop/files/Avatar-UIAG_1.jpg" }
+    { "src": "https://sessionzero.games/images/systems/avatar-legends-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/avatar-legends-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/avatar-legends-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://magpiegames.com/collections/avatar-legends", "fmt": "Web" },

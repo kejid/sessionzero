@@ -10,7 +10,7 @@ registerSystem("blades", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Community",
-  "heroImage": "https://legendary-digital-network-assets.s3.amazonaws.com/geekandsundry/wp-content/uploads/2018/05/Vigilantes.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/blades.jpg",
   "playstyleTags": [
     "narrative",
     "social",

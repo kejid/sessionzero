@@ -12,13 +12,13 @@ registerSystem("slugblaster", {
   "free": false,
   "edition": "Game of the Year Edition",
   "foundryStatus": "Community",
-  "heroImage": "https://cdn.shopify.com/s/files/1/0666/7668/7154/files/SlugFinal.png?v=1742962431",
+  "heroImage": "https://sessionzero.games/images/heroes/slugblaster.jpg",
   "playstyleTags": ["action", "narrative", "sandbox"],
   "settingTags": ["weird", "modern"],
   "gallery": [
-    { "src": "https://cdn.shopify.com/s/files/1/0666/7668/7154/files/Slug5.png?v=1733947851" },
-    { "src": "https://cdn.shopify.com/s/files/1/0666/7668/7154/files/Slug3.png?v=1733947851" },
-    { "src": "https://cdn.shopify.com/s/files/1/0666/7668/7154/files/Slug4.png?v=1733947851" }
+    { "src": "https://sessionzero.games/images/systems/slugblaster-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/slugblaster-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/slugblaster-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://slugblaster.com", "fmt": "Web" },

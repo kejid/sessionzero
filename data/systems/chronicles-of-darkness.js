@@ -12,13 +12,13 @@ registerSystem("chronicles-of-darkness", {
   "free": false,
   "edition": "2nd Edition",
   "foundryStatus": "Community",
-  "heroImage": "https://theonyxpath.com/wp-content/uploads/2015/12/CofD-Front-Screen-Res-1.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/chronicles-of-darkness.jpg",
   "playstyleTags": ["horror", "mystery", "narrative"],
   "settingTags": ["modern", "urban-fantasy"],
   "gallery": [
-    { "src": "https://theonyxpath.com/wp-content/uploads/2013/04/113340-2.jpg" },
-    { "src": "https://theonyxpath.com/wp-content/uploads/2016/09/Gaydos_HurtLocker-Cover-1.jpg" },
-    { "src": "https://image.nobleknight.com/i/jpg1500/iprop-cd-de-pe.jpg" }
+    { "src": "https://sessionzero.games/images/systems/chronicles-of-darkness-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/chronicles-of-darkness-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/chronicles-of-darkness-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://theonyxpath.com/category/worlds/chroniclesofdarkness/", "fmt": "Web" },

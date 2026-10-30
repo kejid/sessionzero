@@ -11,7 +11,7 @@ registerSystem("kult-divinity-lost", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://modiphius.net/cdn/shop/products/Gamemaster_Screen.png",
+  "heroImage": "https://sessionzero.games/images/heroes/kult-divinity-lost.webp",
   "playstyleTags": [
     "horror",
     "narrative",
@@ -20,13 +20,13 @@ registerSystem("kult-divinity-lost", {
   "settingTags": ["modern", "weird"],
   "gallery": [
     {
-      "src": "https://modiphius.net/cdn/shop/products/Kult_Core_Book.png"
+      "src": "https://sessionzero.games/images/systems/kult-divinity-lost-g1.webp"
     },
     {
-      "src": "https://modiphius.net/cdn/shop/products/The_Black_Madonna.png"
+      "src": "https://sessionzero.games/images/systems/kult-divinity-lost-g2.webp"
     },
     {
-      "src": "https://modiphius.net/cdn/shop/products/Taroticum_and_Other_Tales.png"
+      "src": "https://sessionzero.games/images/systems/kult-divinity-lost-g3.webp"
     }
   ],
   "resources": [

@@ -10,7 +10,7 @@ registerSystem("koriko", {
   "dice": "Таро + d6 (башня)",
   "players": "1",
   "complexity": 1,
-  "heroImage": "https://img.itch.zone/aW1nLzEyNTk3MTMwLmpwZw==/original/Jupq7g.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/koriko.jpg",
   "heroImageStyle": "object-fit: cover; object-position: center top; background: linear-gradient(135deg, #1a0a2e, #2d1b69 40%, #4a1942 70%, #1a0a2e);",
   "playstyleTags": [
     "narrative",
@@ -20,13 +20,13 @@ registerSystem("koriko", {
   "settingTags": ["urban-fantasy"],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMjEzNjgwOS8xMjU5NzE4NC5wbmc=/347x500/RbMZ%2Fd.png"
+      "src": "https://sessionzero.games/images/systems/koriko-g1.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMjEzNjgwOS8xMjU5NzE4NS5wbmc=/347x500/2%2BGCSI.png"
+      "src": "https://sessionzero.games/images/systems/koriko-g2.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMjEzNjgwOS8xMjU5NzE4My5wbmc=/347x500/MJC9%2BC.png"
+      "src": "https://sessionzero.games/images/systems/koriko-g3.jpg"
     }
   ],
   "resources": [

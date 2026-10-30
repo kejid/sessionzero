@@ -10,7 +10,7 @@ registerSystem("microscope", {
   "players": "2–5",
   "complexity": 1,
   "foundryStatus": "Не нужен",
-  "heroImage": "https://img.itch.zone/aW1nLzgzOTE4NjkucG5n/original/hf%2BAZJ.png",
+  "heroImage": "https://sessionzero.games/images/heroes/microscope.jpg",
   "heroImageStyle": "object-fit: contain; padding: 80px 120px; background: linear-gradient(135deg, #0f0e2e, #1e1b4b 40%, #312e81 70%, #1a1747);",
   "playstyleTags": [
     "worldbuild",
@@ -19,13 +19,13 @@ registerSystem("microscope", {
   ],
   "gallery": [
     {
-      "src": "https://www.indiepressrevolution.com/xcart/image.php?type=P&id=17540"
+      "src": "https://sessionzero.games/images/systems/microscope-g1.jpg"
     },
     {
-      "src": "https://www.indiepressrevolution.com/xcart/image.php?type=P&id=19891"
+      "src": "https://sessionzero.games/images/systems/microscope-g2.jpg"
     },
     {
-      "src": "https://cf.geekdo-images.com/C1ox8bAodvWDJqhqAk0w-Q__itemrep/img/XgQ1Act3YETvDkEtU1j27cyIoKQ=/fit-in/246x300/filters:strip_icc()/pic931050.jpg"
+      "src": "https://sessionzero.games/images/systems/microscope-g3.jpg"
     }
   ],
   "resources": [

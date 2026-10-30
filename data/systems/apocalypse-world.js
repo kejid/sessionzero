@@ -11,7 +11,7 @@ registerSystem("apocalypse-world", {
   "complexity": 2,
   "free": false,
   "foundryStatus": "None",
-  "heroImage": "https://static0.cbrimages.com/wordpress/wp-content/uploads/2020/09/Apocalypse-World-Cover.png",
+  "heroImage": "https://sessionzero.games/images/heroes/apocalypse-world.jpg",
   "playstyleTags": [
     "narrative",
     "explore",
@@ -20,13 +20,13 @@ registerSystem("apocalypse-world", {
   "settingTags": ["postapoc"],
   "gallery": [
     {
-      "src": "https://static0.cbrimages.com/wordpress/wp-content/uploads/2020/09/apocalypse-world-creatures.png"
+      "src": "https://sessionzero.games/images/systems/apocalypse-world-g1.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1nLzI2Njk0NDIuanBn/original/IGjp5b.jpg"
+      "src": "https://sessionzero.games/images/systems/apocalypse-world-g2.jpg"
     },
     {
-      "src": "https://static0.cbrimages.com/wordpress/wp-content/uploads/2020/09/Apocalypse-World-Cover.png"
+      "src": "https://sessionzero.games/images/heroes/apocalypse-world.jpg"
     }
   ],
   "resources": [

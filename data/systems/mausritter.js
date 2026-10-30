@@ -20,7 +20,7 @@ registerSystem("mausritter", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1nLzQ1Nzc4OTYucG5n/original/Dnexgj.png"
+      "src": "https://sessionzero.games/images/systems/mausritter-g1.jpg"
     }
   ],
   "quotes": [

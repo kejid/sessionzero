@@ -10,7 +10,7 @@ registerSystem("cortex-prime", {
   "players": "3–6",
   "complexity": 3,
   "foundryStatus": "Community",
-  "heroImage": "https://shop.direwolfdigital.com/cdn/shop/products/store_cortex_bookcover_1200x.png",
+  "heroImage": "https://sessionzero.games/images/heroes/cortex-prime.webp",
   "playstyleTags": [
     "narrative",
     "social",
@@ -19,10 +19,10 @@ registerSystem("cortex-prime", {
   "settingTags": [],
   "gallery": [
     {
-      "src": "https://shop.direwolfdigital.com/cdn/shop/products/store_cortex_inside_1200x.png"
+      "src": "https://sessionzero.games/images/systems/cortex-prime-g1.webp"
     },
     {
-      "src": "https://prod-images.cortexrpg.com/cms/media/temp/intro-bg.png"
+      "src": "https://sessionzero.games/images/systems/cortex-prime-g2.jpg"
     }
   ],
   "resources": [

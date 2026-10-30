@@ -19,16 +19,16 @@ registerSystem("heart", {
   "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
-      "src": "https://rowanrookanddecard.com/wp-content/uploads/2020/04/Heart-The-City-Beneath-RPG-COMBAT-scaled.jpg"
+      "src": "https://sessionzero.games/images/systems/heart-g1.jpg"
     },
     {
-      "src": "https://rowanrookanddecard.com/wp-content/uploads/2020/04/Heart-The-City-Beneath-RPG-ANGEL.webp"
+      "src": "https://sessionzero.games/images/systems/heart-g2.jpg"
     },
     {
-      "src": "https://rowanrookanddecard.com/wp-content/uploads/2021/10/Heart_Character_Sheet_Product_Photo_Front-600x600.png.webp"
+      "src": "https://sessionzero.games/images/systems/heart-g3.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1nLzMyNTE2MzgucG5n/original/2W%2BgAK.png"
+      "src": "https://sessionzero.games/images/systems/heart-g4.jpg"
     }
   ],
   "resources": [

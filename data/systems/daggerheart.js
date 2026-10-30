@@ -11,7 +11,7 @@ registerSystem("daggerheart", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Community", // CHECK: Foundryborne system is DPCGL-licensed, widely used, but not first-party Darrington Press
-  "heroImage": "https://darringtonpress.com/wp-content/uploads/2024/12/HEADER-DH-Standard-Cover-Art.png",
+  "heroImage": "https://sessionzero.games/images/heroes/daggerheart.jpg",
   "playstyleTags": [
     "narrative",
     "combat",
@@ -20,16 +20,16 @@ registerSystem("daggerheart", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://darringtonpress.com/wp-content/uploads/2024/12/DH-Standard-Cover-Art-watermarked-Mat-Wilma-1600x900.png"
+      "src": "https://sessionzero.games/images/systems/daggerheart-g1.jpg"
     },
     {
-      "src": "https://darringtonpress.com/wp-content/uploads/2024/12/DH-Limited-Cover-Art-watermarked-Dominik-Mayer-1600x900.png"
+      "src": "https://sessionzero.games/images/systems/daggerheart-g2.jpg"
     },
     {
-      "src": "https://darringtonpress.com/wp-content/uploads/2024/12/DH-Stnd-Book-Alone-copy.png"
+      "src": "https://sessionzero.games/images/systems/daggerheart-g3.jpg"
     },
     {
-      "src": "https://darringtonpress.com/wp-content/uploads/2024/12/DH-Limited-Spill-Fixed-landscape.png"
+      "src": "https://sessionzero.games/images/systems/daggerheart-g4.jpg"
     }
   ],
   "resources": [

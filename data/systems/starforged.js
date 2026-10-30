@@ -16,22 +16,22 @@ registerSystem("starforged", {
     "sandbox"
   ],
   "settingTags": ["space"],
-  "heroImage": "https://cdn.shopify.com/s/files/1/0712/0329/1447/files/starforged-sunset.jpg?v=1725559572",
+  "heroImage": "https://sessionzero.games/images/heroes/starforged.jpg",
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1nLzg1MjM5MjQuanBn/original/3NcS3p.jpg"
+      "src": "https://sessionzero.games/images/systems/starforged-g1.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0712/0329/1447/files/starforged-sunset.jpg?v=1725559572"
+      "src": "https://sessionzero.games/images/heroes/starforged.jpg"
     },
     {
-      "src": "https://assetsio.gnwcdn.com/starforged-ironsworn-ship-alien-art.png?width=690&quality=85&format=jpg&dpr=3&auto=webp"
+      "src": "https://sessionzero.games/images/systems/starforged-g3.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0712/0329/1447/files/ironsworn-starforged-digital-main.png?v=1767637357"
+      "src": "https://sessionzero.games/images/systems/starforged-g4.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0712/0329/1447/files/starforged-asset-deck-1.png?v=1760647856"
+      "src": "https://sessionzero.games/images/systems/starforged-g5.jpg"
     }
   ],
   "resources": [

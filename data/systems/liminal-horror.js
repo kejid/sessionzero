@@ -13,13 +13,13 @@ registerSystem("liminal-horror", {
   "foundryStatus": "Community",
   "free": true,
   "edition": null,
-  "heroImage": "https://img.itch.zone/aW1nLzE1NTgwMzU0LnBuZw==/original/Fiylam.png",
+  "heroImage": "https://sessionzero.games/images/heroes/liminal-horror.webp",
   "playstyleTags": ["horror", "mystery", "explore"],
   "settingTags": ["modern", "weird"],
   "gallery": [
-    { "src": "https://img.itch.zone/aW1hZ2UvMTA1MDI4NC8xNzcwNTQ3Ni5wbmc=/original/O7koxW.png" },
-    { "src": "https://img.itch.zone/aW1hZ2UvMTA1MDI4NC8xNzcwNTQ4Ny5wbmc=/original/ANpkT0.png" },
-    { "src": "https://img.itch.zone/aW1hZ2UvMTA1MDI4NC8xNzcwNTQ4OS5wbmc=/original/qlrF86.png" }
+    { "src": "https://sessionzero.games/images/systems/liminal-horror-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/liminal-horror-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/liminal-horror-g3.jpg" }
   ],
   "resources": [
     { "type": "rules", "url": "https://liminalhorrorrpg.com/", "fmt": "Web" },

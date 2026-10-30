@@ -19,13 +19,13 @@ registerSystem("mage-the-ascension", {
   "settingTags": ["modern", "urban-fantasy"],
   "gallery": [
     {
-      "src": "https://image.nobleknight.com/m/jpg1500/mta20thpremium1.jpg"
+      "src": "https://sessionzero.games/images/systems/mage-the-ascension-g1.jpg"
     },
     {
-      "src": "https://image.nobleknight.com/m/jpg1500/magequickstart20th.jpg"
+      "src": "https://sessionzero.games/images/systems/mage-the-ascension-g2.jpg"
     },
     {
-      "src": "https://image.nobleknight.com/m/jpg1500/m20dqe.jpg"
+      "src": "https://sessionzero.games/images/systems/mage-the-ascension-g3.jpg"
     }
   ],
   "resources": [

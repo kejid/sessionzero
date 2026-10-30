@@ -12,13 +12,13 @@ registerSystem("pendragon", {
   "free": false,
   "edition": "6th ed. (2024)",
   "foundryStatus": "Community",
-  "heroImage": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x996/products/2413/6075/Pendragon_Core_Rulebook_-_Front_Cover_-_700x900__17451.1714992659.png?c=2",
+  "heroImage": "https://sessionzero.games/images/heroes/pendragon.jpg",
   "playstyleTags": ["narrative", "social", "combat"],
   "settingTags": ["historical", "fantasy"],
   "gallery": [
-    { "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x996/products/2413/6116/Pendragon_-_Core_-_Spread_1__48660.1715007255.png?c=2" },
-    { "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x996/products/2413/6117/Pendragon_-_Core_-_Spread_2__38931.1715007255.png?c=2" },
-    { "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x996/products/2413/6073/Pendragon_Core_Rulebook_-_Introduction_1_-_700x900__83987.1707309893.1280.1280__57661.1715007253.png?c=2" }
+    { "src": "https://sessionzero.games/images/systems/pendragon-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/pendragon-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/pendragon-g3.jpg" }
   ],
   "resources": [
     { "type": "quickstart", "url": "https://www.chaosium.com/pendragon-quick-start/", "fmt": "PDF" },

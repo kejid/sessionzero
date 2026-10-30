@@ -21,13 +21,13 @@ registerSystem("lotfp", {
   "settingTags": ["historical", "weird"],
   "gallery": [
     {
-      "src": "https://us.lotfp.com/store/image/cache/catalog/BroodmotherCoverDisplay-500x500.jpg"
+      "src": "https://sessionzero.games/images/systems/lotfp-g1.jpg"
     },
     {
-      "src": "https://us.lotfp.com/store/image/cache/catalog/AABloodCoverDisplay-500x500.jpg"
+      "src": "https://sessionzero.games/images/systems/lotfp-g2.jpg"
     },
     {
-      "src": "https://us.lotfp.com/store/image/cache/catalog/AAFCoverDisplay-500x500.jpg"
+      "src": "https://sessionzero.games/images/systems/lotfp-g3.jpg"
     }
   ],
   "resources": [

@@ -16,9 +16,9 @@ registerSystem("imperium-maledictum", {
   "playstyleTags": ["combat", "mystery", "tactical"],
   "settingTags": ["space"],
   "gallery": [
-    { "src": "https://image.nobleknight.com/c/jpg1500/cb72707.jpg" },
-    { "src": "https://image.nobleknight.com/c/jpg1500/cb72711.jpg" },
-    { "src": "https://image.nobleknight.com/c/jpg1500/cb72712.jpg" }
+    { "src": "https://sessionzero.games/images/systems/imperium-maledictum-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/imperium-maledictum-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/imperium-maledictum-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://cubicle7games.com/our-games/warhammer-40k-roleplay-imperium-maledictum", "fmt": "Web" },

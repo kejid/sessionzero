@@ -10,7 +10,7 @@ registerSystem("l5r", {
   "players": "3–5",
   "complexity": 4,
   "foundryStatus": "Community",
-  "heroImage": "https://cdn.svc.asmodee.net/production-l5r/uploads/image-converter/2023/06/04_Image_L5R-1900x1040.webp",
+  "heroImage": "https://sessionzero.games/images/heroes/l5r.webp",
   "heroStyle": "background: linear-gradient(135deg, #7c1d1d, #1a1a2e, #1e3a5f);",
   "playstyleTags": [
     "social",
@@ -20,10 +20,10 @@ registerSystem("l5r", {
   "settingTags": ["fantasy", "historical"],
   "gallery": [
     {
-      "src": "https://cdn.svc.asmodee.net/production-l5r/uploads/image-converter/2023/06/01a_Cover_Illustration-1900x1900.webp"
+      "src": "https://sessionzero.games/images/systems/l5r-g1.webp"
     },
     {
-      "src": "https://cdn.svc.asmodee.net/production-l5r/uploads/image-converter/2023/06/04_Image_L5R-1900x1040.webp"
+      "src": "https://sessionzero.games/images/heroes/l5r.webp"
     }
   ],
   "resources": [

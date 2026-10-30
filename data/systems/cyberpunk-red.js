@@ -11,7 +11,7 @@ registerSystem("cyberpunk-red", {
   "complexity": 3,
   "free": false,
   "foundryStatus": "Community",
-  "heroImage": "https://d1vzi28wh99zvq.cloudfront.net/images/13/333585.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/cyberpunk-red.jpg",
   "playstyleTags": [
     "combat",
     "narrative",
@@ -20,13 +20,13 @@ registerSystem("cyberpunk-red", {
   "settingTags": ["cyberpunk"],
   "gallery": [
     {
-      "src": "https://d1vzi28wh99zvq.cloudfront.net/images/13/409912.jpg"
+      "src": "https://sessionzero.games/images/systems/cyberpunk-red-g1.jpg"
     },
     {
-      "src": "https://d1vzi28wh99zvq.cloudfront.net/images/13/279014.jpg"
+      "src": "https://sessionzero.games/images/systems/cyberpunk-red-g2.jpg"
     },
     {
-      "src": "https://d1vzi28wh99zvq.cloudfront.net/images/13/333585.jpg"
+      "src": "https://sessionzero.games/images/heroes/cyberpunk-red.jpg"
     }
   ],
   "resources": [

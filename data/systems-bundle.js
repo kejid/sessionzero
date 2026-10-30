@@ -200,9 +200,9 @@ registerSystem("7th-sea", {
   "playstyleTags": ["action", "narrative", "social"],
   "settingTags": ["fantasy"],
   "gallery": [
-    { "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/500x642/products/2119/3571/Pirate_Nations_-_Front_Cover_-_700x900__58538.1558214666.png" },
-    { "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/500x642/products/2118/3559/Heroes_and_Villains_-_Front_Cover_-_700x900__38367.1558213244.jpg" },
-    { "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/500x642/products/2120/3580/Nationsof_-_Theah-_Vol_1_-_Front_Cover_-_700x900__19123.1558215550.png" }
+    { "src": "https://sessionzero.games/images/systems/7th-sea-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/7th-sea-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/7th-sea-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://www.chaosium.com/7th-sea/", "fmt": "Web" },
@@ -309,13 +309,13 @@ registerSystem("advanced-fighting-fantasy", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://cdn.freewebstore.com/origin/235161/cb77001-thumb.jpg"
+      "src": "https://sessionzero.games/images/systems/advanced-fighting-fantasy-g1.jpg"
     },
     {
-      "src": "https://cdn.freewebstore.com/origin/235161/488616_1765104439277.png"
+      "src": "https://sessionzero.games/images/systems/advanced-fighting-fantasy-g2.webp"
     },
     {
-      "src": "https://cdn.freewebstore.com/origin/235161/483969_1726044220939.png"
+      "src": "https://sessionzero.games/images/systems/advanced-fighting-fantasy-g3.jpg"
     }
   ],
   "resources": [
@@ -460,13 +460,13 @@ registerSystem("alice-is-missing", {
   "free": false,
   "edition": null,
   "foundryStatus": "None",
-  "heroImage": "https://cdn11.bigcommerce.com/s-kftzvkkgjv/images/stencil/1280x1280/products/119/553/AliceIsMissing_1000%C3%97%E2%80%8A1000__77444.1611281398.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/alice-is-missing.jpg",
   "playstyleTags": ["mystery", "narrative", "social"],
   "settingTags": ["modern"],
   "gallery": [
-    { "src": "https://cdn11.bigcommerce.com/s-kftzvkkgjv/images/stencil/1280x1280/products/119/552/AIM_Box_Skew_2000x2000__96002.1611281398.png" },
-    { "src": "https://cdn11.bigcommerce.com/s-kftzvkkgjv/images/stencil/1280x1280/products/119/554/AliceIsMissing_Setup3_1000x600__08332.1611281398.jpg" },
-    { "src": "https://cdn11.bigcommerce.com/s-kftzvkkgjv/images/stencil/1280x1280/products/1939/4043/AIM-SF-Mockup_1__73001.1696362263.png" }
+    { "src": "https://sessionzero.games/images/systems/alice-is-missing-g1.webp" },
+    { "src": "https://sessionzero.games/images/systems/alice-is-missing-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/alice-is-missing-g3.webp" }
   ],
   "resources": [
     { "type": "link", "url": "https://renegadegamestudios.com/alice-is-missing/", "fmt": "Print" },
@@ -563,7 +563,7 @@ registerSystem("alien", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Official контент",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/Jacksons-Star-Col-Price-3-1440x720.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/alien.jpg",
   "playstyleTags": [
     "horror",
     "survival",
@@ -572,16 +572,16 @@ registerSystem("alien", {
   "settingTags": ["space"],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Alien_8.jpg"
+      "src": "https://sessionzero.games/images/systems/alien-g1.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/ALIEN-RPG-Colonial-Marines-Operations-Manual-1-2-green4-brighter-giant-1.jpg"
+      "src": "https://sessionzero.games/images/systems/alien-g2.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Alien_21-1.jpg"
+      "src": "https://sessionzero.games/images/systems/alien-g3.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/ALIEN-RPG-Colonial-Marines1_C-3-scaled.jpg"
+      "src": "https://sessionzero.games/images/systems/alien-g4.jpg"
     }
   ],
   "resources": [
@@ -748,7 +748,7 @@ registerSystem("apocalypse-world", {
   "complexity": 2,
   "free": false,
   "foundryStatus": "None",
-  "heroImage": "https://static0.cbrimages.com/wordpress/wp-content/uploads/2020/09/Apocalypse-World-Cover.png",
+  "heroImage": "https://sessionzero.games/images/heroes/apocalypse-world.jpg",
   "playstyleTags": [
     "narrative",
     "explore",
@@ -757,13 +757,13 @@ registerSystem("apocalypse-world", {
   "settingTags": ["postapoc"],
   "gallery": [
     {
-      "src": "https://static0.cbrimages.com/wordpress/wp-content/uploads/2020/09/apocalypse-world-creatures.png"
+      "src": "https://sessionzero.games/images/systems/apocalypse-world-g1.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1nLzI2Njk0NDIuanBn/original/IGjp5b.jpg"
+      "src": "https://sessionzero.games/images/systems/apocalypse-world-g2.jpg"
     },
     {
-      "src": "https://static0.cbrimages.com/wordpress/wp-content/uploads/2020/09/Apocalypse-World-Cover.png"
+      "src": "https://sessionzero.games/images/heroes/apocalypse-world.jpg"
     }
   ],
   "resources": [
@@ -932,9 +932,9 @@ registerSystem("ars-magica", {
   "playstyleTags": ["worldbuild", "narrative", "explore"],
   "settingTags": ["fantasy", "historical"],
   "gallery": [
-    { "src": "https://www.atlas-games.com/atlas-cms/resources/08laboratorycolor.jpg" },
-    { "src": "https://www.atlas-games.com/atlas-cms/resources/armdef-interior-spreads-mockup.png" },
-    { "src": "https://www.atlas-games.com/atlas-cms/resources/images/display-part-2-nocorerulebook.png" }
+    { "src": "https://sessionzero.games/images/systems/ars-magica-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/ars-magica-g2.webp" },
+    { "src": "https://sessionzero.games/images/systems/ars-magica-g3.webp" }
   ],
   "resources": [
     { "type": "link", "url": "https://www.atlas-games.com/arsmagica/", "fmt": "Web" },
@@ -1037,9 +1037,9 @@ registerSystem("avatar-legends", {
   "playstyleTags": ["narrative", "action", "social"],
   "settingTags": ["fantasy"],
   "gallery": [
-    { "src": "https://magpiegames.com/cdn/shop/files/Avatar-Core_2.jpg" },
-    { "src": "https://magpiegames.com/cdn/shop/files/Avatar-Republic-City_1.jpg" },
-    { "src": "https://magpiegames.com/cdn/shop/files/Avatar-UIAG_1.jpg" }
+    { "src": "https://sessionzero.games/images/systems/avatar-legends-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/avatar-legends-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/avatar-legends-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://magpiegames.com/collections/avatar-legends", "fmt": "Web" },
@@ -1132,13 +1132,13 @@ registerSystem("band-of-blades", {
   "free": false,
   "edition": null,
   "foundryStatus": "Community",
-  "heroImage": "https://evilhat.com/wp-content/uploads/2021/08/BoB_Cover_Changed.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/band-of-blades.jpg",
   "playstyleTags": ["tactical", "survival", "combat"],
   "settingTags": ["fantasy"],
   "gallery": [
-    { "src": "https://evilhat.com/wp-content/uploads/2021/08/Web-Band-of-Blades-3d.png" },
-    { "src": "https://evilhat.com/wp-content/uploads/2021/08/Band-of-Blades-Map-Color-rsz.webp" },
-    { "src": "https://evilhat.com/wp-content/uploads/2021/08/chosen.jpg" }
+    { "src": "https://sessionzero.games/images/systems/band-of-blades-g1.webp" },
+    { "src": "https://sessionzero.games/images/systems/band-of-blades-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/band-of-blades-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://evilhat.com/product/band-of-blades/", "fmt": "Web" },
@@ -1386,13 +1386,13 @@ registerSystem("black-sword-hack", {
   "settingTags": ["fantasy", "sword-and-sorcery"],
   "gallery": [
     {
-      "src": "https://www.themerrymushmen.com/wp-content/uploads/2022/12/BSH-Book_Mockup_01BBAP.jpg"
+      "src": "https://sessionzero.games/images/systems/black-sword-hack-g1.jpg"
     },
     {
-      "src": "https://www.themerrymushmen.com/wp-content/uploads/2022/12/BSH-MockupCREA.jpg"
+      "src": "https://sessionzero.games/images/systems/black-sword-hack-g2.jpg"
     },
     {
-      "src": "https://www.themerrymushmen.com/wp-content/uploads/2022/12/BSH-MockupBASEADVS-scaled.jpg"
+      "src": "https://sessionzero.games/images/systems/black-sword-hack-g3.jpg"
     }
   ],
   "resources": [
@@ -1525,7 +1525,7 @@ registerSystem("blade-runner", {
   "players": "2–4",
   "complexity": 3,
   "foundryStatus": "Official",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/BLADE-RUNNER-RPG-Art-01-1440x720.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/blade-runner.jpg",
   "playstyleTags": [
     "mystery",
     "narrative",
@@ -1534,22 +1534,22 @@ registerSystem("blade-runner", {
   "settingTags": ["cyberpunk"],
   "gallery": [
     {
-      "src": "https://newsite.freeleaguepublishing.com/wp-content/uploads/2023/08/BLADE-RUNNER-RPG-Art-03-edited.jpg"
+      "src": "https://sessionzero.games/images/systems/blade-runner-g1.jpg"
     },
     {
-      "src": "https://newsite.freeleaguepublishing.com/wp-content/uploads/2023/08/BLADE-RUNNER-RPG-Art-04-edited.jpg"
+      "src": "https://sessionzero.games/images/systems/blade-runner-g2.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/BLADE-RUNNER-RPG-Art-06.jpg"
+      "src": "https://sessionzero.games/images/systems/blade-runner-g3.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/BLADE-RUNNER-RPG-Art-08-edited.jpg"
+      "src": "https://sessionzero.games/images/systems/blade-runner-g4.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/BLADE-RUNNER-RPG-Art-13.jpg"
+      "src": "https://sessionzero.games/images/systems/blade-runner-g5.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/BLADE-RUNNER-RPG-Art-09-edited.jpg"
+      "src": "https://sessionzero.games/images/systems/blade-runner-g6.jpg"
     }
   ],
   "resources": [
@@ -1716,7 +1716,7 @@ registerSystem("blades", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Community",
-  "heroImage": "https://legendary-digital-network-assets.s3.amazonaws.com/geekandsundry/wp-content/uploads/2018/05/Vigilantes.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/blades.jpg",
   "playstyleTags": [
     "narrative",
     "social",
@@ -1889,9 +1889,9 @@ registerSystem("brindlewood-bay", {
   "playstyleTags": ["mystery", "narrative", "social"],
   "settingTags": ["modern", "weird"],
   "gallery": [
-    { "src": "https://netherbook.com/cdn/shop/files/brindlewood-bay-a-dark-cozy-mystery-7145627.webp?v=1765001473&width=1946" },
-    { "src": "https://netherbook.com/cdn/shop/files/brindlewood-bay-a-dark-cozy-mystery-9875193.webp?v=1765001473&width=1946" },
-    { "src": "https://www.gauntlet-rpg.com/uploads/7/7/8/1/77811662/editor/551319902.png?1733167270" }
+    { "src": "https://sessionzero.games/images/systems/brindlewood-bay-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/brindlewood-bay-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/brindlewood-bay-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://www.gauntlet-rpg.com/brindlewood-bay.html", "fmt": "Web" },
@@ -1991,9 +1991,9 @@ registerSystem("burning-wheel", {
   "playstyleTags": ["narrative", "social", "tactical"],
   "settingTags": ["fantasy"],
   "gallery": [
-    { "src": "https://www.burningwheel.com/cdn/shop/files/BWGR_shot__49701.1690573425.1280.1280.jpg" },
-    { "src": "https://www.burningwheel.com/cdn/shop/files/18_BWCodex__25392.1690573290.1280.1280.jpg" },
-    { "src": "https://www.burningwheel.com/cdn/shop/files/19_BWAnthology__34914.1690573117.1280.1280.jpg" }
+    { "src": "https://sessionzero.games/images/systems/burning-wheel-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/burning-wheel-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/burning-wheel-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://www.burningwheel.com/", "fmt": "Web" },
@@ -2089,7 +2089,7 @@ registerSystem("cairn", {
   "complexity": 1,
   "free": true,
   "foundryStatus": "Official",
-  "heroImage": "https://assetsio.gnwcdn.com/cairn-2e-box-set-art-trolls-tree-header.png?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp",
+  "heroImage": "https://sessionzero.games/images/heroes/cairn.jpg",
   "playstyleTags": [
     "explore",
     "horror",
@@ -2098,10 +2098,10 @@ registerSystem("cairn", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://www.exaltedfuneral.com/cdn/shop/files/cairn-2e-boxed-set-boxed-set-2496979.webp?v=1764284291"
+      "src": "https://sessionzero.games/images/systems/cairn-g1.jpg"
     },
     {
-      "src": "https://www.exaltedfuneral.com/cdn/shop/files/cairn-2e-boxed-set-boxed-set-3919238.webp?v=1764284291"
+      "src": "https://sessionzero.games/images/systems/cairn-g2.jpg"
     }
   ],
   "resources": [
@@ -2273,7 +2273,7 @@ registerSystem("call-of-cthulhu", {
   "players": "2–6",
   "complexity": 3,
   "foundryStatus": "Community + Official modules",
-  "heroImage": "https://www.tribality.com/wp-content/uploads/2019/04/richard-wright-cthulhu-museum1-1024x512.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/call-of-cthulhu.jpg",
   "playstyleTags": [
     "mystery",
     "horror",
@@ -2283,10 +2283,10 @@ registerSystem("call-of-cthulhu", {
   "settingTags": ["historical", "weird"],
   "gallery": [
     {
-      "src": "https://www.rpgtabletopgames.com/wp-content/uploads/call-of-cthulhu-rpg.jpg"
+      "src": "https://sessionzero.games/images/systems/call-of-cthulhu-g1.jpg"
     },
     {
-      "src": "https://www.tribality.com/wp-content/uploads/2019/04/richard-wright-cthulhu-museum1-1024x512.jpg"
+      "src": "https://sessionzero.games/images/heroes/call-of-cthulhu.jpg"
     },
     {
       "src": "https://sessionzero.games/images/systems/call-of-cthulhu-g2.jpg"
@@ -2477,13 +2477,13 @@ registerSystem("castles-and-crusades", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://image.nobleknight.com/t/jpg1500/tlg80108.jpg"
+      "src": "https://sessionzero.games/images/systems/castles-and-crusades-g1.jpg"
     },
     {
-      "src": "https://trolllord.com/wp-content/uploads/2024/12/Pages-from-TLG-801010-Players-Handbook.pdf.jpg"
+      "src": "https://sessionzero.games/images/systems/castles-and-crusades-g2.jpg"
     },
     {
-      "src": "https://trolllord.com/wp-content/uploads/2024/12/Pages-from-TLG-801010-Players-Handbook_Page_02-1583x2048.jpg"
+      "src": "https://sessionzero.games/images/systems/castles-and-crusades-g3.jpg"
     }
   ],
   "resources": [
@@ -2639,13 +2639,13 @@ registerSystem("chronicles-of-darkness", {
   "free": false,
   "edition": "2nd Edition",
   "foundryStatus": "Community",
-  "heroImage": "https://theonyxpath.com/wp-content/uploads/2015/12/CofD-Front-Screen-Res-1.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/chronicles-of-darkness.jpg",
   "playstyleTags": ["horror", "mystery", "narrative"],
   "settingTags": ["modern", "urban-fantasy"],
   "gallery": [
-    { "src": "https://theonyxpath.com/wp-content/uploads/2013/04/113340-2.jpg" },
-    { "src": "https://theonyxpath.com/wp-content/uploads/2016/09/Gaydos_HurtLocker-Cover-1.jpg" },
-    { "src": "https://image.nobleknight.com/i/jpg1500/iprop-cd-de-pe.jpg" }
+    { "src": "https://sessionzero.games/images/systems/chronicles-of-darkness-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/chronicles-of-darkness-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/chronicles-of-darkness-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://theonyxpath.com/category/worlds/chroniclesofdarkness/", "fmt": "Web" },
@@ -2733,7 +2733,7 @@ registerSystem("city-of-mist", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://sonofoak.com/cdn/shop/files/MOCKUP-book-Core-Books-Player_s-Guide_1eeeba69-aa3c-45bb-9192-eb308407f400.png?v=1706050848",
+  "heroImage": "https://sessionzero.games/images/heroes/city-of-mist.webp",
   "playstyleTags": [
     "narrative",
     "combat",
@@ -2742,13 +2742,13 @@ registerSystem("city-of-mist", {
   "settingTags": ["urban-fantasy", "modern"],
   "gallery": [
     {
-      "src": "https://sonofoak.com/cdn/shop/products/Combo-Full-Sets-CoM.png?v=1762364603"
+      "src": "https://sessionzero.games/images/systems/city-of-mist-g1.webp"
     },
     {
-      "src": "https://sonofoak.com/cdn/shop/products/Slipcase-Expansions-open-1.png?v=1719841351"
+      "src": "https://sessionzero.games/images/systems/city-of-mist-g2.webp"
     },
     {
-      "src": "https://sonofoak.com/cdn/shop/files/The_Core_Set_-_Web_Square.png?v=1736160691"
+      "src": "https://sessionzero.games/images/systems/city-of-mist-g3.webp"
     }
   ],
   "resources": [
@@ -2887,7 +2887,7 @@ registerSystem("coriolis", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Official контент",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/coriolis_ship-1440x720.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/coriolis.jpg",
   "playstyleTags": [
     "explore",
     "social",
@@ -2897,16 +2897,16 @@ registerSystem("coriolis", {
   "settingTags": ["space"],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/coriolisweb.jpg"
+      "src": "https://sessionzero.games/images/systems/coriolis-g1.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/coriolis_Kapitelbild_7-scaled.jpg"
+      "src": "https://sessionzero.games/images/systems/coriolis-g2.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/coriolis__s63.jpg"
+      "src": "https://sessionzero.games/images/systems/coriolis-g3.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/coriolis_vapenrustningar-scaled.jpg"
+      "src": "https://sessionzero.games/images/systems/coriolis-g4.jpg"
     }
   ],
   "resources": [
@@ -3105,7 +3105,7 @@ registerSystem("cortex-prime", {
   "players": "3–6",
   "complexity": 3,
   "foundryStatus": "Community",
-  "heroImage": "https://shop.direwolfdigital.com/cdn/shop/products/store_cortex_bookcover_1200x.png",
+  "heroImage": "https://sessionzero.games/images/heroes/cortex-prime.webp",
   "playstyleTags": [
     "narrative",
     "social",
@@ -3114,10 +3114,10 @@ registerSystem("cortex-prime", {
   "settingTags": [],
   "gallery": [
     {
-      "src": "https://shop.direwolfdigital.com/cdn/shop/products/store_cortex_inside_1200x.png"
+      "src": "https://sessionzero.games/images/systems/cortex-prime-g1.webp"
     },
     {
-      "src": "https://prod-images.cortexrpg.com/cms/media/temp/intro-bg.png"
+      "src": "https://sessionzero.games/images/systems/cortex-prime-g2.jpg"
     }
   ],
   "resources": [
@@ -3250,7 +3250,7 @@ registerSystem("curseborne", {
   "free": false,
   "edition": "Core Rulebook (not yet on sale)",
   "foundryStatus": "None",
-  "heroImage": "https://theonyxpath.com/wp-content/uploads/2024/08/creppy-morgue-changes-R1-light-hair-transparent-1447x2048.png",
+  "heroImage": "https://sessionzero.games/images/heroes/curseborne.jpg",
   "playstyleTags": ["horror", "mystery", "social"],
   "settingTags": ["modern", "urban-fantasy"],
   "gallery": [],
@@ -3315,7 +3315,7 @@ registerSystem("cy-borg", {
   "players": "2–6",
   "complexity": 1,
   "foundryStatus": "Community",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/CY_BORG-Banner1-1440x384.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/cy-borg.jpg",
   "playstyleTags": [
     "combat",
     "survival",
@@ -3324,13 +3324,13 @@ registerSystem("cy-borg", {
   "settingTags": ["cyberpunk", "postapoc"],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/CBcovermockup_small_038aec50-b06d-43ce-8712-c9077b0211b5-1200x1200-1-1200x1200.jpg"
+      "src": "https://sessionzero.games/images/systems/cy-borg-g1.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/CY_BORG_20-21-1536x1536.jpg"
+      "src": "https://sessionzero.games/images/systems/cy-borg-g2.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/CY_BORG_50-51-1536x1536.jpg"
+      "src": "https://sessionzero.games/images/systems/cy-borg-g3.jpg"
     }
   ],
   "resources": [
@@ -3485,7 +3485,7 @@ registerSystem("cyberpunk-red", {
   "complexity": 3,
   "free": false,
   "foundryStatus": "Community",
-  "heroImage": "https://d1vzi28wh99zvq.cloudfront.net/images/13/333585.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/cyberpunk-red.jpg",
   "playstyleTags": [
     "combat",
     "narrative",
@@ -3494,13 +3494,13 @@ registerSystem("cyberpunk-red", {
   "settingTags": ["cyberpunk"],
   "gallery": [
     {
-      "src": "https://d1vzi28wh99zvq.cloudfront.net/images/13/409912.jpg"
+      "src": "https://sessionzero.games/images/systems/cyberpunk-red-g1.jpg"
     },
     {
-      "src": "https://d1vzi28wh99zvq.cloudfront.net/images/13/279014.jpg"
+      "src": "https://sessionzero.games/images/systems/cyberpunk-red-g2.jpg"
     },
     {
-      "src": "https://d1vzi28wh99zvq.cloudfront.net/images/13/333585.jpg"
+      "src": "https://sessionzero.games/images/heroes/cyberpunk-red.jpg"
     }
   ],
   "resources": [
@@ -3664,7 +3664,7 @@ registerSystem("daggerheart", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Community", // CHECK: Foundryborne system is DPCGL-licensed, widely used, but not first-party Darrington Press
-  "heroImage": "https://darringtonpress.com/wp-content/uploads/2024/12/HEADER-DH-Standard-Cover-Art.png",
+  "heroImage": "https://sessionzero.games/images/heroes/daggerheart.jpg",
   "playstyleTags": [
     "narrative",
     "combat",
@@ -3673,16 +3673,16 @@ registerSystem("daggerheart", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://darringtonpress.com/wp-content/uploads/2024/12/DH-Standard-Cover-Art-watermarked-Mat-Wilma-1600x900.png"
+      "src": "https://sessionzero.games/images/systems/daggerheart-g1.jpg"
     },
     {
-      "src": "https://darringtonpress.com/wp-content/uploads/2024/12/DH-Limited-Cover-Art-watermarked-Dominik-Mayer-1600x900.png"
+      "src": "https://sessionzero.games/images/systems/daggerheart-g2.jpg"
     },
     {
-      "src": "https://darringtonpress.com/wp-content/uploads/2024/12/DH-Stnd-Book-Alone-copy.png"
+      "src": "https://sessionzero.games/images/systems/daggerheart-g3.jpg"
     },
     {
-      "src": "https://darringtonpress.com/wp-content/uploads/2024/12/DH-Limited-Spill-Fixed-landscape.png"
+      "src": "https://sessionzero.games/images/systems/daggerheart-g4.jpg"
     }
   ],
   "resources": [
@@ -3869,9 +3869,9 @@ registerSystem("deadlands", {
   "playstyleTags": ["action", "horror", "combat"],
   "settingTags": ["weird", "historical"],
   "gallery": [
-    { "src": "https://image.nobleknight.com/s/jpg1500/s2p10220.jpg" },
-    { "src": "https://image.nobleknight.com/w/jpg1500/wwdiceplastic.jpg" },
-    { "src": "https://image.nobleknight.com/s/jpg1500/s2p10235.jpg" }
+    { "src": "https://sessionzero.games/images/systems/deadlands-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/deadlands-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/deadlands-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://peginc.com/savage-settings/deadlands/", "fmt": "Web" },
@@ -3968,7 +3968,7 @@ registerSystem("death-in-space", {
   "players": "2–5",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/D1_hori-1440x720.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/death-in-space.jpg",
   "playstyleTags": [
     "survival",
     "explore",
@@ -3977,7 +3977,7 @@ registerSystem("death-in-space", {
   "settingTags": ["space"],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/D1_hori-1440x720.jpg"
+      "src": "https://sessionzero.games/images/heroes/death-in-space.jpg"
     }
   ],
   "resources": [
@@ -4127,7 +4127,7 @@ registerSystem("delta-green", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Official контент",
-  "heroImage": "https://www.delta-green.com/content/images/size/w1200/2024/08/TERROR.png",
+  "heroImage": "https://sessionzero.games/images/heroes/delta-green.jpg",
   "playstyleTags": [
     "horror",
     "mystery",
@@ -4136,13 +4136,13 @@ registerSystem("delta-green", {
   "settingTags": ["modern", "weird"],
   "gallery": [
     {
-      "src": "https://www.delta-green.com/content/images/size/w720/2026/03/Army-spread.png"
+      "src": "https://sessionzero.games/images/systems/delta-green-g1.webp"
     },
     {
-      "src": "https://www.delta-green.com/content/images/size/w720/2026/03/1-THE-AGENT.png"
+      "src": "https://sessionzero.games/images/systems/delta-green-g2.jpg"
     },
     {
-      "src": "https://www.delta-green.com/content/images/size/w720/2026/03/THE-STRANGE-SHIP-1.png"
+      "src": "https://sessionzero.games/images/systems/delta-green-g3.jpg"
     }
   ],
   "resources": [
@@ -4320,13 +4320,13 @@ registerSystem("dnd-5e", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://static.wikia.nocookie.net/dungeonsdragons/images/2/27/PHB5e.jpg/revision/latest?cb=20191127044344"
+      "src": "https://sessionzero.games/images/systems/dnd-5e-g1.jpg"
     },
     {
-      "src": "https://wrathofzombie.wordpress.com/wp-content/uploads/2014/08/phb-cover-art.jpg"
+      "src": "https://sessionzero.games/images/systems/dnd-5e-g2.jpg"
     },
     {
-      "src": "https://cdn.vox-cdn.com/thumbor/JkiyvfbW11Txi9UgK3_cZlNEaPo=/0x0:5433x3336/1920x0/filters:focal(0x0:5433x3336):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/25448127/0_DnD_PHB_ALT_Cvr_Full_Cvr.jpg"
+      "src": "https://sessionzero.games/images/systems/dnd-5e-g3.jpg"
     }
   ],
   "resources": [
@@ -4493,7 +4493,7 @@ registerSystem("dolmenwood", {
   "complexity": 2,
   "free": false,
   "foundryStatus": "Community",
-  "heroImage": "https://cdn.shopify.com/s/files/1/0017/2330/1933/files/RefScreen.jpg?v=1704807528",
+  "heroImage": "https://sessionzero.games/images/heroes/dolmenwood.jpg",
   "playstyleTags": [
     "explore",
     "combat",
@@ -4502,13 +4502,13 @@ registerSystem("dolmenwood", {
   "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
-      "src": "https://cdn.shopify.com/s/files/1/0017/2330/1933/files/Thumbnail_ce144c08-d39d-4fc1-88ee-4cb210bc0e20.jpg?v=1750675469"
+      "src": "https://sessionzero.games/images/systems/dolmenwood-g1.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0017/2330/1933/files/Thumbnail_fadb86b1-ec93-489a-8a1b-2a5552dcc8b3.png?v=1688756218"
+      "src": "https://sessionzero.games/images/systems/dolmenwood-g2.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0017/2330/1933/files/Thumbnail_094cd9d8-a0c2-4f50-a548-3ecd95f7ef34.png?v=1688756199"
+      "src": "https://sessionzero.games/images/systems/dolmenwood-g3.jpg"
     }
   ],
   "resources": [
@@ -4648,7 +4648,7 @@ registerSystem("dragonbane", {
   "players": "3–5",
   "complexity": 2,
   "foundryStatus": "Official",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/drakarochdemoner_dark-1440x720.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/dragonbane.jpg",
   "playstyleTags": [
     "combat",
     "explore",
@@ -4657,16 +4657,16 @@ registerSystem("dragonbane", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Drakar-och-Demoner_rollpersonen.jpg"
+      "src": "https://sessionzero.games/images/systems/dragonbane-g1.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Drakar-och-Demoner_best-2-scaled.jpg"
+      "src": "https://sessionzero.games/images/systems/dragonbane-g2.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Drakar-och-Demoner_Magi-scaled.jpg"
+      "src": "https://sessionzero.games/images/systems/dragonbane-g3.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/11/DRAGONBANE-full-game.png"
+      "src": "https://sessionzero.games/images/systems/dragonbane-g4.webp"
     }
   ],
   "resources": [
@@ -4839,7 +4839,7 @@ registerSystem("draw-steel", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Community",
-  "heroImage": "https://www.belloflostsouls.net/wp-content/uploads/2025/08/DrawSteel_Monsters_header.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/draw-steel.jpg",
   "heroStyle": "background: linear-gradient(135deg, #4a1942, #1a1a2e, #0f3460);",
   "playstyleTags": [
     "combat",
@@ -4849,16 +4849,16 @@ registerSystem("draw-steel", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://www.rascal.news/content/images/2025/06/Thomas-2-.png"
+      "src": "https://sessionzero.games/images/systems/draw-steel-g1.jpg"
     },
     {
-      "src": "https://i.ytimg.com/vi/5n4w7DQhXGg/maxresdefault.jpg"
+      "src": "https://sessionzero.games/images/systems/draw-steel-g2.jpg"
     },
     {
-      "src": "https://shop.mcdmproductions.com/cdn/shop/files/DrawSteel_Heroes_300x.png?v=1773949925"
+      "src": "https://sessionzero.games/images/systems/draw-steel-g3.jpg"
     },
     {
-      "src": "https://shop.mcdmproductions.com/cdn/shop/files/DrawSteel_Monsters_300x.png?v=1773949925"
+      "src": "https://sessionzero.games/images/systems/draw-steel-g4.jpg"
     }
   ],
   "resources": [
@@ -5008,9 +5008,9 @@ registerSystem("dread", {
   "playstyleTags": ["horror", "narrative", "survival"],
   "settingTags": ["modern", "weird"],
   "gallery": [
-    { "src": "https://wp.tiltingatwindmills.net/wp-content/uploads/2014/10/playing-dread-at-Gencon.png" },
-    { "src": "https://www.tiltingatwindmills.net/wp-content/uploads/2014/10/golden-ennie-2006.png" },
-    { "src": "https://wp.tiltingatwindmills.net/wp-content/uploads/2014/10/dread_standard_front_cover2.png" }
+    { "src": "https://sessionzero.games/images/systems/dread-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/dread-g2.webp" },
+    { "src": "https://sessionzero.games/images/systems/dread-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://www.tiltingatwindmills.net/games/", "fmt": "Web" },
@@ -5106,13 +5106,13 @@ registerSystem("dresden-files-accelerated", {
   "free": false,
   "edition": null,
   "foundryStatus": "Official",
-  "heroImage": "https://evilhat.com/wp-content/uploads/2021/10/products-DFA-Cover-3d.png",
+  "heroImage": "https://sessionzero.games/images/heroes/dresden-files-accelerated.webp",
   "playstyleTags": ["narrative", "mystery", "action"],
   "settingTags": ["urban-fantasy", "modern"],
   "gallery": [
-    { "src": "https://evilhat.com/wp-content/uploads/2017/02/Alphas-Take-Advantage-FINAL.jpg" },
-    { "src": "https://evilhat.com/wp-content/uploads/2017/02/Butters-Attack-FINAL.jpg" },
-    { "src": "https://evilhat.com/wp-content/uploads/2017/02/page-232-necromantic-surges-150dpi.jpg" }
+    { "src": "https://sessionzero.games/images/systems/dresden-files-accelerated-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/dresden-files-accelerated-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/dresden-files-accelerated-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://evilhat.com/product/dresden-files-accelerated/", "fmt": "Web" },
@@ -5216,13 +5216,13 @@ registerSystem("dune-imperium", {
   "settingTags": ["space"],
   "gallery": [
     {
-      "src": "https://i.shgcdn.com/c00c3029-a208-4425-98f5-bd18c9db95da/-/format/auto/-/preview/3000x3000/-/quality/better/"
+      "src": "https://sessionzero.games/images/systems/dune-imperium-g1.jpg"
     },
     {
-      "src": "https://i.shgcdn.com/398720aa-96dd-4754-a6f5-648cdffd2dac/-/format/auto/-/preview/3000x3000/-/quality/better/"
+      "src": "https://sessionzero.games/images/systems/dune-imperium-g2.jpg"
     },
     {
-      "src": "https://i.shgcdn.com/a5d8acc2-4854-4e22-8c65-89b9c18905a8/-/format/auto/-/preview/3000x3000/-/quality/better/"
+      "src": "https://sessionzero.games/images/systems/dune-imperium-g3.jpg"
     }
   ],
   "resources": [
@@ -5381,13 +5381,13 @@ registerSystem("dungeon-crawl-classics", {
   "settingTags": ["fantasy", "sword-and-sorcery"],
   "gallery": [
     {
-      "src": "https://cdn11.bigcommerce.com/s-ua4dd/images/stencil/1280x1280/products/345696/500037/Gamenerdzimage9999-6539__01376.1770668527.png"
+      "src": "https://sessionzero.games/images/systems/dungeon-crawl-classics-g1.webp"
     },
     {
-      "src": "https://image.nobleknight.com/i/jpg1500/impgmg5070l.jpg"
+      "src": "https://sessionzero.games/images/systems/dungeon-crawl-classics-g2.jpg"
     },
     {
-      "src": "https://image.nobleknight.com/g/jpg1500/gmg5070-p7.jpg"
+      "src": "https://sessionzero.games/images/systems/dungeon-crawl-classics-g3.jpg"
     }
   ],
   "resources": [
@@ -5561,10 +5561,10 @@ registerSystem("dungeon-world", {
       "src": "https://www.rpg.net/pictures/cache/picthumb26348-medium.jpg"
     },
     {
-      "src": "https://dungeonworld.gplusarchive.online/wp-content/uploads/2013/06/Shifter252BRanger252BColor.jpg"
+      "src": "https://sessionzero.games/images/systems/dungeon-world-g2.jpg"
     },
     {
-      "src": "https://dungeonworld.gplusarchive.online/wp-content/uploads/2013/06/Half-Orc252BDruid252BColor.jpg"
+      "src": "https://sessionzero.games/images/systems/dungeon-world-g3.jpg"
     }
   ],
   "resources": [
@@ -5731,7 +5731,7 @@ registerSystem("eclipse-phase", {
   "complexity": 4,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://cdn.shopify.com/s/files/1/0253/1809/6947/products/EP2_Cover_-_Front_900px.jpg?v=1584157023",
+  "heroImage": "https://sessionzero.games/images/heroes/eclipse-phase.jpg",
   "playstyleTags": [
     "explore",
     "horror",
@@ -5740,13 +5740,13 @@ registerSystem("eclipse-phase", {
   "settingTags": ["space", "postapoc"],
   "gallery": [
     {
-      "src": "https://cdn.shopify.com/s/files/1/0253/1809/6947/products/EP2_CriminalOps1.jpg?v=1650146809"
+      "src": "https://sessionzero.games/images/systems/eclipse-phase-g1.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0253/1809/6947/products/EP2_XRisks_Nanoswarm.png?v=1650146809"
+      "src": "https://sessionzero.games/images/systems/eclipse-phase-g2.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0253/1809/6947/products/EP2_StartingOut.png?v=1650146810"
+      "src": "https://sessionzero.games/images/systems/eclipse-phase-g3.jpg"
     }
   ],
   "resources": [
@@ -5880,7 +5880,7 @@ registerSystem("electric-bastionland", {
   "players": "2–5",
   "complexity": 1,
   "foundryStatus": "Community",
-  "heroImage": "https://www.cursedink.es/wp-content/uploads/2023/11/2023-11-29_18h32_11-1400x700.png",
+  "heroImage": "https://sessionzero.games/images/heroes/electric-bastionland.jpg",
   "playstyleTags": [
     "explore",
     "social",
@@ -5889,16 +5889,16 @@ registerSystem("electric-bastionland", {
   "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
-      "src": "https://cdn.shopify.com/s/files/1/0025/6006/5625/products/electric-bastionland-pdf-book-141375.jpg?v=1688417871"
+      "src": "https://sessionzero.games/images/systems/electric-bastionland-g1.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0025/6006/5625/products/electric-bastionland-pdf-book-853175.png?v=1688417871"
+      "src": "https://sessionzero.games/images/systems/electric-bastionland-g2.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0025/6006/5625/products/electric-bastionland-pdf-book-426085.png?v=1688417871"
+      "src": "https://sessionzero.games/images/systems/electric-bastionland-g3.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0025/6006/5625/products/electric-bastionland-pdf-book-392957.png?v=1688417871"
+      "src": "https://sessionzero.games/images/systems/electric-bastionland-g4.jpg"
     }
   ],
   "resources": [
@@ -6069,16 +6069,16 @@ registerSystem("fabula-ultima", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://need.games/wp-content/uploads/2024/02/fu-spread-mockup-2.jpg"
+      "src": "https://sessionzero.games/images/systems/fabula-ultima-g1.jpg"
     },
     {
-      "src": "https://need.games/wp-content/uploads/2024/02/fu-spread-mockup-3.jpg"
+      "src": "https://sessionzero.games/images/systems/fabula-ultima-g2.jpg"
     },
     {
-      "src": "https://need.games/wp-content/uploads/2024/02/fu-spread-mockup-4.jpg"
+      "src": "https://sessionzero.games/images/systems/fabula-ultima-g3.jpg"
     },
     {
-      "src": "https://need.games/wp-content/uploads/2024/02/fu-spread-mockup-5.jpg"
+      "src": "https://sessionzero.games/images/systems/fabula-ultima-g4.jpg"
     }
   ],
   "resources": [
@@ -6256,7 +6256,7 @@ registerSystem("fate", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Official",
-  "heroImage": "https://d1vzi28wh99zvq.cloudfront.net/images/2152/114903.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/fate.jpg",
   "playstyleTags": [
     "narrative",
     "explore",
@@ -6265,13 +6265,13 @@ registerSystem("fate", {
   "settingTags": [],
   "gallery": [
     {
-      "src": "https://d1vzi28wh99zvq.cloudfront.net/images/2152/114902.jpg"
+      "src": "https://sessionzero.games/images/systems/fate-g1.jpg"
     },
     {
-      "src": "https://static.wikia.nocookie.net/rpgtalk/images/8/8a/Fate_Accelerated_cover.jpg"
+      "src": "https://sessionzero.games/images/systems/fate-g2.jpg"
     },
     {
-      "src": "https://d1vzi28wh99zvq.cloudfront.net/images/2152/114903.jpg"
+      "src": "https://sessionzero.games/images/heroes/fate.jpg"
     }
   ],
   "resources": [
@@ -6444,13 +6444,13 @@ registerSystem("fiasco", {
   "settingTags": ["modern"],
   "gallery": [
     {
-      "src": "https://bullypulpitgames.com/cdn/shop/files/Fiasco_Boxed-grey.jpg"
+      "src": "https://sessionzero.games/images/systems/fiasco-g1.jpg"
     },
     {
-      "src": "https://bullypulpitgames.com/cdn/shop/products/fiascoclassiccollagecrop.jpg"
+      "src": "https://sessionzero.games/images/systems/fiasco-g2.jpg"
     },
     {
-      "src": "https://bullypulpitgames.com/cdn/shop/products/FiascoClassic-grey.jpg"
+      "src": "https://sessionzero.games/images/systems/fiasco-g3.jpg"
     }
   ],
   "resources": [
@@ -6613,7 +6613,7 @@ registerSystem("fist", {
   "players": "2–5",
   "complexity": 1,
   "foundryStatus": "Community",
-  "heroImage": "https://img.itch.zone/aW1nLzMxMjI4NzUucG5n/original/zku5yb.png",
+  "heroImage": "https://sessionzero.games/images/heroes/fist.jpg",
   "playstyleTags": [
     "action",
     "survival",
@@ -6622,7 +6622,7 @@ registerSystem("fist", {
   "settingTags": ["modern", "historical"],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1nLzMxMjI4NzUucG5n/original/zku5yb.png"
+      "src": "https://sessionzero.games/images/heroes/fist.jpg"
     }
   ],
   "quotes": [
@@ -6771,7 +6771,7 @@ registerSystem("forbidden-lands", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Official контент",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/Forbidden-Lands-cover-art_wide-1440x720.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/forbidden-lands.jpg",
   "playstyleTags": [
     "explore",
     "survival",
@@ -6781,13 +6781,13 @@ registerSystem("forbidden-lands", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/ForbiddenLands_drakorm_pergament_core_art-1.jpg"
+      "src": "https://sessionzero.games/images/systems/forbidden-lands-g1.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/ForbiddenLands_TheBloodmarch_Landscape.jpg"
+      "src": "https://sessionzero.games/images/systems/forbidden-lands-g2.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/ForbiddenLands_orch_pergament_kvadrat.jpg"
+      "src": "https://sessionzero.games/images/systems/forbidden-lands-g3.jpg"
     }
   ],
   "resources": [
@@ -6975,9 +6975,9 @@ registerSystem("genesys", {
   "playstyleTags": ["narrative", "action", "social"],
   "settingTags": ["fantasy", "cyberpunk"],
   "gallery": [
-    { "src": "https://image.nobleknight.com/f/jpg1500/ffggns03.jpg" },
-    { "src": "https://image.nobleknight.com/f/jpg1500/ffggns04.jpg" },
-    { "src": "https://image.nobleknight.com/f/jpg1500/ffggns12.jpg" }
+    { "src": "https://sessionzero.games/images/systems/genesys-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/genesys-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/genesys-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://www.edge-studio.net/games/genesys-core-rulebook/", "fmt": "Web" },
@@ -7080,9 +7080,9 @@ registerSystem("godbound", {
   "playstyleTags": ["action", "worldbuild", "combat"],
   "settingTags": ["fantasy"],
   "gallery": [
-    { "src": "https://image.nobleknight.com/l/jpg1500/lexicoofthro.jpg" },
-    { "src": "https://image.nobleknight.com/1/jpg1500/10blades.jpg" },
-    { "src": "https://image.nobleknight.com/2/jpg1500/2370011105765worlds.jpg" }
+    { "src": "https://sessionzero.games/images/systems/godbound-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/godbound-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/godbound-g3.jpg" }
   ],
   "resources": [
     { "type": "rules", "url": "https://www.drivethrurpg.com/en/product/185959/godbound-a-game-of-divine-heroes-free-edition", "fmt": "PDF (free)" },
@@ -7170,7 +7170,7 @@ registerSystem("gurps", {
   "complexity": 4,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://www.sjgames.com/gurps/books/basic/img/basic1_lg.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/gurps.jpg",
   "playstyleTags": [
     "tactical",
     "explore",
@@ -7179,13 +7179,13 @@ registerSystem("gurps", {
   "settingTags": [],
   "gallery": [
     {
-      "src": "https://www.sjgames.com/gurps/books/basic/img/basic2_lg.jpg"
+      "src": "https://sessionzero.games/images/systems/gurps-g1.jpg"
     },
     {
-      "src": "https://www.sjgames.com/gurps/books/basic/img/commando.jpg"
+      "src": "https://sessionzero.games/images/systems/gurps-g2.jpg"
     },
     {
-      "src": "https://www.sjgames.com/gurps/books/basic/img/basic1_lg.jpg"
+      "src": "https://sessionzero.games/images/heroes/gurps.jpg"
     }
   ],
   "resources": [
@@ -7357,16 +7357,16 @@ registerSystem("heart", {
   "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
-      "src": "https://rowanrookanddecard.com/wp-content/uploads/2020/04/Heart-The-City-Beneath-RPG-COMBAT-scaled.jpg"
+      "src": "https://sessionzero.games/images/systems/heart-g1.jpg"
     },
     {
-      "src": "https://rowanrookanddecard.com/wp-content/uploads/2020/04/Heart-The-City-Beneath-RPG-ANGEL.webp"
+      "src": "https://sessionzero.games/images/systems/heart-g2.jpg"
     },
     {
-      "src": "https://rowanrookanddecard.com/wp-content/uploads/2021/10/Heart_Character_Sheet_Product_Photo_Front-600x600.png.webp"
+      "src": "https://sessionzero.games/images/systems/heart-g3.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1nLzMyNTE2MzgucG5n/original/2W%2BgAK.png"
+      "src": "https://sessionzero.games/images/systems/heart-g4.jpg"
     }
   ],
   "resources": [
@@ -7518,13 +7518,13 @@ registerSystem("his-majesty-the-worm", {
   "foundryStatus": "None",
   "free": false,
   "edition": null,
-  "heroImage": "https://www.exaltedfuneral.com/cdn/shop/files/HMtW-CA-Hero.jpg?v=1763530083&width=1920",
+  "heroImage": "https://sessionzero.games/images/heroes/his-majesty-the-worm.jpg",
   "playstyleTags": ["explore", "combat", "mystery"],
   "settingTags": ["fantasy", "weird"],
   "gallery": [
-    { "src": "https://www.exaltedfuneral.com/cdn/shop/files/his-majesty-the-worm-book-888110.jpg?v=1763412737&width=2000" },
-    { "src": "https://www.exaltedfuneral.com/cdn/shop/files/his-majesty-the-worm-book-950216.jpg?v=1763412737&width=2000" },
-    { "src": "https://www.exaltedfuneral.com/cdn/shop/files/his-majesty-the-worm-book-480645.jpg?v=1763412737&width=2000" }
+    { "src": "https://sessionzero.games/images/systems/his-majesty-the-worm-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/his-majesty-the-worm-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/his-majesty-the-worm-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://www.hismajestytheworm.games/", "fmt": "Web" },
@@ -7614,7 +7614,7 @@ registerSystem("hyperborea-3", {
   "players": "3–6",
   "complexity": 3,
   "foundryStatus": "Community",
-  "heroImage": "https://www.hyperborea.tv/uploads/4/4/6/6/44662451/hyperborean-scene_orig.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/hyperborea-3.jpg",
   "playstyleTags": [
     "combat",
     "explore",
@@ -7625,13 +7625,13 @@ registerSystem("hyperborea-3", {
   "settingTags": ["sword-and-sorcery", "fantasy"],
   "gallery": [
     {
-      "src": "https://www.hyperborea.tv/uploads/4/4/6/6/44662451/1000027114_orig.png"
+      "src": "https://sessionzero.games/images/systems/hyperborea-3-g1.jpg"
     },
     {
-      "src": "https://www.hyperborea.tv/uploads/4/4/6/6/44662451/20241016-112234_orig.jpg"
+      "src": "https://sessionzero.games/images/systems/hyperborea-3-g2.jpg"
     },
     {
-      "src": "https://www.hyperborea.tv/uploads/4/4/6/6/44662451/1000027125_orig.png"
+      "src": "https://sessionzero.games/images/systems/hyperborea-3-g3.jpg"
     }
   ],
   "resources": [
@@ -7787,9 +7787,9 @@ registerSystem("imperium-maledictum", {
   "playstyleTags": ["combat", "mystery", "tactical"],
   "settingTags": ["space"],
   "gallery": [
-    { "src": "https://image.nobleknight.com/c/jpg1500/cb72707.jpg" },
-    { "src": "https://image.nobleknight.com/c/jpg1500/cb72711.jpg" },
-    { "src": "https://image.nobleknight.com/c/jpg1500/cb72712.jpg" }
+    { "src": "https://sessionzero.games/images/systems/imperium-maledictum-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/imperium-maledictum-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/imperium-maledictum-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://cubicle7games.com/our-games/warhammer-40k-roleplay-imperium-maledictum", "fmt": "Web" },
@@ -7883,7 +7883,7 @@ registerSystem("into-the-odd", {
   "players": "2–5",
   "complexity": 1,
   "foundryStatus": "Community",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/into_the_odd-1440x720.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/into-the-odd.jpg",
   "playstyleTags": [
     "explore",
     "survival",
@@ -7892,7 +7892,7 @@ registerSystem("into-the-odd", {
   "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/ITO_standing-TM-1200x1200.jpg"
+      "src": "https://sessionzero.games/images/systems/into-the-odd-g1.jpg"
     }
   ],
   "resources": [
@@ -8026,7 +8026,7 @@ registerSystem("ironsworn", {
   "players": "1–4",
   "complexity": 2,
   "free": true,
-  "heroImage": "https://img.itch.zone/aW1nLzE3OTgwODguanBn/original/gRDqF5.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/ironsworn.jpg",
   "playstyleTags": [
     "solo",
     "explore",
@@ -8036,13 +8036,13 @@ registerSystem("ironsworn", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMzU5NzA3LzE3OTgxMTQucG5n/347x500/4T0Q8w.png"
+      "src": "https://sessionzero.games/images/systems/ironsworn-g1.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMzU5NzA3LzE3OTgxMTUucG5n/347x500/e4qPTQ.png"
+      "src": "https://sessionzero.games/images/systems/ironsworn-g2.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMzU5NzA3LzE3OTgxMTIucG5n/347x500/A9moFn.png"
+      "src": "https://sessionzero.games/images/systems/ironsworn-g3.jpg"
     }
   ],
   "resources": [
@@ -8224,7 +8224,7 @@ registerSystem("ker-nethalas", {
   "dice": "d100 (2d10)",
   "players": "1",
   "complexity": 2,
-  "heroImage": "https://img.itch.zone/aW1nLzE0OTUyOTYzLnBuZw==/original/SuUuIM.png",
+  "heroImage": "https://sessionzero.games/images/heroes/ker-nethalas.webp",
   "playstyleTags": [
     "combat",
     "explore",
@@ -8233,16 +8233,16 @@ registerSystem("ker-nethalas", {
   "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMjUxNTI2MS8yNjA3NzA4MC5qcGc=/347x500/c4RF8Y.jpg"
+      "src": "https://sessionzero.games/images/systems/ker-nethalas-g1.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMjUxNTI2MS8xNDk1MjkyOS5qcGc=/347x500/%2F3tKpz.jpg"
+      "src": "https://sessionzero.games/images/systems/ker-nethalas-g2.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMjUxNTI2MS8xNDk1Mjk1MC5qcGc=/347x500/x9U1UK.jpg"
+      "src": "https://sessionzero.games/images/systems/ker-nethalas-g3.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMjUxNTI2MS8xNDk1Mjk1Ny5qcGc=/347x500/1BPs3N.jpg"
+      "src": "https://sessionzero.games/images/systems/ker-nethalas-g4.jpg"
     }
   ],
   "resources": [
@@ -8419,7 +8419,7 @@ registerSystem("knave", {
   "players": "3–6",
   "complexity": 1,
   "foundryStatus": "Community",
-  "heroImage": "https://img.itch.zone/aW1hZ2UvMjc3NTUyNy8xNjU2NDM2Ni5wbmc=/original/r0dEmj.png",
+  "heroImage": "https://sessionzero.games/images/heroes/knave.jpg",
   "playstyleTags": [
     "explore",
     "combat",
@@ -8428,13 +8428,13 @@ registerSystem("knave", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMjc3NTUyNy8xNjU2NDM3NC5qcGc=/original/e4mJTJ.jpg"
+      "src": "https://sessionzero.games/images/systems/knave-g1.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMjc3NTUyNy8xNjU2NDM4MC5qcGc=/original/0JHiXM.jpg"
+      "src": "https://sessionzero.games/images/systems/knave-g2.jpg"
     },
     {
-      "src": "https://image.nobleknight.com/2/jpg1500/24194440115h.jpg"
+      "src": "https://sessionzero.games/images/systems/knave-g3.jpg"
     }
   ],
   "resources": [
@@ -8567,7 +8567,7 @@ registerSystem("koriko", {
   "dice": "Таро + d6 (башня)",
   "players": "1",
   "complexity": 1,
-  "heroImage": "https://img.itch.zone/aW1nLzEyNTk3MTMwLmpwZw==/original/Jupq7g.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/koriko.jpg",
   "heroImageStyle": "object-fit: cover; object-position: center top; background: linear-gradient(135deg, #1a0a2e, #2d1b69 40%, #4a1942 70%, #1a0a2e);",
   "playstyleTags": [
     "narrative",
@@ -8577,13 +8577,13 @@ registerSystem("koriko", {
   "settingTags": ["urban-fantasy"],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMjEzNjgwOS8xMjU5NzE4NC5wbmc=/347x500/RbMZ%2Fd.png"
+      "src": "https://sessionzero.games/images/systems/koriko-g1.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMjEzNjgwOS8xMjU5NzE4NS5wbmc=/347x500/2%2BGCSI.png"
+      "src": "https://sessionzero.games/images/systems/koriko-g2.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMjEzNjgwOS8xMjU5NzE4My5wbmc=/347x500/MJC9%2BC.png"
+      "src": "https://sessionzero.games/images/systems/koriko-g3.jpg"
     }
   ],
   "resources": [
@@ -8724,7 +8724,7 @@ registerSystem("kult-divinity-lost", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://modiphius.net/cdn/shop/products/Gamemaster_Screen.png",
+  "heroImage": "https://sessionzero.games/images/heroes/kult-divinity-lost.webp",
   "playstyleTags": [
     "horror",
     "narrative",
@@ -8733,13 +8733,13 @@ registerSystem("kult-divinity-lost", {
   "settingTags": ["modern", "weird"],
   "gallery": [
     {
-      "src": "https://modiphius.net/cdn/shop/products/Kult_Core_Book.png"
+      "src": "https://sessionzero.games/images/systems/kult-divinity-lost-g1.webp"
     },
     {
-      "src": "https://modiphius.net/cdn/shop/products/The_Black_Madonna.png"
+      "src": "https://sessionzero.games/images/systems/kult-divinity-lost-g2.webp"
     },
     {
-      "src": "https://modiphius.net/cdn/shop/products/Taroticum_and_Other_Tales.png"
+      "src": "https://sessionzero.games/images/systems/kult-divinity-lost-g3.webp"
     }
   ],
   "resources": [
@@ -8887,7 +8887,7 @@ registerSystem("l5r", {
   "players": "3–5",
   "complexity": 4,
   "foundryStatus": "Community",
-  "heroImage": "https://cdn.svc.asmodee.net/production-l5r/uploads/image-converter/2023/06/04_Image_L5R-1900x1040.webp",
+  "heroImage": "https://sessionzero.games/images/heroes/l5r.webp",
   "heroStyle": "background: linear-gradient(135deg, #7c1d1d, #1a1a2e, #1e3a5f);",
   "playstyleTags": [
     "social",
@@ -8897,10 +8897,10 @@ registerSystem("l5r", {
   "settingTags": ["fantasy", "historical"],
   "gallery": [
     {
-      "src": "https://cdn.svc.asmodee.net/production-l5r/uploads/image-converter/2023/06/01a_Cover_Illustration-1900x1900.webp"
+      "src": "https://sessionzero.games/images/systems/l5r-g1.webp"
     },
     {
-      "src": "https://cdn.svc.asmodee.net/production-l5r/uploads/image-converter/2023/06/04_Image_L5R-1900x1040.webp"
+      "src": "https://sessionzero.games/images/heroes/l5r.webp"
     }
   ],
   "resources": [
@@ -9049,13 +9049,13 @@ registerSystem("labyrinth-lord", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://image.nobleknight.com/g/jpg1500/gbd1003-dragon.jpg"
+      "src": "https://sessionzero.games/images/systems/labyrinth-lord-g1.jpg"
     },
     {
-      "src": "https://image.nobleknight.com/g/jpg1500/gbd1002.jpg"
+      "src": "https://sessionzero.games/images/systems/labyrinth-lord-g2.jpg"
     },
     {
-      "src": "https://image.nobleknight.com/i/jpg1500/impgbdmonlist.jpg"
+      "src": "https://sessionzero.games/images/systems/labyrinth-lord-g3.jpg"
     }
   ],
   "resources": [
@@ -9202,7 +9202,7 @@ registerSystem("lancer", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Community",
-  "heroImage": "https://img.itch.zone/aW1nLzI3MzE0ODYuanBn/original/PF05J1.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/lancer.jpg",
   "playstyleTags": [
     "tactical",
     "combat",
@@ -9211,7 +9211,7 @@ registerSystem("lancer", {
   "settingTags": ["space"],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1nLzI3MzE0ODYuanBn/original/PF05J1.jpg"
+      "src": "https://sessionzero.games/images/heroes/lancer.jpg"
     }
   ],
   "quotes": [
@@ -9369,16 +9369,16 @@ registerSystem("land-of-eem", {
   "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
-      "src": "https://www.exaltedfuneral.com/cdn/shop/files/land-of-eem-deluxe-box-set-box-set-720484.jpg?v=1763753731&width=2000"
+      "src": "https://sessionzero.games/images/systems/land-of-eem-g1.jpg"
     },
     {
-      "src": "https://www.exaltedfuneral.com/cdn/shop/files/land-of-eem-deluxe-box-set-box-set-5160976.jpg?v=1763753731&width=2000"
+      "src": "https://sessionzero.games/images/systems/land-of-eem-g2.jpg"
     },
     {
-      "src": "https://www.exaltedfuneral.com/cdn/shop/files/land-of-eem-deluxe-box-set-box-set-394591.jpg?v=1763753731&width=2000"
+      "src": "https://sessionzero.games/images/systems/land-of-eem-g3.jpg"
     },
     {
-      "src": "https://www.exaltedfuneral.com/cdn/shop/files/land-of-eem-core-rulebook-book-1056389.jpg"
+      "src": "https://sessionzero.games/images/systems/land-of-eem-g4.jpg"
     }
   ],
   "resources": [
@@ -9555,7 +9555,7 @@ registerSystem("last-tea-shop", {
   "dice": "1–2d6",
   "players": "1",
   "complexity": 1,
-  "heroImage": "https://img.itch.zone/aW1nLzY4MzMyNTcuanBn/original/NOvzui.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/last-tea-shop.jpg",
   "heroImageStyle": "object-fit: cover; object-position: center; background: linear-gradient(135deg, #0d1b2a, #1b3a4b 40%, #2d6a7f 70%, #0d1b2a);",
   "playstyleTags": [
     "narrative",
@@ -9565,13 +9565,13 @@ registerSystem("last-tea-shop", {
   "settingTags": ["weird"],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMTE2NzU4MC83NjkwNjc1LnBuZw==/347x500/KWkPXM.png"
+      "src": "https://sessionzero.games/images/systems/last-tea-shop-g1.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMTE2NzU4MC83Njg0MzA3LnBuZw==/347x500/fubDRC.png"
+      "src": "https://sessionzero.games/images/systems/last-tea-shop-g2.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMTE2NzU4MC83Njg0MzA1LnBuZw==/347x500/XSOA2A.png"
+      "src": "https://sessionzero.games/images/systems/last-tea-shop-g3.jpg"
     }
   ],
   "resources": [
@@ -9714,13 +9714,13 @@ registerSystem("liminal-horror", {
   "foundryStatus": "Community",
   "free": true,
   "edition": null,
-  "heroImage": "https://img.itch.zone/aW1nLzE1NTgwMzU0LnBuZw==/original/Fiylam.png",
+  "heroImage": "https://sessionzero.games/images/heroes/liminal-horror.webp",
   "playstyleTags": ["horror", "mystery", "explore"],
   "settingTags": ["modern", "weird"],
   "gallery": [
-    { "src": "https://img.itch.zone/aW1hZ2UvMTA1MDI4NC8xNzcwNTQ3Ni5wbmc=/original/O7koxW.png" },
-    { "src": "https://img.itch.zone/aW1hZ2UvMTA1MDI4NC8xNzcwNTQ4Ny5wbmc=/original/ANpkT0.png" },
-    { "src": "https://img.itch.zone/aW1hZ2UvMTA1MDI4NC8xNzcwNTQ4OS5wbmc=/original/qlrF86.png" }
+    { "src": "https://sessionzero.games/images/systems/liminal-horror-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/liminal-horror-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/liminal-horror-g3.jpg" }
   ],
   "resources": [
     { "type": "rules", "url": "https://liminalhorrorrpg.com/", "fmt": "Web" },
@@ -9818,13 +9818,13 @@ registerSystem("lotfp", {
   "settingTags": ["historical", "weird"],
   "gallery": [
     {
-      "src": "https://us.lotfp.com/store/image/cache/catalog/BroodmotherCoverDisplay-500x500.jpg"
+      "src": "https://sessionzero.games/images/systems/lotfp-g1.jpg"
     },
     {
-      "src": "https://us.lotfp.com/store/image/cache/catalog/AABloodCoverDisplay-500x500.jpg"
+      "src": "https://sessionzero.games/images/systems/lotfp-g2.jpg"
     },
     {
-      "src": "https://us.lotfp.com/store/image/cache/catalog/AAFCoverDisplay-500x500.jpg"
+      "src": "https://sessionzero.games/images/systems/lotfp-g3.jpg"
     }
   ],
   "resources": [
@@ -9985,13 +9985,13 @@ registerSystem("mage-the-ascension", {
   "settingTags": ["modern", "urban-fantasy"],
   "gallery": [
     {
-      "src": "https://image.nobleknight.com/m/jpg1500/mta20thpremium1.jpg"
+      "src": "https://sessionzero.games/images/systems/mage-the-ascension-g1.jpg"
     },
     {
-      "src": "https://image.nobleknight.com/m/jpg1500/magequickstart20th.jpg"
+      "src": "https://sessionzero.games/images/systems/mage-the-ascension-g2.jpg"
     },
     {
-      "src": "https://image.nobleknight.com/m/jpg1500/m20dqe.jpg"
+      "src": "https://sessionzero.games/images/systems/mage-the-ascension-g3.jpg"
     }
   ],
   "resources": [
@@ -10129,7 +10129,7 @@ registerSystem("marvel-multiverse", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://images2.penguinrandomhouse.com/cover/9781302927837",
+  "heroImage": "https://sessionzero.games/images/heroes/marvel-multiverse.jpg",
   "playstyleTags": [
     "combat",
     "narrative",
@@ -10138,13 +10138,13 @@ registerSystem("marvel-multiverse", {
   "settingTags": ["modern"],
   "gallery": [
     {
-      "src": "https://images-na.ssl-images-amazon.com/images/P/1302927833.01._SCLZZZZZZZ_SX300_.jpg"
+      "src": "https://sessionzero.games/images/systems/marvel-multiverse-g1.jpg"
     },
     {
-      "src": "https://static0.cbrimages.com/wordpress/wp-content/uploads/2023/08/marvel-multiverse-rpg.jpg"
+      "src": "https://sessionzero.games/images/systems/marvel-multiverse-g2.jpg"
     },
     {
-      "src": "https://images2.penguinrandomhouse.com/cover/9781302927837"
+      "src": "https://sessionzero.games/images/heroes/marvel-multiverse.jpg"
     }
   ],
   "resources": [
@@ -10316,13 +10316,13 @@ registerSystem("masks", {
   "settingTags": ["modern"],
   "gallery": [
     {
-      "src": "https://magpiegames.com/cdn/shop/files/Masks-Core-softcover_2.jpg?v=1734448458"
+      "src": "https://sessionzero.games/images/systems/masks-g1.jpg"
     },
     {
-      "src": "https://magpiegames.com/cdn/shop/files/Masks-Core-softcover_3.jpg?v=1734448581"
+      "src": "https://sessionzero.games/images/systems/masks-g2.jpg"
     },
     {
-      "src": "https://magpiegames.com/cdn/shop/files/Masks-Core-softcover_4.jpg?v=1734448581"
+      "src": "https://sessionzero.games/images/systems/masks-g3.jpg"
     }
   ],
   "resources": [
@@ -10463,7 +10463,7 @@ registerSystem("mausritter", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1nLzQ1Nzc4OTYucG5n/original/Dnexgj.png"
+      "src": "https://sessionzero.games/images/systems/mausritter-g1.jpg"
     }
   ],
   "quotes": [
@@ -10607,7 +10607,7 @@ registerSystem("microscope", {
   "players": "2–5",
   "complexity": 1,
   "foundryStatus": "Не нужен",
-  "heroImage": "https://img.itch.zone/aW1nLzgzOTE4NjkucG5n/original/hf%2BAZJ.png",
+  "heroImage": "https://sessionzero.games/images/heroes/microscope.jpg",
   "heroImageStyle": "object-fit: contain; padding: 80px 120px; background: linear-gradient(135deg, #0f0e2e, #1e1b4b 40%, #312e81 70%, #1a1747);",
   "playstyleTags": [
     "worldbuild",
@@ -10616,13 +10616,13 @@ registerSystem("microscope", {
   ],
   "gallery": [
     {
-      "src": "https://www.indiepressrevolution.com/xcart/image.php?type=P&id=17540"
+      "src": "https://sessionzero.games/images/systems/microscope-g1.jpg"
     },
     {
-      "src": "https://www.indiepressrevolution.com/xcart/image.php?type=P&id=19891"
+      "src": "https://sessionzero.games/images/systems/microscope-g2.jpg"
     },
     {
-      "src": "https://cf.geekdo-images.com/C1ox8bAodvWDJqhqAk0w-Q__itemrep/img/XgQ1Act3YETvDkEtU1j27cyIoKQ=/fit-in/246x300/filters:strip_icc()/pic931050.jpg"
+      "src": "https://sessionzero.games/images/systems/microscope-g3.jpg"
     }
   ],
   "resources": [
@@ -10762,13 +10762,13 @@ registerSystem("monsterhearts", {
   "free": false,
   "edition": "Second Edition",
   "foundryStatus": "Community",
-  "heroImage": "https://buriedwithoutceremony.com/wp-content/uploads/2019/11/Monsterhearts-Cover-Characters-scaled.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/monsterhearts.jpg",
   "playstyleTags": ["narrative", "social", "horror"],
   "settingTags": ["urban-fantasy", "modern"],
   "gallery": [
-    { "src": "https://image.nobleknight.com/m/jpg1500/monasteryheartilytoorealllllll.jpg" },
-    { "src": "https://cdn.shopify.com/s/files/1/0271/4022/7143/files/Monsterhearts_Print.png?v=1748123322" },
-    { "src": "https://cdn.shopify.com/s/files/1/0271/4022/7143/files/Monsterhearts_PDF.png?v=1748123228" }
+    { "src": "https://sessionzero.games/images/systems/monsterhearts-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/monsterhearts-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/monsterhearts-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://buriedwithoutceremony.com/monsterhearts", "fmt": "Web" },
@@ -10866,7 +10866,7 @@ registerSystem("mork-borg", {
   "players": "2–5",
   "complexity": 1,
   "foundryStatus": "Official + Community",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/herbmasters_crop-1440x720.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/mork-borg.jpg",
   "heroStyle": "border: 2px solid var(--yellow);",
   "playstyleTags": [
     "combat",
@@ -10876,22 +10876,22 @@ registerSystem("mork-borg", {
   "settingTags": ["fantasy", "weird", "postapoc"],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/MB_skeleton_kvad-1200x1200.jpg"
+      "src": "https://sessionzero.games/images/systems/mork-borg-g1.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/MB_lich-1-1200x1200.jpg"
+      "src": "https://sessionzero.games/images/systems/mork-borg-g2.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/MB_02EN_Anthelia_kvad-1200x1200.jpg"
+      "src": "https://sessionzero.games/images/systems/mork-borg-g3.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/MB_05EN_Basilisks_kvad-1200x1200.jpg"
+      "src": "https://sessionzero.games/images/systems/mork-borg-g4.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/MB_06EN_Violence_kvad-1200x1200.jpg"
+      "src": "https://sessionzero.games/images/systems/mork-borg-g5.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/MB_07EN_Troll-Zombie_kvad-1200x1200.jpg"
+      "src": "https://sessionzero.games/images/systems/mork-borg-g6.jpg"
     }
   ],
   "resources": [
@@ -11081,7 +11081,7 @@ registerSystem("mothership", {
   "players": "3–5",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://www.tuesdayknightgames.com/cdn/shop/files/ms-new-header_13.jpg?v=1714335559&width=2400",
+  "heroImage": "https://sessionzero.games/images/heroes/mothership.jpg",
   "playstyleTags": [
     "horror",
     "survival",
@@ -11090,16 +11090,16 @@ registerSystem("mothership", {
   "settingTags": ["space"],
   "gallery": [
     {
-      "src": "https://www.tuesdayknightgames.com/cdn/shop/files/PSD-004.png?v=1713671746&width=1080"
+      "src": "https://sessionzero.games/images/systems/mothership-g1.webp"
     },
     {
-      "src": "https://www.tuesdayknightgames.com/cdn/shop/files/Mothership-PSG-armor-mockup.png?v=1713671968&width=1080"
+      "src": "https://sessionzero.games/images/systems/mothership-g2.webp"
     },
     {
-      "src": "https://www.tuesdayknightgames.com/cdn/shop/files/Mothership-Character-Sheet-mockup.png?v=1713672259&width=1080"
+      "src": "https://sessionzero.games/images/systems/mothership-g3.webp"
     },
     {
-      "src": "https://www.tuesdayknightgames.com/cdn/shop/files/CoreComponentSpread2024.jpg?v=1714488145&width=1080"
+      "src": "https://sessionzero.games/images/systems/mothership-g4.jpg"
     }
   ],
   "resources": [
@@ -11283,7 +11283,7 @@ registerSystem("mutant-year-zero", {
   "players": "3–5",
   "complexity": 2,
   "foundryStatus": "Community", // CHECK: Foundry myz-core-book listing exists, community-maintained
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/11/MutantMechatron_banner.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/mutant-year-zero.jpg",
   "playstyleTags": [
     "survival",
     "explore",
@@ -11292,16 +11292,16 @@ registerSystem("mutant-year-zero", {
   "settingTags": ["postapoc"],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/Zone-Wars-photo-9.jpg"
+      "src": "https://sessionzero.games/images/systems/mutant-year-zero-g1.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/Zone-Wars-photo-2.jpg"
+      "src": "https://sessionzero.games/images/systems/mutant-year-zero-g2.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/Zone-Wars-photo-5.jpg"
+      "src": "https://sessionzero.games/images/systems/mutant-year-zero-g3.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/Zone-Wars-photo-7.jpg"
+      "src": "https://sessionzero.games/images/systems/mutant-year-zero-g4.jpg"
     }
   ],
   "resources": [
@@ -11506,22 +11506,22 @@ registerSystem("mythic-bastionland", {
       "src": "https://sessionzero.games/images/systems/mythic-bastionland-hero.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0025/6006/5625/files/mythic-bastionland-book-9307117.png?v=1765482428"
+      "src": "https://sessionzero.games/images/systems/mythic-bastionland-g2.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMjY0MjkzMi8xNjA1NzI2NS5wbmc=/original/M5VEoN.png"
+      "src": "https://sessionzero.games/images/systems/mythic-bastionland-g3.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMzM4ODYxNy8yMDIyODgxNS5wbmc=/original/IQzFQ3.png"
+      "src": "https://sessionzero.games/images/systems/mythic-bastionland-g4.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMzM4ODYxNy8yMDIyODgwOC5wbmc=/original/GKDyIn.png"
+      "src": "https://sessionzero.games/images/systems/mythic-bastionland-g5.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMzM4ODYxNy8yMDIyODgwNy5wbmc=/original/n%2BjtLe.png"
+      "src": "https://sessionzero.games/images/systems/mythic-bastionland-g6.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMzM4ODYxNy8yMDIyODk1Mi5wbmc=/original/DrzoXq.png"
+      "src": "https://sessionzero.games/images/systems/mythic-bastionland-g7.jpg"
     }
   ],
   "resources": [
@@ -11798,7 +11798,7 @@ registerSystem("nimble", {
   "players": "3–6",
   "complexity": 2,
   "foundryStatus": "Нет",
-  "heroImage": "https://nimblerpg.com/cdn/shop/files/HeroesFullArt.jpg?v=1741803078&width=3840",
+  "heroImage": "https://sessionzero.games/images/heroes/nimble.jpg",
   "heroStyle": "background: linear-gradient(135deg, #1a3a2a, #0f1a0f, #2d1b00);",
   "playstyleTags": [
     "combat",
@@ -11807,16 +11807,16 @@ registerSystem("nimble", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://nimblerpg.com/cdn/shop/files/HeroesFullArt.jpg?v=1741803078&width=3840"
+      "src": "https://sessionzero.games/images/heroes/nimble.jpg"
     },
     {
-      "src": "https://nimblerpg.com/cdn/shop/files/Maw.jpg?v=1741832672&width=3840"
+      "src": "https://sessionzero.games/images/systems/nimble-g2.jpg"
     },
     {
-      "src": "https://nimblerpg.com/cdn/shop/files/GMScreenWrap1.jpg?v=1741797122"
+      "src": "https://sessionzero.games/images/systems/nimble-g3.jpg"
     },
     {
-      "src": "https://nimblerpg.com/cdn/shop/articles/dragonArtFullB.jpg?v=1770732852&width=300"
+      "src": "https://sessionzero.games/images/systems/nimble-g4.jpg"
     }
   ],
   "resources": [
@@ -11970,13 +11970,13 @@ registerSystem("numenera", {
   "settingTags": ["weird"],
   "gallery": [
     {
-      "src": "https://www.montecookgames.com/store/wp-content/uploads/2015/11/Ninth-World-Bestiary.jpg"
+      "src": "https://sessionzero.games/images/systems/numenera-g1.jpg"
     },
     {
-      "src": "https://www.montecookgames.com/store/wp-content/uploads/2015/11/Ninth-World-Guidebook.jpg"
+      "src": "https://sessionzero.games/images/systems/numenera-g2.jpg"
     },
     {
-      "src": "https://www.montecookgames.com/store/wp-content/uploads/2016/11/NSS-3D-Cover-Tags.jpg"
+      "src": "https://sessionzero.games/images/systems/numenera-g3.jpg"
     }
   ],
   "resources": [
@@ -12140,7 +12140,7 @@ registerSystem("one-ring", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Community",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/The_one_ring_tower-1440x720.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/one-ring.jpg",
   "playstyleTags": [
     "explore",
     "narrative",
@@ -12149,16 +12149,16 @@ registerSystem("one-ring", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/The_one_ring_Combat-edited-scaled.jpg"
+      "src": "https://sessionzero.games/images/systems/one-ring-g1.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/The_one_ring_20_220-Ranger-Virtue-scaled.jpg"
+      "src": "https://sessionzero.games/images/systems/one-ring-g2.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/The_one_ring_19_119_The-Nine-2-scaled.jpg"
+      "src": "https://sessionzero.games/images/systems/one-ring-g3.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/the_one_ring_019_gandalf_frodo_FINAL-scaled.jpg"
+      "src": "https://sessionzero.games/images/systems/one-ring-g4.jpg"
     }
   ],
   "resources": [
@@ -12310,7 +12310,7 @@ registerSystem("ose", {
   "edition": "B/X",
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://necroticgnome.com/cdn/shop/files/AFM_Cover_-_C_2022_David_Hoskins_13c53e3d-e120-43b0-8085-87d125f9aa7b.jpg?v=1669315843&width=3200",
+  "heroImage": "https://sessionzero.games/images/heroes/ose.jpg",
   "playstyleTags": [
     "explore",
     "survival",
@@ -12320,7 +12320,7 @@ registerSystem("ose", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://necroticgnome.com/cdn/shop/files/AFM_Cover_-_C_2022_David_Hoskins_13c53e3d-e120-43b0-8085-87d125f9aa7b.jpg?v=1669315843&width=3200"
+      "src": "https://sessionzero.games/images/heroes/ose.jpg"
     }
   ],
   "quotes": [
@@ -12480,13 +12480,13 @@ registerSystem("osric-3", {
   "settingTags": ["fantasy", "sword-and-sorcery"],
   "gallery": [
     {
-      "src": "https://www.mythmeregames.com/cdn/shop/files/PDFCovers2.png"
+      "src": "https://sessionzero.games/images/systems/osric-3-g1.jpg"
     },
     {
-      "src": "https://www.mythmeregames.com/cdn/shop/files/PDFCovers4_91571dbb-8283-418b-9d4b-42d9a1a3af3f.png"
+      "src": "https://sessionzero.games/images/systems/osric-3-g2.jpg"
     },
     {
-      "src": "https://www.mythmeregames.com/cdn/shop/files/OSRIC3.0GMScreen.png"
+      "src": "https://sessionzero.games/images/systems/osric-3-g3.jpg"
     }
   ],
   "resources": [
@@ -12647,7 +12647,7 @@ registerSystem("outcast-silver-raiders", {
   "players": "3–6",
   "complexity": 2,
   "foundryStatus": "None",
-  "heroImage": "https://images.squarespace-cdn.com/content/v1/5e669e911f689d55045f96b8/41b71530-99c4-4e85-abae-6f6b7edabcff/church+battle.png",
+  "heroImage": "https://sessionzero.games/images/heroes/outcast-silver-raiders.webp",
   "playstyleTags": [
     "explore",
     "survival",
@@ -12656,13 +12656,13 @@ registerSystem("outcast-silver-raiders", {
   "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
-      "src": "https://images.squarespace-cdn.com/content/v1/5e669e911f689d55045f96b8/1a8bbe5d-2ba9-4488-bb91-947de0692570/warlock+tower.png"
+      "src": "https://sessionzero.games/images/systems/outcast-silver-raiders-g1.jpg"
     },
     {
-      "src": "https://images.squarespace-cdn.com/content/v1/5e669e911f689d55045f96b8/26b1d141-9da5-466a-98ef-ca74538ebb1c/warriors.png"
+      "src": "https://sessionzero.games/images/systems/outcast-silver-raiders-g2.jpg"
     },
     {
-      "src": "https://images.squarespace-cdn.com/content/v1/5e669e911f689d55045f96b8/55cdd122-0ce9-4b01-83ec-3436bec05bb6/rogues.png"
+      "src": "https://sessionzero.games/images/systems/outcast-silver-raiders-g3.jpg"
     }
   ],
   "resources": [
@@ -12816,7 +12816,7 @@ registerSystem("outgunned", {
   "players": "3-5",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://www.belloflostsouls.net/wp-content/uploads/2023/05/Outgunned_Splash2.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/outgunned.jpg",
   "playstyleTags": [
     "combat",
     "narrative",
@@ -12825,16 +12825,16 @@ registerSystem("outgunned", {
   "settingTags": ["modern"],
   "gallery": [
     {
-      "src": "https://twolittlemice.net/wp-content/uploads/2024/01/Cover_OG_Site.jpg"
+      "src": "https://sessionzero.games/images/systems/outgunned-g1.jpg"
     },
     {
       "src": "https://sessionzero.games/images/systems/outgunned-g1.jpg"
     },
     {
-      "src": "https://twolittlemice.net/wp-content/uploads/2024/01/DL_Hero_Sheets.jpg"
+      "src": "https://sessionzero.games/images/systems/outgunned-g3.jpg"
     },
     {
-      "src": "https://twolittlemice.net/wp-content/uploads/2024/01/Download_QS_Site.jpg"
+      "src": "https://sessionzero.games/images/systems/outgunned-g4.jpg"
     }
   ],
   "resources": [
@@ -13000,7 +13000,7 @@ registerSystem("paranoia", {
   "players": "4–6",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://www.mongoosepublishing.com/cdn/shop/files/ParanoiaCoreCoverEbook_1317x.jpg?v=1694683887",
+  "heroImage": "https://sessionzero.games/images/heroes/paranoia.jpg",
   "playstyleTags": [
     "social",
     "combat",
@@ -13009,13 +13009,13 @@ registerSystem("paranoia", {
   "settingTags": ["postapoc", "weird"],
   "gallery": [
     {
-      "src": "https://www.mongoosepublishing.com/cdn/shop/files/Spread1_32fd11ed-e1e2-4b52-b6a4-0c2a29cc769b_1530x.jpg?v=1694683895"
+      "src": "https://sessionzero.games/images/systems/paranoia-g1.jpg"
     },
     {
-      "src": "https://www.mongoosepublishing.com/cdn/shop/files/Spread2_3431dc85-32c3-469d-8fed-c556587eb96e_1530x.jpg?v=1694683894"
+      "src": "https://sessionzero.games/images/systems/paranoia-g2.jpg"
     },
     {
-      "src": "https://www.mongoosepublishing.com/cdn/shop/files/Spread3_a177d5d6-a299-4069-adba-5f12cac67c6f_1530x.jpg?v=1694683895"
+      "src": "https://sessionzero.games/images/systems/paranoia-g3.jpg"
     }
   ],
   "resources": [
@@ -13170,7 +13170,7 @@ registerSystem("pathfinder", {
   "complexity": 4,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://cdn11.bigcommerce.com/s-e0sdfpgiwh/images/stencil/1280x1280/products/13791/458/XmlXLh1R__42781.1757988737.jpg?c=1",
+  "heroImage": "https://sessionzero.games/images/heroes/pathfinder.jpg",
   "playstyleTags": [
     "combat",
     "explore",
@@ -13179,13 +13179,13 @@ registerSystem("pathfinder", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://cdn11.bigcommerce.com/s-e0sdfpgiwh/images/stencil/1280x1280/products/13791/458/XmlXLh1R__42781.1757988737.jpg?c=1"
+      "src": "https://sessionzero.games/images/heroes/pathfinder.jpg"
     },
     {
-      "src": "https://cdn11.bigcommerce.com/s-e0sdfpgiwh/images/stencil/1280x1280/products/13806/467/H2_5tOuE__42476.1755060900.jpg?c=1"
+      "src": "https://sessionzero.games/images/systems/pathfinder-g2.jpg"
     },
     {
-      "src": "https://cdn11.bigcommerce.com/s-e0sdfpgiwh/images/stencil/1280x1280/products/184/472/2P9NAHsZ__09634.1755061996.jpg?c=1"
+      "src": "https://sessionzero.games/images/systems/pathfinder-g3.jpg"
     }
   ],
   "resources": [
@@ -13350,13 +13350,13 @@ registerSystem("pendragon", {
   "free": false,
   "edition": "6th ed. (2024)",
   "foundryStatus": "Community",
-  "heroImage": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x996/products/2413/6075/Pendragon_Core_Rulebook_-_Front_Cover_-_700x900__17451.1714992659.png?c=2",
+  "heroImage": "https://sessionzero.games/images/heroes/pendragon.jpg",
   "playstyleTags": ["narrative", "social", "combat"],
   "settingTags": ["historical", "fantasy"],
   "gallery": [
-    { "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x996/products/2413/6116/Pendragon_-_Core_-_Spread_1__48660.1715007255.png?c=2" },
-    { "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x996/products/2413/6117/Pendragon_-_Core_-_Spread_2__38931.1715007255.png?c=2" },
-    { "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x996/products/2413/6073/Pendragon_Core_Rulebook_-_Introduction_1_-_700x900__83987.1707309893.1280.1280__57661.1715007253.png?c=2" }
+    { "src": "https://sessionzero.games/images/systems/pendragon-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/pendragon-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/pendragon-g3.jpg" }
   ],
   "resources": [
     { "type": "quickstart", "url": "https://www.chaosium.com/pendragon-quick-start/", "fmt": "PDF" },
@@ -13450,7 +13450,7 @@ registerSystem("pirate-borg", {
   "players": "2–6",
   "complexity": 1,
   "foundryStatus": "Community",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/pirateborg-1440x720.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/pirate-borg.jpg",
   "playstyleTags": [
     "explore",
     "survival",
@@ -13459,7 +13459,7 @@ registerSystem("pirate-borg", {
   "settingTags": ["historical", "fantasy"],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/pirateborg-1440x720.jpg"
+      "src": "https://sessionzero.games/images/heroes/pirate-borg.jpg"
     }
   ],
   "resources": [
@@ -13589,13 +13589,13 @@ registerSystem("root-rpg", {
   "free": false,
   "edition": null,
   "foundryStatus": "Official",
-  "heroImage": "https://magpiegames.com/cdn/shop/collections/MPG-Website-slider-Root-colored-1.jpg?v=1724344612",
+  "heroImage": "https://sessionzero.games/images/heroes/root-rpg.jpg",
   "playstyleTags": ["narrative", "action", "explore"],
   "settingTags": ["fantasy"],
   "gallery": [
-    { "src": "https://magpiegames.com/cdn/shop/files/Root-Core_2.jpg?v=1734448179" },
-    { "src": "https://magpiegames.com/cdn/shop/files/Root-Core_3.jpg?v=1734448179" },
-    { "src": "https://magpiegames.com/cdn/shop/files/Root-Core_4.jpg?v=1734448179" }
+    { "src": "https://sessionzero.games/images/systems/root-rpg-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/root-rpg-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/root-rpg-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://magpiegames.com/collections/root", "fmt": "Web" },
@@ -13690,7 +13690,7 @@ registerSystem("runequest", {
   "players": "3–5",
   "complexity": 4,
   "foundryStatus": "Community",
-  "heroImage": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x996/products/2008/3329/CHA4028%5F-%5FRuneQuest%5F-%5FRoleplaying%5Fin%5FGlorantha%5F-%5FFront%5FCover%5F700x900%5F-%5FPDF%5F%5F35886.1552356121.jpg?c=2",
+  "heroImage": "https://sessionzero.games/images/heroes/runequest.jpg",
   "playstyleTags": [
     "combat",
     "worldbuild",
@@ -13699,16 +13699,16 @@ registerSystem("runequest", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x996/products/2008/2530/CHA4028%5F-%5FRuneQuest%5F-%5FRoleplaying%5Fin%5FGlorantha%5F-%5FBack%5FCover%5F%5F80526.1527905727.jpg?c=2"
+      "src": "https://sessionzero.games/images/systems/runequest-g1.jpg"
     },
     {
-      "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x996/products/2008/2539/CHA4028%5F-%5FRuneQuest%5F-%5FRoleplaying%5Fin%5FGlorantha%5F-%5FPage%5F13%5F-%5FGlorantha%5F%5F97403.1527905728.jpg?c=2"
+      "src": "https://sessionzero.games/images/systems/runequest-g2.jpg"
     },
     {
-      "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x996/products/2008/2548/CHA4028%5F-%5FRuneQuest%5F-%5FRoleplaying%5Fin%5FGlorantha%5F-%5FPage%5F84%5F-%5FPreGen%5F%5F56787.1527905729.jpg?c=2"
+      "src": "https://sessionzero.games/images/systems/runequest-g3.jpg"
     },
     {
-      "src": "https://cdn11.bigcommerce.com/s-9zhx02uo/images/stencil/1280x996/products/2008/2531/CHA4028%5F-%5FRuneQuest%5F-%5FRoleplaying%5Fin%5FGlorantha%5F-%5FPage%5F5%5F-%5FIntroduction%5F%5F52469.1527905727.jpg?c=2"
+      "src": "https://sessionzero.games/images/systems/runequest-g4.jpg"
     }
   ],
   "resources": [
@@ -13895,13 +13895,13 @@ registerSystem("savage-worlds", {
   "settingTags": [],
   "gallery": [
     {
-      "src": "https://www.seekpng.com/png/detail/890-8905220_savage-worlds-savage-worlds-adventure-edition.png"
+      "src": "https://sessionzero.games/images/systems/savage-worlds-g1.jpg"
     },
     {
       "src": "https://sessionzero.games/images/systems/savage-worlds-g1.jpeg"
     },
     {
-      "src": "https://www.belloflostsouls.net/wp-content/uploads/2020/05/savage-worlds.png"
+      "src": "https://sessionzero.games/images/systems/savage-worlds-g3.jpg"
     }
   ],
   "resources": [
@@ -14140,13 +14140,13 @@ registerSystem("scum-and-villainy", {
   "settingTags": ["space"],
   "gallery": [
     {
-      "src": "https://evilhat.com/wp-content/uploads/2018/06/SV_2.jpg"
+      "src": "https://sessionzero.games/images/systems/scum-and-villainy-g1.jpg"
     },
     {
-      "src": "https://evilhat.com/wp-content/uploads/2018/06/SV_3.jpg"
+      "src": "https://sessionzero.games/images/systems/scum-and-villainy-g2.jpg"
     },
     {
-      "src": "https://evilhat.com/wp-content/uploads/2018/06/SV_4.jpg"
+      "src": "https://sessionzero.games/images/systems/scum-and-villainy-g3.jpg"
     }
   ],
   "resources": [
@@ -14302,9 +14302,9 @@ registerSystem("sentinel-comics", {
   "playstyleTags": ["action", "combat", "narrative"],
   "settingTags": ["modern"],
   "gallery": [
-    { "src": "https://shop.greaterthangames.com/cdn/shop/files/SRPG-CORE-2.jpg" },
-    { "src": "https://shop.greaterthangames.com/cdn/shop/files/SRPG-CORE-3.jpg" },
-    { "src": "https://shop.greaterthangames.com/cdn/shop/files/SRPG-CORE-4.jpg" }
+    { "src": "https://sessionzero.games/images/systems/sentinel-comics-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/sentinel-comics-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/sentinel-comics-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://shop.greaterthangames.com/pages/sentinel-comics", "fmt": "Web" },
@@ -14411,13 +14411,13 @@ registerSystem("shadowdark", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://www.thearcanelibrary.com/cdn/shop/files/ShadowdarkRPGDigitalPDF5_1200x.jpg?v=1684273611"
+      "src": "https://sessionzero.games/images/systems/shadowdark-g1.jpg"
     },
     {
-      "src": "https://www.thearcanelibrary.com/cdn/shop/files/ShadowdarkRPGDigitalPDF13_1200x.jpg?v=1684273502"
+      "src": "https://sessionzero.games/images/systems/shadowdark-g2.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1nLzE1MDUyMDQwLnBuZw==/original/j6pJeS.png"
+      "src": "https://sessionzero.games/images/systems/shadowdark-g3.jpg"
     }
   ],
   "resources": [
@@ -14578,7 +14578,7 @@ registerSystem("shadowrun", {
   "complexity": 4,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://cdn11.bigcommerce.com/s-ua4dd/images/stencil/500x659/products/36460/415229/Copy_of_Website_Image_Template3360__18385.1751897343.png?c=2",
+  "heroImage": "https://sessionzero.games/images/heroes/shadowrun.webp",
   "playstyleTags": [
     "tactical",
     "combat",
@@ -14587,13 +14587,13 @@ registerSystem("shadowrun", {
   "settingTags": ["cyberpunk", "fantasy"],
   "gallery": [
     {
-      "src": "https://seaofstarsrpg.wordpress.com/wp-content/uploads/2021/05/sr-sw.png"
+      "src": "https://sessionzero.games/images/systems/shadowrun-g1.webp"
     },
     {
-      "src": "https://seaofstarsrpg.wordpress.com/wp-content/uploads/2020/06/cat28002_firing-squad.png"
+      "src": "https://sessionzero.games/images/systems/shadowrun-g2.webp"
     },
     {
-      "src": "https://cdn11.bigcommerce.com/s-ua4dd/images/stencil/500x659/products/36460/415229/Copy_of_Website_Image_Template3360__18385.1751897343.png?c=2"
+      "src": "https://sessionzero.games/images/heroes/shadowrun.webp"
     }
   ],
   "resources": [
@@ -14751,13 +14751,13 @@ registerSystem("slugblaster", {
   "free": false,
   "edition": "Game of the Year Edition",
   "foundryStatus": "Community",
-  "heroImage": "https://cdn.shopify.com/s/files/1/0666/7668/7154/files/SlugFinal.png?v=1742962431",
+  "heroImage": "https://sessionzero.games/images/heroes/slugblaster.jpg",
   "playstyleTags": ["action", "narrative", "sandbox"],
   "settingTags": ["weird", "modern"],
   "gallery": [
-    { "src": "https://cdn.shopify.com/s/files/1/0666/7668/7154/files/Slug5.png?v=1733947851" },
-    { "src": "https://cdn.shopify.com/s/files/1/0666/7668/7154/files/Slug3.png?v=1733947851" },
-    { "src": "https://cdn.shopify.com/s/files/1/0666/7668/7154/files/Slug4.png?v=1733947851" }
+    { "src": "https://sessionzero.games/images/systems/slugblaster-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/slugblaster-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/slugblaster-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://slugblaster.com", "fmt": "Web" },
@@ -14863,13 +14863,13 @@ registerSystem("spire", {
   "settingTags": ["urban-fantasy"],
   "gallery": [
     {
-      "src": "https://rowanrookanddecard.com/wp-content/uploads/2018/09/Necropolis2-1.jpg"
+      "src": "https://sessionzero.games/images/systems/spire-g1.jpg"
     },
     {
-      "src": "https://rowanrookanddecard.com/wp-content/uploads/2018/01/Spire-1.2.jpg"
+      "src": "https://sessionzero.games/images/systems/spire-g2.jpg"
     },
     {
-      "src": "https://rowanrookanddecard.com/wp-content/uploads/2018/09/Combat_Example2.jpg"
+      "src": "https://sessionzero.games/images/systems/spire-g3.jpg"
     }
   ],
   "quotes": [
@@ -15039,13 +15039,13 @@ registerSystem("star-trek-adventures", {
   "settingTags": ["space"],
   "gallery": [
     {
-      "src": "https://cdn.shopify.com/s/files/1/0225/4035/files/star-trek-adventures-second-edition-core-rulebook-star-trek-adventures-modiphius-entertainment-759196.jpg"
+      "src": "https://sessionzero.games/images/systems/star-trek-adventures-g1.jpg"
     },
     {
-      "src": "https://modiphius.net/cdn/shop/files/star-trek-adventures-second-edition-exploration-guide-star-trek-adventures-modiphius-entertainment-894023.jpg"
+      "src": "https://sessionzero.games/images/systems/star-trek-adventures-g2.jpg"
     },
     {
-      "src": "https://modiphius.net/cdn/shop/files/star-trek-adventures-second-edition-technical-manual-star-trek-adventures-modiphius-entertainment-380562.jpg"
+      "src": "https://sessionzero.games/images/systems/star-trek-adventures-g3.jpg"
     }
   ],
   "resources": [
@@ -15199,7 +15199,7 @@ registerSystem("star-wars-ffg", {
   "players": "3–6",
   "complexity": 3,
   "foundryStatus": "Community",
-  "heroImage": "https://static0.srcdn.com/wordpress/wp-content/uploads/2021/01/Star-Wars-Tabletop-RPGs-Fantasy-Flight-Games-Force-And-Destiny.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/star-wars-ffg.jpg",
   "playstyleTags": [
     "action",
     "narrative",
@@ -15209,16 +15209,16 @@ registerSystem("star-wars-ffg", {
   "settingTags": ["space"],
   "gallery": [
     {
-      "src": "https://ttrpgfans.com/wp-content/uploads/2025/11/star-wars-rpg-reprints-1.png"
+      "src": "https://sessionzero.games/images/systems/star-wars-ffg-g1.jpg"
     },
     {
-      "src": "https://images.steamusercontent.com/ugc/448482024259167070/88E9804631FCAE71435C83D2A119769A7A167F11/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
+      "src": "https://sessionzero.games/images/systems/star-wars-ffg-g2.jpg"
     },
     {
-      "src": "https://www.belloflostsouls.net/wp-content/uploads/2017/07/swr10_art-1.jpg"
+      "src": "https://sessionzero.games/images/systems/star-wars-ffg-g3.jpg"
     },
     {
-      "src": "https://images-cdn.fantasyflightgames.com/filer_public/79/62/79625561-208b-4e9f-b7aa-ed7976cb3930/swe14_preview3.jpg"
+      "src": "https://sessionzero.games/images/systems/star-wars-ffg-g4.jpg"
     }
   ],
   "resources": [
@@ -15436,7 +15436,7 @@ registerSystem("starfinder-2e", {
   "complexity": 4,
   // CHECK: Foundry has an officially partnered, volunteer-developed SF2e module — endorsed by Paizo + Foundry, but not first-party.
   "foundryStatus": "Community",
-  "heroImage": "https://cdn.paizo.com/d960ad1b-9967-00f9-1158-72274b18312d/7d90d1d7-fd31-48d5-878b-a2d7ff715e64/PZO260100_SFSS1_Hero.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/starfinder-2e.jpg",
   "playstyleTags": [
     "combat",
     "tactical",
@@ -15445,16 +15445,16 @@ registerSystem("starfinder-2e", {
   "settingTags": ["space"],
   "gallery": [
     {
-      "src": "https://cdn.paizo.com/d960ad1b-9967-00f9-1158-72274b18312d/c1f8b24a-7e41-4f95-9c8b-08feaeff5fb7/Starfinder_2ELogo.png"
+      "src": "https://sessionzero.games/images/systems/starfinder-2e-g1.webp"
     },
     {
-      "src": "https://cdn.paizo.com/d960ad1b-9967-00f9-1158-72274b18312d/c51a30f9-3626-45b8-b844-ca166a0098a8/PZO22005-HC%20Galactic%20Ancestries%20Cover.jpg"
+      "src": "https://sessionzero.games/images/systems/starfinder-2e-g2.jpg"
     },
     {
-      "src": "https://cdn.paizo.com/d960ad1b-9967-00f9-1158-72274b18312d/6e110863-ba68-430a-a5d4-e6c862d3abf9/PZO24007_Cover-TalesfromtheVast_1920x1080.jpg"
+      "src": "https://sessionzero.games/images/systems/starfinder-2e-g3.jpg"
     },
     {
-      "src": "https://cdn.paizo.com/d960ad1b-9967-00f9-1158-72274b18312d/7d90d1d7-fd31-48d5-878b-a2d7ff715e64/PZO260100_SFSS1_Hero.jpg"
+      "src": "https://sessionzero.games/images/heroes/starfinder-2e.jpg"
     }
   ],
   "resources": [
@@ -15637,22 +15637,22 @@ registerSystem("starforged", {
     "sandbox"
   ],
   "settingTags": ["space"],
-  "heroImage": "https://cdn.shopify.com/s/files/1/0712/0329/1447/files/starforged-sunset.jpg?v=1725559572",
+  "heroImage": "https://sessionzero.games/images/heroes/starforged.jpg",
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1nLzg1MjM5MjQuanBn/original/3NcS3p.jpg"
+      "src": "https://sessionzero.games/images/systems/starforged-g1.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0712/0329/1447/files/starforged-sunset.jpg?v=1725559572"
+      "src": "https://sessionzero.games/images/heroes/starforged.jpg"
     },
     {
-      "src": "https://assetsio.gnwcdn.com/starforged-ironsworn-ship-alien-art.png?width=690&quality=85&format=jpg&dpr=3&auto=webp"
+      "src": "https://sessionzero.games/images/systems/starforged-g3.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0712/0329/1447/files/ironsworn-starforged-digital-main.png?v=1767637357"
+      "src": "https://sessionzero.games/images/systems/starforged-g4.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0712/0329/1447/files/starforged-asset-deck-1.png?v=1760647856"
+      "src": "https://sessionzero.games/images/systems/starforged-g5.jpg"
     }
   ],
   "resources": [
@@ -15803,7 +15803,7 @@ registerSystem("stars-without-number", {
   "settingTags": ["space"],
   "gallery": [
     {
-      "src": "https://image.nobleknight.com/s/jpg1500/swnrre.jpg"
+      "src": "https://sessionzero.games/images/systems/stars-without-number-g1.jpg"
     }
   ],
   "resources": [
@@ -15957,16 +15957,16 @@ registerSystem("sword-and-wizardry", {
   "settingTags": ["fantasy", "sword-and-sorcery"],
   "gallery": [
     {
-      "src": "https://www.mythmeregames.com/cdn/shop/files/Swords_Wizardry_f97618b8-689a-4b99-a580-ca1a2182a1cc.png?v=1707749908"
+      "src": "https://sessionzero.games/images/systems/sword-and-wizardry-g1.jpg"
     },
     {
-      "src": "https://www.mythmeregames.com/cdn/shop/files/SWPlayerBook20232_a8c5d191-e209-406f-878d-63f60a271a85.jpg"
+      "src": "https://sessionzero.games/images/systems/sword-and-wizardry-g2.jpg"
     },
     {
-      "src": "https://www.mythmeregames.com/cdn/shop/files/SWPlayerBook20233_b52fdac8-d4ed-4a1d-87cf-cfff19ebea7c.jpg"
+      "src": "https://sessionzero.games/images/systems/sword-and-wizardry-g3.jpg"
     },
     {
-      "src": "https://www.mythmeregames.com/cdn/shop/files/SWPlayerBook20234_08e48758-c05f-4ce8-ba9a-f67252765223.jpg"
+      "src": "https://sessionzero.games/images/systems/sword-and-wizardry-g4.jpg"
     }
   ],
   "resources": [
@@ -16128,9 +16128,9 @@ registerSystem("symbaroum", {
   "playstyleTags": ["explore", "mystery", "horror"],
   "settingTags": ["fantasy", "weird"],
   "gallery": [
-    { "src": "https://image.nobleknight.com/i/jpg1500/impmuh051001.jpg" },
-    { "src": "https://image.nobleknight.com/i/jpg1500/impmuh050550.jpg" },
-    { "src": "https://image.nobleknight.com/i/jpg1500/impmuh051614.jpg" }
+    { "src": "https://sessionzero.games/images/systems/symbaroum-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/symbaroum-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/symbaroum-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://freeleaguepublishing.com/games/symbaroum/", "fmt": "Web" },
@@ -16224,7 +16224,7 @@ registerSystem("tales-loop", {
   "players": "3–5",
   "complexity": 2,
   "foundryStatus": "Official контент",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/TalesfromtheLoop-1440x720.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/tales-loop.jpg",
   "playstyleTags": [
     "mystery",
     "narrative",
@@ -16233,19 +16233,19 @@ registerSystem("tales-loop", {
   "settingTags": ["modern", "weird"],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/lokskeppt67_1920.jpg"
+      "src": "https://sessionzero.games/images/systems/tales-loop-g1.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/talesfromtheloop2-scaled.jpg"
+      "src": "https://sessionzero.games/images/systems/tales-loop-g2.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/talesfromtheloop3-scaled.jpg"
+      "src": "https://sessionzero.games/images/systems/tales-loop-g3.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/talesfromtheloop4-scaled.jpg"
+      "src": "https://sessionzero.games/images/systems/tales-loop-g4.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/09/talesfromtheloop5-scaled.jpg"
+      "src": "https://sessionzero.games/images/systems/tales-loop-g5.jpg"
     }
   ],
   "resources": [
@@ -16403,7 +16403,7 @@ registerSystem("tales-of-argosa", {
   "complexity": 3,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://lowfantasygaming.com/wp-content/uploads/2024/07/image-1.png",
+  "heroImage": "https://sessionzero.games/images/heroes/tales-of-argosa.jpg",
   "playstyleTags": [
     "combat",
     "explore",
@@ -16412,10 +16412,10 @@ registerSystem("tales-of-argosa", {
   "settingTags": ["fantasy", "sword-and-sorcery"],
   "gallery": [
     {
-      "src": "https://lowfantasygaming.com/wp-content/uploads/2024/07/image-8.png"
+      "src": "https://sessionzero.games/images/systems/tales-of-argosa-g1.jpg"
     },
     {
-      "src": "https://lowfantasygaming.com/wp-content/uploads/2024/01/mines-of-perinthos-thumb.png"
+      "src": "https://sessionzero.games/images/systems/tales-of-argosa-g2.jpg"
     }
   ],
   "resources": [
@@ -16561,13 +16561,13 @@ registerSystem("ten-candles", {
   "settingTags": ["modern"],
   "gallery": [
     {
-      "src": "https://images.squarespace-cdn.com/content/v1/54cbdf08e4b0b8ab2e74ea9f/1619466008887-TFKCOGXSSKRLUUQG3G9J/Cv5dI7TWgAARHRY.jpg"
+      "src": "https://sessionzero.games/images/systems/ten-candles-g1.jpg"
     },
     {
-      "src": "https://images.squarespace-cdn.com/content/v1/54cbdf08e4b0b8ab2e74ea9f/1619466008888-MX1KUUI84H0EQYIB52O9/CvPrqdxWIAAhsop.jpg"
+      "src": "https://sessionzero.games/images/systems/ten-candles-g2.jpg"
     },
     {
-      "src": "https://images.squarespace-cdn.com/content/v1/54cbdf08e4b0b8ab2e74ea9f/1619466009391-V22S8NCG26F2XWDCAWTW/CwIWn07XgAEuJsH.jpg"
+      "src": "https://sessionzero.games/images/systems/ten-candles-g3.jpg"
     }
   ],
   "resources": [
@@ -16709,10 +16709,10 @@ registerSystem("the-black-hack", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://image.nobleknight.com/b/jpg1500/blackhack2eboxset.jpg"
+      "src": "https://sessionzero.games/images/systems/the-black-hack-g1.jpg"
     },
     {
-      "src": "https://image.nobleknight.com/b/jpg1500/blackhack2b.jpg"
+      "src": "https://sessionzero.games/images/systems/the-black-hack-g2.jpg"
     }
   ],
   "resources": [
@@ -16848,9 +16848,9 @@ registerSystem("the-expanse", {
   "playstyleTags": ["narrative", "action", "explore"],
   "settingTags": ["space"],
   "gallery": [
-    { "src": "https://greenroninstore.com/cdn/shop/products/TheExpanse-SgtDraper.jpg?v=1670277014&width=1946" },
-    { "src": "https://greenroninstore.com/cdn/shop/products/TheExpanse-OriginBackground.jpg?v=1670277014&width=1946" },
-    { "src": "https://greenroninstore.com/cdn/shop/products/the-expanse-core-rulebook-TOC.jpg?v=1670277014&width=1946" }
+    { "src": "https://sessionzero.games/images/systems/the-expanse-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/the-expanse-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/the-expanse-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://greenroninstore.com/products/the-expanse-roleplaying-game", "fmt": "Print / PDF" },
@@ -16953,13 +16953,13 @@ registerSystem("the-quiet-year", {
   "free": false,
   "edition": "2nd ed. (2019)",
   "foundryStatus": "None",
-  "heroImage": "https://buriedwithoutceremony.com/wp-content/uploads/2019/11/The-Quiet-Year.png",
+  "heroImage": "https://sessionzero.games/images/heroes/the-quiet-year.jpg",
   "playstyleTags": ["worldbuild", "narrative", "survival"],
   "settingTags": ["postapoc", "fantasy"],
   "gallery": [
-    { "src": "https://buriedwithoutceremony.com/wp-content/uploads/2019/11/The-Quiet-Year.png" },
-    { "src": "https://buriedwithoutceremony.com/wp-content/uploads/2026/01/Box-Contents-scaled.png" },
-    { "src": "https://buriedwithoutceremony.com/wp-content/uploads/2020/04/The-Quiet-Year-PDF.png" }
+    { "src": "https://sessionzero.games/images/heroes/the-quiet-year.jpg" },
+    { "src": "https://sessionzero.games/images/systems/the-quiet-year-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/the-quiet-year-g3.webp" }
   ],
   "resources": [
     { "type": "link", "url": "https://buriedwithoutceremony.com/the-quiet-year", "fmt": "Web" },
@@ -17050,7 +17050,7 @@ registerSystem("the-wretched", {
   "dice": "d6 + playing cards + Jenga tower",
   "players": "1",
   "complexity": 1,
-  "heroImage": "https://img.itch.zone/aW1nLzQ2OTEyMjkucG5n/original/frNUeL.png",
+  "heroImage": "https://sessionzero.games/images/heroes/the-wretched.jpg",
   "playstyleTags": [
     "horror",
     "survival",
@@ -17059,13 +17059,13 @@ registerSystem("the-wretched", {
   "settingTags": ["space"],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1hZ2UvNjE0MjgzLzMyNjgzODkucG5n/347x500/1hYOtq.png"
+      "src": "https://sessionzero.games/images/systems/the-wretched-g1.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvNjE0MjgzLzQzMTYyMzEuanBn/347x500/p6tHSn.jpg"
+      "src": "https://sessionzero.games/images/systems/the-wretched-g2.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvNjE0MjgzLzQzMTYyMzIuanBn/347x500/sjWRTo.jpg"
+      "src": "https://sessionzero.games/images/systems/the-wretched-g3.jpg"
     }
   ],
   "resources": [
@@ -17222,12 +17222,12 @@ registerSystem("thirsty-sword-lesbians", {
   "free": false,
   "edition": null,
   "foundryStatus": "Community",
-  "heroImage": "https://evilhat.com/wp-content/uploads/2021/10/products-TSL-Cover-Mockup-front-900px.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/thirsty-sword-lesbians.jpg",
   "playstyleTags": ["narrative", "social", "action"],
   "settingTags": ["fantasy"],
   "gallery": [
-    { "src": "https://evilhat.com/wp-content/uploads/2021/08/TSL-Cover-3d-web.png" },
-    { "src": "https://evilhat.com/wp-content/uploads/2021/10/Advanced-Lovers-and-Lesbians-Front-for-web.jpg" }
+    { "src": "https://sessionzero.games/images/systems/thirsty-sword-lesbians-g1.webp" },
+    { "src": "https://sessionzero.games/images/systems/thirsty-sword-lesbians-g2.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://evilhat.com/product/thirsty-sword-lesbians/", "fmt": "Web" },
@@ -17322,7 +17322,7 @@ registerSystem("thousand-year-old-vampire", {
   "dice": "d10 − d6",
   "players": "1",
   "complexity": 1,
-  "heroImage": "https://img.itch.zone/aW1nLzIwMjQ5MjAxLnBuZw==/original/6JceU8.png",
+  "heroImage": "https://sessionzero.games/images/heroes/thousand-year-old-vampire.jpg",
   "heroImageStyle": "object-fit: cover; object-position: center top; background: linear-gradient(135deg, #0a0005, #1a0010 40%, #2d0020 70%, #0f000a);",
   "playstyleTags": [
     "narrative",
@@ -17332,13 +17332,13 @@ registerSystem("thousand-year-old-vampire", {
   "settingTags": ["historical", "urban-fantasy"],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1hZ2UvNTgyMDAwLzMwNjY0NDcucG5n/347x500/UYjcQP.png"
+      "src": "https://sessionzero.games/images/systems/thousand-year-old-vampire-g1.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvNTgyMDAwLzMwNjY0NDMucG5n/347x500/ply7sR.png"
+      "src": "https://sessionzero.games/images/systems/thousand-year-old-vampire-g2.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvNTgyMDAwLzMwNjY0NDQucG5n/347x500/ecqbKs.png"
+      "src": "https://sessionzero.games/images/systems/thousand-year-old-vampire-g3.jpg"
     }
   ],
   "resources": [
@@ -17630,7 +17630,7 @@ registerSystem("traveller", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Official",
-  "heroImage": "https://www.mongoosepublishing.com/cdn/shop/files/The_Core_Rulebook_2022_New_Cover_1800x.jpg?v=1733921202",
+  "heroImage": "https://sessionzero.games/images/heroes/traveller.jpg",
   "playstyleTags": [
     "explore",
     "sandbox",
@@ -17639,16 +17639,16 @@ registerSystem("traveller", {
   "settingTags": ["space"],
   "gallery": [
     {
-      "src": "https://www.mongoosepublishing.com/cdn/shop/files/The_Core_Rulebook_2022_New_Cover_1800x.jpg?v=1733921202"
+      "src": "https://sessionzero.games/images/heroes/traveller.jpg"
     },
     {
-      "src": "https://www.mongoosepublishing.com/cdn/shop/files/hg2022_1562x.jpg?v=1777472594"
+      "src": "https://sessionzero.games/images/systems/traveller-g2.jpg"
     },
     {
-      "src": "https://www.mongoosepublishing.com/cdn/shop/products/CSCUpdate2023frontCoverJPEG_aa9b7abf-6aad-4e3e-a506-12811312c221_1269x.jpg?v=1671718881"
+      "src": "https://sessionzero.games/images/systems/traveller-g3.jpg"
     },
     {
-      "src": "https://www.mongoosepublishing.com/cdn/shop/products/travthirdimp_2_914fc99f-1930-49cd-9b05-bf52448a0adf_1800x.jpg?v=1646393186"
+      "src": "https://sessionzero.games/images/systems/traveller-g4.jpg"
     }
   ],
   "resources": [
@@ -17819,7 +17819,7 @@ registerSystem("triangle", {
   "players": "3–5",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://img.itch.zone/aW1nLzE2NTI3MDUyLmpwZw==/original/FIDchU.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/triangle.jpg",
   "playstyleTags": [
     "mystery",
     "horror",
@@ -17827,19 +17827,19 @@ registerSystem("triangle", {
   ],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1nLzIzMTIyMTYzLmpwZw==/original/638fvX.jpg"
+      "src": "https://sessionzero.games/images/systems/triangle-g1.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1nLzIzMTIyMTQzLnBuZw==/original/yIrTaf.png"
+      "src": "https://sessionzero.games/images/systems/triangle-g2.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1nLzIzMTIxOTQ5LnBuZw==/original/%2F%2B9FZ8.png"
+      "src": "https://sessionzero.games/images/systems/triangle-g3.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0581/0464/3719/files/lobby_sample.jpg"
+      "src": "https://sessionzero.games/images/systems/triangle-g4.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0581/0464/3719/files/Back_Endpaper__Agents_on_Break.jpg"
+      "src": "https://sessionzero.games/images/systems/triangle-g5.jpg"
     }
   ],
   "resources": [
@@ -18064,7 +18064,7 @@ registerSystem("troika", {
   "complexity": 1,
   "free": true,
   "foundryStatus": "Official",
-  "heroImage": "https://img.itch.zone/aW1nLzMyMjg4MDkucG5n/original/hYv6Fw.png",
+  "heroImage": "https://sessionzero.games/images/heroes/troika.jpg",
   "playstyleTags": [
     "narrative",
     "explore",
@@ -18073,13 +18073,13 @@ registerSystem("troika", {
   "settingTags": ["weird"],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMzkyODUxLzE5NDYwMDAuanBn/original/Wjwgpm.jpg"
+      "src": "https://sessionzero.games/images/systems/troika-g1.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMzkyODUxLzE5NDU5OTEuanBn/original/bcfBWl.jpg"
+      "src": "https://sessionzero.games/images/systems/troika-g2.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMzkyODUxLzE5NDU5OTMuanBn/original/8w8VYj.jpg"
+      "src": "https://sessionzero.games/images/systems/troika-g3.jpg"
     }
   ],
   "resources": [
@@ -18237,7 +18237,7 @@ registerSystem("trophy", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://trophyrpg.com/downloads/Trophy-Map.png",
+  "heroImage": "https://sessionzero.games/images/heroes/trophy.jpg",
   "playstyleTags": [
     "narrative",
     "horror",
@@ -18246,13 +18246,13 @@ registerSystem("trophy", {
   "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
-      "src": "https://trophyrpg.com/assets/images/cover-trophy-dark.jpg"
+      "src": "https://sessionzero.games/images/systems/trophy-g1.jpg"
     },
     {
-      "src": "https://trophyrpg.com/assets/images/cover-trophy-gold.jpg"
+      "src": "https://sessionzero.games/images/systems/trophy-g2.jpg"
     },
     {
-      "src": "https://trophyrpg.com/assets/images/cover-trophy-loom.jpg"
+      "src": "https://sessionzero.games/images/systems/trophy-g3.jpg"
     }
   ],
   "resources": [
@@ -18406,7 +18406,7 @@ registerSystem("twilight", {
   "players": "3–5",
   "complexity": 4,
   "foundryStatus": "Official",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Twilight_2000_RPG_Combat_3000-1440x720.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/twilight.jpg",
   "playstyleTags": [
     "survival",
     "tactical",
@@ -18416,16 +18416,16 @@ registerSystem("twilight", {
   "settingTags": ["modern", "postapoc"],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Twilight_2000_RPG_Factions.jpg"
+      "src": "https://sessionzero.games/images/systems/twilight-g1.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/11/1.-Rules-Gear-intro.jpg"
+      "src": "https://sessionzero.games/images/systems/twilight-g2.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/11/travel-intro.jpg"
+      "src": "https://sessionzero.games/images/systems/twilight-g3.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Twilight_2000_RPG_Scenarios.jpg"
+      "src": "https://sessionzero.games/images/systems/twilight-g4.jpg"
     }
   ],
   "resources": [
@@ -18577,13 +18577,13 @@ registerSystem("urban-shadows", {
   "free": false,
   "edition": "2nd Edition (2022)",
   "foundryStatus": "Community",
-  "heroImage": "https://magpiegames.com/cdn/shop/collections/US2Ecollection.png?v=1746477095",
+  "heroImage": "https://sessionzero.games/images/heroes/urban-shadows.jpg",
   "playstyleTags": ["narrative", "social", "horror"],
   "settingTags": ["urban-fantasy", "modern"],
   "gallery": [
-    { "src": "https://magpiegames.com/cdn/shop/files/Urban-Shadows-Core_2.jpg" },
-    { "src": "https://magpiegames.com/cdn/shop/files/Urban-Shadows-Core_3.jpg" },
-    { "src": "https://magpiegames.com/cdn/shop/files/Urban-Shadows-Core_4.jpg" }
+    { "src": "https://sessionzero.games/images/systems/urban-shadows-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/urban-shadows-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/urban-shadows-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://magpiegames.com/products/core-book-urban-shadows-1", "fmt": "Web" },
@@ -18693,7 +18693,7 @@ registerSystem("uvg", {
   "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
-      "src": "https://cdn.shopify.com/s/files/1/0025/6006/5625/products/reanimated-damage-the-ultra-violet-grasslands-and-the-black-city-warning-book-1347321.jpg?v=1753228007"
+      "src": "https://sessionzero.games/images/systems/uvg-g1.jpg"
     },
     {
       "src": "https://sessionzero.games/images/systems/uvg-g1.jpg"
@@ -18702,10 +18702,10 @@ registerSystem("uvg", {
       "src": "https://sessionzero.games/images/systems/uvg-g2.jpg"
     },
     {
-      "src": "https://www.exaltedfuneral.com/cdn/shop/files/uvg-2e-book-463900.jpg?v=1720802815"
+      "src": "https://sessionzero.games/images/systems/uvg-g4.jpg"
     },
     {
-      "src": "https://www.exaltedfuneral.com/cdn/shop/files/uvg-2e-book-296196.jpg?v=1720802815"
+      "src": "https://sessionzero.games/images/systems/uvg-g5.jpg"
     }
   ],
   "resources": [
@@ -18877,7 +18877,7 @@ registerSystem("vaesen", {
   "players": "3–5",
   "complexity": 2,
   "foundryStatus": "Official контент",
-  "heroImage": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/Vaesen_hero3-1440x720.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/vaesen.jpg",
   "playstyleTags": [
     "mystery",
     "horror",
@@ -18886,10 +18886,10 @@ registerSystem("vaesen", {
   "settingTags": ["historical", "urban-fantasy"],
   "gallery": [
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/11/sjora.jpg"
+      "src": "https://sessionzero.games/images/systems/vaesen-g1.jpg"
     },
     {
-      "src": "https://freeleaguepublishing.com/wp-content/uploads/2023/08/VAE_ENG_cover-1200x1200.jpg"
+      "src": "https://sessionzero.games/images/systems/vaesen-g2.jpg"
     }
   ],
   "resources": [
@@ -19029,7 +19029,7 @@ registerSystem("vampire-the-masquerade", {
   "complexity": 3,
   "free": false,
   "foundryStatus": "Community",
-  "heroImage": "https://cdn11.bigcommerce.com/s-kftzvkkgjv/images/stencil/500x659/products/292/1534/V5_CoreRulebook_FrontCover__22095.1657225192.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/vampire-the-masquerade.jpg",
   "playstyleTags": [
     "narrative",
     "combat",
@@ -19038,13 +19038,13 @@ registerSystem("vampire-the-masquerade", {
   "settingTags": ["modern", "urban-fantasy"],
   "gallery": [
     {
-      "src": "https://static.wikia.nocookie.net/whitewolf/images/7/78/VampireMasqueradeV5Logo.png/revision/latest"
+      "src": "https://sessionzero.games/images/systems/vampire-the-masquerade-g1.webp"
     },
     {
-      "src": "https://www.grimdarkmagazine.com/wp-content/uploads/2019/09/V5-1.jpeg"
+      "src": "https://sessionzero.games/images/systems/vampire-the-masquerade-g2.jpg"
     },
     {
-      "src": "https://cdn11.bigcommerce.com/s-kftzvkkgjv/images/stencil/500x659/products/292/1534/V5_CoreRulebook_FrontCover__22095.1657225192.jpg"
+      "src": "https://sessionzero.games/images/heroes/vampire-the-masquerade.jpg"
     }
   ],
   "resources": [
@@ -19209,7 +19209,7 @@ registerSystem("vaults-of-vaarn", {
   "edition": null,
   "free": true,
   "foundryStatus": "None",
-  "heroImage": "https://iglootree.com/cdn/shop/files/VaultsofVaarnIssue4_1.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/vaults-of-vaarn.jpg",
   "playstyleTags": [
     "explore",
     "survival",
@@ -19218,13 +19218,13 @@ registerSystem("vaults-of-vaarn", {
   "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
-      "src": "https://iglootree.com/cdn/shop/files/VaultsofVaarnIssue4_2.jpg"
+      "src": "https://sessionzero.games/images/systems/vaults-of-vaarn-g1.jpg"
     },
     {
-      "src": "https://iglootree.com/cdn/shop/files/VaultsofVaarnIssue4_3.jpg"
+      "src": "https://sessionzero.games/images/systems/vaults-of-vaarn-g2.jpg"
     },
     {
-      "src": "https://iglootree.com/cdn/shop/files/VaultsofVaarnIssue4_4.jpg"
+      "src": "https://sessionzero.games/images/systems/vaults-of-vaarn-g3.jpg"
     }
   ],
   "resources": [
@@ -19357,7 +19357,7 @@ registerSystem("wanderhome", {
   "players": "2–5",
   "complexity": 1,
   "foundryStatus": "None",
-  "heroImage": "https://possumcreekgames.com/cdn/shop/files/wanderhome_Sylvia_2_1500x.png?v=1625780744",
+  "heroImage": "https://sessionzero.games/images/heroes/wanderhome.jpg",
   "playstyleTags": [
     "narrative",
     "social",
@@ -19366,13 +19366,13 @@ registerSystem("wanderhome", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://cdn.shopify.com/s/files/1/0569/2912/4552/files/Parade_of_small_and_forgotten_gods_600x600.jpg?v=1637781495"
+      "src": "https://sessionzero.games/images/systems/wanderhome-g1.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0569/2912/4552/files/Candlefeast-9x18_low-res-JPG_600x600.jpg?v=1637781564"
+      "src": "https://sessionzero.games/images/systems/wanderhome-g2.jpg"
     },
     {
-      "src": "https://cdn.shopify.com/s/files/1/0569/2912/4552/files/2021_Wanderhome_Oneshot-1536x1536_480x480.png?v=1637783341"
+      "src": "https://sessionzero.games/images/systems/wanderhome-g3.jpg"
     }
   ],
   "resources": [
@@ -19521,9 +19521,9 @@ registerSystem("werewolf-the-apocalypse", {
   "playstyleTags": ["combat", "narrative", "horror"],
   "settingTags": ["modern", "urban-fantasy"],
   "gallery": [
-    { "src": "https://image.nobleknight.com/w/jpg1500/wendigorev.jpg" },
-    { "src": "https://image.nobleknight.com/w/jpg1500/w20apocalypticrecorddx.jpg" },
-    { "src": "https://image.nobleknight.com/i/jpg1500/iprop-w-de.jpg" }
+    { "src": "https://sessionzero.games/images/systems/werewolf-the-apocalypse-g1.jpg" },
+    { "src": "https://sessionzero.games/images/systems/werewolf-the-apocalypse-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/werewolf-the-apocalypse-g3.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://theonyxpath.com/category/worlds/werewolftheapocalypse/", "fmt": "Web" },
@@ -19608,7 +19608,7 @@ registerSystem("wfrp", {
   "complexity": 3,
   "free": true,
   "foundryStatus": "Official",
-  "heroImage": "https://d1vzi28wh99zvq.cloudfront.net/images/54/248284.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/wfrp.jpg",
   "playstyleTags": [
     "combat",
     "explore",
@@ -19617,13 +19617,13 @@ registerSystem("wfrp", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://d1vzi28wh99zvq.cloudfront.net/images/54/261941.jpg"
+      "src": "https://sessionzero.games/images/systems/wfrp-g1.jpg"
     },
     {
-      "src": "https://manaburnt.wordpress.com/wp-content/uploads/2018/09/warhammer-4th-ed.jpg"
+      "src": "https://sessionzero.games/images/systems/wfrp-g2.jpg"
     },
     {
-      "src": "https://manaburnt.wordpress.com/wp-content/uploads/2018/09/untitled.png"
+      "src": "https://sessionzero.games/images/systems/wfrp-g3.jpg"
     }
   ],
   "resources": [
@@ -19916,7 +19916,7 @@ registerSystem("wildsea", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "Community",
-  "heroImage": "https://img.itch.zone/aW1nLzgwNTI1NzYuanBn/original/jf%2BYt%2B.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/wildsea.jpg",
   "playstyleTags": [
     "explore",
     "narrative",
@@ -19925,19 +19925,19 @@ registerSystem("wildsea", {
   "settingTags": ["fantasy", "weird"],
   "gallery": [
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMTMyNjI2My84MDUxMjgyLnBuZw==/original/tY0wGS.png"
+      "src": "https://sessionzero.games/images/systems/wildsea-g1.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMTMyNjI2My84MDUxMjgzLnBuZw==/original/Zti8Xd.png"
+      "src": "https://sessionzero.games/images/systems/wildsea-g2.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMTMyNjI2My84MDUxMjg0LnBuZw==/original/jzpDEX.png"
+      "src": "https://sessionzero.games/images/systems/wildsea-g3.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMTMyNjI2My84MDUxMjg1LnBuZw==/original/FulxaS.png"
+      "src": "https://sessionzero.games/images/systems/wildsea-g4.jpg"
     },
     {
-      "src": "https://img.itch.zone/aW1hZ2UvMTMyNjI2My84MDUyMjYwLnBuZw==/original/4WEEWR.png"
+      "src": "https://sessionzero.games/images/systems/wildsea-g5.jpg"
     }
   ],
   "resources": [
@@ -20132,10 +20132,10 @@ registerSystem("worlds-without-number", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://thegaminggang.com/wp-content/uploads/2021/03/Worlds-Without-Number.jpg"
+      "src": "https://sessionzero.games/images/systems/worlds-without-number-g1.jpg"
     },
     {
-      "src": "https://image.nobleknight.com/2/jpg1500/23222440222h.jpg"
+      "src": "https://sessionzero.games/images/systems/worlds-without-number-g2.jpg"
     }
   ],
   "resources": [
@@ -20286,13 +20286,13 @@ registerSystem("wrath-and-glory", {
   "settingTags": ["space", "weird"],
   "gallery": [
     {
-      "src": "https://image.nobleknight.com/c/jpg1500/cb72618.jpg"
+      "src": "https://sessionzero.games/images/systems/wrath-and-glory-g1.jpg"
     },
     {
-      "src": "https://image.nobleknight.com/c/jpg1500/cb72627.jpg"
+      "src": "https://sessionzero.games/images/systems/wrath-and-glory-g2.jpg"
     },
     {
-      "src": "https://image.nobleknight.com/c/jpg1500/cb72626.jpg"
+      "src": "https://sessionzero.games/images/systems/wrath-and-glory-g3.jpg"
     }
   ],
   "resources": [

@@ -12,7 +12,7 @@ registerSystem("curseborne", {
   "free": false,
   "edition": "Core Rulebook (not yet on sale)",
   "foundryStatus": "None",
-  "heroImage": "https://theonyxpath.com/wp-content/uploads/2024/08/creppy-morgue-changes-R1-light-hair-transparent-1447x2048.png",
+  "heroImage": "https://sessionzero.games/images/heroes/curseborne.jpg",
   "playstyleTags": ["horror", "mystery", "social"],
   "settingTags": ["modern", "urban-fantasy"],
   "gallery": [],
