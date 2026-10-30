@@ -359,9 +359,9 @@ let deferred = JSON.parse(localStorage.getItem('ttrpg-deferred') || '[]');
 let manualOrder = JSON.parse(localStorage.getItem('ttrpg-order') || '[]');
 // Tri-state tag filter. Keys can be playstyle/setting tags, complexity buckets
 // ("cx:light" | "cx:medium" | "cx:heavy"), engine families ("fam:<family key>"),
-// or "free". Includes are ANDed (a system must have every included tag); complexity
-// and engine includes are each ORed among themselves (a system has exactly one bucket
-// and one family). Excludes remove a system if it matches any of them.
+// publishers ("pub:<slug>"), or "free". Includes are ANDed (a system must have every
+// included tag); complexity, engine and publisher includes are each ORed among themselves
+// (a system has exactly one of each). Excludes remove a system if it matches any of them.
 let tagInclude = new Set(
     JSON.parse(localStorage.getItem('ttrpg-tag-include') || 'null')
     // migrate legacy single-set OR filter → treat old selections as includes
@@ -391,6 +391,12 @@ function familyFilterKey(id) {
     return fam && fam.key ? 'fam:' + fam.key : null;
 }
 
+// Publisher as a filter key. Slugged so any name is safe inside an onclick attribute.
+function publisherFilterKey(name) {
+    const slug = String(name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    return slug ? 'pub:' + slug : null;
+}
+
 // Fields matchesTagFilter() reads, for any system (official or custom).
 function systemFilterFields(id) {
     const sysData = SYSTEMS_DATA[id];
@@ -399,27 +405,31 @@ function systemFilterFields(id) {
         ...getSystemTags(id),
         complexity: sysData ? sysData.complexity : customSys?.complexity,
         free: sysData ? !!sysData.free : !!customSys?.free,
-        family: familyFilterKey(id)
+        family: familyFilterKey(id),
+        publisher: sysData ? sysData.publisher : customSys?.publisher
     };
 }
 
 // Predicate shared by results grid + export + share. `s` carries tagKeys,
-// settingKeys, complexity, free, family.
+// settingKeys, complexity, free, family, publisher.
 function matchesTagFilter(s) {
     if (tagFilterCount() === 0) return true;
     const has = (key) => {
         if (key === 'free') return s.free === true;
         if (key.slice(0, 3) === 'cx:') return complexityBucketKey(s.complexity) === key;
         if (key.slice(0, 4) === 'fam:') return s.family === key;
+        if (key.slice(0, 4) === 'pub:') return publisherFilterKey(s.publisher) === key;
         return (s.tagKeys || []).indexOf(key) !== -1 || (s.settingKeys || []).indexOf(key) !== -1;
     };
     const inc = [...tagInclude];
     const cxInc = inc.filter(k => k.slice(0, 3) === 'cx:');
     const famInc = inc.filter(k => k.slice(0, 4) === 'fam:');
-    const otherInc = inc.filter(k => k.slice(0, 3) !== 'cx:' && k.slice(0, 4) !== 'fam:');
+    const pubInc = inc.filter(k => k.slice(0, 4) === 'pub:');
+    const otherInc = inc.filter(k => k.slice(0, 3) !== 'cx:' && k.slice(0, 4) !== 'fam:' && k.slice(0, 4) !== 'pub:');
     if (otherInc.length && !otherInc.every(has)) return false;   // AND across tag/free includes
     if (cxInc.length && !cxInc.some(has)) return false;          // OR across mutually-exclusive buckets
     if (famInc.length && !famInc.some(has)) return false;        // OR across mutually-exclusive families
+    if (pubInc.length && !pubInc.some(has)) return false;        // OR across mutually-exclusive publishers
     for (const k of tagExclude) { if (has(k)) return false; }
     return true;
 }
@@ -906,6 +916,26 @@ function updateTagFilterHeaderCount() {
 }
 
 // Reflect include/exclude state onto already-rendered buttons (no innerHTML rewrite).
+// Publisher search: by default only publishers with 2+ games are listed; typing
+// searches all of them. An active publisher always stays visible.
+let _pubSearch = '';
+function setPublisherSearch(q) {
+    _pubSearch = q;
+    const panel = document.getElementById('results-tag-filter');
+    if (panel) syncPublisherButtons(panel);
+}
+
+function syncPublisherButtons(panel) {
+    const q = _pubSearch.trim().toLowerCase();
+    panel.querySelectorAll('.tag-filter-btn.publisher').forEach(btn => {
+        const key = btn.dataset.tagKey;
+        const active = tagInclude.has(key) || tagExclude.has(key);
+        const label = btn.querySelector('.tag-filter-label').textContent.toLowerCase();
+        const match = q ? label.includes(q) : !btn.classList.contains('pub-minor');
+        btn.hidden = !(active || match);
+    });
+}
+
 function applyTagFilterStates(panel) {
     panel.querySelectorAll('.tag-filter-btn[data-tag-key]').forEach(btn => {
         const k = btn.dataset.tagKey;
@@ -914,6 +944,7 @@ function applyTagFilterStates(panel) {
     });
     const allBtn = panel.querySelector('.tag-filter-btn[data-tag-all]');
     if (allBtn) allBtn.classList.toggle('active', tagFilterCount() === 0);
+    syncPublisherButtons(panel);
     updateTagFilterHeaderCount();
 }
 
@@ -930,6 +961,7 @@ function renderTagFilter(allSystems) {
     const setCounts = {};
     const cxCounts = { 'cx:light': 0, 'cx:medium': 0, 'cx:heavy': 0 };
     const famCounts = {};
+    const pubs = {};
     let freeCount = 0;
     allSystems.forEach(s => {
         (s.tagKeys || []).forEach(k => { playCounts[k] = (playCounts[k] || 0) + 1; });
@@ -937,6 +969,11 @@ function renderTagFilter(allSystems) {
         const cx = complexityBucketKey(s.complexity);
         if (cx) cxCounts[cx]++;
         if (s.family) famCounts[s.family] = (famCounts[s.family] || 0) + 1;
+        const pub = publisherFilterKey(s.publisher);
+        if (pub) {
+            if (!pubs[pub]) pubs[pub] = { label: s.publisher, count: 0 };
+            pubs[pub].count++;
+        }
         if (s.free) freeCount++;
     });
     // Keep a button for every active engine key, even with no visible systems,
@@ -950,6 +987,12 @@ function renderTagFilter(allSystems) {
     // "Standalone" is the catch-all, not an engine — keep it last regardless of size.
     const sortedFam = Object.keys(famCounts).sort((a, b) =>
         (a === 'fam:standalone') - (b === 'fam:standalone') || famCounts[b] - famCounts[a]);
+    // Keep a button for every active publisher key too, like engines above.
+    [...tagInclude, ...tagExclude].forEach(k => {
+        if (k.slice(0, 4) === 'pub:' && !pubs[k]) pubs[k] = { label: k.slice(4).replace(/-/g, ' '), count: 0 };
+    });
+    const sortedPub = Object.keys(pubs).sort((a, b) =>
+        pubs[b].count - pubs[a].count || pubs[a].label.localeCompare(pubs[b].label));
     const showFam = sortedFam.length > 1 || sortedFam.some(famActive);
     const cxKeys = COMPLEXITY_BUCKET_KEYS.filter(k => cxCounts[k] > 0);
     const totalCount = allSystems.length;
@@ -964,6 +1007,7 @@ function renderTagFilter(allSystems) {
         c: cxKeys.map(k => [k, cxCounts[k]]),
         e: sortedFam.map(k => [k, famCounts[k]]),
         es: showFam,
+        u: sortedPub.map(k => [k, pubs[k].label, pubs[k].count]),
         f: freeCount
     });
     if (panel.dataset.tagFingerprint === fingerprint) {
@@ -1020,6 +1064,14 @@ function renderTagFilter(allSystems) {
         html += section('tag_filter_engine');
         sortedFam.forEach((key, i) => {
             html += btn(key, 'git-branch', t('nav_group_' + key.slice(4)), famCounts[key], 'engine' + (i >= TAG_FILTER_TOP ? ' tf-extra' : ''));
+        });
+    }
+
+    if (sortedPub.length > 1) {
+        html += section('tag_filter_publisher');
+        html += `<input type="search" class="tag-filter-pub-search" placeholder="${t('tag_filter_publisher_search')}" aria-label="${t('tag_filter_publisher_search')}" value="${escHtml(_pubSearch)}" oninput="setPublisherSearch(this.value)">`;
+        sortedPub.forEach(key => {
+            html += btn(key, 'building-2', escHtml(pubs[key].label), pubs[key].count, 'publisher' + (pubs[key].count < 2 ? ' pub-minor' : ''));
         });
     }
 
@@ -1081,6 +1133,7 @@ function renderResults() {
             complexity: sysData ? sysData.complexity : customSys?.complexity,
             free: sysData ? !!sysData.free : !!customSys?.free,
             family: familyFilterKey(id),
+            publisher: sysData ? sysData.publisher : customSys?.publisher,
             edition: sysData ? sysData.edition : customSys?.edition,
             voters: PLAYERS ? (votes[id] || []).map(vid => PLAYERS.find(p => p.id === vid)).filter(Boolean) : [],
             vetoers: PLAYERS ? (vetoes[id] || []).map(vid => PLAYERS.find(p => p.id === vid)).filter(Boolean) : [],

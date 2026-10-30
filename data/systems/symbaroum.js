@@ -5,7 +5,7 @@ registerSystem("symbaroum", {
     "genre": { "key": "dark-fantasy", "order": 27 }
   },
   "name": "Symbaroum",
-  "publisher": "Free League Publishing (Järnringen)",
+  "publisher": "Free League Publishing",
   "dice": "d20 roll-under",
   "players": "2–6",
   "complexity": 3,

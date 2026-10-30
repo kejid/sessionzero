@@ -6,7 +6,7 @@ registerSystem("mork-borg", {
     "solo": { "key": "solo-compatible", "order": 3 }
   },
   "name": "MÖRK BORG",
-  "publisher": "Ockult Örtmästare Games / Free League",
+  "publisher": "Free League Publishing",
   "dice": "d20 + d4–d10",
   "players": "2–5",
   "complexity": 1,

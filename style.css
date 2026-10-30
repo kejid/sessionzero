@@ -1156,6 +1156,14 @@ body:not(.presentation) .pres-counter { display: none; }
 .tag-filter-btn.include::after { content: '+'; }
 .tag-filter-btn.exclude::after { content: '\2212'; }
 
+.tag-filter-btn[hidden] { display: none; }
+.tag-filter-pub-search {
+    width: 100%; padding: 7px 10px; margin: 0 0 4px; border-radius: 8px;
+    font: inherit; font-size: 12px; color: var(--text);
+    background: var(--card); border: 1px solid var(--border);
+}
+.tag-filter-pub-search:focus { outline: none; border-color: var(--accent); }
+
 /* Free / edition badges (system page + result cards) */
 .system-badges { display: flex; gap: 8px; margin: -4px 0 14px; flex-wrap: wrap; }
 .sys-badge {

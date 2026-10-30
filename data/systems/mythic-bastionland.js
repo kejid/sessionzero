@@ -5,7 +5,7 @@ registerSystem("mythic-bastionland", {
     "genre": { "key": "adventure", "order": 3 }
   },
   "name": "Mythic Bastionland",
-  "publisher": "Chris McDowell / Bastionland Press",
+  "publisher": "Bastionland Press",
   "dice": "d20 + d6",
   "players": "2–5",
   "complexity": 2,

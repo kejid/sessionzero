@@ -5,7 +5,7 @@ registerSystem("into-the-odd", {
     "genre": { "key": "adventure", "order": 1 }
   },
   "name": "Into the Odd",
-  "publisher": "Chris McDowell / Free League",
+  "publisher": "Free League Publishing",
   "dice": "d20 + d6",
   "players": "2–5",
   "complexity": 1,

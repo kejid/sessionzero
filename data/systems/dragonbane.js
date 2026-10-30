@@ -6,7 +6,7 @@ registerSystem("dragonbane", {
     "solo": { "key": "solo-compatible", "order": 8 }
   },
   "name": "Dragonbane",
-  "publisher": "Free League / Year Zero Engine",
+  "publisher": "Free League Publishing",
   "dice": "d20 + d6–d12",
   "players": "3–5",
   "complexity": 2,

@@ -5,7 +5,7 @@ registerSystem("vaesen", {
     "genre": { "key": "horror", "order": 3 }
   },
   "name": "Vaesen",
-  "publisher": "Free League / Year Zero Engine",
+  "publisher": "Free League Publishing",
   "dice": "Пул d6",
   "players": "3–5",
   "complexity": 2,

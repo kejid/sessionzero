@@ -5,7 +5,7 @@ registerSystem("blade-runner", {
     "genre": { "key": "sci-fi", "order": 2 }
   },
   "name": "Blade Runner",
-  "publisher": "Free League / Year Zero Engine",
+  "publisher": "Free League Publishing",
   "dice": "Пул d6–d12",
   "players": "2–4",
   "complexity": 3,

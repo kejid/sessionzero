@@ -5,7 +5,7 @@ registerSystem("star-wars-ffg", {
     "genre": { "key": "sci-fi", "order": 7 }
   },
   "name": "Star Wars RPG (FFG)",
-  "publisher": "Fantasy Flight Games / Edge Studio (Asmodee)",
+  "publisher": "Edge Studio",
   "dice": "Нарративные кубики (Narrative Dice System)",
   "players": "3–6",
   "complexity": 3,

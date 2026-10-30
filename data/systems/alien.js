@@ -5,7 +5,7 @@ registerSystem("alien", {
     "genre": { "key": "sci-fi", "order": 1 }
   },
   "name": "ALIEN RPG",
-  "publisher": "Free League / Year Zero Engine",
+  "publisher": "Free League Publishing",
   "dice": "Пул d6 (горсть шестигранных кубиков)",
   "players": "3–5",
   "complexity": 3,

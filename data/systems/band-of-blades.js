@@ -5,7 +5,7 @@ registerSystem("band-of-blades", {
     "genre": { "key": "dark-fantasy", "order": 28 }
   },
   "name": "Band of Blades",
-  "publisher": "Evil Hat Productions / Off Guard Games",
+  "publisher": "Evil Hat Productions",
   "dice": "d6 pool (Forged in the Dark)",
   "players": "3–5",
   "complexity": 4,

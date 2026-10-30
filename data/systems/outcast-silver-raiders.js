@@ -5,7 +5,7 @@ registerSystem("outcast-silver-raiders", {
     "genre": { "key": "dark-fantasy", "order": 10 }
   },
   "name": "Outcast Silver Raiders",
-  "publisher": "Esoteric Ludology / Isaac VanDuyn",
+  "publisher": "Exalted Funeral",
   "dice": "d20 / d10 / d6 (roll-high)",
   "players": "3–6",
   "complexity": 2,

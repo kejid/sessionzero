@@ -6,7 +6,7 @@ registerSystem("liminal-horror", {
     "solo": { "key": "solo-compatible", "order": 12.5 }
   },
   "name": "Liminal Horror",
-  "publisher": "Goblin Archives",
+  "publisher": "Space Penguin Ink",
   "dice": "d20 + d6 damage (Into the Odd-based)",
   "players": "3–5",
   "complexity": 1,

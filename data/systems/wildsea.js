@@ -5,7 +5,7 @@ registerSystem("wildsea", {
     "genre": { "key": "narrative-weird", "order": 3 }
   },
   "name": "The Wildsea",
-  "publisher": "Mythworks / Felix Isaacs",
+  "publisher": "Mythworks",
   "dice": "Пул d6",
   "players": "3–5",
   "complexity": 3,

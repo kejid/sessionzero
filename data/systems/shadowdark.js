@@ -6,7 +6,7 @@ registerSystem("shadowdark", {
     "solo": { "key": "solo-compatible", "order": 7 }
   },
   "name": "Shadowdark",
-  "publisher": "Kelsey Dionne / The Arcane Library",
+  "publisher": "The Arcane Library",
   "dice": "d20 + стандарт",
   "players": "3–6",
   "complexity": 2,

@@ -6,7 +6,7 @@ registerSystem("koriko", {
     "solo": { "key": "solo-journaling", "order": 3 }
   },
   "name": "Koriko: A Magical Year",
-  "publisher": "Jack Harrison / Mousehole Press",
+  "publisher": "Mousehole Press",
   "dice": "Таро + d6 (башня)",
   "players": "1",
   "complexity": 1,

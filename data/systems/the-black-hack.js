@@ -5,7 +5,7 @@ registerSystem("the-black-hack", {
     "genre": { "key": "adventure", "order": 17 }
   },
   "name": "The Black Hack",
-  "publisher": "David Black / Gold Piece Publications",
+  "publisher": "Gold Piece Publications",
   "dice": "Roll-under d20 + Usage Dice",
   "players": "3–6",
   "complexity": 1,

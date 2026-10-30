@@ -6,7 +6,7 @@ registerSystem("mutant-year-zero", {
     "solo": { "key": "solo-compatible", "order": 15 }
   },
   "name": "Mutant: Year Zero",
-  "publisher": "Free League / Year Zero Engine",
+  "publisher": "Free League Publishing",
   "dice": "d6 pool (push your luck)",
   "players": "3–5",
   "complexity": 2,

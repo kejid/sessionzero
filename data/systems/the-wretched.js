@@ -6,7 +6,7 @@ registerSystem("the-wretched", {
     "solo": { "key": "solo-journaling", "order": 2 }
   },
   "name": "The Wretched",
-  "publisher": "Loot The Room / Chris Bissette",
+  "publisher": "Loot The Room",
   "dice": "d6 + playing cards + Jenga tower",
   "players": "1",
   "complexity": 1,

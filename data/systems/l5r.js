@@ -5,7 +5,7 @@ registerSystem("l5r", {
     "genre": { "key": "tactical", "order": 4 }
   },
   "name": "Legend of the Five Rings 5e",
-  "publisher": "Edge Studio (formerly FFG)",
+  "publisher": "Edge Studio",
   "dice": "Кастомные (Ring d6 + Skill d12)",
   "players": "3–5",
   "complexity": 4,

@@ -5,7 +5,7 @@ registerSystem("triangle", {
     "genre": { "key": "narrative-weird", "order": 5 }
   },
   "name": "Triangle Agency",
-  "publisher": "Haunted Table",
+  "publisher": "Haunted Table Games",
   "dice": "Пул d4",
   "players": "3–5",
   "complexity": 2,

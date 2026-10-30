@@ -5,7 +5,7 @@ registerSystem("mausritter", {
     "genre": { "key": "adventure", "order": 6 }
   },
   "name": "Mausritter",
-  "publisher": "Losing Games / Isaac Williams",
+  "publisher": "Losing Games",
   "dice": "d20 + d6",
   "players": "2–5",
   "complexity": 1,

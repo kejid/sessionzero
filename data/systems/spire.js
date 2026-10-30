@@ -5,7 +5,7 @@ registerSystem("spire", {
     "genre": { "key": "narrative-weird", "order": 2 }
   },
   "name": "Spire: The City Must Fall",
-  "publisher": "Rowan, Rook & Decard",
+  "publisher": "Rowan, Rook and Decard",
   "dice": "d10",
   "players": "3–5",
   "complexity": 3,

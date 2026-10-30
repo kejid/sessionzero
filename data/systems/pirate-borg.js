@@ -5,7 +5,7 @@ registerSystem("pirate-borg", {
     "genre": { "key": "dark-fantasy", "order": 3 }
   },
   "name": "Pirate Borg",
-  "publisher": "Limithron / Free League Publishing",
+  "publisher": "Limithron",
   "dice": "d20 + d6",
   "players": "2–6",
   "complexity": 1,

@@ -5,7 +5,7 @@ registerSystem("tales-loop", {
     "genre": { "key": "adventure", "order": 7 }
   },
   "name": "Tales from the Loop",
-  "publisher": "Free League / Year Zero Engine",
+  "publisher": "Free League Publishing",
   "dice": "Пул d6",
   "players": "3–5",
   "complexity": 2,

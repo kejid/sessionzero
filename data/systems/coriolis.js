@@ -5,7 +5,7 @@ registerSystem("coriolis", {
     "genre": { "key": "sci-fi", "order": 5 }
   },
   "name": "Coriolis",
-  "publisher": "Free League / Year Zero Engine",
+  "publisher": "Free League Publishing",
   "dice": "Пул d6",
   "players": "3–5",
   "complexity": 3,

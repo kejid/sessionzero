@@ -5,7 +5,7 @@ registerSystem("cy-borg", {
     "genre": { "key": "dark-fantasy", "order": 2 }
   },
   "name": "CY_BORG",
-  "publisher": "Stockholm Kartell / Free League",
+  "publisher": "Free League Publishing",
   "dice": "d20 + d6",
   "players": "2–6",
   "complexity": 1,

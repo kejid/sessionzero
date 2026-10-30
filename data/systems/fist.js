@@ -5,7 +5,7 @@ registerSystem("fist", {
     "genre": { "key": "adventure", "order": 8 }
   },
   "name": "FIST",
-  "publisher": "B. Everett Dutton / CLAYMORE",
+  "publisher": "Claymore Roleplaying Games",
   "dice": "2d6",
   "players": "2–5",
   "complexity": 1,

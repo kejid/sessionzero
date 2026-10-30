@@ -5,7 +5,7 @@ registerSystem("burning-wheel", {
     "genre": { "key": "adventure", "order": 30 }
   },
   "name": "The Burning Wheel",
-  "publisher": "Burning Wheel HQ / Luke Crane",
+  "publisher": "Burning Wheel HQ",
   "dice": "d6 pool",
   "players": "2–5",
   "complexity": 5,

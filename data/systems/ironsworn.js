@@ -6,7 +6,7 @@ registerSystem("ironsworn", {
     "solo": { "key": "solo-adventure", "order": 1 }
   },
   "name": "Ironsworn",
-  "publisher": "Shawn Tomkin / Ironsworn RPG",
+  "publisher": "Tomkin Press",
   "dice": "2d6 + d10",
   "players": "1–4",
   "complexity": 2,

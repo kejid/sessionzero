@@ -5,7 +5,7 @@ registerSystem("heart", {
     "genre": { "key": "horror", "order": 4 }
   },
   "name": "Heart: The City Beneath",
-  "publisher": "Rowan Rook & Decard",
+  "publisher": "Rowan, Rook and Decard",
   "dice": "d10",
   "players": "3–5",
   "complexity": 3,

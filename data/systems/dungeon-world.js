@@ -5,7 +5,7 @@ registerSystem("dungeon-world", {
     "genre": { "key": "adventure", "order": 21 }
   },
   "name": "Dungeon World",
-  "publisher": "Sage Kobold Productions",
+  "publisher": "Burning Wheel HQ",
   "dice": "2d6 + modifier",
   "players": "3–5",
   "complexity": 1,

@@ -5,7 +5,7 @@ registerSystem("twilight", {
     "genre": { "key": "sci-fi", "order": 8 }
   },
   "name": "Twilight: 2000",
-  "publisher": "Free League / Year Zero Engine",
+  "publisher": "Free League Publishing",
   "dice": "Пул d6–d12",
   "players": "3–5",
   "complexity": 4,

@@ -189,7 +189,7 @@ registerSystem("7th-sea", {
     "genre": { "key": "adventure", "order": 33 }
   },
   "name": "7th Sea",
-  "publisher": "John Wick Presents / Chaosium",
+  "publisher": "Chaosium",
   "dice": "d10 pool",
   "players": "3–6",
   "complexity": 3,
@@ -453,7 +453,7 @@ registerSystem("alice-is-missing", {
     "genre": { "key": "noir", "order": 36 }
   },
   "name": "Alice is Missing",
-  "publisher": "Hunters Entertainment / Renegade Game Studios",
+  "publisher": "Hunters Entertainment",
   "dice": "Cards + 90-minute timer (diceless)",
   "players": "3–5",
   "complexity": 1,
@@ -558,7 +558,7 @@ registerSystem("alien", {
     "genre": { "key": "sci-fi", "order": 1 }
   },
   "name": "ALIEN RPG",
-  "publisher": "Free League / Year Zero Engine",
+  "publisher": "Free League Publishing",
   "dice": "Пул d6 (горсть шестигранных кубиков)",
   "players": "3–5",
   "complexity": 3,
@@ -1197,7 +1197,7 @@ registerSystem("band-of-blades", {
     "genre": { "key": "dark-fantasy", "order": 28 }
   },
   "name": "Band of Blades",
-  "publisher": "Evil Hat Productions / Off Guard Games",
+  "publisher": "Evil Hat Productions",
   "dice": "d6 pool (Forged in the Dark)",
   "players": "3–5",
   "complexity": 4,
@@ -1302,7 +1302,7 @@ registerSystem("basic-fantasy", {
     "genre": { "key": "adventure", "order": 14 }
   },
   "name": "Basic Fantasy RPG",
-  "publisher": "Chris Gonnerman / Basic Fantasy RPG",
+  "publisher": "Basic Fantasy Project",
   "dice": "d20 + variable weapon damage",
   "players": "3–6",
   "complexity": 2,
@@ -1592,7 +1592,7 @@ registerSystem("blade-runner", {
     "genre": { "key": "sci-fi", "order": 2 }
   },
   "name": "Blade Runner",
-  "publisher": "Free League / Year Zero Engine",
+  "publisher": "Free League Publishing",
   "dice": "Пул d6–d12",
   "players": "2–4",
   "complexity": 3,
@@ -1783,7 +1783,7 @@ registerSystem("blades", {
     "genre": { "key": "narrative-weird", "order": 1 }
   },
   "name": "Blades in the Dark",
-  "publisher": "John Harper / One Seven Design",
+  "publisher": "Evil Hat Productions",
   "dice": "Пул d6",
   "players": "3–5",
   "complexity": 3,
@@ -2052,7 +2052,7 @@ registerSystem("burning-wheel", {
     "genre": { "key": "adventure", "order": 30 }
   },
   "name": "The Burning Wheel",
-  "publisher": "Burning Wheel HQ / Luke Crane",
+  "publisher": "Burning Wheel HQ",
   "dice": "d6 pool",
   "players": "2–5",
   "complexity": 5,
@@ -2155,7 +2155,7 @@ registerSystem("cairn", {
     "solo": { "key": "solo-compatible", "order": 4 }
   },
   "name": "Cairn",
-  "publisher": "Yochai Gal / NSR",
+  "publisher": "Yochai Gal",
   "dice": "d20 + d6/d8",
   "players": "2–5",
   "complexity": 1,
@@ -2340,7 +2340,7 @@ registerSystem("call-of-cthulhu", {
     "solo": { "key": "solo-compatible", "order": 5 }
   },
   "name": "Call of Cthulhu",
-  "publisher": "Chaosium Inc.",
+  "publisher": "Chaosium",
   "dice": "d100 (процентильная система)",
   "players": "2–6",
   "complexity": 3,
@@ -2954,7 +2954,7 @@ registerSystem("coriolis", {
     "genre": { "key": "sci-fi", "order": 5 }
   },
   "name": "Coriolis",
-  "publisher": "Free League / Year Zero Engine",
+  "publisher": "Free League Publishing",
   "dice": "Пул d6",
   "players": "3–5",
   "complexity": 3,
@@ -3401,7 +3401,7 @@ registerSystem("cy-borg", {
     "genre": { "key": "dark-fantasy", "order": 2 }
   },
   "name": "CY_BORG",
-  "publisher": "Stockholm Kartell / Free League",
+  "publisher": "Free League Publishing",
   "dice": "d20 + d6",
   "players": "2–6",
   "complexity": 1,
@@ -4054,7 +4054,7 @@ registerSystem("death-in-space", {
     "genre": { "key": "sci-fi", "order": 4 }
   },
   "name": "Death in Space",
-  "publisher": "Stockholm Kartell / Free League",
+  "publisher": "Free League Publishing",
   "dice": "d20",
   "players": "2–5",
   "complexity": 2,
@@ -4734,7 +4734,7 @@ registerSystem("dragonbane", {
     "solo": { "key": "solo-compatible", "order": 8 }
   },
   "name": "Dragonbane",
-  "publisher": "Free League / Year Zero Engine",
+  "publisher": "Free League Publishing",
   "dice": "d20 + d6–d12",
   "players": "3–5",
   "complexity": 2,
@@ -4925,7 +4925,7 @@ registerSystem("draw-steel", {
     "genre": { "key": "tactical", "order": 1 }
   },
   "name": "Draw Steel",
-  "publisher": "MCDM Productions / Matt Colville",
+  "publisher": "MCDM Productions",
   "dice": "2d10",
   "players": "3–5",
   "complexity": 3,
@@ -5634,7 +5634,7 @@ registerSystem("dungeon-world", {
     "genre": { "key": "adventure", "order": 21 }
   },
   "name": "Dungeon World",
-  "publisher": "Sage Kobold Productions",
+  "publisher": "Burning Wheel HQ",
   "dice": "2d6 + modifier",
   "players": "3–5",
   "complexity": 1,
@@ -5966,7 +5966,7 @@ registerSystem("electric-bastionland", {
     "genre": { "key": "adventure", "order": 2 }
   },
   "name": "Electric Bastionland",
-  "publisher": "Chris McDowell / Bastionland Press",
+  "publisher": "Bastionland Press",
   "dice": "d20 + d6",
   "players": "2–5",
   "complexity": 1,
@@ -6699,7 +6699,7 @@ registerSystem("fist", {
     "genre": { "key": "adventure", "order": 8 }
   },
   "name": "FIST",
-  "publisher": "B. Everett Dutton / CLAYMORE",
+  "publisher": "Claymore Roleplaying Games",
   "dice": "2d6",
   "players": "2–5",
   "complexity": 1,
@@ -6857,7 +6857,7 @@ registerSystem("forbidden-lands", {
     "solo": { "key": "solo-compatible", "order": 2 }
   },
   "name": "Forbidden Lands",
-  "publisher": "Free League / Year Zero Engine",
+  "publisher": "Free League Publishing",
   "dice": "Пул d6–d12",
   "players": "3–5",
   "complexity": 3,
@@ -7434,7 +7434,7 @@ registerSystem("heart", {
     "genre": { "key": "horror", "order": 4 }
   },
   "name": "Heart: The City Beneath",
-  "publisher": "Rowan Rook & Decard",
+  "publisher": "Rowan, Rook and Decard",
   "dice": "d10",
   "players": "3–5",
   "complexity": 3,
@@ -7602,7 +7602,7 @@ registerSystem("his-majesty-the-worm", {
     "genre": { "key": "narrative-weird", "order": 12 }
   },
   "name": "His Majesty the Worm",
-  "publisher": "Rise Up Comus / Exalted Funeral",
+  "publisher": "Exalted Funeral",
   "dice": "d6 dice pools + a tarot deck",
   "players": "3–5",
   "complexity": 2,
@@ -7969,7 +7969,7 @@ registerSystem("into-the-odd", {
     "genre": { "key": "adventure", "order": 1 }
   },
   "name": "Into the Odd",
-  "publisher": "Chris McDowell / Free League",
+  "publisher": "Free League Publishing",
   "dice": "d20 + d6",
   "players": "2–5",
   "complexity": 1,
@@ -8112,7 +8112,7 @@ registerSystem("ironsworn", {
     "solo": { "key": "solo-adventure", "order": 1 }
   },
   "name": "Ironsworn",
-  "publisher": "Shawn Tomkin / Ironsworn RPG",
+  "publisher": "Tomkin Press",
   "dice": "2d6 + d10",
   "players": "1–4",
   "complexity": 2,
@@ -8505,7 +8505,7 @@ registerSystem("knave", {
     "genre": { "key": "adventure", "order": 22 }
   },
   "name": "Knave",
-  "publisher": "Questing Beast Games / Ben Milton",
+  "publisher": "Questing Beast Games",
   "dice": "d20 roll-over",
   "players": "3–6",
   "complexity": 1,
@@ -8654,7 +8654,7 @@ registerSystem("koriko", {
     "solo": { "key": "solo-journaling", "order": 3 }
   },
   "name": "Koriko: A Magical Year",
-  "publisher": "Jack Harrison / Mousehole Press",
+  "publisher": "Mousehole Press",
   "dice": "Таро + d6 (башня)",
   "players": "1",
   "complexity": 1,
@@ -8973,7 +8973,7 @@ registerSystem("l5r", {
     "genre": { "key": "tactical", "order": 4 }
   },
   "name": "Legend of the Five Rings 5e",
-  "publisher": "Edge Studio (formerly FFG)",
+  "publisher": "Edge Studio",
   "dice": "Кастомные (Ring d6 + Skill d12)",
   "players": "3–5",
   "complexity": 4,
@@ -9446,7 +9446,7 @@ registerSystem("land-of-eem", {
     "solo": { "key": "solo-compatible", "order": 11 }
   },
   "name": "Land of Eem",
-  "publisher": "Exalted Funeral / Ben Costa & James Parks",
+  "publisher": "Exalted Funeral",
   "dice": "1d12 + skill",
   "players": "3–5",
   "complexity": 2,
@@ -9798,7 +9798,7 @@ registerSystem("liminal-horror", {
     "solo": { "key": "solo-compatible", "order": 12.5 }
   },
   "name": "Liminal Horror",
-  "publisher": "Goblin Archives",
+  "publisher": "Space Penguin Ink",
   "dice": "d20 + d6 damage (Into the Odd-based)",
   "players": "3–5",
   "complexity": 1,
@@ -10062,7 +10062,7 @@ registerSystem("mage-the-ascension", {
     "genre": { "key": "horror", "order": 9 }
   },
   "name": "Mage: The Ascension",
-  "publisher": "Onyx Path Publishing / White Wolf",
+  "publisher": "Onyx Path Publishing",
   "dice": "d10 dice pool (Storyteller System)",
   "players": "3–5",
   "complexity": 3,
@@ -10539,7 +10539,7 @@ registerSystem("mausritter", {
     "genre": { "key": "adventure", "order": 6 }
   },
   "name": "Mausritter",
-  "publisher": "Losing Games / Isaac Williams",
+  "publisher": "Losing Games",
   "dice": "d20 + d6",
   "players": "2–5",
   "complexity": 1,
@@ -10693,7 +10693,7 @@ registerSystem("microscope", {
     "genre": { "key": "narrative-weird", "order": 6 }
   },
   "name": "Microscope",
-  "publisher": "Ben Robbins / Lame Mage",
+  "publisher": "Lame Mage Productions",
   "dice": "Не нужны",
   "players": "2–5",
   "complexity": 1,
@@ -10952,7 +10952,7 @@ registerSystem("mork-borg", {
     "solo": { "key": "solo-compatible", "order": 3 }
   },
   "name": "MÖRK BORG",
-  "publisher": "Ockult Örtmästare Games / Free League",
+  "publisher": "Free League Publishing",
   "dice": "d20 + d4–d10",
   "players": "2–5",
   "complexity": 1,
@@ -11369,7 +11369,7 @@ registerSystem("mutant-year-zero", {
     "solo": { "key": "solo-compatible", "order": 15 }
   },
   "name": "Mutant: Year Zero",
-  "publisher": "Free League / Year Zero Engine",
+  "publisher": "Free League Publishing",
   "dice": "d6 pool (push your luck)",
   "players": "3–5",
   "complexity": 2,
@@ -11580,7 +11580,7 @@ registerSystem("mythic-bastionland", {
     "genre": { "key": "adventure", "order": 3 }
   },
   "name": "Mythic Bastionland",
-  "publisher": "Chris McDowell / Bastionland Press",
+  "publisher": "Bastionland Press",
   "dice": "d20 + d6",
   "players": "2–5",
   "complexity": 2,
@@ -12226,7 +12226,7 @@ registerSystem("one-ring", {
     "solo": { "key": "solo-compatible", "order": 1 }
   },
   "name": "The One Ring",
-  "publisher": "Free League / Francesco Nepitello",
+  "publisher": "Free League Publishing",
   "dice": "d12 + d6",
   "players": "3–5",
   "complexity": 3,
@@ -12394,7 +12394,7 @@ registerSystem("ose", {
     "genre": { "key": "dark-fantasy", "order": 7 }
   },
   "name": "Old-School Essentials",
-  "publisher": "Necrotic Gnome / Gavin Norman",
+  "publisher": "Necrotic Gnome",
   "dice": "d20 + стандарт",
   "players": "2–6",
   "complexity": 2,
@@ -12733,7 +12733,7 @@ registerSystem("outcast-silver-raiders", {
     "genre": { "key": "dark-fantasy", "order": 10 }
   },
   "name": "Outcast Silver Raiders",
-  "publisher": "Esoteric Ludology / Isaac VanDuyn",
+  "publisher": "Exalted Funeral",
   "dice": "d20 / d10 / d6 (roll-high)",
   "players": "3–6",
   "complexity": 2,
@@ -12902,7 +12902,7 @@ registerSystem("outgunned", {
     "genre": { "key": "adventure", "order": 9 }
   },
   "name": "Outgunned",
-  "publisher": "Two Little Mice / Director's Cut",
+  "publisher": "Two Little Mice",
   "dice": "Пул d6",
   "players": "3-5",
   "complexity": 2,
@@ -13536,7 +13536,7 @@ registerSystem("pirate-borg", {
     "genre": { "key": "dark-fantasy", "order": 3 }
   },
   "name": "Pirate Borg",
-  "publisher": "Limithron / Free League Publishing",
+  "publisher": "Limithron",
   "dice": "d20 + d6",
   "players": "2–6",
   "complexity": 1,
@@ -14510,7 +14510,7 @@ registerSystem("shadowdark", {
     "solo": { "key": "solo-compatible", "order": 7 }
   },
   "name": "Shadowdark",
-  "publisher": "Kelsey Dionne / The Arcane Library",
+  "publisher": "The Arcane Library",
   "dice": "d20 + стандарт",
   "players": "3–6",
   "complexity": 2,
@@ -14857,7 +14857,7 @@ registerSystem("slugblaster", {
     "genre": { "key": "sci-fi", "order": 20 }
   },
   "name": "Slugblaster: Kickflip Over a Quantum Centipede",
-  "publisher": "Wilkie's Candy Lab / Mythworks",
+  "publisher": "Mythworks",
   "dice": "d6 pool",
   "players": "2–4",
   "complexity": 2,
@@ -14962,7 +14962,7 @@ registerSystem("spire", {
     "genre": { "key": "narrative-weird", "order": 2 }
   },
   "name": "Spire: The City Must Fall",
-  "publisher": "Rowan, Rook & Decard",
+  "publisher": "Rowan, Rook and Decard",
   "dice": "d10",
   "players": "3–5",
   "complexity": 3,
@@ -15307,7 +15307,7 @@ registerSystem("star-wars-ffg", {
     "genre": { "key": "sci-fi", "order": 7 }
   },
   "name": "Star Wars RPG (FFG)",
-  "publisher": "Fantasy Flight Games / Edge Studio (Asmodee)",
+  "publisher": "Edge Studio",
   "dice": "Нарративные кубики (Narrative Dice System)",
   "players": "3–6",
   "complexity": 3,
@@ -15900,7 +15900,7 @@ registerSystem("stars-without-number", {
     "solo": { "key": "solo-compatible", "order": 16 }
   },
   "name": "Stars Without Number",
-  "publisher": "Sine Nomine Publishing / Kevin Crawford",
+  "publisher": "Sine Nomine Publishing",
   "dice": "d20 (combat) + 2d6 (skills)",
   "players": "3–6",
   "complexity": 3,
@@ -16053,7 +16053,7 @@ registerSystem("sword-and-wizardry", {
     "genre": { "key": "dark-fantasy", "order": 5.5 }
   },
   "name": "Swords & Wizardry",
-  "publisher": "Mythmere Games / Matt Finch",
+  "publisher": "Mythmere Games",
   "dice": "d20 + d4–d12",
   "players": "2–6",
   "complexity": 2,
@@ -16230,7 +16230,7 @@ registerSystem("symbaroum", {
     "genre": { "key": "dark-fantasy", "order": 27 }
   },
   "name": "Symbaroum",
-  "publisher": "Free League Publishing (Järnringen)",
+  "publisher": "Free League Publishing",
   "dice": "d20 roll-under",
   "players": "2–6",
   "complexity": 3,
@@ -16332,7 +16332,7 @@ registerSystem("tales-loop", {
     "genre": { "key": "adventure", "order": 7 }
   },
   "name": "Tales from the Loop",
-  "publisher": "Free League / Year Zero Engine",
+  "publisher": "Free League Publishing",
   "dice": "Пул d6",
   "players": "3–5",
   "complexity": 2,
@@ -16808,7 +16808,7 @@ registerSystem("the-black-hack", {
     "genre": { "key": "adventure", "order": 17 }
   },
   "name": "The Black Hack",
-  "publisher": "David Black / Gold Piece Publications",
+  "publisher": "Gold Piece Publications",
   "dice": "Roll-under d20 + Usage Dice",
   "players": "3–6",
   "complexity": 1,
@@ -17237,7 +17237,7 @@ registerSystem("the-wretched", {
     "solo": { "key": "solo-journaling", "order": 2 }
   },
   "name": "The Wretched",
-  "publisher": "Loot The Room / Chris Bissette",
+  "publisher": "Loot The Room",
   "dice": "d6 + playing cards + Jenga tower",
   "players": "1",
   "complexity": 1,
@@ -17602,7 +17602,7 @@ registerSystem("thousand-year-old-vampire", {
     "solo": { "key": "solo-journaling", "order": 1 }
   },
   "name": "Thousand Year Old Vampire",
-  "publisher": "Tim Hutchings / Petit Guignol",
+  "publisher": "Petit Guignol",
   "dice": "d10 − d6",
   "players": "1",
   "complexity": 1,
@@ -18103,7 +18103,7 @@ registerSystem("triangle", {
     "genre": { "key": "narrative-weird", "order": 5 }
   },
   "name": "Triangle Agency",
-  "publisher": "Haunted Table",
+  "publisher": "Haunted Table Games",
   "dice": "Пул d4",
   "players": "3–5",
   "complexity": 2,
@@ -18712,7 +18712,7 @@ registerSystem("twilight", {
     "genre": { "key": "sci-fi", "order": 8 }
   },
   "name": "Twilight: 2000",
-  "publisher": "Free League / Year Zero Engine",
+  "publisher": "Free League Publishing",
   "dice": "Пул d6–d12",
   "players": "3–5",
   "complexity": 4,
@@ -18990,7 +18990,7 @@ registerSystem("uvg", {
     "genre": { "key": "narrative-weird", "order": 4 }
   },
   "name": "Ultraviolet Grasslands",
-  "publisher": "Luka Rejec / Exalted Funeral",
+  "publisher": "Exalted Funeral",
   "dice": "Любые (OSR)",
   "players": "2–5",
   "complexity": 2,
@@ -19183,7 +19183,7 @@ registerSystem("vaesen", {
     "genre": { "key": "horror", "order": 3 }
   },
   "name": "Vaesen",
-  "publisher": "Free League / Year Zero Engine",
+  "publisher": "Free League Publishing",
   "dice": "Пул d6",
   "players": "3–5",
   "complexity": 2,
@@ -19821,7 +19821,7 @@ registerSystem("werewolf-the-apocalypse", {
     "genre": { "key": "horror", "order": 14 }
   },
   "name": "Werewolf: The Apocalypse",
-  "publisher": "Onyx Path Publishing / White Wolf",
+  "publisher": "Onyx Path Publishing",
   "dice": "d10 dice pool (Storyteller System)",
   "players": "3–5",
   "complexity": 3,
@@ -20092,7 +20092,7 @@ registerSystem("white-box-fmag", {
     "genre": { "key": "adventure", "order": 19 }
   },
   "name": "White Box: Fantastic Medieval Adventure Game",
-  "publisher": "Charlie Mason / Seattle Hill Games",
+  "publisher": "Seattle Hill Games",
   "dice": "d20 (OD&D, single saving throw)",
   "players": "3–6",
   "complexity": 1,
@@ -20222,7 +20222,7 @@ registerSystem("wildsea", {
     "genre": { "key": "narrative-weird", "order": 3 }
   },
   "name": "The Wildsea",
-  "publisher": "Mythworks / Felix Isaacs",
+  "publisher": "Mythworks",
   "dice": "Пул d6",
   "players": "3–5",
   "complexity": 3,
@@ -20427,7 +20427,7 @@ registerSystem("worlds-without-number", {
     "solo": { "key": "solo-compatible", "order": 17 }
   },
   "name": "Worlds Without Number",
-  "publisher": "Sine Nomine Publishing / Kevin Crawford",
+  "publisher": "Sine Nomine Publishing",
   "dice": "d20 (combat) + 2d6 (skills)",
   "players": "3–6",
   "complexity": 3,
@@ -20582,7 +20582,7 @@ registerSystem("wrath-and-glory", {
     "genre": { "key": "sci-fi", "order": 8.7 }
   },
   "name": "Warhammer 40,000: Wrath & Glory",
-  "publisher": "Cubicle 7 Games",
+  "publisher": "Cubicle 7",
   "dice": "d6 pool",
   "players": "3–6",
   "complexity": 3,

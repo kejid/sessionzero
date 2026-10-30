@@ -5,7 +5,7 @@ registerSystem("draw-steel", {
     "genre": { "key": "tactical", "order": 1 }
   },
   "name": "Draw Steel",
-  "publisher": "MCDM Productions / Matt Colville",
+  "publisher": "MCDM Productions",
   "dice": "2d10",
   "players": "3–5",
   "complexity": 3,

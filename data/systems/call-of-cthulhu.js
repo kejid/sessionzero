@@ -6,7 +6,7 @@ registerSystem("call-of-cthulhu", {
     "solo": { "key": "solo-compatible", "order": 5 }
   },
   "name": "Call of Cthulhu",
-  "publisher": "Chaosium Inc.",
+  "publisher": "Chaosium",
   "dice": "d100 (процентильная система)",
   "players": "2–6",
   "complexity": 3,

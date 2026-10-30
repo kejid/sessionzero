@@ -5,7 +5,7 @@ registerSystem("wrath-and-glory", {
     "genre": { "key": "sci-fi", "order": 8.7 }
   },
   "name": "Warhammer 40,000: Wrath & Glory",
-  "publisher": "Cubicle 7 Games",
+  "publisher": "Cubicle 7",
   "dice": "d6 pool",
   "players": "3–6",
   "complexity": 3,

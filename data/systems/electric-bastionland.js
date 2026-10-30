@@ -5,7 +5,7 @@ registerSystem("electric-bastionland", {
     "genre": { "key": "adventure", "order": 2 }
   },
   "name": "Electric Bastionland",
-  "publisher": "Chris McDowell / Bastionland Press",
+  "publisher": "Bastionland Press",
   "dice": "d20 + d6",
   "players": "2–5",
   "complexity": 1,

@@ -6,7 +6,7 @@ registerSystem("one-ring", {
     "solo": { "key": "solo-compatible", "order": 1 }
   },
   "name": "The One Ring",
-  "publisher": "Free League / Francesco Nepitello",
+  "publisher": "Free League Publishing",
   "dice": "d12 + d6",
   "players": "3–5",
   "complexity": 3,

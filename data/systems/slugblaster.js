@@ -5,7 +5,7 @@ registerSystem("slugblaster", {
     "genre": { "key": "sci-fi", "order": 20 }
   },
   "name": "Slugblaster: Kickflip Over a Quantum Centipede",
-  "publisher": "Wilkie's Candy Lab / Mythworks",
+  "publisher": "Mythworks",
   "dice": "d6 pool",
   "players": "2–4",
   "complexity": 2,

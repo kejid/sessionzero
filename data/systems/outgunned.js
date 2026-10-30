@@ -5,7 +5,7 @@ registerSystem("outgunned", {
     "genre": { "key": "adventure", "order": 9 }
   },
   "name": "Outgunned",
-  "publisher": "Two Little Mice / Director's Cut",
+  "publisher": "Two Little Mice",
   "dice": "Пул d6",
   "players": "3-5",
   "complexity": 2,

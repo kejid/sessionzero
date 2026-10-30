@@ -6,7 +6,7 @@ registerSystem("cairn", {
     "solo": { "key": "solo-compatible", "order": 4 }
   },
   "name": "Cairn",
-  "publisher": "Yochai Gal / NSR",
+  "publisher": "Yochai Gal",
   "dice": "d20 + d6/d8",
   "players": "2–5",
   "complexity": 1,

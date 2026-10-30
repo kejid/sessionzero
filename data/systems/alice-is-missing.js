@@ -5,7 +5,7 @@ registerSystem("alice-is-missing", {
     "genre": { "key": "noir", "order": 36 }
   },
   "name": "Alice is Missing",
-  "publisher": "Hunters Entertainment / Renegade Game Studios",
+  "publisher": "Hunters Entertainment",
   "dice": "Cards + 90-minute timer (diceless)",
   "players": "3–5",
   "complexity": 1,

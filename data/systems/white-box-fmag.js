@@ -5,7 +5,7 @@ registerSystem("white-box-fmag", {
     "genre": { "key": "adventure", "order": 19 }
   },
   "name": "White Box: Fantastic Medieval Adventure Game",
-  "publisher": "Charlie Mason / Seattle Hill Games",
+  "publisher": "Seattle Hill Games",
   "dice": "d20 (OD&D, single saving throw)",
   "players": "3–6",
   "complexity": 1,

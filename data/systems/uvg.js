@@ -5,7 +5,7 @@ registerSystem("uvg", {
     "genre": { "key": "narrative-weird", "order": 4 }
   },
   "name": "Ultraviolet Grasslands",
-  "publisher": "Luka Rejec / Exalted Funeral",
+  "publisher": "Exalted Funeral",
   "dice": "Любые (OSR)",
   "players": "2–5",
   "complexity": 2,

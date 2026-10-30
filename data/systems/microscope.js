@@ -5,7 +5,7 @@ registerSystem("microscope", {
     "genre": { "key": "narrative-weird", "order": 6 }
   },
   "name": "Microscope",
-  "publisher": "Ben Robbins / Lame Mage",
+  "publisher": "Lame Mage Productions",
   "dice": "Не нужны",
   "players": "2–5",
   "complexity": 1,

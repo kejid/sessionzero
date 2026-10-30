@@ -5,7 +5,7 @@ registerSystem("death-in-space", {
     "genre": { "key": "sci-fi", "order": 4 }
   },
   "name": "Death in Space",
-  "publisher": "Stockholm Kartell / Free League",
+  "publisher": "Free League Publishing",
   "dice": "d20",
   "players": "2–5",
   "complexity": 2,

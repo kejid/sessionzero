@@ -5,7 +5,7 @@ registerSystem("werewolf-the-apocalypse", {
     "genre": { "key": "horror", "order": 14 }
   },
   "name": "Werewolf: The Apocalypse",
-  "publisher": "Onyx Path Publishing / White Wolf",
+  "publisher": "Onyx Path Publishing",
   "dice": "d10 dice pool (Storyteller System)",
   "players": "3–5",
   "complexity": 3,

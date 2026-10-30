@@ -5,7 +5,7 @@ registerSystem("his-majesty-the-worm", {
     "genre": { "key": "narrative-weird", "order": 12 }
   },
   "name": "His Majesty the Worm",
-  "publisher": "Rise Up Comus / Exalted Funeral",
+  "publisher": "Exalted Funeral",
   "dice": "d6 dice pools + a tarot deck",
   "players": "3–5",
   "complexity": 2,

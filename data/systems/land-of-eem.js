@@ -6,7 +6,7 @@ registerSystem("land-of-eem", {
     "solo": { "key": "solo-compatible", "order": 11 }
   },
   "name": "Land of Eem",
-  "publisher": "Exalted Funeral / Ben Costa & James Parks",
+  "publisher": "Exalted Funeral",
   "dice": "1d12 + skill",
   "players": "3–5",
   "complexity": 2,

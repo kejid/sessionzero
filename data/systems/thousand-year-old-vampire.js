@@ -6,7 +6,7 @@ registerSystem("thousand-year-old-vampire", {
     "solo": { "key": "solo-journaling", "order": 1 }
   },
   "name": "Thousand Year Old Vampire",
-  "publisher": "Tim Hutchings / Petit Guignol",
+  "publisher": "Petit Guignol",
   "dice": "d10 − d6",
   "players": "1",
   "complexity": 1,

@@ -5,7 +5,7 @@ registerSystem("sword-and-wizardry", {
     "genre": { "key": "dark-fantasy", "order": 5.5 }
   },
   "name": "Swords & Wizardry",
-  "publisher": "Mythmere Games / Matt Finch",
+  "publisher": "Mythmere Games",
   "dice": "d20 + d4–d12",
   "players": "2–6",
   "complexity": 2,

@@ -5,7 +5,7 @@ registerSystem("ose", {
     "genre": { "key": "dark-fantasy", "order": 7 }
   },
   "name": "Old-School Essentials",
-  "publisher": "Necrotic Gnome / Gavin Norman",
+  "publisher": "Necrotic Gnome",
   "dice": "d20 + стандарт",
   "players": "2–6",
   "complexity": 2,

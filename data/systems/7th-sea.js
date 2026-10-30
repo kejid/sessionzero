@@ -5,7 +5,7 @@ registerSystem("7th-sea", {
     "genre": { "key": "adventure", "order": 33 }
   },
   "name": "7th Sea",
-  "publisher": "John Wick Presents / Chaosium",
+  "publisher": "Chaosium",
   "dice": "d10 pool",
   "players": "3–6",
   "complexity": 3,

@@ -6,7 +6,7 @@ registerSystem("forbidden-lands", {
     "solo": { "key": "solo-compatible", "order": 2 }
   },
   "name": "Forbidden Lands",
-  "publisher": "Free League / Year Zero Engine",
+  "publisher": "Free League Publishing",
   "dice": "Пул d6–d12",
   "players": "3–5",
   "complexity": 3,

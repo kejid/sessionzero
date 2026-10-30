@@ -6,7 +6,7 @@ registerSystem("worlds-without-number", {
     "solo": { "key": "solo-compatible", "order": 17 }
   },
   "name": "Worlds Without Number",
-  "publisher": "Sine Nomine Publishing / Kevin Crawford",
+  "publisher": "Sine Nomine Publishing",
   "dice": "d20 (combat) + 2d6 (skills)",
   "players": "3–6",
   "complexity": 3,

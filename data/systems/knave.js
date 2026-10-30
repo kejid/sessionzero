@@ -5,7 +5,7 @@ registerSystem("knave", {
     "genre": { "key": "adventure", "order": 22 }
   },
   "name": "Knave",
-  "publisher": "Questing Beast Games / Ben Milton",
+  "publisher": "Questing Beast Games",
   "dice": "d20 roll-over",
   "players": "3–6",
   "complexity": 1,

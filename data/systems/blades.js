@@ -5,7 +5,7 @@ registerSystem("blades", {
     "genre": { "key": "narrative-weird", "order": 1 }
   },
   "name": "Blades in the Dark",
-  "publisher": "John Harper / One Seven Design",
+  "publisher": "Evil Hat Productions",
   "dice": "Пул d6",
   "players": "3–5",
   "complexity": 3,

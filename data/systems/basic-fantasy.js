@@ -5,7 +5,7 @@ registerSystem("basic-fantasy", {
     "genre": { "key": "adventure", "order": 14 }
   },
   "name": "Basic Fantasy RPG",
-  "publisher": "Chris Gonnerman / Basic Fantasy RPG",
+  "publisher": "Basic Fantasy Project",
   "dice": "d20 + variable weapon damage",
   "players": "3–6",
   "complexity": 2,

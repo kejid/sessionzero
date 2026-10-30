@@ -5,7 +5,7 @@ registerSystem("mage-the-ascension", {
     "genre": { "key": "horror", "order": 9 }
   },
   "name": "Mage: The Ascension",
-  "publisher": "Onyx Path Publishing / White Wolf",
+  "publisher": "Onyx Path Publishing",
   "dice": "d10 dice pool (Storyteller System)",
   "players": "3–5",
   "complexity": 3,
