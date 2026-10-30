@@ -22,9 +22,6 @@ registerSystem("outgunned", {
       "src": "https://sessionzero.games/images/systems/outgunned-g1.jpg"
     },
     {
-      "src": "https://sessionzero.games/images/systems/outgunned-g1.jpg"
-    },
-    {
       "src": "https://sessionzero.games/images/systems/outgunned-g3.jpg"
     },
     {
@@ -104,9 +101,6 @@ registerSystem("outgunned", {
         "cap": "Погоня — арт из книги"
       },
       {
-        "cap": "Экшн-сцена"
-      },
-      {
         "cap": "Листы героев"
       },
       {
@@ -158,9 +152,6 @@ registerSystem("outgunned", {
     "gallery": [
       {
         "cap": "Car chase — book art"
-      },
-      {
-        "cap": "Action scene"
       },
       {
         "cap": "Hero sheets"

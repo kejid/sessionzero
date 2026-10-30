@@ -24,9 +24,6 @@ registerSystem("dnd-5e", {
       "src": "https://sessionzero.games/images/systems/dnd-5e-g1.jpg"
     },
     {
-      "src": "https://sessionzero.games/images/systems/dnd-5e-g2.jpg"
-    },
-    {
       "src": "https://sessionzero.games/images/systems/dnd-5e-g3.jpg"
     }
   ],
@@ -104,9 +101,6 @@ registerSystem("dnd-5e", {
         "cap": "Player's Handbook (2014)"
       },
       {
-        "cap": "Обложка — арт Тайлера Джейкобсона"
-      },
-      {
         "cap": "Альтернативная обложка (2024)"
       }
     ],
@@ -155,9 +149,6 @@ registerSystem("dnd-5e", {
     "gallery": [
       {
         "cap": "Player's Handbook (2014)"
-      },
-      {
-        "cap": "Cover art by Tyler Jacobson"
       },
       {
         "cap": "Alternate cover (2024)"

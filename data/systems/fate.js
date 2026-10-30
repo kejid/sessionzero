@@ -23,9 +23,6 @@ registerSystem("fate", {
       "src": "https://sessionzero.games/images/systems/fate-g1.jpg"
     },
     {
-      "src": "https://sessionzero.games/images/systems/fate-g2.jpg"
-    },
-    {
       "src": "https://sessionzero.games/images/heroes/fate.jpg"
     }
   ],
@@ -102,9 +99,6 @@ registerSystem("fate", {
         "cap": "Fate Core System"
       },
       {
-        "cap": "Fate Accelerated Edition"
-      },
-      {
         "cap": "Fate Condensed (2020)"
       }
     ],
@@ -152,9 +146,6 @@ registerSystem("fate", {
     "gallery": [
       {
         "cap": "Fate Core System"
-      },
-      {
-        "cap": "Fate Accelerated Edition"
       },
       {
         "cap": "Fate Condensed (2020)"

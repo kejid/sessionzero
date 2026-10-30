@@ -11,7 +11,7 @@ registerSystem("black-sword-hack", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/black-sword-hack.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/black-sword-hack.jpg?v=2",
   "playstyleTags": [
     "combat",
     "explore",

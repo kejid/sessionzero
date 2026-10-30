@@ -10,7 +10,7 @@ registerSystem("triangle", {
   "players": "3–5",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/triangle.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/triangle.jpg?v=2",
   "playstyleTags": [
     "mystery",
     "horror",

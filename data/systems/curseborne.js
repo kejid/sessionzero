@@ -12,7 +12,7 @@ registerSystem("curseborne", {
   "free": false,
   "edition": "Core Rulebook",
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/curseborne.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/curseborne.jpg?v=2",
   "playstyleTags": ["horror", "mystery", "social"],
   "settingTags": ["modern", "urban-fantasy"],
   "gallery": [

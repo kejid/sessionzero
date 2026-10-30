@@ -16,9 +16,7 @@ registerSystem("dread", {
   "playstyleTags": ["horror", "narrative", "survival"],
   "settingTags": ["modern", "weird"],
   "gallery": [
-    { "src": "https://sessionzero.games/images/systems/dread-g1.jpg" },
-    { "src": "https://sessionzero.games/images/systems/dread-g2.webp" },
-    { "src": "https://sessionzero.games/images/systems/dread-g3.jpg" }
+    { "src": "https://sessionzero.games/images/systems/dread-g1.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://www.tiltingatwindmills.net/games/", "fmt": "Web" },
@@ -57,9 +55,7 @@ registerSystem("dread", {
       { "title": "Падение — это смерть", "text": "Опрокинете башню — персонаж выбывает из игры, почти всегда погибая. Любой может и намеренно её обрушить ради гарантированного успеха, купив триумф ценой собственной жизни." }
     ],
     "gallery": [
-      { "cap": "Партия в Dread на Gen Con — башня заменяет кубики" },
-      { "cap": "Золотая премия ENnie 2006 за новаторство" },
-      { "cap": "Лаконичная обложка Dread" }
+      { "cap": "Партия в Dread на Gen Con — башня заменяет кубики" }
     ],
     "resources": [
       { "name": "Официальная страница — The Impossible Dream" },
@@ -85,9 +81,7 @@ registerSystem("dread", {
       { "title": "Collapse means death", "text": "Knock the tower over and your character is removed from play — almost always killed. Anyone can also topple it deliberately for a guaranteed success, buying triumph at the cost of their life." }
     ],
     "gallery": [
-      { "cap": "Playing Dread at Gen Con — the tower replaces the dice" },
-      { "cap": "Gold ENnie 2006 for Innovation" },
-      { "cap": "The stark Dread cover" }
+      { "cap": "Playing Dread at Gen Con — the tower replaces the dice" }
     ],
     "resources": [
       { "name": "Official page — The Impossible Dream" },

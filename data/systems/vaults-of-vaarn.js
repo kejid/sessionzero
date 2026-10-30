@@ -12,7 +12,7 @@ registerSystem("vaults-of-vaarn", {
   "edition": null,
   "free": true,
   "foundryStatus": "None",
-  "heroImage": "https://sessionzero.games/images/heroes/vaults-of-vaarn.jpg?v=2",
+  "heroImage": "https://sessionzero.games/images/heroes/vaults-of-vaarn.jpg?v=3",
   "playstyleTags": [
     "explore",
     "survival",

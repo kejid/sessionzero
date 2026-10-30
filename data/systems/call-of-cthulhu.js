@@ -11,7 +11,7 @@ registerSystem("call-of-cthulhu", {
   "players": "2–6",
   "complexity": 3,
   "foundryStatus": "Community + Official modules",
-  "heroImage": "https://sessionzero.games/images/heroes/call-of-cthulhu.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/call-of-cthulhu.jpg?v=2",
   "playstyleTags": [
     "mystery",
     "horror",

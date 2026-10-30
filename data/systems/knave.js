@@ -10,7 +10,7 @@ registerSystem("knave", {
   "players": "3–6",
   "complexity": 1,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/knave.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/knave.jpg?v=2",
   "playstyleTags": [
     "explore",
     "combat",

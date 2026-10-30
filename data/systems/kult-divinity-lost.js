@@ -11,7 +11,7 @@ registerSystem("kult-divinity-lost", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/kult-divinity-lost.webp",
+  "heroImage": "https://sessionzero.games/images/heroes/kult-divinity-lost.jpg",
   "playstyleTags": [
     "horror",
     "narrative",

@@ -460,7 +460,7 @@ registerSystem("alice-is-missing", {
   "free": false,
   "edition": null,
   "foundryStatus": "None",
-  "heroImage": "https://sessionzero.games/images/heroes/alice-is-missing.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/alice-is-missing.jpg?v=2",
   "playstyleTags": ["mystery", "narrative", "social"],
   "settingTags": ["modern"],
   "gallery": [
@@ -1449,7 +1449,7 @@ registerSystem("black-sword-hack", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/black-sword-hack.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/black-sword-hack.jpg?v=2",
   "playstyleTags": [
     "combat",
     "explore",
@@ -2345,7 +2345,7 @@ registerSystem("call-of-cthulhu", {
   "players": "2–6",
   "complexity": 3,
   "foundryStatus": "Community + Official modules",
-  "heroImage": "https://sessionzero.games/images/heroes/call-of-cthulhu.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/call-of-cthulhu.jpg?v=2",
   "playstyleTags": [
     "mystery",
     "horror",
@@ -3322,7 +3322,7 @@ registerSystem("curseborne", {
   "free": false,
   "edition": "Core Rulebook",
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/curseborne.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/curseborne.jpg?v=2",
   "playstyleTags": ["horror", "mystery", "social"],
   "settingTags": ["modern", "urban-fantasy"],
   "gallery": [
@@ -4414,9 +4414,6 @@ registerSystem("dnd-5e", {
       "src": "https://sessionzero.games/images/systems/dnd-5e-g1.jpg"
     },
     {
-      "src": "https://sessionzero.games/images/systems/dnd-5e-g2.jpg"
-    },
-    {
       "src": "https://sessionzero.games/images/systems/dnd-5e-g3.jpg"
     }
   ],
@@ -4494,9 +4491,6 @@ registerSystem("dnd-5e", {
         "cap": "Player's Handbook (2014)"
       },
       {
-        "cap": "Обложка — арт Тайлера Джейкобсона"
-      },
-      {
         "cap": "Альтернативная обложка (2024)"
       }
     ],
@@ -4545,9 +4539,6 @@ registerSystem("dnd-5e", {
     "gallery": [
       {
         "cap": "Player's Handbook (2014)"
-      },
-      {
-        "cap": "Cover art by Tyler Jacobson"
       },
       {
         "cap": "Alternate cover (2024)"
@@ -5099,9 +5090,7 @@ registerSystem("dread", {
   "playstyleTags": ["horror", "narrative", "survival"],
   "settingTags": ["modern", "weird"],
   "gallery": [
-    { "src": "https://sessionzero.games/images/systems/dread-g1.jpg" },
-    { "src": "https://sessionzero.games/images/systems/dread-g2.webp" },
-    { "src": "https://sessionzero.games/images/systems/dread-g3.jpg" }
+    { "src": "https://sessionzero.games/images/systems/dread-g1.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://www.tiltingatwindmills.net/games/", "fmt": "Web" },
@@ -5140,9 +5129,7 @@ registerSystem("dread", {
       { "title": "Падение — это смерть", "text": "Опрокинете башню — персонаж выбывает из игры, почти всегда погибая. Любой может и намеренно её обрушить ради гарантированного успеха, купив триумф ценой собственной жизни." }
     ],
     "gallery": [
-      { "cap": "Партия в Dread на Gen Con — башня заменяет кубики" },
-      { "cap": "Золотая премия ENnie 2006 за новаторство" },
-      { "cap": "Лаконичная обложка Dread" }
+      { "cap": "Партия в Dread на Gen Con — башня заменяет кубики" }
     ],
     "resources": [
       { "name": "Официальная страница — The Impossible Dream" },
@@ -5168,9 +5155,7 @@ registerSystem("dread", {
       { "title": "Collapse means death", "text": "Knock the tower over and your character is removed from play — almost always killed. Anyone can also topple it deliberately for a guaranteed success, buying triumph at the cost of their life." }
     ],
     "gallery": [
-      { "cap": "Playing Dread at Gen Con — the tower replaces the dice" },
-      { "cap": "Gold ENnie 2006 for Innovation" },
-      { "cap": "The stark Dread cover" }
+      { "cap": "Playing Dread at Gen Con — the tower replaces the dice" }
     ],
     "resources": [
       { "name": "Official page — The Impossible Dream" },
@@ -5649,9 +5634,6 @@ registerSystem("dungeon-world", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://www.rpg.net/pictures/cache/picthumb26348-medium.jpg"
-    },
-    {
       "src": "https://sessionzero.games/images/systems/dungeon-world-g2.jpg"
     },
     {
@@ -5729,9 +5711,6 @@ registerSystem("dungeon-world", {
     ],
     "gallery": [
       {
-        "cap": "Обложка (Burning Wheel)"
-      },
-      {
         "cap": "Рейнджер-шейпифтер — арт из сообщества"
       },
       {
@@ -5781,9 +5760,6 @@ registerSystem("dungeon-world", {
       }
     ],
     "gallery": [
-      {
-        "cap": "Cover (Burning Wheel)"
-      },
       {
         "cap": "Shifter Ranger — community art"
       },
@@ -6359,9 +6335,6 @@ registerSystem("fate", {
       "src": "https://sessionzero.games/images/systems/fate-g1.jpg"
     },
     {
-      "src": "https://sessionzero.games/images/systems/fate-g2.jpg"
-    },
-    {
       "src": "https://sessionzero.games/images/heroes/fate.jpg"
     }
   ],
@@ -6438,9 +6411,6 @@ registerSystem("fate", {
         "cap": "Fate Core System"
       },
       {
-        "cap": "Fate Accelerated Edition"
-      },
-      {
         "cap": "Fate Condensed (2020)"
       }
     ],
@@ -6488,9 +6458,6 @@ registerSystem("fate", {
     "gallery": [
       {
         "cap": "Fate Core System"
-      },
-      {
-        "cap": "Fate Accelerated Edition"
       },
       {
         "cap": "Fate Condensed (2020)"
@@ -6704,7 +6671,7 @@ registerSystem("fist", {
   "players": "2–5",
   "complexity": 1,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/fist.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/fist.jpg?v=2",
   "playstyleTags": [
     "action",
     "survival",
@@ -8510,7 +8477,7 @@ registerSystem("knave", {
   "players": "3–6",
   "complexity": 1,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/knave.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/knave.jpg?v=2",
   "playstyleTags": [
     "explore",
     "combat",
@@ -8815,7 +8782,7 @@ registerSystem("kult-divinity-lost", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/kult-divinity-lost.webp",
+  "heroImage": "https://sessionzero.games/images/heroes/kult-divinity-lost.jpg",
   "playstyleTags": [
     "horror",
     "narrative",
@@ -10711,9 +10678,6 @@ registerSystem("microscope", {
     },
     {
       "src": "https://sessionzero.games/images/systems/microscope-g2.jpg"
-    },
-    {
-      "src": "https://sessionzero.games/images/systems/microscope-g3.jpg"
     }
   ],
   "resources": [
@@ -10780,9 +10744,6 @@ registerSystem("microscope", {
       },
       {
         "cap": "Страница правил"
-      },
-      {
-        "cap": "Пример игры"
       }
     ],
     "resources": [
@@ -10827,9 +10788,6 @@ registerSystem("microscope", {
       },
       {
         "cap": "Rules page"
-      },
-      {
-        "cap": "Play example"
       }
     ],
     "resources": [
@@ -12919,9 +12877,6 @@ registerSystem("outgunned", {
       "src": "https://sessionzero.games/images/systems/outgunned-g1.jpg"
     },
     {
-      "src": "https://sessionzero.games/images/systems/outgunned-g1.jpg"
-    },
-    {
       "src": "https://sessionzero.games/images/systems/outgunned-g3.jpg"
     },
     {
@@ -13001,9 +12956,6 @@ registerSystem("outgunned", {
         "cap": "Погоня — арт из книги"
       },
       {
-        "cap": "Экшн-сцена"
-      },
-      {
         "cap": "Листы героев"
       },
       {
@@ -13055,9 +13007,6 @@ registerSystem("outgunned", {
     "gallery": [
       {
         "cap": "Car chase — book art"
-      },
-      {
-        "cap": "Action scene"
       },
       {
         "cap": "Hero sheets"
@@ -18108,7 +18057,7 @@ registerSystem("triangle", {
   "players": "3–5",
   "complexity": 2,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/triangle.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/triangle.jpg?v=2",
   "playstyleTags": [
     "mystery",
     "horror",
@@ -19007,9 +18956,6 @@ registerSystem("uvg", {
       "src": "https://sessionzero.games/images/systems/uvg-g1.jpg"
     },
     {
-      "src": "https://sessionzero.games/images/systems/uvg-g1.jpg"
-    },
-    {
       "src": "https://sessionzero.games/images/systems/uvg-g2.jpg"
     },
     {
@@ -19092,9 +19038,6 @@ registerSystem("uvg", {
         "cap": "Kickstarter арт"
       },
       {
-        "cap": "Психоделический пейзаж"
-      },
-      {
         "cap": "Караван"
       },
       {
@@ -19149,9 +19092,6 @@ registerSystem("uvg", {
     "gallery": [
       {
         "cap": "Kickstarter art"
-      },
-      {
-        "cap": "Psychedelic landscape"
       },
       {
         "cap": "Caravan"
@@ -19520,7 +19460,7 @@ registerSystem("vaults-of-vaarn", {
   "edition": null,
   "free": true,
   "foundryStatus": "None",
-  "heroImage": "https://sessionzero.games/images/heroes/vaults-of-vaarn.jpg?v=2",
+  "heroImage": "https://sessionzero.games/images/heroes/vaults-of-vaarn.jpg?v=3",
   "playstyleTags": [
     "explore",
     "survival",
@@ -19826,7 +19766,7 @@ registerSystem("werewolf-the-apocalypse", {
   "players": "3–5",
   "complexity": 3,
   "free": false,
-  "edition": null,
+  "edition": "W20",
   "foundryStatus": "Community",
   "heroImage": "https://sessionzero.games/images/heroes/werewolf-the-apocalypse.jpg?v=2",
   "playstyleTags": ["combat", "narrative", "horror"],

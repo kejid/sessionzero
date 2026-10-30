@@ -23,9 +23,6 @@ registerSystem("microscope", {
     },
     {
       "src": "https://sessionzero.games/images/systems/microscope-g2.jpg"
-    },
-    {
-      "src": "https://sessionzero.games/images/systems/microscope-g3.jpg"
     }
   ],
   "resources": [
@@ -92,9 +89,6 @@ registerSystem("microscope", {
       },
       {
         "cap": "Страница правил"
-      },
-      {
-        "cap": "Пример игры"
       }
     ],
     "resources": [
@@ -139,9 +133,6 @@ registerSystem("microscope", {
       },
       {
         "cap": "Rules page"
-      },
-      {
-        "cap": "Play example"
       }
     ],
     "resources": [

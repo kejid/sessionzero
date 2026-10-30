@@ -10,7 +10,7 @@ registerSystem("werewolf-the-apocalypse", {
   "players": "3–5",
   "complexity": 3,
   "free": false,
-  "edition": null,
+  "edition": "W20",
   "foundryStatus": "Community",
   "heroImage": "https://sessionzero.games/images/heroes/werewolf-the-apocalypse.jpg?v=2",
   "playstyleTags": ["combat", "narrative", "horror"],

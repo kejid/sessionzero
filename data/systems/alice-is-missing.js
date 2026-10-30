@@ -12,7 +12,7 @@ registerSystem("alice-is-missing", {
   "free": false,
   "edition": null,
   "foundryStatus": "None",
-  "heroImage": "https://sessionzero.games/images/heroes/alice-is-missing.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/alice-is-missing.jpg?v=2",
   "playstyleTags": ["mystery", "narrative", "social"],
   "settingTags": ["modern"],
   "gallery": [

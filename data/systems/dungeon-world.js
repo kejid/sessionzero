@@ -20,9 +20,6 @@ registerSystem("dungeon-world", {
   "settingTags": ["fantasy"],
   "gallery": [
     {
-      "src": "https://www.rpg.net/pictures/cache/picthumb26348-medium.jpg"
-    },
-    {
       "src": "https://sessionzero.games/images/systems/dungeon-world-g2.jpg"
     },
     {
@@ -100,9 +97,6 @@ registerSystem("dungeon-world", {
     ],
     "gallery": [
       {
-        "cap": "Обложка (Burning Wheel)"
-      },
-      {
         "cap": "Рейнджер-шейпифтер — арт из сообщества"
       },
       {
@@ -152,9 +146,6 @@ registerSystem("dungeon-world", {
       }
     ],
     "gallery": [
-      {
-        "cap": "Cover (Burning Wheel)"
-      },
       {
         "cap": "Shifter Ranger — community art"
       },

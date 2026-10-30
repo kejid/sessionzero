@@ -22,9 +22,6 @@ registerSystem("uvg", {
       "src": "https://sessionzero.games/images/systems/uvg-g1.jpg"
     },
     {
-      "src": "https://sessionzero.games/images/systems/uvg-g1.jpg"
-    },
-    {
       "src": "https://sessionzero.games/images/systems/uvg-g2.jpg"
     },
     {
@@ -107,9 +104,6 @@ registerSystem("uvg", {
         "cap": "Kickstarter арт"
       },
       {
-        "cap": "Психоделический пейзаж"
-      },
-      {
         "cap": "Караван"
       },
       {
@@ -164,9 +158,6 @@ registerSystem("uvg", {
     "gallery": [
       {
         "cap": "Kickstarter art"
-      },
-      {
-        "cap": "Psychedelic landscape"
       },
       {
         "cap": "Caravan"
