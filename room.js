@@ -25,6 +25,33 @@ const SZ_STR = {
     opt_expected_hint: 'Optional. Everyone sees how many votes are still missing.',
     opt_veto: 'Allow vetoes',
     opt_veto_hint: 'One veto takes a game out of the running.',
+    tables_open: 'Split into tables',
+    tables_title: 'Tables',
+    tables_hide: 'Hide',
+    tables_count: 'Tables',
+    tables_seats: 'Seats per table, GM included',
+    tables_waiting: 'Still waiting for {n} vote(s), so this may change.',
+    tables_need_gms: 'GMs marked: {n}, tables: {t}. Every table needs a GM: ask them to tick “I\'m the GM” in their vote.',
+    tables_need_games: 'Fewer games have votes than there are tables.',
+    tables_gm_against: 'No way to give every table a GM who isn\'t against its game. Try fewer tables.',
+    tables_people: 'People: {n}',
+    tables_out: 'Not seated',
+    tables_move_here: 'Move here',
+    tables_summary: 'Seated {n} of {all}, {up} on a game they voted for.',
+    tables_edit_hint: 'Tap a name to move that player.',
+    tables_next: 'Another option ({i} of {n})',
+    tables_copy: 'Copy line-up',
+    tables_copied: 'Line-up copied',
+    tables_pin: 'Pin line-up',
+    tables_your: 'Your table: {game}, GM {gm}',
+    tables_your_gm: 'You run: {game}',
+    tables_your_out: 'No table for you yet',
+    tables_pinned_by: 'Pinned by {name}',
+    tables_edit: 'Edit',
+    tables_unpin: 'Unpin',
+    tables_unpin_q: 'Unpin this line-up? Players will stop seeing it.',
+    img_tables: 'Tables',
+    img_gm: 'GM',
     create_btn: 'Create link',
     create_cancel: 'Cancel',
     create_none: 'Your shortlist is empty — tap + on games in the catalog first.',
@@ -144,6 +171,33 @@ const SZ_STR = {
     opt_expected_hint: 'Необязательно. Все увидят, сколько голосов ещё ждём.',
     opt_veto: 'Разрешить вето',
     opt_veto_hint: 'Одно вето убирает игру из выбора.',
+    tables_open: 'Разбить на столы',
+    tables_title: 'Столы',
+    tables_hide: 'Скрыть',
+    tables_count: 'Столов',
+    tables_seats: 'Мест за столом, вместе с мастером',
+    tables_waiting: 'Ещё ждём голосов: {n}. Состав может измениться.',
+    tables_need_gms: 'Отмечено мастеров: {n}, столов: {t}. Каждому столу нужен мастер: попроси их поставить «Я мастер» в своём голосе.',
+    tables_need_games: 'Игр с голосами меньше, чем столов.',
+    tables_gm_against: 'Не получается дать каждому столу мастера, который не против этой игры. Попробуй меньше столов.',
+    tables_people: 'Человек: {n}',
+    tables_out: 'Не вошли',
+    tables_move_here: 'Пересадить сюда',
+    tables_summary: 'За столами {n} из {all}, на игре, за которую голосовали: {up}.',
+    tables_edit_hint: 'Нажми на имя, чтобы пересадить игрока.',
+    tables_next: 'Другой вариант ({i} из {n})',
+    tables_copy: 'Скопировать состав',
+    tables_copied: 'Состав скопирован',
+    tables_pin: 'Закрепить состав',
+    tables_your: 'Твой стол: {game}, мастер {gm}',
+    tables_your_gm: 'Ты ведёшь: {game}',
+    tables_your_out: 'Тебя пока нет за столом',
+    tables_pinned_by: 'Кто закрепил: {name}',
+    tables_edit: 'Изменить',
+    tables_unpin: 'Снять',
+    tables_unpin_q: 'Снять закреплённый состав? Игроки перестанут его видеть.',
+    img_tables: 'Столы',
+    img_gm: 'Мастер',
     create_btn: 'Создать ссылку',
     create_cancel: 'Отмена',
     create_none: 'Шортлист пуст — сначала нажми + на играх в каталоге.',
@@ -910,11 +964,368 @@ function szRenderTally() {
         ${mode === 'copy' ? `<button class="sz-btn sz-ghost sz-btn-sm sz-share-dl" onclick="szShareResultsImage(this, 'download')" title="${szEsc(szT('save_image'))}" aria-label="${szEsc(szT('save_image'))}"><i data-lucide="download"></i></button>` : ''}
       </div>` : ''}
     </div>
+    ${szSeatingHTML()}
     ${ranked.length ? '' : `<p class="sz-empty">${szEsc(szT('no_votes_yet'))}</p>`}
     ${rows ? `<ol class="sz-tally-list">${rows}</ol>` : ''}
     ${outRows ? `<h3 class="sz-tally-subtitle"><i data-lucide="ban"></i>${szEsc(szT('vetoed_title'))}</h3>
-      <ul class="sz-tally-list sz-tally-out">${outRows}</ul>` : ''}`;
+      <ul class="sz-tally-list sz-tally-out">${outRows}</ul>` : ''}
+    ${szTablesHTML()}`;
   if (typeof refreshIcons === 'function') refreshIcons();
+}
+
+// ============================ split the pool into tables ============================
+// Everyone has voted; now seat them. One game and one GM per table. Nobody is
+// seated at a game they marked "against": they stay out and the organizer decides.
+const SZ_SEAT_UP = 3, SZ_SEAT_NEUTRAL = 1, SZ_SEAT_OUT = -3, SZ_SHORT_TABLE = -4;
+const SZ_MIN_AT_TABLE = 3;
+const SZ_MAX_CANDIDATES = 10;  // keeps the combinations small enough to try them all
+
+function szSeatPoints(b, game) {
+  if (b.up.includes(game)) return SZ_SEAT_UP;
+  if ((b.down || []).includes(game) || b.veto.includes(game)) return null;
+  return SZ_SEAT_NEUTRAL;
+}
+
+// Give every game a GM who isn't against it, each GM once. Backtracks, so it
+// only fails when no such assignment exists.
+function szAssignGms(games, gms) {
+  const order = games.slice().sort((x, y) =>
+    gms.filter(g => szSeatPoints(g, x) !== null).length - gms.filter(g => szSeatPoints(g, y) !== null).length);
+  const picked = new Map();
+  const go = i => {
+    if (i === order.length) return true;
+    const able = gms.filter(g => ![...picked.values()].includes(g) && szSeatPoints(g, order[i]) !== null)
+      .sort((x, y) => szSeatPoints(y, order[i]) - szSeatPoints(x, order[i]));
+    for (const g of able) {
+      picked.set(order[i], g);
+      if (go(i + 1)) return true;
+      picked.delete(order[i]);
+    }
+    return false;
+  };
+  return go(0) ? picked : null;
+}
+
+function szSeatPlayers(games, picked, ballots, maxSeats) {
+  const tables = games.map(game => ({ game, gm: picked.get(game), players: [] }));
+  const gmsTaken = [...picked.values()];
+  const options = b => tables.filter(t => szSeatPoints(b, t.game) !== null);
+  // Hardest to place first: whoever has the fewest games they'd accept
+  const rest = ballots.filter(b => !gmsTaken.includes(b)).sort((x, y) => options(x).length - options(y).length);
+  const out = [];
+  for (const b of rest) {
+    const free = options(b).filter(t => t.players.length + 1 < maxSeats)
+      .sort((x, y) => szSeatPoints(b, y.game) - szSeatPoints(b, x.game) || x.players.length - y.players.length);
+    if (free.length) free[0].players.push(b); else out.push(b);
+  }
+  // Someone left out may fit if a seated player can move to a table with room
+  for (const b of out.slice()) {
+    for (const t of options(b)) {
+      const mover = t.players.find(p => options(p).some(u => u !== t && u.players.length + 1 < maxSeats));
+      if (!mover) continue;
+      const to = options(mover).find(u => u !== t && u.players.length + 1 < maxSeats);
+      t.players.splice(t.players.indexOf(mover), 1, b);
+      to.players.push(mover);
+      out.splice(out.indexOf(b), 1);
+      break;
+    }
+  }
+  // Swap pairs while it gets someone closer to a game they wanted
+  for (let changed = true, rounds = 0; changed && rounds < 5; rounds++) {
+    changed = false;
+    for (const t of tables) for (const u of tables) {
+      if (t === u) continue;
+      for (const p of t.players.slice()) for (const q of u.players.slice()) {
+        const pu = szSeatPoints(p, u.game), qt = szSeatPoints(q, t.game);
+        if (pu === null || qt === null) continue;
+        if (pu + qt <= szSeatPoints(p, t.game) + szSeatPoints(q, u.game)) continue;
+        t.players[t.players.indexOf(p)] = q;
+        u.players[u.players.indexOf(q)] = p;
+        changed = true;
+        break;
+      }
+    }
+  }
+  return { tables, out };
+}
+
+// games: ranked ids with no veto on them. Returns up to three seatings, best
+// first, or { error } when no seating can exist.
+function szBuildTables(ballots, games, count, maxSeats) {
+  const gms = ballots.filter(b => b.gm);
+  if (gms.length < count) return { error: 'gms', gms: gms.length };
+  const pool = games.slice(0, SZ_MAX_CANDIDATES);
+  if (pool.length < count) return { error: 'games' };
+  const combos = [];
+  const pick = (from, chosen) => {
+    if (chosen.length === count) { combos.push(chosen); return; }
+    for (let i = from; i < pool.length; i++) pick(i + 1, chosen.concat(pool[i]));
+  };
+  pick(0, []);
+  const seatings = [];
+  for (const combo of combos) {
+    const picked = szAssignGms(combo, gms);
+    if (!picked) continue;
+    const { tables, out } = szSeatPlayers(combo, picked, ballots, maxSeats);
+    let score = out.length * SZ_SEAT_OUT;
+    for (const t of tables) {
+      for (const p of t.players) score += szSeatPoints(p, t.game);
+      score += szSeatPoints(t.gm, t.game);
+      if (t.players.length + 1 < SZ_MIN_AT_TABLE) score += SZ_SHORT_TABLE;
+    }
+    seatings.push({
+      score,
+      tables: tables.map(t => ({ game: t.game, gm: t.gm.voter, players: t.players.map(p => p.voter) })),
+      out: out.map(p => p.voter),
+    });
+  }
+  if (!seatings.length) return { error: 'gm_against' };
+  // Stable sort: on a tie the combination of higher-ranked games stays first
+  return { options: seatings.sort((x, y) => y.score - x.score).slice(0, 3) };
+}
+
+let szTables = { open: false, count: 2, seats: 5, option: 0, key: '', built: null, picked: null, edited: false };
+
+function szTablesBuilt() {
+  const key = JSON.stringify([szData.ballots, szTables.count, szTables.seats]);
+  // Hand-made changes survive other people's new votes; they join as unseated
+  if (key !== szTables.key && !szTables.edited) {
+    szTables.key = key;
+    szTables.option = 0;
+    szTables.picked = null;
+    const games = szRank().active.map(r => r.id);
+    szTables.built = szBuildTables(szData.ballots, games, szTables.count, szTables.seats);
+  }
+  return szTables.built;
+}
+
+function szTablesToggle() {
+  szTables.open = !szTables.open;
+  if (!szTables.open) { szTables.edited = false; szTables.key = ''; }
+  szRenderTally();
+}
+
+function szTablesSet(field, value) {
+  const limits = { count: [2, 6], seats: [2, 12] }[field];
+  const n = parseInt(value, 10);
+  if (n) szTables[field] = Math.min(limits[1], Math.max(limits[0], n));
+  szTables.edited = false;
+  szRenderTally();
+}
+
+function szTablesNext() {
+  const built = szTablesBuilt();
+  szTables.option = (szTables.option + 1) % built.options.length;
+  szTables.picked = null;
+  szRenderTally();
+}
+
+function szTablesPick(voter) {
+  szTables.picked = szTables.picked === voter ? null : voter;
+  szRenderTally();
+}
+
+// Seat the picked player at table i, or out of the seating when i is -1.
+function szTablesMove(i) {
+  const opt = szTablesBuilt().options[szTables.option];
+  const voter = szTables.picked;
+  opt.out = opt.out.filter(v => v !== voter);
+  opt.tables.forEach(t => { t.players = t.players.filter(v => v !== voter); });
+  (i < 0 ? opt.out : opt.tables[i].players).push(voter);
+  szTables.edited = true;
+  szTables.picked = null;
+  szRenderTally();
+}
+
+// People who voted after this seating was made have no place in it yet.
+function szUnseated(opt) {
+  const placed = new Set(opt.tables.flatMap(t => [t.gm, ...t.players]));
+  return szData.ballots.map(b => b.voter).filter(v => !placed.has(v));
+}
+
+function szSeatingText(opt) {
+  const lines = opt.tables.map(t => {
+    const r = szResolve(t.game);
+    return `${r ? r.name : t.game}: ${t.gm} (${szT('gm_short')})${t.players.map(p => ', ' + p).join('')}`;
+  });
+  const out = szUnseated(opt);
+  if (out.length) lines.push(`${szT('tables_out')}: ${out.join(', ')}`);
+  return lines.join('\n');
+}
+
+function szTablesCopy() {
+  const opt = szTables.open ? szTablesBuilt().options[szTables.option] : szData.seating;
+  const text = szSeatingText(opt);
+  const done = () => { if (typeof showToast === 'function') showToast(szT('tables_copied')); };
+  if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, () => prompt(szT('copy'), text));
+  else prompt(szT('copy'), text);
+}
+
+async function szTablesSend(seating) {
+  const by = szVoterName();
+  if (!by) {
+    if (typeof showToast === 'function') showToast(szT('name_first'));
+    szSetTab('vote');
+    return;
+  }
+  try {
+    await szApi('/room/' + encodeURIComponent(szRoomId) + '/seating', { method: 'PUT', body: JSON.stringify({ by, seating }) });
+    await szLoadRoom();
+    szTables.open = false;
+    szTables.edited = false;
+    szTables.key = '';
+    szTables.picked = null;
+    szRenderTally();
+  } catch (e) {
+    if (typeof showToast === 'function') showToast(szT('load_error'));
+  }
+}
+
+function szTablesPin() {
+  const opt = szTablesBuilt().options[szTables.option];
+  return szTablesSend({ tables: opt.tables, out: szUnseated(opt) });
+}
+
+function szTablesUnpin() {
+  if (confirm(szT('tables_unpin_q'))) szTablesSend(null);
+}
+
+// Reopen the panel on the pinned line-up, so editing starts from what people see.
+function szTablesEdit() {
+  const { tables, out } = szData.seating;
+  szTables.open = true;
+  szTables.count = tables.length;
+  szTables.built = { options: [JSON.parse(JSON.stringify({ tables, out }))] };
+  szTables.option = 0;
+  szTables.edited = true;
+  szTables.picked = null;
+  szRenderTally();
+  const panel = document.querySelector('.sz-tables');
+  if (panel) panel.scrollIntoView({ block: 'center' });
+}
+
+function szSeatChip(voter, game) {
+  const b = szData.ballots.find(x => x.voter === voter);
+  const pts = b && game ? szSeatPoints(b, game) : SZ_SEAT_NEUTRAL;
+  return pts === SZ_SEAT_UP ? 'sz-chip-up' : pts === null ? 'sz-chip-down' : 'sz-chip-plain';
+}
+
+// The pinned line-up, shown to everyone above the ranking.
+function szSeatingHTML() {
+  const s = szData.seating;
+  if (!s || szTables.open) return '';
+  const me = szVoterName();
+  const name = id => { const r = szResolve(id); return r ? r.name : id; };
+  const mine = s.tables.find(t => t.gm === me || t.players.includes(me));
+  const out = szUnseated(s);
+  const yours = !me || !szData.ballots.some(b => b.voter === me) ? ''
+    : !mine ? szT('tables_your_out')
+    : mine.gm === me ? szT('tables_your_gm', { game: name(mine.game) })
+    : szT('tables_your', { game: name(mine.game), gm: mine.gm });
+  const cards = s.tables.map(t => `
+    <div class="sz-table${t === mine ? ' sz-table-mine' : ''}">
+      <div class="sz-table-head">
+        <span class="sz-tally-name">${szEsc(name(t.game))}</span>
+        <span class="sz-table-n">${szEsc(szT('tables_people', { n: t.players.length + 1 }))}</span>
+      </div>
+      <div class="sz-tally-chips">
+        <span class="sz-chip sz-chip-up sz-chip-gm"><i data-lucide="dices"></i>${szEsc(t.gm)} · ${szEsc(szT('gm_short'))}</span>
+        ${t.players.map(v => `<span class="sz-chip ${szSeatChip(v, t.game)}">${szEsc(v)}</span>`).join('')}
+      </div>
+    </div>`).join('');
+  return `
+    <section class="sz-seating">
+      <h3 class="sz-tables-title">${szEsc(szT('tables_title'))}</h3>
+      ${yours ? `<p class="sz-your-table">${szEsc(yours)}</p>` : ''}
+      <div class="sz-tables-grid">${cards}</div>
+      ${out.length ? `
+        <div class="sz-tables-out">
+          <span class="sz-table-n">${szEsc(szT('tables_out'))}</span>
+          <div class="sz-tally-chips">${out.map(v => `<span class="sz-chip sz-chip-plain">${szEsc(v)}</span>`).join('')}</div>
+        </div>` : ''}
+      <div class="sz-tables-actions sz-seating-actions">
+        <button class="sz-btn sz-ghost sz-btn-sm" onclick="szTablesCopy()"><i data-lucide="copy"></i>${szEsc(szT('tables_copy'))}</button>
+        <button class="sz-btn sz-ghost sz-btn-sm" onclick="szTablesEdit()"><i data-lucide="pencil"></i>${szEsc(szT('tables_edit'))}</button>
+        <button class="sz-btn sz-ghost sz-btn-sm" onclick="szTablesUnpin()">${szEsc(szT('tables_unpin'))}</button>
+        <span class="sz-table-n sz-pinned-by">${szEsc(szT('tables_pinned_by', { name: s.by }))}</span>
+      </div>
+    </section>`;
+}
+
+function szTablesHTML() {
+  if (szData.ballots.length < SZ_MIN_AT_TABLE) return '';
+  if (!szTables.open) {
+    if (szData.seating) return '';
+    return `<button class="sz-btn sz-ghost sz-tables-open" onclick="szTablesToggle()"><i data-lucide="users"></i> ${szEsc(szT('tables_open'))}</button>`;
+  }
+  const built = szTablesBuilt();
+  const byName = {};
+  szData.ballots.forEach(b => { byName[b.voter] = b; });
+  const chipFor = (voter, game) => {
+    return `<button type="button" class="sz-chip ${szSeatChip(voter, game)} sz-seat${szTables.picked === voter ? ' sz-seat-picked' : ''}" data-v="${szEsc(voter)}" onclick="szTablesPick(this.dataset.v)">${szEsc(voter)}</button>`;
+  };
+  const moveBtn = i => szTables.picked
+    ? `<button type="button" class="sz-link-btn sz-seat-here" onclick="szTablesMove(${i})">${szEsc(szT('tables_move_here'))}</button>` : '';
+
+  let body;
+  if (built.error) {
+    const msg = built.error === 'gms' ? szT('tables_need_gms', { n: built.gms, t: szTables.count })
+      : built.error === 'games' ? szT('tables_need_games') : szT('tables_gm_against');
+    body = `<p class="sz-warn">${szEsc(msg)}</p>`;
+  } else {
+    const opt = built.options[szTables.option];
+    const seated = opt.tables.reduce((n, t) => n + t.players.length + 1, 0);
+    const wanted = opt.tables.reduce((n, t) => n
+      + [t.gm, ...t.players].filter(v => szSeatPoints(byName[v], t.game) === SZ_SEAT_UP).length, 0);
+    const cards = opt.tables.map((t, i) => {
+      const r = szResolve(t.game);
+      const here = t.players.includes(szTables.picked);
+      return `
+        <div class="sz-table">
+          <div class="sz-table-head">
+            <span class="sz-tally-name">${szEsc(r ? r.name : t.game)}</span>
+            <span class="sz-table-n">${szEsc(szT('tables_people', { n: t.players.length + 1 }))}</span>
+          </div>
+          <div class="sz-tally-chips">
+            <span class="sz-chip sz-chip-up sz-chip-gm"><i data-lucide="dices"></i>${szEsc(t.gm)} · ${szEsc(szT('gm_short'))}</span>
+            ${t.players.map(v => chipFor(v, t.game)).join('')}
+          </div>
+          ${here ? '' : moveBtn(i)}
+        </div>`;
+    }).join('');
+    const unseated = szUnseated(opt);
+    const pickedOut = unseated.includes(szTables.picked);
+    body = `
+      <div class="sz-tables-grid">${cards}</div>
+      ${unseated.length || szTables.picked ? `
+        <div class="sz-tables-out">
+          <span class="sz-table-n">${szEsc(szT('tables_out'))}</span>
+          <div class="sz-tally-chips">${unseated.map(v => chipFor(v, null)).join('')}</div>
+          ${pickedOut ? '' : moveBtn(-1)}
+        </div>` : ''}
+      <p class="sz-hint sz-tables-sum">${szEsc(szT('tables_summary', { n: seated, all: szData.ballots.length, up: wanted }))} ${szEsc(szT('tables_edit_hint'))}</p>
+      <div class="sz-tables-actions">
+        <button class="sz-btn sz-save sz-btn-sm" onclick="szTablesPin()"><i data-lucide="pin"></i>${szEsc(szT('tables_pin'))}</button>
+        ${built.options.length > 1 ? `<button class="sz-btn sz-ghost sz-btn-sm" onclick="szTablesNext()"><i data-lucide="refresh-cw"></i>${szEsc(szT('tables_next', { i: szTables.option + 1, n: built.options.length }))}</button>` : ''}
+        <button class="sz-btn sz-ghost sz-btn-sm" onclick="szTablesCopy()"><i data-lucide="copy"></i>${szEsc(szT('tables_copy'))}</button>
+      </div>`;
+  }
+  const missing = (szData.expected || 0) - szData.ballots.length;
+  return `
+    <section class="sz-tables">
+      <div class="sz-tables-head">
+        <h3 class="sz-tables-title">${szEsc(szT('tables_title'))}</h3>
+        <button type="button" class="sz-link-btn" onclick="szTablesToggle()">${szEsc(szT('tables_hide'))}</button>
+      </div>
+      <div class="sz-tables-controls">
+        <label class="sz-opt"><span>${szEsc(szT('tables_count'))}</span>
+          <input class="sz-name-input sz-opt-count" type="number" min="2" max="6" inputmode="numeric" value="${szTables.count}" onchange="szTablesSet('count', this.value)"></label>
+        <label class="sz-opt"><span>${szEsc(szT('tables_seats'))}</span>
+          <input class="sz-name-input sz-opt-count" type="number" min="2" max="12" inputmode="numeric" value="${szTables.seats}" onchange="szTablesSet('seats', this.value)"></label>
+      </div>
+      ${missing > 0 ? `<p class="sz-hint sz-tables-wait">${szEsc(szT('tables_waiting', { n: missing }))}</p>` : ''}
+      ${body}
+    </section>`;
 }
 
 // ============================ results as an image ============================
@@ -964,10 +1375,51 @@ function szDrawCrown(ctx, x, base, color) {
   ctx.lineTo(x + 29, base - 12); ctx.lineTo(x + 40, base - 26); ctx.lineTo(x + 40, base); ctx.closePath(); ctx.fill();
 }
 
+const SZ_IMG = {
+  W: 1080, H: 1350, P: 72,
+  C: { bg: '#050505', card: '#121419', border: '#2a2d35', text: '#f1f5f9', dim: '#94a3b8',
+       accent: '#38bdf8', green: '#4ade80', red: '#f87171', gold: '#facc15', purple: '#c084fc' },
+  head: 'Unbounded, system-ui, sans-serif',
+  body: 'Manrope, system-ui, sans-serif',
+};
+
+function szImageFonts() {
+  return Promise.all(['900 64px Unbounded', '700 32px Unbounded', '600 28px Manrope', '800 28px Manrope']
+    .map(f => document.fonts.load(f).catch(() => null)));
+}
+
+// Background, brand and heading shared by every shared image.
+function szImageFrame(kicker) {
+  const { W, H, P, C, head, body } = SZ_IMG;
+  const canvas = document.createElement('canvas');
+  canvas.width = W; canvas.height = H;
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = C.bg; ctx.fillRect(0, 0, W, H);
+  const glow = ctx.createRadialGradient(W * 0.8, 160, 0, W * 0.8, 160, 700);
+  glow.addColorStop(0, 'rgba(56,189,248,0.16)'); glow.addColorStop(1, 'rgba(56,189,248,0)');
+  ctx.fillStyle = glow; ctx.fillRect(0, 0, W, H);
+
+  ctx.fillStyle = C.text; ctx.font = `900 28px ${head}`;
+  ctx.fillText('SESSION ZERO', P, P + 22);
+  ctx.fillStyle = C.accent; ctx.font = `700 24px ${head}`;
+  ctx.fillText(kicker.toUpperCase(), P, 190);
+  ctx.fillStyle = C.text; ctx.font = `900 54px ${head}`;
+  ctx.fillText(szFitText(ctx, szData.title || szT('room_default_title'), W - P * 2), P, 258);
+  ctx.fillStyle = C.dim; ctx.font = `600 28px ${body}`;
+  ctx.fillText(szVotedText('voted_count'), P, 304);
+  return { canvas, ctx };
+}
+
+function szImageFooter(ctx) {
+  const { H, P, C, head, body } = SZ_IMG;
+  ctx.fillStyle = C.dim; ctx.font = `600 26px ${body}`;
+  ctx.fillText(szT('img_footer'), P, H - P - 42);
+  ctx.fillStyle = C.accent; ctx.font = `700 30px ${head}`;
+  ctx.fillText('sessionzero.games', P, H - P);
+}
+
 async function szDrawResults() {
-  const W = 1080, H = 1350, P = 72;
-  const C = { bg: '#050505', card: '#121419', border: '#2a2d35', text: '#f1f5f9', dim: '#94a3b8',
-              accent: '#38bdf8', green: '#4ade80', red: '#f87171', gold: '#facc15' };
+  const { W, H, P, C, head, body } = SZ_IMG;
   const names = {}, heroes = {};
   szData.list.forEach(id => { const r = szResolve(id); if (r) { names[id] = r.name; heroes[id] = r.hero; } });
   const { active, vetoed, top } = szRank();
@@ -980,10 +1432,8 @@ async function szDrawResults() {
     winner && typeof imgProxy === 'function'
       ? szLoadImage(imgProxy(heroes[winner.id], { w: 1080, h: 540, fit: 'cover', q: 85 }).replace('output=webp', 'output=jpg'))
       : Promise.resolve(null),
-    Promise.all(['900 64px Unbounded', '700 32px Unbounded', '600 28px Manrope', '800 28px Manrope']
-      .map(f => document.fonts.load(f).catch(() => null))),
+    szImageFonts(),
   ]);
-  const head = 'Unbounded, system-ui, sans-serif', body = 'Manrope, system-ui, sans-serif';
   const nm = b => b.gm ? `${b.voter} (${szT('gm_short')})` : b.voter;
   const who = id => {
     const ups = szData.ballots.filter(b => b.up.includes(id)).map(nm);
@@ -995,23 +1445,7 @@ async function szDrawResults() {
   };
   const scoreText = s => (s > 0 ? '+' : s < 0 ? '−' : '') + Math.abs(s);
 
-  const canvas = document.createElement('canvas');
-  canvas.width = W; canvas.height = H;
-  const ctx = canvas.getContext('2d');
-  ctx.fillStyle = C.bg; ctx.fillRect(0, 0, W, H);
-  const glow = ctx.createRadialGradient(W * 0.8, 160, 0, W * 0.8, 160, 700);
-  glow.addColorStop(0, 'rgba(56,189,248,0.16)'); glow.addColorStop(1, 'rgba(56,189,248,0)');
-  ctx.fillStyle = glow; ctx.fillRect(0, 0, W, H);
-
-  // Brand + heading
-  ctx.fillStyle = C.text; ctx.font = `900 28px ${head}`;
-  ctx.fillText('SESSION ZERO', P, P + 22);
-  ctx.fillStyle = C.accent; ctx.font = `700 24px ${head}`;
-  ctx.fillText(szT('img_results').toUpperCase(), P, 190);
-  ctx.fillStyle = C.text; ctx.font = `900 54px ${head}`;
-  ctx.fillText(szFitText(ctx, szData.title || szT('room_default_title'), W - P * 2), P, 258);
-  ctx.fillStyle = C.dim; ctx.font = `600 28px ${body}`;
-  ctx.fillText(szVotedText('voted_count'), P, 304);
+  const { canvas, ctx } = szImageFrame(szT('img_results'));
 
   let y = 350;
   // Winner: big card, with the game's cover when it loaded
@@ -1077,11 +1511,68 @@ async function szDrawResults() {
     ctx.fillText(szT('img_more', { n: more }), P + 32, y + 22);
   }
 
-  // Footer
-  ctx.fillStyle = C.dim; ctx.font = `600 26px ${body}`;
-  ctx.fillText(szT('img_footer'), P, H - P - 42);
-  ctx.fillStyle = C.accent; ctx.font = `700 30px ${head}`;
-  ctx.fillText('sessionzero.games', P, H - P);
+  szImageFooter(ctx);
+  return canvas;
+}
+
+// The pinned line-up as an image: same frame as the results, one card per table.
+async function szDrawSeating() {
+  const { W, H, P, C, head, body } = SZ_IMG;
+  const s = szData.seating;
+  const out = szUnseated(s);
+  const info = s.tables.map(t => szResolve(t.game) || { name: t.game });
+  const [covers] = await Promise.all([
+    Promise.all(info.map(r => r.hero && typeof imgProxy === 'function'
+      ? szLoadImage(imgProxy(r.hero, { w: 440, h: 520, fit: 'cover', q: 85 }).replace('output=webp', 'output=jpg'))
+      : Promise.resolve(null))),
+    szImageFonts(),
+  ]);
+  const { canvas, ctx } = szImageFrame(szT('img_tables'));
+
+  const top = 350, gap = 18, outH = out.length ? 56 : 0;
+  const room = H - P - 120 - top - outH;
+  const h = Math.min(300, Math.floor((room - gap * (s.tables.length - 1)) / s.tables.length));
+  const w = W - P * 2, thumb = Math.round(h * 0.85);
+  let y = top;
+  s.tables.forEach((t, i) => {
+    ctx.save();
+    szRoundRect(ctx, P, y, w, h, 24); ctx.clip();
+    ctx.fillStyle = C.card; ctx.fillRect(P, y, w, h);
+    if (covers[i]) szDrawCover(ctx, covers[i], P, y, thumb, h);
+    ctx.restore();
+    szRoundRect(ctx, P, y, w, h, 24);
+    ctx.lineWidth = 2; ctx.strokeStyle = C.border; ctx.stroke();
+
+    const x = P + thumb + 32, tw = w - thumb - 64;
+    const small = h < 170;
+    const lh = small ? 30 : 36;
+    let ty = y + (small ? 44 : 58);
+    ctx.fillStyle = C.text; ctx.font = `700 ${small ? 28 : 34}px ${head}`;
+    ctx.fillText(szFitText(ctx, info[i].name, tw), x, ty);
+    ty += lh + 4;
+    ctx.fillStyle = C.purple; ctx.font = `800 ${small ? 24 : 28}px ${body}`;
+    ctx.fillText(szFitText(ctx, `${szT('img_gm')}: ${t.gm}`, tw), x, ty);
+    // Players wrap; whatever doesn't fit the card ends in an ellipsis
+    ctx.fillStyle = '#cbd5e1'; ctx.font = `600 ${small ? 24 : 28}px ${body}`;
+    let line = '';
+    const words = t.players.map((p, n) => p + (n < t.players.length - 1 ? ', ' : ''));
+    for (let n = 0; n < words.length; n++) {
+      if (line && ctx.measureText(line + words[n]).width > tw) {
+        ty += lh;
+        if (ty + lh > y + h - 12) { line = words.slice(n - 1).join(''); break; }
+        ctx.fillText(line.trim(), x, ty);
+        line = '';
+      }
+      line += words[n];
+    }
+    if (line) { ty = Math.min(ty + lh, y + h - 22); ctx.fillText(szFitText(ctx, line.trim(), tw), x, ty); }
+    y += h + gap;
+  });
+  if (out.length) {
+    ctx.fillStyle = C.dim; ctx.font = `600 26px ${body}`;
+    ctx.fillText(szFitText(ctx, `${szT('tables_out')}: ${out.join(', ')}`, w), P, y + 22);
+  }
+  szImageFooter(ctx);
   return canvas;
 }
 
@@ -1100,7 +1591,8 @@ async function szShareResultsImage(btn, mode) {
   if (btn) btn.disabled = true;
   try {
     // Clipboard writes must start inside the click, so hand it a promise of the blob.
-    const blobP = szDrawResults().then(c => new Promise(res => c.toBlob(res, 'image/png')));
+    const draw = szData.seating ? szDrawSeating() : szDrawResults();
+    const blobP = draw.then(c => new Promise(res => c.toBlob(res, 'image/png')));
     if (typeof track === 'function') track('room-share-image-' + mode);
     if (mode === 'copy') {
       try {
@@ -1134,7 +1626,9 @@ function szStartPolling() {
   if (szPollTimer) clearInterval(szPollTimer);
   szPollTimer = setInterval(async () => {
     if (document.hidden) return;
-    try { await szLoadRoom(); szSyncCardButtons(); szRenderTally(); }
+    // Don't redraw the panel under someone typing in its fields
+    const typing = document.activeElement && document.activeElement.closest('.sz-tables');
+    try { await szLoadRoom(); szSyncCardButtons(); if (!typing) szRenderTally(); }
     catch (e) { /* transient; next tick retries */ }
   }, 5000);
 }

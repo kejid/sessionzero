@@ -32,6 +32,7 @@ const MAX_ID = 48;          // length of a single system id
 const MAX_VOTER = 40;       // voter display name
 const MAX_SUGGEST = 3;      // games one voter may add to a room
 const MAX_EXPECTED = 50;    // headcount a creator can say they expect
+const MAX_TABLES = 6;       // tables in one pinned line-up
 
 const { Pool } = pg;
 const pool = new Pool({
@@ -66,6 +67,8 @@ async function initDb() {
     -- Creator's settings: how many voters to expect (NULL = not said) and whether vetoes are off.
     ALTER TABLE rooms ADD COLUMN IF NOT EXISTS expected INTEGER;
     ALTER TABLE rooms ADD COLUMN IF NOT EXISTS no_veto BOOLEAN NOT NULL DEFAULT false;
+    -- The pinned line-up: { tables: [{ game, gm, players }], out, by, at }.
+    ALTER TABLE rooms ADD COLUMN IF NOT EXISTS seating JSONB;
   `);
 }
 
@@ -112,6 +115,28 @@ export function cleanCustom(list, raw) {
 // How many voters the creator expects: a whole number in range, else not set.
 export function cleanExpected(value) {
   return Number.isInteger(value) && value >= 1 && value <= MAX_EXPECTED ? value : null;
+}
+
+// A line-up to pin. Games must be in the room and people must have voted; each
+// person sits once. Returns null when any table can't stand as sent.
+export function cleanSeating(raw, list, voters) {
+  const tables = raw && Array.isArray(raw.tables) ? raw.tables : [];
+  if (!tables.length || tables.length > MAX_TABLES) return null;
+  const known = new Set(voters);
+  const seated = new Set();
+  const take = v => {
+    if (typeof v !== 'string' || !known.has(v) || seated.has(v)) return false;
+    seated.add(v);
+    return true;
+  };
+  const games = new Set();
+  const clean = [];
+  for (const t of tables) {
+    if (!t || !list.includes(t.game) || games.has(t.game) || !take(t.gm)) return null;
+    games.add(t.game);
+    clean.push({ game: t.game, gm: t.gm, players: (Array.isArray(t.players) ? t.players : []).filter(take) });
+  }
+  return { tables: clean, out: (Array.isArray(raw.out) ? raw.out : []).filter(take) };
 }
 
 // Can this voter add another game? (exported for tests)
@@ -183,7 +208,7 @@ app.post('/room', async (req, res) => {
 // Read a room: its list plus every ballot and the live tally.
 app.get('/room/:id', async (req, res) => {
   try {
-    const roomRes = await pool.query('SELECT title, list, suggested, custom, expected, no_veto, created_at FROM rooms WHERE id = $1', [req.params.id]);
+    const roomRes = await pool.query('SELECT title, list, suggested, custom, expected, no_veto, seating, created_at FROM rooms WHERE id = $1', [req.params.id]);
     if (roomRes.rowCount === 0) return res.status(404).json({ error: 'not_found' });
     const room = roomRes.rows[0];
 
@@ -204,6 +229,7 @@ app.get('/room/:id', async (req, res) => {
       maxSuggest: MAX_SUGGEST,
       expected: room.expected,
       noVeto: room.no_veto,
+      seating: room.seating,
       createdAt: room.created_at,
       voters: ballots.map(b => b.voter),
       ballots,
@@ -241,6 +267,29 @@ app.put('/room/:id/ballot', async (req, res) => {
     res.json({ ok: true, voter, up, down, veto, gm });
   } catch (e) {
     console.error('PUT /room/:id/ballot', e);
+    res.status(500).json({ error: 'server_error' });
+  }
+});
+
+// Pin the line-up everyone will see, or unpin it with seating: null.
+app.put('/room/:id/seating', async (req, res) => {
+  try {
+    const roomRes = await pool.query('SELECT list FROM rooms WHERE id = $1', [req.params.id]);
+    if (roomRes.rowCount === 0) return res.status(404).json({ error: 'not_found' });
+    const by = typeof req.body?.by === 'string' ? req.body.by.trim().slice(0, MAX_VOTER) : '';
+    if (!by) return res.status(400).json({ error: 'voter_required' });
+
+    let seating = null;
+    if (req.body?.seating !== null) {
+      const ballotsRes = await pool.query('SELECT voter FROM ballots WHERE room_id = $1', [req.params.id]);
+      const clean = cleanSeating(req.body?.seating, roomRes.rows[0].list, ballotsRes.rows.map(r => r.voter));
+      if (!clean) return res.status(400).json({ error: 'bad_seating' });
+      seating = { ...clean, by, at: new Date().toISOString() };
+    }
+    await pool.query('UPDATE rooms SET seating = $2 WHERE id = $1', [req.params.id, seating && JSON.stringify(seating)]);
+    res.json({ ok: true, seating });
+  } catch (e) {
+    console.error('PUT /room/:id/seating', e);
     res.status(500).json({ error: 'server_error' });
   }
 });

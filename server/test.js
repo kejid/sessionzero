@@ -1,7 +1,7 @@
 // Unit tests for the pure logic (validation + tally). No DB needed.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { cleanIdList, buildTally, suggestError, cleanCustom, cleanExpected } from './index.js';
+import { cleanIdList, buildTally, suggestError, cleanCustom, cleanExpected, cleanSeating } from './index.js';
 
 test('cleanIdList drops non-strings, blanks, dupes, and over-long ids', () => {
   const out = cleanIdList(['cairn', 'cairn', '', 42, null, '  blades  ', 'x'.repeat(100)]);
@@ -16,6 +16,25 @@ test('cleanIdList restricts to the allowed set when given one', () => {
 test('cleanExpected keeps whole numbers in range, anything else means not set', () => {
   assert.equal(cleanExpected(5), 5);
   for (const bad of [0, -1, 51, 2.5, '5', null, undefined]) assert.equal(cleanExpected(bad), null);
+});
+
+test('cleanSeating seats each voter once and drops strangers', () => {
+  const out = cleanSeating(
+    { tables: [{ game: 'cairn', gm: 'Ann', players: ['Bob', 'Bob', 'Ghost', 7] }], out: ['Bob', 'Cid'], by: 'x', at: 'y' },
+    ['cairn', 'blades'], ['Ann', 'Bob', 'Cid']
+  );
+  assert.deepEqual(out, { tables: [{ game: 'cairn', gm: 'Ann', players: ['Bob'] }], out: ['Cid'] });
+});
+
+test('cleanSeating rejects a line-up that cannot stand', () => {
+  const list = ['cairn', 'blades'], voters = ['Ann', 'Bob'];
+  const t = (game, gm) => ({ game, gm, players: [] });
+  assert.equal(cleanSeating({ tables: [] }, list, voters), null);
+  assert.equal(cleanSeating(undefined, list, voters), null);
+  assert.equal(cleanSeating({ tables: [t('mork', 'Ann')] }, list, voters), null);
+  assert.equal(cleanSeating({ tables: [t('cairn', 'Ghost')] }, list, voters), null);
+  assert.equal(cleanSeating({ tables: [t('cairn', 'Ann'), t('cairn', 'Bob')] }, list, voters), null);
+  assert.equal(cleanSeating({ tables: [t('cairn', 'Ann'), t('blades', 'Ann')] }, list, voters), null);
 });
 
 test('cleanIdList returns [] for non-array input', () => {

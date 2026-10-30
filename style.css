@@ -2887,6 +2887,32 @@ body.browse-mode .sidebar .sidebar-nav-divider { display: none; }
 .sz-opt strong { display: block; color: var(--text); }
 .sz-opt input[type="checkbox"] { margin: 0; width: 18px; height: 18px; accent-color: var(--accent); flex-shrink: 0; }
 .sz-opt .sz-opt-count { width: 72px; margin: 0; flex-shrink: 0; text-align: center; }
+/* Results: split the pool into tables */
+.sz-tables-open { margin-top: 16px; }
+.sz-tables { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border-subtle); }
+.sz-tables-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.sz-tables-title { font-family: 'Unbounded', sans-serif; font-size: 16px; font-weight: 700; margin: 0; }
+.sz-tables-controls { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+.sz-tables-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; }
+.sz-table { background: var(--card); border: 1px solid var(--border-subtle); border-radius: 10px; padding: 12px 14px; }
+.sz-table-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 8px; }
+.sz-table-n { font-size: 12px; font-weight: 700; color: var(--dim); white-space: nowrap; }
+.sz-tables-out { margin-top: 10px; padding: 12px 14px; border: 1px dashed var(--border-subtle); border-radius: 10px; }
+.sz-tables-out .sz-tally-chips { margin-top: 8px; }
+.sz-tally-chips:empty { display: none; }
+.sz-seat { border: none; font-family: inherit; cursor: pointer; }
+.sz-chip-plain { color: var(--text); background: var(--border-subtle); }
+.sz-seat-picked { outline: 2px solid var(--accent); outline-offset: 1px; }
+.sz-seat-here { display: block; margin-top: 10px; }
+.sz-tables-wait { margin: 0 0 12px; }
+.sz-seating { margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--border-subtle); }
+.sz-seating .sz-tables-title { margin-bottom: 10px; }
+.sz-your-table { margin: 0 0 12px; font-weight: 800; font-size: 15px; color: var(--accent); }
+.sz-table-mine { border-color: var(--accent); }
+.sz-seating-actions { margin-top: 12px; align-items: center; }
+.sz-pinned-by { margin-left: auto; }
+.sz-tables-sum { margin: 12px 0; }
+.sz-tables-actions { display: flex; gap: 8px; flex-wrap: wrap; }
 .sz-gm-toggle {
     display: flex; align-items: flex-start; gap: 10px; margin-top: 12px; cursor: pointer;
     font-size: 13px; color: var(--dim); line-height: 1.45;
