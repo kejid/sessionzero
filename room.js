@@ -21,6 +21,10 @@ const SZ_STR = {
     create_count: '{n} systems from your current list',
     create_label: 'Title (optional)',
     create_placeholder: 'e.g. What do we play after Strahd?',
+    opt_expected: 'How many people will vote',
+    opt_expected_hint: 'Optional. Everyone sees how many votes are still missing.',
+    opt_veto: 'Allow vetoes',
+    opt_veto_hint: 'One veto takes a game out of the running.',
     create_btn: 'Create link',
     create_cancel: 'Cancel',
     create_none: 'Your shortlist is empty — tap + on games in the catalog first.',
@@ -30,6 +34,7 @@ const SZ_STR = {
     copied: 'Copied!',
     copy_link: 'Copy link',
     ballot_counts: 'Up: {up} · Against: {down} · Veto: {veto}',
+    ballot_counts_no_veto: 'Up: {up} · Against: {down}',
     unsaved: 'not saved yet',
     all_saved: 'saved',
     see_results: 'Results',
@@ -67,10 +72,12 @@ const SZ_STR = {
     img_footer: 'Pick your next TTRPG as a group',
     tab_vote: 'My vote',
     results_locked: '{n} voted so far. Results open after you vote.',
+    results_locked_of: '{n} of {m} voted so far. Results open after you vote.',
     peek_results: 'See results without voting',
     leave_unsaved: 'Your vote is not saved yet. Leave anyway?',
     room_default_title: 'What should we play next?',
     room_intro: 'Up for it is +1, Against is −1. Veto is for games you won\'t play at all: one veto takes a game out. Come back any time to change your mind.',
+    room_intro_no_veto: 'Up for it is +1, Against is −1. Come back any time to change your mind.',
     veto_out: 'vetoed',
     vetoed_title: 'Vetoed — out of the running',
     your_name: 'Your name',
@@ -85,6 +92,7 @@ const SZ_STR = {
     saving: 'Saving…',
     tally_title: 'Results so far',
     voted_count: '{n} voted',
+    voted_of: '{n} of {m} voted',
     no_votes_yet: 'No votes yet — be the first.',
     not_found: 'This vote doesn\'t exist (or was removed).',
     back_home: 'Go to Session Zero',
@@ -94,6 +102,8 @@ const SZ_STR = {
     not_configured: 'Shared voting isn\'t configured on this site.',
     missing_systems: '{n} system(s) in this list aren\'t in your catalog and were skipped.',
     name_first: 'Enter your name first.',
+    name_restored: 'Loaded the vote saved under this name.',
+    name_taken: 'This name already has a vote. Saving will replace it.',
     share_title: 'Share your shortlist',
     share_count: '{n} systems selected',
     list_btn: 'Copy list link',
@@ -107,7 +117,7 @@ const SZ_STR = {
     list_block_title: 'Just a list',
     list_block_desc: 'Read-only — they browse the games and open full pages. No voting, no signup, no server.',
     vote_block_title: 'Collect votes',
-    vote_block_desc: 'Everyone votes Up / Veto on their own device, any time — you get a live ranked shortlist.',
+    vote_block_desc: 'Everyone votes on their own device, any time — you get a live ranked shortlist.',
     my_votes: 'Your shared votes',
     open: 'Open',
     list_title: 'Shortlist',
@@ -120,7 +130,7 @@ const SZ_STR = {
     faq_acct_q: 'Do I need an account?',
     faq_acct_a: 'No signup. Your name is just a label so everyone sees who voted.',
     faq_vote_q: 'How do I vote?',
-    faq_vote_a: 'Type your name, mark each game “Up for it” or “Veto”, then hit “Save my vote”.',
+    faq_vote_a: 'Type your name, mark the games you have an opinion on, then hit “Save my vote”.',
     faq_change_q: 'Can I change my mind?',
     faq_change_a: 'Yes — come back to this link anytime and update your vote.',
   },
@@ -130,6 +140,10 @@ const SZ_STR = {
     create_count: '{n} систем из твоего текущего списка',
     create_label: 'Название (необязательно)',
     create_placeholder: 'напр. Во что играем после Страда?',
+    opt_expected: 'Сколько человек будут голосовать',
+    opt_expected_hint: 'Необязательно. Все увидят, сколько голосов ещё ждём.',
+    opt_veto: 'Разрешить вето',
+    opt_veto_hint: 'Одно вето убирает игру из выбора.',
     create_btn: 'Создать ссылку',
     create_cancel: 'Отмена',
     create_none: 'Шортлист пуст — сначала нажми + на играх в каталоге.',
@@ -139,6 +153,7 @@ const SZ_STR = {
     copied: 'Скопировано!',
     copy_link: 'Скопировать ссылку',
     ballot_counts: 'За: {up} · Против: {down} · Вето: {veto}',
+    ballot_counts_no_veto: 'За: {up} · Против: {down}',
     unsaved: 'не сохранено',
     all_saved: 'сохранено',
     see_results: 'Итоги',
@@ -176,10 +191,12 @@ const SZ_STR = {
     img_footer: 'Выбирайте настольную ролёвку всей группой',
     tab_vote: 'Мой голос',
     results_locked: 'Уже проголосовали: {n}. Итоги откроются после твоего голоса.',
+    results_locked_of: 'Уже проголосовали: {n} из {m}. Итоги откроются после твоего голоса.',
     peek_results: 'Посмотреть итоги без голоса',
     leave_unsaved: 'Голос ещё не сохранён. Всё равно уйти?',
     room_default_title: 'Во что играем дальше?',
     room_intro: '«За» — плюс очко, «Против» — минус очко. «Вето» — для игр, в которые ты точно не будешь играть: одно вето убирает игру из выбора. Можно вернуться и передумать в любой момент.',
+    room_intro_no_veto: '«За» — плюс очко, «Против» — минус очко. Можно вернуться и передумать в любой момент.',
     veto_out: 'вето',
     vetoed_title: 'Вето — выбывают',
     your_name: 'Твоё имя',
@@ -194,6 +211,7 @@ const SZ_STR = {
     saving: 'Сохраняю…',
     tally_title: 'Текущие результаты',
     voted_count: 'Проголосовало: {n}',
+    voted_of: 'Проголосовало: {n} из {m}',
     no_votes_yet: 'Голосов пока нет — будь первым.',
     not_found: 'Такого голосования нет (или его удалили).',
     back_home: 'На Session Zero',
@@ -203,6 +221,8 @@ const SZ_STR = {
     not_configured: 'Общее голосование на этом сайте не настроено.',
     missing_systems: '{n} систем(ы) из списка нет в твоём каталоге — пропущены.',
     name_first: 'Сначала введи имя.',
+    name_restored: 'Голос под этим именем загружен.',
+    name_taken: 'Под этим именем уже есть голос. Сохранение заменит его.',
     share_title: 'Поделиться списком',
     share_count: 'Выбрано систем: {n}',
     list_btn: 'Скопировать ссылку на список',
@@ -216,7 +236,7 @@ const SZ_STR = {
     list_block_title: 'Просто список',
     list_block_desc: 'Только просмотр — листают игры и открывают полные страницы. Без голосования, регистрации и сервера.',
     vote_block_title: 'Собрать голоса',
-    vote_block_desc: 'Каждый со своего устройства жмёт За / Вето в удобное время — ты видишь живой ранжированный шортлист.',
+    vote_block_desc: 'Каждый голосует со своего устройства в удобное время — ты видишь живой ранжированный шортлист.',
     my_votes: 'Мои голосования',
     open: 'Открыть',
     list_title: 'Шортлист',
@@ -229,7 +249,7 @@ const SZ_STR = {
     faq_acct_q: 'Нужен аккаунт?',
     faq_acct_a: 'Регистрации нет. Имя нужно только чтобы остальные видели, кто голосовал.',
     faq_vote_q: 'Как голосовать?',
-    faq_vote_a: 'Введи имя, отметь каждую игру «За» или «Вето» и нажми «Сохранить голос».',
+    faq_vote_a: 'Введи имя, отметь игры, по которым есть мнение, и нажми «Сохранить голос».',
     faq_change_q: 'Можно передумать?',
     faq_change_a: 'Да — вернись по ссылке в любой момент и поменяй голос.',
   },
@@ -404,15 +424,17 @@ async function szLoadRoom() {
   szData = await szApi('/room/' + encodeURIComponent(szRoomId));
   // Seed my ballot from the server (so returning voters can edit), unless I have
   // unsaved local edits in this session.
-  if (!szDirty) {
-    const me = szVoterName();
-    const mine = me ? szData.ballots.find(b => b.voter === me) : null;
-    szMyUp = new Set(mine ? mine.up : []);
-    szMyVeto = new Set(mine ? mine.veto : []);
-    if (!szDownUnsupported) szMyDown = new Set(mine ? (mine.down || []) : []);
-    // No ballot yet: whoever created the room here is most likely the GM
-    szMyGm = mine ? !!mine.gm : szMyRooms().some(r => r.id === szRoomId && r.created);
-  }
+  if (!szDirty) szSeedBallot();
+}
+
+function szSeedBallot() {
+  const me = szVoterName();
+  const mine = me ? szData.ballots.find(b => b.voter === me) : null;
+  szMyUp = new Set(mine ? mine.up : []);
+  szMyVeto = new Set(mine ? mine.veto : []);
+  if (!szDownUnsupported) szMyDown = new Set(mine ? (mine.down || []) : []);
+  // No ballot yet: whoever created the room here is most likely the GM
+  szMyGm = mine ? !!mine.gm : szMyRooms().some(r => r.id === szRoomId && r.created);
 }
 
 function szRenderMessage(msg, retry) {
@@ -439,7 +461,7 @@ function szRenderRoom() {
     <div class="sz-body">
       <header class="sz-head">
         <h1 class="sz-title">${szEsc(title)}</h1>
-        <p class="sz-intro">${szEsc(szT('room_intro'))}</p>
+        <p class="sz-intro">${szEsc(szT(szData.noVeto ? 'room_intro_no_veto' : 'room_intro'))}</p>
         ${missing ? `<p class="sz-warn">${szEsc(szT('missing_systems', { n: missing }))}</p>` : ''}
         ${szFaqHTML('room')}
         <p class="sz-teaser" id="sz-teaser"></p>
@@ -516,9 +538,9 @@ function szCardHTML(s, readOnly) {
         <button class="sz-vbtn sz-down" data-id="${szEsc(s.id)}" onclick="szToggle('${szEsc(s.id)}','down')">
           <i data-lucide="thumbs-down"></i><span>${szEsc(szT('down'))}</span>
         </button>
-        <button class="sz-vbtn sz-veto" data-id="${szEsc(s.id)}" onclick="szToggle('${szEsc(s.id)}','veto')">
+        ${szData && szData.noVeto ? '' : `<button class="sz-vbtn sz-veto" data-id="${szEsc(s.id)}" onclick="szToggle('${szEsc(s.id)}','veto')">
           <i data-lucide="ban"></i><span>${szEsc(szT('veto'))}</span>
-        </button>
+        </button>`}
       </div>`;
   return `
     <div class="sz-card" data-id="${szEsc(s.id)}">
@@ -571,6 +593,15 @@ function szToggle(id, kind) {
   szUpdateSaveBtn();
 }
 
+// "3 of 5 voted" when the creator said how many to expect, else "3 voted".
+// Once more people voted than expected, the "of" would only confuse.
+function szVotedText(key) {
+  const n = (szData && szData.voters || []).length;
+  const m = szData && szData.expected;
+  const withTotal = key === 'voted_count' ? 'voted_of' : key + '_of';
+  return szT(m && n <= m ? withTotal : key, { n, m });
+}
+
 // Has the person on this device already voted in this room?
 function szHasVoted() {
   const me = szVoterName();
@@ -594,10 +625,9 @@ function szApplyLayout() {
   room.classList.toggle('sz-results-open', open);  // hides the tab's lock icon
   const teaser = document.getElementById('sz-teaser');
   if (teaser) {
-    const n = (szData && szData.voters || []).length;
     teaser.hidden = open;
     teaser.innerHTML = open ? '' :
-      `<i data-lucide="lock"></i> ${szEsc(szT('results_locked', { n }))} <button type="button" class="sz-link-btn" onclick="szPeekResults()">${szEsc(szT('peek_results'))}</button>`;
+      `<i data-lucide="lock"></i> ${szEsc(szVotedText('results_locked'))} <button type="button" class="sz-link-btn" onclick="szPeekResults()">${szEsc(szT('peek_results'))}</button>`;
   }
 }
 
@@ -730,6 +760,19 @@ function szGmTag(id) {
 
 function szOnName(name) {
   szSetVoterName(name.trim());
+  // Same name, same ballot: there are no accounts, so a name typed on a new
+  // device has to bring its saved vote along, or Save would wipe it.
+  const voted = szHasVoted();
+  if (!szDirty) {
+    szSeedBallot();
+    const gm = document.getElementById('sz-gm');
+    if (gm) gm.checked = szMyGm;
+    szSyncCardButtons();
+    szApplyLayout();
+    szRenderTally();
+    if (typeof refreshIcons === 'function') refreshIcons();
+  }
+  if (voted && typeof showToast === 'function') showToast(szT(szDirty ? 'name_taken' : 'name_restored'));
   szUpdateSaveBtn();
   if (!szSuggestOpen) { const el = document.getElementById('sz-suggest'); if (el) { el.innerHTML = szSuggestHTML(); if (typeof refreshIcons === 'function') refreshIcons(); } }
 }
@@ -743,7 +786,7 @@ function szUpdateSaveBtn() {
   btn.classList.toggle('sz-dirty', szDirty);
   const status = document.getElementById('sz-status');
   if (status) {
-    const counts = szT('ballot_counts', { up: szMyUp.size, down: szMyDown.size, veto: szMyVeto.size });
+    const counts = szT(szData && szData.noVeto ? 'ballot_counts_no_veto' : 'ballot_counts', { up: szMyUp.size, down: szMyDown.size, veto: szMyVeto.size });
     const state = szDirty ? szT('unsaved') : (szMyUp.size || szMyDown.size || szMyVeto.size ? szT('all_saved') : '');
     status.innerHTML = szEsc(counts) + (state ? ` · <span class="${szDirty ? 'sz-unsaved' : 'sz-saved'}">${szEsc(state)}</span>` : '');
   }
@@ -816,7 +859,6 @@ function szRank() {
 function szRenderTally() {
   const wrap = document.getElementById('sz-tally');
   if (!wrap || !szData) return;
-  const voters = szData.voters || [];
   const nameById = {};
   szData.list.forEach(id => { const r = szResolve(id); if (r) nameById[id] = r.name; });
 
@@ -850,7 +892,7 @@ function szRenderTally() {
     wrap.innerHTML = `
       <div class="sz-locked">
         <i data-lucide="lock"></i>
-        <p>${szEsc(szT('results_locked', { n: voters.length }))}</p>
+        <p>${szEsc(szVotedText('results_locked'))}</p>
         <button class="sz-btn sz-save" onclick="szSetTab('vote')">${szEsc(szT('go_vote'))}</button>
         <button type="button" class="sz-link-btn" onclick="szPeekResults()">${szEsc(szT('peek_results'))}</button>
       </div>`;
@@ -862,7 +904,7 @@ function szRenderTally() {
   const icon = { share: 'share-2', copy: 'copy', download: 'download' }[mode];
   wrap.innerHTML = `
     <div class="sz-tally-head">
-      <h2 class="sz-tally-title">${szEsc(szT('tally_title'))} <span class="sz-voted">${szEsc(szT('voted_count', { n: voters.length }))}</span></h2>
+      <h2 class="sz-tally-title">${szEsc(szT('tally_title'))} <span class="sz-voted">${szEsc(szVotedText('voted_count'))}</span></h2>
       ${ranked.length ? `<div class="sz-share-actions">
         <button class="sz-btn sz-ghost sz-btn-sm sz-share-img" onclick="szShareResultsImage(this, '${mode}')"><i data-lucide="${icon}"></i><span>${szEsc(szT(label))}</span></button>
         ${mode === 'copy' ? `<button class="sz-btn sz-ghost sz-btn-sm sz-share-dl" onclick="szShareResultsImage(this, 'download')" title="${szEsc(szT('save_image'))}" aria-label="${szEsc(szT('save_image'))}"><i data-lucide="download"></i></button>` : ''}
@@ -969,7 +1011,7 @@ async function szDrawResults() {
   ctx.fillStyle = C.text; ctx.font = `900 54px ${head}`;
   ctx.fillText(szFitText(ctx, szData.title || szT('room_default_title'), W - P * 2), P, 258);
   ctx.fillStyle = C.dim; ctx.font = `600 28px ${body}`;
-  ctx.fillText(szT('voted_count', { n: (szData.voters || []).length }), P, 304);
+  ctx.fillText(szVotedText('voted_count'), P, 304);
 
   let y = 350;
   // Winner: big card, with the game's cover when it loaded
@@ -1371,6 +1413,16 @@ function szOpenCreate(presetIds) {
       <h2 class="sz-subhead">${szEsc(szT('vote_block_title'))}</h2>
       <p class="sz-hint">${szEsc(szT('vote_block_desc'))}</p>
       <input id="sz-room-title" class="sz-name-input" type="text" maxlength="120" placeholder="${szEsc(szT('create_placeholder'))}">
+      <div class="sz-room-opts">
+        <label class="sz-opt">
+          <span><strong>${szEsc(szT('opt_expected'))}</strong> ${szEsc(szT('opt_expected_hint'))}</span>
+          <input id="sz-room-expected" class="sz-name-input sz-opt-count" type="number" min="1" max="50" inputmode="numeric">
+        </label>
+        <label class="sz-opt">
+          <span><strong>${szEsc(szT('opt_veto'))}</strong> ${szEsc(szT('opt_veto_hint'))}</span>
+          <input id="sz-room-veto" type="checkbox" checked>
+        </label>
+      </div>
       <div class="sz-savebar">
         <button class="sz-btn sz-save sz-pick-action" onclick="szDoCreate()">${szEsc(szT('create_btn'))}<span class="sz-pick-n"></span></button>
       </div>
@@ -1410,8 +1462,10 @@ async function szDoCreate() {
     custom[rid] = { name: c.name, tagline: c.tagline || '', image: c.image || '' };
     return rid;
   });
+  const expected = parseInt((document.getElementById('sz-room-expected') || {}).value, 10) || null;
+  const noVeto = !(document.getElementById('sz-room-veto') || { checked: true }).checked;
   try {
-    const { roomId } = await szApi('/room', { method: 'POST', body: JSON.stringify({ title, list, custom }) });
+    const { roomId } = await szApi('/room', { method: 'POST', body: JSON.stringify({ title, list, custom, expected, noVeto }) });
     if (typeof track === 'function') track('room-create');
     szRememberRoom(roomId, title, true);
     const url = szRoomUrl(roomId);

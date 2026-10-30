@@ -2879,6 +2879,14 @@ body.browse-mode .sidebar .sidebar-nav-divider { display: none; }
 }
 
 /* GM: toggle on the ballot, tags on cards/results, marked chips */
+.sz-room-opts { display: flex; flex-direction: column; gap: 12px; margin-top: 14px; }
+.sz-opt {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer;
+    font-size: 13px; color: var(--dim); line-height: 1.45;
+}
+.sz-opt strong { display: block; color: var(--text); }
+.sz-opt input[type="checkbox"] { margin: 0; width: 18px; height: 18px; accent-color: var(--accent); flex-shrink: 0; }
+.sz-opt .sz-opt-count { width: 72px; margin: 0; flex-shrink: 0; text-align: center; }
 .sz-gm-toggle {
     display: flex; align-items: flex-start; gap: 10px; margin-top: 12px; cursor: pointer;
     font-size: 13px; color: var(--dim); line-height: 1.45;

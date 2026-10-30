@@ -31,6 +31,7 @@ const MAX_LIST = 80;        // systems in a single shared list
 const MAX_ID = 48;          // length of a single system id
 const MAX_VOTER = 40;       // voter display name
 const MAX_SUGGEST = 3;      // games one voter may add to a room
+const MAX_EXPECTED = 50;    // headcount a creator can say they expect
 
 const { Pool } = pg;
 const pool = new Pool({
@@ -62,6 +63,9 @@ async function initDb() {
     ALTER TABLE rooms ADD COLUMN IF NOT EXISTS suggested JSONB NOT NULL DEFAULT '{}';
     -- The creator's own (non-catalog) games: { "custom-…": { name, tagline, image } }.
     ALTER TABLE rooms ADD COLUMN IF NOT EXISTS custom JSONB NOT NULL DEFAULT '{}';
+    -- Creator's settings: how many voters to expect (NULL = not said) and whether vetoes are off.
+    ALTER TABLE rooms ADD COLUMN IF NOT EXISTS expected INTEGER;
+    ALTER TABLE rooms ADD COLUMN IF NOT EXISTS no_veto BOOLEAN NOT NULL DEFAULT false;
   `);
 }
 
@@ -103,6 +107,11 @@ export function cleanCustom(list, raw) {
     return true;
   });
   return { list: kept, custom };
+}
+
+// How many voters the creator expects: a whole number in range, else not set.
+export function cleanExpected(value) {
+  return Number.isInteger(value) && value >= 1 && value <= MAX_EXPECTED ? value : null;
 }
 
 // Can this voter add another game? (exported for tests)
@@ -155,8 +164,8 @@ app.post('/room', async (req, res) => {
       const id = makeId();
       try {
         await pool.query(
-          'INSERT INTO rooms (id, title, list, custom) VALUES ($1, $2, $3, $4)',
-          [id, title, JSON.stringify(list), JSON.stringify(custom)]
+          'INSERT INTO rooms (id, title, list, custom, expected, no_veto) VALUES ($1, $2, $3, $4, $5, $6)',
+          [id, title, JSON.stringify(list), JSON.stringify(custom), cleanExpected(req.body?.expected), req.body?.noVeto === true]
         );
         return res.status(201).json({ roomId: id });
       } catch (e) {
@@ -174,7 +183,7 @@ app.post('/room', async (req, res) => {
 // Read a room: its list plus every ballot and the live tally.
 app.get('/room/:id', async (req, res) => {
   try {
-    const roomRes = await pool.query('SELECT title, list, suggested, custom, created_at FROM rooms WHERE id = $1', [req.params.id]);
+    const roomRes = await pool.query('SELECT title, list, suggested, custom, expected, no_veto, created_at FROM rooms WHERE id = $1', [req.params.id]);
     if (roomRes.rowCount === 0) return res.status(404).json({ error: 'not_found' });
     const room = roomRes.rows[0];
 
@@ -193,6 +202,8 @@ app.get('/room/:id', async (req, res) => {
       suggested: room.suggested || {},
       custom: room.custom || {},
       maxSuggest: MAX_SUGGEST,
+      expected: room.expected,
+      noVeto: room.no_veto,
       createdAt: room.created_at,
       voters: ballots.map(b => b.voter),
       ballots,
@@ -207,7 +218,7 @@ app.get('/room/:id', async (req, res) => {
 // Cast or update a ballot. Upserts on (room, voter) so people can change their mind.
 app.put('/room/:id/ballot', async (req, res) => {
   try {
-    const roomRes = await pool.query('SELECT list FROM rooms WHERE id = $1', [req.params.id]);
+    const roomRes = await pool.query('SELECT list, no_veto FROM rooms WHERE id = $1', [req.params.id]);
     if (roomRes.rowCount === 0) return res.status(404).json({ error: 'not_found' });
     const allowed = new Set(roomRes.rows[0].list);
 
@@ -216,7 +227,7 @@ app.put('/room/:id/ballot', async (req, res) => {
 
     const up = cleanIdList(req.body?.up, allowed);
     // One choice per game: up wins over veto, veto over "against"
-    const veto = cleanIdList(req.body?.veto, allowed).filter(id => !up.includes(id));
+    const veto = roomRes.rows[0].no_veto ? [] : cleanIdList(req.body?.veto, allowed).filter(id => !up.includes(id));
     const down = cleanIdList(req.body?.down, allowed).filter(id => !up.includes(id) && !veto.includes(id));
     const gm = req.body?.gm === true;
 

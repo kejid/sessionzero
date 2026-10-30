@@ -1,7 +1,7 @@
 // Unit tests for the pure logic (validation + tally). No DB needed.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { cleanIdList, buildTally, suggestError, cleanCustom } from './index.js';
+import { cleanIdList, buildTally, suggestError, cleanCustom, cleanExpected } from './index.js';
 
 test('cleanIdList drops non-strings, blanks, dupes, and over-long ids', () => {
   const out = cleanIdList(['cairn', 'cairn', '', 42, null, '  blades  ', 'x'.repeat(100)]);
@@ -11,6 +11,11 @@ test('cleanIdList drops non-strings, blanks, dupes, and over-long ids', () => {
 test('cleanIdList restricts to the allowed set when given one', () => {
   const allowed = new Set(['cairn', 'mothership']);
   assert.deepEqual(cleanIdList(['cairn', 'blades', 'mothership'], allowed), ['cairn', 'mothership']);
+});
+
+test('cleanExpected keeps whole numbers in range, anything else means not set', () => {
+  assert.equal(cleanExpected(5), 5);
+  for (const bad of [0, -1, 51, 2.5, '5', null, undefined]) assert.equal(cleanExpected(bad), null);
 });
 
 test('cleanIdList returns [] for non-array input', () => {
