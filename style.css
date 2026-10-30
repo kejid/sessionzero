@@ -2575,7 +2575,7 @@ body.sz-room-open { overflow: hidden; }
 .sz-score-neg { color: var(--red); }
 .sz-score-zero { color: var(--dim); }
 .sz-tally-lead { border-color: var(--green); background: linear-gradient(90deg, var(--green-bg), var(--card) 60%); }
-.sz-tally-crown { width: 16px; height: 16px; color: #facc15; align-self: center; }
+i.sz-tally-crown[data-lucide], svg.sz-tally-crown { width: 16px; height: 16px; color: #facc15; align-self: center; }
 .sz-tally-chips { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
 .sz-chip { font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 999px; }
 .sz-chip-up { color: var(--green); background: var(--green-bg); }
@@ -2802,7 +2802,9 @@ body.browse-mode .sidebar .sidebar-nav-divider { display: none; }
 .sz-saved { color: var(--green); font-weight: 700; }
 .sz-savebar-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
 .sz-btn-sm { padding: 10px 14px; font-size: 13px; }
-.sz-btn-sm i[data-lucide] { width: 14px; height: 14px; }
+/* Icons are swapped in after each render: <i> and its <svg> must take the same space */
+.sz-btn i[data-lucide], .sz-btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+.sz-btn-sm i[data-lucide], .sz-btn-sm svg { width: 14px; height: 14px; }
 @media (max-width: 560px) {
     .sz-savebar-sticky { flex-direction: column; align-items: stretch; gap: 8px; padding-top: 10px; }
     .sz-savebar-actions { display: grid; grid-template-columns: 1fr auto auto; }
@@ -2886,7 +2888,13 @@ body.browse-mode .sidebar .sidebar-nav-divider { display: none; }
     .sz-tally-head { flex-wrap: wrap; row-gap: 12px; }
     .sz-tally-head .sz-share-actions { width: 100%; }
     .sz-tally-head .sz-share-actions .sz-btn { flex: 1; }
+    .sz-tally-head .sz-share-actions .sz-btn svg { display: none; }
     .sz-share-actions .sz-share-img { flex: 1; }
+}
+@media (max-width: 360px) {
+    .sz-exit span { display: none; }
+    .sz-tally-head .sz-share-actions { flex-direction: column; }
+    .sz-tally-head .sz-share-actions .sz-btn { flex: none; }
 }
 
 /* GM: toggle on the ballot, tags on cards/results, marked chips */
@@ -2897,9 +2905,18 @@ body.browse-mode .sidebar .sidebar-nav-divider { display: none; }
 }
 .sz-opt strong { display: block; color: var(--text); }
 .sz-opt input[type="checkbox"] { margin: 0; width: 18px; height: 18px; accent-color: var(--accent); flex-shrink: 0; }
-.sz-opt .sz-opt-count { width: 72px; margin: 0; flex-shrink: 0; text-align: center; }
+.sz-opt .sz-opt-count { width: 72px; margin: 0; flex-shrink: 0; text-align: center; appearance: textfield; -moz-appearance: textfield; }
+.sz-opt-count::-webkit-inner-spin-button, .sz-opt-count::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+.sz-tables-controls .sz-opt { cursor: default; }
+.sz-stepper { display: inline-flex; align-items: center; flex-shrink: 0; border: 1px solid var(--border-subtle); border-radius: 10px; }
+.sz-step {
+    width: 40px; height: 40px; background: transparent; border: none; border-radius: 9px; cursor: pointer;
+    color: var(--text); font-family: inherit; font-size: 18px; font-weight: 700; line-height: 1;
+}
+.sz-step:hover { background: var(--border-subtle); }
+.sz-step-value { min-width: 28px; text-align: center; font-size: 15px; font-weight: 800; font-variant-numeric: tabular-nums; }
 /* Results: split the pool into tables */
-.sz-tables { margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--border-subtle); }
+.sz-tables { box-sizing: border-box; margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--border-subtle); }
 .sz-tables-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
 .sz-tables-title { font-family: 'Unbounded', sans-serif; font-size: 16px; font-weight: 700; margin: 0; }
 .sz-tables-controls { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }

@@ -30,6 +30,8 @@ const SZ_STR = {
     tables_hide: 'Hide',
     tables_count: 'Tables',
     tables_seats: 'Seats per table, GM included',
+    tables_less: 'Fewer',
+    tables_more: 'More',
     tables_waiting: 'Still waiting for {n} vote(s), so this may change.',
     tables_need_gms: 'GMs marked: {n}, tables: {t}. Every table needs a GM: ask them to tick “I\'m the GM” in their vote.',
     tables_need_games: 'Fewer games have votes than there are tables.',
@@ -183,6 +185,8 @@ const SZ_STR = {
     tables_hide: 'Скрыть',
     tables_count: 'Столов',
     tables_seats: 'Мест за столом, вместе с мастером',
+    tables_less: 'Меньше',
+    tables_more: 'Больше',
     tables_waiting: 'Ещё ждём голосов: {n}. Состав может измениться.',
     tables_need_gms: 'Отмечено мастеров: {n}, столов: {t}. Каждому столу нужен мастер: попроси их поставить «Я мастер» в своём голосе.',
     tables_need_games: 'Игр с голосами меньше, чем столов.',
@@ -469,7 +473,7 @@ async function szEnterRoom(id) {
   szPeek = false;
   szTab = 'vote';
   // Panels and hand-made seatings belong to the room they were opened in
-  Object.assign(szTables, { open: false, option: 0, key: '', built: null, picked: null, edited: false, dragging: false });
+  Object.assign(szTables, { open: false, option: 0, key: '', built: null, picked: null, edited: false, dragging: false, minHeight: 0 });
   Object.assign(szShare, { open: false, card: null });
   const el = szEnsureOverlay();
   el.innerHTML = szTopBar() + `<div class="sz-body"><div class="sz-loading">…</div></div>`;
@@ -1119,19 +1123,28 @@ function szTablesBuilt() {
 
 function szTablesToggle() {
   szTables.open = !szTables.open;
-  if (!szTables.open) { szTables.edited = false; szTables.key = ''; }
+  if (!szTables.open) { szTables.edited = false; szTables.key = ''; szTables.minHeight = 0; }
   szRenderTally();
 }
 
-function szTablesSet(field, value) {
+function szTablesStep(field, delta) {
   const limits = { count: [2, 6], seats: [2, 12] }[field];
-  const n = parseInt(value, 10);
-  const next = n ? Math.min(limits[1], Math.max(limits[0], n)) : szTables[field];
-  if (next !== szTables[field]) {
-    szTables[field] = next;
-    szTables.edited = false;
-  }
+  const next = Math.min(limits[1], Math.max(limits[0], szTables[field] + delta));
+  if (next === szTables[field]) return;
+  szTables[field] = next;
+  szTables.edited = false;
+  // The redraw replaces the button and the seating under it can change height:
+  // keep the button where the pointer is, so repeated clicks land on it.
+  const id = `${field}:${delta}`;
+  const find = () => document.querySelector(`.sz-step[data-step="${id}"]`);
+  const room = document.getElementById('sz-room');
+  const top = find().getBoundingClientRect().top;
+  // A shorter panel could shrink the page and make the browser scroll it, so it only grows
+  szTables.minHeight = Math.max(szTables.minHeight, document.querySelector('.sz-tables').offsetHeight);
   szRenderTally();
+  const btn = find();
+  room.scrollTop += btn.getBoundingClientRect().top - top;
+  btn.focus({ preventScroll: true });
 }
 
 function szTablesNext() {
@@ -1252,6 +1265,7 @@ async function szTablesSend(seating) {
     szTables.open = false;
     szTables.edited = false;
     szTables.key = '';
+    szTables.minHeight = 0;
     szTables.picked = null;
     szRenderTally();
   } catch (e) {
@@ -1397,16 +1411,21 @@ function szTablesHTML() {
   }
   const missing = (szData.expected || 0) - szData.ballots.length;
   return `
-    <section class="sz-tables">
+    <section class="sz-tables" style="min-height: ${szTables.minHeight}px">
       <div class="sz-tables-head">
         <h3 class="sz-tables-title">${szEsc(szT('tables_title'))}</h3>
         <button type="button" class="sz-link-btn" onclick="szTablesToggle()">${szEsc(szT('tables_hide'))}</button>
       </div>
       <div class="sz-tables-controls">
-        <label class="sz-opt"><span>${szEsc(szT('tables_count'))}</span>
-          <input class="sz-name-input sz-opt-count" type="number" min="2" max="6" inputmode="numeric" value="${szTables.count}" onchange="szTablesSet('count', this.value)"></label>
-        <label class="sz-opt"><span>${szEsc(szT('tables_seats'))}</span>
-          <input class="sz-name-input sz-opt-count" type="number" min="2" max="12" inputmode="numeric" value="${szTables.seats}" onchange="szTablesSet('seats', this.value)"></label>
+        ${[['count', 'tables_count'], ['seats', 'tables_seats']].map(([field, label]) => `
+          <div class="sz-opt">
+            <span>${szEsc(szT(label))}</span>
+            <div class="sz-stepper" role="group" aria-label="${szEsc(szT(label))}">
+              <button type="button" class="sz-step" data-step="${field}:-1" aria-label="${szEsc(szT('tables_less'))}" onclick="szTablesStep('${field}', -1)">−</button>
+              <output class="sz-step-value">${szTables[field]}</output>
+              <button type="button" class="sz-step" data-step="${field}:1" aria-label="${szEsc(szT('tables_more'))}" onclick="szTablesStep('${field}', 1)">+</button>
+            </div>
+          </div>`).join('')}
       </div>
       ${missing > 0 ? `<p class="sz-hint sz-tables-wait">${szEsc(szT('tables_waiting', { n: missing }))}</p>` : ''}
       ${body}

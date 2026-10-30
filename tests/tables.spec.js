@@ -101,6 +101,36 @@ test.describe('Dragging players on a desktop', () => {
     expect(await page.evaluate(() => szTables.edited)).toBe(false);
   });
 
+  test('the table count buttons stay under the pointer', async ({ page }) => {
+    await openPanel(page);
+    await expect(page.locator('.sz-tables input')).toHaveCount(0);
+    const plus = page.locator('.sz-step[data-step="count:1"]');
+    await page.evaluate(() => { document.getElementById('sz-room').scrollTop = document.querySelector('.sz-tables').offsetTop; });
+    await page.evaluate(() => document.fonts.ready);
+    // The raw mouse, as Playwright's click() scrolls on its own and would hide a jump.
+    // The wait covers icons, which are swapped in shortly after each redraw.
+    const press = async loc => {
+      const box = await loc.boundingBox();
+      const before = (await plus.boundingBox()).y;
+      await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2);
+      await page.waitForTimeout(300);
+      expect((await plus.boundingBox()).y).toBeCloseTo(before, 0);
+    };
+    await press(plus);  // 3 tables and 2 GMs: the seating turns into a short message
+    await expect(page.locator('.sz-tables .sz-warn')).toBeVisible();
+    await press(page.locator('.sz-step[data-step="count:-1"]'));
+    await expect(page.locator('.sz-table')).toHaveCount(2);
+  });
+
+  test('the page keeps its height when icons are swapped in', async ({ page }) => {
+    await openPanel(page);
+    const height = () => page.evaluate(() => document.getElementById('sz-room').scrollHeight);
+    await page.evaluate(() => szRenderTally());
+    const before = await height();
+    await page.waitForTimeout(300);
+    expect(await height()).toBe(before);
+  });
+
   test('a cancelled drag changes nothing', async ({ page }) => {
     await openPanel(page);
     const from = await tableOf(page, 'Илья');
