@@ -324,6 +324,9 @@ app.post('/room/:id/suggest', async (req, res) => {
 // read per-link OG from the static site. These HTML routes return per-link OG
 // meta and instantly redirect humans into the SPA. Share links point here.
 const SITE = process.env.SITE_ORIGIN || 'https://sessionzero.games';
+// This server's own public origin. Share pages name themselves in og:url: crawlers
+// that follow og:url (Facebook) would otherwise land on the SPA and get its home card.
+const SHARE_ORIGIN = process.env.SHARE_ORIGIN || 'https://sessionzero-rooms-production.up.railway.app';
 function htmlEsc(s) {
   return String(s == null ? '' : s).replace(/[&<>"']/g, c => (
     { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
@@ -346,8 +349,8 @@ function wantsRu(req) {
   if (req.query && req.query.l) return req.query.l === 'ru';
   return /^ru\b/.test(String(req.headers['accept-language'] || '').toLowerCase());
 }
-function ogPage({ title, desc, image, redirect }) {
-  const t = htmlEsc(title), d = htmlEsc(desc), img = htmlEsc(image), r = htmlEsc(redirect);
+export function ogPage({ title, desc, image, redirect, shareUrl }) {
+  const t = htmlEsc(title), d = htmlEsc(desc), img = htmlEsc(image), r = htmlEsc(redirect), u = htmlEsc(shareUrl);
   return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${t}</title>
@@ -358,7 +361,7 @@ function ogPage({ title, desc, image, redirect }) {
 <meta property="og:image" content="${img}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:url" content="${r}">
+<meta property="og:url" content="${u}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${t}">
 <meta name="twitter:description" content="${d}">
@@ -394,7 +397,7 @@ app.get('/r/:id', async (req, res) => {
     res.set('Content-Type', 'text/html; charset=utf-8')
        .set('Cache-Control', 'public, max-age=300')
        .set('Vary', 'Accept-Language')
-       .send(ogPage({ title, desc, image: voteOgImage(ru), redirect: `${SITE}/#room=${id}` }));
+       .send(ogPage({ title, desc, image: voteOgImage(ru), redirect: `${SITE}/#room=${id}`, shareUrl: `${SHARE_ORIGIN}/r/${id}?l=${ru ? 'ru' : 'en'}` }));
   } catch (e) {
     console.error('GET /r/:id', e);
     res.redirect(302, SITE + '/');
@@ -416,7 +419,7 @@ app.get('/l/:ids', (req, res) => {
   res.set('Content-Type', 'text/html; charset=utf-8')
      .set('Cache-Control', 'public, max-age=300')
      .set('Vary', 'Accept-Language')
-     .send(ogPage({ title, desc, image: ogImage(arr[0], ru), redirect: `${SITE}/#list=${ids}` }));
+     .send(ogPage({ title, desc, image: ogImage(arr[0], ru), redirect: `${SITE}/#list=${ids}`, shareUrl: `${SHARE_ORIGIN}/l/${ids}?l=${ru ? 'ru' : 'en'}` }));
 });
 
 // Only boot the server when run directly (`node index.js`), not when imported by tests.

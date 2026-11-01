@@ -1,7 +1,17 @@
 // Unit tests for the pure logic (validation + tally). No DB needed.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { cleanIdList, buildTally, suggestError, cleanCustom, cleanExpected, cleanSeating } from './index.js';
+import { cleanIdList, buildTally, suggestError, cleanCustom, cleanExpected, cleanSeating, ogPage } from './index.js';
+
+test('ogPage names the share URL in og:url and sends humans to the SPA', () => {
+  const html = ogPage({
+    title: 'T', desc: 'D', image: 'https://site/og/vote.jpg',
+    redirect: 'https://site/#room=abc', shareUrl: 'https://api/r/abc?l=ru',
+  });
+  assert.match(html, /<meta property="og:url" content="https:\/\/api\/r\/abc\?l=ru">/);
+  assert.match(html, /<link rel="canonical" href="https:\/\/site\/#room=abc">/);
+  assert.match(html, /url=https:\/\/site\/#room=abc">/);
+});
 
 test('cleanIdList drops non-strings, blanks, dupes, and over-long ids', () => {
   const out = cleanIdList(['cairn', 'cairn', '', 42, null, '  blades  ', 'x'.repeat(100)]);
