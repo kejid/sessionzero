@@ -14106,12 +14106,14 @@ registerSystem("scion", {
   "free": false,
   "edition": "2nd Edition",
   "foundryStatus": "Official",
-  "heroImage": "https://sessionzero.games/images/heroes/scion.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/scion-7a7b7685.jpg",
   "playstyleTags": ["narrative", "combat", "social"],
   "settingTags": ["modern", "fantasy"],
   "gallery": [
     { "src": "https://sessionzero.games/images/systems/scion-g1.jpg" },
-    { "src": "https://sessionzero.games/images/systems/scion-g2.jpg" }
+    { "src": "https://sessionzero.games/images/systems/scion-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/scion-g3.jpg" },
+    { "src": "https://sessionzero.games/images/systems/scion-g4.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://theonyxpath.com/category/worlds/scion/", "fmt": "Web" },
@@ -14146,7 +14148,9 @@ registerSystem("scion", {
     ],
     "gallery": [
       { "cap": "Баннер Scion: Demigod" },
-      { "cap": "Баннер Scion: Dragon и Masks of the Mythos" }
+      { "cap": "Баннер Scion: Dragon и Masks of the Mythos" },
+      { "cap": "Стрелок с воронами среди небоскрёбов, арт из кампании второй редакции" },
+      { "cap": "Огненный великан, арт из кампании второй редакции" }
     ],
     "resources": [
       { "name": "Scion на сайте Onyx Path" },
@@ -14172,7 +14176,9 @@ registerSystem("scion", {
     ],
     "gallery": [
       { "cap": "Scion: Demigod banner" },
-      { "cap": "Scion: Dragon and Masks of the Mythos banner" }
+      { "cap": "Scion: Dragon and Masks of the Mythos banner" },
+      { "cap": "A gunman with ravens among skyscrapers, art from the second edition campaign" },
+      { "cap": "A fiery giant, art from the second edition campaign" }
     ],
     "resources": [
       { "name": "Scion at Onyx Path" },
@@ -17360,13 +17366,14 @@ registerSystem("they-came-from", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "None",
-  "heroImage": "https://sessionzero.games/images/heroes/they-came-from.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/they-came-from-d00848a5.jpg",
   "playstyleTags": ["horror", "combat", "mystery"],
   "settingTags": ["historical", "weird"],
   "gallery": [
     { "src": "https://sessionzero.games/images/systems/they-came-from-g1.jpg" },
-    { "src": "https://sessionzero.games/images/systems/they-came-from-g2.jpg" },
-    { "src": "https://sessionzero.games/images/systems/they-came-from-g3.jpg" }
+    { "src": "https://sessionzero.games/images/systems/they-came-from-g4.jpg" },
+    { "src": "https://sessionzero.games/images/systems/they-came-from-g3.jpg" },
+    { "src": "https://sessionzero.games/images/systems/they-came-from-g5.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://theonyxpath.com/category/worlds/they-came-from/", "fmt": "Web" },
@@ -17403,7 +17410,8 @@ registerSystem("they-came-from", {
     "gallery": [
       { "cap": "Обложка They Came from Beneath the Sea!" },
       { "cap": "Схватка с гигантским омаром, иллюстрация из книги" },
-      { "cap": "Безумный учёный из They Came from Beyond the Grave!, художник Кен Мейер-младший" }
+      { "cap": "Безумный учёный из They Came from Beyond the Grave!, художник Кен Мейер-младший" },
+      { "cap": "Человек с клешнями и звёздно-полосатым флагом, арт из кампании Beneath the Sea!" }
     ],
     "resources": [
       { "name": "They Came From… на сайте Onyx Path" },
@@ -17431,7 +17439,8 @@ registerSystem("they-came-from", {
     "gallery": [
       { "cap": "Cover of They Came from Beneath the Sea!" },
       { "cap": "A fight with a giant lobster, art from the book" },
-      { "cap": "A mad scientist from They Came from Beyond the Grave!, art by Ken Meyer Jr." }
+      { "cap": "A mad scientist from They Came from Beyond the Grave!, art by Ken Meyer Jr." },
+      { "cap": "A man with claws and a stars-and-stripes flag, art from the Beneath the Sea! campaign" }
     ],
     "resources": [
       { "name": "They Came From… at Onyx Path" },
@@ -18236,13 +18245,14 @@ registerSystem("trinity-continuum", {
   "free": false,
   "edition": "Core Rulebook",
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/trinity-continuum.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/trinity-continuum-bc58f094.jpg",
   "playstyleTags": ["narrative", "combat", "explore"],
   "settingTags": ["space", "weird"],
   "gallery": [
     { "src": "https://sessionzero.games/images/systems/trinity-continuum-g1.jpg" },
-    { "src": "https://sessionzero.games/images/systems/trinity-continuum-g2.jpg" },
-    { "src": "https://sessionzero.games/images/systems/trinity-continuum-g3.jpg" }
+    { "src": "https://sessionzero.games/images/systems/trinity-continuum-g4.jpg" },
+    { "src": "https://sessionzero.games/images/systems/trinity-continuum-g5.jpg" },
+    { "src": "https://sessionzero.games/images/systems/trinity-continuum-g6.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://theonyxpath.com/category/worlds/trinitycontinuum/", "fmt": "Web" },
@@ -18276,8 +18286,9 @@ registerSystem("trinity-continuum", {
     ],
     "gallery": [
       { "cap": "Баннер Trinity Continuum: Aether" },
-      { "cap": "Баннер Trinity Continuum: Adventure!" },
-      { "cap": "Баннер Trinity Continuum: Aberrant" }
+      { "cap": "Город будущего, арт из кампании Æon" },
+      { "cap": "Полёт над небоскрёбом, арт из кампании Æon" },
+      { "cap": "Новы, групповой арт Aberrant" }
     ],
     "resources": [
       { "name": "Trinity Continuum на сайте Onyx Path" },
@@ -18302,8 +18313,9 @@ registerSystem("trinity-continuum", {
     ],
     "gallery": [
       { "cap": "Trinity Continuum: Aether banner" },
-      { "cap": "Trinity Continuum: Adventure! banner" },
-      { "cap": "Trinity Continuum: Aberrant banner" }
+      { "cap": "A city of the future, art from the Æon campaign" },
+      { "cap": "A flight past a skyscraper, art from the Æon campaign" },
+      { "cap": "Novas, group art from Aberrant" }
     ],
     "resources": [
       { "name": "Trinity Continuum at Onyx Path" },

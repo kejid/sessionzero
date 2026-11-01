@@ -12,13 +12,14 @@ registerSystem("trinity-continuum", {
   "free": false,
   "edition": "Core Rulebook",
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/trinity-continuum.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/trinity-continuum-bc58f094.jpg",
   "playstyleTags": ["narrative", "combat", "explore"],
   "settingTags": ["space", "weird"],
   "gallery": [
     { "src": "https://sessionzero.games/images/systems/trinity-continuum-g1.jpg" },
-    { "src": "https://sessionzero.games/images/systems/trinity-continuum-g2.jpg" },
-    { "src": "https://sessionzero.games/images/systems/trinity-continuum-g3.jpg" }
+    { "src": "https://sessionzero.games/images/systems/trinity-continuum-g4.jpg" },
+    { "src": "https://sessionzero.games/images/systems/trinity-continuum-g5.jpg" },
+    { "src": "https://sessionzero.games/images/systems/trinity-continuum-g6.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://theonyxpath.com/category/worlds/trinitycontinuum/", "fmt": "Web" },
@@ -52,8 +53,9 @@ registerSystem("trinity-continuum", {
     ],
     "gallery": [
       { "cap": "Баннер Trinity Continuum: Aether" },
-      { "cap": "Баннер Trinity Continuum: Adventure!" },
-      { "cap": "Баннер Trinity Continuum: Aberrant" }
+      { "cap": "Город будущего, арт из кампании Æon" },
+      { "cap": "Полёт над небоскрёбом, арт из кампании Æon" },
+      { "cap": "Новы, групповой арт Aberrant" }
     ],
     "resources": [
       { "name": "Trinity Continuum на сайте Onyx Path" },
@@ -78,8 +80,9 @@ registerSystem("trinity-continuum", {
     ],
     "gallery": [
       { "cap": "Trinity Continuum: Aether banner" },
-      { "cap": "Trinity Continuum: Adventure! banner" },
-      { "cap": "Trinity Continuum: Aberrant banner" }
+      { "cap": "A city of the future, art from the Æon campaign" },
+      { "cap": "A flight past a skyscraper, art from the Æon campaign" },
+      { "cap": "Novas, group art from Aberrant" }
     ],
     "resources": [
       { "name": "Trinity Continuum at Onyx Path" },

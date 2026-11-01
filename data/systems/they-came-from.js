@@ -10,13 +10,14 @@ registerSystem("they-came-from", {
   "players": "3–5",
   "complexity": 3,
   "foundryStatus": "None",
-  "heroImage": "https://sessionzero.games/images/heroes/they-came-from.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/they-came-from-d00848a5.jpg",
   "playstyleTags": ["horror", "combat", "mystery"],
   "settingTags": ["historical", "weird"],
   "gallery": [
     { "src": "https://sessionzero.games/images/systems/they-came-from-g1.jpg" },
-    { "src": "https://sessionzero.games/images/systems/they-came-from-g2.jpg" },
-    { "src": "https://sessionzero.games/images/systems/they-came-from-g3.jpg" }
+    { "src": "https://sessionzero.games/images/systems/they-came-from-g4.jpg" },
+    { "src": "https://sessionzero.games/images/systems/they-came-from-g3.jpg" },
+    { "src": "https://sessionzero.games/images/systems/they-came-from-g5.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://theonyxpath.com/category/worlds/they-came-from/", "fmt": "Web" },
@@ -53,7 +54,8 @@ registerSystem("they-came-from", {
     "gallery": [
       { "cap": "Обложка They Came from Beneath the Sea!" },
       { "cap": "Схватка с гигантским омаром, иллюстрация из книги" },
-      { "cap": "Безумный учёный из They Came from Beyond the Grave!, художник Кен Мейер-младший" }
+      { "cap": "Безумный учёный из They Came from Beyond the Grave!, художник Кен Мейер-младший" },
+      { "cap": "Человек с клешнями и звёздно-полосатым флагом, арт из кампании Beneath the Sea!" }
     ],
     "resources": [
       { "name": "They Came From… на сайте Onyx Path" },
@@ -81,7 +83,8 @@ registerSystem("they-came-from", {
     "gallery": [
       { "cap": "Cover of They Came from Beneath the Sea!" },
       { "cap": "A fight with a giant lobster, art from the book" },
-      { "cap": "A mad scientist from They Came from Beyond the Grave!, art by Ken Meyer Jr." }
+      { "cap": "A mad scientist from They Came from Beyond the Grave!, art by Ken Meyer Jr." },
+      { "cap": "A man with claws and a stars-and-stripes flag, art from the Beneath the Sea! campaign" }
     ],
     "resources": [
       { "name": "They Came From… at Onyx Path" },

@@ -12,12 +12,14 @@ registerSystem("scion", {
   "free": false,
   "edition": "2nd Edition",
   "foundryStatus": "Official",
-  "heroImage": "https://sessionzero.games/images/heroes/scion.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/scion-7a7b7685.jpg",
   "playstyleTags": ["narrative", "combat", "social"],
   "settingTags": ["modern", "fantasy"],
   "gallery": [
     { "src": "https://sessionzero.games/images/systems/scion-g1.jpg" },
-    { "src": "https://sessionzero.games/images/systems/scion-g2.jpg" }
+    { "src": "https://sessionzero.games/images/systems/scion-g2.jpg" },
+    { "src": "https://sessionzero.games/images/systems/scion-g3.jpg" },
+    { "src": "https://sessionzero.games/images/systems/scion-g4.jpg" }
   ],
   "resources": [
     { "type": "link", "url": "https://theonyxpath.com/category/worlds/scion/", "fmt": "Web" },
@@ -52,7 +54,9 @@ registerSystem("scion", {
     ],
     "gallery": [
       { "cap": "Баннер Scion: Demigod" },
-      { "cap": "Баннер Scion: Dragon и Masks of the Mythos" }
+      { "cap": "Баннер Scion: Dragon и Masks of the Mythos" },
+      { "cap": "Стрелок с воронами среди небоскрёбов, арт из кампании второй редакции" },
+      { "cap": "Огненный великан, арт из кампании второй редакции" }
     ],
     "resources": [
       { "name": "Scion на сайте Onyx Path" },
@@ -78,7 +82,9 @@ registerSystem("scion", {
     ],
     "gallery": [
       { "cap": "Scion: Demigod banner" },
-      { "cap": "Scion: Dragon and Masks of the Mythos banner" }
+      { "cap": "Scion: Dragon and Masks of the Mythos banner" },
+      { "cap": "A gunman with ravens among skyscrapers, art from the second edition campaign" },
+      { "cap": "A fiery giant, art from the second edition campaign" }
     ],
     "resources": [
       { "name": "Scion at Onyx Path" },
