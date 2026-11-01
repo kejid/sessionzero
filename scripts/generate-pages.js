@@ -911,7 +911,7 @@ function renderRuHome() {
   const title = 'Во что поиграть всей группой? Голосование по TTRPG | Session Zero';
   const metaDesc = `Не можете выбрать настольную ролевую игру для следующей кампании? Соберите шортлист из ${SYSTEM_COUNT}+ систем, отправьте группе одну ссылку — каждый проголосует с телефона. Бесплатно, без регистрации.`;
   const canonical = `${SITE}/ru/`;
-  const ogImage = `${SITE}/og/ru/home.jpg`;
+  const ogImage = `${SITE}/og/ru/vote.jpg`;
 
   const featured = ids.filter((_, i) => i % Math.max(1, Math.ceil(ids.length / 8)) === 0).slice(0, 8);
   const cardsHTML = featured.map(sid => {
