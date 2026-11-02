@@ -556,7 +556,9 @@ function resetPlayers() {
     vetoes = {};
     deferred = [];
     manualOrder = [];
-    location.reload();
+    // A reload on /system/<id>.html would land on the static page, not the app.
+    if (location.pathname === '/') location.reload();
+    else location.assign('/');
 }
 
 function skipSetup() {
@@ -1375,6 +1377,16 @@ function closeSidebar() {
     document.querySelector('.hamburger')?.focus();
 }
 
+// Address-bar URL for a page. Official systems use their static page, because that
+// is what people copy and paste: a #hash never reaches link-preview crawlers, while
+// /system/<id>.html carries the system's own OG card. Relative URLs resolve against
+// <base href="/">, so the "#" form always lands on the app root.
+function pageUrl(id) {
+    const isCustom = CustomSystems && CustomSystems.find && CustomSystems.find(id);
+    if (id === 'results' || !SYSTEMS_DATA[id] || isCustom) return '#' + id;
+    return (currentLang === 'ru' ? '/ru' : '') + '/system/' + encodeURIComponent(id) + '.html';
+}
+
 function showPage(id, pushHistory = true) {
     document.querySelectorAll('.system-page').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
@@ -1392,7 +1404,7 @@ function showPage(id, pushHistory = true) {
     if (navItem) navItem.classList.add('active');
     if (id === 'results') renderResults();
     if (pushHistory) {
-        history.pushState({ page: id }, '', '#' + id);
+        history.pushState({ page: id }, '', pageUrl(id));
     }
     updatePresCounter();
     // Auto-close sidebar on mobile after navigation
@@ -2331,6 +2343,7 @@ document.addEventListener('langchange', function() {
         ensureSystemRendered(activeId);
         var restored = document.getElementById(activeId);
         if (restored) restored.classList.add('active');
+        history.replaceState(history.state, '', pageUrl(activeId));
     }
 
     translateI18nElements();
@@ -2385,6 +2398,7 @@ function initApp() {
     const hash = window.location.hash.replace('#', '');
     if (hash && (SYSTEMS_DATA[hash] || document.getElementById(hash))) {
         showPage(hash, false);
+        history.replaceState(history.state, '', pageUrl(hash));
     }
 }
 

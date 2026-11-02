@@ -467,7 +467,7 @@ function szCloseOverlay() {
 function szTopBar() {
   return `
     <div class="sz-topbar">
-      <a class="sz-brand" href="${location.pathname}" onclick="szExit(event)">SESSION ZERO</a>
+      <a class="sz-brand" href="/" onclick="szExit(event)">SESSION ZERO</a>
       <div class="sz-topbar-actions">
         <div class="sz-lang">
           <button class="sz-lang-btn" data-lang="en" onclick="szSetLang('en')">EN</button>
@@ -539,7 +539,7 @@ function szRenderMessage(msg, retry) {
     <div class="sz-message">
       <p>${szEsc(msg)}</p>
       ${retry ? `<button class="sz-btn" onclick="szEnterRoom('${szEsc(szRoomId)}')">${szEsc(szT('retry'))}</button>` : ''}
-      <a class="sz-link" href="${location.pathname}">${szEsc(szT('back_home'))}</a>
+      <a class="sz-link" href="/">${szEsc(szT('back_home'))}</a>
     </div>`;
 }
 
@@ -623,7 +623,7 @@ function szCardHTML(s, readOnly) {
     : `<div class="sz-card-img sz-card-img-empty"></div>`;
   // Title + thumbnail link to the system's full page, opened in a new tab via
   // the main app's deep link (#<id>) so the voter never loses their ballot.
-  const href = location.pathname + '#' + encodeURIComponent(s.id);
+  const href = '/#' + encodeURIComponent(s.id);
   const hasPage = !s.custom || !!szLocalCustom(s.id);
   const vote = readOnly ? '' : `
       <div class="sz-card-vote">
@@ -2006,7 +2006,7 @@ async function szDoCreateFromList() {
 }
 
 function szListUrl(ids) {
-  return SZ_API ? (SZ_API + '/l/' + ids.join(',') + '?l=' + szShareLang()) : (location.origin + location.pathname + '#list=' + ids.join(','));
+  return SZ_API ? (SZ_API + '/l/' + ids.join(',') + '?l=' + szShareLang()) : (location.origin + '/#list=' + ids.join(','));
 }
 function szCopyListLink() {
   const all = szListIds || [...szGetPick()];
@@ -2028,7 +2028,7 @@ function szShareLang() {
   return (typeof currentLang !== 'undefined' && currentLang === 'ru') ? 'ru' : 'en';
 }
 function szRoomUrl(id) {
-  return SZ_API ? (SZ_API + '/r/' + id + '?l=' + szShareLang()) : (location.origin + location.pathname + '#room=' + id);
+  return SZ_API ? (SZ_API + '/r/' + id + '?l=' + szShareLang()) : (location.origin + '/#room=' + id);
 }
 function szCopyLink() {
   const url = szRoomUrl(szRoomId);
@@ -2045,7 +2045,7 @@ function szExit(event) {
   if (szView === 'room' && szDirty && !confirm(szT('leave_unsaved'))) return;
   szCloseOverlay();
   szRoomId = null; szData = null; szDirty = false; szListIds = null; szView = null;
-  history.replaceState({ page: 'results' }, '', location.pathname + '#results');
+  history.replaceState({ page: 'results' }, '', '/#results');
 }
 
 // Re-render whichever overlay view is open when the app's language changes.
@@ -2318,7 +2318,7 @@ function szCopyShare() {
 
 function szGoRoom(event, id) {
   if (event) event.preventDefault();
-  history.replaceState({ page: 'room' }, '', location.pathname + '#room=' + id);
+  history.replaceState({ page: 'room' }, '', '/#room=' + id);
   szEnterRoom(id);
 }
 
