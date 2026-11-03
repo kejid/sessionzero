@@ -158,6 +158,22 @@ test.describe('Moving players between tables', () => {
     await page.locator('.sz-table').nth(to).locator('.sz-seat-here').click();
     expect(await tableOf(page, 'Илья')).toBe(to);
   });
+
+  test('a player can sit at two tables, and leave one of them', async ({ page }) => {
+    await openPanel(page);
+    const from = await tableOf(page, 'Илья');
+    const to = from === 0 ? 1 : 0;
+    await page.locator('.sz-seat', { hasText: 'Илья' }).click();
+    await page.locator('.sz-table').nth(to).getByRole('button', { name: 'Add here too' }).click();
+    const chips = page.locator('.sz-seat', { hasText: 'Илья' });
+    await expect(chips).toHaveCount(2);
+
+    // Off the table they were picked at: the other seat stays
+    await chips.nth(0).click();
+    await page.locator('.sz-tables-out').getByRole('button', { name: 'Take off this table' }).click();
+    await expect(chips).toHaveCount(1);
+    await expect(page.locator('.sz-tables-out')).toBeHidden();
+  });
 });
 
 test.describe('Splitting a pool into tables', () => {
@@ -167,13 +183,23 @@ test.describe('Splitting a pool into tables', () => {
     const best = options[0];
     expect(best.out).toEqual([]);
     const seated = best.tables.flatMap(t => [t.gm, ...t.players]);
-    expect(seated.slice().sort()).toEqual(POOL.map(b => b.voter).sort());
+    expect([...new Set(seated)].sort()).toEqual(POOL.map(b => b.voter).sort());
     for (const t of best.tables) {
       expect(['Аня', 'Егор']).toContain(t.gm);
       for (const v of [t.gm, ...t.players]) {
         expect(POOL.find(b => b.voter === v).down).not.toContain(t.game);
       }
     }
+  });
+
+  test('fills free seats with players who voted for that game and sit elsewhere', async ({ page }) => {
+    const { options } = await build(page, POOL, GAMES, 2, 5);
+    for (const t of options[0].tables) {
+      expect(new Set([t.gm, ...t.players]).size).toBe(t.players.length + 1);
+      expect(t.players.length + 1).toBeLessThanOrEqual(5);
+    }
+    const seats = options[0].tables.flatMap(t => [t.gm, ...t.players]);
+    expect(seats.length).toBeGreaterThan(new Set(seats).size);
   });
 
   test('leaves out a player who is against every table', async ({ page }) => {
@@ -194,7 +220,7 @@ test.describe('Splitting a pool into tables', () => {
     const best = options[0];
     expect(best.tables.map(t => t.gm)).toEqual(['Аня', 'Аня']);
     const players = best.tables.flatMap(t => t.players).concat(best.out);
-    expect(players.slice().sort()).toEqual(POOL.map(b => b.voter).filter(v => v !== 'Аня').sort());
+    expect([...new Set(players)].sort()).toEqual(POOL.map(b => b.voter).filter(v => v !== 'Аня').sort());
   });
 
   test('two GMs share the tables out', async ({ page }) => {

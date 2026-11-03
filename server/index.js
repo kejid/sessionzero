@@ -118,26 +118,34 @@ export function cleanExpected(value) {
 }
 
 // A line-up to pin. Games must be in the room and people must have voted. A GM may
-// run several tables; everyone else sits once. Returns null when any table can't
-// stand as sent.
+// run several tables, and tables meet at different times, so a player may sit at
+// several too, but only once at each and never at a table they run. Returns null
+// when any table can't stand as sent.
 export function cleanSeating(raw, list, voters) {
   const tables = raw && Array.isArray(raw.tables) ? raw.tables : [];
   if (!tables.length || tables.length > MAX_TABLES) return null;
   const known = new Set(voters);
-  const seated = new Set(tables.map(t => t && t.gm));
-  const take = v => {
-    if (typeof v !== 'string' || !known.has(v) || seated.has(v)) return false;
-    seated.add(v);
-    return true;
-  };
+  const placed = new Set(tables.map(t => t && t.gm));
   const games = new Set();
   const clean = [];
   for (const t of tables) {
     if (!t || !list.includes(t.game) || games.has(t.game) || !known.has(t.gm)) return null;
     games.add(t.game);
-    clean.push({ game: t.game, gm: t.gm, players: (Array.isArray(t.players) ? t.players : []).filter(take) });
+    const here = new Set([t.gm]);
+    const players = (Array.isArray(t.players) ? t.players : []).filter(v => {
+      if (typeof v !== 'string' || !known.has(v) || here.has(v)) return false;
+      here.add(v);
+      placed.add(v);
+      return true;
+    });
+    clean.push({ game: t.game, gm: t.gm, players });
   }
-  return { tables: clean, out: (Array.isArray(raw.out) ? raw.out : []).filter(take) };
+  const out = (Array.isArray(raw.out) ? raw.out : []).filter(v => {
+    if (typeof v !== 'string' || !known.has(v) || placed.has(v)) return false;
+    placed.add(v);
+    return true;
+  });
+  return { tables: clean, out };
 }
 
 // Can this voter add another game? (exported for tests)

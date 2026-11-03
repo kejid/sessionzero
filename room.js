@@ -40,16 +40,19 @@ const SZ_STR = {
     tables_people: 'People: {n}',
     tables_out: 'Not seated',
     tables_move_here: 'Move here',
+    tables_add_here: 'Add here too',
+    tables_off_here: 'Take off this table',
     tables_summary: 'Seated {n} of {all}, {up} on a game they voted for.',
-    tables_edit_hint: 'Tap a name to move that player to another table.',
+    tables_edit_hint: 'Tap a name to move that player to another table or add them to a second one: tables meet at different times.',
     tables_pick_hint: 'Where should {name} go? Choose a table below.',
-    tables_edit_hint_drag: 'Drag a name to another table to move that player.',
+    tables_edit_hint_drag: 'Drag a name to another table to move that player; hold Ctrl to add them to a second table instead (tables meet at different times).',
     tables_next: 'Another option ({i} of {n})',
     tables_copy: 'Copy line-up',
     tables_copied: 'Line-up copied',
     tables_pin: 'Pin line-up',
     tables_your: 'Your table: {game}, GM {gm}',
     tables_your_gm: 'You run: {game}',
+    tables_your_many: 'Your tables: {game}',
     tables_your_out: 'No table for you yet',
     tables_pinned_by: 'Pinned by {name}',
     tables_edit: 'Edit',
@@ -205,16 +208,19 @@ const SZ_STR = {
     tables_people: 'Человек: {n}',
     tables_out: 'Не вошли',
     tables_move_here: 'Пересадить сюда',
+    tables_add_here: 'Добавить и сюда',
+    tables_off_here: 'Снять с этого стола',
     tables_summary: 'За столами {n} из {all}, на игре, за которую голосовали: {up}.',
-    tables_edit_hint: 'Нажми на имя, чтобы пересадить игрока за другой стол.',
+    tables_edit_hint: 'Нажми на имя, чтобы пересадить игрока или посадить ещё за один стол: столы играют в разное время.',
     tables_pick_hint: 'Куда пересадить: {name}? Выбери стол ниже.',
-    tables_edit_hint_drag: 'Перетащи имя за другой стол, чтобы пересадить игрока.',
+    tables_edit_hint_drag: 'Перетащи имя за другой стол, чтобы пересадить игрока; с зажатым Ctrl игрок сядет и за этот стол тоже (столы играют в разное время).',
     tables_next: 'Другой вариант ({i} из {n})',
     tables_copy: 'Скопировать состав',
     tables_copied: 'Состав скопирован',
     tables_pin: 'Закрепить состав',
     tables_your: 'Твой стол: {game}, мастер {gm}',
     tables_your_gm: 'Ты ведёшь: {game}',
+    tables_your_many: 'Твои столы: {game}',
     tables_your_out: 'Тебя пока нет за столом',
     tables_pinned_by: 'Кто закрепил: {name}',
     tables_edit: 'Изменить',
@@ -1089,6 +1095,24 @@ function szSeatPlayers(games, picked, ballots, maxSeats) {
   return { tables, out };
 }
 
+// Tables meet at different times, so a player already seated (or running a table)
+// may take a free seat at another table whose game they voted for.
+function szFillSecondTables(tables, maxSeats) {
+  const placed = new Map();
+  const count = b => placed.get(b) || 0;
+  for (const t of tables) for (const b of [t.gm, ...t.players]) placed.set(b, count(b) + 1);
+  for (const t of tables) {
+    const wanting = [...placed.keys()]
+      .filter(b => b !== t.gm && !t.players.includes(b) && szSeatPoints(b, t.game) === SZ_SEAT_UP)
+      .sort((x, y) => count(x) - count(y));
+    for (const b of wanting) {
+      if (t.players.length + 1 >= maxSeats) break;
+      t.players.push(b);
+      placed.set(b, count(b) + 1);
+    }
+  }
+}
+
 // games: ranked ids with no veto on them. Returns up to three seatings, best
 // first, or { error } when no seating can exist.
 function szBuildTables(ballots, games, count, maxSeats) {
@@ -1107,6 +1131,7 @@ function szBuildTables(ballots, games, count, maxSeats) {
     const picked = szAssignGms(combo, gms);
     if (!picked) continue;
     const { tables, out } = szSeatPlayers(combo, picked, ballots, maxSeats);
+    szFillSecondTables(tables, maxSeats);
     let score = out.length * SZ_SEAT_OUT;
     for (const t of tables) {
       for (const p of t.players) score += szSeatPoints(p, t.game);
@@ -1172,18 +1197,22 @@ function szTablesNext() {
   szRenderTally();
 }
 
-function szTablesPick(voter) {
-  szTables.picked = szTables.picked === voter ? null : voter;
+// from: index of the table the chip sits at, -1 for the not-seated list
+function szTablesPick(voter, from) {
+  const same = szTables.picked === voter && szTables.pickedFrom === from;
+  szTables.picked = same ? null : voter;
+  szTables.pickedFrom = same ? null : from;
   szRenderTally();
 }
 
 // Dragging is the desktop shortcut for the same move; touch screens and the
 // keyboard keep using pick + "Move here". No redraw until the drop: replacing
 // the dragged element would cancel the drag.
-function szSeatDragStart(e, voter) {
+function szSeatDragStart(e, voter, from) {
   szTables.picked = voter;
+  szTables.pickedFrom = from;
   szTables.dragging = true;
-  e.dataTransfer.effectAllowed = 'move';
+  e.dataTransfer.effectAllowed = 'copyMove';
   e.dataTransfer.setData('text/plain', voter);
   // Changing layout inside dragstart can make a browser cancel the drag
   const chip = e.target;
@@ -1207,7 +1236,7 @@ function szSeatDragEnd() {
 function szSeatDragOver(e, zone) {
   if (!szTables.dragging) return;
   e.preventDefault();
-  e.dataTransfer.dropEffect = 'move';
+  e.dataTransfer.dropEffect = e.ctrlKey || e.altKey ? 'copy' : 'move';
   zone.classList.add('sz-drop');
 }
 
@@ -1215,13 +1244,13 @@ function szSeatDrop(e, i) {
   if (!szTables.dragging) return;
   e.preventDefault();
   szTables.dragging = false;
-  szTablesMove(i);
+  szTablesMove(i, e.ctrlKey || e.altKey);
 }
 
-function szSeatKey(e, voter) {
+function szSeatKey(e, voter, from) {
   if (e.key !== 'Enter' && e.key !== ' ') return;
   e.preventDefault();
-  szTablesPick(voter);
+  szTablesPick(voter, from);
   const here = document.querySelector('.sz-seat-here');
   if (here) here.focus(); else szSeatFocus(voter);
 }
@@ -1232,19 +1261,27 @@ function szSeatFocus(voter) {
   if (chip) chip.focus();
 }
 
-// Seat the picked player at table i, or out of the seating when i is -1.
-function szTablesMove(i) {
+// Move the picked player from the table they were picked at to table i. With
+// copy they stay where they are and also join table i: tables meet at different
+// times, so one person can play at several. i = -1 takes them off the table they
+// were picked at; they land in the not-seated list once no table has them.
+function szTablesMove(i, copy) {
   // Read first: a ballot that arrived mid-drag makes szTablesBuilt rebuild and clear the pick
   const voter = szTables.picked;
+  const from = szTables.pickedFrom;
   const built = szTablesBuilt();
   szTables.picked = null;
+  szTables.pickedFrom = null;
   if (voter === null || built.error) return szRenderTally();
   const opt = built.options[szTables.option];
-  const from = opt.tables.findIndex(t => t.players.includes(voter));
-  if (from !== i) {
-    opt.out = opt.out.filter(v => v !== voter);
-    opt.tables.forEach(t => { t.players = t.players.filter(v => v !== voter); });
-    (i < 0 ? opt.out : opt.tables[i].players).push(voter);
+  const to = i < 0 ? null : opt.tables[i];
+  const already = to && (to.gm === voter || to.players.includes(voter));
+  if (!already && from !== i) {
+    if (to) to.players.push(voter);
+    if (!(copy && to) && from >= 0 && opt.tables[from]) {
+      opt.tables[from].players = opt.tables[from].players.filter(v => v !== voter);
+    }
+    opt.out = szUnseated(opt);
     szTables.edited = true;
   }
   szRenderTally();
@@ -1319,6 +1356,12 @@ function szTablesEdit() {
   if (panel) panel.scrollIntoView({ block: 'center' });
 }
 
+// "×2" for someone who sits at several tables
+function szSeatMulti(tables, voter) {
+  const n = tables.filter(t => t.gm === voter || t.players.includes(voter)).length;
+  return n > 1 ? `<span class="sz-seat-x">×${n}</span>` : '';
+}
+
 function szSeatChip(voter, game) {
   const b = szData.ballots.find(x => x.voter === voter);
   const pts = b && game ? szSeatPoints(b, game) : SZ_SEAT_NEUTRAL;
@@ -1337,6 +1380,7 @@ function szSeatingHTML() {
   const yours = !me || !szData.ballots.some(b => b.voter === me) ? ''
     : !mine ? szT('tables_your_out')
     : mine.gm === me ? szT('tables_your_gm', { game: myTables.map(t => name(t.game)).join(', ') })
+    : myTables.length > 1 ? szT('tables_your_many', { game: myTables.map(t => `${name(t.game)} (${t.gm})`).join(', ') })
     : szT('tables_your', { game: name(mine.game), gm: mine.gm });
   const cards = s.tables.map(t => `
     <div class="sz-table${myTables.includes(t) ? ' sz-table-mine' : ''}">
@@ -1346,7 +1390,7 @@ function szSeatingHTML() {
       </div>
       <div class="sz-tally-chips">
         <span class="sz-chip sz-chip-up sz-chip-gm"><i data-lucide="dices"></i>${szEsc(t.gm)} · ${szEsc(szT('gm_short'))}</span>
-        ${t.players.map(v => `<span class="sz-chip ${szSeatChip(v, t.game)}">${szEsc(v)}</span>`).join('')}
+        ${t.players.map(v => `<span class="sz-chip ${szSeatChip(v, t.game)}">${szEsc(v)}${szSeatMulti(s.tables, v)}</span>`).join('')}
       </div>
     </div>`).join('');
   return `
@@ -1386,12 +1430,19 @@ function szTablesHTML() {
   const fine = szFinePointer();
   const drag = fine ? 'draggable="true"' : '';
   const moveIcon = fine ? 'grip-vertical' : 'arrow-right-left';
-  const chipFor = (voter, game) => {
-    return `<span role="button" tabindex="0" ${drag} class="sz-chip ${szSeatChip(voter, game)} sz-seat${szTables.picked === voter ? ' sz-seat-picked' : ''}" data-v="${szEsc(voter)}" onclick="szTablesPick(this.dataset.v)" onkeydown="szSeatKey(event, this.dataset.v)" ondragstart="szSeatDragStart(event, this.dataset.v)" ondragend="szSeatDragEnd()"><i data-lucide="${moveIcon}"></i>${szEsc(voter)}</span>`;
+  const chipFor = (voter, game, from) => {
+    const picked = szTables.picked === voter && szTables.pickedFrom === from;
+    return `<span role="button" tabindex="0" ${drag} class="sz-chip ${szSeatChip(voter, game)} sz-seat${picked ? ' sz-seat-picked' : ''}" data-v="${szEsc(voter)}" data-from="${from}" onclick="szTablesPick(this.dataset.v, +this.dataset.from)" onkeydown="szSeatKey(event, this.dataset.v, +this.dataset.from)" ondragstart="szSeatDragStart(event, this.dataset.v, +this.dataset.from)" ondragend="szSeatDragEnd()"><i data-lucide="${moveIcon}"></i>${szEsc(voter)}${szSeatMulti(built.options[szTables.option].tables, voter)}</span>`;
   };
   const dropZone = i => `ondragover="szSeatDragOver(event, this)" ondragleave="if (!this.contains(event.relatedTarget)) this.classList.remove('sz-drop')" ondrop="szSeatDrop(event, ${i})"`;
-  const moveBtn = i => szTables.picked
-    ? `<button type="button" class="sz-link-btn sz-seat-here" onclick="szTablesMove(${i})">${szEsc(szT('tables_move_here'))}</button>` : '';
+  const moveBtn = i => {
+    if (!szTables.picked) return '';
+    const btn = (label, copy, first) => `<button type="button" class="sz-link-btn sz-seat-move${first ? ' sz-seat-here' : ''}" onclick="szTablesMove(${i}, ${copy})">${szEsc(szT(label))}</button>`;
+    // Picked from the not-seated list there is nothing to move from: one button seats them
+    const both = i >= 0 && szTables.pickedFrom >= 0;
+    const label = i < 0 ? 'tables_off_here' : 'tables_move_here';
+    return `<div class="sz-seat-moves">${btn(label, false, true)}${both ? btn('tables_add_here', true, false) : ''}</div>`;
+  };
 
   let body;
   if (built.error) {
@@ -1406,7 +1457,7 @@ function szTablesHTML() {
       .filter(v => szSeatPoints(byName[v], t.game) === SZ_SEAT_UP))).size;
     const cards = opt.tables.map((t, i) => {
       const r = szResolve(t.game);
-      const here = t.players.includes(szTables.picked);
+      const here = t.gm === szTables.picked || t.players.includes(szTables.picked);
       return `
         <div class="sz-table" ${dropZone(i)}>
           <div class="sz-table-head">
@@ -1415,13 +1466,13 @@ function szTablesHTML() {
           </div>
           <div class="sz-tally-chips">
             <span class="sz-chip sz-chip-up sz-chip-gm"><i data-lucide="dices"></i>${szEsc(t.gm)} · ${szEsc(szT('gm_short'))}</span>
-            ${t.players.map(v => chipFor(v, t.game)).join('')}
+            ${t.players.map(v => chipFor(v, t.game, i)).join('')}
           </div>
           ${here ? '' : moveBtn(i)}
         </div>`;
     }).join('');
     const unseated = szUnseated(opt);
-    const pickedOut = unseated.includes(szTables.picked);
+    const pickedOut = szTables.pickedFrom < 0;
     const moveHint = szTables.picked ? szT('tables_pick_hint', { name: szTables.picked })
       : szT(fine ? 'tables_edit_hint_drag' : 'tables_edit_hint');
     body = `
@@ -1429,7 +1480,7 @@ function szTablesHTML() {
       <div class="sz-tables-grid">${cards}</div>
       <div class="sz-tables-out${unseated.length || szTables.picked ? '' : ' sz-tables-out-empty'}" ${dropZone(-1)}>
         <span class="sz-table-n">${szEsc(szT('tables_out'))}</span>
-        <div class="sz-tally-chips">${unseated.map(v => chipFor(v, null)).join('')}</div>
+        <div class="sz-tally-chips">${unseated.map(v => chipFor(v, null, -1)).join('')}</div>
         ${pickedOut ? '' : moveBtn(-1)}
       </div>
       <p class="sz-hint sz-tables-sum">${szEsc(szT('tables_summary', { n: seated, all: szData.ballots.length, up: wanted }))}</p>
@@ -1689,16 +1740,20 @@ async function szDrawResults() {
 }
 
 // The pinned line-up as an image: same frame as the results, one card per table.
-async function szDrawSeating() {
-  const { W, H, P, C, head, body } = SZ_IMG;
+function szDrawSeating() {
   const s = szData.seating;
-  const out = szUnseated(s);
+  return szDrawTableCards(szT('img_tables'), s.tables, szUnseated(s));
+}
+
+async function szDrawTableCards(title, tables, out) {
+  const { W, H, P, C, head, body } = SZ_IMG;
+  const s = { tables };
   const info = s.tables.map(t => szResolve(t.game) || { name: t.game });
   const [covers] = await Promise.all([
     Promise.all(info.map(r => szWholeImage(r.hero, 720))),
     szImageFonts(),
   ]);
-  const { canvas, ctx } = szImageFrame(szT('img_tables'));
+  const { canvas, ctx } = szImageFrame(title);
 
   const top = 350, gap = 18, outH = out.length ? 56 : 0;
   const room = H - P - 120 - top - outH;
@@ -1797,7 +1852,10 @@ async function szDrawMyVote() {
 async function szDrawMyTable() {
   const { W, H, P, C, head, body } = SZ_IMG;
   const me = szVoterName();
-  const t = szData.seating.tables.find(x => x.gm === me || x.players.includes(me));
+  const mine = szData.seating.tables.filter(x => x.gm === me || x.players.includes(me));
+  // Someone at several tables (they meet at different times) gets one card per table
+  if (mine.length > 1) return szDrawTableCards(szT('img_my_table', { name: me }), mine, []);
+  const t = mine[0];
   const r = szResolve(t.game) || { name: t.game };
   const [cover] = await Promise.all([
     szWholeImage(r.hero, 1080),

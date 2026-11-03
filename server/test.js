@@ -47,6 +47,17 @@ test('cleanSeating lets one GM run several tables, but not also play', () => {
   });
 });
 
+test('cleanSeating lets a player sit at several tables, once at each', () => {
+  const out = cleanSeating(
+    { tables: [{ game: 'cairn', gm: 'Ann', players: ['Bob', 'Bob'] }, { game: 'blades', gm: 'Cid', players: ['Bob', 'Ann', 'Cid'] }], out: [] },
+    ['cairn', 'blades'], ['Ann', 'Bob', 'Cid']
+  );
+  assert.deepEqual(out, {
+    tables: [{ game: 'cairn', gm: 'Ann', players: ['Bob'] }, { game: 'blades', gm: 'Cid', players: ['Bob', 'Ann'] }],
+    out: [],
+  });
+});
+
 test('cleanSeating rejects a line-up that cannot stand', () => {
   const list = ['cairn', 'blades'], voters = ['Ann', 'Bob'];
   const t = (game, gm) => ({ game, gm, players: [] });
