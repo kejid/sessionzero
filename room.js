@@ -44,6 +44,7 @@ const SZ_STR = {
     tables_group: 'group {n}',
     tables_dup: 'One more group',
     tables_drop: 'Remove group',
+    tables_add_game: '+ Add a game…',
     tables_off_here: 'Take off this table',
     tables_summary: 'Seated {n} of {all}, {up} on a game they voted for.',
     tables_edit_hint: 'Tap a name to move that player to another table or add them to a second one: tables meet at different times.',
@@ -215,6 +216,7 @@ const SZ_STR = {
     tables_group: 'группа {n}',
     tables_dup: 'Ещё одна группа',
     tables_drop: 'Убрать группу',
+    tables_add_game: '+ Добавить игру…',
     tables_off_here: 'Снять с этого стола',
     tables_summary: 'За столами {n} из {all}, на игре, за которую голосовали: {up}.',
     tables_edit_hint: 'Нажми на имя, чтобы пересадить игрока или посадить ещё за один стол: столы играют в разное время.',
@@ -1232,9 +1234,14 @@ function szSeatDragStart(e, voter, from) {
   });
 }
 
-function szSeatDragEnd() {
+// A drop on a table clears `dragging` first, so a dragend that still finds it set
+// means the name was let go over nothing: that takes the player off their table.
+// Escape also ends a drag, but with no pointer position, so it changes nothing.
+function szSeatDragEnd(e) {
   if (!szTables.dragging) return;
   szTables.dragging = false;
+  const released = e && (e.clientX || e.clientY);
+  if (released && szTables.pickedFrom >= 0) return szTablesMove(-1);
   szTables.picked = null;
   szRenderTally();
 }
@@ -1369,17 +1376,38 @@ function szTableTitle(tables, t) {
   return same.length > 1 ? `${name} · ${szT('tables_group', { n: same.indexOf(t) + 1 })}` : name;
 }
 
-// A second (third, ...) group for the same game, run by whichever willing GM has the fewest tables
-function szTablesDup(i) {
+// One card per game, its groups inside. Indices stay those of the flat table list.
+function szGameCards(tables) {
+  const cards = [];
+  tables.forEach((t, i) => {
+    let card = cards.find(c => c.game === t.game);
+    if (!card) cards.push(card = { game: t.game, items: [] });
+    card.items.push({ t, i });
+  });
+  return cards;
+}
+
+function szGameName(id) {
+  const r = szResolve(id);
+  return r ? r.name : id;
+}
+
+// A new group for a game, run by whichever willing GM has the fewest tables
+function szTablesDup(i) { szTablesAddGame(szTablesBuilt().options[szTables.option].tables[i].game); }
+
+function szTablesAddGame(game) {
   const built = szTablesBuilt();
-  if (built.error) return;
+  if (built.error || !game) return;
   const opt = built.options[szTables.option];
   if (opt.tables.length >= 6) return;
-  const game = opt.tables[i].game;
   const load = v => opt.tables.filter(t => t.gm === v).length;
   const gms = szData.ballots.filter(b => b.gm && szSeatPoints(b, game) !== null)
     .sort((x, y) => load(x.voter) - load(y.voter));
-  opt.tables.splice(i + 1, 0, { game, gm: gms.length ? gms[0].voter : opt.tables[i].gm, players: [] });
+  const all = szData.ballots.filter(b => b.gm).sort((x, y) => load(x.voter) - load(y.voter));
+  // Next to the game's other groups, else at the end
+  let at = opt.tables.length;
+  opt.tables.forEach((t, j) => { if (t.game === game) at = j + 1; });
+  opt.tables.splice(at, 0, { game, gm: (gms[0] || all[0]).voter, players: [] });
   opt.out = szUnseated(opt);
   szTables.count = opt.tables.length;
   szTables.edited = true;
@@ -1427,17 +1455,26 @@ function szSeatingHTML() {
     : mine.gm === me ? szT('tables_your_gm', { game: myTables.map(t => szTableTitle(s.tables, t)).join(', ') })
     : myTables.length > 1 ? szT('tables_your_many', { game: myTables.map(t => `${szTableTitle(s.tables, t)} (${t.gm})`).join(', ') })
     : szT('tables_your', { game: szTableTitle(s.tables, mine), gm: mine.gm });
-  const cards = s.tables.map(t => `
-    <div class="sz-table${myTables.includes(t) ? ' sz-table-mine' : ''}">
-      <div class="sz-table-head">
-        <span class="sz-tally-name">${szEsc(szTableTitle(s.tables, t))}</span>
-        <span class="sz-table-n">${szEsc(szT('tables_people', { n: t.players.length + 1 }))}</span>
-      </div>
-      <div class="sz-tally-chips">
-        <span class="sz-chip sz-chip-up sz-chip-gm"><i data-lucide="dices"></i>${szEsc(t.gm)} · ${szEsc(szT('gm_short'))}</span>
-        ${t.players.map(v => `<span class="sz-chip ${szSeatChip(v, t.game)}">${szEsc(v)}${szSeatMulti(s.tables, v)}</span>`).join('')}
-      </div>
-    </div>`).join('');
+  const cards = szGameCards(s.tables).map(card => {
+    const multi = card.items.length > 1;
+    const mineCard = card.items.some(({ t }) => myTables.includes(t));
+    const sections = card.items.map(({ t }, n) => `
+      <div class="sz-table${myTables.includes(t) ? ' sz-table-mine' : ''}">
+        ${multi ? `<div class="sz-table-head sz-group-head"><span class="sz-table-n">${szEsc(szT('tables_group', { n: n + 1 }))} · ${szEsc(szT('tables_people', { n: t.players.length + 1 }))}</span></div>` : ''}
+        <div class="sz-tally-chips">
+          <span class="sz-chip sz-chip-up sz-chip-gm"><i data-lucide="dices"></i>${szEsc(t.gm)} · ${szEsc(szT('gm_short'))}</span>
+          ${t.players.map(v => `<span class="sz-chip ${szSeatChip(v, t.game)}">${szEsc(v)}${szSeatMulti(s.tables, v)}</span>`).join('')}
+        </div>
+      </div>`).join('');
+    return `
+      <div class="sz-game${mineCard ? ' sz-table-mine' : ''}">
+        <div class="sz-table-head">
+          <span class="sz-tally-name">${szEsc(szGameName(card.game))}</span>
+          ${multi ? '' : `<span class="sz-table-n">${szEsc(szT('tables_people', { n: card.items[0].t.players.length + 1 }))}</span>`}
+        </div>
+        ${sections}
+      </div>`;
+  }).join('');
   return `
     <section class="sz-seating">
       <h3 class="sz-tables-title">${szEsc(szT('tables_title'))}</h3>
@@ -1477,7 +1514,7 @@ function szTablesHTML() {
   const moveIcon = fine ? 'grip-vertical' : 'arrow-right-left';
   const chipFor = (voter, game, from) => {
     const picked = szTables.picked === voter && szTables.pickedFrom === from;
-    return `<span role="button" tabindex="0" ${drag} class="sz-chip ${szSeatChip(voter, game)} sz-seat${picked ? ' sz-seat-picked' : ''}" data-v="${szEsc(voter)}" data-from="${from}" onclick="szTablesPick(this.dataset.v, +this.dataset.from)" onkeydown="szSeatKey(event, this.dataset.v, +this.dataset.from)" ondragstart="szSeatDragStart(event, this.dataset.v, +this.dataset.from)" ondragend="szSeatDragEnd()"><i data-lucide="${moveIcon}"></i>${szEsc(voter)}${szSeatMulti(built.options[szTables.option].tables, voter)}</span>`;
+    return `<span role="button" tabindex="0" ${drag} class="sz-chip ${szSeatChip(voter, game)} sz-seat${picked ? ' sz-seat-picked' : ''}" data-v="${szEsc(voter)}" data-from="${from}" onclick="szTablesPick(this.dataset.v, +this.dataset.from)" onkeydown="szSeatKey(event, this.dataset.v, +this.dataset.from)" ondragstart="szSeatDragStart(event, this.dataset.v, +this.dataset.from)" ondragend="szSeatDragEnd(event)"><i data-lucide="${moveIcon}"></i>${szEsc(voter)}${szSeatMulti(built.options[szTables.option].tables, voter)}</span>`;
   };
   const dropZone = i => `ondragover="szSeatDragOver(event, this)" ondragleave="if (!this.contains(event.relatedTarget)) this.classList.remove('sz-drop')" ondrop="szSeatDrop(event, ${i})"`;
   const moveBtn = i => {
@@ -1500,25 +1537,42 @@ function szTablesHTML() {
     const seated = new Set(opt.tables.flatMap(t => [t.gm, ...t.players])).size;
     const wanted = new Set(opt.tables.flatMap(t => [t.gm, ...t.players]
       .filter(v => szSeatPoints(byName[v], t.game) === SZ_SEAT_UP))).size;
-    const cards = opt.tables.map((t, i) => {
-      const here = t.gm === szTables.picked || t.players.includes(szTables.picked);
+    const cards = szGameCards(opt.tables).map(card => {
+      const multi = card.items.length > 1;
+      const sections = card.items.map(({ t, i }, n) => {
+        const here = t.gm === szTables.picked || t.players.includes(szTables.picked);
+        const people = szEsc(szT('tables_people', { n: t.players.length + 1 }));
+        return `
+          <div class="sz-table" ${dropZone(i)}>
+            ${multi ? `<div class="sz-table-head sz-group-head">
+              <span class="sz-table-n">${szEsc(szT('tables_group', { n: n + 1 }))} · ${people}</span>
+              <button type="button" class="sz-link-btn sz-table-drop" onclick="szTablesDrop(${i})">${szEsc(szT('tables_drop'))}</button>
+            </div>` : ''}
+            <div class="sz-tally-chips">
+              <span class="sz-chip sz-chip-up sz-chip-gm"><i data-lucide="dices"></i>${szEsc(t.gm)} · ${szEsc(szT('gm_short'))}</span>
+              ${t.players.map(v => chipFor(v, t.game, i)).join('')}
+            </div>
+            ${here ? '' : moveBtn(i)}
+          </div>`;
+      }).join('');
+      const first = card.items[0];
       return `
-        <div class="sz-table" ${dropZone(i)}>
+        <div class="sz-game">
           <div class="sz-table-head">
-            <span class="sz-tally-name">${szEsc(szTableTitle(opt.tables, t))}</span>
-            <span class="sz-table-n">${szEsc(szT('tables_people', { n: t.players.length + 1 }))}</span>
+            <span class="sz-tally-name">${szEsc(szGameName(card.game))}</span>
+            ${multi ? '' : `<span class="sz-table-n">${szEsc(szT('tables_people', { n: first.t.players.length + 1 }))}</span>`}
           </div>
-          <div class="sz-tally-chips">
-            <span class="sz-chip sz-chip-up sz-chip-gm"><i data-lucide="dices"></i>${szEsc(t.gm)} · ${szEsc(szT('gm_short'))}</span>
-            ${t.players.map(v => chipFor(v, t.game, i)).join('')}
-          </div>
-          ${here ? '' : moveBtn(i)}
+          ${sections}
           <div class="sz-table-tools">
-            ${opt.tables.length < 6 ? `<button type="button" class="sz-link-btn" onclick="szTablesDup(${i})">${szEsc(szT('tables_dup'))}</button>` : ''}
-            ${opt.tables.length > 1 ? `<button type="button" class="sz-link-btn" onclick="szTablesDrop(${i})">${szEsc(szT('tables_drop'))}</button>` : ''}
+            ${opt.tables.length < 6 ? `<button type="button" class="sz-link-btn" onclick="szTablesDup(${first.i})">${szEsc(szT('tables_dup'))}</button>` : ''}
+            ${!multi && opt.tables.length > 1 ? `<button type="button" class="sz-link-btn" onclick="szTablesDrop(${first.i})">${szEsc(szT('tables_drop'))}</button>` : ''}
           </div>
         </div>`;
     }).join('');
+    const addable = opt.tables.length < 6 ? `<select class="sz-add-game" aria-label="${szEsc(szT('tables_add_game'))}" onchange="szTablesAddGame(this.value)">
+      <option value="">${szEsc(szT('tables_add_game'))}</option>
+      ${szData.list.filter(id => !szRank().vetoed.some(r => r.id === id)).map(id => `<option value="${szEsc(id)}">${szEsc(szGameName(id))}</option>`).join('')}
+    </select>` : '';
     const unseated = szUnseated(opt);
     const pickedOut = szTables.pickedFrom < 0;
     const moveHint = szTables.picked ? szT('tables_pick_hint', { name: szTables.picked })
@@ -1526,6 +1580,7 @@ function szTablesHTML() {
     body = `
       <p class="sz-tables-move"><i data-lucide="${moveIcon}"></i>${szEsc(moveHint)}</p>
       <div class="sz-tables-grid">${cards}</div>
+      ${addable}
       <div class="sz-tables-out${unseated.length || szTables.picked ? '' : ' sz-tables-out-empty'}" ${dropZone(-1)}>
         <span class="sz-table-n">${szEsc(szT('tables_out'))}</span>
         <div class="sz-tally-chips">${unseated.map(v => chipFor(v, null, -1)).join('')}</div>

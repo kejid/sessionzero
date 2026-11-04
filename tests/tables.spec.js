@@ -136,15 +136,14 @@ test.describe('Dragging players on a desktop', () => {
     expect(await height()).toBe(before);
   });
 
-  test('a cancelled drag changes nothing', async ({ page }) => {
+  test('letting go of a name over nothing takes the player off that table', async ({ page }) => {
     await openPanel(page);
-    const from = await tableOf(page, 'Илья');
     await page.mouse.move(...await center(page.locator('.sz-seat', { hasText: 'Илья' })));
     await page.mouse.down();
     await page.mouse.move(5, 5, { steps: 5 });
     await page.mouse.up();
-    expect(await tableOf(page, 'Илья')).toBe(from);
-    await expect(page.locator('.sz-tables-out')).toBeHidden();
+    await expect(page.locator('.sz-seat', { hasText: 'Илья' })).toHaveCount(1);
+    expect(await tableOf(page, 'Илья')).toBeGreaterThanOrEqual(2);  // now in the not-seated list
     await expect(page.locator('.sz-seat-picked')).toHaveCount(0);
   });
 });
@@ -159,14 +158,23 @@ test.describe('Moving players between tables', () => {
     expect(await tableOf(page, 'Илья')).toBe(to);
   });
 
-  test('a second group for the same game, then remove it', async ({ page }) => {
+  test('a second group for the same game sits in the same card, then is removed', async ({ page }) => {
     await openPanel(page);
-    await page.locator('.sz-table').first().getByRole('button', { name: 'One more group' }).click();
-    await expect(page.locator('.sz-table')).toHaveCount(3);
-    await expect(page.locator('.sz-table .sz-tally-name', { hasText: 'group 2' })).toHaveCount(1);
-    await page.locator('.sz-table').nth(1).getByRole('button', { name: 'Remove group' }).click();
-    await expect(page.locator('.sz-table')).toHaveCount(2);
-    await expect(page.locator('.sz-table .sz-tally-name', { hasText: 'group' })).toHaveCount(0);
+    const cards = await page.locator('.sz-game').count();
+    await page.locator('.sz-game').first().getByRole('button', { name: 'One more group' }).click();
+    await expect(page.locator('.sz-game')).toHaveCount(cards);
+    await expect(page.locator('.sz-game').first().locator('.sz-table')).toHaveCount(2);
+    await expect(page.locator('.sz-game').first().locator('.sz-group-head', { hasText: 'group 2' })).toHaveCount(1);
+    await page.locator('.sz-game').first().locator('.sz-table').nth(1).getByRole('button', { name: 'Remove group' }).click();
+    await expect(page.locator('.sz-game').first().locator('.sz-table')).toHaveCount(1);
+    await expect(page.locator('.sz-group-head')).toHaveCount(0);
+  });
+
+  test('adds a game of the room by hand', async ({ page }) => {
+    await openPanel(page);
+    await page.locator('.sz-add-game').selectOption('cairn');
+    await expect(page.locator('.sz-game .sz-tally-name', { hasText: 'Cairn' })).toHaveCount(1);
+    await expect(page.locator('.sz-game')).toHaveCount(3);
   });
 
   test('a player can sit at two tables, and leave one of them', async ({ page }) => {
