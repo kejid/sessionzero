@@ -118,7 +118,7 @@ export function cleanExpected(value) {
 }
 
 // A line-up to pin. Games must be in the room and people must have voted. A GM may
-// run several tables, and tables meet at different times, so a player may sit at
+// run several tables, a game may have several groups, and tables meet at different times, so a player may sit at
 // several too, but only once at each and never at a table they run. Returns null
 // when any table can't stand as sent.
 export function cleanSeating(raw, list, voters) {
@@ -126,11 +126,9 @@ export function cleanSeating(raw, list, voters) {
   if (!tables.length || tables.length > MAX_TABLES) return null;
   const known = new Set(voters);
   const placed = new Set(tables.map(t => t && t.gm));
-  const games = new Set();
   const clean = [];
   for (const t of tables) {
-    if (!t || !list.includes(t.game) || games.has(t.game) || !known.has(t.gm)) return null;
-    games.add(t.game);
+    if (!t || !list.includes(t.game) || !known.has(t.gm)) return null;
     const here = new Set([t.gm]);
     const players = (Array.isArray(t.players) ? t.players : []).filter(v => {
       if (typeof v !== 'string' || !known.has(v) || here.has(v)) return false;

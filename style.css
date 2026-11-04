@@ -2953,6 +2953,8 @@ body.browse-mode .sidebar .sidebar-nav-divider { display: none; }
 .sz-chip-plain { color: var(--text); background: var(--border-subtle); }
 .sz-seat-picked { outline: 2px solid var(--accent); outline-offset: 1px; }
 .sz-seat-x { margin-left: 4px; font-size: 11px; font-weight: 800; opacity: .7; }
+.sz-table-tools { display: flex; gap: 14px; margin-top: 10px; font-size: 12px; }
+.sz-table-tools .sz-link-btn { color: var(--dim); }
 .sz-seat-moves { display: flex; gap: 8px; margin-top: 10px; }
 .sz-link-btn.sz-seat-move {
     display: block; flex: 1; padding: 8px; background: transparent;

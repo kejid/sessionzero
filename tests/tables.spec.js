@@ -159,6 +159,16 @@ test.describe('Moving players between tables', () => {
     expect(await tableOf(page, 'Илья')).toBe(to);
   });
 
+  test('a second group for the same game, then remove it', async ({ page }) => {
+    await openPanel(page);
+    await page.locator('.sz-table').first().getByRole('button', { name: 'One more group' }).click();
+    await expect(page.locator('.sz-table')).toHaveCount(3);
+    await expect(page.locator('.sz-table .sz-tally-name', { hasText: 'group 2' })).toHaveCount(1);
+    await page.locator('.sz-table').nth(1).getByRole('button', { name: 'Remove group' }).click();
+    await expect(page.locator('.sz-table')).toHaveCount(2);
+    await expect(page.locator('.sz-table .sz-tally-name', { hasText: 'group' })).toHaveCount(0);
+  });
+
   test('a player can sit at two tables, and leave one of them', async ({ page }) => {
     await openPanel(page);
     const from = await tableOf(page, 'Илья');

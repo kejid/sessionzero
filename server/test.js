@@ -58,6 +58,15 @@ test('cleanSeating lets a player sit at several tables, once at each', () => {
   });
 });
 
+test('cleanSeating allows two groups for the same game', () => {
+  const out = cleanSeating(
+    { tables: [{ game: 'cairn', gm: 'Ann', players: ['Bob'] }, { game: 'cairn', gm: 'Cid', players: ['Ann'] }], out: [] },
+    ['cairn', 'blades'], ['Ann', 'Bob', 'Cid']
+  );
+  assert.equal(out.tables.length, 2);
+  assert.deepEqual(out.tables.map(t => t.game), ['cairn', 'cairn']);
+});
+
 test('cleanSeating rejects a line-up that cannot stand', () => {
   const list = ['cairn', 'blades'], voters = ['Ann', 'Bob'];
   const t = (game, gm) => ({ game, gm, players: [] });
@@ -65,7 +74,6 @@ test('cleanSeating rejects a line-up that cannot stand', () => {
   assert.equal(cleanSeating(undefined, list, voters), null);
   assert.equal(cleanSeating({ tables: [t('mork', 'Ann')] }, list, voters), null);
   assert.equal(cleanSeating({ tables: [t('cairn', 'Ghost')] }, list, voters), null);
-  assert.equal(cleanSeating({ tables: [t('cairn', 'Ann'), t('cairn', 'Bob')] }, list, voters), null);
 });
 
 test('cleanIdList returns [] for non-array input', () => {

@@ -41,6 +41,9 @@ const SZ_STR = {
     tables_out: 'Not seated',
     tables_move_here: 'Move here',
     tables_add_here: 'Add here too',
+    tables_group: 'group {n}',
+    tables_dup: 'One more group',
+    tables_drop: 'Remove group',
     tables_off_here: 'Take off this table',
     tables_summary: 'Seated {n} of {all}, {up} on a game they voted for.',
     tables_edit_hint: 'Tap a name to move that player to another table or add them to a second one: tables meet at different times.',
@@ -209,6 +212,9 @@ const SZ_STR = {
     tables_out: 'Не вошли',
     tables_move_here: 'Пересадить сюда',
     tables_add_here: 'Добавить и сюда',
+    tables_group: 'группа {n}',
+    tables_dup: 'Ещё одна группа',
+    tables_drop: 'Убрать группу',
     tables_off_here: 'Снять с этого стола',
     tables_summary: 'За столами {n} из {all}, на игре, за которую голосовали: {up}.',
     tables_edit_hint: 'Нажми на имя, чтобы пересадить игрока или посадить ещё за один стол: столы играют в разное время.',
@@ -1296,8 +1302,7 @@ function szUnseated(opt) {
 
 function szSeatingText(opt) {
   const lines = opt.tables.map(t => {
-    const r = szResolve(t.game);
-    return `${r ? r.name : t.game}: ${t.gm} (${szT('gm_short')})${t.players.map(p => ', ' + p).join('')}`;
+    return `${szTableTitle(opt.tables, t)}: ${t.gm} (${szT('gm_short')})${t.players.map(p => ', ' + p).join('')}`;
   });
   const out = szUnseated(opt);
   if (out.length) lines.push(`${szT('tables_out')}: ${out.join(', ')}`);
@@ -1356,6 +1361,46 @@ function szTablesEdit() {
   if (panel) panel.scrollIntoView({ block: 'center' });
 }
 
+// Two groups can play the same game: tell them apart as "Game · group 2"
+function szTableTitle(tables, t) {
+  const r = szResolve(t.game);
+  const name = r ? r.name : t.game;
+  const same = tables.filter(x => x.game === t.game);
+  return same.length > 1 ? `${name} · ${szT('tables_group', { n: same.indexOf(t) + 1 })}` : name;
+}
+
+// A second (third, ...) group for the same game, run by whichever willing GM has the fewest tables
+function szTablesDup(i) {
+  const built = szTablesBuilt();
+  if (built.error) return;
+  const opt = built.options[szTables.option];
+  if (opt.tables.length >= 6) return;
+  const game = opt.tables[i].game;
+  const load = v => opt.tables.filter(t => t.gm === v).length;
+  const gms = szData.ballots.filter(b => b.gm && szSeatPoints(b, game) !== null)
+    .sort((x, y) => load(x.voter) - load(y.voter));
+  opt.tables.splice(i + 1, 0, { game, gm: gms.length ? gms[0].voter : opt.tables[i].gm, players: [] });
+  opt.out = szUnseated(opt);
+  szTables.count = opt.tables.length;
+  szTables.edited = true;
+  szTables.picked = null;
+  szRenderTally();
+}
+
+// Players of a removed group stay at their other tables, or end up not seated
+function szTablesDrop(i) {
+  const built = szTablesBuilt();
+  if (built.error) return;
+  const opt = built.options[szTables.option];
+  if (opt.tables.length <= 1) return;
+  opt.tables.splice(i, 1);
+  opt.out = szUnseated(opt);
+  szTables.count = opt.tables.length;
+  szTables.edited = true;
+  szTables.picked = null;
+  szRenderTally();
+}
+
 // "×2" for someone who sits at several tables
 function szSeatMulti(tables, voter) {
   const n = tables.filter(t => t.gm === voter || t.players.includes(voter)).length;
@@ -1379,13 +1424,13 @@ function szSeatingHTML() {
   const out = szUnseated(s);
   const yours = !me || !szData.ballots.some(b => b.voter === me) ? ''
     : !mine ? szT('tables_your_out')
-    : mine.gm === me ? szT('tables_your_gm', { game: myTables.map(t => name(t.game)).join(', ') })
-    : myTables.length > 1 ? szT('tables_your_many', { game: myTables.map(t => `${name(t.game)} (${t.gm})`).join(', ') })
-    : szT('tables_your', { game: name(mine.game), gm: mine.gm });
+    : mine.gm === me ? szT('tables_your_gm', { game: myTables.map(t => szTableTitle(s.tables, t)).join(', ') })
+    : myTables.length > 1 ? szT('tables_your_many', { game: myTables.map(t => `${szTableTitle(s.tables, t)} (${t.gm})`).join(', ') })
+    : szT('tables_your', { game: szTableTitle(s.tables, mine), gm: mine.gm });
   const cards = s.tables.map(t => `
     <div class="sz-table${myTables.includes(t) ? ' sz-table-mine' : ''}">
       <div class="sz-table-head">
-        <span class="sz-tally-name">${szEsc(name(t.game))}</span>
+        <span class="sz-tally-name">${szEsc(szTableTitle(s.tables, t))}</span>
         <span class="sz-table-n">${szEsc(szT('tables_people', { n: t.players.length + 1 }))}</span>
       </div>
       <div class="sz-tally-chips">
@@ -1456,12 +1501,11 @@ function szTablesHTML() {
     const wanted = new Set(opt.tables.flatMap(t => [t.gm, ...t.players]
       .filter(v => szSeatPoints(byName[v], t.game) === SZ_SEAT_UP))).size;
     const cards = opt.tables.map((t, i) => {
-      const r = szResolve(t.game);
       const here = t.gm === szTables.picked || t.players.includes(szTables.picked);
       return `
         <div class="sz-table" ${dropZone(i)}>
           <div class="sz-table-head">
-            <span class="sz-tally-name">${szEsc(r ? r.name : t.game)}</span>
+            <span class="sz-tally-name">${szEsc(szTableTitle(opt.tables, t))}</span>
             <span class="sz-table-n">${szEsc(szT('tables_people', { n: t.players.length + 1 }))}</span>
           </div>
           <div class="sz-tally-chips">
@@ -1469,6 +1513,10 @@ function szTablesHTML() {
             ${t.players.map(v => chipFor(v, t.game, i)).join('')}
           </div>
           ${here ? '' : moveBtn(i)}
+          <div class="sz-table-tools">
+            ${opt.tables.length < 6 ? `<button type="button" class="sz-link-btn" onclick="szTablesDup(${i})">${szEsc(szT('tables_dup'))}</button>` : ''}
+            ${opt.tables.length > 1 ? `<button type="button" class="sz-link-btn" onclick="szTablesDrop(${i})">${szEsc(szT('tables_drop'))}</button>` : ''}
+          </div>
         </div>`;
     }).join('');
     const unseated = szUnseated(opt);
@@ -1745,10 +1793,10 @@ function szDrawSeating() {
   return szDrawTableCards(szT('img_tables'), s.tables, szUnseated(s));
 }
 
-async function szDrawTableCards(title, tables, out) {
+async function szDrawTableCards(title, tables, out, all) {
   const { W, H, P, C, head, body } = SZ_IMG;
   const s = { tables };
-  const info = s.tables.map(t => szResolve(t.game) || { name: t.game });
+  const info = s.tables.map(t => ({ ...(szResolve(t.game) || {}), name: szTableTitle(all || s.tables, t) }));
   const [covers] = await Promise.all([
     Promise.all(info.map(r => szWholeImage(r.hero, 720))),
     szImageFonts(),
@@ -1854,9 +1902,9 @@ async function szDrawMyTable() {
   const me = szVoterName();
   const mine = szData.seating.tables.filter(x => x.gm === me || x.players.includes(me));
   // Someone at several tables (they meet at different times) gets one card per table
-  if (mine.length > 1) return szDrawTableCards(szT('img_my_table', { name: me }), mine, []);
+  if (mine.length > 1) return szDrawTableCards(szT('img_my_table', { name: me }), mine, [], szData.seating.tables);
   const t = mine[0];
-  const r = szResolve(t.game) || { name: t.game };
+  const r = { ...(szResolve(t.game) || {}), name: szTableTitle(szData.seating.tables, t) };
   const [cover] = await Promise.all([
     szWholeImage(r.hero, 1080),
     szImageFonts(),
