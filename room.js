@@ -49,7 +49,7 @@ const SZ_STR = {
     tables_summary: 'Seated {n} of {all}, {up} on a game they voted for.',
     tables_edit_hint: 'Tap a name to move that player to another table or add them to a second one: tables meet at different times.',
     tables_pick_hint: 'Where should {name} go? Choose a table below.',
-    tables_edit_hint_drag: 'Drag a name to another table to move that player; hold Ctrl to add them to a second table instead (tables meet at different times).',
+    tables_edit_hint_drag: 'Drag a name to another table to move that player; hold Ctrl to add them to a second table instead (tables meet at different times). Or just click a name to get buttons.',
     tables_next: 'Another option ({i} of {n})',
     tables_copy: 'Copy line-up',
     tables_copied: 'Line-up copied',
@@ -221,7 +221,7 @@ const SZ_STR = {
     tables_summary: 'За столами {n} из {all}, на игре, за которую голосовали: {up}.',
     tables_edit_hint: 'Нажми на имя, чтобы пересадить игрока или посадить ещё за один стол: столы играют в разное время.',
     tables_pick_hint: 'Куда пересадить: {name}? Выбери стол ниже.',
-    tables_edit_hint_drag: 'Перетащи имя за другой стол, чтобы пересадить игрока; с зажатым Ctrl игрок сядет и за этот стол тоже (столы играют в разное время).',
+    tables_edit_hint_drag: 'Перетащи имя за другой стол, чтобы пересадить игрока; с зажатым Ctrl игрок сядет и за этот стол тоже (столы играют в разное время). Или просто нажми на имя: появятся кнопки.',
     tables_next: 'Другой вариант ({i} из {n})',
     tables_copy: 'Скопировать состав',
     tables_copied: 'Состав скопирован',
@@ -1229,6 +1229,10 @@ function szSeatDragStart(e, voter, from) {
     if (!panel || !szTables.dragging) return;
     panel.classList.add('sz-dragging');
     chip.classList.add('sz-seat-dragging');
+    // No drop boxes at a table that already has this player
+    panel.querySelectorAll('.sz-table').forEach(t => {
+      if (t.dataset.members && t.dataset.members.includes(`|${voter}|`)) t.classList.add('sz-drag-source');
+    });
     const from = chip.closest('.sz-table');
     if (from) from.classList.add('sz-drag-source');
   });
@@ -1246,18 +1250,20 @@ function szSeatDragEnd(e) {
   szRenderTally();
 }
 
-function szSeatDragOver(e, zone) {
+function szSeatDragOver(e, zone, how) {
   if (!szTables.dragging) return;
   e.preventDefault();
-  e.dataTransfer.dropEffect = e.ctrlKey || e.altKey ? 'copy' : 'move';
+  e.stopPropagation();
+  e.dataTransfer.dropEffect = (how || (e.ctrlKey || e.altKey ? 'copy' : 'move')) === 'copy' ? 'copy' : 'move';
   zone.classList.add('sz-drop');
 }
 
-function szSeatDrop(e, i) {
+function szSeatDrop(e, i, how) {
   if (!szTables.dragging) return;
   e.preventDefault();
+  e.stopPropagation();
   szTables.dragging = false;
-  szTablesMove(i, e.ctrlKey || e.altKey);
+  szTablesMove(i, how ? how === 'copy' : e.ctrlKey || e.altKey);
 }
 
 function szSeatKey(e, voter, from) {
@@ -1516,7 +1522,8 @@ function szTablesHTML() {
     const picked = szTables.picked === voter && szTables.pickedFrom === from;
     return `<span role="button" tabindex="0" ${drag} class="sz-chip ${szSeatChip(voter, game)} sz-seat${picked ? ' sz-seat-picked' : ''}" data-v="${szEsc(voter)}" data-from="${from}" onclick="szTablesPick(this.dataset.v, +this.dataset.from)" onkeydown="szSeatKey(event, this.dataset.v, +this.dataset.from)" ondragstart="szSeatDragStart(event, this.dataset.v, +this.dataset.from)" ondragend="szSeatDragEnd(event)"><i data-lucide="${moveIcon}"></i>${szEsc(voter)}${szSeatMulti(built.options[szTables.option].tables, voter)}</span>`;
   };
-  const dropZone = i => `ondragover="szSeatDragOver(event, this)" ondragleave="if (!this.contains(event.relatedTarget)) this.classList.remove('sz-drop')" ondrop="szSeatDrop(event, ${i})"`;
+  // Over a table the drop is a move (Ctrl: add); the two boxes shown while dragging pick it explicitly
+  const dropZone = (i, how) => `ondragover="szSeatDragOver(event, this${how ? `, '${how}'` : ''})" ondragleave="if (!this.contains(event.relatedTarget)) this.classList.remove('sz-drop')" ondrop="szSeatDrop(event, ${i}${how ? `, '${how}'` : ''})"`;
   const moveBtn = i => {
     if (!szTables.picked) return '';
     const btn = (label, copy, first) => `<button type="button" class="sz-link-btn sz-seat-move${first ? ' sz-seat-here' : ''}" onclick="szTablesMove(${i}, ${copy})">${szEsc(szT(label))}</button>`;
@@ -1542,8 +1549,9 @@ function szTablesHTML() {
       const sections = card.items.map(({ t, i }, n) => {
         const here = t.gm === szTables.picked || t.players.includes(szTables.picked);
         const people = szEsc(szT('tables_people', { n: t.players.length + 1 }));
+        const members = [t.gm, ...t.players].map(v => `|${v}|`).join('');
         return `
-          <div class="sz-table" ${dropZone(i)}>
+          <div class="sz-table" ${dropZone(i)} data-members="${szEsc(members)}">
             ${multi ? `<div class="sz-table-head sz-group-head">
               <span class="sz-table-n">${szEsc(szT('tables_group', { n: n + 1 }))} · ${people}</span>
               <button type="button" class="sz-link-btn sz-table-drop" onclick="szTablesDrop(${i})">${szEsc(szT('tables_drop'))}</button>
@@ -1553,6 +1561,10 @@ function szTablesHTML() {
               ${t.players.map(v => chipFor(v, t.game, i)).join('')}
             </div>
             ${here ? '' : moveBtn(i)}
+            <div class="sz-drop-pair">
+              <span class="sz-drop-move" ${dropZone(i, 'move')}>${szEsc(szT('tables_move_here'))}</span>
+              <span class="sz-drop-add" ${dropZone(i, 'copy')}>${szEsc(szT('tables_add_here'))}</span>
+            </div>
           </div>`;
       }).join('');
       const first = card.items[0];

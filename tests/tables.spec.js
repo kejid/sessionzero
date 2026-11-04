@@ -136,6 +136,22 @@ test.describe('Dragging players on a desktop', () => {
     expect(await height()).toBe(before);
   });
 
+  test('dropping on the "add here too" box seats a player at a second table', async ({ page }) => {
+    await openPanel(page);
+    const from = await tableOf(page, 'Илья');
+    const chip = page.locator('.sz-seat', { hasText: 'Илья' });
+    await page.mouse.move(...await center(chip));
+    await page.mouse.down();
+    await page.mouse.move(600, 500, { steps: 5 });
+    const box = page.locator('.sz-table').nth(from === 0 ? 1 : 0).locator('.sz-drop-add');
+    await expect(box).toBeVisible();
+    const [x, y] = await center(box);
+    await page.mouse.move(x, y, { steps: 5 });
+    await page.mouse.move(x + 4, y);
+    await page.mouse.up();
+    await expect(page.locator('.sz-seat', { hasText: 'Илья' })).toHaveCount(2);
+  });
+
   test('letting go of a name over nothing takes the player off that table', async ({ page }) => {
     await openPanel(page);
     await page.mouse.move(...await center(page.locator('.sz-seat', { hasText: 'Илья' })));
