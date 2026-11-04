@@ -30,7 +30,7 @@ const SZ_STR = {
     tables_intro: 'Choose the number of tables and seats, adjust the suggested line-up, then pin it so everyone sees their table at this link.',
     tables_hide: 'Hide',
     tables_count: 'Tables',
-    tables_seats: 'Seats per table, GM included',
+    tables_seats: 'Players per table, not counting the GM',
     tables_less: 'Fewer',
     tables_more: 'More',
     tables_waiting: 'Still waiting for {n} vote(s), so this may change.',
@@ -202,7 +202,7 @@ const SZ_STR = {
     tables_intro: 'Выбери число столов и мест, поправь предложенный состав и закрепи его: все увидят свой стол по этой ссылке.',
     tables_hide: 'Скрыть',
     tables_count: 'Столов',
-    tables_seats: 'Мест за столом, вместе с мастером',
+    tables_seats: 'Игроков за столом, без мастера',
     tables_less: 'Меньше',
     tables_more: 'Больше',
     tables_waiting: 'Ещё ждём голосов: {n}. Состав может измениться.',
@@ -1068,16 +1068,16 @@ function szSeatPlayers(games, picked, ballots, maxSeats) {
   const rest = ballots.filter(b => !gmsTaken.includes(b)).sort((x, y) => options(x).length - options(y).length);
   const out = [];
   for (const b of rest) {
-    const free = options(b).filter(t => t.players.length + 1 < maxSeats)
+    const free = options(b).filter(t => t.players.length < maxSeats)
       .sort((x, y) => szSeatPoints(b, y.game) - szSeatPoints(b, x.game) || x.players.length - y.players.length);
     if (free.length) free[0].players.push(b); else out.push(b);
   }
   // Someone left out may fit if a seated player can move to a table with room
   for (const b of out.slice()) {
     for (const t of options(b)) {
-      const mover = t.players.find(p => options(p).some(u => u !== t && u.players.length + 1 < maxSeats));
+      const mover = t.players.find(p => options(p).some(u => u !== t && u.players.length < maxSeats));
       if (!mover) continue;
-      const to = options(mover).find(u => u !== t && u.players.length + 1 < maxSeats);
+      const to = options(mover).find(u => u !== t && u.players.length < maxSeats);
       t.players.splice(t.players.indexOf(mover), 1, b);
       to.players.push(mover);
       out.splice(out.indexOf(b), 1);
@@ -1114,7 +1114,7 @@ function szFillSecondTables(tables, maxSeats) {
       .filter(b => b !== t.gm && !t.players.includes(b) && szSeatPoints(b, t.game) === SZ_SEAT_UP)
       .sort((x, y) => count(x) - count(y));
     for (const b of wanting) {
-      if (t.players.length + 1 >= maxSeats) break;
+      if (t.players.length >= maxSeats) break;
       t.players.push(b);
       placed.set(b, count(b) + 1);
     }
@@ -1157,7 +1157,7 @@ function szBuildTables(ballots, games, count, maxSeats) {
   return { options: seatings.sort((x, y) => y.score - x.score).slice(0, 3) };
 }
 
-let szTables = { open: false, count: 2, seats: 5, option: 0, key: '', built: null, picked: null, edited: false };
+let szTables = { open: false, count: 2, seats: 4, option: 0, key: '', built: null, picked: null, edited: false };
 
 function szTablesBuilt() {
   const key = JSON.stringify([szData.ballots, szTables.count, szTables.seats]);
@@ -1179,7 +1179,7 @@ function szTablesToggle() {
 }
 
 function szTablesStep(field, delta) {
-  const limits = { count: [2, 6], seats: [2, 12] }[field];
+  const limits = { count: [2, 6], seats: [1, 12] }[field];
   const next = Math.min(limits[1], Math.max(limits[0], szTables[field] + delta));
   if (next === szTables[field]) return;
   szTables[field] = next;

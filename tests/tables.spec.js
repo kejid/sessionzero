@@ -124,7 +124,7 @@ test.describe('Dragging players on a desktop', () => {
     const fewer = page.locator('.sz-step[data-step="seats:-1"]');
     await press(fewer);
     await press(fewer);
-    await expect(page.locator('.sz-step-value').nth(1)).toHaveText('3');
+    await expect(page.locator('.sz-step-value').nth(1)).toHaveText('2');
   });
 
   test('the page keeps its height when icons are swapped in', async ({ page }) => {
@@ -214,7 +214,7 @@ test.describe('Splitting a pool into tables', () => {
     const { options } = await build(page, POOL, GAMES, 2, 5);
     for (const t of options[0].tables) {
       expect(new Set([t.gm, ...t.players]).size).toBe(t.players.length + 1);
-      expect(t.players.length + 1).toBeLessThanOrEqual(5);
+      expect(t.players.length).toBeLessThanOrEqual(5);
     }
     const seats = options[0].tables.flatMap(t => [t.gm, ...t.players]);
     expect(seats.length).toBeGreaterThan(new Set(seats).size);
@@ -227,8 +227,8 @@ test.describe('Splitting a pool into tables', () => {
   });
 
   test('never overfills a table', async ({ page }) => {
-    const { options } = await build(page, POOL, GAMES, 2, 3);
-    for (const t of options[0].tables) expect(t.players.length + 1).toBeLessThanOrEqual(3);
+    const { options } = await build(page, POOL, GAMES, 2, 2);
+    for (const t of options[0].tables) expect(t.players.length).toBeLessThanOrEqual(2);
     expect(options[0].out.length).toBe(3);
   });
 
