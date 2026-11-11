@@ -167,6 +167,7 @@ const SZ_STR = {
     open: 'Open',
     list_title: 'Shortlist',
     list_intro: 'A shortlist of games shared with you. Tap any to read more.',
+    list_intro_coll: 'A ready-made shortlist from the collection. Collect votes on it with the button below, or tap any game to read more.',
     list_to_vote: 'Collect votes on this list',
     copy_list_done: 'List link copied!',
     faq_summary: 'New here? How does this work?',
@@ -339,6 +340,7 @@ const SZ_STR = {
     open: 'Открыть',
     list_title: 'Шортлист',
     list_intro: 'Кто-то поделился с тобой подборкой игр. Нажми на любую, чтобы узнать больше.',
+    list_intro_coll: 'Готовый шортлист из подборки. Собери голоса по нему кнопкой внизу или нажми на любую игру, чтобы узнать больше.',
     list_to_vote: 'Собрать голоса по списку',
     copy_list_done: 'Ссылка на список скопирована!',
     faq_summary: 'Впервые здесь? Как это работает?',
@@ -2142,6 +2144,9 @@ function szEnterList(ids) {
   const resolved = ids.map(szResolve);
   const missing = resolved.filter(r => !r).length;
   const cards = resolved.filter(Boolean).map(s => szCardHTML(s, true)).join('');
+  // Collection pages link here with &from=collection: the visitor opened the
+  // list themself, so "someone shared this with you" would be wrong.
+  const fromCollection = /[#&]from=collection(&|$)/.test(location.hash || '');
   const voteCta = SZ_API ? `
     <div class="sz-savebar">
       <button class="sz-btn sz-save" onclick="szDoCreateFromList()">${szEsc(szT('list_to_vote'))}</button>
@@ -2154,7 +2159,7 @@ function szEnterList(ids) {
     <div class="sz-body">
       <header class="sz-head">
         <h1 class="sz-title">${szEsc(szT('list_title'))}</h1>
-        <p class="sz-intro">${szEsc(szT('list_intro'))}</p>
+        <p class="sz-intro">${szEsc(szT(fromCollection ? 'list_intro_coll' : 'list_intro'))}</p>
         ${missing ? `<p class="sz-warn">${szEsc(szT('missing_systems', { n: missing }))}</p>` : ''}
         ${szFaqHTML('list')}
       </header>

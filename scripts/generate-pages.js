@@ -88,11 +88,12 @@ console.log(`[generate-pages] loaded ${collectionSlugs.length} collections`);
 
 // Resolve which systems belong to a collection: explicit ids, or every system
 // matching all of the given conditions (see data/collections.js for fields).
-// Sorted by the order inside the filter's grouping scheme, else the default one.
-function resolveCollectionSystems(filter) {
+// Order: the hand-picked shortlist first, then the rest by the order inside
+// the filter's grouping scheme. Without a scheme there is no comparable rank
+// (`order` only ranks systems inside one group), so the rest go by name.
+function resolveCollectionSystems(filter, shortlist) {
   if (!filter) return [];
   if (filter.ids) return filter.ids.filter(id => SYSTEMS[id]);
-  const sortScheme = filter.scheme || 'default';
   const matches = [];
   for (const id of Object.keys(SYSTEMS)) {
     const s = SYSTEMS[id];
@@ -106,25 +107,36 @@ function resolveCollectionSystems(filter) {
     if (filter.playstyle && !(s.playstyleTags || []).includes(filter.playstyle)) continue;
     if (filter.complexityMax != null && !(Number(s.complexity) <= filter.complexityMax)) continue;
     if (filter.complexityMin != null && !(Number(s.complexity) >= filter.complexityMin)) continue;
-    const g = groups[sortScheme];
-    matches.push({ id, order: (g && Number(g.order)) || 999 });
+    const g = filter.scheme && groups[filter.scheme];
+    const order = g ? Number(g.order) : NaN;
+    matches.push({ id, name: s.name || id, order: Number.isFinite(order) ? order : 999 });
   }
-  matches.sort((a, b) => a.order - b.order || a.id.localeCompare(b.id));
+  const pinned = new Map((shortlist || []).map((id, i) => [id, i]));
+  matches.sort((a, b) =>
+    (pinned.has(a.id) ? pinned.get(a.id) : 1e6) - (pinned.has(b.id) ? pinned.get(b.id) : 1e6)
+    || a.order - b.order
+    || a.name.localeCompare(b.name));
   return matches.map(m => m.id);
 }
 
-// A collection's ready-made shortlist is hand-picked, so a typo or a system
-// that left the catalog must fail the build instead of silently shrinking the
-// vote the page offers.
+// Config mistakes must fail the build instead of shipping a wrong page:
+// a `key` without its `scheme` would match the whole catalog, and a shortlist
+// id that is unknown or outside the filter would offer a vote on a game the
+// page does not list.
 for (const slug of collectionSlugs) {
-  const list = COLLECTIONS[slug].shortlist;
-  if (!list) continue;
-  const bad = list.filter(id => !SYSTEMS[id]);
-  if (bad.length) {
-    console.error(`[generate-pages] collection "${slug}": unknown shortlist ids: ${bad.join(', ')}`);
-    process.exit(1);
-  }
+  const { filter, shortlist } = COLLECTIONS[slug];
+  const fail = msg => { console.error(`[generate-pages] collection "${slug}": ${msg}`); process.exit(1); };
+  if (filter && filter.key && !filter.scheme) fail('filter.key needs filter.scheme');
+  if (!shortlist) continue;
+  const unknown = shortlist.filter(id => !SYSTEMS[id]);
+  if (unknown.length) fail(`unknown shortlist ids: ${unknown.join(', ')}`);
+  const members = new Set(resolveCollectionSystems(filter));
+  const outside = shortlist.filter(id => !members.has(id));
+  if (outside.length) fail(`shortlist ids not in the collection: ${outside.join(', ')}`);
 }
+
+const sysHref = (lang, id) => lang === 'en' ? `/system/${id}.html` : `/ru/system/${id}.html`;
+const collHref = (lang, slug) => lang === 'en' ? `/collections/${slug}.html` : `/ru/collections/${slug}.html`;
 
 // ---------- 2. Helpers ----------
 function escapeHtml(s) {
@@ -802,12 +814,11 @@ function renderCollectionPage(slug, cfg, lang) {
   const ruActive = lang === 'ru' ? ' class="active"' : '';
   const toolHref = `/${lang === 'ru' ? '?lang=ru' : ''}`;
 
-  const sysIds = resolveCollectionSystems(cfg.filter);
+  const sysIds = resolveCollectionSystems(cfg.filter, cfg.shortlist);
   const cardsHTML = sysIds.map(sid => {
     const ssys = SYSTEMS[sid];
     const sname = ssys.name || sid;
-    const sHref = lang === 'en' ? `/system/${sid}.html` : `/ru/system/${sid}.html`;
-    return `<a href="${escapeHtml(sHref)}" class="similar-system-card">
+    return `<a href="${escapeHtml(sysHref(lang, sid))}" class="similar-system-card">
             <img src="${escapeHtml(`${SITE}/og/${sid}.jpg`)}" alt="${escapeHtml(sname + ' hero art')}" loading="lazy" decoding="async" fetchpriority="low">
             <span class="similar-system-name">${escBody(sname)}</span>
           </a>`;
@@ -816,22 +827,19 @@ function renderCollectionPage(slug, cfg, lang) {
   // Ready-made shortlist → the SPA's #list= view, which turns it into a group
   // vote in one tap (room.js szEnterList / szDoCreateFromList).
   const shortlist = cfg.shortlist || [];
-  const listHref = `/${lang === 'ru' ? '?lang=ru' : ''}#list=${shortlist.join(',')}`;
+  const listHref = `/${lang === 'ru' ? '?lang=ru' : ''}#list=${shortlist.join(',')}&from=collection`;
   const shortlistHTML = shortlist.length ? `<div class="vote-cta coll-shortlist">
       <div class="coll-shortlist-title">${escBody(S.coll_shortlist_title)}</div>
-      <p class="vote-cta-sub">${escBody(S.coll_shortlist_sub)}</p>
-      <ul class="coll-shortlist-names">${shortlist.map(sid => {
-        const sHref = lang === 'en' ? `/system/${sid}.html` : `/ru/system/${sid}.html`;
-        return `<li><a href="${escapeHtml(sHref)}">${escBody(SYSTEMS[sid].name || sid)}</a></li>`;
-      }).join('')}</ul>
+      <p class="vote-cta-sub coll-shortlist-sub">${escBody(S.coll_shortlist_sub)}</p>
+      <ul class="coll-shortlist-names">${shortlist.map(sid =>
+        `<li><a href="${escapeHtml(sysHref(lang, sid))}">${escBody(SYSTEMS[sid].name || sid)}</a></li>`).join('')}</ul>
       <a href="${escapeHtml(listHref)}" class="vote-cta-btn" data-gc-event="cta-vote-shortlist-${escapeHtml(slug)}" data-gc-title="${escapeHtml(title)} → shortlist vote">${escBody(S.coll_shortlist_cta(shortlist.length))}</a>
-      <div class="vote-cta-sub"><a href="${toolHref}" data-gc-event="cta-vote-coll-own-${escapeHtml(slug)}" data-gc-title="${escapeHtml(title)} → tool">${escBody(S.coll_shortlist_own)}</a></div>
+      <div class="vote-cta-sub"><a href="${toolHref}" data-gc-event="cta-own-list-coll-${escapeHtml(slug)}" data-gc-title="${escapeHtml(title)} → tool">${escBody(S.coll_shortlist_own)}</a></div>
     </div>` : '';
 
   const moreLinks = collectionSlugs.filter(s => s !== slug).map(s => {
     const c = COLLECTIONS[s];
-    const href = lang === 'en' ? `/collections/${s}.html` : `/ru/collections/${s}.html`;
-    return `<li><a href="${escapeHtml(href)}">${escBody((lang === 'ru' ? c.title_ru : c.title) || c.title || s)}</a></li>`;
+    return `<li><a href="${escapeHtml(collHref(lang, s))}">${escBody((lang === 'ru' ? c.title_ru : c.title) || c.title || s)}</a></li>`;
   }).join('');
 
   const jsonLdList = {
@@ -1123,8 +1131,8 @@ function renderGuidePage(lang) {
   const ogImage = lang === 'ru' ? `${SITE}/og/ru/home.jpg` : HOMEPAGE_OG;
   const homeHref = `/${lang === 'ru' ? '?lang=ru' : ''}`;
   const toolHref = homeHref;
-  const sys = (id) => lang === 'en' ? `/system/${id}.html` : `/ru/system/${id}.html`;
-  const coll = (slug) => lang === 'en' ? `/collections/${slug}.html` : `/ru/collections/${slug}.html`;
+  const sys = (id) => sysHref(lang, id);
+  const coll = (slug) => collHref(lang, slug);
   const enActive = lang === 'en' ? ' class="active"' : '';
   const ruActive = lang === 'ru' ? ' class="active"' : '';
 
