@@ -23,10 +23,10 @@ registerSystem("gurps", {
       "src": "https://sessionzero.games/images/systems/gurps-g1.jpg"
     },
     {
-      "src": "https://sessionzero.games/images/systems/gurps-g2.jpg"
+      "src": "https://sessionzero.games/images/systems/gurps-g2.jpg?v=2"
     },
     {
-      "src": "https://sessionzero.games/images/heroes/gurps.jpg"
+      "src": "https://sessionzero.games/images/systems/gurps-cover.jpg"
     }
   ],
   "resources": [

@@ -460,7 +460,7 @@ registerSystem("alice-is-missing", {
   "free": false,
   "edition": null,
   "foundryStatus": "None",
-  "heroImage": "https://sessionzero.games/images/heroes/alice-is-missing.jpg?v=2",
+  "heroImage": "https://sessionzero.games/images/heroes/alice-is-missing-ba97f511.jpg",
   "playstyleTags": ["mystery", "narrative", "social"],
   "settingTags": ["modern"],
   "gallery": [
@@ -1449,7 +1449,7 @@ registerSystem("black-sword-hack", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/black-sword-hack.jpg?v=2",
+  "heroImage": "https://sessionzero.games/images/heroes/black-sword-hack-5acf885d.jpg",
   "playstyleTags": [
     "combat",
     "explore",
@@ -2358,7 +2358,7 @@ registerSystem("call-of-cthulhu", {
       "src": "https://sessionzero.games/images/systems/call-of-cthulhu-g1.jpg"
     },
     {
-      "src": "https://sessionzero.games/images/heroes/call-of-cthulhu.jpg"
+      "src": "https://sessionzero.games/images/systems/call-of-cthulhu-cover.jpg"
     },
     {
       "src": "https://sessionzero.games/images/systems/call-of-cthulhu-g2.jpg"
@@ -3322,7 +3322,7 @@ registerSystem("curseborne", {
   "free": false,
   "edition": "Core Rulebook",
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/curseborne.jpg?v=2",
+  "heroImage": "https://sessionzero.games/images/heroes/curseborne-686dbfa3.jpg",
   "playstyleTags": ["horror", "mystery", "social"],
   "settingTags": ["modern", "urban-fantasy"],
   "gallery": [
@@ -6323,7 +6323,7 @@ registerSystem("fate", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Official",
-  "heroImage": "https://sessionzero.games/images/heroes/fate.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/fate-ce14b37f.jpg",
   "playstyleTags": [
     "narrative",
     "explore",
@@ -6335,7 +6335,7 @@ registerSystem("fate", {
       "src": "https://sessionzero.games/images/systems/fate-g1.jpg"
     },
     {
-      "src": "https://sessionzero.games/images/heroes/fate.jpg"
+      "src": "https://sessionzero.games/images/systems/fate-cover.jpg"
     }
   ],
   "resources": [
@@ -6671,7 +6671,7 @@ registerSystem("fist", {
   "players": "2–5",
   "complexity": 1,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/fist.jpg?v=2",
+  "heroImage": "https://sessionzero.games/images/heroes/fist-cf456133.jpg",
   "playstyleTags": [
     "action",
     "survival",
@@ -6680,7 +6680,7 @@ registerSystem("fist", {
   "settingTags": ["modern", "historical"],
   "gallery": [
     {
-      "src": "https://sessionzero.games/images/heroes/fist.jpg"
+      "src": "https://sessionzero.games/images/systems/fist-cover.jpg"
     }
   ],
   "quotes": [
@@ -7240,10 +7240,10 @@ registerSystem("gurps", {
       "src": "https://sessionzero.games/images/systems/gurps-g1.jpg"
     },
     {
-      "src": "https://sessionzero.games/images/systems/gurps-g2.jpg"
+      "src": "https://sessionzero.games/images/systems/gurps-g2.jpg?v=2"
     },
     {
-      "src": "https://sessionzero.games/images/heroes/gurps.jpg"
+      "src": "https://sessionzero.games/images/systems/gurps-cover.jpg"
     }
   ],
   "resources": [
@@ -8477,7 +8477,7 @@ registerSystem("knave", {
   "players": "3–6",
   "complexity": 1,
   "foundryStatus": "Community",
-  "heroImage": "https://sessionzero.games/images/heroes/knave.jpg?v=2",
+  "heroImage": "https://sessionzero.games/images/heroes/knave-f1585627.jpg",
   "playstyleTags": [
     "explore",
     "combat",
@@ -10202,7 +10202,7 @@ registerSystem("marvel-multiverse", {
       "src": "https://sessionzero.games/images/systems/marvel-multiverse-g2.jpg"
     },
     {
-      "src": "https://sessionzero.games/images/heroes/marvel-multiverse.jpg"
+      "src": "https://sessionzero.games/images/systems/marvel-multiverse-cover.jpg"
     }
   ],
   "resources": [
@@ -19307,7 +19307,7 @@ registerSystem("vampire-the-masquerade", {
       "src": "https://sessionzero.games/images/systems/vampire-the-masquerade-g2.jpg"
     },
     {
-      "src": "https://sessionzero.games/images/heroes/vampire-the-masquerade.jpg"
+      "src": "https://sessionzero.games/images/systems/vampire-the-masquerade-cover.jpg"
     }
   ],
   "resources": [

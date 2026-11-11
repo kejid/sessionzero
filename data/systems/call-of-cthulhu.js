@@ -24,7 +24,7 @@ registerSystem("call-of-cthulhu", {
       "src": "https://sessionzero.games/images/systems/call-of-cthulhu-g1.jpg"
     },
     {
-      "src": "https://sessionzero.games/images/heroes/call-of-cthulhu.jpg"
+      "src": "https://sessionzero.games/images/systems/call-of-cthulhu-cover.jpg"
     },
     {
       "src": "https://sessionzero.games/images/systems/call-of-cthulhu-g2.jpg"

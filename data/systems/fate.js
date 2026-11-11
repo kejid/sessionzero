@@ -11,7 +11,7 @@ registerSystem("fate", {
   "complexity": 2,
   "free": true,
   "foundryStatus": "Official",
-  "heroImage": "https://sessionzero.games/images/heroes/fate.jpg",
+  "heroImage": "https://sessionzero.games/images/heroes/fate-ce14b37f.jpg",
   "playstyleTags": [
     "narrative",
     "explore",
@@ -23,7 +23,7 @@ registerSystem("fate", {
       "src": "https://sessionzero.games/images/systems/fate-g1.jpg"
     },
     {
-      "src": "https://sessionzero.games/images/heroes/fate.jpg"
+      "src": "https://sessionzero.games/images/systems/fate-cover.jpg"
     }
   ],
   "resources": [

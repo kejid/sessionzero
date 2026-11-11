@@ -26,7 +26,7 @@ registerSystem("vampire-the-masquerade", {
       "src": "https://sessionzero.games/images/systems/vampire-the-masquerade-g2.jpg"
     },
     {
-      "src": "https://sessionzero.games/images/heroes/vampire-the-masquerade.jpg"
+      "src": "https://sessionzero.games/images/systems/vampire-the-masquerade-cover.jpg"
     }
   ],
   "resources": [

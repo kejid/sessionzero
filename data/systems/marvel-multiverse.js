@@ -26,7 +26,7 @@ registerSystem("marvel-multiverse", {
       "src": "https://sessionzero.games/images/systems/marvel-multiverse-g2.jpg"
     },
     {
-      "src": "https://sessionzero.games/images/heroes/marvel-multiverse.jpg"
+      "src": "https://sessionzero.games/images/systems/marvel-multiverse-cover.jpg"
     }
   ],
   "resources": [
