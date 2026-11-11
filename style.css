@@ -2386,6 +2386,31 @@ body.browse-mode:not(.intro-dismissed) #intro-banner {
     body.browse-mode:not(.intro-dismissed) #intro-banner { flex-direction: column; gap: 10px; }
 }
 
+/* Homepage row of collection chips (browse mode only): each opens a
+   collection page with a ready-made shortlist vote. */
+.quick-colls { display: none; }
+body.browse-mode .quick-colls {
+    display: flex; align-items: center; gap: 10px 12px; flex-wrap: wrap;
+    margin: 0 0 20px;
+}
+.quick-colls-title { color: var(--dim); font-size: 14px; }
+.quick-colls-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.quick-coll {
+    display: inline-block; padding: 6px 12px; border-radius: 999px;
+    border: 1px solid var(--border-subtle); color: var(--text);
+    font-size: 14px; text-decoration: none; white-space: nowrap;
+}
+.quick-coll:hover { border-color: var(--accent); }
+@media (max-width: 560px) {
+    body.browse-mode .quick-colls { display: block; }
+    .quick-colls-title { display: block; margin-bottom: 8px; }
+    .quick-colls-row {
+        flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none;
+        margin: 0 -16px; padding: 0 16px;
+    }
+    .quick-colls-row::-webkit-scrollbar { display: none; }
+}
+
 /* Intro: three numbered steps */
 .intro-steps { list-style: none; margin: 4px 0 14px; display: grid; gap: 6px; }
 .intro-steps li { display: flex; align-items: center; gap: 10px; color: var(--text); font-size: 14px; line-height: 1.4; }

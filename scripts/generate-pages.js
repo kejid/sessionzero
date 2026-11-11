@@ -971,6 +971,20 @@ function syncEnHomeFaq() {
   const collLinks = collectionSlugs.map(slug =>
     `                <a href="/collections/${escapeHtml(slug)}.html">${escBody(COLLECTIONS[slug].title || slug)}</a> ·`).join('\n');
   html = swap(html, 'coll-links', collLinks);
+  const homeColls = collectionSlugs.filter(slug => COLLECTIONS[slug].home != null)
+    .sort((a, b) => COLLECTIONS[a].home - COLLECTIONS[b].home);
+  const chips = homeColls.map(slug => {
+    const c = COLLECTIONS[slug];
+    const en = c.chip || c.title || slug;
+    const ru = c.chip_ru || c.title_ru || en;
+    return `        <a class="quick-coll" href="${escapeHtml(collHref('en', slug))}" data-href-en="${escapeHtml(collHref('en', slug))}" data-href-ru="${escapeHtml(collHref('ru', slug))}" data-text-en="${escapeHtml(en)}" data-text-ru="${escapeHtml(ru)}" onclick="track('quick-coll-${escapeHtml(slug)}')">${escBody(en)}</a>`;
+  }).join('\n');
+  html = swap(html, 'quick-colls', homeColls.length ? `    <nav class="quick-colls" aria-label="Collections">
+      <span class="quick-colls-title" data-i18n="quick_colls_title">Not sure where to start? Ready-made shortlists:</span>
+      <div class="quick-colls-row">
+${chips}
+      </div>
+    </nav>` : '');
   fs.writeFileSync(file, html, 'utf8');
 }
 

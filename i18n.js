@@ -106,6 +106,7 @@ const LANG = {
     intro_step3: 'Каждый голосует со своего телефона — вы видите рейтинг',
     intro_cta_pick: 'Начать выбор',
     intro_cta_vote: 'Все за одним столом? Голосуйте здесь',
+    quick_colls_title: 'Не знаете, с чего начать? Готовые подборки:',
     shortlist_add: 'В шортлист',
     shortlist_remove: 'Убрать из шортлиста',
     shortlist_in: 'В шортлисте',
@@ -312,6 +313,7 @@ const LANG = {
     intro_step3: 'Everyone votes from their own phone — you see the ranking',
     intro_cta_pick: 'Start picking',
     intro_cta_vote: 'Everyone at one table? Vote here',
+    quick_colls_title: 'Not sure where to start? Ready-made shortlists:',
     shortlist_add: 'Add to shortlist',
     shortlist_remove: 'Remove from shortlist',
     shortlist_in: 'In shortlist',
@@ -437,6 +439,14 @@ function setLang(lang) {
 }
 
 function translateI18nElements(root) {
+    // Static links that exist in both languages (e.g. the homepage collection
+    // chips): data-text-en/-ru and data-href-en/-ru hold both variants.
+    (root || document).querySelectorAll('[data-text-en]').forEach(el => {
+        el.textContent = el.getAttribute(currentLang === 'ru' ? 'data-text-ru' : 'data-text-en');
+    });
+    (root || document).querySelectorAll('[data-href-en]').forEach(el => {
+        el.setAttribute('href', el.getAttribute(currentLang === 'ru' ? 'data-href-ru' : 'data-href-en'));
+    });
     (root || document).querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         const val = t(key);

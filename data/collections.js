@@ -24,6 +24,10 @@
 //                                  setting        — in settingTags
 //                                  playstyle      — in playstyleTags
 //                                  complexityMax / complexityMin  (1–5)
+//   home                       optional number: show this collection in the
+//                              "ready-made shortlists" row on the homepage,
+//                              sorted by this value
+//   chip / chip_ru             short label for that row (defaults to title)
 //   shortlist                  optional, 3–6 hand-picked ids. Shown as a
 //                              "ready-made shortlist" with a button that opens
 //                              them as one group vote (/#list=...). Unknown ids
@@ -32,6 +36,9 @@
 // ============================================================================
 
 registerCollection('best-solo-ttrpgs', {
+  home: 9,
+  chip: 'Solo',
+  chip_ru: 'Соло',
   title: 'Best solo tabletop RPGs',
   title_ru: 'Лучшие соло-настолки (соло-TTRPG)',
   description: 'Tabletop RPGs you can play alone — no group or GM needed. The solo-friendly systems in the Session Zero catalog, from journaling games to full solo adventures.',
@@ -42,6 +49,9 @@ registerCollection('best-solo-ttrpgs', {
 });
 
 registerCollection('osr-tabletop-rpgs', {
+  home: 8,
+  chip: 'OSR',
+  chip_ru: 'OSR',
   title: 'OSR tabletop RPGs',
   title_ru: 'OSR настольные ролевые игры',
   description: 'OSR (Old-School Renaissance) games: rules-light, deadly, exploration-driven. The OSR systems in the Session Zero catalog, with summaries and free resources.',
@@ -53,6 +63,9 @@ registerCollection('osr-tabletop-rpgs', {
 });
 
 registerCollection('rules-light-ttrpgs', {
+  home: 1,
+  chip: 'Rules-light',
+  chip_ru: 'Простые правила',
   title: 'Rules-light tabletop RPGs',
   title_ru: 'Настольные ролевые игры с простыми правилами',
   description: 'Rules-light TTRPGs you can teach in minutes: short rulebooks, fast character creation, little to look up at the table. From the Session Zero catalog.',
@@ -64,6 +77,9 @@ registerCollection('rules-light-ttrpgs', {
 });
 
 registerCollection('horror-ttrpgs', {
+  home: 2,
+  chip: 'Horror',
+  chip_ru: 'Хоррор',
   title: 'Horror tabletop RPGs',
   title_ru: 'Хоррор настольные ролевые игры',
   description: 'Horror TTRPGs for a tense night or a dread-soaked campaign: cosmic horror, investigation, survival and gothic. Compare them in the Session Zero catalog.',
@@ -75,6 +91,9 @@ registerCollection('horror-ttrpgs', {
 });
 
 registerCollection('sci-fi-ttrpgs', {
+  home: 3,
+  chip: 'Sci-fi',
+  chip_ru: 'Фантастика',
   title: 'Sci-fi tabletop RPGs',
   title_ru: 'Научно-фантастические настольные ролевые игры',
   description: 'Science-fiction TTRPGs: space horror, space opera, cyberpunk and hard sci-fi. Compare the sci-fi systems in the Session Zero catalog and vote with your group.',
@@ -86,6 +105,9 @@ registerCollection('sci-fi-ttrpgs', {
 });
 
 registerCollection('dark-fantasy-ttrpgs', {
+  home: 4,
+  chip: 'Dark fantasy',
+  chip_ru: 'Тёмное фэнтези',
   title: 'Dark fantasy tabletop RPGs',
   title_ru: 'Тёмное фэнтези: настольные ролевые игры',
   description: 'Dark fantasy TTRPGs: grim worlds, deadly dungeons, scarce light and hard choices. The dark fantasy systems in the Session Zero catalog.',
@@ -97,6 +119,9 @@ registerCollection('dark-fantasy-ttrpgs', {
 });
 
 registerCollection('tactical-combat-ttrpgs', {
+  home: 5,
+  chip: 'Tactical combat',
+  chip_ru: 'Тактические бои',
   title: 'Tactical combat tabletop RPGs',
   title_ru: 'Настольные ролевые игры с тактическими боями',
   description: 'TTRPGs where combat is a game in itself: positioning, builds, maps and minis. The tactical systems in the Session Zero catalog, from D&D 5e to Lancer.',
@@ -108,6 +133,9 @@ registerCollection('tactical-combat-ttrpgs', {
 });
 
 registerCollection('mystery-investigation-ttrpgs', {
+  home: 6,
+  chip: 'Mystery',
+  chip_ru: 'Детективы',
   title: 'Mystery and investigation tabletop RPGs',
   title_ru: 'Детективные настольные ролевые игры',
   description: 'Mystery and investigation TTRPGs: follow clues, interview witnesses and solve the case. The mystery systems in the Session Zero catalog.',
@@ -119,6 +147,9 @@ registerCollection('mystery-investigation-ttrpgs', {
 });
 
 registerCollection('post-apocalyptic-ttrpgs', {
+  home: 7,
+  chip: 'Post-apocalyptic',
+  chip_ru: 'Постапокалипсис',
   title: 'Post-apocalyptic tabletop RPGs',
   title_ru: 'Постапокалиптические настольные ролевые игры',
   description: 'Post-apocalyptic TTRPGs: wasteland survival, rebuilding after the fall, and the world that comes next. From the Session Zero catalog.',
