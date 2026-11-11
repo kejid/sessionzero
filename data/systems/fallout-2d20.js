@@ -85,7 +85,7 @@ registerSystem("fallout-2d20", {
       },
       {
         "title": "Очки действия",
-        "text": "Лишние успехи становятся AP в общем пуле отряда: на дополнительные d20, лишнее действие, урон или информацию. У ведущего свой пул AP — он копится, когда вы покупаете кубики в долг."
+        "text": "Лишние успехи становятся AP в общем пуле отряда: на дополнительные d20, лишнее действие, дополнительный урон в ближнем бою или информацию. У ведущего свой пул AP — он копится, когда вы покупаете кубики в долг."
       },
       {
         "title": "Удача как ресурс",
@@ -139,7 +139,7 @@ registerSystem("fallout-2d20", {
       },
       {
         "title": "Action Points",
-        "text": "Extra successes become AP in a shared party pool: spend them on bonus d20s, an extra action, more damage or information. The GM has a pool of their own that grows when you buy dice on credit."
+        "text": "Extra successes become AP in a shared party pool: spend them on bonus d20s, an extra action, extra melee damage or information. The GM has a pool of their own that grows when you buy dice on credit."
       },
       {
         "title": "Luck as a resource",

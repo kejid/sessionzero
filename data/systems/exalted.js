@@ -48,10 +48,10 @@ registerSystem("exalted", {
     "vignette": "Пылающий паланкин падает в пропасть, а ваш Солнечный Касты Рассвета прыгает с него прямо на генерала. Описание впечатляет стол, и Рассказчик даёт трюк на два очка: +2 куба и единица Силы воли обратно. У вас 14 Инициативы, пора бить решающим ударом. Ловкость 5 + Ближний бой 5, ещё 2 куба за трюк и 4 куба от Совершенства за 4 частицы Сущности — всего 16 кубов против Защиты 4. Успехов с запасом. Урон — сама ваша Инициатива: бросаете 14 кубов, и каждый успех — уровень ранения без поглощения. Генерал падает, а ваша Инициатива сбрасывается до 3.",
     "prep": "~60 мин",
     "mechanics": [
-      { "title": "Пулы d10: 7+ и двойные десятки", "text": "Атрибут + Способность в d10. Каждый куб на 7+ — успех, десятка считается за два. Трюки — красочное описание действия — дают +2 куба и возвращают Силу воли, так что стол сам задирает планку пафоса." },
+      { "title": "Пулы d10: 7+ и двойные десятки", "text": "Атрибут + Способность в d10. Каждый куб на 7+ — успех, десятка считается за два. Трюки — красочное описание действия — дают +2 куба, а трюки посильнее ещё и возвращают Силу воли, так что стол сам задирает планку пафоса." },
       { "title": "Бой на Инициативе", "text": "Изматывающие атаки отнимают Инициативу у врага и прибавляют вам. Решающий удар бросает накопленную Инициативу как урон и сбрасывает её до 3. Довести противника до нуля — значит сломать его." },
       { "title": "Чары и Сущность", "text": "Сотни Чар, привязанных к Способностям: от фехтования, сносящего армии, до ремесла и интриг. Они питаются частицами Сущности, а тратя много силы сразу, вы разжигаете анима-ауру, которую видно издалека." },
-      { "title": "Ex3 или Essence", "text": "Exalted Third Edition — полная тяжёлая версия, где книга на каждый тип Возвышенных. Exalted: Essence — облегчённое ядро в одной книге для любых Возвышенных, со своими дополнениями Player's Guide и Storyteller's Guide." }
+      { "title": "Ex3 или Essence", "text": "Exalted Third Edition — полная тяжёлая версия, с отдельными книгами для других типов Возвышенных. Exalted: Essence — облегчённое ядро в одной книге для любых Возвышенных; дополнения к нему, Player's Guide и Storyteller's Guide, собраны краудфандингом и готовятся к выходу." }
     ],
     "gallery": [
       { "cap": "Круг Возвышенных в бою, арт из Exalted: Essence" },
@@ -77,10 +77,10 @@ registerSystem("exalted", {
     "vignette": "A burning palanquin tips into the gorge and your Dawn Caste Solar leaps from it straight at the general. The table loves the description: a two-point stunt, +2 dice and a Willpower back. You sit at 14 Initiative — time for a decisive attack. Dexterity 5 + Melee 5, plus 2 stunt dice and 4 more from your Excellency for 4 motes of Essence: 16 dice against Defense 4. Successes to spare. Damage is your Initiative itself: roll 14 dice, each success a level of damage with no soak. The general falls, and your Initiative resets to 3.",
     "prep": "~60 min",
     "mechanics": [
-      { "title": "d10 pools: 7+ and double 10s", "text": "Roll Attribute + Ability in d10s. Every 7+ is a success and 10s count twice. Stunts — vivid descriptions of an action — add +2 dice and restore Willpower, so the table keeps raising the stakes." },
-      { "title": "Initiative combat", "text": "Withering attacks strip Initiative from a foe and add it to yours. A decisive attack rolls your banked Initiative as damage, then resets you to 3. Drive an enemy below zero and they crash." },
+      { "title": "d10 pools: 7+ and double 10s", "text": "Roll Attribute + Ability in d10s. Every 7+ is a success and 10s count twice. Stunts — vivid descriptions of an action — add +2 dice, and the better ones restore Willpower too, so the table keeps raising the stakes." },
+      { "title": "Initiative combat", "text": "Withering attacks strip Initiative from a foe and add it to yours. A decisive attack rolls your banked Initiative as damage, then resets you to 3. Drop an enemy to zero Initiative or below and they crash." },
       { "title": "Charms and Essence", "text": "Hundreds of Charms tied to Abilities, from swordplay that scatters armies to crafting and court intrigue. They burn motes of Essence, and spending big lights up an anima banner seen for miles." },
-      { "title": "Ex3 or Essence", "text": "Exalted Third Edition is the full, crunchy game with a book for each type of Exalt. Exalted: Essence is the lighter one-book core for any Exalt, now backed by its own Player's Guide and Storyteller's Guide." }
+      { "title": "Ex3 or Essence", "text": "Exalted Third Edition is the full, crunchy game, with separate books for other types of Exalt. Exalted: Essence is the lighter one-book core for any Exalt; its crowdfunded Player's Guide and Storyteller's Guide expansions are on the way." }
     ],
     "gallery": [
       { "cap": "A Circle of Exalted in battle, art from Exalted: Essence" },

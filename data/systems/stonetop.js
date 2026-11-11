@@ -50,7 +50,7 @@ registerSystem("stonetop", {
     "mechanics": [
       { "title": "Деревня как персонаж", "text": "У Стонтопа есть свой лист: Размер, Население, Процветание, Оборона, Удача и Излишек. Между приключениями герои строят частокол, мельницы, торговые пути — и смотрят, как деревня растёт или голодает." },
       { "title": "Девять плейбуков", "text": "Каждый класс — роль в общине: *Heavy* защищает, *Judge* хранит летопись и закон, *Lightbearer* несёт свет, *Would-Be Hero* мечтает о большем. Связи с соседями прописаны прямо в листе." },
-      { "title": "Аркана", "text": "Магические предметы — это карты: на одной стороне условие, как раскрыть силу вещи, на другой — что она делает. Почти каждая может пойти не так и потянуть за собой целую сюжетную линию." },
+      { "title": "Аркана", "text": "Магические предметы — аркана — не прилагают инструкций: у каждого свои условия, без которых его сила не откроется. Понять, чего хочет древняя реликвия, и заплатить за это — уже целая сюжетная линия." },
       { "title": "2d6 с преимуществом", "text": "Классика PbtA: 10+ — успех, 7–9 — успех с ценой, 6 и меньше — Мастер делает ход. Сверху — преимущество и помеха: бросаете третий кубик и отбрасываете худший или лучший." }
     ],
     "gallery": [
@@ -79,7 +79,7 @@ registerSystem("stonetop", {
     "mechanics": [
       { "title": "The village is a character", "text": "Stonetop has its own sheet: Size, Population, Prosperity, Defenses, Fortunes and Surplus. Between adventures the heroes build palisades, mills and trade routes — and watch the village thrive or starve." },
       { "title": "Nine playbooks", "text": "Each class is a role in the community: the Heavy protects, the Judge keeps the chronicle and the law, the Lightbearer carries the light, the Would-Be Hero dreams of more. Ties to neighbours are written into the sheet." },
-      { "title": "Arcana", "text": "Magic items are cards: one side tells you how to unlock the object's power, the other what it does. Nearly all of them can go wrong and spin off a whole story arc." },
+      { "title": "Arcana", "text": "Magic items, the arcana, don't come with instructions: each has its own requirements before its power unlocks. Working out what an old relic wants, and paying for it, can spin off a whole story arc." },
       { "title": "2d6 with advantage", "text": "PbtA classic: 10+ is a success, 7–9 a success at a cost, 6- hands the GM a move. On top of that, advantage and disadvantage: roll a third die and drop the lowest or the highest." }
     ],
     "gallery": [

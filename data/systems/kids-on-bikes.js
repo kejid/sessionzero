@@ -54,7 +54,7 @@ registerSystem("kids-on-bikes", {
     "mechanics": [
       { "title": "Кубик на каждую черту", "text": "Шесть характеристик — Мозги, Сила, Драка, Бегство, Обаяние и Стойкость — получают по кубику от d4 до d20. Максимум на кубике «взрывается»: перебрось и прибавь. Если есть время подготовиться, можно не бросать и взять половину грани." },
       { "title": "Жетоны Невзгод", "text": "Каждый провал приносит жетон Невзгод. Каждый жетон — +1 к будущей проверке или топливо для сильных сторон персонажа. Неудачи сегодня — героизм завтра." },
-      { "title": "Город на всех", "text": "Игроки вместе отвечают на вопросы о городе и о том, как их персонажи связаны друг с другом. Тропы вроде Гения-математика, Популярной девчонки или Странного одиночки помогают быстро собрать героя." },
+      { "title": "Город на всех", "text": "Игроки вместе отвечают на вопросы о городе и о том, как их персонажи связаны друг с другом. Тропы вроде Гения-математика или Отважного скаута помогают быстро собрать героя." },
       { "title": "Сверхъестественный персонаж", "text": "По желанию в группе появляется персонаж со странными силами, которым управляют все игроки сразу. Во втором издании правила для него переработаны." }
     ],
     "gallery": [
@@ -85,7 +85,7 @@ registerSystem("kids-on-bikes", {
     "mechanics": [
       { "title": "A die for every stat", "text": "Six stats (Brains, Brawn, Fight, Flight, Charm and Grit) each get one die from d4 to d20. Rolling the maximum explodes: roll again and add. With time to plan, you can skip the roll and take half the die's top value." },
       { "title": "Adversity Tokens", "text": "Every failed check earns an Adversity Token. Each token is +1 on a future roll or fuel for your character's Strengths. Today's failures become tomorrow's heroics." },
-      { "title": "A shared town", "text": "Players answer questions together about the town and how their characters know each other. Tropes like the Brilliant Mathlete, the Popular Kid or the Loner Weirdo make building a character fast." },
+      { "title": "A shared town", "text": "Players answer questions together about the town and how their characters know each other. Tropes like the Brilliant Mathlete or the Adventurous Scout make building a character fast." },
       { "title": "The Powered Character", "text": "Optionally, the group adds a character with strange powers that every player controls together. The second edition reworks the rules for them." }
     ],
     "gallery": [

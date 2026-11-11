@@ -3030,7 +3030,7 @@ registerSystem("changeling-the-lost", {
   "ru": {
     "tagShort": "Хоррор о беглецах из страны фей на пулах d10",
     "tagline": "«Тебя похитили феи. Ты сбежал. Но домой вернулся кто-то другой».",
-    "description": "Changeling: The Lost — хоррор-сказка из линейки Chronicles of Darkness от Onyx Path. Вы играете подменышами: людьми, которых Истинные Феи утащили в Аркадию, переделали в слуг, игрушки и чудовищ, — и которые сумели сбежать. Вторая редакция (2019) работает на системе Storytelling: пулы d10, успех на 8+. Ясность заменяет рассудок, Контракты — магию фей, а клятвы буквально обязывают. Это игра о выживших после насилия, поэтому обсудить границы до игры особенно важно. Линия завершена: «The Hedge» (2024) стала последней книгой.",
+    "description": "Changeling: The Lost — хоррор-сказка из линейки Chronicles of Darkness от Onyx Path. Вы играете подменышами: людьми, которых Истинные Феи утащили в Аркадию, переделали в слуг, игрушки и чудовищ, — и которые сумели сбежать. Вторая редакция (2019) работает на системе Storytelling: пулы d10, успех на 8+. Ясность заменяет рассудок, Контракты — магию фей, а клятвы буквально обязывают. Это игра о выживших после насилия, поэтому обсудить границы до игры особенно важно. «The Hedge» (2024) Onyx Path назвала последним запланированным проектом линейки.",
     "setting": "Наш мир, за изнанкой которого растёт Изгородь — колючий лабиринт снов и шипов между реальностью и Аркадией. Вернувшись, подменыш видит, что его место занял Двойник — фальшивая копия, оставленная Хранителем. Беглецы прячут свою нечеловеческую суть под Маской и собираются во Дворы Весны, Лета, Осени и Зимы, у каждого из которых свой способ справиться с пережитым. А по следу идут Охотники Хранителей.",
     "vignette": "Ты бежишь сквозь Изгородь, а за спиной трубит рог Охотника. Рассказчик требует Ловкость 3 + Атлетика 2: пять кубов — 3, 8, 10, 6, 9. Десятка перебрасывается — 4. Три успеха, ты проскальзываешь в Лощину. Но в мутном пруду отражается лицо твоего Хранителя, и это переломный момент. Ты отмечаешь урон Ясности — и вспоминаешь о Привязке, своей сестре, которая до сих пор живёт с твоим Двойником.",
     "prep": "~60 мин",
@@ -3044,7 +3044,7 @@ registerSystem("changeling-the-lost", {
       { "cap": "Подменыш и волшебный конь, превью-арт второй редакции" },
       { "cap": "Подменыши разных Обличий" },
       { "cap": "Лицо в зеркале, превью-арт второй редакции" },
-      { "cap": "Обложка The Hedge — последней книги линейки" }
+      { "cap": "Обложка The Hedge (2024)" }
     ],
     "resources": [
       { "name": "Changeling: The Lost на сайте Onyx Path" },
@@ -3059,7 +3059,7 @@ registerSystem("changeling-the-lost", {
   "en": {
     "tagShort": "Fairy-tale horror about escapees from Faerie on a d10 pool",
     "tagline": "\"The Fae took you. You escaped. But someone else came home.\"",
-    "description": "Changeling: The Lost is fairy-tale horror from Onyx Path's Chronicles of Darkness line. You play changelings: people stolen by the True Fae, dragged to Arcadia and remade into servants, toys and monsters — who managed to escape. The second edition (2019) runs on the Storytelling System: d10 pools, success on 8+. Clarity stands in for sanity, Contracts for fae magic, and oaths bind for real. It is a game about surviving abuse, so a session zero on boundaries matters here. The line is complete: The Hedge (2024) was its final book.",
+    "description": "Changeling: The Lost is fairy-tale horror from Onyx Path's Chronicles of Darkness line. You play changelings: people stolen by the True Fae, dragged to Arcadia and remade into servants, toys and monsters — who managed to escape. The second edition (2019) runs on the Storytelling System: d10 pools, success on 8+. Clarity stands in for sanity, Contracts for fae magic, and oaths bind for real. It is a game about surviving abuse, so a session zero on boundaries matters here. Onyx Path called The Hedge (2024) the line's final scheduled project.",
     "setting": "Our world, with the Hedge growing behind it — a thorny maze of dreams and briars between reality and Arcadia. Coming home, a changeling finds their place taken by a Fetch, a fake copy left by their Keeper. The escaped hide their inhuman nature behind the Mask and gather into the Courts of Spring, Summer, Autumn and Winter, each with its own way of living with what happened. And the Keepers' Huntsmen are on their trail.",
     "vignette": "You run through the Hedge while a Huntsman's horn sounds behind you. The Storyteller calls for Dexterity 3 + Athletics 2: five dice — 3, 8, 10, 6, 9. The 10 rolls again — 4. Three successes, and you slip into a Hollow. But in a murky pool you glimpse your Keeper's face, and it's a breaking point. You mark Clarity damage — and think of your Touchstone, your sister, who still lives with your Fetch.",
     "prep": "~60 min",
@@ -3073,7 +3073,7 @@ registerSystem("changeling-the-lost", {
       { "cap": "A changeling and a fae steed, second edition preview art" },
       { "cap": "Changelings of different Seemings" },
       { "cap": "A face in the mirror, second edition preview art" },
-      { "cap": "Cover of The Hedge, the line's final book" }
+      { "cap": "Cover of The Hedge (2024)" }
     ],
     "resources": [
       { "name": "Changeling: The Lost at Onyx Path" },
@@ -6829,10 +6829,10 @@ registerSystem("exalted", {
     "vignette": "Пылающий паланкин падает в пропасть, а ваш Солнечный Касты Рассвета прыгает с него прямо на генерала. Описание впечатляет стол, и Рассказчик даёт трюк на два очка: +2 куба и единица Силы воли обратно. У вас 14 Инициативы, пора бить решающим ударом. Ловкость 5 + Ближний бой 5, ещё 2 куба за трюк и 4 куба от Совершенства за 4 частицы Сущности — всего 16 кубов против Защиты 4. Успехов с запасом. Урон — сама ваша Инициатива: бросаете 14 кубов, и каждый успех — уровень ранения без поглощения. Генерал падает, а ваша Инициатива сбрасывается до 3.",
     "prep": "~60 мин",
     "mechanics": [
-      { "title": "Пулы d10: 7+ и двойные десятки", "text": "Атрибут + Способность в d10. Каждый куб на 7+ — успех, десятка считается за два. Трюки — красочное описание действия — дают +2 куба и возвращают Силу воли, так что стол сам задирает планку пафоса." },
+      { "title": "Пулы d10: 7+ и двойные десятки", "text": "Атрибут + Способность в d10. Каждый куб на 7+ — успех, десятка считается за два. Трюки — красочное описание действия — дают +2 куба, а трюки посильнее ещё и возвращают Силу воли, так что стол сам задирает планку пафоса." },
       { "title": "Бой на Инициативе", "text": "Изматывающие атаки отнимают Инициативу у врага и прибавляют вам. Решающий удар бросает накопленную Инициативу как урон и сбрасывает её до 3. Довести противника до нуля — значит сломать его." },
       { "title": "Чары и Сущность", "text": "Сотни Чар, привязанных к Способностям: от фехтования, сносящего армии, до ремесла и интриг. Они питаются частицами Сущности, а тратя много силы сразу, вы разжигаете анима-ауру, которую видно издалека." },
-      { "title": "Ex3 или Essence", "text": "Exalted Third Edition — полная тяжёлая версия, где книга на каждый тип Возвышенных. Exalted: Essence — облегчённое ядро в одной книге для любых Возвышенных, со своими дополнениями Player's Guide и Storyteller's Guide." }
+      { "title": "Ex3 или Essence", "text": "Exalted Third Edition — полная тяжёлая версия, с отдельными книгами для других типов Возвышенных. Exalted: Essence — облегчённое ядро в одной книге для любых Возвышенных; дополнения к нему, Player's Guide и Storyteller's Guide, собраны краудфандингом и готовятся к выходу." }
     ],
     "gallery": [
       { "cap": "Круг Возвышенных в бою, арт из Exalted: Essence" },
@@ -6858,10 +6858,10 @@ registerSystem("exalted", {
     "vignette": "A burning palanquin tips into the gorge and your Dawn Caste Solar leaps from it straight at the general. The table loves the description: a two-point stunt, +2 dice and a Willpower back. You sit at 14 Initiative — time for a decisive attack. Dexterity 5 + Melee 5, plus 2 stunt dice and 4 more from your Excellency for 4 motes of Essence: 16 dice against Defense 4. Successes to spare. Damage is your Initiative itself: roll 14 dice, each success a level of damage with no soak. The general falls, and your Initiative resets to 3.",
     "prep": "~60 min",
     "mechanics": [
-      { "title": "d10 pools: 7+ and double 10s", "text": "Roll Attribute + Ability in d10s. Every 7+ is a success and 10s count twice. Stunts — vivid descriptions of an action — add +2 dice and restore Willpower, so the table keeps raising the stakes." },
-      { "title": "Initiative combat", "text": "Withering attacks strip Initiative from a foe and add it to yours. A decisive attack rolls your banked Initiative as damage, then resets you to 3. Drive an enemy below zero and they crash." },
+      { "title": "d10 pools: 7+ and double 10s", "text": "Roll Attribute + Ability in d10s. Every 7+ is a success and 10s count twice. Stunts — vivid descriptions of an action — add +2 dice, and the better ones restore Willpower too, so the table keeps raising the stakes." },
+      { "title": "Initiative combat", "text": "Withering attacks strip Initiative from a foe and add it to yours. A decisive attack rolls your banked Initiative as damage, then resets you to 3. Drop an enemy to zero Initiative or below and they crash." },
       { "title": "Charms and Essence", "text": "Hundreds of Charms tied to Abilities, from swordplay that scatters armies to crafting and court intrigue. They burn motes of Essence, and spending big lights up an anima banner seen for miles." },
-      { "title": "Ex3 or Essence", "text": "Exalted Third Edition is the full, crunchy game with a book for each type of Exalt. Exalted: Essence is the lighter one-book core for any Exalt, now backed by its own Player's Guide and Storyteller's Guide." }
+      { "title": "Ex3 or Essence", "text": "Exalted Third Edition is the full, crunchy game, with separate books for other types of Exalt. Exalted: Essence is the lighter one-book core for any Exalt; its crowdfunded Player's Guide and Storyteller's Guide expansions are on the way." }
     ],
     "gallery": [
       { "cap": "A Circle of Exalted in battle, art from Exalted: Essence" },
@@ -7160,7 +7160,7 @@ registerSystem("fallout-2d20", {
       },
       {
         "title": "Очки действия",
-        "text": "Лишние успехи становятся AP в общем пуле отряда: на дополнительные d20, лишнее действие, урон или информацию. У ведущего свой пул AP — он копится, когда вы покупаете кубики в долг."
+        "text": "Лишние успехи становятся AP в общем пуле отряда: на дополнительные d20, лишнее действие, дополнительный урон в ближнем бою или информацию. У ведущего свой пул AP — он копится, когда вы покупаете кубики в долг."
       },
       {
         "title": "Удача как ресурс",
@@ -7214,7 +7214,7 @@ registerSystem("fallout-2d20", {
       },
       {
         "title": "Action Points",
-        "text": "Extra successes become AP in a shared party pool: spend them on bonus d20s, an extra action, more damage or information. The GM has a pool of their own that grows when you buy dice on credit."
+        "text": "Extra successes become AP in a shared party pool: spend them on bonus d20s, an extra action, extra melee damage or information. The GM has a pool of their own that grows when you buy dice on credit."
       },
       {
         "title": "Luck as a resource",
@@ -8654,11 +8654,11 @@ registerSystem("hunter-the-reckoning", {
     "tagline": "«Ты видел, что прячется в темноте. Забыть уже не получится».",
     "description": "Hunter: The Reckoning — хоррор о людях, которые узнали правду о вампирах, оборотнях и призраках и решили действовать. Пятая редакция (H5, 2022) от Renegade Game Studios стоит на той же системе, что и Vampire V5: пул d10, успех на 6+, пара десяток — крит. Сверхспособностей нет: только ячейка друзей, самодельный арсенал и Отчаяние, которое растёт, когда охота идёт плохо. Чем ближе вы к цели, тем выше Опасность, что чудовища заметят вас первыми.",
     "setting": "Современный Мир Тьмы: наш мир, где вампиры правят из пентхаусов, а оборотни охраняют леса. Охотники — не избранные, а обычные люди с травмой и решимостью: медсестра, байкер, священник, блогер-конспиролог. Они собираются в ячейки, следят за целью, добывают оружие. Их подход определяет Кредо — от силовиков до сыщиков, — а Мотив объясняет, зачем им вообще эта война. Где-то рядом действуют и большие игроки — Вторая Инквизиция, Общество Леопольда, — у которых свои взгляды на охоту.",
-    "vignette": "Подвал старой прачечной. Вы ищете гнездо по следам крови на полу — Смекалка 3 + Расследование 3, шесть кубов. Отчаяние ячейки — 2, и вы рискуете: добавляете два оранжевых куба Отчаяния. Обычные кубы: 7, 2, 6, 9, 3, 10 — четыре успеха. Кубы Отчаяния: 1 и 6 — ещё один. Пять успехов против Сложности 4, вы нашли люк. Но на кубе Отчаяния выпала единица. Вы выбираете Перегиб: результат остаётся, но Опасность растёт. Где-то внизу кто-то просыпается.",
+    "vignette": "Подвал старой прачечной. Вы ищете гнездо по следам крови на полу — Смекалка 3 + Расследование 3, шесть кубов. Отчаяние ячейки — 2, и вы рискуете: добавляете два чёрных куба Отчаяния. Обычные кубы: 7, 2, 6, 9, 3, 10 — четыре успеха. Кубы Отчаяния: 1 и 6 — ещё один. Пять успехов против Сложности 4, вы нашли люк. Но на кубе Отчаяния выпала единица. Вы выбираете Перегиб: результат остаётся, но Опасность растёт. Где-то внизу кто-то просыпается.",
     "prep": "~45 мин",
     "mechanics": [
       { "title": "Пул d10 (система V5)", "text": "Атрибут + Навык в d10, каждый куб на 6+ — успех, пара десяток — крит на 4 успеха. Сложность — сколько успехов нужно набрать. Та же система, что в Vampire V5 и Werewolf W5." },
-      { "title": "Отчаяние", "text": "В бросках, связанных с охотой, можно добавить кубы Отчаяния по уровню ячейки. Единица на таком кубе ставит выбор: Перегиб (результат остаётся, Опасность растёт) или Безнадёжность (вера в Мотив ломается до искупления)." },
+      { "title": "Отчаяние", "text": "В бросках, связанных с охотой и Кредо охотника, можно добавить кубы Отчаяния — их число задаёт общее Отчаяние ячейки. Если на таком кубе выпала единица, удачный бросок ставит выбор: Перегиб (успех остаётся, Опасность растёт) или Безнадёжность (бросок считается провалом, и кубов Отчаяния у охотника нет, пока он не искупит себя через Мотив)." },
       { "title": "Опасность", "text": "Общая шкала того, насколько чудовища в курсе вашей охоты. Шум, свидетели и Перегибы её поднимают, и Рассказчик отвечает засадами, слежкой и ответными ударами." },
       { "title": "Кредо, Мотивы и Грани", "text": "Пять Кредо задают подход к охоте, Мотив — личную причину. Грани и Перки — не магия, а умения ячейки: арсенал, транспорт, архив, чутьё на сверхъестественное." }
     ],
@@ -8684,11 +8684,11 @@ registerSystem("hunter-the-reckoning", {
     "tagline": "\"You saw what hides in the dark. There's no forgetting it now.\"",
     "description": "Hunter: The Reckoning is horror about people who learned the truth about vampires, werewolves and ghosts and decided to do something about it. The fifth edition (H5, 2022) from Renegade Game Studios runs on the same engine as Vampire V5: a d10 pool, 6+ succeeds, a pair of 10s is a critical. No superpowers here — just your cell, a jury-rigged arsenal and Desperation that climbs when the hunt goes badly. The closer you get, the higher the Danger that the monsters notice you first.",
     "setting": "The modern World of Darkness: our world, where vampires rule from penthouses and werewolves guard the woods. Hunters are not chosen ones but ordinary people with trauma and resolve — a nurse, a biker, a priest, a conspiracy vlogger. They gather in cells, stake out their target and scrounge for weapons. A Creed shapes how they hunt, from enforcers to investigators, and a Drive explains why they fight at all. Bigger players such as the Second Inquisition and the Society of Leopold work the same streets with their own ideas about the hunt.",
-    "vignette": "The basement of an old laundromat. You track the nest by the blood on the floor — Wits 3 + Investigation 3, six dice. The cell's Desperation is 2, so you gamble and add two orange Desperation dice. Regular dice: 7, 2, 6, 9, 3, 10 — four successes. Desperation dice: 1 and 6 — one more. Five successes against Difficulty 4: you find the hatch. But a Desperation die came up 1. You choose to Overreach: the result stands, and Danger rises. Somewhere below, something wakes up.",
+    "vignette": "The basement of an old laundromat. You track the nest by the blood on the floor — Wits 3 + Investigation 3, six dice. The cell's Desperation is 2, so you gamble and add two black Desperation dice. Regular dice: 7, 2, 6, 9, 3, 10 — four successes. Desperation dice: 1 and 6 — one more. Five successes against Difficulty 4: you find the hatch. But a Desperation die came up 1. You choose to Overreach: the result stands, and Danger rises. Somewhere below, something wakes up.",
     "prep": "~45 min",
     "mechanics": [
       { "title": "d10 pool (V5 engine)", "text": "Roll Attribute + Skill in d10s; every 6+ is a success and a pair of 10s is a critical worth four. Difficulty is how many successes you need. The same engine as Vampire V5 and Werewolf W5." },
-      { "title": "Desperation", "text": "On rolls tied to the hunt, add Desperation dice equal to the cell's level. A 1 on one forces a choice: Overreach (keep the result, raise Danger) or Despair (your faith in your Drive breaks until you redeem it)." },
+      { "title": "Desperation", "text": "On rolls tied to the hunt and your Creed, add Desperation dice — the cell's shared Desperation sets how many. If one shows a 1, a winning roll forces a choice: Overreach (keep the win, raise Danger) or Despair (the roll fails, and you lose Desperation dice until you redeem yourself through your Drive)." },
       { "title": "Danger", "text": "A shared track of how aware the monsters are of your hunt. Noise, witnesses and Overreaches push it up, and the Storyteller answers with ambushes, surveillance and retaliation." },
       { "title": "Creeds, Drives and Edges", "text": "Five Creeds set how you hunt; a Drive is your personal reason. Edges and Perks are not magic but the cell's know-how: an arsenal, wheels, an archive, a sense for the unnatural." }
     ],
@@ -9567,7 +9567,7 @@ registerSystem("kids-on-bikes", {
     "mechanics": [
       { "title": "Кубик на каждую черту", "text": "Шесть характеристик — Мозги, Сила, Драка, Бегство, Обаяние и Стойкость — получают по кубику от d4 до d20. Максимум на кубике «взрывается»: перебрось и прибавь. Если есть время подготовиться, можно не бросать и взять половину грани." },
       { "title": "Жетоны Невзгод", "text": "Каждый провал приносит жетон Невзгод. Каждый жетон — +1 к будущей проверке или топливо для сильных сторон персонажа. Неудачи сегодня — героизм завтра." },
-      { "title": "Город на всех", "text": "Игроки вместе отвечают на вопросы о городе и о том, как их персонажи связаны друг с другом. Тропы вроде Гения-математика, Популярной девчонки или Странного одиночки помогают быстро собрать героя." },
+      { "title": "Город на всех", "text": "Игроки вместе отвечают на вопросы о городе и о том, как их персонажи связаны друг с другом. Тропы вроде Гения-математика или Отважного скаута помогают быстро собрать героя." },
       { "title": "Сверхъестественный персонаж", "text": "По желанию в группе появляется персонаж со странными силами, которым управляют все игроки сразу. Во втором издании правила для него переработаны." }
     ],
     "gallery": [
@@ -9598,7 +9598,7 @@ registerSystem("kids-on-bikes", {
     "mechanics": [
       { "title": "A die for every stat", "text": "Six stats (Brains, Brawn, Fight, Flight, Charm and Grit) each get one die from d4 to d20. Rolling the maximum explodes: roll again and add. With time to plan, you can skip the roll and take half the die's top value." },
       { "title": "Adversity Tokens", "text": "Every failed check earns an Adversity Token. Each token is +1 on a future roll or fuel for your character's Strengths. Today's failures become tomorrow's heroics." },
-      { "title": "A shared town", "text": "Players answer questions together about the town and how their characters know each other. Tropes like the Brilliant Mathlete, the Popular Kid or the Loner Weirdo make building a character fast." },
+      { "title": "A shared town", "text": "Players answer questions together about the town and how their characters know each other. Tropes like the Brilliant Mathlete or the Adventurous Scout make building a character fast." },
       { "title": "The Powered Character", "text": "Optionally, the group adds a character with strange powers that every player controls together. The second edition reworks the rules for them." }
     ],
     "gallery": [
@@ -12616,13 +12616,13 @@ registerSystem("mouse-guard", {
     "tagline": "«Ты всего лишь мышь. Но патруль должен дойти».",
     "description": "Ролевая игра Люка Крейна по комиксам Дэвида Петерсена, удостоенным премии Eisner, — облегчённая и самая дружелюбная к новичкам игра семейства Burning Wheel. Вы — мыши Гвардии, что водят патрули между городами, охраняют тропы и спасают сородичей от непогоды, хищников и друг друга. Проверки решаются пулом d6, где каждая 4–6 — успех, а персонажа двигают Убеждение, Цель и Инстинкт. Второе издание (2015) вышло коробкой с картами действий, кубиками и картой Территорий.",
     "setting": "Мышиные Территории, 1152 год. Мыши живут в городах, спрятанных в корнях деревьев и под камнями, а Гвардия из крепости Локхейвен держит дороги между ними. Совы, ласки, змеи, снег и паводки здесь страшнее любого дракона, а смена времён года задаёт ритм всей кампании — от весенних разливов до голодной зимы.",
-    "vignette": "Осень. На патруль пикирует сова, и ваша мышь бросается вверх по стволу дуба. Лазать — в мышиной Природе, поэтому мастер даёт бросить Природу 3 против Препятствия 2. Выпадают 5, 2 и 1 — один успех, не хватает одного. Вы тратите очко Персоны: +1D, и кубик ложится на 6. Два успеха — когти совы скребут кору там, где миг назад был ваш хвост.",
+    "vignette": "Осень. На патруль пикирует сова, и ваша мышь бросается вверх по стволу дуба. Лазать — в мышиной Природе, поэтому мастер даёт бросить Природу 3 против Препятствия 2. Трёх кубиков маловато, и перед броском вы тратите очко Персоны: +1D. Выпадают 5, 2, 1 и 6 — два успеха, и когти совы скребут кору там, где миг назад был ваш хвост.",
     "prep": "~30 мин",
     "mechanics": [
       { "title": "Убеждение, Цель, Инстинкт", "text": "У каждой мыши есть Убеждение, Цель на эту сессию и Инстинкт. Играть по ним (или против них) — значит получать очки Судьбы и Персоны, которыми потом гнут кубики." },
       { "title": "Ход мастера и ход игроков", "text": "Сначала мастер ставит патрулю задание и бросает в него погоду, зверей и препятствия. Потом игроки тратят заработанные проверки на свои дела — лечиться, вербовать союзников, гнать собственные цели." },
       { "title": "Конфликты на картах", "text": "Бои, погони и споры решаются одинаково: стороны тайно планируют по три действия — Атака, Защита, Финт, Манёвр — и вскрывают их по одному, сбивая расположение противника." },
-      { "title": "Провал — это поворот", "text": "Проваленная проверка не останавливает историю: мастер даёт либо сюжетный поворот, либо успех ценой состояния — Голоден, Зол, Устал, Ранен или Болен." }
+      { "title": "Провал — это поворот", "text": "Проваленная проверка не останавливает историю: мастер даёт либо сюжетный поворот, либо успех ценой состояния — Голоден и хочет пить, Зол, Устал, Ранен или Болен." }
     ],
     "gallery": [
       { "cap": "Коробка второго издания" },
@@ -12646,13 +12646,13 @@ registerSystem("mouse-guard", {
     "tagline": "\"You're only a mouse. The patrol still has to get through.\"",
     "description": "Luke Crane's RPG of David Petersen's Eisner-winning comics is the lightest and most newcomer-friendly game in the Burning Wheel family. You play mice of the Guard, leading patrols between towns, keeping the trails open and saving fellow mice from weather, predators and each other. Tests use a pool of d6s where every 4–6 is a success, and each mouse runs on a Belief, a Goal and an Instinct. The 2015 second edition comes as a boxed set with action cards, dice and a map of the Territories.",
     "setting": "The Mouse Territories, 1152. Mice live in towns hidden among tree roots and under stones, and the Guard of Lockhaven keeps the roads between them alive. Owls, weasels, snakes, snow and floods are more frightening than any dragon, and the turning seasons set the rhythm of a campaign, from spring floods to a starving winter.",
-    "vignette": "Autumn. An owl drops on the patrol and your mouse bolts up an oak trunk. Climbing is in a mouse's Nature, so the GM lets you roll Nature 3 against Obstacle 2. You get 5, 2 and 1: one success, one short. You spend a Persona point for +1D and it lands on 6. Two successes, and the owl's talons rake the bark where your tail was a heartbeat ago.",
+    "vignette": "Autumn. An owl drops on the patrol and your mouse bolts up an oak trunk. Climbing is in a mouse's Nature, so the GM lets you roll Nature 3 against Obstacle 2. Three dice feel thin, so before rolling you spend a Persona point for +1D. You get 5, 2, 1 and 6: two successes, and the owl's talons rake the bark where your tail was a heartbeat ago.",
     "prep": "~30 min",
     "mechanics": [
       { "title": "Belief, Goal, Instinct", "text": "Every mouse carries a Belief, a Goal for this session and an Instinct. Playing to them, or against them, earns Fate and Persona points you later spend to bend the dice." },
       { "title": "GM's turn and players' turn", "text": "First the GM hands the patrol a mission and throws weather, animals and obstacles at it. Then the players spend the checks they earned on their own business: healing, recruiting allies, chasing personal goals." },
       { "title": "Scripted conflicts", "text": "Fights, chases and arguments all work the same way: each side secretly scripts three actions (Attack, Defend, Feint, Maneuver) and reveals them one by one, wearing down the other side's disposition." },
-      { "title": "Failure as a twist", "text": "A failed test never stalls the story. The GM either introduces a twist or grants success at the cost of a condition: Hungry, Angry, Tired, Injured or Sick." }
+      { "title": "Failure as a twist", "text": "A failed test never stalls the story. The GM either introduces a twist or grants success at the cost of a condition: Hungry and Thirsty, Angry, Tired, Injured or Sick." }
     ],
     "gallery": [
       { "cap": "Second edition boxed set" },
@@ -17688,7 +17688,7 @@ registerSystem("stonetop", {
     "mechanics": [
       { "title": "Деревня как персонаж", "text": "У Стонтопа есть свой лист: Размер, Население, Процветание, Оборона, Удача и Излишек. Между приключениями герои строят частокол, мельницы, торговые пути — и смотрят, как деревня растёт или голодает." },
       { "title": "Девять плейбуков", "text": "Каждый класс — роль в общине: *Heavy* защищает, *Judge* хранит летопись и закон, *Lightbearer* несёт свет, *Would-Be Hero* мечтает о большем. Связи с соседями прописаны прямо в листе." },
-      { "title": "Аркана", "text": "Магические предметы — это карты: на одной стороне условие, как раскрыть силу вещи, на другой — что она делает. Почти каждая может пойти не так и потянуть за собой целую сюжетную линию." },
+      { "title": "Аркана", "text": "Магические предметы — аркана — не прилагают инструкций: у каждого свои условия, без которых его сила не откроется. Понять, чего хочет древняя реликвия, и заплатить за это — уже целая сюжетная линия." },
       { "title": "2d6 с преимуществом", "text": "Классика PbtA: 10+ — успех, 7–9 — успех с ценой, 6 и меньше — Мастер делает ход. Сверху — преимущество и помеха: бросаете третий кубик и отбрасываете худший или лучший." }
     ],
     "gallery": [
@@ -17717,7 +17717,7 @@ registerSystem("stonetop", {
     "mechanics": [
       { "title": "The village is a character", "text": "Stonetop has its own sheet: Size, Population, Prosperity, Defenses, Fortunes and Surplus. Between adventures the heroes build palisades, mills and trade routes — and watch the village thrive or starve." },
       { "title": "Nine playbooks", "text": "Each class is a role in the community: the Heavy protects, the Judge keeps the chronicle and the law, the Lightbearer carries the light, the Would-Be Hero dreams of more. Ties to neighbours are written into the sheet." },
-      { "title": "Arcana", "text": "Magic items are cards: one side tells you how to unlock the object's power, the other what it does. Nearly all of them can go wrong and spin off a whole story arc." },
+      { "title": "Arcana", "text": "Magic items, the arcana, don't come with instructions: each has its own requirements before its power unlocks. Working out what an old relic wants, and paying for it, can spin off a whole story arc." },
       { "title": "2d6 with advantage", "text": "PbtA classic: 10+ is a success, 7–9 a success at a cost, 6- hands the GM a move. On top of that, advantage and disadvantage: roll a third die and drop the lowest or the highest." }
     ],
     "gallery": [
@@ -18423,7 +18423,7 @@ registerSystem("tales-of-the-valiant", {
     "tagline": "«Тот же d20, те же приключения — но каждая неудача приближает удачу».",
     "description": "Самостоятельная ролевая игра от Kobold Press на открытом движке Black Flag, совместимая с D&D 5e. Ваши книги и приключения по пятёрке работают как есть, но правила перешиты: Удача вместо вдохновения, происхождение отделено от воспитания, таланты вместо черт, а монстры из Monster Vault кусаются больнее. Ядро свободно по лицензии ORC.",
     "setting": "Без обязательного мира: игра рассчитана на любое высокое фэнтези и на «лабиринт миров» Kobold Press. Отлично стыкуется с Мидгардом — тёмным фэнтезийным сеттингом издательства с драконьими империями и теневыми дорогами. Тринадцать классов, включая новичка-механиста, и родословные от зверолюдов и кобольдов до сидерийцев.",
-    "vignette": "Огр перегородил мост. Ваш воин бьёт секирой: d20 = 9, +5 — итого 14 против КД 15. Промах, но промах — это Удача: получаете 1 очко, теперь их 3. Потратить его на этот же бросок нельзя. Следующий раунд: 10 + 5 = 15, снова на волосок. Тратите 1 Удачу — бонус +1, ровно 16, попадание! Плут мог бы потратить 3 Удачи и перебросить d20 целиком. А если копить слишком жадно: при пяти очках следующее сгорает — бросаете d4, и запас сбрасывается до выпавшего числа.",
+    "vignette": "Огр перегородил мост. Ваш воин бьёт секирой: d20 = 9, +5 — итого 14 против КД 16. Промах, но промах — это Удача: получаете 1 очко, теперь их 3. Потратить его на этот же бросок нельзя. Следующий раунд: 10 + 5 = 15, снова на волосок. Тратите 1 Удачу — бонус +1, ровно 16, попадание! Плут мог бы потратить 3 Удачи и перебросить d20 целиком. А если копить слишком жадно: при пяти очках следующее сгорает — бросаете d4, и запас сбрасывается до выпавшего числа.",
     "prep": "~1 ч",
     "mechanics": [
       {
@@ -18480,7 +18480,7 @@ registerSystem("tales-of-the-valiant", {
     "tagline": "\"Same d20, same adventures — but every failure brings you closer to luck.\"",
     "description": "A standalone RPG from Kobold Press built on the open Black Flag engine and compatible with D&D 5e. Your 5e books and adventures work as-is, but the rules are retuned: Luck instead of Inspiration, ancestry split from upbringing, talents instead of feats, and Monster Vault creatures that bite harder. The core is free under the ORC license.",
     "setting": "No mandatory world: the game is built for any high fantasy and for Kobold Press's 'labyrinth of worlds.' It pairs naturally with Midgard, the publisher's dark fantasy setting of dragon empires and shadow roads. Thirteen classes, including the new Mechanist, and lineages ranging from beastkin and kobolds to sydereans.",
-    "vignette": "An ogre blocks the bridge. Your fighter swings an axe: d20 = 9, +5 makes 14 against AC 15. A miss — but a miss means Luck: you gain 1 point, now at 3. You can't spend it on the roll that earned it. Next round: 10 + 5 = 15, a hair short again. You spend 1 Luck for +1 — exactly 16, a hit! The rogue could spend 3 Luck to re-roll the d20 outright. And hoard too greedily and it backfires: gain a point while at 5 and you roll a d4, resetting your Luck to that number.",
+    "vignette": "An ogre blocks the bridge. Your fighter swings an axe: d20 = 9, +5 makes 14 against AC 16. A miss — but a miss means Luck: you gain 1 point, now at 3. You can't spend it on the roll that earned it. Next round: 10 + 5 = 15, a hair short again. You spend 1 Luck for +1 — exactly 16, a hit! The rogue could spend 3 Luck to re-roll the d20 outright. And hoard too greedily and it backfires: gain a point while at 5 and you roll a d4, resetting your Luck to that number.",
     "prep": "~1 h",
     "mechanics": [
       {
@@ -19765,15 +19765,15 @@ registerSystem("torchbearer", {
   "ru": {
     "tagShort": "Данжен-кроул, где выживание — уже победа",
     "tagline": "«Факел догорает. Еда кончается. А сокровище ещё внизу».",
-    "description": "Torchbearer — суровый данжен-кроул от авторов Burning Wheel и Mouse Guard: Тора Олавсруда и Люка Крейна. Здесь главный враг не дракон, а голод, темнота и усталость: каждый ход приближает отряд к новому состоянию, факелы гаснут, а в рюкзаке хватает места лишь на самое нужное. Проверки решаются пулом d6, где каждая 4–6 — успех, но даже провал двигает историю вперёд. Второе издание (2020) — набор из двух книг: Dungeoneer's Handbook и Scholar's Guide.",
+    "description": "Torchbearer — суровый данжен-кроул от авторов Burning Wheel и Mouse Guard: Тора Олавсруда и Люка Крейна. Здесь главный враг не дракон, а голод, темнота и усталость: каждый ход приближает отряд к новому состоянию, факелы гаснут, а в рюкзаке хватает места лишь на самое нужное. Проверки решаются пулом d6, где каждая 4–6 — успех, но даже провал двигает историю вперёд. Второе издание, собранное на краудфандинге в 2020 году, — набор из двух книг: Dungeoneer's Handbook и Scholar's Guide.",
     "setting": "Мрачное классическое фэнтези: забытые гробницы, разрушенные башни и подземелья, полные чудовищ и ловушек. Герои здесь не избранные, а отчаявшиеся бродяги, которые лезут под землю, потому что иначе им не на что жить. Между вылазками отряд возвращается в город — потратить добычу на ночлег, еду и снаряжение и снова уйти во тьму.",
     "vignette": "Вашему взломщику остаётся один ход света, а замок на сундуке всё ещё заперт. Мастер ставит Препятствие 3. Ваш навык Criminal — 3, бросаете три d6: 6, 4 и 1. Два успеха, не хватает одного. Мастер выбирает не поворот сюжета, а успех ценой состояния: крышка откидывается, но вы теперь Exhausted. Ход заканчивается, факел гаснет, и износ подбирается к следующему состоянию.",
     "prep": "~45 мин",
     "mechanics": [
       { "title": "Свет как ресурс", "text": "Факелы, фонари и свечи горят ограниченное число ходов и освещают лишь нескольких героев. Кто остался во тьме — хуже действует и рискует больше." },
-      { "title": "Износ (the Grind)", "text": "Каждое действие в подземелье — ход. Через каждые несколько ходов отряд получает новое состояние — сперва Hungry and Thirsty, потом всё хуже, вплоть до Injured и Afraid. Время — самый жестокий противник." },
+      { "title": "Износ (the Grind)", "text": "Каждая проверка в подземелье отнимает ход. Каждый четвёртый ход все герои получают новое состояние — сперва Hungry and Thirsty, потом всё хуже, вплоть до Injured, Afraid и, наконец, смерти. Время — самый жестокий противник." },
       { "title": "Инвентарь по слотам", "text": "Рюкзак, пояс, руки — у каждого места фиксированное число ячеек. Взял лишний мешок — не возьмёшь меч. Каждая единица добычи — решение, что бросить." },
-      { "title": "Приключение, лагерь, город", "text": "Черты, сыгранные против себя, приносят проверки. Их тратят в лагере на отдых и лечение и в городе — на ночлег и покупки. Без проверок нельзя даже передохнуть." }
+      { "title": "Приключение, лагерь, город", "text": "Черты, сыгранные против себя, приносят проверки. В лагере каждая проверка — это одна попытка восстановиться, починить снаряжение или подготовиться, а без проверок нельзя даже перевести дух. В городе платят уже иначе: за ночлег и покупки отвечает образ жизни и бросок Ресурсов перед уходом." }
     ],
     "gallery": [
       { "cap": "Обложка Lore Master's Manual" },
@@ -19794,15 +19794,15 @@ registerSystem("torchbearer", {
   "en": {
     "tagShort": "Dungeon crawling where survival is the win",
     "tagline": "\"The torch is guttering. The food is running out. The treasure is still below.\"",
-    "description": "Torchbearer is a harsh dungeon crawler from the makers of Burning Wheel and Mouse Guard, Thor Olavsrud and Luke Crane. The real enemy is not the dragon but hunger, darkness and fatigue: every turn drags the party toward a new condition, torches burn out, and your pack has room only for what truly matters. Tests use a pool of d6s where every 4–6 is a success, yet even failure pushes the story forward. The 2020 second edition is a two-book set: the Dungeoneer's Handbook and the Scholar's Guide.",
+    "description": "Torchbearer is a harsh dungeon crawler from the makers of Burning Wheel and Mouse Guard, Thor Olavsrud and Luke Crane. The real enemy is not the dragon but hunger, darkness and fatigue: every turn drags the party toward a new condition, torches burn out, and your pack has room only for what truly matters. Tests use a pool of d6s where every 4–6 is a success, yet even failure pushes the story forward. The second edition, crowdfunded in 2020, is a two-book set: the Dungeoneer's Handbook and the Scholar's Guide.",
     "setting": "Grim classic fantasy: forgotten tombs, ruined towers and dungeons packed with monsters and traps. The heroes are not chosen ones but desperate drifters who go underground because there is no other way to make a living. Between delves the party returns to town to spend its loot on lodging, food and gear, then heads back into the dark.",
     "vignette": "Your burglar has one turn of light left and the chest is still locked. The GM sets Obstacle 3. Your Criminal skill is 3, so you roll three d6: 6, 4 and 1. Two successes, one short. Instead of a twist the GM grants success with a condition: the lid swings open, but now you're Exhausted. The turn ends, the torch dies, and the grind creeps toward the next condition.",
     "prep": "~45 min",
     "mechanics": [
       { "title": "Light as a resource", "text": "Torches, lanterns and candles burn for a limited number of turns and light only a few characters. Whoever is left in the dark acts worse and risks more." },
-      { "title": "The grind", "text": "Every action in the dungeon is a turn. Every few turns the party takes a new condition, starting with Hungry and Thirsty and getting worse from there, all the way to Injured and Afraid. Time is the cruellest opponent." },
+      { "title": "The grind", "text": "Every test in the dungeon takes a turn. Every fourth turn each adventurer takes a new condition, starting with Hungry and Thirsty and getting worse from there, all the way to Injured, Afraid and finally Dead. Time is the cruellest opponent." },
       { "title": "Slot-based inventory", "text": "Pack, belt and hands each hold a fixed number of slots. Carry an extra sack and you can't carry your sword. Every piece of loot is a choice about what to leave behind." },
-      { "title": "Adventure, camp, town", "text": "Traits played against yourself earn checks. You spend them in camp to rest and recover, and in town on lodging and shopping. Without checks you can't even catch your breath." }
+      { "title": "Adventure, camp, town", "text": "Traits played against yourself earn checks. In camp each check buys one test — to recover, mend gear or prepare — and without checks you can't even catch your breath. In town the currency changes: lodging and shopping are paid for with a Lifestyle and Resources test on the way out." }
     ],
     "gallery": [
       { "cap": "Lore Master's Manual cover" },
