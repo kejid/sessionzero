@@ -2154,6 +2154,39 @@ body.static-page .vote-cta-sub {
     color: var(--dim);
     font-size: 14px;
 }
+body.static-page .vote-cta-sub a { color: inherit; }
+body.static-page .vote-cta.coll-shortlist { margin: 28px 0 8px; }
+body.static-page .coll-shortlist-title {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.25;
+}
+body.static-page .vote-cta.coll-shortlist > .vote-cta-sub:first-of-type { margin: 8px 0 0; }
+body.static-page .coll-shortlist-names {
+    list-style: none;
+    margin: 16px 0 20px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+body.static-page .coll-shortlist-names a {
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid var(--accent-bg);
+    border-radius: 999px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+}
+body.static-page .coll-shortlist-names a:hover { border-color: var(--accent); }
+body.static-page .coll-more {
+    margin: 0;
+    padding-left: 20px;
+    line-height: 1.9;
+}
 body.static-page .static-footer {
     max-width: 960px;
     margin: 40px auto 0;

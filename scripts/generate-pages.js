@@ -86,20 +86,44 @@ if (fs.existsSync(COLLECTIONS_FILE)) {
 const collectionSlugs = Object.keys(COLLECTIONS).sort();
 console.log(`[generate-pages] loaded ${collectionSlugs.length} collections`);
 
-// Resolve which systems belong to a collection: explicit ids, or every
-// system in a grouping scheme (optionally a specific key within it).
+// Resolve which systems belong to a collection: explicit ids, or every system
+// matching all of the given conditions (see data/collections.js for fields).
+// Sorted by the order inside the filter's grouping scheme, else the default one.
 function resolveCollectionSystems(filter) {
   if (!filter) return [];
   if (filter.ids) return filter.ids.filter(id => SYSTEMS[id]);
+  const sortScheme = filter.scheme || 'default';
   const matches = [];
   for (const id of Object.keys(SYSTEMS)) {
-    const g = SYSTEMS[id].groups && SYSTEMS[id].groups[filter.scheme];
-    if (!g) continue;
-    if (filter.key && g.key !== filter.key) continue;
-    matches.push({ id, order: Number(g.order) || 999 });
+    const s = SYSTEMS[id];
+    const groups = s.groups || {};
+    if (filter.scheme) {
+      const g = groups[filter.scheme];
+      if (!g) continue;
+      if (filter.key && g.key !== filter.key) continue;
+    }
+    if (filter.setting && !(s.settingTags || []).includes(filter.setting)) continue;
+    if (filter.playstyle && !(s.playstyleTags || []).includes(filter.playstyle)) continue;
+    if (filter.complexityMax != null && !(Number(s.complexity) <= filter.complexityMax)) continue;
+    if (filter.complexityMin != null && !(Number(s.complexity) >= filter.complexityMin)) continue;
+    const g = groups[sortScheme];
+    matches.push({ id, order: (g && Number(g.order)) || 999 });
   }
   matches.sort((a, b) => a.order - b.order || a.id.localeCompare(b.id));
   return matches.map(m => m.id);
+}
+
+// A collection's ready-made shortlist is hand-picked, so a typo or a system
+// that left the catalog must fail the build instead of silently shrinking the
+// vote the page offers.
+for (const slug of collectionSlugs) {
+  const list = COLLECTIONS[slug].shortlist;
+  if (!list) continue;
+  const bad = list.filter(id => !SYSTEMS[id]);
+  if (bad.length) {
+    console.error(`[generate-pages] collection "${slug}": unknown shortlist ids: ${bad.join(', ')}`);
+    process.exit(1);
+  }
 }
 
 // ---------- 2. Helpers ----------
@@ -227,6 +251,11 @@ const STR = {
     coll_systems_title: 'Systems in this list',
     coll_breadcrumb: 'Guides',
     coll_cta: 'Open Session Zero and vote with your group →',
+    coll_shortlist_title: 'Ready-made shortlist for your group',
+    coll_shortlist_sub: 'Strong picks from this list. Send them to your group as one vote: everyone votes from their own phone, no signup.',
+    coll_shortlist_cta: n => `Vote on these ${n} with your group →`,
+    coll_shortlist_own: 'or pick your own from the full catalog',
+    coll_more_title: 'More collections',
     footer_home: 'Home',
     footer_about: 'About',
     breadcrumb_home: 'Session Zero',
@@ -260,6 +289,11 @@ const STR = {
     coll_systems_title: 'Системы из этой подборки',
     coll_breadcrumb: 'Гайды',
     coll_cta: 'Открыть Session Zero и проголосовать всей группой →',
+    coll_shortlist_title: 'Готовый шорт-лист для вашей группы',
+    coll_shortlist_sub: 'Сильные варианты из этой подборки. Отправьте их группе одним голосованием: каждый голосует со своего телефона, без регистрации.',
+    coll_shortlist_cta: n => `Проголосовать за эти ${n} всей группой →`,
+    coll_shortlist_own: 'или соберите свой список из всего каталога',
+    coll_more_title: 'Другие подборки',
     footer_home: 'Главная',
     footer_about: 'О проекте',
     breadcrumb_home: 'Session Zero',
@@ -779,6 +813,27 @@ function renderCollectionPage(slug, cfg, lang) {
           </a>`;
   }).join('');
 
+  // Ready-made shortlist → the SPA's #list= view, which turns it into a group
+  // vote in one tap (room.js szEnterList / szDoCreateFromList).
+  const shortlist = cfg.shortlist || [];
+  const listHref = `/${lang === 'ru' ? '?lang=ru' : ''}#list=${shortlist.join(',')}`;
+  const shortlistHTML = shortlist.length ? `<div class="vote-cta coll-shortlist">
+      <div class="coll-shortlist-title">${escBody(S.coll_shortlist_title)}</div>
+      <p class="vote-cta-sub">${escBody(S.coll_shortlist_sub)}</p>
+      <ul class="coll-shortlist-names">${shortlist.map(sid => {
+        const sHref = lang === 'en' ? `/system/${sid}.html` : `/ru/system/${sid}.html`;
+        return `<li><a href="${escapeHtml(sHref)}">${escBody(SYSTEMS[sid].name || sid)}</a></li>`;
+      }).join('')}</ul>
+      <a href="${escapeHtml(listHref)}" class="vote-cta-btn" data-gc-event="cta-vote-shortlist-${escapeHtml(slug)}" data-gc-title="${escapeHtml(title)} → shortlist vote">${escBody(S.coll_shortlist_cta(shortlist.length))}</a>
+      <div class="vote-cta-sub"><a href="${toolHref}" data-gc-event="cta-vote-coll-own-${escapeHtml(slug)}" data-gc-title="${escapeHtml(title)} → tool">${escBody(S.coll_shortlist_own)}</a></div>
+    </div>` : '';
+
+  const moreLinks = collectionSlugs.filter(s => s !== slug).map(s => {
+    const c = COLLECTIONS[s];
+    const href = lang === 'en' ? `/collections/${s}.html` : `/ru/collections/${s}.html`;
+    return `<li><a href="${escapeHtml(href)}">${escBody((lang === 'ru' ? c.title_ru : c.title) || c.title || s)}</a></li>`;
+  }).join('');
+
   const jsonLdList = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
@@ -849,11 +904,14 @@ function renderCollectionPage(slug, cfg, lang) {
   <article class="static-article">
     <h1>${escBody(h1)}</h1>
     ${intro ? `<div class="setting-block">${intro}</div>` : ''}
+    ${shortlistHTML}
     ${cardsHTML ? `<div class="section-title">${escBody(S.coll_systems_title)}</div>
     <div class="similar-systems-grid">${cardsHTML}</div>` : ''}
     <div class="vote-cta">
       <a href="${toolHref}" class="vote-cta-btn" data-gc-event="cta-vote-coll-${escapeHtml(slug)}" data-gc-title="${escapeHtml(title)} → tool">${escBody(S.coll_cta)}</a>
     </div>
+    ${moreLinks ? `<div class="section-title">${escBody(S.coll_more_title)}</div>
+    <ul class="coll-more">${moreLinks}</ul>` : ''}
   </article>
 </main>
 <footer class="static-footer">
@@ -902,6 +960,9 @@ function syncEnHomeFaq() {
   };
   html = swap(html, 'faq-ld', '    ' + ldBlock);
   html = swap(html, 'faq-html', items);
+  const collLinks = collectionSlugs.map(slug =>
+    `                <a href="/collections/${escapeHtml(slug)}.html">${escBody(COLLECTIONS[slug].title || slug)}</a> ·`).join('\n');
+  html = swap(html, 'coll-links', collLinks);
   fs.writeFileSync(file, html, 'utf8');
 }
 
