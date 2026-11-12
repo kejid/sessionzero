@@ -2187,6 +2187,37 @@ body.static-page .coll-more {
     padding-left: 20px;
     line-height: 1.9;
 }
+
+/* "X vs Y" comparison pages */
+body.static-page .similar-systems-grid.cmp-heads { grid-template-columns: 1fr 1fr; margin-top: 24px; }
+body.static-page .cmp-table-wrap { overflow-x: auto; margin: 0 0 8px; }
+body.static-page .cmp-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+body.static-page .cmp-table th,
+body.static-page .cmp-table td {
+    padding: 10px 12px; text-align: left; vertical-align: top;
+    border-bottom: 1px solid var(--border-subtle);
+}
+body.static-page .cmp-table thead th {
+    font-family: 'Unbounded', sans-serif; font-size: 15px; color: var(--text);
+}
+body.static-page .cmp-table tbody th { color: var(--dim); font-weight: 600; white-space: nowrap; width: 1%; }
+body.static-page .cmp-table td { width: 49%; }
+body.static-page .cmp-table .playstyle-tag { margin: 0 6px 6px 0; }
+body.static-page .cmp-table .playstyle-tag:not(.cmp-shared) { border-color: var(--accent); }
+body.static-page .cmp-table .cmp-shared { opacity: 0.6; }
+body.static-page .cmp-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 32px; }
+body.static-page .cmp-col h2 { font-family: 'Unbounded', sans-serif; font-size: 20px; margin: 0 0 8px; }
+body.static-page .cmp-tagshort { color: var(--accent); margin: 0 0 12px; }
+body.static-page .cmp-mech-title { color: var(--dim); font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; margin: 16px 0 8px; }
+body.static-page .cmp-mechanics { list-style: none; margin: 0 0 12px; padding: 0; display: grid; gap: 6px; }
+body.static-page .cmp-mechanics li { display: flex; align-items: center; gap: 8px; }
+body.static-page .cmp-mechanics i[data-lucide] { width: 16px; height: 16px; color: var(--accent); flex-shrink: 0; }
+body.static-page .cmp-open { color: var(--accent); text-decoration: none; font-weight: 600; }
+@media (max-width: 640px) {
+    body.static-page .cmp-cols { grid-template-columns: 1fr; }
+    body.static-page .cmp-table th, body.static-page .cmp-table td { padding: 8px 6px; }
+    body.static-page .cmp-table tbody th { white-space: normal; }
+}
 body.static-page .static-footer {
     max-width: 960px;
     margin: 40px auto 0;

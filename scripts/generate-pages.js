@@ -20,6 +20,8 @@ const OUT_RU = path.join(ROOT, 'ru');
 const OUT_RU_SYSTEM = path.join(OUT_RU, 'system');
 const OUT_COLLECTIONS = path.join(ROOT, 'collections');
 const OUT_RU_COLLECTIONS = path.join(OUT_RU, 'collections');
+const OUT_COMPARE = path.join(ROOT, 'compare');
+const OUT_RU_COMPARE = path.join(OUT_RU, 'compare');
 const RU_HOME = path.join(OUT_RU, 'index.html');
 const SITEMAP = path.join(ROOT, 'sitemap.xml');
 const ABOUT_EN = path.join(ROOT, 'about.html');
@@ -45,9 +47,11 @@ const HOMEPAGE_OG_ALT = 'Session Zero — TTRPG group voting tool';
 // ---------- 1. Load systems via vm sandbox ----------
 const SYSTEMS = {};
 const COLLECTIONS = {};
+const COMPARISONS = [];
 const sandbox = vm.createContext({
   registerSystem: (id, data) => { SYSTEMS[id] = data; },
-  registerCollection: (slug, config) => { COLLECTIONS[slug] = config; }
+  registerCollection: (slug, config) => { COLLECTIONS[slug] = config; },
+  registerComparison: (a, b, config) => { COMPARISONS.push(Object.assign({ a, b }, config || {})); }
 });
 
 const files = fs.readdirSync(DATA_DIR)
@@ -135,8 +139,34 @@ for (const slug of collectionSlugs) {
   if (outside.length) fail(`shortlist ids not in the collection: ${outside.join(', ')}`);
 }
 
+// "X vs Y" comparison pages (data/comparisons.js). A pair that names an
+// unknown system or repeats one must fail the build, not ship a broken page.
+const COMPARISONS_FILE = path.join(ROOT, 'data', 'comparisons.js');
+if (fs.existsSync(COMPARISONS_FILE)) {
+  try {
+    vm.runInContext(fs.readFileSync(COMPARISONS_FILE, 'utf8'), sandbox, { filename: 'comparisons.js' });
+  } catch (e) {
+    console.error('[generate-pages] failed to parse comparisons.js:', e.message);
+    process.exit(1);
+  }
+}
+{
+  const seen = new Set();
+  for (const c of COMPARISONS) {
+    c.slug = `${c.a}-vs-${c.b}`;
+    const fail = msg => { console.error(`[generate-pages] comparison "${c.slug}": ${msg}`); process.exit(1); };
+    if (!SYSTEMS[c.a] || !SYSTEMS[c.b]) fail('unknown system id');
+    if (c.a === c.b) fail('compares a system with itself');
+    const key = [c.a, c.b].sort().join('|');
+    if (seen.has(key)) fail('duplicate pair');
+    seen.add(key);
+  }
+}
+console.log(`[generate-pages] loaded ${COMPARISONS.length} comparisons`);
+
 const sysHref = (lang, id) => lang === 'en' ? `/system/${id}.html` : `/ru/system/${id}.html`;
 const collHref = (lang, slug) => lang === 'en' ? `/collections/${slug}.html` : `/ru/collections/${slug}.html`;
+const compHref = (lang, slug) => lang === 'en' ? `/compare/${slug}.html` : `/ru/compare/${slug}.html`;
 
 // ---------- 2. Helpers ----------
 function escapeHtml(s) {
@@ -268,6 +298,21 @@ const STR = {
     coll_shortlist_cta: n => `Vote on these ${n} with your group →`,
     coll_shortlist_own: 'or pick your own from the full catalog',
     coll_more_title: 'More collections',
+    section_compare: 'Compare',
+    cmp_title: (a, b) => `${a} vs ${b}: which TTRPG fits your group?`,
+    cmp_lead: (a, b) => `${a} and ${b} side by side: dice, rules weight, prep, playstyle and what each game is about. Still split? Put both to a group vote.`,
+    cmp_row_publisher: 'Publisher',
+    cmp_row_free: 'Free version',
+    cmp_row_playstyle: 'Playstyle',
+    cmp_row_setting: 'Setting',
+    cmp_yes: 'Yes',
+    cmp_no: 'No',
+    cmp_about: name => `What ${name} is`,
+    cmp_open: 'Full page →',
+    cmp_cta_title: 'Still split? Let the group decide',
+    cmp_cta_sub: 'Send both games to your players as one vote: everyone votes from their own phone, no signup.',
+    cmp_cta_btn: (a, b) => `Vote: ${a} or ${b} →`,
+    cmp_more_title: 'More comparisons',
     footer_home: 'Home',
     footer_about: 'About',
     breadcrumb_home: 'Session Zero',
@@ -306,6 +351,21 @@ const STR = {
     coll_shortlist_cta: n => `Проголосовать за эти ${n} всей группой →`,
     coll_shortlist_own: 'или соберите свой список из всего каталога',
     coll_more_title: 'Другие подборки',
+    section_compare: 'Сравнения',
+    cmp_title: (a, b) => `${a} или ${b}: что выбрать вашей группе?`,
+    cmp_lead: (a, b) => `${a} и ${b} рядом: кубики, сложность правил, подготовка, плейстайл и о чём каждая игра. Не можете выбрать — вынесите обе на голосование группы.`,
+    cmp_row_publisher: 'Издатель',
+    cmp_row_free: 'Бесплатная версия',
+    cmp_row_playstyle: 'Плейстайл',
+    cmp_row_setting: 'Сеттинг',
+    cmp_yes: 'Да',
+    cmp_no: 'Нет',
+    cmp_about: name => `Что такое ${name}`,
+    cmp_open: 'Подробнее →',
+    cmp_cta_title: 'Не можете выбрать? Пусть решит группа',
+    cmp_cta_sub: 'Отправьте обе игры игрокам одним голосованием: каждый голосует со своего телефона, без регистрации.',
+    cmp_cta_btn: (a, b) => `Голосовать: ${a} или ${b} →`,
+    cmp_more_title: 'Другие сравнения',
     footer_home: 'Главная',
     footer_about: 'О проекте',
     breadcrumb_home: 'Session Zero',
@@ -481,6 +541,12 @@ function renderSystemPage(id, sys, lang) {
         }).join('')}
     </div>` : '';
 
+  const myComparisons = COMPARISONS.filter(c => c.a === id || c.b === id);
+  const compareLinksHTML = myComparisons.length ? `
+    <div class="section-title">${escBody(S.section_compare)}</div>
+    <ul class="coll-more">${myComparisons.map(c =>
+      `<li><a href="${escapeHtml(compHref(lang, c.slug))}">${escBody(SYSTEMS[c.a].name)} vs ${escBody(SYSTEMS[c.b].name)}</a></li>`).join('')}</ul>` : '';
+
   const resourcesHTML = resources.length ? `
     <div class="section-title">${escBody(S.section_resources)}</div>
     <div class="resources-section" style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px;">
@@ -632,6 +698,7 @@ function renderSystemPage(id, sys, lang) {
     ${resourcesHTML}
     <p class="author-credit">${S.author_credit}</p>
     ${similarHTML}
+    ${compareLinksHTML}
     <div class="vote-cta">
       <a href="${toolHref}" class="vote-cta-btn" ${ctaAttrs}>${escBody(S.vote_cta(name))}</a>
       <p class="vote-cta-sub">${escBody(S.vote_cta_sub)}</p>
@@ -924,6 +991,171 @@ function renderCollectionPage(slug, cfg, lang) {
 </main>
 <footer class="static-footer">
   <a href="${toolHref}">${escBody(S.footer_home)}</a> ·
+  <a href="${lang === 'ru' ? '/ru/about.html' : '/about.html'}">${escBody(S.footer_about)}</a> ·
+  <a href="https://github.com/kejid/sessionzero" target="_blank" rel="noopener">GitHub</a>
+</footer>
+${CTA_TRACK_SCRIPT}
+<script data-goatcounter="https://kejid.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
+`;
+}
+
+// ---------- 5b1. "X vs Y" comparison pages ----------
+// Side-by-side table and both games' own summaries from the system cards,
+// then a two-game group vote. Optional hand-written intro from the config.
+function renderComparePage(cmp, lang) {
+  const S = STR[lang];
+  const A = SYSTEMS[cmp.a];
+  const B = SYSTEMS[cmp.b];
+  const nameA = A.name || cmp.a;
+  const nameB = B.name || cmp.b;
+  const slug = cmp.slug;
+  const title = S.cmp_title(nameA, nameB);
+  const fullTitle = `${title} | Session Zero`;
+  const lead = S.cmp_lead(nameA, nameB);
+  const metaDesc = truncate(lead, 155);
+  const intro = (lang === 'ru' ? cmp.intro_ru : cmp.intro) || '';
+
+  const enUrl = `${SITE}/compare/${slug}.html`;
+  const ruUrl = `${SITE}/ru/compare/${slug}.html`;
+  const canonical = lang === 'en' ? enUrl : ruUrl;
+  const ogImage = lang === 'ru' ? `${SITE}/og/ru/${cmp.a}.jpg` : `${SITE}/og/${cmp.a}.jpg`;
+  const homeHref = `/${lang === 'ru' ? '?lang=ru' : ''}`;
+  const listHref = `${homeHref}#list=${cmp.a},${cmp.b}&from=compare`;
+  const enActive = lang === 'en' ? ' class="active"' : '';
+  const ruActive = lang === 'ru' ? ' class="active"' : '';
+
+  // Tags both games share are highlighted, so the difference stands out.
+  const tagCell = (sys, other, field, icons) => (sys[field] || []).map(tag => {
+    const shared = (other[field] || []).includes(tag);
+    const label = TAG_LABELS[lang][tag] || tag;
+    return `<span class="playstyle-tag${shared ? ' cmp-shared' : ''}"><i data-lucide="${escapeHtml(icons[tag] || 'tag')}"></i> ${escBody(label)}</span>`;
+  }).join('') || '—';
+  const yesNo = v => escBody(v ? S.cmp_yes : S.cmp_no);
+  const rows = [
+    [S.cmp_row_publisher, escBody(A.publisher || '—'), escBody(B.publisher || '—')],
+    [S.qs_dice, escBody(A.dice || '—'), escBody(B.dice || '—')],
+    [S.qs_players, escBody(A.players || '—'), escBody(B.players || '—')],
+    [S.qs_complexity, `<div class="complexity-bar">${complexityBar(A.complexity)}</div>`, `<div class="complexity-bar">${complexityBar(B.complexity)}</div>`],
+    [S.qs_prep, escBody(pickLang(A, 'prep', lang, '—')), escBody(pickLang(B, 'prep', lang, '—'))],
+    [S.qs_foundry, escBody(A.foundryStatus || '—'), escBody(B.foundryStatus || '—')],
+    [S.cmp_row_free, yesNo(A.free), yesNo(B.free)],
+    [S.cmp_row_playstyle, tagCell(A, B, 'playstyleTags', TAG_ICONS), tagCell(B, A, 'playstyleTags', TAG_ICONS)],
+    [S.cmp_row_setting, tagCell(A, B, 'settingTags', SETTING_TAG_ICONS), tagCell(B, A, 'settingTags', SETTING_TAG_ICONS)],
+  ];
+  const tableHTML = `<div class="cmp-table-wrap"><table class="cmp-table">
+      <thead><tr><th></th><th>${escBody(nameA)}</th><th>${escBody(nameB)}</th></tr></thead>
+      <tbody>${rows.map(([label, a, b]) => `<tr><th scope="row">${escBody(label)}</th><td>${a}</td><td>${b}</td></tr>`).join('')}</tbody>
+    </table></div>`;
+
+  const head = (id, sys) => `<a href="${escapeHtml(sysHref(lang, id))}" class="similar-system-card">
+            <img src="${escapeHtml(`${SITE}/og/${id}.jpg`)}" alt="${escapeHtml((sys.name || id) + ' hero art')}" loading="eager" decoding="async">
+            <span class="similar-system-name">${escBody(sys.name || id)}</span>
+          </a>`;
+
+  const about = (id, sys) => {
+    const name = sys.name || id;
+    const tagShort = pickLang(sys, 'tagShort', lang, '');
+    const description = pickLang(sys, 'description', lang);
+    const mechanics = mergeArr(sys.mechanics, sys[lang] && sys[lang].mechanics).filter(m => m && m.title);
+    return `<div class="cmp-col">
+        <h2>${escBody(S.cmp_about(name))}</h2>
+        ${tagShort ? `<p class="cmp-tagshort">${escBody(tagShort)}</p>` : ''}
+        ${description ? `<div class="setting-block"><p>${miniMd(description)}</p></div>` : ''}
+        ${mechanics.length ? `<div class="cmp-mech-title">${escBody(S.section_mechanics)}</div>
+        <ul class="cmp-mechanics">${mechanics.map(m => `<li><i data-lucide="${escapeHtml(m.icon || 'dice-5')}"></i> ${escBody(m.title)}</li>`).join('')}</ul>` : ''}
+        <a href="${escapeHtml(sysHref(lang, id))}" class="cmp-open">${escBody(S.cmp_open)}</a>
+      </div>`;
+  };
+
+  const moreLinks = COMPARISONS.filter(c => c.slug !== slug).map(c =>
+    `<li><a href="${escapeHtml(compHref(lang, c.slug))}">${escBody(SYSTEMS[c.a].name)} vs ${escBody(SYSTEMS[c.b].name)}</a></li>`).join('');
+
+  const jsonLdList = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    'name': title,
+    'description': metaDesc,
+    'itemListElement': [cmp.a, cmp.b].map((id, i) => ({
+      '@type': 'ListItem', 'position': i + 1, 'url': `${SITE}${sysHref(lang, id)}`, 'name': SYSTEMS[id].name || id,
+    })),
+  };
+  const jsonLdBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': S.breadcrumb_home, 'item': `${SITE}/` },
+      { '@type': 'ListItem', 'position': 2, 'name': `${nameA} vs ${nameB}`, 'item': canonical },
+    ],
+  };
+  const cta = `<div class="vote-cta">
+      <div class="coll-shortlist-title">${escBody(S.cmp_cta_title)}</div>
+      <p class="vote-cta-sub coll-shortlist-sub">${escBody(S.cmp_cta_sub)}</p>
+      <div style="margin-top:16px"><a href="${escapeHtml(listHref)}" class="vote-cta-btn" data-gc-event="cta-vote-compare-${escapeHtml(slug)}" data-gc-title="${escapeHtml(nameA + ' vs ' + nameB)} → vote">${escBody(S.cmp_cta_btn(nameA, nameB))}</a></div>
+    </div>`;
+
+  return `<!DOCTYPE html>
+<html lang="${lang}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${escapeHtml(fullTitle)}</title>
+<meta name="description" content="${escapeHtml(metaDesc)}">
+<link rel="canonical" href="${escapeHtml(canonical)}">
+<link rel="alternate" hreflang="en" href="${escapeHtml(enUrl)}">
+<link rel="alternate" hreflang="ru" href="${escapeHtml(ruUrl)}">
+<link rel="alternate" hreflang="x-default" href="${escapeHtml(enUrl)}">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:url" content="${escapeHtml(canonical)}">
+<meta property="og:title" content="${escapeHtml(fullTitle)}">
+<meta property="og:description" content="${escapeHtml(metaDesc)}">
+<meta property="og:image" content="${escapeHtml(ogImage)}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="${escapeHtml(nameA + ' vs ' + nameB)}">
+<meta property="og:locale" content="${lang === 'ru' ? 'ru_RU' : 'en_US'}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${escapeHtml(fullTitle)}">
+<meta name="twitter:description" content="${escapeHtml(metaDesc)}">
+<meta name="twitter:image" content="${escapeHtml(ogImage)}">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;600;800&display=swap"></noscript>
+<link rel="stylesheet" href="/style.min.css">
+<script defer src="/lib/lucide.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded',function(){if(window.lucide)lucide.createIcons();});</script>
+<script type="application/ld+json">${JSON.stringify(jsonLdList)}</script>
+<script type="application/ld+json">${JSON.stringify(jsonLdBreadcrumb)}</script>
+</head>
+<body class="static-page">
+<header class="static-header">
+  <a href="${homeHref}" class="back-link">${escBody(S.back_to_catalog)}</a>
+  <div class="lang-switch">
+    <a href="${escapeHtml(compHref('en', slug))}"${enActive}>${S.lang_en}</a>
+    <a href="${escapeHtml(compHref('ru', slug))}"${ruActive}>${S.lang_ru}</a>
+  </div>
+</header>
+<main class="static-main">
+  <article class="static-article">
+    <h1>${escBody(title)}</h1>
+    <div class="setting-block"><p>${escBody(lead)}</p></div>
+    ${intro ? `<div class="setting-block">${intro}</div>` : ''}
+    <div class="similar-systems-grid cmp-heads">${head(cmp.a, A)}${head(cmp.b, B)}</div>
+    ${tableHTML}
+    ${cta}
+    <div class="cmp-cols">${about(cmp.a, A)}${about(cmp.b, B)}</div>
+    ${cta}
+    ${moreLinks ? `<div class="section-title">${escBody(S.cmp_more_title)}</div>
+    <ul class="coll-more">${moreLinks}</ul>` : ''}
+  </article>
+</main>
+<footer class="static-footer">
+  <a href="${homeHref}">${escBody(S.footer_home)}</a> ·
   <a href="${lang === 'ru' ? '/ru/about.html' : '/about.html'}">${escBody(S.footer_about)}</a> ·
   <a href="https://github.com/kejid/sessionzero" target="_blank" rel="noopener">GitHub</a>
 </footer>
@@ -1438,6 +1670,13 @@ function renderSitemap() {
       lastmod: collMtime,
     });
   }
+  // Comparison pages
+  for (const c of COMPARISONS) {
+    const cmpMtime = mtimeIso(COMPARISONS_FILE);
+    const alts = { en: `${SITE}/compare/${c.slug}.html`, ru: `${SITE}/ru/compare/${c.slug}.html` };
+    urls.push({ loc: alts.en, priority: '0.7', changefreq: 'monthly', alts, lastmod: cmpMtime });
+    urls.push({ loc: alts.ru, priority: '0.7', changefreq: 'monthly', alts, lastmod: cmpMtime });
+  }
   // Home: EN canonical at root, RU variant at /ru/
   urls[0].alts = { en: `${SITE}/`, ru: `${SITE}/ru/` };
 
@@ -1508,6 +1747,19 @@ for (const slug of collectionSlugs) {
   }
 }
 
+ensureDir(OUT_COMPARE);
+ensureDir(OUT_RU_COMPARE);
+for (const c of COMPARISONS) {
+  try {
+    fs.writeFileSync(path.join(OUT_COMPARE, `${c.slug}.html`), renderComparePage(c, 'en'), 'utf8');
+    fs.writeFileSync(path.join(OUT_RU_COMPARE, `${c.slug}.html`), renderComparePage(c, 'ru'), 'utf8');
+    written += 2;
+  } catch (e) {
+    console.error(`[generate-pages] failed to render comparison ${c.slug}:`, e.message);
+    process.exit(1);
+  }
+}
+
 fs.writeFileSync(RU_HOME, renderRuHome(), 'utf8');
 syncEnHomeFaq();
 written += 1;
@@ -1515,4 +1767,4 @@ written += 1;
 fs.writeFileSync(SITEMAP, renderSitemap(), 'utf8');
 
 console.log(`[generate-pages] wrote ${written} HTML pages + sitemap.xml`);
-console.log(`[generate-pages] systems: ${ids.length} (×2 langs = ${ids.length * 2} system pages), collections: ${collectionSlugs.length}`);
+console.log(`[generate-pages] systems: ${ids.length} (×2 langs = ${ids.length * 2} system pages), collections: ${collectionSlugs.length}, comparisons: ${COMPARISONS.length}`);

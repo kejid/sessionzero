@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://sessionzero.games/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/"/>
@@ -12,7 +12,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/about.html</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/about.html"/>
@@ -21,7 +21,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/ru/about.html</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/about.html"/>
@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/how-to-choose-a-ttrpg.html</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/how-to-choose-a-ttrpg.html"/>
@@ -39,7 +39,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/ru/how-to-choose-a-ttrpg.html</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/how-to-choose-a-ttrpg.html"/>
@@ -3126,7 +3126,7 @@
   </url>
   <url>
     <loc>https://sessionzero.games/ru/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/"/>
@@ -3294,5 +3294,203 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/collections/tactical-combat-ttrpgs.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/collections/tactical-combat-ttrpgs.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/collections/tactical-combat-ttrpgs.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/compare/dnd-5e-vs-pathfinder.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/compare/dnd-5e-vs-pathfinder.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/compare/dnd-5e-vs-pathfinder.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/compare/dnd-5e-vs-pathfinder.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/ru/compare/dnd-5e-vs-pathfinder.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/compare/dnd-5e-vs-pathfinder.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/compare/dnd-5e-vs-pathfinder.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/compare/dnd-5e-vs-pathfinder.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/compare/dnd-5e-vs-daggerheart.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/compare/dnd-5e-vs-daggerheart.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/compare/dnd-5e-vs-daggerheart.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/compare/dnd-5e-vs-daggerheart.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/ru/compare/dnd-5e-vs-daggerheart.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/compare/dnd-5e-vs-daggerheart.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/compare/dnd-5e-vs-daggerheart.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/compare/dnd-5e-vs-daggerheart.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/compare/dnd-5e-vs-tales-of-the-valiant.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/compare/dnd-5e-vs-tales-of-the-valiant.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/compare/dnd-5e-vs-tales-of-the-valiant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/compare/dnd-5e-vs-tales-of-the-valiant.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/ru/compare/dnd-5e-vs-tales-of-the-valiant.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/compare/dnd-5e-vs-tales-of-the-valiant.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/compare/dnd-5e-vs-tales-of-the-valiant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/compare/dnd-5e-vs-tales-of-the-valiant.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/compare/shadowdark-vs-ose.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/compare/shadowdark-vs-ose.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/compare/shadowdark-vs-ose.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/compare/shadowdark-vs-ose.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/ru/compare/shadowdark-vs-ose.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/compare/shadowdark-vs-ose.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/compare/shadowdark-vs-ose.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/compare/shadowdark-vs-ose.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/compare/mork-borg-vs-shadowdark.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/compare/mork-borg-vs-shadowdark.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/compare/mork-borg-vs-shadowdark.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/compare/mork-borg-vs-shadowdark.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/ru/compare/mork-borg-vs-shadowdark.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/compare/mork-borg-vs-shadowdark.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/compare/mork-borg-vs-shadowdark.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/compare/mork-borg-vs-shadowdark.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/compare/knave-vs-cairn.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/compare/knave-vs-cairn.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/compare/knave-vs-cairn.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/compare/knave-vs-cairn.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/ru/compare/knave-vs-cairn.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/compare/knave-vs-cairn.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/compare/knave-vs-cairn.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/compare/knave-vs-cairn.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/compare/call-of-cthulhu-vs-delta-green.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/compare/call-of-cthulhu-vs-delta-green.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/compare/call-of-cthulhu-vs-delta-green.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/compare/call-of-cthulhu-vs-delta-green.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/ru/compare/call-of-cthulhu-vs-delta-green.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/compare/call-of-cthulhu-vs-delta-green.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/compare/call-of-cthulhu-vs-delta-green.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/compare/call-of-cthulhu-vs-delta-green.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/compare/mothership-vs-alien.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/compare/mothership-vs-alien.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/compare/mothership-vs-alien.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/compare/mothership-vs-alien.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/ru/compare/mothership-vs-alien.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/compare/mothership-vs-alien.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/compare/mothership-vs-alien.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/compare/mothership-vs-alien.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/compare/blades-vs-scum-and-villainy.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/compare/blades-vs-scum-and-villainy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/compare/blades-vs-scum-and-villainy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/compare/blades-vs-scum-and-villainy.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/ru/compare/blades-vs-scum-and-villainy.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/compare/blades-vs-scum-and-villainy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/compare/blades-vs-scum-and-villainy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/compare/blades-vs-scum-and-villainy.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/compare/cyberpunk-red-vs-shadowrun.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/compare/cyberpunk-red-vs-shadowrun.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/compare/cyberpunk-red-vs-shadowrun.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/compare/cyberpunk-red-vs-shadowrun.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/ru/compare/cyberpunk-red-vs-shadowrun.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/compare/cyberpunk-red-vs-shadowrun.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/compare/cyberpunk-red-vs-shadowrun.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/compare/cyberpunk-red-vs-shadowrun.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/compare/shadow-of-the-demon-lord-vs-shadow-of-the-weird-wizard.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/compare/shadow-of-the-demon-lord-vs-shadow-of-the-weird-wizard.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/compare/shadow-of-the-demon-lord-vs-shadow-of-the-weird-wizard.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/compare/shadow-of-the-demon-lord-vs-shadow-of-the-weird-wizard.html"/>
+  </url>
+  <url>
+    <loc>https://sessionzero.games/ru/compare/shadow-of-the-demon-lord-vs-shadow-of-the-weird-wizard.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sessionzero.games/compare/shadow-of-the-demon-lord-vs-shadow-of-the-weird-wizard.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sessionzero.games/ru/compare/shadow-of-the-demon-lord-vs-shadow-of-the-weird-wizard.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sessionzero.games/compare/shadow-of-the-demon-lord-vs-shadow-of-the-weird-wizard.html"/>
   </url>
 </urlset>
