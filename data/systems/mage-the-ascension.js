@@ -76,12 +76,12 @@ registerSystem("mage-the-ascension", {
       "хотите прямолинейного экшена с битвами против монстров"
     ],
     "setting": "Современный мир, где реальность держится на «консенсусе» — общей вере масс. Маги пробудились и видят: правила можно переписать. Технократия куёт мир порядка, науки и контроля; девять Традиций хранят мистику и чудо. Между ними — Война Вознесения за душу человечества. Оккультизм, паранойя и большие идеи.",
-    "vignette": "Маг Культа Экстаза хочет исцелить умирающего одной волей. Это «вульгарная» магия — она противоречит тому, что видят обычные свидетели. Он собирает пул: Arete + Сфера Жизни, бросок d10, успехи против сложности. Рана затягивается на глазах медсестры — и реальность мстит. Ведущий начисляет Парадокс: где-то рядом уже сгущается кара за нарушение законов мира.",
+    "vignette": "Маг Культа Экстаза хочет исцелить умирающего одной волей. Это «вульгарная» магия — она противоречит тому, что видят обычные свидетели. Он бросает столько d10, сколько у него точек Арете, против сложности: её задаёт нужный уровень Сферы Жизни, а вульгарная магия на глазах свидетелей делает её выше. Рана затягивается на глазах медсестры — и реальность мстит. Ведущий начисляет Парадокс: где-то рядом уже сгущается кара за нарушение законов мира.",
     "prep": "~30 мин",
     "mechanics": [
       {
         "title": "Storyteller System (d10)",
-        "text": "Действие — пул d10 из Атрибута и Способности. Каждый кубик выше сложности — успех. Классическая механика Мира Тьмы: быстро, драматично, с местом для нарратива."
+        "text": "Действие — пул d10 из Атрибута и Способности. Каждый кубик, равный сложности или выше, — успех. Классическая механика Мира Тьмы: быстро, драматично, с местом для нарратива."
       },
       {
         "title": "Девять Сфер магии",
@@ -132,12 +132,12 @@ registerSystem("mage-the-ascension", {
       "you want straightforward monster-fighting action"
     ],
     "setting": "A modern world where reality rests on 'consensus' — the shared belief of the masses. Mages have Awakened and see that the rules can be rewritten. The Technocracy forges a world of order, science, and control; the nine Traditions guard mysticism and wonder. Between them, the Ascension War for the soul of humanity. Occultism, paranoia, and big ideas.",
-    "vignette": "A Cult of Ecstasy mage wants to heal a dying man by will alone. That's 'vulgar' magic — it defies what ordinary witnesses see. He gathers a pool: Arete + the Life Sphere, rolls d10s, successes against a difficulty. The wound knits shut before the nurse's eyes — and reality retaliates. The GM assigns Paradox: somewhere nearby, punishment for breaking the world's laws is already gathering.",
+    "vignette": "A Cult of Ecstasy mage wants to heal a dying man by will alone. That's 'vulgar' magic — it defies what ordinary witnesses see. He rolls one d10 per dot of Arete against a difficulty set by the Life Sphere rank the effect needs, raised because the magic is vulgar and witnessed. The wound knits shut before the nurse's eyes — and reality retaliates. The GM assigns Paradox: somewhere nearby, punishment for breaking the world's laws is already gathering.",
     "prep": "~30 min",
     "mechanics": [
       {
         "title": "Storyteller System (d10)",
-        "text": "An action is a d10 pool from an Attribute and an Ability. Each die over the difficulty is a success. The classic World of Darkness mechanic: fast, dramatic, with room for narrative."
+        "text": "An action is a d10 pool from an Attribute and an Ability. Each die that meets or beats the difficulty is a success. The classic World of Darkness mechanic: fast, dramatic, with room for narrative."
       },
       {
         "title": "The nine Spheres of magic",

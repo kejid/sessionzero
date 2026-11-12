@@ -30,7 +30,7 @@ registerSystem("at-the-gates", {
   "ru": {
     "tagShort": "Высокое фэнтези в духе JRPG на Storypath Ultra",
     "tagline": "«Вы стоите у врат, сдерживая прилив и меняя ход истории».",
-    "description": "At the Gates — высокое фэнтези от Onyx Path, вдохновлённое японскими ролевыми играми, вторая линия цикла Earthbane. Семь стран континента Эверенд столетиями хранили хрупкий мир, пока одна из них не призвала демонов из Пустоты. Теперь все спешат заполучить ту же силу, а герои пытаются остановить войну и спасти мир. Книга вышла в сентябре 2026 года в PDF и печати на DriveThruRPG.",
+    "description": "At the Gates — высокое фэнтези от Onyx Path, вдохновлённое японскими ролевыми играми, вторая линия цикла Earthbane. Семь стран континента Эверенд столетиями хранили хрупкий мир, пока одна из них не призвала демонов из Пустоты. Теперь все спешат заполучить ту же силу, а герои пытаются остановить войну и спасти мир. Книга вышла в сентябре 2026 года на DriveThruRPG в PDF и в печати по запросу; твёрдая обложка ещё в производстве.",
     "pickIf": [
       "группа обожает японские RPG-видеоигры и хочет этого духа за столом",
       "хотите умелых героев, которые останавливают войну и спасают мир",
@@ -61,7 +61,7 @@ registerSystem("at-the-gates", {
   "en": {
     "tagShort": "High fantasy in the spirit of JRPGs, on Storypath Ultra",
     "tagline": "\"You stand at the gates, holding back the tide, changing the course of history.\"",
-    "description": "At the Gates is Onyx Path's high fantasy game inspired by Japanese RPG video games, and the second line in the Earthbane Cycle. The seven nations of the continent of Everend kept a fragile peace for centuries, until one of them called forth daemons from the Void. Now all rush to gain the same power, while the heroes try to stop the war and save the world. The book came out in September 2026 in PDF and print on DriveThruRPG.",
+    "description": "At the Gates is Onyx Path's high fantasy game inspired by Japanese RPG video games, and the second line in the Earthbane Cycle. The seven nations of the continent of Everend kept a fragile peace for centuries, until one of them called forth daemons from the Void. Now all rush to gain the same power, while the heroes try to stop the war and save the world. The book came out in September 2026 on DriveThruRPG in PDF and print-on-demand; the hardcover is still in production.",
     "pickIf": [
       "your group loves Japanese RPG video games and wants that feel at the table",
       "you want competent heroes stopping a war and saving the world",

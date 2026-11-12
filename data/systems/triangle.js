@@ -6,7 +6,7 @@ registerSystem("triangle", {
   },
   "name": "Triangle Agency",
   "publisher": "Haunted Table Games",
-  "dice": "Пул d4",
+  "dice": "d4 pool",
   "players": "3–5",
   "complexity": 2,
   "foundryStatus": "Community",
@@ -69,30 +69,31 @@ registerSystem("triangle", {
     }
   ],
   "ru": {
+    "dice": "Пул d4",
     "tagShort": "RPG про агентов аномалий",
     "tagline": "«SCP встречает X-Files. Вы — агенты, контролирующие аномальное».",
-    "description": "RPG о спецагентах, работающих в секретном агентстве, которое сдерживает аномальные явления. Каждая миссия — выезд на аномалию: изучить, классифицировать, решить что делать. Генератор аномалий создаёт уникальные угрозы. Бюрократия агентства — враг не менее опасный.",
+    "description": "RPG об агентах корпоративно-паранормального Агентства, которые ловят аномалии и запирают их в Хранилище, чтобы реальность оставалась стабильной. Каждый агент собирается из трёх частей (ARC): Аномалия — связанная с ним сверхъестественная сила, Реальность — жизнь вне работы, Компетенция — должность в Агентстве. Бюрократия Агентства с её поощрениями и взысканиями — враг не менее опасный.",
     "pickIf": ["хотите странные миссии агентов, которые сдерживают аномалии", "группе нравится офисная сатира, где работодатель опасен не меньше аномалий", "нужны лёгкие правила, где важны расследование и решения, а не тактика"],
     "skipIf": ["хочется тактического боя и подробного снаряжения", "игроки не любят моральный выбор без правильного ответа"],
-    "setting": "Современный мир, но за фасадом реальности — аномалии. Агентство «Треугольник» — секретная организация, которая их сдерживает. Три доктрины: Сдержать, Уничтожить или Использовать. Каждая миссия — моральный выбор, и Агентство запоминает ваши решения.",
-    "vignette": "Аномалия: дверь в подвале жилого дома. Она открывается в комнату, которой нет в планах здания. Внутри — стул и записка: «Сядьте.» Бросок Исследования — 3d4, две тройки. Успех: записка написана почерком вашего директора. Доктрина? Сдержать — замуровать дверь. Использовать — сесть на стул. Уничтожить — сжечь дом. Отчёт нужен к утру.",
+    "setting": "Современный мир, но за фасадом реальности — аномалии. Агентство «Треугольник» — корпоративная паранормальная организация, которая ловит их и хранит в своём Хранилище, чтобы реальность не рассыпалась. У каждого агента есть собственная аномалия, а между миссиями он делит скудное время между работой, личной жизнью и своими силами — и Агентству последнее не нравится.",
+    "vignette": "Аномалия: дверь в подвале жилого дома. Она открывается в комнату, которой нет в планах здания. Внутри — стул и записка: «Сядьте.» Бросок — 6d4, две тройки. Успех: записка написана почерком вашего директора. Но бросок породил Хаос, и у Генерального менеджера появился новый козырь. Поймать аномалию по инструкции или всё-таки сесть на стул? Отчёт нужен к утру.",
     "prep": "~25 мин",
     "mechanics": [
       {
-        "title": "Генератор аномалий",
-        "text": "Процедурная система создаёт уникальные аномалии для каждой миссии. Бесконечная реиграбельность."
+        "title": "ARC: Аномалия, Реальность, Компетенция",
+        "text": "Агент — это три выбора: Аномалия (сверхъестественные силы), Реальность (личная жизнь и близкие) и Компетенция (роль в Агентстве). Издатель насчитывает 729 стартовых сочетаний."
       },
       {
-        "title": "Три доктрины",
-        "text": "Сдержать, Уничтожить, Использовать. Каждое решение формирует репутацию группы в Агентстве."
+        "title": "Поощрения и взыскания",
+        "text": "За хорошую работу Агентство выдаёт поощрения, за нарушения — взыскания. Поощрения покупают привилегии, вплоть до возвращения после смерти; взыскания оборачиваются последствиями."
       },
       {
         "title": "Бюрократия",
         "text": "Отчёты, допуски, внутренняя политика. Агентство — не союзник, а инструмент, который может повернуться против вас."
       },
       {
-        "title": "Лёгкая механика",
-        "text": "Пул d4, простые правила. Фокус — на расследовании и принятии решений, а не на тактике."
+        "title": "6d4 и Хаос",
+        "text": "Бросаете шесть d4 и считаете тройки. Броски порождают Хаос — ресурс, который Генеральный менеджер (ведущий) тратит на осложнения. Очки Гарантии качества позволяют подправить результат."
       }
     ],
     "gallery": [
@@ -128,28 +129,28 @@ registerSystem("triangle", {
   "en": {
     "tagShort": "SCP-meets-X-Files agent RPG",
     "tagline": "\"SCP meets X-Files. You are agents containing the anomalous.\"",
-    "description": "An RPG about special agents working for a secret agency that contains anomalous phenomena. Every mission is a field response to an anomaly: study it, classify it, decide what to do. The anomaly generator creates unique threats. Agency bureaucracy is an equally dangerous enemy.",
+    "description": "An RPG about agents of a corporate-paranormal Agency who capture anomalies and lock them in the Vault to keep reality stable. Every agent is built from three parts, the ARC: an Anomaly (the supernatural power bonded to them), a Reality (their life outside work) and a Competency (their job at the Agency). Agency bureaucracy, with its Commendations and Demerits, is an equally dangerous enemy.",
     "pickIf": ["you want weird-fiction missions about agents containing anomalies", "your group enjoys office satire where the employer is a threat too", "you prefer light rules focused on investigation and decisions over tactics"],
     "skipIf": ["you want tactical combat or detailed weapons and gear", "your players dislike morally grey choices with no clear right answer"],
-    "setting": "The modern world, but behind the facade of reality — anomalies. The Triangle Agency is a secret organization that contains them. Three doctrines: Contain, Destroy, or Exploit. Every mission is a moral choice, and the Agency remembers your decisions.",
-    "vignette": "Anomaly: a door in an apartment building's basement. It opens into a room that doesn't exist on the building plans. Inside — a chair and a note: 'Sit down.' Investigation roll — 3d4, two threes. Success: the note is in your director's handwriting. Doctrine? Contain — brick up the door. Exploit — sit in the chair. Destroy — burn the building. Report due by morning.",
+    "setting": "The modern world, but behind the facade of reality — anomalies. The Triangle Agency is a corporate paranormal organization that captures them and stores them in its Vault so reality holds together. Every agent carries an anomaly of their own, and between missions they split scarce time between the job, their personal life and those powers — which the Agency frowns on.",
+    "vignette": "Anomaly: a door in an apartment building's basement. It opens into a room that doesn't exist on the building plans. Inside — a chair and a note: 'Sit down.' Roll 6d4 — two threes. Success: the note is in your director's handwriting. But the roll also created Chaos, and the General Manager now has something new to spend. Capture the anomaly by the book, or sit in the chair? Report due by morning.",
     "prep": "~25 min",
     "mechanics": [
       {
-        "title": "Anomaly generator",
-        "text": "A procedural system creates unique anomalies for every mission. Infinite replayability."
+        "title": "ARC: Anomaly, Reality, Competency",
+        "text": "Every agent is three choices: an Anomaly (supernatural powers), a Reality (personal life and relationships) and a Competency (their role at the Agency). The publisher counts 729 starting combinations."
       },
       {
-        "title": "Three doctrines",
-        "text": "Contain, Destroy, Exploit. Every decision shapes the team's reputation within the Agency."
+        "title": "Commendations and Demerits",
+        "text": "The Agency hands out Commendations for good work and Demerits for violations. Commendations buy perks, even coming back after death; Demerits come with consequences."
       },
       {
         "title": "Bureaucracy",
         "text": "Reports, clearances, internal politics. The Agency isn't an ally — it's a tool that can turn against you."
       },
       {
-        "title": "Light mechanics",
-        "text": "d4 dice pool, simple rules. Focus is on investigation and decision-making, not tactics."
+        "title": "6d4 and Chaos",
+        "text": "Roll six d4 and count the 3s. Rolls also generate Chaos, the currency the General Manager (the GM) spends on complications. Quality Assurances let you bend the result."
       }
     ],
     "gallery": [

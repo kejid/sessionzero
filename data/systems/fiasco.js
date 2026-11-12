@@ -73,9 +73,9 @@ registerSystem("fiasco", {
     }
   ],
   "ru": {
-    "tagShort": "Гм-лессный коэн-бродвей на d6",
+    "tagShort": "Игра без мастера в духе братьев Коэн на d6",
     "tagline": "«Планируй ограбление. Получи фиаско. Расскажи историю».",
-    "description": "Fiasco — настольная RPG от Bully Pulpit Games (2-е издание, 2021), вдохновлённая фильмами братьев Коэн. Гм-лессная, без пресесса, на д6-пуле (Classic) или колоде карт (2E). Игроки создают персонажей через «Playset» (тему/место), связаны отношениями, и разыгрывают 3 акта: Setup, Tilt, Aftermath. Каждый бросок — either something good (на чётных) or something bad (на нечётных). Итог — трагикомедия.",
+    "description": "Fiasco — настольная RPG от Bully Pulpit Games (2-е издание, 2021), вдохновлённая фильмами братьев Коэн. Без мастера и без подготовки, на пуле d6 (Classic) или колоде карт (2E). Игроки строят персонажей и связи между ними по плейсету (теме и месту действия) и проходят завязку, первый акт, поворот, второй акт и развязку. В Classic белый кубик сулит сцене хороший исход, чёрный — плохой. Итог — трагикомедия.",
     "pickIf": [
       "нужен ваншот без подготовки и без мастера",
       "группа обожает планы в духе братьев Коэн, которые идут прахом",
@@ -87,23 +87,23 @@ registerSystem("fiasco", {
       "игроки теряются, когда без мастера надо самим придумывать сцены"
     ],
     "setting": "Без сеттинга. Каждая сессия — новый Playset: мафиозный Чикаго, космическая станция, подростковый лагерь, средневековая деревня. 500+ playsets на fiascoplaysets.com.",
-    "vignette": "Setup: Два брата,OWNER заброшенной фермы. Связь: «Один из нас — вор». Tilt: Странный человек с топором ломится в дверь. Aftermath: Ферма горит. Один брат мёртв. Второй в тюрьме. Третий — владелец фермы, но фермы больше нет. Фиаско.",
+    "vignette": "Завязка: два брата и их кузен — совладельцы заброшенной фермы. Связь: «Один из нас — вор». Поворот: странный человек с топором ломится в дверь. Развязка: ферма горит. Один брат мёртв, второй в тюрьме. Кузен теперь единственный владелец фермы — только фермы больше нет. Фиаско.",
     "prep": "~0 мин (Playset определяет тему)",
     "mechanics": [
       {
-        "title": "Д6-пул (Classic)",
-        "text": "4d6 на игрока в двух цветах. Чётное = что-то хорошее, нечётное = что-то плохое. Дубли = крах (катастрофа)."
+        "title": "Пул d6 (Classic)",
+        "text": "По четыре d6 на игрока, поровну белых и чёрных. Когда сцена заканчивается, белый кубик значит, что для героя всё обернулось хорошо, чёрный — плохо. В развязке бросаешь собранные кубики: разница между белыми и чёрными решает твою судьбу."
       },
       {
-        "title": "Три акта",
-        "text": "Setup (связи и нужды), Tilt (повороты и осложнения), Aftermath (разбор полётов). Каждый акт — 2-3 раунда бросков."
+        "title": "Завязка, два акта и поворот",
+        "text": "Завязка (связи, нужды, места, предметы), первый акт, поворот — всё идёт вкривь, второй акт и развязка: кто где оказался. В каждом акте у каждого игрока по две сцены."
       },
       {
-        "title": "Playsets",
-        "text": "Темы для сессии: мафия, космос, подростки, средневековье. Каждый playset — таблицы Needs, Locations, Objects."
+        "title": "Плейсеты",
+        "text": "Темы для сессии: мафия, космос, подростки, средневековье. В каждом плейсете — таблицы связей, нужд, мест и предметов."
       },
       {
-        "title": "Нет GM",
+        "title": "Без мастера",
         "text": "Все играют. Все решают. Все страдают. Фиаско — это про всех."
       }
     ],
@@ -130,14 +130,14 @@ registerSystem("fiasco", {
       }
     ],
     "quotes": [
-      { "text": "Одна из лучших RPG, в которые я играл. Она делаетactly то, что обещает: самодостаточная сессия без подготовки, в которой комедия ошибок и плохих решений приводит к полному фиаско." },
+      { "text": "Одна из лучших RPG, в которые я играл. Она делает ровно то, что обещает: самодостаточная сессия без подготовки, в которой комедия ошибок и плохих решений приводит к полному фиаско." },
       { "text": "Fiasco уникальна среди RPG тем, что побуждает нас активно искать тот момент, которого мы все боимся в других играх — момент, когда произойдёт что-то действительно ужасное, с возможными катастрофическими последствиями для наших персонажей." }
     ]
   },
   "en": {
     "tagShort": "GM-less Coen Brothers d6 — burn it all down",
     "tagline": "\"Plan the heist. Get the fiasco. Tell the story.\"",
-    "description": "Fiasco is a tabletop RPG from Bully Pulpit Games (2nd Edition, 2021), inspired by the films of the Coen Brothers. GM-less, zero prep, d6 pool (Classic) or playing cards (2E). Players create characters through a Playset (theme/location), linked by relationships, and play through 3 acts: Setup, Tilt, Aftermath. Each roll is either something good (evens) or something bad (odds). The result is always a tragicomedy.",
+    "description": "Fiasco is a tabletop RPG from Bully Pulpit Games (2nd Edition, 2021), inspired by the films of the Coen Brothers. GM-less, zero prep, d6 pool (Classic) or playing cards (2E). Players create characters through a Playset (theme/location), linked by relationships, and play through the Setup, Act One, the Tilt, Act Two and the Aftermath. In Classic, a white die means a scene ends well for you, a black die means it ends badly. The result is always a tragicomedy.",
     "pickIf": [
       "you want a one-shot with zero prep and no GM",
       "your group loves Coen-style plans that go horribly wrong",
@@ -149,20 +149,20 @@ registerSystem("fiasco", {
       "players freeze when asked to invent scenes without a GM"
     ],
     "setting": "Setting-less. Each session is a new Playset: 1930s mobsters, a space station, a teenage camp, a medieval village. 500+ playsets at fiascoplaysets.com.",
-    "vignette": "Setup: Two brothers, owners of an abandoned farm. Relationship: 'One of us is a thief.' Tilt: A strange man with an axe pounds on the door. Aftermath: The farm burns. One brother is dead. The other is in prison. The third owns the farm — but the farm is gone. Fiasco.",
+    "vignette": "Setup: Two brothers and their cousin, co-owners of an abandoned farm. Relationship: 'One of us is a thief.' Tilt: A strange man with an axe pounds on the door. Aftermath: The farm burns. One brother is dead, the other is in prison. The cousin now owns the farm outright — but the farm is gone. Fiasco.",
     "prep": "~0 min (Playset defines the theme)",
     "mechanics": [
       {
         "title": "d6 Pool (Classic)",
-        "text": "4d6 per player in two colors. Even = something good, odd = something bad. Doubles = disaster."
+        "text": "Four d6 per player, half white and half black. When your scene ends, a white die means it went well for you, a black die means it went badly. In the Aftermath you roll what you collected: the gap between white and black decides your fate."
       },
       {
-        "title": "Three Acts",
-        "text": "Setup (needs and relationships), Tilt (turns and complications), Aftermath (fallout). Each act is 2-3 rounds of rolls."
+        "title": "Setup, two acts and the Tilt",
+        "text": "The Setup (relationships, needs, locations, objects), Act One, the Tilt (everything goes sideways), Act Two, and the Aftermath (who ends up where). Each player gets two scenes per act."
       },
       {
         "title": "Playsets",
-        "text": "Session themes: mob, space, teens, medieval. Each playset has tables for Needs, Locations, Objects."
+        "text": "Session themes: mob, space, teens, medieval. Each playset has tables for Relationships, Needs, Locations and Objects."
       },
       {
         "title": "No GM",

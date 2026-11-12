@@ -69,13 +69,13 @@ registerSystem("troika", {
     }
   ],
   "ru": {
-    "tagShort": "Пси-фэнтези прыжки между сферами",
-    "tagline": "«Гуманистическая научная фэнтези о путешествиях между сферами по золотым баржам».",
-    "description": "Troika! — правила-лёгкая ролевая игра-погружение в сюрреалистичную мультивселенную, где кристаллические сферы связаны межпланетными баржами. Собственная система на 2d6, а не клон D&D. Знаменита 36 безумными предысториями персонажей и неповторимым визуальным стилем. Сердце «нью-школы» (NSR): минимум правил, максимум странного.",
+    "tagShort": "Научное фэнтези: прыжки между сферами",
+    "tagline": "«Гуманистическое научное фэнтези о путешествиях между сферами на золотых баржах».",
+    "description": "Troika! — лёгкая по правилам ролевая игра о сюрреалистичных странствиях по мультивселенной, где кристаллические сферы связаны межпланетными баржами. Собственная система на 2d6, а не клон D&D. Знаменита 36 безумными предысториями персонажей и неповторимым визуальным стилем. Сердце «нью-школы» (NSR): минимум правил, максимум странного.",
     "pickIf": ["хотите сюрреалистичную и смешную научную фэнтези с прыжками между мирами", "игрокам нравится выбросить случайную безумную предысторию вместо класса", "нужны правила размером с карточку и персонаж за минуту"],
     "skipIf": ["нужен цельный сеттинг с картой, а не открытая мультивселенная-сон", "группе важны предсказуемая очерёдность ходов и тактический бой", "игроки хотят сами продумывать каждую деталь персонажа"],
     "setting": "Бесконечная мультивселенная сфер, соединённых золотыми баржами, что скользят по невозможным небесам. Один мир — базарный город богов, другой — болото философов, третий — арена бессмертных гладиаторов. Тон — печальный, смешной и глубоко чуждый; научная фэнтези в духе «Умирающей Земли» Вэнса и «Книги Нового Солнца» Вулфа.",
-    "vignette": "Ваш Чемпион Хаоса сходит с баржи в город, где дождь идёт вверх. Стражник-многоножка требует пошлину. Вы врёте — бросок против навыка Обмана: Навык 7, кидаете 2d6, нужно 7 или меньше. Выпало 9 — провал. Многоножка щёлкает жвалами. Вы тянете жетон инициативы из мешка; выпал не ваш. Стража ходит первой.",
+    "vignette": "Ваш Чемпион Хаоса сходит с баржи в город, где дождь идёт вверх. Стражник-многоножка требует пошлину. Вы врёте — Навык 4 плюс 3 в подходящем Продвинутом навыке, итого 7: кидаете 2d6, нужно 7 или меньше. Выпало 9 — провал. Многоножка щёлкает жвалами. Вы тянете жетон инициативы из мешка; выпал не ваш. Стража ходит первой.",
     "prep": "~10 мин",
     "mechanics": [
       {
@@ -92,7 +92,7 @@ registerSystem("troika", {
       },
       {
         "title": "Инициатива из мешка",
-        "text": "Порядок ходов не пошаговый: в мешок кладут жетоны за каждого участника плюс жетоны конца раунда. Тянешь вслепую — хаос боя на удаче."
+        "text": "Порядок ходов не пошаговый: в мешок кладут жетоны за каждого участника плюс один жетон «Конец раунда». Тянешь вслепую — хаос боя на удаче."
       }
     ],
     "gallery": [
@@ -128,7 +128,7 @@ registerSystem("troika", {
     "pickIf": ["you want surreal, funny science-fantasy hopping between strange worlds", "your players like rolling a bizarre random background instead of picking a class", "you want rules on an index card and characters made in a minute"],
     "skipIf": ["you want a firm, mapped setting rather than an open, dreamlike multiverse", "your group wants predictable turn order and tactical combat", "players want full control over designing their characters"],
     "setting": "An endless multiverse of spheres joined by golden barges that sail impossible skies. One world is a bazaar-city of gods, another a swamp of philosophers, another an arena of undying gladiators. The tone is melancholy, funny, and deeply alien — science-fantasy in the tradition of Vance's Dying Earth and Wolfe's Book of the New Sun.",
-    "vignette": "Your Chaos Champion steps off the barge into a city where rain falls upward. A centipede guardsman demands a toll. You lie — test against Con: Skill 7, roll 2d6, need 7 or under. You roll a 9 — failure. The centipede clicks its mandibles. You draw an initiative token from the bag; it isn't yours. The guards act first.",
+    "vignette": "Your Chaos Champion steps off the barge into a city where rain falls upward. A centipede guardsman demands a toll. You lie — Skill 4 plus 3 in a fitting Advanced Skill makes 7: roll 2d6, need 7 or under. You roll a 9 — failure. The centipede clicks its mandibles. You draw an initiative token from the bag; it isn't yours. The guards act first.",
     "prep": "~10 min",
     "mechanics": [
       {
@@ -145,7 +145,7 @@ registerSystem("troika", {
       },
       {
         "title": "Initiative from a bag",
-        "text": "Turn order isn't round-by-round: tokens for each combatant plus end-of-round tokens go into a bag. You draw blind — combat as beautiful, lethal chaos."
+        "text": "Turn order isn't round-by-round: tokens for each combatant plus one End of the Round token go into a bag. You draw blind — combat as beautiful, lethal chaos."
       }
     ],
     "gallery": [

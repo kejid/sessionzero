@@ -73,30 +73,30 @@ registerSystem("wrath-and-glory", {
     }
   ],
   "ru": {
-    "tagShort": "d6 pool — grimdark 40K в формате RPG",
-    "tagline": "«Во Гrimdark далёкого будущего нет войны — только вечная битва».",
-    "description": "Warhammer 40,000: Wrath & Glory — настольная RPG (2019 Ulisses Spiele, 2022 Cubicle 7 Games) по вселенной Warhammer 40K. Игроки берут на себя роли Имперских Агентов, Космодесантников, Культистов или Орков. Механика d6 pool: бросаете кубиков столько, сколько у вас рейтинг в атрибуте и навыке, считаете successful die (6+). Wrath dice (красные) — критические и трэш-события.",
-    "pickIf": ["хотите Warhammer 40K со смешанной партией: Космодесантники, агенты, орки", "группе нравятся пулы d6 с яркими критами и неприятностями на кубе Гнева", "хочется, чтобы сила героев росла по Тирам вместе с кампанией"],
+    "tagShort": "Пул d6 — мрачный 40K в формате ролевой игры",
+    "tagline": "«Во мраке далёкого будущего есть только война».",
+    "description": "Warhammer 40,000: Wrath & Glory — настольная RPG (2018 — Ulisses Spiele, 2020 — исправленное издание Cubicle 7) по вселенной Warhammer 40K. Игроки берут на себя роли имперских агентов, космодесантников, эльдар или орков. Пул d6: бросаете столько кубиков, сколько дают атрибут и навык вместе, и считаете значки — 4–5 дают один, 6 — два. Один кубик в пуле — Куб Гнева: на 6 он даёт крит и Славу, на 1 — осложнение.",
+    "pickIf": ["хотите Warhammer 40K со смешанной партией: космодесантники, агенты, эльдар, орки", "группе нравятся пулы d6 с яркими критами и неприятностями на кубе Гнева", "хочется, чтобы сила героев росла по Тирам вместе с кампанией"],
     "skipIf": ["нужна приземлённая игра, где все герои одинаково обычные люди", "группа не знает вселенную 40K и не интересуется ею"],
-    "setting": "Год 41-го тысячелетия. Император Человечества — живой труп на Золотом Троне. Галактика разрывается войнами: Хаос, Орки, Тыраноиды, Эльфы. Простые люди — пешки в игре богов. Игра охватывает все аспекты 40K: от кадетов до космодесантников.",
-    "vignette": "Мастер: «Ты в коридоре космического десантного корабля. Стены покрыты кровью. Ты слышишь крики из каюты 12.» Игрок: «Иду туда с болтером наготове.» Мастер: «Брось d6 pool: 4 кубика.» Игрок: 5, 3, 1, 6. Одна шестёрка — успех! Но Wrath die (красный) показал 1 — трэш-событие: «Из стены вылезает жук-паразит и кусает тебя за ногу.»",
+    "setting": "Год 41-го тысячелетия. Император Человечества — живой труп на Золотом Троне. Галактика разрывается войнами: Хаос, орки, тираниды, эльдар. Простые люди — пешки в игре богов. Игра охватывает все слои 40K: от простых гвардейцев до космодесантников.",
+    "vignette": "Мастер: «Ты в коридоре космического десантного корабля. Стены покрыты кровью. Ты слышишь крики из каюты 12.» Игрок: «Иду туда с болтером наготове.» Мастер: «Бросай 4 кубика, сложность 3.» Игрок: 5, 3, 6 и Куб Гнева — 1. Пятёрка — один значок, шестёрка — два: три значка, успех! Но на Кубе Гнева единица — осложнение: «Из стены вылезает жук-паразит и кусает тебя за ногу.»",
     "prep": "~20 мин",
     "mechanics": [
       {
-        "title": "d6 Pool (Успех = 6+)",
-        "text": "Бросаете кубиков = ATTRIBUTE + SKILL. Каждая 6+ — один успех. Wrath dice (красные): 6 — крит, 1 — трэш."
+        "title": "Пул d6 и значки",
+        "text": "Кубиков столько, сколько атрибут плюс навык. 4–5 — значок, 6 — возвышенный значок, он стоит двух. Нужно набрать значков не меньше сложности."
       },
       {
         "title": "Тир персонажа",
-        "text": "Tier 1 (кадеты) → Tier 4 (космодесантники). Мощь персонажа масштабируется с тиром."
+        "text": "Тиры от 1-го (обычные люди) до 5-го (легенды). Тир кампании решает, какие архетипы доступны: скаут космодесанта — со 2-го тира, тактический космодесантник — с 3-го."
       },
       {
-        "title": "Иерархия фракций",
-        "text": "Империум, Хаос, Орки, Тыраноиды, Эльфы. Каждая фракция — свой набор персонажей и механик."
+        "title": "Фракции и архетипы",
+        "text": "Играть можно за имперские фракции (Астра Милитарум, сёстры битвы, космодесант, Инквизиция, Адептус Механикус и другие), а также за эльдар и орков. У каждой фракции свои архетипы."
       },
       {
-        "title": "Wrath & Glory Dice",
-        "text": "Красные Wrath dice: 6 — Wrathful (сильный крит), 1 — Malefic (трэш-событие). Создают драму."
+        "title": "Гнев и Слава",
+        "text": "Куб Гнева: 6 — крит при атаке и очко Славы в общий запас группы, 1 — осложнение, даже при успехе. Славу тратят на дополнительные кубики и урон."
       }
     ],
     "gallery": [
@@ -117,28 +117,28 @@ registerSystem("wrath-and-glory", {
   "en": {
     "tagShort": "d6 pool — grimdark 40K in RPG format",
     "tagline": "\"In the grim darkness of the far future there is only war.\"",
-    "description": "Warhammer 40,000: Wrath & Glory is a tabletop RPG (2019 Ulisses Spiele, 2022 Cubicle 7 Games) set in the Warhammer 40K universe. Players take on the roles of Imperial Agents, Space Marines, Cultists, or Orks. d6 pool mechanic: roll dice equal to your Attribute + Skill rating, count successes (6+). Wrath dice (red) — crits and trash events.",
-    "pickIf": ["you want Warhammer 40K with a mixed party of Space Marines, agents or Orks", "your group likes d6 pools with dramatic Wrath-die crits and complications", "you want character power to scale by Tier as the campaign grows"],
+    "description": "Warhammer 40,000: Wrath & Glory is a tabletop RPG (2018 Ulisses Spiele; revised 2020 by Cubicle 7) set in the Warhammer 40K universe. Players take on the roles of Imperial agents, Space Marines, Aeldari or Orks. d6 pool: roll dice equal to Attribute + Skill and count icons — 4–5 is one icon, a 6 is two. One die in every pool is the Wrath die: a 6 brings a critical and Glory, a 1 a complication.",
+    "pickIf": ["you want Warhammer 40K with a mixed party of Space Marines, agents, Aeldari or Orks", "your group likes d6 pools with dramatic Wrath-die crits and complications", "you want character power to scale by Tier as the campaign grows"],
     "skipIf": ["you want grounded play where every hero is an equally ordinary person", "your group doesn't know or care about the 40K universe"],
-    "setting": "The year is the 41st Millennium. The Emperor of Mankind is a living corpse on the Golden Throne. The galaxy is torn apart by war: Chaos, Orks, Tyranids, Elves. Ordinary people are pawns in the game of gods. The game covers every aspect of 40K: from cadets to Space Marines.",
-    "vignette": "GM: 'You're in the corridor of a Space Marine ship. Walls are covered in blood. You hear screams from Cabin 12.' Player: 'I go in with bolter ready.' GM: 'Roll d6 pool: 4 dice.' Player: 5, 3, 1, 6. One six — success! But the Wrath die (red) shows 1 — trash event: 'A parasitic bug emerges from the wall and bites your leg.'",
+    "setting": "The year is the 41st Millennium. The Emperor of Mankind is a living corpse on the Golden Throne. The galaxy is torn apart by war: Chaos, Orks, Tyranids, Aeldari. Ordinary people are pawns in the game of gods. The game covers every layer of 40K: from ordinary Guardsmen to Space Marines.",
+    "vignette": "GM: 'You're in the corridor of a Space Marine ship. Walls are covered in blood. You hear screams from Cabin 12.' Player: 'I go in with bolter ready.' GM: 'Roll 4 dice, DN 3.' Player: 5, 3, 6 and the Wrath die shows 1. The five is one icon, the six is two: three icons, success! But the 1 on the Wrath die is a complication: 'A parasitic bug emerges from the wall and bites your leg.'",
     "prep": "~20 min",
     "mechanics": [
       {
-        "title": "d6 Pool (Success = 6+)",
-        "text": "Roll dice = ATTRIBUTE + SKILL. Each 6+ is one success. Wrath dice (red): 6 — critical, 1 — trash."
+        "title": "d6 Pool and Icons",
+        "text": "Roll Attribute + Skill in d6s. A 4–5 is an icon, a 6 is an exalted icon worth two. Score icons equal to or above the Difficulty Number (DN)."
       },
       {
         "title": "Character Tier",
-        "text": "Tier 1 (cadets) → Tier 4 (Space Marines). Character power scales with tier."
+        "text": "Tiers run from 1 (ordinary people) to 5 (legends). The campaign Tier sets which archetypes are allowed: a Space Marine Scout from Tier 2, a Tactical Space Marine from Tier 3."
       },
       {
-        "title": "Faction Hierarchy",
-        "text": "Imperium, Chaos, Orks, Tyranids, Elves. Each faction — its own character set and mechanics."
+        "title": "Factions and Archetypes",
+        "text": "Play Imperial factions (Astra Militarum, Adepta Sororitas, Adeptus Astartes, the Inquisition, Adeptus Mechanicus and more), or Aeldari and Orks. Each faction has its own archetypes."
       },
       {
-        "title": "Wrath & Glory Dice",
-        "text": "Red Wrath dice: 6 — Wrathful (strong crit), 1 — Malefic (trash event). Creates drama."
+        "title": "Wrath and Glory",
+        "text": "The Wrath die: a 6 is a critical on an attack and adds 1 Glory to the group pool; a 1 is a complication, even on a success. Glory buys extra dice and damage."
       }
     ],
     "gallery": [

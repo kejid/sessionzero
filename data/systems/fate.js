@@ -72,7 +72,7 @@ registerSystem("fate", {
   "ru": {
     "tagShort": "Универсальная нарративная на 4dF",
     "tagline": "«Аспекты, инвоки, фейт-поинты — подходят под любой мир».",
-    "description": "Fate Core — универсальная настольная RPG от Evil Hat Productions (2013), последняя версия системы Fate (обновлена в Fate Condensed, 2020). Использует 4dF (Fate-кубики: +, -, пусто). Персонажи — набор аспектов (коротких фраз), стант и навыков. Фейт-поинты позволяют менять сюжет. Лицензия CC BY 3.0 — правила полностью бесплатны.",
+    "description": "Fate Core — универсальная настольная RPG от Evil Hat Productions (2013), последняя версия системы Fate (обновлена в Fate Condensed, 2020). Использует 4dF (Fate-кубики: +, -, пусто). Персонажи — набор аспектов (коротких фраз), трюков и навыков. Фейт-поинты позволяют менять сюжет. Лицензия CC BY 3.0 — правила полностью бесплатны.",
     "pickIf": [
       "хотите одну бесплатную готовую систему под любой жанр и придуманный мир",
       "игрокам нравится описывать героев короткими фразами и менять сцены за фейт-поинты",
@@ -83,8 +83,8 @@ registerSystem("fate", {
       "игроки не любят придумывать аспекты и торговаться о компелах",
       "хотите готовый мир — в Fate Core его нет"
     ],
-    "setting": "Жанр-agnostic. Fate не привязана к миру — она создаёт мир из аспектов. Популярные сеттинги: Dresden Files (городское фэнтези), Spirit of the Century (папп 1920-х), Fate of Cthulhu (хоррор), Interface Zero (киберпанк), Atomic Robo (научные герои).",
-    "vignette": "Герой врывается в лабораторию злодея. Аспект «Бывший оперативник ЦРУ» даёт бонус. Три кубика 4dF: ++- = +1. Успех! Но злодей активирует «Плотная охрана» — аспект меняет ситуацию. Герой тратит фейт-поинт, инвокает «Я знаю эти трюки» и переписывает реальность.",
+    "setting": "Без привязки к жанру. Fate не привязана к миру — она создаёт мир из аспектов. Популярные сеттинги: Dresden Files (городское фэнтези), Spirit of the Century (пульп 1920-х), Fate of Cthulhu (хоррор), Interface Zero (киберпанк), Atomic Robo (научные герои).",
+    "vignette": "Герой врывается в лабораторию злодея. Аспект «Бывший оперативник ЦРУ» даёт бонус. Четыре кубика Fate: плюс, плюс, минус и пустая грань = +1. Успех! Но злодей активирует «Плотная охрана» — аспект меняет ситуацию. Герой тратит фейт-поинт, инвокает «Я знаю эти трюки» и переписывает реальность.",
     "prep": "~10 мин",
     "mechanics": [
       {
@@ -97,11 +97,11 @@ registerSystem("fate", {
       },
       {
         "title": "Фейт-поинты",
-        "text": "Валюта для переписывания сюжета. Тратишь — получаешь +2 к броску или переопределяешь ситуацию. Зарабатывается через аспекты злодеев и комплименты."
+        "text": "Валюта для переписывания сюжета. Тратишь — получаешь +2 к броску или переопределяешь ситуацию. Зарабатываются, когда твои аспекты играют против тебя: за принятые компелы и враждебные инвоки."
       },
       {
-        "title": "Four Actions",
-        "text": "Четыре действия: Attack, Defend, Overcome, Create Advantage. Любая ситуация решается одним из этих четырёх."
+        "title": "Четыре действия",
+        "text": "Атака, Защита, Преодоление, Создание преимущества. Любая ситуация решается одним из этих четырёх."
       }
     ],
     "gallery": [
@@ -143,7 +143,7 @@ registerSystem("fate", {
       "you want a ready-made world — Fate Core ships without one"
     ],
     "setting": "Genre-agnostic. Fate doesn't tie to a world — it builds worlds from Aspects. Popular settings: Dresden Files (urban fantasy), Spirit of the Century (pulp 1920s), Fate of Cthulhu (horror), Interface Zero (cyberpunk), Atomic Robo (science-heroes).",
-    "vignette": "The hero bursts into the villain's lab. The Aspect 'Former CIA Operative' grants a bonus. Three 4dF dice: ++- = +1. Success! But the villain activates 'Heavy Security' — the Aspect shifts the situation. The hero spends a Fate Point, invokes 'I Know These Tricks', and rewrites reality.",
+    "vignette": "The hero bursts into the villain's lab. The Aspect 'Former CIA Operative' grants a bonus. Four Fate dice: plus, plus, minus, blank = +1. Success! But the villain activates 'Heavy Security' — the Aspect shifts the situation. The hero spends a Fate Point, invokes 'I Know These Tricks', and rewrites reality.",
     "prep": "~10 min",
     "mechanics": [
       {
@@ -156,7 +156,7 @@ registerSystem("fate", {
       },
       {
         "title": "Fate Points",
-        "text": "Currency for rewriting the story. Spend for +2 to a roll or to reshape the situation. Earned through villain Aspects and compels."
+        "text": "Currency for rewriting the story. Spend for +2 to a roll or to reshape the situation. Earned when your aspects work against you: by accepting compels or having them invoked against you."
       },
       {
         "title": "Four Actions",

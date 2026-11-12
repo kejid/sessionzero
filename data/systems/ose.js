@@ -6,7 +6,7 @@ registerSystem("ose", {
   },
   "name": "Old-School Essentials",
   "publisher": "Necrotic Gnome",
-  "dice": "d20 + стандарт",
+  "dice": "d20 + modifiers",
   "players": "2–6",
   "complexity": 2,
   "edition": "B/X",
@@ -69,6 +69,7 @@ registerSystem("ose", {
     }
   ],
   "ru": {
+    "dice": "d20 + стандарт",
     "tagShort": "Ретроклон B/X D&D",
     "tagline": "«Подземелью всё равно, какова ваша предыстория. Оно смотрит только на ваш факел.»",
     "description": "Old-School Essentials — эталонный клон B/X D&D 1981 года. Гэвин Норман переорганизовал правила с такой точностью, что любое правило находится за секунды. Лучшая версия блестяще простой игры.",

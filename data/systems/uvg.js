@@ -6,7 +6,7 @@ registerSystem("uvg", {
   },
   "name": "Ultraviolet Grasslands",
   "publisher": "Exalted Funeral",
-  "dice": "Любые (OSR)",
+  "dice": "Any (OSR)",
   "players": "2–5",
   "complexity": 2,
   "foundryStatus": "Community (SDM)",
@@ -75,6 +75,7 @@ registerSystem("uvg", {
     }
   ],
   "ru": {
+    "dice": "Любые (OSR)",
     "tagShort": "Психоделический OSR",
     "tagline": "«Психоделический Шёлковый Путь через умирающие земли».",
     "description": "Не совсем система — скорее мегамодуль-сеттинг для любой OSR-игры. Линейный маршрут через психоделические пустоши — «поинткроул» (путешествие от точки к точке по маршруту). Каждая неделя пути — новая безумная локация. Работает с Cairn, Into the Odd, D&D 5e — адаптируется под любой движок.",

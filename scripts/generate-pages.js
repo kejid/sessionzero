@@ -693,7 +693,7 @@ function renderSystemPage(id, sys, lang) {
         ${sys.edition ? `<span class="sys-badge sys-badge-edition">${escBody(sys.edition)}</span>` : ''}
     </div>` : ''}
     <div class="quick-stats">
-        <div class="qs"><span class="qs-label">${escBody(S.qs_dice)}</span><span class="qs-value">${escBody(sys.dice || '—')}</span></div>
+        <div class="qs"><span class="qs-label">${escBody(S.qs_dice)}</span><span class="qs-value">${escBody(pickLang(sys, 'dice', lang, '—'))}</span></div>
         <div class="qs"><span class="qs-label">${escBody(S.qs_players)}</span><span class="qs-value">${escBody(sys.players || '—')}</span></div>
         <div class="qs"><span class="qs-label">${escBody(S.qs_prep)}</span><span class="qs-value">${escBody(prep)}</span></div>
         <div class="qs"><span class="qs-label">${escBody(S.qs_foundry)}</span><span class="qs-value">${escBody(foundry)}</span></div>
@@ -1056,7 +1056,7 @@ function renderComparePage(cmp, lang) {
   const yesNo = v => escBody(v ? S.cmp_yes : S.cmp_no);
   const rows = [
     [S.cmp_row_publisher, escBody(A.publisher || '—'), escBody(B.publisher || '—')],
-    [S.qs_dice, escBody(A.dice || '—'), escBody(B.dice || '—')],
+    [S.qs_dice, escBody(pickLang(A, 'dice', lang, '—')), escBody(pickLang(B, 'dice', lang, '—'))],
     [S.qs_players, escBody(A.players || '—'), escBody(B.players || '—')],
     [S.qs_complexity, `<div class="complexity-bar">${complexityBar(A.complexity)}</div>`, `<div class="complexity-bar">${complexityBar(B.complexity)}</div>`],
     [S.qs_prep, escBody(pickLang(A, 'prep', lang, '—')), escBody(pickLang(B, 'prep', lang, '—'))],

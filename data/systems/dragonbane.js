@@ -80,7 +80,7 @@ registerSystem("dragonbane", {
   "ru": {
     "tagShort": "Шведское героическое фэнтези",
     "tagline": "«Классическое фэнтези без балласта. Лёгкое, как меч в руке мастера».",
-    "description": "Переосмысление классического шведского RPG «Drakar och Demoner» (1982). Лёгкая, быстрая фэнтези-система: бросай d20, попади ниже навыка. Бои на картах инициативы, магия с риском срыва, рост через провалы. «D&D, если бы его сделали шведы в 2023 году».",
+    "description": "Переосмысление классического шведского RPG «Drakar och Demoner» (1982). Лёгкая, быстрая фэнтези-система: бросай d20, попади ниже навыка. Бои на картах инициативы, магия с риском срыва, рост навыков от «драконов» и «демонов». «D&D, если бы его сделали шведы в 2023 году».",
     "pickIf": [
       "хотите лёгкое быстрое фэнтези, в которое можно сесть прямо из коробки",
       "нравятся инициатива по картам и броски под навык",
@@ -90,8 +90,8 @@ registerSystem("dragonbane", {
       "нужны глубокие сборки персонажей и длинные списки заклинаний",
       "группа не любит магию, которая может взорваться в руках у мага"
     ],
-    "setting": "Мисгард — светлое фэнтези с тёмными нотками. Драконы, рыцари, подземелья — но с нордическим колоритом. Утиные людины, оркоподобные полуорки, классические эльфы и дварфы. Стартовый бокс включает готовый регион, карту и кампанию.",
-    "vignette": "Карты инициативы раздаются. Вы — утиный рыцарь с мечом и щитом. Ваша карта — 3, гоблин — 7. Вы бьёте первым! Бросок на Мечи: d20, нужно 13 или ниже. Выпало 1 — критический успех, он же «Дракон»! Двойной урон. Гоблин падает. Но маг пробует заклинание — провал, магический срыв. Бросок по таблице: его посох взрывается. Отмечаете галочку провала — навык вырастет в конце сессии.",
+    "setting": "Светлое фэнтези с тёмными нотками. Драконы, рыцари, подземелья — с нордическим колоритом. Шесть народов: люди, полурослики, дварфы, эльфы, утки (mallards) и волчий народ (wolfkin). В базовой коробке — карта региона Туманная долина (Misty Vale) и книга приключений, которые складываются в кампанию.",
+    "vignette": "Карты инициативы раздаются. Вы — утиный рыцарь с мечом и щитом. Ваша карта — 3, гоблин — 7. Вы бьёте первым! Бросок на Мечи: d20, нужно 13 или ниже. Выпало 1 — «Дракон», критический успех! Вы выбираете бонус — дополнительный урон. Гоблин падает. А маг читает заклинание — и выкидывает 20, «Демона»: бросок по таблице магических срывов, и его посох взрывается. За «Дракона» вы отмечаете навык Мечи — в конце сессии бросите, чтобы его улучшить.",
     "prep": "~15 мин",
     "mechanics": [
       {
@@ -100,15 +100,15 @@ registerSystem("dragonbane", {
       },
       {
         "title": "Магия с риском",
-        "text": "Заклинания требуют броска. Провал = магический срыв. Последствия могут быть хуже врага."
+        "text": "Заклинания тратят очки воли и требуют броска навыка. Выпал «Демон» (20) — магический срыв. Последствия бывают хуже врага."
       },
       {
-        "title": "Рост через провал",
-        "text": "Навыки растут от провалов. Чем чаще ошибаетесь — тем быстрее учитесь. Элегантно."
+        "title": "Рост через «драконов» и «демонов»",
+        "text": "Выкинули «Дракона» (1) или «Демона» (20) — отметьте навык; вопросы в конце сессии дают ещё отметки. Затем за каждый отмеченный навык бросаете d20: выпало больше значения — навык растёт."
       },
       {
         "title": "Лучший стартовый набор",
-        "text": "Карты, фигурки, кубики, приключение — всё в коробке. Сел и играй за 20 минут."
+        "text": "Правила, книга приключений, карта, карты, картонные фигурки, кубики — всё в коробке. Открыл и играй."
       }
     ],
     "gallery": [
@@ -147,7 +147,7 @@ registerSystem("dragonbane", {
   "en": {
     "tagShort": "Swedish heroic fantasy RPG",
     "tagline": "\"Classic fantasy without the bloat. Light as a sword in a master's hand.\"",
-    "description": "A reimagining of the classic Swedish RPG 'Drakar och Demoner' (1982). A light, fast fantasy system: roll d20, get under your skill. Combat on initiative cards, magic with misfire risk, growth through failure. 'D&D, if the Swedes made it in 2023.'",
+    "description": "A reimagining of the classic Swedish RPG 'Drakar och Demoner' (1982). A light, fast fantasy system: roll d20, get under your skill. Combat on initiative cards, magic with misfire risk, skills that grow from Dragons and Demons. 'D&D, if the Swedes made it in 2023.'",
     "pickIf": [
       "you want light, fast fantasy you can start straight from the box",
       "your table likes card-drawn initiative and roll-under skill checks",
@@ -157,8 +157,8 @@ registerSystem("dragonbane", {
       "you want deep character builds and long spell lists",
       "your group dislikes magic that can blow up in the caster's face"
     ],
-    "setting": "Misgarth — bright fantasy with dark undertones. Dragons, knights, dungeons — but with a Nordic flavor. Ducklings (duck-folk), orc-like half-orcs, classic elves and dwarves. The starter box includes a ready region, map, and campaign.",
-    "vignette": "Initiative cards are dealt. You're a duck knight with sword and shield. Your card is 3, the goblin's is 7. You strike first! Swords roll: d20, need 13 or under. Rolled a 1 — critical success, a.k.a. 'Dragon'! Double damage. The goblin falls. But the mage tries a spell — failure, magic mishap. Roll on the table: his staff explodes. Mark a failure checkbox — the skill grows at session's end.",
+    "setting": "Bright fantasy with dark undertones. Dragons, knights, dungeons — with a Nordic flavor. Six kin: humans, halflings, dwarves, elves, mallards (duck-folk) and wolfkin. The core box includes a map of the Misty Vale region and an adventure book whose adventures link into a campaign.",
+    "vignette": "Initiative cards are dealt. You're a duck knight with sword and shield. Your card is 3, the goblin's is 7. You strike first! Swords roll: d20, need 13 or under. Rolled a 1 — a Dragon, the critical success! You pick a bonus: extra damage. The goblin falls. But the mage's spell roll comes up 20 — a Demon: roll on the magical mishap table, and his staff explodes. Your Dragon lets you mark Swords — at session's end you roll to improve it.",
     "prep": "~15 min",
     "mechanics": [
       {
@@ -167,15 +167,15 @@ registerSystem("dragonbane", {
       },
       {
         "title": "Risky magic",
-        "text": "Spells require a roll. Failure = magic mishap. The consequences can be worse than the enemy."
+        "text": "Spells cost Willpower and need a skill roll. Roll a Demon (20) and you suffer a magical mishap. The consequences can be worse than the enemy."
       },
       {
-        "title": "Growth through failure",
-        "text": "Skills improve from failures. The more you fail, the faster you learn. Elegant."
+        "title": "Growth from Dragons and Demons",
+        "text": "Roll a Dragon (1) or a Demon (20) and you mark that skill; end-of-session questions earn more marks. Then roll d20 for each marked skill — beat its value and it improves."
       },
       {
         "title": "Best starter set",
-        "text": "Cards, miniatures, dice, adventure — all in the box. Sit down and play in 20 minutes."
+        "text": "Rulebook, adventure book, map, cards, cardboard standees, dice — all in the box. Open it and play."
       }
     ],
     "gallery": [

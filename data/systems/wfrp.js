@@ -73,30 +73,30 @@ registerSystem("wfrp", {
     }
   ],
   "ru": {
-    "tagShort": "Гримдарт-фэнтези на d100",
+    "tagShort": "Гримдарк-фэнтези на d100",
     "tagline": "«Мрачный, опасный мир — карьеры, криты и безумие магии».",
-    "description": "Warhammer Fantasy Roleplay — настольная RPG в жанре гримдарк-фэнтези на системе d100 (процентные кубики), созданная Games Workshop и изданная Cubicle 7 (4-е издание, 2018). 64 карьеры с пошаговым продвижением, попадания по локациям, критические ранения, система преимуществ (Advantage) и безумная магия с таблицами исступления. Мир Старого Света — готическое средневековье с чернокнижниками, скавенами и культами.",
+    "description": "Warhammer Fantasy Roleplay — настольная RPG в жанре гримдарк-фэнтези на системе d100 (процентные кубики), созданная Games Workshop и изданная Cubicle 7 (4-е издание, 2018). 64 карьеры с пошаговым продвижением, попадания по локациям, критические ранения, система преимуществ (Advantage) и опасная магия с таблицами провалов колдовства. Мир Старого Света — готическое средневековье с чернокнижниками, скавенами и культами.",
     "pickIf": ["хотите мрачное приземлённое фэнтези, где герои начинают крестьянами и мелким людом", "группе нравятся рост по карьерам и жёсткий бой с зонами попаданий", "хочется готических расследований культов и скверны в Империи"],
     "skipIf": ["нужно героическое фэнтези с сильными персонажами с первой сессии", "игроки болезненно воспринимают увечья и смерть от одной неудачной критической травмы"],
     "setting": "Старый Мир — Империя, земля, где коррумпированные дворяне, фанатичные охотники на ведьм и простые крестьяне выживают между войнами, чумой и вторжениями скавенов. Каждый город — отдельная история, каждый трактир — начало приключения (или конца).",
-    "vignette": "Маг-коллегии готовит заклинание — d100, бросок Ingredients, успех! Но Wait — ещё бросок на исступление... 96! Дрожащие руки, зелёные искры. Соседи в ужасе. Охотник на ведьм уже стучит в дверь. Аwarf-шахтёр просто хочет допить своё пиво и вернуться в шахту. Добро пожаловать в Старый Мир.",
+    "vignette": "Маг из Коллегий творит заклинание — проверка Языка (Магия) на d100: 33. Успех! Но погодите — дубль. Провал колдовства! Дрожащие руки, зелёные искры. Соседи в ужасе. Охотник на ведьм уже стучит в дверь. А гном-шахтёр просто хочет допить своё пиво и вернуться в шахту. Добро пожаловать в Старый Мир.",
     "prep": "~15 мин",
     "mechanics": [
       {
         "title": "Процентные кубики (d100)",
-        "text": "Бросок d100 против навыка: чем меньше результат, тем лучше. Успех определяется степенью (Success Level): разница между броском и навыком. Криты — двойной успех, фалы — двойной провал."
+        "text": "Бросок d100 против навыка: чем меньше результат, тем лучше. Степени успеха (Success Levels) — разница в десятках между навыком и броском. В бою дубль при успехе — критическое попадание, дубль при провале — нелепая неудача."
       },
       {
         "title": "Карьерная система",
-        "text": "64 карьеры от слуги до ведьмака. Каждая с 4 рангами продвижения: от ученика до мастера. Продвижение стоит XP и открывает новые навыки, таланты и социальный статус."
+        "text": "64 карьеры от слуги до охотника на ведьм. Каждая с 4 рангами продвижения: от ученика до мастера. Продвижение стоит XP и открывает новые навыки, таланты и социальный статус."
       },
       {
         "title": "Попадания по локациям",
-        "text": "При попадании бросок по таблице определяет часть тела: голова, рука, нога... У каждой свои модификаторы. Критические ранения — от забитого пальца до мгновенной смерти."
+        "text": "При попадании бросок по таблице определяет часть тела: голова, рука, нога... Броня защищает каждую часть тела отдельно. Критические ранения — от забитого пальца до мгновенной смерти."
       },
       {
         "title": "Преимущество (Advantage)",
-        "text": "Каждое попадание в бою даёт 1 Advantage, который cộngуется. На максимуме — одноразовый бонусный бросок. Но лопнувший Advantage (промах) — штраф. Бой становится спиралью азарта и риска."
+        "text": "Победил во встречной проверке, атаковал с разбега или перехитрил врага — получаешь Преимущество, и оно копится: каждое очко даёт +10 к проверкам в бою. Проиграл встречную проверку или получил рану — всё обнуляется. Бой превращается в борьбу за перевес."
       }
     ],
     "gallery": [
@@ -133,12 +133,12 @@ registerSystem("wfrp", {
     "pickIf": ["you want grim low fantasy where heroes start as peasants and petty careers", "your group likes career progression and brutal combat with hit locations", "you want gothic investigations of cults and corruption in the Empire"],
     "skipIf": ["you want heroic high fantasy with powerful characters from the start", "players hate characters being maimed or killed by one bad critical"],
     "setting": "The Old World — the Empire, a land where corrupt nobles, fanatical Witch Hunters, and simple peasants survive between wars, plague, and Skaven incursions. Every city is its own story, every tavern the start of an adventure (or its end).",
-    "vignette": "A College wizard prepares a spell — d100, Ingredients roll, success! But wait — a miscast check... 96! Trembling hands, green sparks. Neighbors in horror. The Witch Hunter is already pounding on the door. And the Dwarf just wants to finish his beer and get back to the mine. Welcome to the Old World.",
+    "vignette": "A College wizard casts a spell — a d100 Language (Magick) test: 33. Success! But wait — doubles. A Miscast! Trembling hands, green sparks. Neighbors in horror. The Witch Hunter is already pounding on the door. And the Dwarf just wants to finish his beer and get back to the mine. Welcome to the Old World.",
     "prep": "~15 min",
     "mechanics": [
       {
         "title": "Percentile Dice (d100)",
-        "text": "Roll d100 against your skill: the lower the result, the better. Success is determined by Success Level — the difference between roll and skill. Doubles = critical, snake-eyes = fumble."
+        "text": "Roll d100 against your skill: the lower the result, the better. Success Levels count the difference in tens between your skill and the roll. In combat, doubles on a successful roll are a Critical, doubles on a failed roll a Fumble."
       },
       {
         "title": "Career System",
@@ -146,11 +146,11 @@ registerSystem("wfrp", {
       },
       {
         "title": "Hit Locations",
-        "text": "On a hit, a roll determines the body part: head, arm, leg... Each has its own modifiers. Critical injuries range from a bruised finger to instant death."
+        "text": "On a hit, a roll determines the body part: head, arm, leg... Armour protects each location separately. Critical injuries range from a bruised finger to instant death."
       },
       {
         "title": "Advantage",
-        "text": "Every hit in combat grants 1 Advantage, which stacks. At max — a one-time bonus roll. But a blown Advantage (miss) applies a penalty. Combat becomes a spiral of greed and risk."
+        "text": "Win an opposed test in combat, charge, or outmanoeuvre a foe and you gain Advantage, which stacks: each point adds +10 to your combat tests. Lose an opposed test or take a wound and it all drops to zero. Combat becomes a fight for momentum."
       }
     ],
     "gallery": [

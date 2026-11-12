@@ -6,7 +6,7 @@ registerSystem("cortex-prime", {
   },
   "name": "Cortex Prime",
   "publisher": "Dire Wolf Digital",
-  "dice": "Пул кубиков d4–d12",
+  "dice": "d4–d12 dice pool",
   "players": "3–6",
   "complexity": 3,
   "foundryStatus": "Community",
@@ -59,6 +59,7 @@ registerSystem("cortex-prime", {
     }
   ],
   "ru": {
+    "dice": "Пул кубиков d4–d12",
     "tagShort": "Модульный универсальный движок из кубиков",
     "tagline": "«Собери свою игру: любой жанр — из одного набора деталей».",
     "description": "Cortex Prime — универсальный конструктор ролевых систем Кэма Бэнкса (изданный Dire Wolf Digital). Не готовая игра, а набор «модов»: берёшь нужные детали — Отличия, Активы, Осложнения, Очки сюжета — и собираешь механику под свой жанр и стол. На движке Cortex выходили Firefly, Marvel Heroic, Smallville. Дайспул d4–d12 вместо фиксированных статов.",

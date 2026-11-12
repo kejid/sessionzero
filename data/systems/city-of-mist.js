@@ -73,9 +73,9 @@ registerSystem("city-of-mist", {
     }
   ],
   "ru": {
-    "tagShort": "2d6 — noir-детектив с мифологическими силами",
+    "tagShort": "2d6 — нуарный детектив с силами мифов",
     "tagline": "«Мифические силы пробудились в тебе. Город пропитан туманом. Кто-то должен открыть глаза».",
-    "description": "City of Mist — настольная RPG (2017) от Son of Oak Game Studio (Ориан Дасет). Noir-детектив в современном городе, где обычные люди пробуждают силы мифов. Механики созданы как «некоммерческий ответ D&D»: всё для совместного повествования. Система тегов: каждый тег — короткая фраза, описывающая аспект персонажа. 2d6 с модификатором (+/-): 10+ — успех, 7–9 — успех с осложнением, 6- — провал.",
+    "description": "City of Mist — настольная RPG (2017) от Son of Oak Game Studio, автор — Амит Моше. Нуарный детектив в современном городе, где обычные люди пробуждают силы мифов. Механика целиком служит совместному повествованию. Система тегов: каждый тег — короткая фраза, описывающая аспект персонажа. Бросок 2d6 + число подходящих тегов силы минус теги слабости: 10+ — успех, 7–9 — успех с осложнением, 6 и меньше — провал.",
     "pickIf": [
       "хотите нуарных расследований, где обычные люди пробуждают силы мифов",
       "группе нравятся гибкие теги вместо фиксированных характеристик и навыков",
@@ -87,12 +87,12 @@ registerSystem("city-of-mist", {
       "хотите классическое фэнтези или научную фантастику"
     ],
     "setting": "Современный город (анонимный мегаполис), пропитанный мистическим туманом. За обычными дверями скрываются мифические сущности. Обычные люди — детективы, журналисты, уличные бойцы — пробуждают силы, связанные с мифами (греческими, скандинавскими, славянскими, японскими). Два типа персонажей: Mythos (мифические силы) и Logos (человеческая жизнь).",
-    "vignette": "ГМ: «Ты в квартире убитого. Полиция уехала. Ты чувствуешь что-то в стенах — туман просачивается.» Игрок: «Использую свой тег 'Следопыт мифов' чтобы найти невидимые знаки.» Бросает 2d6 +2 (Mythos): 9. Успех с осложнением: «Ты находишь знаки... но они ведут вниз, в канализацию, и ты чувствуешь, что кто-то за тобой наблюдает.»",
+    "vignette": "ГМ: «Ты в квартире убитого. Полиция уехала. Ты чувствуешь что-то в стенах — туман просачивается.» Игрок: «Использую свой тег 'Следопыт мифов' чтобы найти невидимые знаки.» Задействует два тега силы и бросает 2d6+2: 9. Успех с осложнением: «Ты находишь знаки... но они ведут вниз, в канализацию, и ты чувствуешь, что кто-то за тобой наблюдает.»",
     "prep": "~15 мин",
     "mechanics": [
       {
         "title": "Теги (Tag System)",
-        "text": "Каждый тег — короткая фраза («Законный страж», «Гнев океана», «Мои кулаки»). Броски 2d6 + модификатор тега. Теги можно создавать, использовать и терять."
+        "text": "Каждый тег — короткая фраза («Законный страж», «Гнев океана», «Мои кулаки»). Каждый подходящий тег силы даёт +1 к броску 2d6, каждый тег слабости — −1. Теги можно создавать, использовать и терять."
       },
       {
         "title": "Mythos vs Logos",
@@ -100,7 +100,7 @@ registerSystem("city-of-mist", {
       },
       {
         "title": "Классы тегов",
-        "text": "Power Tags (силы), Danger Tags (угрозы), Weakness Tags (слабости), Status Tags (статусы). Каждый тип — свои правила."
+        "text": "Теги силы, теги слабости, сюжетные теги и статусы. Каждый тип работает по своим правилам."
       },
       {
         "title": "Мифический детектив",
@@ -125,7 +125,7 @@ registerSystem("city-of-mist", {
   "en": {
     "tagShort": "2d6 — noir detective with mythic powers",
     "tagline": "\"Mythic powers awakened in you. The city is steeped in mist. Someone must open their eyes.\"",
-    "description": "City of Mist is a tabletop RPG (2017) by Son of Oak Game Studio (Orion Dassler). A noir detective game in a modern city where ordinary people awaken the powers of myths. The mechanics are built as 'a non-commercial answer to D&D': everything serves co-narrative storytelling. Tag system: every tag is a short phrase describing a character aspect. 2d6 with modifier (+/-): 10+ — full success, 7–9 — success with complication, 6- — fail.",
+    "description": "City of Mist is a tabletop RPG (2017) by Son of Oak Game Studio designed by Amít Moshe. A noir detective game in a modern city where ordinary people awaken the powers of myths. The mechanics serve collaborative storytelling first. Tag system: every tag is a short phrase describing a character aspect. Roll 2d6 + the number of relevant power tags, minus weakness tags: 10+ — full success, 7–9 — success with complication, 6- — fail.",
     "pickIf": [
       "you want noir investigations with ordinary people awakening mythic powers",
       "your group likes flexible tags instead of fixed stats and skill lists",
@@ -137,12 +137,12 @@ registerSystem("city-of-mist", {
       "you want a classic fantasy or sci-fi setting"
     ],
     "setting": "A modern anonymous city steeped in mist. Behind ordinary doors hide mythic entities. Ordinary people — detectives, journalists, street fighters — awaken powers connected to myths (Greek, Nordic, Slavic, Japanese). Two character aspects: Mythos (mythic powers) and Logos (human life).",
-    "vignette": "GM: 'You're in the victim's apartment. Police left. You feel something in the walls — mist is seeping in.' Player: 'I use my Trail Seeker tag to find invisible signs.' Rolls 2d6+2 (Mythos): 9. Success with complication: 'You find the signs... but they lead down, into the sewers, and you feel someone watching you.'",
+    "vignette": "GM: 'You're in the victim's apartment. Police left. You feel something in the walls — mist is seeping in.' Player: 'I use my Trail Seeker tag to find invisible signs.' Two power tags apply, so she rolls 2d6+2: 9. Success with complication: 'You find the signs... but they lead down, into the sewers, and you feel someone watching you.'",
     "prep": "~15 min",
     "mechanics": [
       {
         "title": "Tag System",
-        "text": "Every tag is a short phrase ('Guardian of Law', 'Wrath of the Ocean', 'My Fists'). Rolls 2d6 + tag modifier. Tags can be created, used, and lost."
+        "text": "Every tag is a short phrase ('Guardian of Law', 'Wrath of the Ocean', 'My Fists'). Each relevant power tag adds +1 to the 2d6 roll, each weakness tag −1. Tags can be created, used, and lost."
       },
       {
         "title": "Mythos vs Logos",
@@ -150,7 +150,7 @@ registerSystem("city-of-mist", {
       },
       {
         "title": "Tag Types",
-        "text": "Power Tags, Danger Tags, Weakness Tags, Status Tags. Each type — its own rules."
+        "text": "Power tags, weakness tags, story tags and statuses. Each type works by its own rules."
       },
       {
         "title": "Mythic Detective",

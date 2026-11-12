@@ -72,7 +72,7 @@ registerSystem("electric-bastionland", {
   ],
   "ru": {
     "tagShort": "Странный городской OSR",
-    "tagline": "«У вас есть долг в миллион фунтов и очень мало времени».",
+    "tagline": "«У вас долг в десять тысяч фунтов и очень мало времени».",
     "description": "Эволюция Into the Odd. Те же элегантные правила, но фокус — на городских приключениях в электрическую эпоху. Главная фишка — 100+ «Неудачных Профессий»: случайных предысторий, каждая из которых даёт уникальный стартовый набор проблем, связей и абсурдного снаряжения. Вы не герои — вы неудачники в долгах.",
     "pickIf": [
       "хотите странные городские приключения в огромном городе на очень лёгких правилах",
@@ -83,21 +83,21 @@ registerSystem("electric-bastionland", {
       "нужны подробные сборки персонажей и тактические опции",
       "группе нужен серьёзный тон — здесь абсурд и чёрный юмор в духе Пратчетта"
     ],
-    "setting": "Электрический Бастион — город, разросшийся до масштабов континента. Трамваи, телефоны, подозрительные банки и Глубинные Страны внизу, полные сокровищ и ужасов. Атмосфера — если бы Терри Пратчетт писал weird fiction.",
-    "vignette": "Ваш персонаж — Бывший Дрессировщик Уличных Крабов. Вы должны миллион фунтов. Краб по имени Генерал — единственное, что осталось от прошлой жизни. Банкир говорит: «Есть работа в Глубинных Странах. Вернётесь с артефактом — спишу десять тысяч.» Генерал щёлкает клешнёй. Вы соглашаетесь.",
+    "setting": "Бастион — «электрический центр человечества», город, разросшийся до огромных масштабов. Трамваи, телефоны, подозрительные банки; внизу — Подземье (the Underground), полное сокровищ и ужасов, а за городом — бескрайняя Глубинка (Deep Country). Атмосфера — если бы Терри Пратчетт писал weird fiction.",
+    "vignette": "Ваш персонаж — неудавшийся Миксолог. Ваша компания должна десять тысяч фунтов. Краб по имени Генерал — единственное, что осталось от прошлой жизни. Кредитор говорит: «Есть работа в Подземье. Вернётесь с артефактом — спишу тысячу.» Генерал щёлкает клешнёй. Вы соглашаетесь.",
     "prep": "~10 мин",
     "mechanics": [
       {
         "title": "100+ Неудачных профессий",
-        "text": "«Дрессировщик уличных крабов», «Опальный аристократ», «Бывший астронавт». Каждая — готовый крючок для истории."
+        "text": "«Миксолог», «Урбалист», «Нищенствующий миколог», «Некроинженер». Каждая — готовый крючок для истории."
       },
       {
         "title": "Механика Долга",
-        "text": "Миллион фунтов долга. Вы идёте в подземелья не ради славы — коллекторы не ждут."
+        "text": "У всей компании общий долг в £10 000 кредитору, которого определяет Неудачная профессия одного из игроков. Вы лезете в подземелья не ради славы — кредитор не ждёт."
       },
       {
         "title": "Советы мастеру",
-        "text": "Лучший GM-раздел в истории OSR. Философия «информация, выбор, последствия» на каждой странице."
+        "text": "Высоко ценимый раздел для мастера. Принцип «информация, выбор, влияние» на каждой странице."
       },
       {
         "title": "Ядро ItO",
@@ -136,7 +136,7 @@ registerSystem("electric-bastionland", {
   },
   "en": {
     "tagShort": "weird urban OSR",
-    "tagline": "\"You owe a million pounds and time is running out.\"",
+    "tagline": "\"You owe ten thousand pounds and time is running out.\"",
     "description": "The evolution of Into the Odd. Same elegant rules, but focused on urban adventures in an electric age. The standout feature — 100+ 'Failed Careers': random backgrounds, each providing a unique starter kit of problems, contacts, and absurd equipment. You're not heroes — you're losers in debt.",
     "pickIf": [
       "you want weird urban adventures in a sprawling city on very light rules",
@@ -147,21 +147,21 @@ registerSystem("electric-bastionland", {
       "you want detailed character builds and tactical options",
       "your group wants a serious tone — the game leans absurd and darkly funny"
     ],
-    "setting": "Electric Bastion — a city that has sprawled to continental scale. Trams, telephones, shady banks, and the Deep Country below, brimming with treasures and horrors. The vibe — as if Terry Pratchett wrote weird fiction.",
-    "vignette": "Your character — a Former Street Crab Trainer. You owe a million pounds. A crab named General is the only thing left from your past life. The banker says: 'There's a job in the Deep Country. Bring back an artifact and I'll write off ten thousand.' General clicks his claw. You accept.",
+    "setting": "Bastion — the Electric Hub of Mankind, a city sprawled to enormous scale. Trams, telephones, shady banks; the Underground below, brimming with treasures and horrors, and the endless Deep Country beyond. The vibe — as if Terry Pratchett wrote weird fiction.",
+    "vignette": "Your character — a failed Mixologist. Your party owes ten thousand pounds. A crab named General is the only thing left from your past life. The creditor says: 'There's a job in the Underground. Bring back an artifact and I'll write off a thousand.' General clicks his claw. You accept.",
     "prep": "~10 min",
     "mechanics": [
       {
         "title": "100+ Failed Careers",
-        "text": "'Street Crab Trainer', 'Disgraced Aristocrat', 'Former Astronaut'. Each one is a ready-made story hook."
+        "text": "'Mixologist', 'Urbalist', 'Mendicant Mycologist', 'Necro-Engineer'. Each one is a ready-made story hook."
       },
       {
         "title": "Debt mechanic",
-        "text": "A million pounds in debt. You go into dungeons not for glory — the collectors won't wait."
+        "text": "The party shares a £10,000 debt to a creditor set by one player's Failed Career. You go into dungeons not for glory — the creditor won't wait."
       },
       {
         "title": "GM advice",
-        "text": "The best GM section in OSR history. The philosophy of 'information, choice, consequences' on every page."
+        "text": "A widely praised GM section. The principle of 'information, choice, impact' on every page."
       },
       {
         "title": "ItO core",

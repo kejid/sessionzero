@@ -6,7 +6,7 @@ registerSystem("kult-divinity-lost", {
   },
   "name": "Kult: Divinity Lost",
   "publisher": "Helmgast",
-  "dice": "2d10 + модификатор (PbtA)",
+  "dice": "2d10 + modifier (PbtA)",
   "players": "3–5",
   "complexity": 2,
   "free": true,
@@ -68,6 +68,7 @@ registerSystem("kult-divinity-lost", {
     }
   ],
   "ru": {
+    "dice": "2d10 + модификатор (PbtA)",
     "tagShort": "Оккультный хоррор: реальность — тюрьма",
     "tagline": "«Мы — падшие божества, а мир вокруг — Иллюзия, скрывающая правду».",
     "description": "Kult: Divinity Lost — 4-я редакция культового шведского хоррора от Helmgast, теперь на движке Powered by the Apocalypse (2d10). Реальность — ложь, темница для человечества, некогда божественного. Прорвавшись сквозь Иллюзию, персонажи видят истинный кошмар за фасадом. Взрослый, философский и по-настоящему тревожный хоррор.",
@@ -82,7 +83,7 @@ registerSystem("kult-divinity-lost", {
       "хотите расследований с аккуратной разгадкой в конце"
     ],
     "setting": "Современный мир — это Иллюзия, сотканная, чтобы держать людей в плену и забвении их божественной природы. За ней — Метрополис (мёртвый город-первооснова) и Инферно (десять чистилищ страдания). Ангелы Смерти, ликторы, сущности Смерти и Страсти. Личный, психологический хоррор о деградации и прозрении.",
-    "vignette": "Ваш герой находит фотографию, которой не должно существовать: на ней он сам — в месте, где никогда не был. Ход «Разобраться в ситуации»: 2d10 + Проницательность. Выпало 8 — частичный успех, правда приходит с ценой. Ведущий: «Ты вспоминаешь. И с этим воспоминанием твоя Стабильность рушится». Стены комнаты на миг становятся прозрачными — за ними шевелится Метрополис.",
+    "vignette": "Ваш герой находит фотографию, которой не должно существовать: на ней он сам — в месте, где никогда не был. Ход «Увидеть сквозь Иллюзию»: 2d10 + Восприятие. Итог 12 — частичный успех, правда приходит с ценой. Ведущий: «Ты вспоминаешь. И с этим воспоминанием твоя Стабильность рушится». Стены комнаты на миг становятся прозрачными — за ними шевелится Метрополис.",
     "prep": "~15 мин",
     "mechanics": [
       {
@@ -141,7 +142,7 @@ registerSystem("kult-divinity-lost", {
       "you want investigations with tidy, solvable endings"
     ],
     "setting": "The modern world is an Illusion woven to keep humanity captive and forgetful of its divine nature. Behind it lie Metropolis (the dead primordial city) and Inferno (ten purgatories of suffering). Angels of Death, lictors, entities of Death and Passion. Personal, psychological horror about degradation and revelation.",
-    "vignette": "Your character finds a photograph that shouldn't exist: it's them, in a place they've never been. The move 'See Through the Illusion': 2d10 + Perception. You roll an 8 — a partial success; the truth comes at a cost. The GM: 'You remember. And with the memory, your Stability cracks.' The room's walls turn briefly transparent — behind them, Metropolis stirs.",
+    "vignette": "Your character finds a photograph that shouldn't exist: it's them, in a place they've never been. The move 'See Through the Illusion': 2d10 + Perception. Your total is 12 — a partial success; the truth comes at a cost. The GM: 'You remember. And with the memory, your Stability cracks.' The room's walls turn briefly transparent — behind them, Metropolis stirs.",
     "prep": "~15 min",
     "mechanics": [
       {

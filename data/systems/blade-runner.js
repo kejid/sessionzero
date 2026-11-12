@@ -6,7 +6,7 @@ registerSystem("blade-runner", {
   },
   "name": "Blade Runner",
   "publisher": "Free League Publishing",
-  "dice": "Пул d6–d12",
+  "dice": "d6–d12 pool",
   "players": "2–4",
   "complexity": 3,
   "foundryStatus": "Official",
@@ -76,6 +76,7 @@ registerSystem("blade-runner", {
     }
   ],
   "ru": {
+    "dice": "Пул d6–d12",
     "tagShort": "Нуар-детектив с репликантами",
     "tagline": "«Детектив о морали, памяти и бесконечном дожде».",
     "description": "RPG-детектив в мире Blade Runner 2037. Вы — Blade Runners, детективы LAPD, расследующие дела, связанные с репликантами. Система заточена под расследования: анализ улик, допросы, моральные дилеммы. Не экшн-игра — нуарный процедурал.",

@@ -79,7 +79,7 @@ registerSystem("battletech-rpg", {
   "ru": {
     "tagShort": "Ролевая игра во вселенной BattleTech",
     "tagline": "«Пристегнись, проверь теплоотвод — и докажи, что твой род достоин этого меха».",
-    "description": "Самая новая ролевая игра Catalyst по BattleTech (2020) на нарративной системе Cue. Бросок простой — 2d6 + атрибут + навык против встречного броска, — а поверх него очки сюжета, подсказки для отыгрыша и упрощённый бой мехов с локациями попаданий, перегревом и критами. Героев можно перенести на стол в Total Warfare или Alpha Strike. Для любителей детальной симуляции в продаже остаётся тяжёлая A Time of War, а промежуточную третью RPG Catalyst анонсировала в 2025 году.",
+    "description": "Самая новая ролевая игра Catalyst по BattleTech (2020) на нарративной системе Cue. Бросок простой — 2d6 + атрибут + навык против встречного броска, — а поверх него очки сюжета, подсказки для отыгрыша и упрощённый бой мехов с локациями попаданий, перегревом и критами. Героев можно перенести на стол в Total Warfare или Alpha Strike. Для любителей детальной симуляции в продаже остаётся тяжёлая A Time of War.",
     "pickIf": [
       "группа любит BattleTech и хочет сыграть мехвоинов как живых людей",
       "нужны лёгкие правила, но с зонами попадания, перегревом и критами мехов",
@@ -144,7 +144,7 @@ registerSystem("battletech-rpg", {
   "en": {
     "tagShort": "Roleplaying in the BattleTech universe",
     "tagline": "\"Strap in, watch your heat sinks — and prove your bloodline deserves this 'Mech.\"",
-    "description": "Catalyst's newest BattleTech roleplaying game (2020), built on the narrative Cue System. The core roll is simple — 2d6 + attribute + skill against an opposed roll — with Plot Points, roleplaying cues and streamlined 'Mech combat with hit locations, heat and criticals layered on top. Characters can jump straight into Total Warfare or Alpha Strike battles. The crunchier A Time of War is still in print for simulation fans, and Catalyst announced a third, in-between RPG in 2025.",
+    "description": "Catalyst's newest BattleTech roleplaying game (2020), built on the narrative Cue System. The core roll is simple — 2d6 + attribute + skill against an opposed roll — with Plot Points, roleplaying cues and streamlined 'Mech combat with hit locations, heat and criticals layered on top. Characters can jump straight into Total Warfare or Alpha Strike battles. The crunchier A Time of War is still in print for simulation fans.",
     "pickIf": [
       "your group loves BattleTech and wants to play MechWarriors as people",
       "you want light rules with 'Mech hit locations, heat and criticals kept",

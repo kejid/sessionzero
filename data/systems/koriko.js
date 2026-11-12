@@ -7,7 +7,7 @@ registerSystem("koriko", {
   },
   "name": "Koriko: A Magical Year",
   "publisher": "Mousehole Press",
-  "dice": "Таро + d6 (башня)",
+  "dice": "Tarot + d6 (dice tower)",
   "players": "1",
   "complexity": 1,
   "heroImage": "https://sessionzero.games/images/heroes/koriko.jpg",
@@ -60,6 +60,7 @@ registerSystem("koriko", {
     {"text": "Koriko confidently guides new players and experienced solo role-players alike", "author": "Eleanor Hingley, Destructoid"}
   ],
   "ru": {
+    "dice": "Таро + d6 (башня)",
     "tagShort": "Соло-журнал ведьмы",
     "tagline": "«Ты — молодая ведьма. Незнакомый город. Год, который изменит тебя навсегда.»",
     "description": "Koriko — соло-дневниковая игра о взрослении через магию и одиночество. Вдохновлённая «Ведьминой службой доставки» Хаяо Миядзаки, она предлагает провести целый год вместе со своей ведьмой: семь томов, каждый по 1–2 часа, каждый — новая глава её жизни в Корико. Колода таро формирует события и знакомства. Башня из 21 кубика d6 решает, что происходит, когда она рискует. И ведётся дневник — живой, личный, твой.",

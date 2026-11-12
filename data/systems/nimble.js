@@ -6,7 +6,7 @@ registerSystem("nimble", {
   },
   "name": "Nimble 2e",
   "publisher": "Nimble Co.",
-  "dice": "Только урон (d6-d12, взрыв.)",
+  "dice": "Damage only (d6–d12, exploding)",
   "players": "3–6",
   "complexity": 2,
   "foundryStatus": "Нет",
@@ -65,22 +65,23 @@ registerSystem("nimble", {
     }
   ],
   "ru": {
+    "dice": "Только урон (d6-d12, взрыв.)",
     "tagShort": "Быстрая альтернатива D&D 5e",
-    "tagline": "«D&D 5e, но быстрее, проще и без бросков на попадание. Бой за 20 минут, а не за 2 часа.»",
-    "description": "Сеттинг-агностик. Совместим с D&D 5e контентом — монстры, приключения, магические предметы конвертируются. Любой фэнтези-мир. Атаки всегда попадают: нет броска на попадание, бросается только урон. 1 = промах, всё остальное — попадание. Бои в 3 раза быстрее.",
+    "tagline": "«D&D 5e, но быстрее и проще: без бросков на попадание — только кубики урона.»",
+    "description": "Сеттинг-агностик. Совместим с D&D 5e контентом — монстры, приключения, магические предметы конвертируются. Любой фэнтези-мир. Нет броска на попадание: бросается только урон, и главный кубик решает исход — 1 = промах, максимум = взрывной крит. Ходы идут заметно быстрее.",
     "pickIf": ["любите материалы D&D 5e, но хотите быстрее ходы и бои", "группе нравится, что атаки почти не мажут, а урон взрывается", "нравятся боссы, которые меняют фазы, как в видеоиграх"],
     "skipIf": ["хотите глубокий отыгрыш и социальные механики", "вашему столу дорого напряжение броска атаки в классическом d20", "нужна игра со своим готовым миром"],
     "setting": "Сеттинг-агностик. Совместим с D&D 5e контентом (монстры, приключения, магические предметы конвертируются). Любой фэнтези-мир.",
-    "vignette": "Ваш ход: три действия. Первое — перемещение за колонну. Второе — удар мечом: d8 урона, выпало 8! Взрыв! Ещё d8 — 5. Итого 13 урона, огр шатается. Третье действие — «Рывок»: ещё одно перемещение, вы отступаете за укрытие. Следующий игрок — маг: три действия, три заклинания. Бой длится 20 минут, не 2 часа.",
+    "vignette": "Ваш ход: три действия. Первое — перемещение за колонну. Второе — удар мечом: d8 урона, выпало 8! Взрыв! Ещё d8 — 5. Итого 13 урона, огр шатается. Третье действие — ещё одно перемещение, вы отступаете за укрытие. Следующий игрок — маг, он тратит действия на заклинания. Ход быстро возвращается к вам.",
     "prep": "~10 мин",
     "mechanics": [
       {
-        "title": "Атаки всегда попадают",
-        "text": "Нет броска на попадание. Бросается только урон. 1 = промах. Всё остальное — попадание. Бои в 3 раза быстрее."
+        "title": "Без бросков на попадание",
+        "text": "Бросок урона и есть атака. 1 на главном кубике — промах, максимум — взрывной крит, всё остальное — попадание. Монстры атакуют так же."
       },
       {
         "title": "3 действия за ход",
-        "text": "Вместо действие + бонусное + реакция — три «героических действия»: атака, перемещение, заклинание — в любой комбинации."
+        "text": "Три действия за ход, которые можно потратить как угодно: атака, перемещение, заклинание — в любой комбинации. Отдельного бонусного действия нет."
       },
       {
         "title": "Взрывающиеся кубики",
@@ -88,7 +89,7 @@ registerSystem("nimble", {
       },
       {
         "title": "Легендарные монстры с фазами",
-        "text": "Как в видеоиграх. Босс меняет способности при потере HP. Каждая фаза — новый бой."
+        "text": "Как в видеоиграх. Легендарный монстр действует после хода каждого героя и открывает новые способности на порогах «Окровавлен» и «Последний рубеж»."
       }
     ],
     "gallery": [
@@ -118,21 +119,21 @@ registerSystem("nimble", {
   },
   "en": {
     "tagShort": "fast D&D 5e-compatible RPG",
-    "tagline": "\"D&D 5e, but faster, simpler, and no attack rolls. Combat in 20 minutes, not 2 hours.\"",
-    "description": "Setting-agnostic. Compatible with D&D 5e content — monsters, adventures, magic items all convert. Any fantasy world. Attacks always hit: no attack roll, only damage is rolled. 1 = miss, everything else = hit. Combat is 3 times faster.",
+    "tagline": "\"D&D 5e, but faster and simpler: no attack rolls, just damage dice.\"",
+    "description": "Setting-agnostic. Compatible with D&D 5e content — monsters, adventures, magic items all convert. Any fantasy world. No attack roll: you roll damage and the primary die decides — a 1 misses, the maximum is an exploding crit. Turns move noticeably faster.",
     "pickIf": ["you love D&D 5e content but want faster turns and combat", "your group wants attacks that rarely whiff and damage that explodes", "you like boss fights that change phases like a video game"],
     "skipIf": ["you want deep roleplay and social mechanics", "your table enjoys the attack-roll tension of classic d20 combat", "you want a game with its own built-in setting"],
     "setting": "Setting-agnostic. Compatible with D&D 5e content (monsters, adventures, magic items convert). Any fantasy world.",
-    "vignette": "Your turn: three actions. First — move behind a pillar. Second — sword strike: d8 damage, rolled an 8! Exploding die! Another d8 — 5. Total 13 damage, the ogre staggers. Third action — 'Dash': another move, you fall back behind cover. Next player — the mage: three actions, three spells. Combat takes 20 minutes, not 2 hours.",
+    "vignette": "Your turn: three actions. First — move behind a pillar. Second — sword strike: d8 damage, rolled an 8! Exploding die! Another d8 — 5. Total 13 damage, the ogre staggers. Third action — another move, you fall back behind cover. Next player — the mage, spending actions on spells. The turn comes back around fast.",
     "prep": "~10 min",
     "mechanics": [
       {
-        "title": "Attacks always hit",
-        "text": "No attack roll. Only damage is rolled. 1 = miss. Everything else = hit. Combat is 3 times faster."
+        "title": "No attack rolls",
+        "text": "The damage roll is the attack. A 1 on the primary die misses, the maximum is an exploding crit, everything else hits. Monsters attack the same way."
       },
       {
         "title": "3 actions per turn",
-        "text": "Instead of action + bonus + reaction — three 'heroic actions': attack, move, spell — in any combination."
+        "text": "Three actions per turn to spend as you like: attack, move, cast — in any combination. No separate bonus action."
       },
       {
         "title": "Exploding dice",
@@ -140,7 +141,7 @@ registerSystem("nimble", {
       },
       {
         "title": "Legendary phased monsters",
-        "text": "Like video games. The boss changes abilities when losing HP. Each phase is a new fight."
+        "text": "Like video games. A Legendary Monster acts after each hero's turn and unlocks new abilities at its Bloodied and Last Stand thresholds."
       }
     ],
     "gallery": [

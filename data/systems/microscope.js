@@ -6,7 +6,7 @@ registerSystem("microscope", {
   },
   "name": "Microscope",
   "publisher": "Lame Mage Productions",
-  "dice": "Не нужны",
+  "dice": "None",
   "players": "2–5",
   "complexity": 1,
   "foundryStatus": "Не нужен",
@@ -59,6 +59,7 @@ registerSystem("microscope", {
     }
   ],
   "ru": {
+    "dice": "Не нужны",
     "tagShort": "GMless игра-история без кубиков",
     "tagline": "«Создайте историю целой цивилизации за один вечер».",
     "description": "Не RPG в привычном смысле. Это инструмент для совместного создания истории. Без ведущего, без кубиков. Игроки создают эпохи, события внутри эпох и сцены внутри событий — в любом порядке. Масштаб: от тысячелетий до одного разговора. Идеально как Session Zero для любой кампании.",

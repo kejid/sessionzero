@@ -74,29 +74,29 @@ registerSystem("marvel-multiverse", {
   ],
   "ru": {
     "tagShort": "Марвел на d616 — супергерои комиксов",
-    "tagline": "«Жми 6-1-6 для Ultimate Fantastic Roll. Добро пожаловать в Мультивселенную».",
-    "description": "Marvel Multiverse RPG — настольная RPG от Marvel (2023), действие в Мультивселенной Marvel (Earth-616). Система d616: бросок 3d6 (один — Marvel Die) + Способность vs сложность. Выпадение 6-1-6 = Ultimate Fantastic Roll (авто-успех). 128 страниц профилей персонажей (Железный Человек, Человек-паук, Мстители, Люди Икс). Бесплатный квикстарт на marvel.com/rpg.",
+    "tagline": "«Выбрось 6-M-6 — это Ultimate Fantastic Roll. Добро пожаловать в Мультивселенную».",
+    "description": "Marvel Multiverse RPG — настольная RPG от Marvel (2023), действие в Мультивселенной Marvel (Earth-616). Система d616: бросок 3d6 (средний — Кубик Marvel) + характеристика против целевого числа. Единица на Кубике Marvel — это знак «M», он считается шестёркой; 6-M-6 — Ultimate Fantastic Roll, автоматический успех. Около 130 страниц готовых профилей героев и злодеев (Железный Человек, Человек-паук, Мстители, Люди Икс). Бесплатный квикстарт на marvel.com/rpg.",
     "pickIf": ["хотите играть за Человека-паука, Росомаху и других героев Marvel", "нравится простая математика и особый Marvel Die в каждом броске", "нужны готовые профили героев, а не конструктор сил с нуля"],
     "skipIf": ["хотите собрать по очкам любую суперсилу, какую придумаете", "вашей группе ближе подростковая драма, чем драки с злодеями", "нужен собственный мир без канона Marvel"],
-    "setting": "Вселенная Marvel — Earth-616 и шире. Мстители, Люди Икс, Стражи Галактики, Космическая Спираль — всё в одном каталоге. Каждый расширение (X-Men, Spider-Verse, Avengers) добавляет локации и персонажей.",
-    "vignette": "Железный Человек бросает 3d6 (Marvel Die — красный): 4+1+6 = 11 + Intelligence 5 = 16. Против Difficulty 14. Успех на 2! repulsor blast бьёт в банду. Но 6-1-6? Нет — просто 6 и 1. Добро пожаловать в Мультивселенную, где даже удача — это суперсила.",
+    "setting": "Вселенная Marvel — Earth-616 и шире. Мстители, Люди Икс, Стражи Галактики — всё в одном каталоге. Книги-расширения (например, по Людям Икс и Паучьей вселенной) добавляют героев, силы и локации.",
+    "vignette": "Железный Человек стреляет из репульсора: 4, на Кубике Marvel 2, 6 — итого 12, плюс Ловкость. Целевое число побито — заряд бьёт в банду. Выпади на Кубике Marvel единица, это была бы буква «M» и фантастический успех. Добро пожаловать в Мультивселенную, где даже удача — это суперсила.",
     "prep": "~15 мин",
     "mechanics": [
       {
         "title": "d616 System",
-        "text": "Бросок 3d6 (Marvel Die — особый) + Способность vs сложность. 6-1-6 = Ultimate Fantastic Roll (авто-успех). Простая, но драматичная математика."
+        "text": "Бросок 3d6 (средний — Кубик Marvel) + характеристика против целевого числа. «M» на Кубике Marvel считается шестёркой, 6-M-6 — Ultimate Fantastic Roll, автоматический успех. Простая, но драматичная математика."
       },
       {
-        "title": "Marvel Die",
-        "text": "Один кубик — Marvel Die (обычно красный). Определяет урон и особые эффекты. Делает каждый бросок визуально ярким."
+        "title": "Кубик Marvel",
+        "text": "Один кубик в броске — Кубик Marvel, у него на месте единицы буква «M». Его значение умножается на множитель урона, а «M» даёт фантастический успех с особыми эффектами."
       },
       {
-        "title": "128 персонажей",
-        "text": "Готовые профили: Железный Человек, Человек-паук, Капитан Америка, Росомаха, Доктор Стрэндж и десятки других. Каждый — уникальные способности."
+        "title": "Готовые герои",
+        "text": "Около 130 страниц книги — готовые профили: Железный Человек, Человек-паук, Капитан Америка, Росомаха, Доктор Стрэндж и десятки других. У каждого свои силы."
       },
       {
         "title": "Ранги (1–6)",
-        "text": "Шесть рангов: от Street Level до Cosmic. Каждый ранг — новый уровень силы и возможностей."
+        "text": "Шесть рангов силы: от уличных новичков до космических гигантов. Каждый ранг — новый уровень силы и возможностей."
       }
     ],
     "gallery": [
@@ -128,29 +128,29 @@ registerSystem("marvel-multiverse", {
   },
   "en": {
     "tagShort": "Marvel d616 — comic book superheroes",
-    "tagline": "\"Roll 6-1-6 for the Ultimate Fantastic Roll. Welcome to the Multiverse.\"",
-    "description": "Marvel Multiverse RPG is a tabletop RPG from Marvel (2023), set in the Marvel Multiverse (Earth-616). d616 system: roll 3d6 (one is the Marvel Die) + Ability vs difficulty. Rolling 6-1-6 = Ultimate Fantastic Roll (auto-succeed). 128 pages of character profiles (Iron Man, Spider-Man, Avengers, X-Men). Free quickstart at marvel.com/rpg.",
+    "tagline": "\"Roll 6-M-6 for the Ultimate Fantastic Roll. Welcome to the Multiverse.\"",
+    "description": "Marvel Multiverse RPG is a tabletop RPG from Marvel (2023), set in the Marvel Multiverse (Earth-616). d616 system: roll 3d6 (the middle one is the Marvel Die) + ability vs a target number. The Marvel Die's 1 is an 'M' that counts as a 6; 6-M-6 is the Ultimate Fantastic Roll, an automatic success. About 130 pages of ready-made hero and villain profiles (Iron Man, Spider-Man, Avengers, X-Men). Free quickstart at marvel.com/rpg.",
     "pickIf": ["your group wants to play Spider-Man, Wolverine or other canon Marvel heroes", "you like light dice math with a dramatic special die on every roll", "you want ready-made hero profiles instead of building powers from scratch"],
     "skipIf": ["you want to design any superhero power you can imagine point by point", "your table prefers teen drama and identity over smashing villains", "you want a world of your own with no Marvel canon attached"],
-    "setting": "The Marvel Universe — Earth-616 and beyond. Avengers, X-Men, Guardians of the Galaxy, the Cosmic Spiral — all in one catalog. Each expansion (X-Men, Spider-Verse, Avengers) adds locations and characters.",
-    "vignette": "Iron Man rolls 3d6 (Marvel Die — red): 4+1+6 = 11 + Intelligence 5 = 16. Against Difficulty 14. Success by 2! A repulsor blast tears through the gang. But 6-1-6? No — just a 6 and a 1. Welcome to the Multiverse, where even luck is a superpower.",
+    "setting": "The Marvel Universe — Earth-616 and beyond. Avengers, X-Men, Guardians of the Galaxy — all in one catalog. Expansion books (such as the X-Men and Spider-Verse ones) add heroes, powers and locations.",
+    "vignette": "Iron Man fires a repulsor blast: 4, a 2 on the Marvel Die, 6 — that's 12, plus his Agility. The target number falls, and the blast tears through the gang. Had the Marvel Die come up 1, it would have been an 'M' and a Fantastic success. Welcome to the Multiverse, where even luck is a superpower.",
     "prep": "~15 min",
     "mechanics": [
       {
         "title": "d616 System",
-        "text": "Roll 3d6 (Marvel Die — special) + Ability vs difficulty. 6-1-6 = Ultimate Fantastic Roll (auto-succeed). Simple but dramatic math."
+        "text": "Roll 3d6 (the middle one is the Marvel Die) + ability vs a target number. An 'M' on the Marvel Die counts as a 6, and 6-M-6 is the Ultimate Fantastic Roll, an automatic success. Simple but dramatic math."
       },
       {
         "title": "Marvel Die",
-        "text": "One die is the Marvel Die (usually red). Determines damage and special effects. Makes every roll visually striking."
+        "text": "One die in every roll is the Marvel Die, with an 'M' in place of the 1. Its result is multiplied by your damage multiplier, and an 'M' gives a Fantastic success with special effects."
       },
       {
-        "title": "128 Characters",
-        "text": "Ready-made profiles: Iron Man, Spider-Man, Captain America, Wolverine, Doctor Strange, and dozens more. Each with unique powers."
+        "title": "Ready-made Heroes",
+        "text": "About 130 pages of the book are ready-made profiles: Iron Man, Spider-Man, Captain America, Wolverine, Doctor Strange, and dozens more. Each with unique powers."
       },
       {
         "title": "Ranks (1–6)",
-        "text": "Six ranks: Street Level to Cosmic. Each rank brings new power levels and capabilities."
+        "text": "Six power ranks, from street-level newcomers to cosmic powerhouses. Each rank brings new power levels and capabilities."
       }
     ],
     "gallery": [

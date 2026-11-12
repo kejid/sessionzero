@@ -75,7 +75,7 @@ registerSystem("cyberpunk-red", {
   "ru": {
     "tagShort": "Киберпанк на d10",
     "tagline": "«Ночь, город, корпорации и красное небо после ядерного пожара».",
-    "description": "Cyberpunk RED — настольная RPG в жанре киберпанка от R. Talsorian Games (2020), четвёртое издание линейки Interlock. Действие происходит в 2045 году, после 4-й Корпоративной войны: небо Найт-Сити окрашено в красный из-за ядерного fallout, а игроки — эджраннеры, выживающие между корпорациями и улицей. Система d10 с Lifepath-созданием персонажей и боевой подсистемой Friday Night Firefight.",
+    "description": "Cyberpunk RED — настольная RPG в жанре киберпанка от R. Talsorian Games (2020), четвёртое издание линейки Cyberpunk. Действие происходит в 2045 году, после 4-й Корпоративной войны: небо Найт-Сити окрашено в красный из-за радиоактивных осадков, а игроки — эджраннеры, выживающие между корпорациями и улицей. Система d10 с Lifepath-созданием персонажей и боевой подсистемой Friday Night Firefight.",
     "pickIf": [
       "хотите классический киберпанк Найт-Сити: корпорации, импланты и стиль",
       "игрокам нравится выбрасывать предысторию по таблицам Lifepath",
@@ -86,13 +86,13 @@ registerSystem("cyberpunk-red", {
       "хочется лёгких правил почти без подготовки — CY_BORG проще",
       "игроки хотят ставить импланты, не теряя человечности"
     ],
-    "setting": "Найт-Сити, 2045 — гибрид Лос-Анджелеса и Сан-Франциско в постъядерном будущем. Корпорации контролируют всё, но у улицы свои правила. Фэшн, киберимпланты и стил — неотъемлемая часть жизни (и смерти).",
-    "vignette": "Раненый эджраннер лежит в переулке. Киберглаз мигает красным: системная ошибка. Над ним — силуэт нано-хирурга с биочемоданом. «Стоимость?» — спрашивает бандит. «Жизнь и 5000 creds», — отвечает хирург. Четыре кубика d10 в руке. Difficulty 14. Бросок... 7+3+1+0 = 11. Провал. Хирург пожимает плечами: «Попробуй в следующей жизни».",
+    "setting": "Найт-Сити, 2045 — гибрид Лос-Анджелеса и Сан-Франциско в постъядерном будущем. Корпорации контролируют всё, но у улицы свои правила. Мода, киберимпланты и стиль — неотъемлемая часть жизни (и смерти).",
+    "vignette": "Раненый эджраннер лежит в переулке. Киберглаз мигает красным: системная ошибка. Над ним — силуэт нано-хирурга с биочемоданом. «Стоимость?» — спрашивает бандит. «Жизнь и 5000 эдди», — отвечает хирург. Сложность 15. Один d10 плюс ТЕХ и навык: 4 + 6 + 3 = 13. Провал. Хирург пожимает плечами: «Попробуй в следующей жизни».",
     "prep": "~15 мин",
     "mechanics": [
       {
         "title": "Система Interlock (d10)",
-        "text": "Бросок 1d10 + Атрибут + Навык против Difficulty Value. Простая, но жёсткая математика: криты на двойных, фалы на двойных единицах."
+        "text": "Бросок 1d10 + Характеристика + Навык против Сложности (DV). Простая, но жёсткая математика: выпало 10 — критический успех, бросаешь ещё d10 и прибавляешь; выпала 1 — критический провал, бросаешь ещё d10 и вычитаешь."
       },
       {
         "title": "Friday Night Firefight",
@@ -104,7 +104,7 @@ registerSystem("cyberpunk-red", {
       },
       {
         "title": "Киберимпланты",
-        "text": "Кибернетика усиливает тело, но добавляет Humanity Loss. Слишком много металла — и ты перестаёшь быть человеком."
+        "text": "Кибернетика усиливает тело, но отнимает Человечность. Слишком много металла — и ты перестаёшь быть человеком."
       }
     ],
     "gallery": [
@@ -130,14 +130,14 @@ registerSystem("cyberpunk-red", {
       }
     ],
     "quotes": [
-      { "text": "Cyberpunk Red продвигает свою альтернативную временную шкалу достаточно далеко, чтобы оставаться другим и захватывающим по сравнению с нашим миром, оставаясь при этом отражением того же troubled мира, в котором мы всё ещё живём." },
-      { "text": "Первое впечатление от Cyberpunk Red — это игра диких противоречий. От правил до сеттинга всё прыгает между крайностями простоты и сложности,campy fun и корпоративной бруталностью." }
+      { "text": "Cyberpunk Red продвигает свою альтернативную временную шкалу достаточно далеко, чтобы оставаться другим и захватывающим по сравнению с нашим миром, оставаясь при этом отражением того же неспокойного мира, в котором мы всё ещё живём." },
+      { "text": "Первое впечатление от Cyberpunk Red — это игра диких противоречий. От правил до сеттинга всё прыгает между крайностями простоты и сложности, балаганного веселья и корпоративной жестокости." }
     ]
   },
   "en": {
     "tagShort": "Cyberpunk d10 — Night City 2045",
     "tagline": "\"Night City, 2045 — red skies, corporate wars, and edgerunners on the edge.\"",
-    "description": "Cyberpunk RED is a cyberpunk tabletop RPG from R. Talsorian Games (2020), the fourth edition of the Interlock system. Set in 2045, after the 4th Corporate War — Night City's sky is red from nuclear fallout, and players are edgerunners surviving between corporations and the streets. d10 system with Lifepath character creation and the brutal Friday Night Firefight combat subsystem.",
+    "description": "Cyberpunk RED is a cyberpunk tabletop RPG from R. Talsorian Games (2020), the fourth edition of the Cyberpunk line. Set in 2045, after the 4th Corporate War — Night City's sky is red from nuclear fallout, and players are edgerunners surviving between corporations and the streets. d10 system with Lifepath character creation and the brutal Friday Night Firefight combat subsystem.",
     "pickIf": [
       "you want classic Night City cyberpunk: corporations, cyberware and style",
       "your players enjoy rolling up a backstory on Lifepath tables",
@@ -149,12 +149,12 @@ registerSystem("cyberpunk-red", {
       "your players want to stack cyberware with no cost to their Humanity"
     ],
     "setting": "Night City, 2045 — a Los Angeles/San Francisco hybrid in a post-nuclear future. Corporations control everything, but the street has its own rules. Fashion, cyberware, and style aren't optional — they're survival.",
-    "vignette": "A wounded edgerunner lies in an alley. Cybereye blinks red: system error. Above him, a nano-surgeon with a biocase. 'The price?' asks the gonk. 'Your life and 5000 creds,' says the surgeon. Four d10s in hand. Difficulty 14. Roll... 7+3+1+0 = 11. Fail. The surgeon shrugs: 'Try in your next life.'",
+    "vignette": "A wounded edgerunner lies in an alley. Cybereye blinks red: system error. Above him, a nano-surgeon with a biocase. 'The price?' asks the gonk. 'Your life and 5000 eddies,' says the surgeon. DV 15. One d10 plus TECH plus skill: 4 + 6 + 3 = 13. Fail. The surgeon shrugs: 'Try in your next life.'",
     "prep": "~15 min",
     "mechanics": [
       {
         "title": "Interlock System (d10)",
-        "text": "Roll 1d10 + Attribute + Skill vs Difficulty Value. Simple but harsh math: crits on doubles, fumbles on double ones."
+        "text": "Roll 1d10 + STAT + Skill vs a Difficulty Value. Simple but harsh math: a natural 10 is a Critical Success (roll another d10 and add it), a natural 1 is a Critical Failure (roll another d10 and subtract it)."
       },
       {
         "title": "Friday Night Firefight",

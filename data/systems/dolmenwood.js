@@ -73,9 +73,9 @@ registerSystem("dolmenwood", {
     }
   ],
   "ru": {
-    "tagShort": "OSE-клон — fairy tale horror в лесу Долменвуд",
+    "tagShort": "B/X-фэнтези — жуткая сказка в лесу Долменвуд",
     "tagline": "«Лес шепчет. Могильные камни хранят тайны. Добро пожаловать в Долменвуд».",
-    "description": "Dolmenwood — настольная RPG-обстановка от Necrotic Gnome (2024, Kickstarter), построенная на базе Old-School Essentials (B/X). Тёмная сказка (fairy tale horror): игроки исследуют древний лес Долменвуд, населённый феями, проклятыми мертвецами, говорящими зверями и странными существами. 9 классов: Cleric, Fighter, Thief, Magic-User, Bard, Dwarf, Elf, Gnome, Halfling. 6 видов (Kindred).",
+    "description": "Dolmenwood — фэнтезийная RPG от Necrotic Gnome, собранная на Kickstarter в 2023 году и построенная на упрощённой версии правил Old-School Essentials (B/X); Книга игрока содержит полный свод правил. Тёмная сказка в духе британского фольклора: игроки исследуют древний лес Долменвуд, где живут феи, ведьмы, говорящие звери и странные существа. 9 классов: бард, клирик, чародей (Enchanter), воин, монах (Friar), охотник, рыцарь, маг, вор. 6 народов: брегглы (козлоголовые), эльфы, грималкины (коты-феи), люди, мосслинги (грибной народ) и вудгру (летучемышиные лица).",
     "pickIf": [
       "хотите олдскульный B/X в лесу из мрачной сказки",
       "группе нравится бродить по чащам среди фей, говорящих зверей и проклятых деревень",
@@ -85,25 +85,25 @@ registerSystem("dolmenwood", {
       "нужны глубокие сборки персонажей с фитами и подклассами",
       "хочется классического толкиновского фэнтези, а не жуткого фольклора"
     ],
-    "setting": "Долменвуд — туманный древний лес, окружённый четырьмя королевствами. В лесу есть друидические руины (мегалиты/долмены), фейские территории (Fairy Land), проклятые деревни. Каждое убежище (shelter) — мини-дungeon. Мир пропитан fairy tale horror: не сказочная идиллия, а угрожающая магия.",
-    "vignette": "Мастер: «Вы в туманном лесу. Могильный камень возвышается над вами. На нём — непонятные знаки.» Игрок: «Испую Cleric, чтобы расшифровать знаки.» Мастер: «Знаки говорят: \u0022Не трогай\u0022. Но вы слышите шёпот из-за камня — кто-то зовёт вас.» Игрок: «Иду за шёпотом.» Мастер: «Из тумана выходит маленькая фигура — маленький человек с глазами на ладонях...»",
+    "setting": "Долменвуд — огромный спутанный древний лес на краю цивилизации, формально под властью герцогства Бракенволд. В нём — стоячие камни, скрытные друны, ведьмы, Плюритинская церковь и Холодный принц из Волшебной страны, владыка вечной зимы, мечтающий вернуть власть над лесом. Мир пропитан жуткой сказкой: не идиллия, а угрожающая магия.",
+    "vignette": "Мастер: «Вы в туманном лесу. Могильный камень возвышается над вами. На нём — непонятные знаки.» Игрок: «Мой монах (Friar) пытается расшифровать знаки.» Мастер: «Знаки говорят: \u0022Не трогай\u0022. Но вы слышите шёпот из-за камня — кто-то зовёт вас.» Игрок: «Иду за шёпотом.» Мастер: «Из тумана выходит маленькая фигура — маленький человек с глазами на ладонях...»",
     "prep": "~15 мин",
     "mechanics": [
       {
         "title": "Old-School Essentials (B/X)",
-        "text": "Классическая механика B/X: d20 на атаку, d6 на урон, магия через заклинания. В Dolmenwood добавлены fairy-tale механики."
+        "text": "Классическое ядро B/X: d20 на атаки и спасброски, восходящий класс брони, шесть характеристик, проверки и навыки на d6. Dolmenwood добавляет свои классы, народы и сказочную магию."
       },
       {
-        "title": "9 классов + 6 видов",
-        "text": "Cleric, Fighter, Thief, Magic-User, Bard, Dwarf, Elf, Gnome, Halfling. Виды: Human, Elf, Gnome, Goblin, Moss Dwarf, Wulfling."
+        "title": "9 классов + 6 народов",
+        "text": "Классы: бард, клирик, чародей, воин, монах, охотник, рыцарь, маг, вор. Народы: брегглы, эльфы, грималкины, люди, мосслинги, вудгру."
       },
       {
-        "title": "Shelter-классы",
-        "text": "Каждое убежище в лесу — мини-dungeon с уникальными механиками, encounter таблицами и тайнами."
+        "title": "Странствия по лесу",
+        "text": "Карта леса на 200 гексов, правила путешествий, исследования и стоянок с ежедневными очками пути — мир создан, чтобы по нему бродить."
       },
       {
-        "title": "Fairy Land",
-        "text": "Фейская территория с искаженным пространством и временем. Правила для путешествий и столкновений с феями."
+        "title": "Магия фей",
+        "text": "Три вида магии — тайная, святая и волшебная. Чародеи владеют чарами фей (glamours), а знатные феи могут даровать смертным тайные руны."
       }
     ],
     "gallery": [
@@ -122,9 +122,9 @@ registerSystem("dolmenwood", {
     ]
   },
   "en": {
-    "tagShort": "OSE clone — fairy tale horror in Dolmenwood forest",
+    "tagShort": "B/X fairy-tale horror in the Dolmenwood forest",
     "tagline": "\"The forest whispers. The standing stones hold secrets. Welcome to Dolmenwood.\"",
-    "description": "Dolmenwood is a tabletop RPG setting by Necrotic Gnome (2024, Kickstarter), built on Old-School Essentials (B/X). Dark fairy tale horror: players explore the ancient Dolmenwood forest, home to faeries, cursed deadmen, talking beasts, and strange beings. 9 classes: Cleric, Fighter, Thief, Magic-User, Bard, Dwarf, Elf, Gnome, Halfling. 6 Kindreds.",
+    "description": "Dolmenwood is a fantasy RPG by Necrotic Gnome, funded on Kickstarter in 2023 and built on a streamlined version of the Old-School Essentials (B/X) rules; the Player's Book contains the complete game. Dark fairy tale horror drawn from British folklore: players explore the ancient Dolmenwood forest, home to fairies, witches, talking beasts and strange beings. 9 classes: Bard, Cleric, Enchanter, Fighter, Friar, Hunter, Knight, Magician, Thief. 6 Kindreds: Breggle, Elf, Grimalkin, Human, Mossling, Woodgrue.",
     "pickIf": [
       "you want old-school B/X play in a dark fairy-tale forest",
       "your group enjoys wilderness wandering among faeries, talking beasts and cursed villages",
@@ -134,25 +134,25 @@ registerSystem("dolmenwood", {
       "you want deep character builds with feats and subclasses",
       "you want classic Tolkien-style fantasy rather than eerie folklore"
     ],
-    "setting": "Dolmenwood — a misty ancient forest surrounded by four kingdoms. Within: druidic ruins (standing stones/megaliths), faerie territories (Fairy Land), cursed villages. Every shelter is a mini-dungeon. The world is steeped in fairy tale horror: not whimsical idyll, but threatening magic.",
-    "vignette": "GM: 'You're in the misty forest. A standing stone towers above you. Strange symbols are carved on it.' Player: 'I use my Cleric ability to decipher the symbols.' GM: 'The symbols say: \u0022Do not touch.\u0022 But you hear whispering from behind the stone — someone is calling you.' Player: 'I follow the whisper.' GM: 'From the mist emerges a small figure — a little man with eyes on his palms...'",
+    "setting": "Dolmenwood — a vast, tangled ancient forest at the edge of civilisation, nominally ruled by the Duchy of Brackenwold. Within: standing stones, the secretive Drune, witches, the Pluritine Church, and the Cold Prince of Fairy, lord of eternal winter, who seeks to reclaim the Wood. The world is steeped in fairy tale horror: not whimsical idyll, but threatening magic.",
+    "vignette": "GM: 'You're in the misty forest. A standing stone towers above you. Strange symbols are carved on it.' Player: 'My friar tries to decipher the symbols.' GM: 'The symbols say: \u0022Do not touch.\u0022 But you hear whispering from behind the stone — someone is calling you.' Player: 'I follow the whisper.' GM: 'From the mist emerges a small figure — a little man with eyes on his palms...'",
     "prep": "~15 min",
     "mechanics": [
       {
         "title": "Old-School Essentials (B/X)",
-        "text": "Classic B/X mechanics: d20 for attacks, d6 for damage, magic through spells. Dolmenwood adds fairy-tale mechanics."
+        "text": "Classic B/X core: d20 attacks and saving throws, ascending AC, six ability scores, d6 checks and skills. Dolmenwood adds its own classes, kindreds and fairy-tale magic."
       },
       {
         "title": "9 Classes + 6 Kindreds",
-        "text": "Cleric, Fighter, Thief, Magic-User, Bard, Dwarf, Elf, Gnome, Halfling. Kindreds: Human, Elf, Gnome, Goblin, Moss Dwarf, Wulfling."
+        "text": "Classes: Bard, Cleric, Enchanter, Fighter, Friar, Hunter, Knight, Magician, Thief. Kindreds: Breggle, Elf, Grimalkin, Human, Mossling, Woodgrue."
       },
       {
-        "title": "Shelter Classes",
-        "text": "Every forest shelter is a mini-dungeon with unique mechanics, encounter tables, and mysteries."
+        "title": "Wandering the Wood",
+        "text": "A 200-hex forest map with travel, exploration and camping rules and daily Travel Points — the setting is built to be wandered."
       },
       {
-        "title": "Fairy Land",
-        "text": "Faerie territory with distorted space and time. Rules for travel and faerie encounters."
+        "title": "Fairy magic",
+        "text": "Three kinds of magic — arcane, holy and fairy. Enchanters wield fairy glamours, and fairy nobles may grant mortals secret runes."
       }
     ],
     "gallery": [

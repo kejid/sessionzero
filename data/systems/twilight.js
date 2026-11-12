@@ -6,7 +6,7 @@ registerSystem("twilight", {
   },
   "name": "Twilight: 2000",
   "publisher": "Free League Publishing",
-  "dice": "Пул d6–d12",
+  "dice": "d6–d12 pool",
   "players": "3–5",
   "complexity": 4,
   "foundryStatus": "Official",
@@ -67,6 +67,7 @@ registerSystem("twilight", {
     }
   ],
   "ru": {
+    "dice": "Пул d6–d12",
     "tagShort": "Пост-ядерный сэндбокс RPG",
     "tagline": "«Третья мировая окончена. Вы проиграли. Теперь — выживайте».",
     "description": "Милитари-сэндбокс о выживании после ядерной войны. Вы — остатки разбитого подразделения NATO в Польше (или Швеции). Командование молчит, топливо кончается, патронов мало, а зима близко. Сможете ли вы добраться домой — или хотя бы выжить до весны?",

@@ -6,7 +6,7 @@ registerSystem("outgunned", {
   },
   "name": "Outgunned",
   "publisher": "Two Little Mice",
-  "dice": "Пул d6",
+  "dice": "d6 pool",
   "players": "3-5",
   "complexity": 2,
   "foundryStatus": "Community",
@@ -72,6 +72,7 @@ registerSystem("outgunned", {
     }
   ],
   "ru": {
+    "dice": "Пул d6",
     "tagShort": "Кинематографичная экшн-RPG",
     "tagline": "Die Hard, John Wick, Ocean's Eleven — теперь это ваш фильм.",
     "description": "Кинематографичная экшн-RPG, где вы играете героев боевиков. Система Director's Cut: бросаете пул d6, успех — это совпадения (пары, тройки, каре). Создание персонажа за минуты: Роль (Мускул, Мозг, Лицо) + Троп (Отставной коп, Шпион на пенсии, Хакер-подросток). Идеально для ваншотов и мини-кампаний.",

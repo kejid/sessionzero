@@ -78,13 +78,13 @@ registerSystem("pathfinder", {
     "description": "Pathfinder Second Edition — тактическая RPG от Paizo, вышедшая в 2019 году и обновлённая в рамках Remaster Project (2023–2024). d20-система с тремя действиями за ход, 16+ классами, десятками рас и архетипов, сотнями заклинаний. Полный SRD доступен бесплатно на Archives of Nethys. Игра, созданная из любви к D&D 3.5, ставшая самостоятельным гигантом.",
     "pickIf": ["хотите глубокую тактику боя с понятным ходом из трёх действий", "группе нравится собирать персонажей с чертами на каждом уровне", "нужна математика встреч, по которой мастер надёжно балансирует бои"],
     "skipIf": ["игроки хотят начать без изучения вариантов развития", "хотите быстрые бои на лёгких правилах", "вашему столу важнее сюжетные механики, чем тактика"],
-    "setting": "Golarion — мир, где высокое фэнтези соседствует с пиратскими регионами, нежитью, стимпанком и мифическими царствами. Каждый континент — отдельный жанр: от Гаrunда (африканское вдохновение) до Мана-Пустошей (постапокалипсис). Другие планы и звёзды доступны через Planescapes.",
-    "vignette": "Три действия. Варвар берёт одно на рывок, второе — на удар топором, третье — на Regain Stamina. Жрец тратит два на Heal, одно на поддержку щита. Враг — огненный элементаль — атакует реакций. Бой быстр, но каждый бросок весомый: +10 к результату даёт критическое попадание.",
+    "setting": "Golarion — мир, где высокое фэнтези соседствует с пиратскими регионами, нежитью, стимпанком и мифическими царствами. Каждый регион — отдельный жанр: от джунглей Простора Мванги до суровых Земель Королей Линдвормов и готического ужаса Усталава. За пределами Голариона лежат другие планеты его системы и планы Великого Запределья.",
+    "vignette": "Три действия. Варвар тратит одно на ярость, второе — на удар топором, третье — на второй удар со штрафом −5. Жрец тратит два на «Исцеление», одно — на поднятый щит. Огненный элементаль отвечает своими тремя действиями. Бой быстр, но каждый бросок весомый: результат на 10 выше КС — критическое попадание.",
     "prep": "~20 мин",
     "mechanics": [
       {
         "title": "Три действия (3-Action Economy)",
-        "text": "Каждый ход — ровно три действия. Рывок, атака, магия — всё стоит по одному. Никаких полудействий и конфигураций. Просто и элегантно."
+        "text": "Каждый ход — ровно три действия. Шаг и удар стоят по одному действию, большинство заклинаний — два. Никаких полудействий и конфигураций. Просто и элегантно."
       },
       {
         "title": "Четыре градации успеха",
@@ -92,11 +92,11 @@ registerSystem("pathfinder", {
       },
       {
         "title": "Глубокая кастомизация",
-        "text": "Каждый класс с подклассами, наследия, архетипы, фиты на каждом уровне. Ваш варвар может стать заклинателем через мультикласс, а воровка — паладином."
+        "text": "Каждый класс с подклассами, наследия, архетипы, черты на каждом уровне. Ваш варвар может стать заклинателем через мультикласс, а плут — воителем веры через архетип чемпиона."
       },
       {
-        "title": "Сбалансованная математика",
-        "text": "Уровень персонажа добавляется ко всем проверкам. Враг на 5 уровней выше почти неуязвим. Encounter-building математика — одна из лучших в индустрии."
+        "title": "Сбалансированная математика",
+        "text": "Уровень персонажа добавляется ко всем проверкам. Враг на 5 уровней выше почти неуязвим. Математика построения встреч — одна из лучших в индустрии."
       }
     ],
     "gallery": [
@@ -132,13 +132,13 @@ registerSystem("pathfinder", {
     "description": "Pathfinder Second Edition is a tactical tabletop RPG from Paizo, released in 2019 and refreshed through the Remaster Project (2023–2024). A d20 system with a 3-action economy, 16+ classes, dozens of ancestries and archetypes, and hundreds of spells. The full SRD is free on Archives of Nethys. Born from love of D&D 3.5, it became a giant in its own right.",
     "pickIf": ["you want deep tactical combat with a clean three-action turn", "your group loves building characters with feats at every level", "you want encounter math that lets the GM balance fights reliably"],
     "skipIf": ["your players want to start playing without studying options", "you want fast, rules-light combat", "your table wants narrative mechanics over tactics"],
-    "setting": "Golarion — a world where high fantasy sits alongside pirate kingdoms, undead realms, steampunk, and mythic planes. Each continent is its own genre: from Arcadia to the Mwangi Expanse to the Lands of the Linnorm Kings. Other planes and stars are reachable through Planescape-like portals.",
-    "vignette": "Three actions. The barbarian spends one to Rage, one to Strike with his axe, one to Regain Stamina. The cleric burns two on Heal, one to raise a shield. The enemy — an fire elemental — attacks with a reaction. Combat is fast, but every roll carries weight: +10 to the result means a critical hit.",
+    "setting": "Golarion — a world where high fantasy sits alongside pirate kingdoms, undead realms, steampunk, and mythic planes. Each region is its own genre: from the jungles of the Mwangi Expanse to the harsh Lands of the Linnorm Kings and the gothic horror of Ustalav. Beyond Golarion lie the other planets of its solar system and the planes of the Great Beyond.",
+    "vignette": "Three actions. The barbarian spends one to Rage, one to Strike with his axe, and one on a second Strike at −5. The cleric burns two on Heal, one to Raise a Shield. The fire elemental answers with three actions of its own. Combat is fast, but every roll carries weight: beat the DC by 10 and it's a critical hit.",
     "prep": "~20 min",
     "mechanics": [
       {
         "title": "3-Action Economy",
-        "text": "Every turn is exactly three actions. Stride, Strike, cast — each costs one. No half-actions, no configurations. Simple and elegant."
+        "text": "Every turn is exactly three actions. Stride and Strike cost one action each; most spells cost two. No half-actions, no configurations. Simple and elegant."
       },
       {
         "title": "Four Degrees of Success",
@@ -146,7 +146,7 @@ registerSystem("pathfinder", {
       },
       {
         "title": "Deep Customization",
-        "text": "Every class with subclasses, heritages, archetypes, feats at every level. Your barbarian can become a caster through multiclassing, your rogue can become a paladin."
+        "text": "Every class with subclasses, heritages, archetypes, feats at every level. Your barbarian can become a caster through multiclassing, your rogue can pick up the champion archetype."
       },
       {
         "title": "Balanced Math",
