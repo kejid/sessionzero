@@ -63,6 +63,16 @@ registerSystem("last-tea-shop", {
     "tagShort": "Соло-журнал у границы миров",
     "tagline": "«Ты варишь чай. Они мертвы. У них остался последний час.»",
     "description": "Last Tea Shop — камерная соло-дневниковая игра о чайной лавке на границе между миром живых и миром мёртвых. К тебе приходят недавно умершие — солдат, маяковщик, странница — каждый за последней чашкой перед долгим путём. Ты слушаешь. Ты завариваешь чай. Ты записываешь их истории. Классическая версия — одна страница, бесплатно навсегда. Полная редакция — 16-страничный зин с расширенными таблицами, новыми посетителями и иллюстрациями Stoneshore.",
+    "pickIf": [
+      "хотите тихую грустную соло-игру о том, как выслушать умерших",
+      "хотите начать бесплатно — классическая версия умещается на одной странице",
+      "нравится писать короткие дневниковые записи по подсказкам"
+    ],
+    "skipIf": [
+      "хотите играть с кем-то, а это соло-игра",
+      "нужны вызов, риск или возможность победить",
+      "темы смерти и сожалений сейчас для вас слишком тяжелы"
+    ],
     "setting": "Пограничье — туманное место, где время тянется, как запах жасминового чая. Твоя лавка стоит там, где заканчиваются пути живых и начинается дорога в Земли Мёртвых. Сюда не приходят случайно. Каждый посетитель нашёл тебя, потому что ему или ей нужно поговорить. И когда придёт Завуалированная — последний гость — твоя история тоже подойдёт к концу.",
     "vignette": "Бросок 2d6: одна кость — группа места, другая — конкретное место. Выпало «маяк». Посетитель: Смотритель маяка. Ты тянешь вопрос: «О чём ты жалеешь больше всего?» Он молчит долго. Потом говорит о свете, который гасили по ночам, и о кораблях, которых не было. Ты записываешь. Ты завариваешь ему чай с мятой и можжевельником. Он уходит в туман.",
     "prep": "~5 мин",
@@ -112,6 +122,16 @@ registerSystem("last-tea-shop", {
     "tagShort": "solo afterlife journal RPG",
     "tagline": "\"You brew tea. They are dead. They have one last hour.\"",
     "description": "Last Tea Shop is an intimate solo journaling game about a tea stall on the border between the living and the dead. The recently departed find their way to you — a soldier, a lighthouse keeper, a wanderer — each one seeking a last cup before the long journey. You listen. You brew. You write down what they say. The classic version is one page and free forever. The complete edition is a 16-page zine with expanded tables, new visitor types, and illustrations by Stoneshore that are quiet and haunting in exactly the right way.",
+    "pickIf": [
+      "you want a quiet, melancholy solo game about listening to the dead",
+      "you want to start free, since the classic version fits on one page",
+      "you enjoy writing short journal entries from prompts"
+    ],
+    "skipIf": [
+      "you want to play with others, since it's a solo game",
+      "you want challenge, risk or something to win",
+      "themes of death and regret feel too heavy right now"
+    ],
     "setting": "The borderlands are a misty place where time moves like steam from a clay pot. Your stall stands where the roads of the living end and the path into the Lands of the Dead begins. Nobody arrives by accident. Each visitor found you because they need to talk — about regret, love, an old promise, a light they forgot to leave on. And when the Veiled One finally comes, your own story draws to a close.",
     "vignette": "Roll 2d6: one die for the location group, one for the specific place. Doubles: you gather two ingredients instead of choosing a spot. It came up lighthouse. Visitor: the Lighthouse Keeper. You draw a question: 'What do you regret most?' A long silence. Then he speaks about a light that was doused on certain nights, and ships that were never seen again. You write it down. You brew him tea with mint and juniper. He walks into the fog.",
     "prep": "~5 min",

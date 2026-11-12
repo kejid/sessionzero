@@ -76,6 +76,16 @@ registerSystem("city-of-mist", {
     "tagShort": "2d6 — noir-детектив с мифологическими силами",
     "tagline": "«Мифические силы пробудились в тебе. Город пропитан туманом. Кто-то должен открыть глаза».",
     "description": "City of Mist — настольная RPG (2017) от Son of Oak Game Studio (Ориан Дасет). Noir-детектив в современном городе, где обычные люди пробуждают силы мифов. Механики созданы как «некоммерческий ответ D&D»: всё для совместного повествования. Система тегов: каждый тег — короткая фраза, описывающая аспект персонажа. 2d6 с модификатором (+/-): 10+ — успех, 7–9 — успех с осложнением, 6- — провал.",
+    "pickIf": [
+      "хотите нуарных расследований, где обычные люди пробуждают силы мифов",
+      "группе нравятся гибкие теги вместо фиксированных характеристик и навыков",
+      "игрокам интересно разрываться между мифической силой и обычной жизнью"
+    ],
+    "skipIf": [
+      "хотите точных цифр и тактического боя",
+      "игроки не любят придумывать и обсуждать теги на ходу",
+      "хотите классическое фэнтези или научную фантастику"
+    ],
     "setting": "Современный город (анонимный мегаполис), пропитанный мистическим туманом. За обычными дверями скрываются мифические сущности. Обычные люди — детективы, журналисты, уличные бойцы — пробуждают силы, связанные с мифами (греческими, скандинавскими, славянскими, японскими). Два типа персонажей: Mythos (мифические силы) и Logos (человеческая жизнь).",
     "vignette": "ГМ: «Ты в квартире убитого. Полиция уехала. Ты чувствуешь что-то в стенах — туман просачивается.» Игрок: «Использую свой тег 'Следопыт мифов' чтобы найти невидимые знаки.» Бросает 2d6 +2 (Mythos): 9. Успех с осложнением: «Ты находишь знаки... но они ведут вниз, в канализацию, и ты чувствуешь, что кто-то за тобой наблюдает.»",
     "prep": "~15 мин",
@@ -116,6 +126,16 @@ registerSystem("city-of-mist", {
     "tagShort": "2d6 — noir detective with mythic powers",
     "tagline": "\"Mythic powers awakened in you. The city is steeped in mist. Someone must open their eyes.\"",
     "description": "City of Mist is a tabletop RPG (2017) by Son of Oak Game Studio (Orion Dassler). A noir detective game in a modern city where ordinary people awaken the powers of myths. The mechanics are built as 'a non-commercial answer to D&D': everything serves co-narrative storytelling. Tag system: every tag is a short phrase describing a character aspect. 2d6 with modifier (+/-): 10+ — full success, 7–9 — success with complication, 6- — fail.",
+    "pickIf": [
+      "you want noir investigations with ordinary people awakening mythic powers",
+      "your group likes flexible tags instead of fixed stats and skill lists",
+      "players enjoy the tension between their mythic powers and everyday life"
+    ],
+    "skipIf": [
+      "you want precise numbers and tactical combat",
+      "your players dislike inventing and negotiating tags on the fly",
+      "you want a classic fantasy or sci-fi setting"
+    ],
     "setting": "A modern anonymous city steeped in mist. Behind ordinary doors hide mythic entities. Ordinary people — detectives, journalists, street fighters — awaken powers connected to myths (Greek, Nordic, Slavic, Japanese). Two character aspects: Mythos (mythic powers) and Logos (human life).",
     "vignette": "GM: 'You're in the victim's apartment. Police left. You feel something in the walls — mist is seeping in.' Player: 'I use my Trail Seeker tag to find invisible signs.' Rolls 2d6+2 (Mythos): 9. Success with complication: 'You find the signs... but they lead down, into the sewers, and you feel someone watching you.'",
     "prep": "~15 min",

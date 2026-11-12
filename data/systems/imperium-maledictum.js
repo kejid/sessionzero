@@ -47,6 +47,16 @@ registerSystem("imperium-maledictum", {
     "tagShort": "Мрачные d100-интриги в 41-м тысячелетии",
     "tagline": "«Служи коварному патрону и выживи в гниющем Империуме».",
     "description": "Мрачное научно-фантастическое ролевое приключение от Cubicle 7, где вы играете расходными агентами, выдернутыми из недр Империума на службу могущественному патрону в истерзанном войной секторе Махариан. В основе — отточенный движок d100, унаследованный от Warhammer Fantasy Roleplay 4-й редакции, с упором на расследования, предательство и медленно тлеющие заговоры. Вы бросаете под сумму Характеристики и Навыка, считаете Уровни Успеха и взвешиваете драгоценную Судьбу против нарастающей Скверны. Это процентная линейка 40k, в отличие от кубикового Wrath & Glory.",
+    "pickIf": [
+      "хотите мрачных интриг Warhammer 40,000 за расходных агентов могущественного покровителя",
+      "группе нравятся расследования, предательства и медленно тлеющий заговор",
+      "вам по душе d100 с Уровнями Успеха, как в WFRP"
+    ],
+    "skipIf": [
+      "хотите героического всесилия, а ваши агенты — расходный материал",
+      "группе ближе пулы кубов — для этого есть другая линейка, Wrath & Glory",
+      "игрокам нужны прямые миссии без политики покровителей"
+    ],
     "setting": "Сектор Махариан — тысяча миров, покорённых Лордом Соларом Махарием, а ныне пронизанных ересью, порчей и фракционными интригами. Отряды подчиняются патронам из Инквизиции, Адептус Администратум, Министорума, Астра Милитарум, Флота или благородных домов и берутся за опасные, неофициальные задания.",
     "vignette": "Ваш отряд служит коварному Инквизитору. Чтобы протащить поддельный указ мимо подозрительного адепта Администратума, Мастер объявляет Сложную проверку Обмана против вашего значения 45. Вы бросаете d100 и получаете 22 — ниже цели, успех с двумя Уровнями Успеха. Писарь пропускает вас. Но агенты патрона-соперника следят, и, сжёгши очко Судьбы, вы понимаете: сам указ и был ловушкой.",
     "prep": "~30 мин",
@@ -75,6 +85,16 @@ registerSystem("imperium-maledictum", {
     "tagShort": "Grimdark d100 intrigue in the 41st Millennium",
     "tagline": "\"Serve a scheming patron and survive the Imperium's rot.\"",
     "description": "Cubicle 7's grimdark sci-fi RPG casts you as expendable agents plucked from the Imperium's ranks to serve a powerful patron in the war-torn Macharian Sector. Built on a refined d100 engine derived from Warhammer Fantasy Roleplay 4th Edition, it leans hard into investigation, betrayal, and slow-burning conspiracy. You roll under a Characteristic plus Skill, count Success Levels, and weigh precious Fate against creeping Corruption. This is the percentile game of the two 40k lines, distinct from the dice-pool Wrath & Glory.",
+    "pickIf": [
+      "you want grimdark 40k intrigue as expendable agents of a powerful patron",
+      "your group enjoys investigation, betrayal and slow-burning conspiracy",
+      "you like WFRP-style d100 roll-under with Success Levels"
+    ],
+    "skipIf": [
+      "you want heroic power fantasy, since your agents are expendable",
+      "your group prefers dice pools; Wrath & Glory is the other 40k line",
+      "players want straightforward missions without patron politics"
+    ],
     "setting": "The Macharian Sector, a thousand worlds conquered by Lord Solar Macharius and now rife with heresy, corruption, and factional scheming. Warbands answer to patrons drawn from the Inquisition, Adeptus Administratum, Ministorum, Astra Militarum, the Navy, or the noble houses, undertaking perilous missions off the books.",
     "vignette": "Your warband serves a scheming Inquisitor. To bluff a forged writ past a suspicious Administratum adept, the GM calls a Challenging Deception test against your 45. You roll d100 and get 22 — under target, a success with two Success Levels. The clerk waves you through. But your rival patron's agents are watching, and one burnt Fate point later you realise the writ itself was the trap.",
     "prep": "~30 min",

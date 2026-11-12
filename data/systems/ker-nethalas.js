@@ -83,6 +83,16 @@ registerSystem("ker-nethalas", {
     "tagShort": "Соло-данжен в некрополе",
     "tagline": "«Ты выжил на казни. Но некрополь только начинается.»",
     "description": "Сольный подземный crawl в мрачном тёмном фэнтези, построенный с нуля для одного игрока. Вы пришли в себя в недрах Кер-Неталаса — бесконечного некрополя давно погибшей империи некромантов. Систему d100 используется для всего: боя, исследования, магии, крафта. 20 Мастерств, 100 способностей, случайная генерация подземелий, система рассудка и усталости. Аналог Diablo II или Nethack, реализованный вживую за столом.",
+    "pickIf": [
+      "хотите одиночный данжен-кроул в духе Diablo на бумаге",
+      "нравится рисовать случайные комнаты и экономить факелы и еду",
+      "хотите бесклассовую сборку из 20 Мастерств"
+    ],
+    "skipIf": [
+      "хотите играть компанией, а игра рассчитана на одного",
+      "вам ближе нарративный соло-дневник, чем тактический кроул",
+      "не любите необратимую смерть и медленное истощение ресурсов"
+    ],
     "setting": "Кер-Нетелас — Полночный Трон, колоссальный некрополь Вэлорианского Вознесения, давно уничтоженной империи некромантов. В глубине, по преданию, стоит сам Полночный Трон — чёрный базальтовый постамент, где правители-некроманты когда-то сидели, повелевая легионами мёртвых. Вдохновение — Англия XVII века и Испания эпохи инквизиции, переосмыслённые в тёмное фэнтези, где мертвецы не успокаиваются, а тьма не рассеивается.",
     "vignette": "Вы картографируете Домен IV. Бросок генерации комнаты: 47 — Т-образный коридор. На входе срабатывает таблица встречи: d100 = 83, «Ходячий Ужас». Противостоящая проверка боя — ваш показатель Клинка 42 против его 55. Оба бросаем. Вы: 31 — успех. Он: 61 — провал. Удар. Но у вас осталось 2 заряда факела. Ещё 3 комнаты до лагеря. Исчезни тьма — и Усталость начнёт красть HP.",
     "prep": "~15 мин",
@@ -142,6 +152,16 @@ registerSystem("ker-nethalas", {
     "tagShort": "solo necropolis crawler",
     "tagline": "\"You survived the execution. The necropolis is just beginning.\"",
     "description": "A solo dungeon crawler built from the ground up for a single player, set in a dark fantasy necropolis. You regain consciousness deep within Ker Nethalas — the endless underground realm of a long-dead necromancer empire. A d100 system resolves everything: combat, exploration, magic, crafting. 20 Masteries, 100 abilities, procedural dungeon generation, sanity and exhaustion systems. Think Diablo II or Nethack, realized at the tabletop.",
+    "pickIf": [
+      "you want a solo dungeon crawler that plays like Diablo on paper",
+      "you enjoy mapping random rooms and rationing torches and food",
+      "you want classless builds mixed from 20 Masteries"
+    ],
+    "skipIf": [
+      "you want to play with a group, since it's built for one player",
+      "you want story-first solo journaling rather than a tactical crawl",
+      "you dislike permadeath and slow resource attrition"
+    ],
     "setting": "Ker Nethalas — the Midnight Throne — is the colossal necropolis of the Vaelorian Ascendancy, a necromancer empire lost to history. At its heart, legend holds, stands the Midnight Throne itself: a great black dais where the ancient rulers once sat, channeling the essence of death and commanding legions of undead. Inspired by 17th-century England and the height of the Spanish Inquisition, reimagined as dark fantasy where the dead never rest and the darkness never lifts.",
     "vignette": "You are mapping Domain IV. Room generation roll: 47 — T-shaped corridor. The encounter table triggers at the entrance: d100 = 83, 'Shambling Horror.' Opposed combat check — your Blade skill 42 versus its 55. Both roll. You: 31 — success. It: 61 — failure. Strike. But you have 2 torch charges left. Three more rooms to camp. Let the darkness come, and the Exhaustion starts eating your HP.",
     "prep": "~15 min",

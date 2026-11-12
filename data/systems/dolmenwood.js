@@ -76,6 +76,15 @@ registerSystem("dolmenwood", {
     "tagShort": "OSE-клон — fairy tale horror в лесу Долменвуд",
     "tagline": "«Лес шепчет. Могильные камни хранят тайны. Добро пожаловать в Долменвуд».",
     "description": "Dolmenwood — настольная RPG-обстановка от Necrotic Gnome (2024, Kickstarter), построенная на базе Old-School Essentials (B/X). Тёмная сказка (fairy tale horror): игроки исследуют древний лес Долменвуд, населённый феями, проклятыми мертвецами, говорящими зверями и странными существами. 9 классов: Cleric, Fighter, Thief, Magic-User, Bard, Dwarf, Elf, Gnome, Halfling. 6 видов (Kindred).",
+    "pickIf": [
+      "хотите олдскульный B/X в лесу из мрачной сказки",
+      "группе нравится бродить по чащам среди фей, говорящих зверей и проклятых деревень",
+      "нужен проработанный готовый мир, сразу совместимый с OSE"
+    ],
+    "skipIf": [
+      "нужны глубокие сборки персонажей с фитами и подклассами",
+      "хочется классического толкиновского фэнтези, а не жуткого фольклора"
+    ],
     "setting": "Долменвуд — туманный древний лес, окружённый четырьмя королевствами. В лесу есть друидические руины (мегалиты/долмены), фейские территории (Fairy Land), проклятые деревни. Каждое убежище (shelter) — мини-дungeon. Мир пропитан fairy tale horror: не сказочная идиллия, а угрожающая магия.",
     "vignette": "Мастер: «Вы в туманном лесу. Могильный камень возвышается над вами. На нём — непонятные знаки.» Игрок: «Испую Cleric, чтобы расшифровать знаки.» Мастер: «Знаки говорят: \u0022Не трогай\u0022. Но вы слышите шёпот из-за камня — кто-то зовёт вас.» Игрок: «Иду за шёпотом.» Мастер: «Из тумана выходит маленькая фигура — маленький человек с глазами на ладонях...»",
     "prep": "~15 мин",
@@ -116,6 +125,15 @@ registerSystem("dolmenwood", {
     "tagShort": "OSE clone — fairy tale horror in Dolmenwood forest",
     "tagline": "\"The forest whispers. The standing stones hold secrets. Welcome to Dolmenwood.\"",
     "description": "Dolmenwood is a tabletop RPG setting by Necrotic Gnome (2024, Kickstarter), built on Old-School Essentials (B/X). Dark fairy tale horror: players explore the ancient Dolmenwood forest, home to faeries, cursed deadmen, talking beasts, and strange beings. 9 classes: Cleric, Fighter, Thief, Magic-User, Bard, Dwarf, Elf, Gnome, Halfling. 6 Kindreds.",
+    "pickIf": [
+      "you want old-school B/X play in a dark fairy-tale forest",
+      "your group enjoys wilderness wandering among faeries, talking beasts and cursed villages",
+      "you want a deep ready-made setting already compatible with OSE"
+    ],
+    "skipIf": [
+      "you want deep character builds with feats and subclasses",
+      "you want classic Tolkien-style fantasy rather than eerie folklore"
+    ],
     "setting": "Dolmenwood — a misty ancient forest surrounded by four kingdoms. Within: druidic ruins (standing stones/megaliths), faerie territories (Fairy Land), cursed villages. Every shelter is a mini-dungeon. The world is steeped in fairy tale horror: not whimsical idyll, but threatening magic.",
     "vignette": "GM: 'You're in the misty forest. A standing stone towers above you. Strange symbols are carved on it.' Player: 'I use my Cleric ability to decipher the symbols.' GM: 'The symbols say: \u0022Do not touch.\u0022 But you hear whispering from behind the stone — someone is calling you.' Player: 'I follow the whisper.' GM: 'From the mist emerges a small figure — a little man with eyes on his palms...'",
     "prep": "~15 min",

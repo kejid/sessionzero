@@ -87,6 +87,16 @@ registerSystem("ironsworn", {
     "tagShort": "Бесплатное соло-фэнтези PbtA",
     "tagline": "«Один игрок. Один мир. Клятвы, которые нельзя нарушить.»",
     "description": "Железная Клятва — это THE соло-RPG тёмного фэнтези. Бесплатная, полная, без компромиссов. Играйте одни, вдвоём с ведущим или кооперативно без GM вообще. Вдохновлена Powered by the Apocalypse: ходы, не правила — нарратив на первом месте. Оракулы генерируют мир, угрозы и неожиданные повороты прямо за столом. Никакого препа. Только клятвы, ставки и железо.",
+    "pickIf": [
+      "хотите играть в одиночку или кооперативом без мастера",
+      "нравятся таблицы-оракулы и дневник мрачной истории на суровом севере",
+      "хотите кампанию без подготовки, которую двигают клятвы"
+    ],
+    "skipIf": [
+      "нужен сюжет, выстроенный мастером, и продуманные сцены",
+      "группе ближе высокое фэнтези с драконами и тавернами",
+      "вам не нравится самим трактовать случайные ответы оракулов"
+    ],
     "setting": "Железные Земли — мрачный, враждебный север. Не героическое фэнтези с драконами и трактирами — тут люди выживают на краю выжженного мира. Кланы, обиды, тёмные леса, забытые руины. Вдохновение: скандинавский миф, кельтская меланхолия и ощущение осаждённой крепости. Каждый квест — это не «спаси мир», это «выживи. Выполни клятву. Умри с достоинством.»",
     "vignette": "Ты один. Деревня сожжена. Ты кладёшь руку на кусок железа и клянёшься: «Я найду тех, кто это сделал.» Бросок на Клятву — 5 против 7 и 3. Слабый хит: Клятва принята, но Мастер Миров (ты сам через оракул) добавляет осложнение. Ты идёшь в лес. Кидаешь кость встречи — «Угроза приближается». Оракул: «Волк? Нет. Что-то большее». Ты пишешь в журнал. История разворачивается.",
     "prep": "~0 мин",
@@ -146,6 +156,16 @@ registerSystem("ironsworn", {
     "tagShort": "free solo PbtA dark fantasy",
     "tagline": "\"One player. One world. Vows that cannot be broken.\"",
     "description": "Ironsworn is THE dark fantasy solo RPG. Free, complete, uncompromising. Play alone, co-op with a GM, or fully GM-less — the same rules support all three modes. Inspired by Powered by the Apocalypse: moves, not rules — narrative always first. Oracles generate the world, threats, and unexpected twists right at the table. Zero prep. Just vows, stakes, and iron.",
+    "pickIf": [
+      "you want to play solo or co-op without a GM",
+      "you like oracle tables and journaling a grim frontier story",
+      "your group wants sworn vows to drive a zero-prep campaign"
+    ],
+    "skipIf": [
+      "you want a GM-crafted plot with set-piece encounters",
+      "your group wants high fantasy with dragons and taverns",
+      "you dislike interpreting random oracle answers yourself"
+    ],
     "setting": "The Ironlands — a grim, hostile north. Not heroic fantasy with dragons and taverns — here people cling to survival at the edge of a scorched world. Clans, feuds, dark forests, forgotten ruins. Inspiration: Norse myth, Celtic melancholy, and the feeling of a besieged frontier. Every quest isn't 'save the world' — it's 'survive. Fulfill the vow. Die with honor.'",
     "vignette": "You're alone. The village is ash. You press your hand to a piece of iron and swear: 'I will find those who did this.' Roll on Swear a Vow — 5 against 7 and 3. Weak hit: the vow is accepted, but the Fates (you, via the oracle) add a complication. You enter the forest. Roll an encounter — 'A threat approaches.' Oracle: 'A wolf? No. Something larger.' You write it in your journal. The story unfolds.",
     "prep": "~0 min",

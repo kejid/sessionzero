@@ -71,6 +71,16 @@ registerSystem("cities-without-number", {
     "tagShort": "Киберпанк-песочница от автора SWN",
     "tagline": "«Мир из неона и пыли. Всё, что тебе нужно, принадлежит кому-то другому — пока что».",
     "description": "Cities Without Number — киберпанк-RPG Кевина Кроуфорда для песочницы в антиутопии из хрома и нищеты. Тот же каркас, что у Stars Without Number и Worlds Without Number, и полная совместимость с ними: d20 в бою, 2d6 на навыки. Только классов нет: героя собирают из «граней» (Edges) и фокусов. Сверху — киберимпланты, хакинг без отдельной мини-игры, дроны и инструменты для постройки своего города.",
+    "pickIf": [
+      "хотите киберпанк-песочницу с заказами наёмников в корпоративном городе",
+      "мастеру нужны генераторы банд, корпораций и районов",
+      "игроки любят смертельные перестрелки, где любой бой ведёт в морг"
+    ],
+    "skipIf": [
+      "хотите неторопливый детектив — тут лучше Blade Runner",
+      "за столом предпочитают нарративные кубы, а не d20 и 2d6",
+      "нужен готовый метасюжет, по которому идти"
+    ],
     "setting": "По умолчанию — Город: готовый мегаполис, где корпорации покупают всё, что можно купить, а банды делят то, что осталось. Вы — оперативники, наёмники улиц, которые рискуют жизнью и плотью ради того, что этот мир хотел бы у них отнять. Но главное в книге — генераторы банд, корпораций и районов: город можно собрать и свой.",
     "vignette": "Оперативники проникают на склад корпорации. Охранник выходит из-за угла, и стрелок бьёт первой: d20 + бонус атаки против AC — попадание. Вместе с уроном бросается Trauma Die оружия: выпало 7, а Trauma Target охранника — 6. Травма: урон умножается на Trauma Rating оружия, и охранник падает. Но выстрел услышали — местный Heat ползёт вверх, и до приезда корпоративной охраны остаются минуты.",
     "prep": "~30 мин",
@@ -122,6 +132,16 @@ registerSystem("cities-without-number", {
     "tagShort": "Cyberpunk sandbox from the SWN designer",
     "tagline": "\"The world is neon and dust. Everything you need belongs to someone else — for now.\"",
     "description": "Cities Without Number is Kevin Crawford's cyberpunk RPG, built for sandbox play in a dystopia of chrome and misery. It runs on the same chassis as Stars Without Number and Worlds Without Number and is fully compatible with both: d20 in combat, 2d6 for skills. There are no classes, though. You build a character from Edges and Foci, then add cyberware, hacking that doesn't need its own mini-game, drones, and tools for building your own city.",
+    "pickIf": [
+      "you want a cyberpunk sandbox of mercenary jobs in a corporate city",
+      "your GM wants generators for gangs, corps and districts",
+      "players like lethal firefights where any gunfight can end in the morgue"
+    ],
+    "skipIf": [
+      "you want a slow detective story; Blade Runner fits that better",
+      "your table prefers narrative dice to d20 and 2d6 checks",
+      "you want a ready-made metaplot to follow"
+    ],
     "setting": "The default setting is the City: a ready-made metropolis where corporations buy everything that can be bought and gangs fight over the rest. You play operators, street mercenaries who risk life and flesh to take what this world would keep from them. The real heart of the book is its generators for gangs, corps and districts, so you can just as easily build a city of your own.",
     "vignette": "The operators slip into a corp warehouse. A guard rounds the corner and the shooter fires first: d20 + attack bonus against AC, and it hits. The weapon's Trauma Die is rolled with the damage: 7, against the guard's Trauma Target of 6. Trauma: the damage is multiplied by the weapon's Trauma Rating and the guard goes down. But someone heard the shot. Local Heat creeps up, and the crew has minutes before corp security arrives.",
     "prep": "~30 min",

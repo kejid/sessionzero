@@ -71,6 +71,15 @@ registerSystem("eclipse-phase", {
     "tagShort": "Трансгуман sci-fi хоррор на d100",
     "tagline": "«Твоё тело — оболочка. Твой разум — файл. Твоя смерть — временная».",
     "description": "Eclipse Phase — научно-фантастическая RPG ужасов от Posthuman Studios в жанре трансгуманизма. Через 200 лет после технологической сингулярности человечество расселилось по всей Солнечной системе, а сознание стало данными: разум (эго) можно резервировать, передавать по лазерной связи и загружать в новое тело (морф). Действие — после Падения, катастрофы, в которой восставшие ИИ, ТИТАНы, едва не уничтожили человечество. Система процентников (d100) с телесным и экзистенциальным ужасом. Распространяется бесплатно по лицензии Creative Commons.",
+    "pickIf": [
+      "хотите трансгуманистическую НФ, где смерть тела — повод переселиться в новое из бэкапа",
+      "группе интересны заговоры и ужас в роли агентов Firewall против экзистенциальных угроз",
+      "нравятся крепкие правила d100 с настоящей тактической глубиной"
+    ],
+    "skipIf": [
+      "игрокам нужна лёгкая система, которую можно освоить за вечер",
+      "хотите знакомый мир — к эго, морфам и бэкапам нужно привыкнуть"
+    ],
     "setting": "Внутренняя система под властью гиперкорпораций и биоконсерваторов; независимые анклавы Пояса и внешних планет с прямой демократией и репутационной экономикой. Земля — карантинная зона, оставленная ТИТАНам. Персонажи — агенты Файрвол, тайной сети против экзистенциальных угроз: заражённых нанороев, чужих артефактов, ворот Пандоры и остатков сингулярного интеллекта.",
     "vignette": "Ваш морф просыпается в незнакомом теле на станции у Марса — предыдущее сгорело сутки назад. Мьюз шепчет в аудиокортекс: сигнал бедствия из заброшенного хабитата, где кто-то вскрыл артефакт ТИТАНов. Тест Восприятия: d100, нужно не выше навыка. 34 — успех, а десятки задают степень. Вы замечаете, что стены хабитата... дышат. Наномашины. И они уже знают, что вы прибыли.",
     "prep": "~30 мин",
@@ -111,6 +120,15 @@ registerSystem("eclipse-phase", {
     "tagShort": "Transhuman sci-fi horror on d100",
     "tagline": "\"Your body is a shell. Your mind is a file. Your death is temporary.\"",
     "description": "Eclipse Phase is a transhuman science-fiction horror RPG from Posthuman Studios. Two centuries after the technological singularity, humanity has spread across the solar system and consciousness has become data: your mind (ego) can be backed up, beamed over laser links, and downloaded into a new body (morph). Play unfolds after the Fall — a near-extinction event in which the rogue AIs known as the TITANs almost wiped out transhumanity. A crunchy percentile (d100) system steeped in body horror and existential dread. Distributed free under a Creative Commons license.",
+    "pickIf": [
+      "you want transhuman sci-fi where a dead body means resleeving from a backup",
+      "your group likes conspiracy and horror as Firewall agents facing existential threats",
+      "you enjoy crunchy d100 rules with real tactical depth"
+    ],
+    "skipIf": [
+      "your players want a light system they can learn in one evening",
+      "you want a familiar setting — egos, morphs and backups take time to grasp"
+    ],
     "setting": "The inner system is ruled by hypercorps and bioconservatives; the autonomist habitats of the Belt and outer planets run on direct democracy and reputation economies. Earth is a quarantined wasteland abandoned to the TITANs. Characters are agents of Firewall, a covert network that fights existential risks: infectious nanoswarms, alien artifacts, the Pandora Gates, and the remnants of singularity-level intelligences.",
     "vignette": "Your morph wakes in an unfamiliar body on a station near Mars — the last one burned up a day ago. Your muse whispers into your audio cortex: a distress signal from an abandoned habitat where someone cracked open a TITAN artifact. You roll a Perception test: d100, roll under your skill. 34 — a success, and the tens digit sets your margin. You notice the habitat's walls are... breathing. Nanomachines. And they already know you've arrived.",
     "prep": "~30 min",

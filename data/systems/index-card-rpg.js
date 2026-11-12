@@ -70,6 +70,16 @@ registerSystem("index-card-rpg", {
     "tagShort": "Быстрый d20 с одной Целью на сцену",
     "tagline": "«Одна Цель на столе — и все знают, сколько нужно выбросить».",
     "description": "Index Card RPG (ICRPG) от Runehammer Games — лёгкая d20-система Ханкерина Феринале, выросшая из рисунков маркером на учётных карточках. Master Edition собрала все части в одну книгу: переработанные правила, пять миров и одно из лучших руководств для ведущего в хобби. Никаких навыков, фитов и формул — шесть характеристик, кубики усилия и таймеры, которые не дают заскучать.",
+    "pickIf": [
+      "хотите лёгкий d20 с одной открытой Целью на всю сцену",
+      "мастеру нужны дельные советы по таймерам, темпу и импровизации",
+      "хотите переходить от фэнтези к космосу и мистическому вестерну на одном движке"
+    ],
+    "skipIf": [
+      "нужны списки навыков, черты и детальная сборка персонажа",
+      "группе не по душе ходы по часовой стрелке и таймеры в каждом бою",
+      "хотите игру, привязанную к одному глубоко проработанному миру"
+    ],
     "setting": "Пять миров на одном движке: фэнтезийный Альфхейм, космический Warp Shell с разумными кораблями, вестерн о битве Рая и Ада Ghost Mountain, уличные супергерои Vigilante City и ледниковый период Blood and Snow. Всё можно смешивать — или забрать идеи в свою любимую игру.",
     "vignette": "На столе стоит карточка: Цель 14. Ведущий кладёт рядом d4 гранью «3» — через три хода пещера обрушится. Ходят по часовой стрелке. Воин бросает d20 + Сила: 13, мимо. Следующая — разбойница: она целится голему в трещину на груди, это сложно, Цель для неё 17. Натуральная двадцатка! Попадание и Ultimate-усилие: d6 оружия плюс d12 сверху, 4 + 9 = 13 урона. У голема два сердца — 20 очков, осталось 7. Таймер щёлкает на 2.",
     "prep": "~20 мин",
@@ -119,6 +129,16 @@ registerSystem("index-card-rpg", {
     "tagShort": "Fast d20 with one Target per scene",
     "tagline": "\"One Target on the table, and everyone knows what to roll.\"",
     "description": "Index Card RPG (ICRPG) from Runehammer Games is Hankerin Ferinale's light d20 system that grew out of Sharpie drawings on index cards. Master Edition gathers every piece into one book: revised rules, five worlds and one of the best GM guides in the hobby. No skills, feats or formulas — six stats, effort dice and timers that keep the pressure on.",
+    "pickIf": [
+      "you want a light d20 game with one visible Target per scene",
+      "your GM wants strong advice on timers, pacing and improvisation",
+      "you want to hop between fantasy, space and weird west on one engine"
+    ],
+    "skipIf": [
+      "you want skill lists, feats and detailed character builds",
+      "your group dislikes clockwise turns and countdown timers in every fight",
+      "you want a game tied to one deep, detailed setting"
+    ],
     "setting": "Five worlds on one engine: the fantasy of Alfheim, Warp Shell's space opera of sentient ships, Ghost Mountain's weird west where Heaven and Hell fight over the frontier, the street-level supers of Vigilante City and the Ice Age of Blood and Snow. Mix them freely, or lift the ideas into your favourite game.",
     "vignette": "An index card sits in the middle of the table: Target 14. The GM sets a d4 beside it showing 3 — in three turns the cave comes down. Turns go clockwise. The warrior rolls d20 + STR: 13, a miss. Next, the rogue aims for the crack in the golem's chest — hard, so her Target is 17. Natural 20! A hit with Ultimate effort: weapon d6 plus a d12 on top, 4 + 9 = 13 damage. The golem has two Hearts — 20 points — and 7 remain. The timer clicks down to 2.",
     "prep": "~20 min",

@@ -94,6 +94,16 @@ registerSystem("coriolis", {
     "tagShort": "Арабо-персидская космоопера",
     "tagline": "«Арабские Ночи в космосе. Торговля, молитва и Тьма Между Звёзд».",
     "description": "Космическая опера с арабо-персидской эстетикой. Группа владеет космическим кораблём и путешествует по Третьему Горизонту — кластеру звёздных систем. Торговля, контрабанда, дипломатия, исследование — и Тьма Между Звёзд, которая проникает в реальность через молитвы Иконам.",
+    "pickIf": [
+      "хотите общий корабль как дом группы — с долгами, модулями и экипажем",
+      "торговля, контрабанда и переговоры фракций интересны вам не меньше разведки",
+      "нравится космоопера, где за каждой молитвой Иконам крадётся мистическая угроза"
+    ],
+    "skipIf": [
+      "нужна твёрдая НФ без религии и мистики в механике",
+      "хочется именно экспедиций по руинам — это уже The Great Dark",
+      "игрокам нужен цельный сюжет, а не песочница фракций"
+    ],
     "setting": "Третий Горизонт — десятки звёздных систем, связанных порталами. Базары на орбитальных станциях, мечети рядом с доками, древние порталы неизвестного происхождения. Фракции: от религиозных орденов до мегакорпораций. Атмосфера — Firefly встречает «1001 ночь».",
     "vignette": "Ваш корабль входит в систему Кua. Таможня требует досмотр — в трюме контрабанда. Бросок Манипуляции: 5 кубиков, ни одной шестёрки. «Молюсь Иконе Судьи,» — говорите вы. Перебрасываете — две шестёрки, успех! Но Мастер получает очко Тьмы. Позже, в тёмном коридоре станции, свет мигает. Что-то шепчет ваше имя. Тьма помнит.",
     "prep": "~30 мин",
@@ -159,6 +169,16 @@ registerSystem("coriolis", {
     "tagShort": "Arabian-Persian space opera",
     "tagline": "\"Arabian Nights in space. Trade, prayer, and the Darkness Between the Stars.\"",
     "description": "A space opera with Arab-Persian aesthetics. The group owns a spaceship and travels the Third Horizon — a cluster of star systems. Trade, smuggling, diplomacy, exploration — and the Darkness Between the Stars, which seeps into reality through prayers to the Icons.",
+    "pickIf": [
+      "your group wants a shared ship as home base, with debts, modules and crew",
+      "trade, smuggling and diplomacy between factions appeal to you as much as exploration",
+      "you want space opera with a creeping mystical threat behind every prayer"
+    ],
+    "skipIf": [
+      "you want hard sci-fi with no religion or mysticism in the mechanics",
+      "you'd rather run focused ruin-crawling expeditions — that is The Great Dark",
+      "your players want a tight linear plot instead of a sandbox of factions"
+    ],
     "setting": "The Third Horizon — dozens of star systems connected by portals. Bazaars on orbital stations, mosques next to docks, ancient portals of unknown origin. Factions range from religious orders to megacorporations. The atmosphere — Firefly meets One Thousand and One Nights.",
     "vignette": "Your ship enters the Kua system. Customs demands an inspection — there's contraband in the hold. Manipulation roll: 5 dice, no sixes. 'I pray to the Icon of the Judge,' you say. Reroll — two sixes, success! But the GM gains a Darkness Point. Later, in a dark station corridor, the lights flicker. Something whispers your name. The Darkness remembers.",
     "prep": "~30 min",

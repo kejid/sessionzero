@@ -65,6 +65,16 @@ registerSystem("mage-the-ascension", {
     "tagShort": "Тайная война магов за саму природу реальности",
     "tagline": "«Реальность — это то, во что верит большинство. Маги знают, как её переписать».",
     "description": "Mage: The Ascension — классика Мира Тьмы о просветлённых магах (Willworkers), ведущих тайную войну за то, каким будет реальность. Магия здесь — не заклинания из книжки, а сила воли и парадигмы: ты меняешь мир, потому что знаешь, что он может быть иным. Технократия против мистических Традиций, наука против веры. Философский, амбициозный оккультный хоррор.",
+    "pickIf": [
+      "хотите свободную магию, ограниченную фантазией, а не списком заклинаний",
+      "группе интересны философские споры о реальности и вере",
+      "нравятся интриги тайной войны Технократии и Традиций"
+    ],
+    "skipIf": [
+      "нужны чёткие списки заклинаний и предсказуемая сила",
+      "группу раздражает, что мастер решает про магию и Парадокс в каждом случае отдельно",
+      "хотите прямолинейного экшена с битвами против монстров"
+    ],
     "setting": "Современный мир, где реальность держится на «консенсусе» — общей вере масс. Маги пробудились и видят: правила можно переписать. Технократия куёт мир порядка, науки и контроля; девять Традиций хранят мистику и чудо. Между ними — Война Вознесения за душу человечества. Оккультизм, паранойя и большие идеи.",
     "vignette": "Маг Культа Экстаза хочет исцелить умирающего одной волей. Это «вульгарная» магия — она противоречит тому, что видят обычные свидетели. Он собирает пул: Arete + Сфера Жизни, бросок d10, успехи против сложности. Рана затягивается на глазах медсестры — и реальность мстит. Ведущий начисляет Парадокс: где-то рядом уже сгущается кара за нарушение законов мира.",
     "prep": "~30 мин",
@@ -111,6 +121,16 @@ registerSystem("mage-the-ascension", {
     "tagShort": "A secret war of mages over the nature of reality",
     "tagline": "\"Reality is what the majority believes. Mages know how to rewrite it.\"",
     "description": "Mage: The Ascension is the World of Darkness classic about enlightened mages (Willworkers) waging a secret war over what reality will be. Magic here isn't spells from a book but willpower and paradigm: you change the world because you know it could be otherwise. The Technocracy against the mystic Traditions, science against faith. Philosophical, ambitious occult horror.",
+    "pickIf": [
+      "you want freeform magic limited by imagination, not a spell list",
+      "your group enjoys philosophical arguments about reality and belief",
+      "you like secret-war intrigue between the Technocracy and the Traditions"
+    ],
+    "skipIf": [
+      "you want clear spell lists and predictable power",
+      "your group dislikes the GM ruling on magic and Paradox case by case",
+      "you want straightforward monster-fighting action"
+    ],
     "setting": "A modern world where reality rests on 'consensus' — the shared belief of the masses. Mages have Awakened and see that the rules can be rewritten. The Technocracy forges a world of order, science, and control; the nine Traditions guard mysticism and wonder. Between them, the Ascension War for the soul of humanity. Occultism, paranoia, and big ideas.",
     "vignette": "A Cult of Ecstasy mage wants to heal a dying man by will alone. That's 'vulgar' magic — it defies what ordinary witnesses see. He gathers a pool: Arete + the Life Sphere, rolls d10s, successes against a difficulty. The wound knits shut before the nurse's eyes — and reality retaliates. The GM assigns Paradox: somewhere nearby, punishment for breaking the world's laws is already gathering.",
     "prep": "~30 min",

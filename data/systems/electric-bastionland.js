@@ -74,6 +74,15 @@ registerSystem("electric-bastionland", {
     "tagShort": "Странный городской OSR",
     "tagline": "«У вас есть долг в миллион фунтов и очень мало времени».",
     "description": "Эволюция Into the Odd. Те же элегантные правила, но фокус — на городских приключениях в электрическую эпоху. Главная фишка — 100+ «Неудачных Профессий»: случайных предысторий, каждая из которых даёт уникальный стартовый набор проблем, связей и абсурдного снаряжения. Вы не герои — вы неудачники в долгах.",
+    "pickIf": [
+      "хотите странные городские приключения в огромном городе на очень лёгких правилах",
+      "игрокам нравятся случайные абсурдные прошлые с готовыми зацепками",
+      "нужна мотивация с первой минуты: вся группа по уши в долгах"
+    ],
+    "skipIf": [
+      "нужны подробные сборки персонажей и тактические опции",
+      "группе нужен серьёзный тон — здесь абсурд и чёрный юмор в духе Пратчетта"
+    ],
     "setting": "Электрический Бастион — город, разросшийся до масштабов континента. Трамваи, телефоны, подозрительные банки и Глубинные Страны внизу, полные сокровищ и ужасов. Атмосфера — если бы Терри Пратчетт писал weird fiction.",
     "vignette": "Ваш персонаж — Бывший Дрессировщик Уличных Крабов. Вы должны миллион фунтов. Краб по имени Генерал — единственное, что осталось от прошлой жизни. Банкир говорит: «Есть работа в Глубинных Странах. Вернётесь с артефактом — спишу десять тысяч.» Генерал щёлкает клешнёй. Вы соглашаетесь.",
     "prep": "~10 мин",
@@ -129,6 +138,15 @@ registerSystem("electric-bastionland", {
     "tagShort": "weird urban OSR",
     "tagline": "\"You owe a million pounds and time is running out.\"",
     "description": "The evolution of Into the Odd. Same elegant rules, but focused on urban adventures in an electric age. The standout feature — 100+ 'Failed Careers': random backgrounds, each providing a unique starter kit of problems, contacts, and absurd equipment. You're not heroes — you're losers in debt.",
+    "pickIf": [
+      "you want weird urban adventures in a sprawling city on very light rules",
+      "your players like random, absurd backgrounds that come with built-in hooks",
+      "you want a motive from the start: the whole party is deep in debt"
+    ],
+    "skipIf": [
+      "you want detailed character builds and tactical options",
+      "your group wants a serious tone — the game leans absurd and darkly funny"
+    ],
     "setting": "Electric Bastion — a city that has sprawled to continental scale. Trams, telephones, shady banks, and the Deep Country below, brimming with treasures and horrors. The vibe — as if Terry Pratchett wrote weird fiction.",
     "vignette": "Your character — a Former Street Crab Trainer. You owe a million pounds. A crab named General is the only thing left from your past life. The banker says: 'There's a job in the Deep Country. Bring back an artifact and I'll write off ten thousand.' General clicks his claw. You accept.",
     "prep": "~10 min",

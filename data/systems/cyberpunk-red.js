@@ -76,6 +76,16 @@ registerSystem("cyberpunk-red", {
     "tagShort": "Киберпанк на d10",
     "tagline": "«Ночь, город, корпорации и красное небо после ядерного пожара».",
     "description": "Cyberpunk RED — настольная RPG в жанре киберпанка от R. Talsorian Games (2020), четвёртое издание линейки Interlock. Действие происходит в 2045 году, после 4-й Корпоративной войны: небо Найт-Сити окрашено в красный из-за ядерного fallout, а игроки — эджраннеры, выживающие между корпорациями и улицей. Система d10 с Lifepath-созданием персонажей и боевой подсистемой Friday Night Firefight.",
+    "pickIf": [
+      "хотите классический киберпанк Найт-Сити: корпорации, импланты и стиль",
+      "игрокам нравится выбрасывать предысторию по таблицам Lifepath",
+      "нужны перестрелки, где броня хрупкая, а один выстрел может убить"
+    ],
+    "skipIf": [
+      "группе нужны герои, которым пули нипочём",
+      "хочется лёгких правил почти без подготовки — CY_BORG проще",
+      "игроки хотят ставить импланты, не теряя человечности"
+    ],
     "setting": "Найт-Сити, 2045 — гибрид Лос-Анджелеса и Сан-Франциско в постъядерном будущем. Корпорации контролируют всё, но у улицы свои правила. Фэшн, киберимпланты и стил — неотъемлемая часть жизни (и смерти).",
     "vignette": "Раненый эджраннер лежит в переулке. Киберглаз мигает красным: системная ошибка. Над ним — силуэт нано-хирурга с биочемоданом. «Стоимость?» — спрашивает бандит. «Жизнь и 5000 creds», — отвечает хирург. Четыре кубика d10 в руке. Difficulty 14. Бросок... 7+3+1+0 = 11. Провал. Хирург пожимает плечами: «Попробуй в следующей жизни».",
     "prep": "~15 мин",
@@ -128,6 +138,16 @@ registerSystem("cyberpunk-red", {
     "tagShort": "Cyberpunk d10 — Night City 2045",
     "tagline": "\"Night City, 2045 — red skies, corporate wars, and edgerunners on the edge.\"",
     "description": "Cyberpunk RED is a cyberpunk tabletop RPG from R. Talsorian Games (2020), the fourth edition of the Interlock system. Set in 2045, after the 4th Corporate War — Night City's sky is red from nuclear fallout, and players are edgerunners surviving between corporations and the streets. d10 system with Lifepath character creation and the brutal Friday Night Firefight combat subsystem.",
+    "pickIf": [
+      "you want classic Night City cyberpunk: corporations, cyberware and style",
+      "your players enjoy rolling up a backstory on Lifepath tables",
+      "you want gunfights where armor is fragile and one shot can kill"
+    ],
+    "skipIf": [
+      "your group wants heroes who shrug off gunfire",
+      "you want rules-light play with near-zero prep — CY_BORG is leaner",
+      "your players want to stack cyberware with no cost to their Humanity"
+    ],
     "setting": "Night City, 2045 — a Los Angeles/San Francisco hybrid in a post-nuclear future. Corporations control everything, but the street has its own rules. Fashion, cyberware, and style aren't optional — they're survival.",
     "vignette": "A wounded edgerunner lies in an alley. Cybereye blinks red: system error. Above him, a nano-surgeon with a biocase. 'The price?' asks the gonk. 'Your life and 5000 creds,' says the surgeon. Four d10s in hand. Difficulty 14. Roll... 7+3+1+0 = 11. Fail. The surgeon shrugs: 'Try in your next life.'",
     "prep": "~15 min",

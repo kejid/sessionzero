@@ -87,6 +87,16 @@ registerSystem("call-of-cthulhu", {
     "tagShort": "Классика хоррор-RPG, 1920-е",
     "tagline": "«Тайны, которые лучше бы не раскрывать. Истина, от которой сходят с ума».",
     "description": "Старейшая и самая знаменитая хоррор-RPG в мире, впервые изданная в 1981 году Сэнди Петерсеном. Седьмая редакция — современная, отполированная версия классики. Основа — процентильная система Basic Roleplaying (BRP): у каждого навыка есть значение в процентах, и чтобы преуспеть, нужно выбросить на d100 меньше этого числа. Просто, интуитивно, элегантно. Но суть игры — не в кубиках. Call of Cthulhu — это расследование. Вы не воины и не герои. Вы — обычные люди: частные детективы, профессора, журналисты — которые столкнулись с тем, чего не должно существовать. Каждая встреча с непостижимым оставляет шрамы: механика Рассудка (Sanity) отслеживает медленное сползание персонажа в безумие. В отличие от D&D, где персонажи становятся сильнее, в Call of Cthulhu они деградируют. Это не power fantasy — это греческая трагедия за игровым столом, и именно поэтому система живёт уже более 40 лет.",
+    "pickIf": [
+      "хотите классические лавкрафтовские расследования: улики, библиотеки, свидетели",
+      "группе интересно, как обычные люди медленно теряют рассудок",
+      "нужен огромный выбор эпох и изданных сценариев"
+    ],
+    "skipIf": [
+      "игроки хотят, чтобы персонажи со временем становились сильнее",
+      "группа предпочитает решать проблемы боем",
+      "хотите разгрузить мастера — здесь Хранитель тянет всю тайну"
+    ],
     "setting": "Классический сеттинг — Америка 1920-х годов, эпоха джаза, сухого закона и тайных культов. Газовые фонари, библиотеки Мискатоникского университета, туманные доки Инсмута. Но Call of Cthulhu не ограничена одной эпохой: официальные дополнения охватывают викторианскую Англию (Cthulhu by Gaslight), Древний Рим (Cthulhu Invictus), Средневековье (Cthulhu Dark Ages), современность и даже далёкое будущее. Ужас Лавкрафта вне времени — Великие Древние ждали миллиарды лет до появления человечества и будут ждать после. Мир полон тайных культов, запретных книг вроде Некрономикона и существ, один взгляд на которых ломает разум.",
     "vignette": "Библиотека Мискатоникского университета, 2 часа ночи. Ваш профессор — д-р Элис Уоррен — листает дневник пропавшего коллеги. Бросок Library Use (65%) — 42, успех. Вы находите запись: «Маяк на мысе Кингспорт. Свет, который не должен гореть.» На маяке — символы, нарисованные кровью. Бросок Cthulhu Mythos — вы узнаёте знак Дагона. Проверка Рассудка: 1d6 потери. Вы выбрасываете 4. Рассудок падает с 55 до 51. Д-р Уоррен начинает слышать пение из-под пола. Хранитель (ведущий) говорит: «Ты понимаешь, что текст в дневнике — это не записи. Это молитва. И ты только что прочитала её вслух.»",
     "prep": "~30–60 мин",
@@ -144,6 +154,16 @@ registerSystem("call-of-cthulhu", {
     "tagShort": "classic 1920s horror RPG",
     "tagline": "\"Mysteries best left unsolved. Truths that shatter the mind.\"",
     "description": "The oldest and most renowned horror RPG in the world, first published in 1981 by Sandy Petersen. The 7th edition is the modern, polished version of this classic. The foundation is the percentile-based Basic Roleplaying (BRP) system: every skill has a percentage value, and to succeed you must roll under it on a d100. Simple, intuitive, elegant. But the heart of the game is not the dice. Call of Cthulhu is about investigation. You are not warriors or heroes. You are ordinary people — private detectives, professors, journalists — who have encountered something that should not exist. Every brush with the incomprehensible leaves scars: the Sanity mechanic tracks a character's slow descent into madness. Unlike D&D, where characters grow stronger, in Call of Cthulhu they deteriorate. This is not a power fantasy — it is a Greek tragedy at the gaming table, and that is exactly why the system has endured for over 40 years.",
+    "pickIf": [
+      "you want classic Lovecraftian investigation with clues, libraries and witnesses",
+      "your group enjoys ordinary people slowly losing their sanity",
+      "you want a huge back catalogue of eras and published scenarios"
+    ],
+    "skipIf": [
+      "players want characters who grow stronger over time",
+      "your group prefers solving problems through combat",
+      "you want a GM-light game; the Keeper carries the mystery"
+    ],
     "setting": "The classic setting is 1920s America — the jazz age, Prohibition, and secret cults. Gas lamps, the libraries of Miskatonic University, the fog-shrouded docks of Innsmouth. But Call of Cthulhu is not limited to a single era: official supplements cover Victorian England (Cthulhu by Gaslight), Ancient Rome (Cthulhu Invictus), the Middle Ages (Cthulhu Dark Ages), the modern day, and even the far future. Lovecraftian horror is timeless — the Great Old Ones waited billions of years before humanity appeared and will wait long after. The world is full of secret cults, forbidden tomes like the Necronomicon, and entities whose mere sight breaks the mind.",
     "vignette": "Miskatonic University library, 2 AM. Your professor — Dr. Alice Warren — leafs through a missing colleague's journal. Library Use roll (65%) — 42, success. You find an entry: 'The lighthouse at Kingsport Head. The light that should not shine.' At the lighthouse — symbols drawn in blood. Cthulhu Mythos roll — you recognize the sign of Dagon. Sanity check: 1d6 loss. You roll 4. Sanity drops from 55 to 51. Dr. Warren begins to hear chanting from beneath the floor. The Keeper (GM) says: 'You realize the text in the journal isn't notes. It's a prayer. And you just read it aloud.'",
     "prep": "~30–60 min",

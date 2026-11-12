@@ -71,6 +71,16 @@ registerSystem("kult-divinity-lost", {
     "tagShort": "Оккультный хоррор: реальность — тюрьма",
     "tagline": "«Мы — падшие божества, а мир вокруг — Иллюзия, скрывающая правду».",
     "description": "Kult: Divinity Lost — 4-я редакция культового шведского хоррора от Helmgast, теперь на движке Powered by the Apocalypse (2d10). Реальность — ложь, темница для человечества, некогда божественного. Прорвавшись сквозь Иллюзию, персонажи видят истинный кошмар за фасадом. Взрослый, философский и по-настоящему тревожный хоррор.",
+    "pickIf": [
+      "хотите взрослый психологический хоррор о том, что реальность — тюрьма",
+      "группа готова к тревожным темам и тёмным тайнам героев",
+      "нравятся ходы PbtA, где провал даёт ход мастеру"
+    ],
+    "skipIf": [
+      "за столом хотят бодрого экшена про охоту на монстров",
+      "кому-то из группы нужен лёгкий или семейный контент",
+      "хотите расследований с аккуратной разгадкой в конце"
+    ],
     "setting": "Современный мир — это Иллюзия, сотканная, чтобы держать людей в плену и забвении их божественной природы. За ней — Метрополис (мёртвый город-первооснова) и Инферно (десять чистилищ страдания). Ангелы Смерти, ликторы, сущности Смерти и Страсти. Личный, психологический хоррор о деградации и прозрении.",
     "vignette": "Ваш герой находит фотографию, которой не должно существовать: на ней он сам — в месте, где никогда не был. Ход «Разобраться в ситуации»: 2d10 + Проницательность. Выпало 8 — частичный успех, правда приходит с ценой. Ведущий: «Ты вспоминаешь. И с этим воспоминанием твоя Стабильность рушится». Стены комнаты на миг становятся прозрачными — за ними шевелится Метрополис.",
     "prep": "~15 мин",
@@ -120,6 +130,16 @@ registerSystem("kult-divinity-lost", {
     "tagShort": "Occult horror: reality is a prison",
     "tagline": "\"We are fallen divinities, and the world around us is an Illusion hiding the truth.\"",
     "description": "Kult: Divinity Lost is the 4th edition of Helmgast's cult Swedish horror game, now Powered by the Apocalypse (2d10). Reality is a lie — a prison for a humanity that was once divine. Breaking through the Illusion, characters glimpse the true nightmare behind the facade. Adult, philosophical, and genuinely disturbing horror.",
+    "pickIf": [
+      "you want adult psychological horror about reality being a prison",
+      "your group is comfortable with disturbing themes and dark secrets",
+      "you like PbtA moves where a miss hands the GM a move"
+    ],
+    "skipIf": [
+      "your table wants pulpy monster-hunting action",
+      "anyone at the table needs lighthearted or family-friendly content",
+      "you want investigations with tidy, solvable endings"
+    ],
     "setting": "The modern world is an Illusion woven to keep humanity captive and forgetful of its divine nature. Behind it lie Metropolis (the dead primordial city) and Inferno (ten purgatories of suffering). Angels of Death, lictors, entities of Death and Passion. Personal, psychological horror about degradation and revelation.",
     "vignette": "Your character finds a photograph that shouldn't exist: it's them, in a place they've never been. The move 'See Through the Illusion': 2d10 + Perception. You roll an 8 — a partial success; the truth comes at a cost. The GM: 'You remember. And with the memory, your Stability cracks.' The room's walls turn briefly transparent — behind them, Metropolis stirs.",
     "prep": "~15 min",

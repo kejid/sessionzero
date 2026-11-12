@@ -66,6 +66,15 @@ registerSystem("dune-imperium", {
     "tagShort": "Интриги Великих Домов на движке 2d20",
     "tagline": "«Плати за всё — кровью, водой или верностью. Такова Империя».",
     "description": "Dune: Adventures in the Imperium — официальная RPG по «Дюне» от Modiphius на движке 2d20. Играете не одиноким героем, а Домом: агенты, интриганы, воины и ментаты на службе своего рода. Упор на политику, шпионаж и выживание в феодальной галактике, где меланж дороже жизни, а нож решает споры.",
+    "pickIf": [
+      "группе политика и шпионаж интереснее схваток с чудовищами",
+      "нравится играть одним Великим Домом сообща — с общим Momentum и целями",
+      "хотите, чтобы дуэли, интриги и войны шли по одним правилам"
+    ],
+    "skipIf": [
+      "хотите вольных искателей приключений, а не слуг Дома",
+      "игроки не любят разговорные сцены и долгие интриги"
+    ],
     "setting": "Империя «Дюны»: Ландсраад Великих Домов, император Коррино, Гильдия, Бене Гессерит и планета-пустыня Арракис — единственный источник Пряности. Заговоры, кровная месть, канли и тонкая паутина обязательств. Ваш Дом восходит или гибнет по вашим решениям — эпический политический sci-fi.",
     "vignette": "Бал в резиденции соперничающего Дома. Ваш интриган хочет выведать тайну наследника. Проверка Общения + Понимания: 2d20, каждый кубик ниже суммы — успех. Нужно 2, выпало 1. Вы тратите Momentum из общего пула Дома — ещё кубик, ещё успех. Тайна ваша. Но ведущий копит Threat: где-то в тени вас тоже раскусили.",
     "prep": "~30 мин",
@@ -115,6 +124,15 @@ registerSystem("dune-imperium", {
     "tagShort": "Great-House intrigue on the 2d20 System",
     "tagline": "\"You pay for everything — in blood, water, or loyalty. Such is the Imperium.\"",
     "description": "Dune: Adventures in the Imperium is Modiphius's official Dune RPG on the 2d20 System. You don't play a lone hero but a House: agents, schemers, warriors, and Mentats in service of your bloodline. The emphasis is politics, espionage, and survival in a feudal galaxy where the spice is worth more than life and a knife settles arguments.",
+    "pickIf": [
+      "your group wants political intrigue and espionage more than monster fights",
+      "you like playing one Great House together, with shared Momentum and goals",
+      "you want duels, schemes and wars all run on one set of rules"
+    ],
+    "skipIf": [
+      "you want free-roaming adventurers rather than servants of a House",
+      "your players dislike talky social scenes and long-term plotting"
+    ],
     "setting": "The Imperium of Dune: the Landsraad of Great Houses, Emperor Corrino, the Guild, the Bene Gesserit, and the desert planet Arrakis — the only source of Spice. Plots, blood feuds, kanly, and a fine web of obligation. Your House rises or falls by your decisions — epic political sci-fi.",
     "vignette": "A ball at a rival House's residence. Your schemer wants to learn the heir's secret. A Communicate + Understand test: 2d20, each die under the total is a success. You need 2, you roll 1. You spend Momentum from the House's shared pool — another die, another success. The secret is yours. But the GM banks Threat: somewhere in the shadows, you've been read too.",
     "prep": "~30 min",

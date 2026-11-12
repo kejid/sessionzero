@@ -63,6 +63,16 @@ registerSystem("koriko", {
     "tagShort": "Соло-журнал ведьмы",
     "tagline": "«Ты — молодая ведьма. Незнакомый город. Год, который изменит тебя навсегда.»",
     "description": "Koriko — соло-дневниковая игра о взрослении через магию и одиночество. Вдохновлённая «Ведьминой службой доставки» Хаяо Миядзаки, она предлагает провести целый год вместе со своей ведьмой: семь томов, каждый по 1–2 часа, каждый — новая глава её жизни в Корико. Колода таро формирует события и знакомства. Башня из 21 кубика d6 решает, что происходит, когда она рискует. И ведётся дневник — живой, личный, твой.",
+    "pickIf": [
+      "хотите тёплую соло-игру-дневник о юной ведьме",
+      "нравится вести историю длиной в год: семь сессий по часу-два",
+      "хотите тактильную башню из кубиков, которая шатается от каждого риска"
+    ],
+    "skipIf": [
+      "хотите играть с друзьями, а это соло-игра",
+      "не любите писать и предпочитаете бросать кубы и отыгрывать",
+      "нужны опасность, сражения и интрига"
+    ],
     "setting": "Город Корико — шумный, тёплый, совершенно чужой. Твоя ведьма приехала сюда одна, без наставника, без карты. Булочные с привидениями, рынки, где продают зелья рядом с оливковым маслом, крыши с видом на море, вечеринки, на которые тебя позвали и которые тебя пугают. Год пройдёт — что останется?",
     "vignette": "Том второй. Ты тянешь карту — Пятёрка Кубков. Промпт: «Ты потеряла что-то важное. Что именно?» Риск: можно написать тяжелее и добавить кубик к башне. Ты добавляешь. Башня шатается — шесть кубиков высотой. Ты пишешь: метла сломана, а её починил незнакомец с тихими руками. Теперь он — конфидант. Его зовут Том. Башня устояла.",
     "prep": "~15 мин",
@@ -112,6 +122,16 @@ registerSystem("koriko", {
     "tagShort": "solo witch RPG",
     "tagline": "\"You are a young witch. An unfamiliar city. A year that will change you forever.\"",
     "description": "Koriko is a solo journaling game about coming of age through magic and solitude. Inspired by Kiki's Delivery Service — both Miyazaki's film and Eiko Kadono's novel — it asks you to spend a whole year alongside your witch: seven volumes, each one or two hours, each a new chapter of her life in the city of Koriko. A tarot deck shapes her encounters and crises. A tower of 21 d6 dice decides what happens when she dares to take a risk. And through it all, you keep a journal — alive, personal, and entirely your own.",
+    "pickIf": [
+      "you want a gentle solo journaling game about a young witch",
+      "you'd enjoy a year-long story told over seven sessions of one to two hours",
+      "you like a tactile dice tower that wobbles with every risk"
+    ],
+    "skipIf": [
+      "you want to play with friends, since it's a solo game",
+      "you dislike writing and prefer rolling and acting",
+      "you want danger, combat or a plot to crack"
+    ],
     "setting": "Koriko is a city that hums and buzzes and doesn't care that you just arrived. Your witch came alone — no mentor, no map, no plan. There are bakeries haunted by friendly ghosts, markets selling love potions next to olive oil, rooftops with sea views, parties you've been invited to and parties that terrify you. By the end of the year, what will still be standing?",
     "vignette": "Volume Two. You draw a card — Five of Cups. Prompt: 'You have lost something that mattered. What was it?' The risky option lets you write something harder and add a die to the tower. You add it. The tower wobbles — six dice tall now. You write: the broom snapped, and a quiet-handed stranger fixed it. He becomes a confidante. His name is Tom. The tower holds.",
     "prep": "~15 min",

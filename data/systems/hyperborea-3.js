@@ -73,6 +73,16 @@ registerSystem("hyperborea-3", {
     "tagShort": "Sword-and-sorcery с налётом science-fantasy",
     "tagline": "«Под Северным Ветром, под алым солнцем — приключения стали и чародейства».",
     "description": "Hyperborea 3e — отполированная версия AD&D 1e, заточенная под sword-and-sorcery и weird science-fantasy. Джеффри Таланян объединил гайгаксовский барок с интуитивными улучшениями: единый спасбросок, упрощённые матрицы атак, d6-система задач. Полная обратная совместимость с классическими модулями.",
+    "pickIf": [
+      "хотите классы и подклассы в духе AD&D в мире меча и магии",
+      "группа любит Говарда, Лавкрафта и Кларка Эштона Смита",
+      "хотите водить классические олдскульные модули почти без переделки"
+    ],
+    "skipIf": [
+      "нужна минималистичная лёгкая OSR-система",
+      "группе ближе светлое благородное фэнтези",
+      "игрокам не нравятся таблицы опыта и требования к классам"
+    ],
     "setting": "Гиперборея — плоский гексагональный мир за Северным Ветром под багровым умирающим солнцем. Аметистовые города, лучемёты (radium pistols), каннибалы-пикты, спящие древние ужасы. Вдохновлено Ховардом, Лавкрафтом и Кларком Эштоном Смитом. Мир, где выживание считается успехом.",
     "vignette": "Группа выходит из червивого леса к Хромиуму — Городу-Государству, распростёртому под алым закатом. В порту одноглазая ведьма предлагает карту к Гробнице Свёрнутой Змеи за тень сильнейшего воина. Прежде чем ответить — вой из катакомб под Бронзовой Улицей. Древний проснулся.",
     "prep": "~20 мин",
@@ -123,6 +133,16 @@ registerSystem("hyperborea-3", {
     "tagShort": "Sword-and-sorcery with weird science-fantasy",
     "tagline": "\"Beyond the North Wind, under a dying crimson sun — adventure by steel and sorcery.\"",
     "description": "Hyperborea 3e is a streamlined restatement of Gygaxian AD&D tailored for sword-and-sorcery and weird science-fantasy. Jeffrey Talanian combines the baroque class-and-level framework of 1E AD&D with intuitive modernizations — unified saving throw, simplified combat matrices, and a d6 task resolution — while preserving full backwards compatibility with classic modules.",
+    "pickIf": [
+      "you want AD&D-style classes and subclasses in a sword-and-sorcery world",
+      "your group loves Howard, Lovecraft and Clark Ashton Smith",
+      "you want to run classic old-school modules with little conversion"
+    ],
+    "skipIf": [
+      "you want a minimal, rules-light OSR game",
+      "your group wants bright, noble high fantasy",
+      "players dislike XP tables and class requirements"
+    ],
     "setting": "Hyperborea is a flat hexagonal realm hemmed in by the mystical North Wind, lit by a bloated dying red sun. Inspired by Howard, Lovecraft, and Clark Ashton Smith — ancient amethyst cities, radium pistols, cannibal Picts, cyclopean ruins, and slumbering alien horrors. A world where survival itself is considered thriving.",
     "vignette": "The party emerges from the worm-riddled forest to find the City-State of Khromarium sprawling beneath a scarlet dusk. On the harbourfront, a one-eyed witch offers a map to the Tomb of the Coiled Serpent for the price of their strongest warrior's shadow. Before they can answer — a howl from the catacombs beneath the Street of Bronze. Something ancient has awakened.",
     "prep": "~20 min",

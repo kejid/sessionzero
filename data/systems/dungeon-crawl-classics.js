@@ -79,6 +79,15 @@ registerSystem("dungeon-crawl-classics", {
     "tagShort": "Вайрд-фэнтези в духе Appendix N",
     "tagline": "«Слава и золото, добытые чародейством и мечом».",
     "description": "DCC RPG — стремительная, дикая OSR-игра по мотивам Appendix N: списка книг, вдохновлявших Гайгакса. Механика на d20 с уникальной dice chain (d3–d30). Магия опасна и непредсказуема, воины рубятся с кинематографичными Deed of Arms, а нулевой уровень — это крестьяне с вилами. Система не балансирует — она уничтожает баланс и радуется этому.",
+    "pickIf": [
+      "хотите смертельную «мясорубку» нулевого уровня, где выживает лишь часть крестьян",
+      "игрокам по душе дикая непредсказуемая магия и сжигание характеристик ради заклинаний",
+      "нравится странное фэнтези Appendix N и необычные кубики вроде d7 и d30"
+    ],
+    "skipIf": [
+      "нужны сбалансированные встречи и заранее спланированные персонажи",
+      "группа не любит постоянно сверяться с таблицами и полагаться на случай"
+    ],
     "setting": "Мир DCC — вселенная Appendix N: Ховард, Лейбер, Вэнс, Муркок, Лавкрафт. Древние руины, вырождающиеся цивилизации, космический ужас на границах реальности. Это не высокое фэнтези, это тёмное, странное, кислотное приключение, где магия всегда имеет цену.",
     "vignette": "Четыре крестьянина — пасечник, могильщик, канавокопатель и говночист — спускаются в циклопейский склеп. Говночист наступает на плиту — провал, ловушка уносит его во тьму. Пасечник зажигает факел и видит светящиеся руны. Могильщик проверяет Удачу — крит, он замечает скрытую плиту за секунду до того, как потолок рушится. Двое выживших идут дальше. На рассвете один из них станет воином — если доживёт.",
     "prep": "~20 мин",
@@ -132,6 +141,15 @@ registerSystem("dungeon-crawl-classics", {
     "tagShort": "Weird fantasy old-school RPG",
     "tagline": "\"Glory & Gold Won by Sorcery & Sword.\"",
     "description": "DCC RPG is a fast-paced, open-feeling rules set for Appendix N-inspired weird fantasy. Uses a d20 with a unique dice chain (d3–d30). Magic is dangerous and unpredictable, warriors perform cinematic Mighty Deeds of Arms, and every character starts at level 0 as a random peasant. The game doesn't balance encounters — it nukes balance from orbit and wages war on the survivors.",
+    "pickIf": [
+      "you want a lethal level-0 funnel where only a fraction of the peasants survive",
+      "your players love wild, unpredictable magic and burning stats to fuel spells",
+      "you like weird Appendix N fantasy and odd dice like the d7 and d30"
+    ],
+    "skipIf": [
+      "you want balanced encounters and characters planned out in advance",
+      "your group dislikes constant table lookups and heavy randomness"
+    ],
     "setting": "The world of DCC is Appendix N itself: Howard, Leiber, Vance, Moorcock, Lovecraft. Ancient ruins, degenerate civilizations, cyclopean architecture, and cosmic horrors at the edges of reality. Not high fantasy — dark, weird, acid-flavored adventure where magic always costs something.",
     "vignette": "Four level-0 peasants — a beekeeper, a grave digger, a ditch digger, and a gongfarmer — descend into a cyclopean ruin. The gongfarmer steps on a pressure plate — failure, the trap swallows him into darkness. The beekeeper's torch reveals glowing glyphs. The grave digger rolls a natural 20 on Luck — spots the hidden plate a second before the ceiling collapses. Two survivors press deeper. By dawn, one might earn a class — if they live.",
     "prep": "~20 min",

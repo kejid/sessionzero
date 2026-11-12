@@ -84,6 +84,16 @@ registerSystem("land-of-eem", {
     "tagShort": "Уютное иллюстрированное фэнтези",
     "tagline": "«Властелин колец встречает Маппет-шоу» — мультяшное фэнтези с отвагой вместо хитов.",
     "description": "Лёгкая ламповая RPG от Бена Косты и Джеймса Паркса (авторы графической новеллы «Rickety Stitch and the Gelatinous Goo»). Бросай 1d12 + навык, читай таблицу из пяти ступеней — от провала до критического успеха, всегда с «да, но» или «нет, и». Боя в привычном смысле нет: вместо HP — Отвага против Ужаса, бои выигрываются, когда враг сдаётся или сбегает. Идеально для смешанных компаний: дети, новички и ветераны за одним столом.",
+    "pickIf": [
+      "за столом и дети, и новички, и ветераны",
+      "хотите светлое фэнтези, где бой кончается, когда сломлен боевой дух",
+      "мастеру нужна готовая песочница-гекскраул с сотнями локаций"
+    ],
+    "skipIf": [
+      "хотите мрачное смертельное фэнтези",
+      "группе нравится тактический бой с хитами и убийствами",
+      "нужен серьёзный эпический тон от начала до конца"
+    ],
     "setting": "Мир Eem — пёстрая фэнтези-страна, где живут 16 видов народцев: гелевый куб, скелет-музыкант, черепахоподобный квортл, шрим, грибнецы, гоблины, гномы, мохнатые лоялчамы. Стартовый сеттинг — Mucklands: разорённое болотистое королевство с гексовой картой (1 гекс = 6 миль), сотнями локаций и квестов. Тон — детская книжка с картинками, в которой иногда становится по-настоящему страшно. Смесь высокого фэнтези Толкина, мультяшности «Времени приключений» и пыли постапокалипсиса.",
     "vignette": "Скелет-бард, гоблин-проныра и квортл-рыцарь стоят перед мостом через болотную трясину. Из-под моста вылезает тролль и рычит. Бард не достаёт меч — он бросает Performance: 1d12 + 3. Выпадает 8 — это «Hit with Counterattack»: песня очаровывает тролля, но тот всё равно успевает рявкнуть. Тролль наносит 1 Ужас, бард теряет каплю Отваги. Следующий куплет — рыцарь подхватывает припев на Knowhow. 11 — почти крит. Тролль смущён, садится на камень и просит автограф.",
     "prep": "~10 мин",
@@ -143,6 +153,16 @@ registerSystem("land-of-eem", {
     "tagShort": "Cozy illustrated fantasy RPG",
     "tagline": "\"Lord of the Rings meets the Muppets\" — comic-book fantasy with Courage instead of hit points.",
     "description": "A lighthearted RPG by Ben Costa and James Parks (creators of the graphic novel 'Rickety Stitch and the Gelatinous Goo'). Roll 1d12 + skill, read a five-tier table — from critical fail to critical hit, always with a 'yes, but' or 'no, and.' Combat ditches HP for Courage vs Dread: fights end when one side breaks morale, not when bodies hit the floor. Built for mixed tables — kids, first-timers, and veterans on the same map.",
+    "pickIf": [
+      "you have kids, first-timers and veterans at the same table",
+      "you want lighthearted fantasy where fights end when morale breaks",
+      "the GM wants a ready hexcrawl sandbox with hundreds of locations"
+    ],
+    "skipIf": [
+      "you want grim, lethal fantasy",
+      "your group enjoys tactical combat with hit points and kills",
+      "you want a serious, epic tone from start to finish"
+    ],
     "setting": "Eem is a riotous fantasy world home to 16 playable folk: a gelatinous goo, a skeleton bard, a turtle-like quortle, shryms, mushrums, goblins, gnomes, the loyal chums. The default setting is The Mucklands: a ravaged swamp-kingdom on a hex map (1 hex = 6 miles) packed with hundreds of locations and quests. Tone is illustrated children's book that occasionally turns genuinely creepy — Tolkien high fantasy + Adventure Time whimsy + a dusting of Mad Max grime.",
     "vignette": "A skeleton bard, a goblin rascal, and a quortle knight-errant stand at a bridge over a muck pit. A troll lumbers out and roars. The bard doesn't draw steel — they roll Performance: 1d12 + 3. An 8 lands as 'Hit with Counterattack': the song charms the troll but it gets a parting roar in. 1 Dread to the bard's Courage. The knight picks up the chorus on Knowhow — 11, just shy of a crit. The troll, embarrassed, sits down on a rock and asks for an autograph.",
     "prep": "~10 min",

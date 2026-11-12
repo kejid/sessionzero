@@ -202,6 +202,18 @@ function renderSystemPage(id, sys) {
         `<div class="reddit-quote">${q.text}<span class="reddit-user">\u2014 ${q.author}</span></div>`
     ).join('');
 
+    // "Pick it if / Skip it if": optional hand-written lists in the ru/en blocks.
+    const pickIf = localField(sys, 'pickIf', []);
+    const skipIf = localField(sys, 'skipIf', []);
+    const fitList = (cls, icon, key, items) => items.length ? `<div class="fit-col ${cls}">
+            <div class="fit-head"><i data-lucide="${icon}"></i> <span data-i18n="${key}">${t(key)}</span></div>
+            <ul>${items.map(x => `<li>${x}</li>`).join('')}</ul>
+        </div>` : '';
+    const fitHTML = (pickIf.length || skipIf.length)
+        ? `<div class="section-title" data-i18n="section_fit">${t('section_fit')}</div>
+    <div class="fit-block">${fitList('fit-pick', 'check', 'fit_pick', pickIf)}${fitList('fit-skip', 'x', 'fit_skip', skipIf)}</div>`
+        : '';
+
     const vignette = localField(sys, 'vignette');
     const vignetteHTML = vignette
         ? `<div class="section-title" data-i18n="section_vignette">${t('section_vignette')}</div>
@@ -231,6 +243,7 @@ function renderSystemPage(id, sys) {
     </div>
     <div class="section-title" data-i18n="section_system">${t('section_system')}</div>
     <div class="setting-block">${miniMd(localField(sys, 'description'))}</div>
+    ${fitHTML}
     <div class="section-title" data-i18n="section_setting">${t('section_setting')}</div>
     <div class="setting-block">${miniMd(localField(sys, 'setting'))}</div>
     ${vignetteHTML}

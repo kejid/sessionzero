@@ -65,6 +65,16 @@ registerSystem("knave", {
     "tagShort": "Ультралёгкий бесклассовый OSR-каркас",
     "tagline": "«Твой инвентарь — это твой билд».",
     "description": "Knave — предельно лёгкая OSR-игра Бена Милтона (Questing Beast). Персонаж без класса: его определяют характеристики и предметы в слотах инвентаря. 80 страниц — почти сплошь генераторы (NPC, монстры, заклинания, подземелья, гексы), превращающие подготовку в бросок пары таблиц. Идеальный хакаемый каркас под свою кампанию.",
+    "pickIf": [
+      "хотите бесклассовую OSR, где снаряжение и есть ваш класс",
+      "мастеру нужны таблицы для NPC, подземелий и гексов прямо по ходу игры",
+      "собираетесь хакать систему или смешивать её с другими олдскульными играми"
+    ],
+    "skipIf": [
+      "нужны классы и готовый сеттинг из коробки",
+      "группа не любит считать слоты инвентаря",
+      "хотите правило на каждый случай, а не решения мастера"
+    ],
     "setting": "Система-агностик классического фэнтези. Knave ничего не навязывает: ни сеттинга, ни классов, ни длинных списков умений. Дух — олдскульный данжен-кроул и гексокроул, где смекалка игрока важнее циферок. Пустой холст с мощнейшим набором таблиц, чтобы заполнить его на лету.",
     "vignette": "Взломщик тянется к рычагу в стене. Ведущий назначает сложность 14. Бросок d20 + бонус Ловкости, нужно 14 или выше. Выпало 16 — рычаг поддаётся, решётка ползёт вверх. Но слоты инвентаря почти полны: факел, верёвка, добытый идол... что-то придётся бросить, чтобы освободить руки. В Knave вес и место решают не меньше боя.",
     "prep": "~15 мин",
@@ -107,6 +117,16 @@ registerSystem("knave", {
     "tagShort": "An ultra-light, classless OSR toolkit",
     "tagline": "\"Your inventory is your build.\"",
     "description": "Knave is Ben Milton's (Questing Beast) ultra-light OSR game. Characters are classless — defined by their attributes and the items in their inventory slots. Its 80 pages are mostly generators (NPCs, monsters, spells, dungeons, hexes) that turn prep into rolling a couple of tables. The perfect hackable frame for your own campaign.",
+    "pickIf": [
+      "you want a classless OSR game where your gear is your class",
+      "the GM wants tables that generate NPCs, dungeons and hexes on the fly",
+      "you plan to hack it or mix it into other old-school games"
+    ],
+    "skipIf": [
+      "you want character classes and a defined setting out of the box",
+      "your group dislikes counting inventory slots",
+      "you want a rule for every situation instead of GM rulings"
+    ],
     "setting": "Setting-agnostic classic fantasy. Knave imposes nothing — no setting, no classes, no long skill lists. The spirit is old-school dungeon- and hex-crawling where player cunning beats stat blocks. A blank canvas with a powerhouse set of tables to fill it on the fly.",
     "vignette": "The burglar reaches for a lever in the wall. The GM sets the difficulty at 14. Roll d20 + Dexterity bonus, need 14 or higher. A 16 — the lever gives, the portcullis grinds upward. But the inventory slots are nearly full: torch, rope, the looted idol... something has to be dropped to free your hands. In Knave, weight and space matter as much as combat.",
     "prep": "~15 min",

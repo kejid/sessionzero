@@ -89,6 +89,16 @@ registerSystem("coriolis-the-great-dark", {
     "tagShort": "Экспедиции в руины мёртвой цивилизации",
     "tagline": "«Звёздные порталы мертвы. Исследуй или погибни».",
     "description": "Самостоятельное продолжение Coriolis: The Third Horizon, но совсем другая игра. Вместо торговли и интриг между звёздами — экспедиции в руины исчезнувших Строителей, вдохновлённые путешествиями XIX века, глубоководными погружениями и приключенческой археологией. Обновлённый Year Zero Engine, три шкалы урона — тело, дух и сердце — и механическая птица, без которой в руины лучше не соваться.",
+    "pickIf": [
+      "хотите экспедиции в руины чужой цивилизации, где с каждым шагом тают припасы",
+      "игрокам интереснее открывать мир в игре, чем читать лор заранее",
+      "играете в одиночку или маленькой командой — игра рассчитана на 1–5 игроков"
+    ],
+    "skipIf": [
+      "вам нужны торговля, интриги фракций и полёты между звёздами из первой Coriolis",
+      "группа не любит считать припасы, износ снаряжения и три шкалы урона",
+      "хочется бодрого экшена, а не медленных осторожных спусков в руины"
+    ],
     "setting": "После долгого перелёта флот беженцев-Диаспоры осел в одинокой системе Джумуа и превратил свои корабли в Город-Корабль на астероиде. Гильдии Механиков, Садовников и Навигаторов держат колонию на плаву, а Исследователи отправляются на немногих Великих кораблях по Стремнине к чужим звёздам. В руинах Строителей ждут артефакты — и Скверна, ледяная чума, что меняет тела и разум. Лор раскрывается в игре, а не в предварительном чтении.",
     "vignette": "Глубина — седьмая отметка. Разведчик отпустил птицу, и та вернулась с недобрыми вестями: за древней дверью Скверна уровня 2. Вы вскрываете замок: Ловкость 3 плюс талант *Ruin Delver* 1 — 4 базовых кубика, и ещё 1 кубик снаряжения от инструментов. Выпало 2, 3, 4, 5 и 4 — ни одной шестёрки. Вы форсируете бросок: перебрасываете всё, что не 6 и не 1. Шестёрка — дверь поддаётся! Но единица на базовом кубике стоит вам 1 Надежду, а единица на кубике снаряжения снижает бонус инструментов на 1. За дверью Скверна бьёт по Сердцу на 2 пункта; защита костюма 2 — два кубика снаряжения, на них 6 и 3. Одна шестёрка гасит один пункт, и вы теряете лишь 1 Сердце.",
     "prep": "~45 мин",
@@ -152,6 +162,16 @@ registerSystem("coriolis-the-great-dark", {
     "tagShort": "Expeditions into the ruins of a dead civilization",
     "tagline": "\"The star portals are dead. Explore or perish.\"",
     "description": "A standalone sequel to Coriolis: The Third Horizon, but a very different game. Instead of trade and intrigue between the stars, you run expeditions into the ruins of the vanished Builders, inspired by 19th-century expeditions, deep-sea diving and pulp archaeology. A reworked Year Zero Engine, three damage tracks for body, mind and heart, and a mechanical bird you really don't want to delve without.",
+    "pickIf": [
+      "you want expeditions into alien ruins, delve by delve, as supplies run low",
+      "your players would rather discover the setting in play than read lore first",
+      "you might play solo or with a tiny crew — it supports 1–5 players"
+    ],
+    "skipIf": [
+      "you want the trade, faction politics and star-hopping of the original Coriolis",
+      "your group dislikes tracking supply, gear wear and three separate damage tracks",
+      "you want fast action rather than slow, careful delves into ruins"
+    ],
     "setting": "After a long voyage, the refugee fleet of the Diaspora settled in the lone Jumuah system and turned its ships into Ship City on an asteroid. The Machinists, Gardeners and Navigators guilds keep the colony alive, while Explorers ride the few Greatships down the Slipstream to other stars. The Builders' ruins hold artifacts — and the Blight, an icy plague that twists bodies and minds. The lore is meant to be discovered in play, not read up on beforehand.",
     "vignette": "Depth marker seven. The Scout sent the bird ahead, and it came back with bad news: Blight Level 2 behind the ancient door. You work the lock: Agility 3 plus the *Ruin Delver* talent at 1 gives 4 Base Dice, plus 1 Gear Die from your tools. You roll 2, 3, 4, 5 and a 4 — no sixes. You push: reroll everything that isn't a 6 or a 1. A six — the door gives way! But a 1 on a Base Die costs you 1 Hope, and a 1 on the Gear Die knocks your tools' Gear Bonus down by 1. Beyond the door the Blight hits your Heart for 2; your suit's Blight Protection is 2, so you roll two Gear Dice and get 6 and 3. Each six cancels a point, and you lose only 1 Heart.",
     "prep": "~45 min",

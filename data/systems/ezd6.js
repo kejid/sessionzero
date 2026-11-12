@@ -63,6 +63,15 @@ registerSystem("ezd6", {
     "tagShort": "Фэнтезийный хаос на одном d6",
     "tagline": "«Брось один кубик — и врывайся в бой».",
     "description": "EZD6 — лёгкая фэнтезийная игра DM Scotty (Скотти Макфарланда) от Runehammer Games. Всё решает один шестигранник против числа, которое назвал ведущий. Никаких очков жизни, навыков и уровней: у героя есть пути, засечки вместо хитов и карма, которая копится с каждым провалом. Объясняется за пять минут, играется весь вечер.",
+    "pickIf": [
+      "хотите шумное фэнтезийное безумие с правилами на пять минут объяснений",
+      "за столом новички, и учить почти нечему",
+      "нравится, что проваленные броски копят карму на потом"
+    ],
+    "skipIf": [
+      "нужны тактическая глубина и подробные сборки",
+      "мастер не любит на ходу решать, что делает импровизированное заклинание"
+    ],
     "setting": "Классическое приключенческое фэнтези без привязки к миру: подземелья, гоблины, проклятые башни и драконы. Игроки — шумная ватага героев, ведущий зовётся Заводилой (Rabble Rouser). Отдельные книги-наборы переносят те же правила в постапокалипсис (Wasted World) и хоррор (Dreadful Doomscapes).",
     "vignette": "Заводила объявляет: перепрыгнуть пропасть — сложно, нужно 4 или выше. *Rascal* бросает d6 — выпало 3. Провал? Нет: у него ещё есть карма, он тратит одно очко, и 3 превращается в 4. Перелетел! На другой стороне гоблин; обычный враг, бить на 3+. Выпало 5 — одна засечка, и хилый гоблин падает. А вот маг бросает два кубика силы на заклинание, и на одном из них единица — магия бьёт в ответ. Карма тут не поможет: на чары её тратить нельзя.",
     "prep": "~15 мин",
@@ -111,6 +120,15 @@ registerSystem("ezd6", {
     "tagShort": "Fast fantasy mayhem on a single d6",
     "tagline": "\"Roll one die and charge in.\"",
     "description": "EZD6 is DM Scotty's (Scotty McFarland) light fantasy game from Runehammer Games. One six-sided die against a number the GM calls decides everything. No hit points, skills or levels: heroes have paths, strikes instead of HP, and karma that piles up with every failure. Explained in five minutes, played all night.",
+    "pickIf": [
+      "you want rowdy fantasy mayhem with rules explained in five minutes",
+      "your table has newcomers and you want almost nothing to teach",
+      "you like failed rolls paying back as karma for later"
+    ],
+    "skipIf": [
+      "you want tactical depth and detailed character builds",
+      "your GM dislikes ruling improvised spell effects on the fly"
+    ],
     "setting": "Setting-free classic adventure fantasy: dungeons, goblins, cursed towers and dragons. The players are a rowdy band of heroes and the GM is the Rabble Rouser. Separate playset books carry the same rules into the post-apocalypse (Wasted World) and horror (Dreadful Doomscapes).",
     "vignette": "The Rabble Rouser calls it: leaping the chasm is hard, you need a 4 or better. The *Rascal* rolls a d6 — a 3. A miss? Not yet: he still has karma, spends one point, and the 3 becomes a 4. He's across! A goblin waits on the far side; a normal enemy, hit on 3+. A 5 — one strike, and the scrawny goblin drops. Then the conjurer pours two power dice into a spell, one of them shows a 1, and the magic bites back. Karma can't help here: it can't be spent on spells.",
     "prep": "~15 min",

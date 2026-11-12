@@ -84,6 +84,15 @@ registerSystem("fabula-ultima", {
     "tagShort": "Настольный JRPG в духе Final Fantasy",
     "tagline": "«Final Fantasy, Chrono Trigger и Suikoden — за вашим столом, с кубиками вместо геймпада».",
     "description": "Итальянская TTJRPG (Tabletop JRPG) от Эмануэле Галлетто (2022, EN-релиз — Need Games). Проверки — два атрибутных кубика (d6–d12), классы вроде Guardian, Mage, Rogue, Loremaster, Tinkerer, Spiritist собираются как мульти-классовая JRPG-партия. Fabula Points позволяют игрокам переписывать сцены, Bonds между героями — буквальная механическая сила. Лауреат ENnie 2023 за Best Game и Product of the Year.",
+    "pickIf": [
+      "группа выросла на JRPG вроде Final Fantasy и хочет того же за столом",
+      "хотите строить мир вместе на нулевой сессии",
+      "нравятся пошаговые бои с MP, статусами и стихийными слабостями"
+    ],
+    "skipIf": [
+      "мастер хочет принести готовый мир и держать его в своих руках",
+      "игроки не любят анимешную драму и громкие эмоциональные сцены"
+    ],
     "setting": "Мира до игры не существует. На session zero вся партия вместе рисует карту, решает соотношение магии и технологии, придумывает королевства, фракции, угрозы и легенды. Получается коллаборативный JRPG-мир — где-то между светлым Suikoden, горько-сладким Chrono Trigger и магитех-дилеммой Final Fantasy VII. А потом вы играете героев, которые этот мир спасают.",
     "vignette": "Пошаговый бой, как в классических JRPG. Ваш Spiritist бросает d8 (Insight) + d10 (Willpower) — двойка не прошла. Тратите Fabula Point, ссылаетесь на Bond с Guardian-подругой («я обещала её защитить») — перебрасываете, попадание, эмоциональный финишер. На следующей сцене Tinkerer-инженер заявляет: «А давайте железная дорога между королевствами уже есть». Мастер кивает, тратится ещё один Fabula Point — и мир становится чуть-чуть больше. Природа против магитеха, найденная семья, аниме-эмоции на максимум.",
     "prep": "~30 мин",
@@ -143,6 +152,15 @@ registerSystem("fabula-ultima", {
     "tagShort": "Tabletop JRPG in the spirit of Final Fantasy",
     "tagline": "\"Final Fantasy, Chrono Trigger, and Suikoden — at your table, with dice instead of a controller.\"",
     "description": "An Italian TTJRPG (Tabletop JRPG) by Emanuele Galletto (2022, EN release by Need Games). Checks use two attribute dice (d6–d12); classes like Guardian, Mage, Rogue, Loremaster, Tinkerer, Spiritist multiclass into a JRPG party. Fabula Points let players rewrite scenes, Bonds between heroes are literal mechanical power. Winner of 2023 ENnies for Best Game and Product of the Year.",
+    "pickIf": [
+      "your group grew up on Final Fantasy-style JRPGs and wants that at the table",
+      "you want to build the world together at session zero",
+      "you like turn-based fights with MP, statuses and elemental weaknesses"
+    ],
+    "skipIf": [
+      "your GM wants to bring a finished world and keep control of it",
+      "your players dislike anime-style melodrama and big emotional moments"
+    ],
     "setting": "The world doesn't exist before play. At session zero the whole table draws the map together, decides the balance of magic vs. technology, invents kingdoms, factions, threats, and legends. The result is a collaborative JRPG world — somewhere between bright Suikoden, bittersweet Chrono Trigger, and the magitech dilemma of Final Fantasy VII. Then you play the heroes who save it.",
     "vignette": "Turn-based combat, like classic JRPGs. Your Spiritist rolls d8 (Insight) + d10 (Willpower) — a 2, miss. You spend a Fabula Point, invoke a Bond with the Guardian (\"I swore to protect her\"), reroll, hit, deliver an emotional finisher. Next scene, the Tinkerer declares: \"Actually, there's already a railway between the kingdoms.\" The GM nods, another Fabula Point burns — and the world grows a little. Nature vs. magitech, found family, anime emotion at maximum.",
     "prep": "~30 min",

@@ -49,6 +49,16 @@ registerSystem("hunter-the-reckoning", {
     "tagShort": "Обычные люди охотятся на чудовищ Мира Тьмы",
     "tagline": "«Ты видел, что прячется в темноте. Забыть уже не получится».",
     "description": "Hunter: The Reckoning — хоррор о людях, которые узнали правду о вампирах, оборотнях и призраках и решили действовать. Пятая редакция (H5, 2022) от Renegade Game Studios стоит на той же системе, что и Vampire V5: пул d10, успех на 6+, пара десяток — крит. Сверхспособностей нет: только ячейка друзей, самодельный арсенал и Отчаяние, которое растёт, когда охота идёт плохо. Чем ближе вы к цели, тем выше Опасность, что чудовища заметят вас первыми.",
+    "pickIf": [
+      "хотите играть обычными людьми, охотящимися на монстров без сверхсил",
+      "группе нравятся слежка, расследование и подготовка удара",
+      "вы знаете Vampire V5 и хотите взглянуть на охоту с другой стороны"
+    ],
+    "skipIf": [
+      "хотите играть самими монстрами",
+      "группе нужен супергеройский экшен со способностями",
+      "мастеру нужна игра почти без подготовки к каждой охоте"
+    ],
     "setting": "Современный Мир Тьмы: наш мир, где вампиры правят из пентхаусов, а оборотни охраняют леса. Охотники — не избранные, а обычные люди с травмой и решимостью: медсестра, байкер, священник, блогер-конспиролог. Они собираются в ячейки, следят за целью, добывают оружие. Их подход определяет Кредо — от силовиков до сыщиков, — а Мотив объясняет, зачем им вообще эта война. Где-то рядом действуют и большие игроки — Вторая Инквизиция, Общество Леопольда, — у которых свои взгляды на охоту.",
     "vignette": "Подвал старой прачечной. Вы ищете гнездо по следам крови на полу — Смекалка 3 + Расследование 3, шесть кубов. Отчаяние ячейки — 2, и вы рискуете: добавляете два чёрных куба Отчаяния. Обычные кубы: 7, 2, 6, 9, 3, 10 — четыре успеха. Кубы Отчаяния: 1 и 6 — ещё один. Пять успехов против Сложности 4, вы нашли люк. Но на кубе Отчаяния выпала единица. Вы выбираете Перегиб: результат остаётся, но Опасность растёт. Где-то внизу кто-то просыпается.",
     "prep": "~45 мин",
@@ -79,6 +89,16 @@ registerSystem("hunter-the-reckoning", {
     "tagShort": "Ordinary people hunting the monsters of the World of Darkness",
     "tagline": "\"You saw what hides in the dark. There's no forgetting it now.\"",
     "description": "Hunter: The Reckoning is horror about people who learned the truth about vampires, werewolves and ghosts and decided to do something about it. The fifth edition (H5, 2022) from Renegade Game Studios runs on the same engine as Vampire V5: a d10 pool, 6+ succeeds, a pair of 10s is a critical. No superpowers here — just your cell, a jury-rigged arsenal and Desperation that climbs when the hunt goes badly. The closer you get, the higher the Danger that the monsters notice you first.",
+    "pickIf": [
+      "you want ordinary people hunting monsters with no superpowers",
+      "your group enjoys stakeouts, investigation and planning the strike",
+      "you know Vampire V5 and want the other side of the hunt"
+    ],
+    "skipIf": [
+      "you want to play the monsters themselves",
+      "your group wants superhero-style action with powers",
+      "the GM wants near-zero prep before each hunt"
+    ],
     "setting": "The modern World of Darkness: our world, where vampires rule from penthouses and werewolves guard the woods. Hunters are not chosen ones but ordinary people with trauma and resolve — a nurse, a biker, a priest, a conspiracy vlogger. They gather in cells, stake out their target and scrounge for weapons. A Creed shapes how they hunt, from enforcers to investigators, and a Drive explains why they fight at all. Bigger players such as the Second Inquisition and the Society of Leopold work the same streets with their own ideas about the hunt.",
     "vignette": "The basement of an old laundromat. You track the nest by the blood on the floor — Wits 3 + Investigation 3, six dice. The cell's Desperation is 2, so you gamble and add two black Desperation dice. Regular dice: 7, 2, 6, 9, 3, 10 — four successes. Desperation dice: 1 and 6 — one more. Five successes against Difficulty 4: you find the hatch. But a Desperation die came up 1. You choose to Overreach: the result stands, and Danger rises. Somewhere below, something wakes up.",
     "prep": "~45 min",

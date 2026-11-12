@@ -48,6 +48,15 @@ registerSystem("deadlands", {
     "tagShort": "Вестерн-хоррор на движке Savage Worlds",
     "tagline": "«Собери отряд — на Диком Западе стало жутко».",
     "description": "Deadlands: The Weird West — вестерн-хоррор от Pinnacle на движке Savage Worlds Adventure Edition. В альтернативном 1884 году отряд стрелков, хакстеров-безумных учёных и благословлённых проповедников встречает монстров, рождённых из страха. Персонажи бросают трейт-кубики от d4 до d12 вместе со взрывным Wild Die, тянут игральные карты для инициативы и тратят Бенни — классические Фишки Судьбы, — чтобы обмануть смерть. Игра впервые вышла в 1996 году и вернулась переписанной и упрощённой ради быстрого кинематографичного экшена.",
+    "pickIf": [
+      "хотите хоррор-вестерн со стрелками, хакстерами и ожившими мертвецами",
+      "нравится бодрый пальповый экшен со взрывающимися кубиками и инициативой по картам",
+      "игрокам по душе тратить фишки, чтобы в последний миг обмануть смерть"
+    ],
+    "skipIf": [
+      "нужен медленный приземлённый хоррор-расследование, а не кинематографичный экшен",
+      "группа не любит случайность, при которой d4 может обойти d12"
+    ],
     "setting": "Альтернативный фронтир 1884 года, где событие под названием Расплата подняло мёртвых, сделало магию настоящей и позволило древним Reckoners питаться ужасом. Отряд исследует города-призраки на гост-роке, проклятые железные дороги и пыльные могилы, охотясь на тварей, что прячутся за байками Дикого Запада.",
     "vignette": "Хакстеру нужно скинуть бандита с крыши салуна колдовством. Она тянет валета пик и ходит раньше всех. Стрельба d8 плюс Wild Die d6: на d8 выпадает 8 и взрывается — 8+5 = 13, это Raise. Нежить-стрелок всё ещё на ногах, поэтому она бросает на стол красный Бенни — свою Фишку Судьбы, — чтобы впитать ответный выстрел и перебросить на добивание.",
     "prep": "~30 мин",
@@ -77,6 +86,15 @@ registerSystem("deadlands", {
     "tagShort": "Weird West horror on Savage Worlds",
     "tagline": "\"Gather your posse — the West just got weird.\"",
     "description": "Deadlands: The Weird West is Pinnacle's horror-western built on Savage Worlds Adventure Edition. In an alternate 1884, a posse of gunslingers, mad-science hucksters, and blessed preachers face monsters born of fear. Characters roll trait dice from d4 to d12 alongside an exploding Wild Die, draw playing cards for initiative, and spend Bennies — the classic Fate Chips — to cheat death. First published in 1996, it returns rewritten and streamlined for fast, cinematic Weird West action.",
+    "pickIf": [
+      "you want a horror western with gunslingers, hucksters and the walking dead",
+      "your table likes swingy pulp action with exploding dice and card-draw initiative",
+      "your players enjoy spending chips to cheat death at the last moment"
+    ],
+    "skipIf": [
+      "you want slow, grounded investigative horror rather than cinematic action",
+      "your group dislikes swingy dice where a d4 can beat a d12"
+    ],
     "setting": "An alternate 1884 frontier where an event called the Reckoning raised the dead, turned magic real, and let ancient Reckoners feed on terror. A posse explores ghost-rock boomtowns, haunted rail lines, and dusty graves, hunting the horrors that hide behind the Weird West's tall tales.",
     "vignette": "The huckster needs a bandit off the saloon roof. She draws the Jack of Spades for initiative and acts early. Shooting d8 plus a Wild Die d6: the d8 comes up 8 and explodes to 8+5 = 13, a Raise. The undead gunhand still stands, so she tosses a red Bennie — her Fate Chip — to soak the return fire and reroll for the kill.",
     "prep": "~30 min",

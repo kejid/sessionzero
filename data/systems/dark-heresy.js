@@ -42,6 +42,16 @@ registerSystem("dark-heresy", {
     "tagShort": "Аколиты Инквизиции против ереси",
     "tagline": "«Невинности не бывает. Бывают разные степени вины».",
     "description": "Классическая ролевая игра по Warhammer 40,000: вы — аколиты, расходные агенты Инквизитора, которые выслеживают культы, мутантов и демонов в ульях-городах Империума. Первая редакция вышла в 2008 году (Black Industries, затем Fantasy Flight Games), вторая — у FFG в 2014-м. Движок d100 с бросками под Характеристику, степенями успеха и кровавыми таблицами критов. Линейка больше не издаётся, но PDF до сих пор продаёт Cubicle 7. Это прямой предок Imperium Maledictum: та же процентная основа, но жёстче и сфокусированнее — одна ячейка, одно расследование, одна ересь. В отличие от кубикового Wrath & Glory, здесь вы не герои, а винтики.",
+    "pickIf": [
+      "хотите расследования в Warhammer 40K по процедуре: улики, допросы, потом перестрелка",
+      "игроки готовы быть расходными аколитами, а не героями",
+      "нравится крепкий d100 с локациями попаданий и кровавыми таблицами критов"
+    ],
+    "skipIf": [
+      "хотите играть героями-чемпионами Империума — тогда ближе Wrath & Glory",
+      "группа не любит тяжёлые правила и броски по множеству таблиц",
+      "нужна линейка, которая ещё печатается и пополняется"
+    ],
     "setting": "41-е тысячелетие, гниющий Империум. Первая редакция разворачивается в секторе Каликсис, вторая — в секторе Аскеллон, где сама власть Инквизиции шатается. Ульи-города, где миллиарды живут в грязи, ереси под каждой плитой, псайкеры, от которых трещит реальность, — и Инквизиция, которой позволено всё.",
     "vignette": "Ваш аколит, бывший арбитр с Навыком Стрельбы 38, открывает огонь по убегающему культисту. Обычная атака даёт +10 — цель 48. На d100 выпадает 23: попадание с тремя степенями успеха. Переворачиваете цифры — 32, корпус. На кубе урона лазгана d10 выпадает 10: Праведная Ярость, и Мастер тянется к таблице критов энергетического оружия. Культист падает, но весь жилблок видел перестрелку — скрытность ячейки летит вниз, и те, на кого вы охотитесь, теперь знают, что вы идёте.",
     "prep": "~60 мин",
@@ -69,6 +79,16 @@ registerSystem("dark-heresy", {
     "tagShort": "Inquisitorial acolytes hunting heresy",
     "tagline": "\"There is no such thing as innocence, only degrees of guilt.\"",
     "description": "The classic Warhammer 40,000 RPG: you are acolytes, expendable agents of an Inquisitor, rooting out cults, mutants and daemons in the Imperium's hive cities. First edition arrived in 2008 (Black Industries, then Fantasy Flight Games); FFG's second edition followed in 2014. A d100 roll-under engine with Degrees of Success and gory critical tables. The line is no longer in print, but Cubicle 7 still sells the PDFs. It is the direct ancestor of Imperium Maledictum: the same percentile core, but harsher and more focused — one cell, one investigation, one heresy. Unlike the dice-pool Wrath & Glory, you are not heroes here, you are cogs.",
+    "pickIf": [
+      "you want procedural Warhammer 40K investigations: clues, interrogations, then the firefight",
+      "your players accept being expendable acolytes rather than heroes",
+      "you enjoy crunchy d100 with hit locations and gory critical tables"
+    ],
+    "skipIf": [
+      "you want to play heroic champions of the Imperium — Wrath & Glory fits better",
+      "your group dislikes heavy rules and rolling on many tables",
+      "you need a line still in print with new books coming"
+    ],
     "setting": "The 41st Millennium and its rotting Imperium. First edition is set in the Calixis Sector, second edition in the Askellon Sector, where even the Inquisition's grip is slipping. Hive cities where billions live in filth, heresy under every flagstone, psykers who make reality crack — and an Inquisition that is allowed anything.",
     "vignette": "Your acolyte, an ex-Arbitrator with Ballistic Skill 38, opens fire on a fleeing cultist. A Standard Attack adds +10, so the target is 48. The d100 shows 23: a hit with three Degrees of Success. Reverse the digits — 32, the body. The lasgun's d10 damage die comes up 10: Righteous Fury, and the GM reaches for the energy critical table. The cultist drops, but the whole hab-block saw the firefight — the warband's Subtlety plummets, and the cell you are hunting now knows you are coming.",
     "prep": "~60 min",

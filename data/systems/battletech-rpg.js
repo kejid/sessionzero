@@ -80,6 +80,16 @@ registerSystem("battletech-rpg", {
     "tagShort": "Ролевая игра во вселенной BattleTech",
     "tagline": "«Пристегнись, проверь теплоотвод — и докажи, что твой род достоин этого меха».",
     "description": "Самая новая ролевая игра Catalyst по BattleTech (2020) на нарративной системе Cue. Бросок простой — 2d6 + атрибут + навык против встречного броска, — а поверх него очки сюжета, подсказки для отыгрыша и упрощённый бой мехов с локациями попаданий, перегревом и критами. Героев можно перенести на стол в Total Warfare или Alpha Strike. Для любителей детальной симуляции в продаже остаётся тяжёлая A Time of War, а промежуточную третью RPG Catalyst анонсировала в 2025 году.",
+    "pickIf": [
+      "группа любит BattleTech и хочет сыграть мехвоинов как живых людей",
+      "нужны лёгкие правила, но с зонами попадания, перегревом и критами мехов",
+      "хотите переносить пилотов между ролевкой и сражениями Total Warfare или Alpha Strike"
+    ],
+    "skipIf": [
+      "хотите подробную симуляцию — для этого есть более тяжёлая A Time of War",
+      "никто за столом не знает и не любит Внутреннюю Сферу",
+      "вам не нужны бои гигантских роботов в центре игры"
+    ],
     "setting": "3025 год, на исходе Третьей войны за наследство. Пять Великих Домов делят Внутреннюю Сферу; ComStar держит межзвёздную связь и свои тайны; наёмники вроде Wolf's Dragoons продают мечи тому, кто платит в C-Bill. Можно быть самураем Дома Курита, дуэлянтом на арене Солярис VII, пилотом аэрокосмического истребителя или агентом разведки. Приложение добавляет эпоху вторжения Кланов (3050).",
     "vignette": "Ваш *Phoenix Hawk* выходит из-за хребта, и в прицеле — вражеский *Wolverine*. Стрельба: 2d6 + атрибут + навык Gunnery против встречного броска пилота противника. Вы выкидываете больше — попадание. Бросок по таблице локаций, 2d6: выпало 12 — голова! Но удар в кабину в Destiny нужно «купить» очком сюжета, и вы его тратите. Пилот врага оглушён, а у вас стрелка нагрева ползёт в жёлтую зону: следующий залп из всех стволов может закончиться отключением реактора.",
     "prep": "~30 мин",
@@ -135,6 +145,16 @@ registerSystem("battletech-rpg", {
     "tagShort": "Roleplaying in the BattleTech universe",
     "tagline": "\"Strap in, watch your heat sinks — and prove your bloodline deserves this 'Mech.\"",
     "description": "Catalyst's newest BattleTech roleplaying game (2020), built on the narrative Cue System. The core roll is simple — 2d6 + attribute + skill against an opposed roll — with Plot Points, roleplaying cues and streamlined 'Mech combat with hit locations, heat and criticals layered on top. Characters can jump straight into Total Warfare or Alpha Strike battles. The crunchier A Time of War is still in print for simulation fans, and Catalyst announced a third, in-between RPG in 2025.",
+    "pickIf": [
+      "your group loves BattleTech and wants to play MechWarriors as people",
+      "you want light rules with 'Mech hit locations, heat and criticals kept",
+      "you want to move pilots between roleplaying and Total Warfare or Alpha Strike"
+    ],
+    "skipIf": [
+      "you want detailed simulation; A Time of War is the crunchier option",
+      "nobody at the table knows or cares about the Inner Sphere",
+      "you want a game without giant robot combat at its heart"
+    ],
     "setting": "The year is 3025, the tail end of the Third Succession War. Five Great Houses carve up the Inner Sphere; ComStar runs interstellar communications and keeps its own secrets; mercenaries like Wolf's Dragoons fight for whoever pays in C-Bills. Play a Kurita samurai, an arena duelist on Solaris VII, an aerospace pilot or an intelligence agent. An appendix covers the Clan Invasion era (3050).",
     "vignette": "Your *Phoenix Hawk* crests the ridge with a *Wolverine* in its sights. Shooting is 2d6 + attribute + Gunnery against the enemy pilot's opposed roll. You beat it — a hit. Roll 2d6 for location: 12, the head! In Destiny a cockpit hit has to be paid for with a Plot Point, and you spend one. The enemy MechWarrior is rattled, but your heat gauge is creeping into the yellow: one more alpha strike and your reactor may shut down.",
     "prep": "~30 min",

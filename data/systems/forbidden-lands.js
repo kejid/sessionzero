@@ -87,6 +87,16 @@ registerSystem("forbidden-lands", {
     "tagShort": "Тёмное фэнтези гексплорейшн",
     "tagline": "«Земли, запечатанные Кровавым Туманом, наконец открыты».",
     "description": "Открытый гексплорейшн (исследование карты гекс за гексом, как в тумане войны) в тёмном фэнтези. 300 лет Кровавый Туман делал путешествия смертельными — люди жили в изолированных поселениях. Теперь туман рассеялся, и вы — первые, кто осмеливается исследовать забытые земли. Строите крепость, открываете карту, выживаете.",
+    "pickIf": [
+      "хотите открытый гекскраул, где игроки сами выбирают, куда идти",
+      "группе нравится выживание: еда, вода, лагерь",
+      "хотите за кампанию построить и удержать собственную крепость"
+    ],
+    "skipIf": [
+      "хотите героических схваток, а здесь раны калечат навсегда и бой — крайняя мера",
+      "группа не любит учёт ресурсов",
+      "нужен сюжет от мастера, а не исследование по воле игроков"
+    ],
     "setting": "Мрачный мир, напоминающий «Ведьмака» и «Тёмные души». Разрушенные замки, забытые демоны, клановые конфликты. Каждый гекс — тайна: заброшенная деревня, логово демона или руины цивилизации, погибшей во время Кровавого Тумана.",
     "vignette": "Ночёвка в руинах. Бросок на случайное событие — «Чужаки у лагеря.» Еда кончается, воды на один день. Мечник форсирует бросок на Выносливость — успех, но бонус снаряжения его меча падает на 1 (единица на кубике при форсировании). Чужаки предлагают обмен: провиант за вашу карту. Без карты вы заблудитесь. Без еды — не дойдёте до крепости.",
     "prep": "~20 мин",
@@ -146,6 +156,16 @@ registerSystem("forbidden-lands", {
     "tagShort": "dark-fantasy hexcrawl RPG",
     "tagline": "\"The lands sealed by the Blood Mist are finally open.\"",
     "description": "Open-world hexploration (exploring the map hex by hex, like fog of war) in dark fantasy. For 300 years the Blood Mist made travel deadly — people lived in isolated settlements. Now the mist has cleared, and you are the first to dare explore the forgotten lands. Build a stronghold, uncover the map, survive.",
+    "pickIf": [
+      "you want an open hexcrawl where the players choose where to go",
+      "your group enjoys tracking food, water and camp as survival play",
+      "you want to build and hold a stronghold over a campaign"
+    ],
+    "skipIf": [
+      "you want heroic brawls, since wounds maim and combat is a last resort",
+      "your group dislikes resource bookkeeping",
+      "you want a GM-driven plot rather than player-led exploration"
+    ],
     "setting": "A grim world evoking The Witcher and Dark Souls. Ruined castles, forgotten demons, clan conflicts. Every hex holds a secret: an abandoned village, a demon's lair, or ruins of a civilization that perished during the Blood Mist.",
     "vignette": "Camping in the ruins. Random event roll — 'Strangers at the camp.' Food is running out, one day of water left. The swordsman pushes an Endurance roll — success, but his sword's gear bonus drops by 1. The strangers offer a trade: provisions for your map. Without the map you'll get lost. Without food — you won't reach the stronghold.",
     "prep": "~20 min",

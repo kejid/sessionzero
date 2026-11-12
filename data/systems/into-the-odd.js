@@ -61,6 +61,16 @@ registerSystem("into-the-odd", {
     "tagShort": "Минималистичная OSR-классика",
     "tagline": "«Выживите в индустриальном кошмаре, где золото — единственный закон».",
     "description": "Ультра-минималистичная OSR-игра (Old School Renaissance — стиль, вдохновлённый ранними редакциями D&D), прародитель целого жанра. Правила — 48 страниц. Создание персонажа — 2 минуты. Три характеристики (Сила, Ловкость, Воля), горстка HP и странный предмет в кармане. Всё. Вы готовы умереть в подземелье под Бастионом — гигантским индустриальным мегаполисом, полным тайн, коллекторов и живых лабиринтов.",
+    "pickIf": [
+      "хотите создать персонажа за две минуты — и сразу им рисковать",
+      "группе нравятся быстрые бои, где атака всегда попадает",
+      "хотите исследовать странный индустриальный мир с артефактами вместо заклинаний"
+    ],
+    "skipIf": [
+      "нужны классы, уровни и сборки персонажей",
+      "группе хочется, чтобы герои жили долго",
+      "хотите мир с понятными объяснениями и подробным лором"
+    ],
     "setting": "Бастион — сюрреалистичный город-государство, напоминающий викторианский Лондон, скрещённый с кошмарами. Под ним — Подземное Море, полное Арканумов (странных артефактов с непредсказуемыми свойствами). За городом — Железная Пустошь и Золотая Земля. Мир не объясняет себя. Он просто существует и ждёт, пока вы его исследуете.",
     "vignette": "Вы спускаетесь в коллектор под Бастионом. Впереди — гул. Ваш Арканум, стеклянный глаз, начинает вибрировать. Следопыт говорит: «Назад.» Но вы уже видите золото. Тварь бьёт — 1d8 урона. 4 — ваши 3 HP слетают, оставшийся 1 урон идёт в Силу. Спасбросок (бросок кубика на удачу, чтобы избежать беды) Силы... провал. Шрам: ваша левая рука теперь светится в темноте.",
     "prep": "~10 мин",
@@ -104,6 +114,16 @@ registerSystem("into-the-odd", {
     "tagShort": "minimalist industrial OSR",
     "tagline": "\"Survive an industrial nightmare where gold is the only law.\"",
     "description": "An ultra-minimalist OSR game (Old School Renaissance — a style inspired by early editions of D&D), the progenitor of an entire genre. Rules — 48 pages. Character creation — 2 minutes. Three stats (Strength, Dexterity, Willpower), a handful of HP, and a strange item in your pocket. That's it. You're ready to die in the tunnels beneath Bastion — a vast industrial megalopolis full of secrets, sewers, and living labyrinths.",
+    "pickIf": [
+      "you want characters made in two minutes and ready to die",
+      "your group likes fast combat where attacks always hit",
+      "you want weird industrial exploration with strange artifacts instead of spells"
+    ],
+    "skipIf": [
+      "you want classes, levels and character builds",
+      "your group wants characters who survive for a long time",
+      "you want a world that explains itself with clear lore"
+    ],
     "setting": "Bastion — a surreal city-state resembling Victorian London crossed with nightmares. Beneath it lies the Underground Sea, teeming with Arcana (strange artifacts with unpredictable properties). Beyond the city — the Iron Wasteland and the Golden Land. The world doesn't explain itself. It simply exists and waits for you to explore it.",
     "vignette": "You descend into the sewers beneath Bastion. Ahead — a hum. Your Arcanum, a glass eye, starts vibrating. The scout says: 'Go back.' But you've already spotted the gold. The creature strikes — 1d8 damage. 4 — your 3 HP are gone, the remaining 1 damage goes to Strength. Save (a dice roll to avoid disaster) against Strength... failed. Scar: your left hand now glows in the dark.",
     "prep": "~10 min",

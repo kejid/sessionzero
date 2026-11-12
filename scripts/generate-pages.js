@@ -274,6 +274,9 @@ const STR = {
     section_system: 'What is this system',
     section_setting: 'Setting',
     section_vignette: 'What it looks like at the table',
+    section_fit: 'Is it for your table?',
+    fit_pick: 'Pick it if',
+    fit_skip: 'Skip it if',
     section_playstyle: 'Playstyle',
     section_mechanics: 'Key mechanics',
     section_reviews: 'What people say',
@@ -327,6 +330,9 @@ const STR = {
     section_system: 'Что это за система',
     section_setting: 'Сеттинг',
     section_vignette: 'Как это выглядит за столом',
+    section_fit: 'Подойдёт ли вашему столу',
+    fit_pick: 'Берите, если',
+    fit_skip: 'Не берите, если',
     section_playstyle: 'Плейстайл',
     section_mechanics: 'Особенности механики',
     section_reviews: 'Что говорят на Reddit',
@@ -434,6 +440,19 @@ const RES_ICONS = {
 };
 
 // ---------- 4. Renderers ----------
+// "Pick it if / Skip it if" lists: optional, hand-written, in the ru/en blocks.
+function fitBlock(sys, lang) {
+  const S = STR[lang];
+  const pick = (sys[lang] && sys[lang].pickIf) || [];
+  const skip = (sys[lang] && sys[lang].skipIf) || [];
+  if (!pick.length && !skip.length) return '';
+  const col = (cls, icon, label, items) => items.length ? `<div class="fit-col ${cls}">
+        <div class="fit-head"><i data-lucide="${icon}"></i> ${escBody(label)}</div>
+        <ul>${items.map(x => `<li>${escBody(x)}</li>`).join('')}</ul>
+      </div>` : '';
+  return `<div class="fit-block">${col('fit-pick', 'check', S.fit_pick, pick)}${col('fit-skip', 'x', S.fit_skip, skip)}</div>`;
+}
+
 function complexityBar(level) {
   level = Number(level) || 0;
   let out = '';
@@ -684,7 +703,9 @@ function renderSystemPage(id, sys, lang) {
       <a href="${toolHref}" class="vote-cta-btn" ${ctaAttrs}>${escBody(S.vote_cta_short)}</a>
     </div>
     ${description ? `<div class="section-title">${escBody(S.section_system)}</div>
-    <div class="setting-block"><p>${miniMd(description)}</p></div>` : ''}
+    <div class="setting-block"><p>${miniMd(description)}</p></div>` : ''}${fitBlock(sys, lang) ? `
+    <div class="section-title">${escBody(S.section_fit)}</div>
+    ${fitBlock(sys, lang)}` : ''}
     ${setting ? `<div class="section-title">${escBody(S.section_setting)}</div>
     <div class="setting-block"><p>${miniMd(setting)}</p></div>` : ''}
     ${vignetteHTML}
@@ -1062,7 +1083,7 @@ function renderComparePage(cmp, lang) {
     return `<div class="cmp-col">
         <h2>${escBody(S.cmp_about(name))}</h2>
         ${tagShort ? `<p class="cmp-tagshort">${escBody(tagShort)}</p>` : ''}
-        ${description ? `<div class="setting-block"><p>${miniMd(description)}</p></div>` : ''}
+        ${description ? `<div class="setting-block"><p>${miniMd(description)}</p></div>` : ''}${fitBlock(sys, lang)}
         ${mechanics.length ? `<div class="cmp-mech-title">${escBody(S.section_mechanics)}</div>
         <ul class="cmp-mechanics">${mechanics.map(m => `<li><i data-lucide="${escapeHtml(m.icon || 'dice-5')}"></i> ${escBody(m.title)}</li>`).join('')}</ul>` : ''}
         <a href="${escapeHtml(sysHref(lang, id))}" class="cmp-open">${escBody(S.cmp_open)}</a>

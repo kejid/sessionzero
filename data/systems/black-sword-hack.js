@@ -66,6 +66,16 @@ registerSystem("black-sword-hack", {
     "tagShort": "Меч-и-магия в духе Муркока на Black Hack",
     "tagline": "«Ты обречён. Вопрос лишь — сколько успеешь до того, как Рок настигнет».",
     "description": "Black Sword Hack — OSR-игра тёмного меча-и-магии на движке The Black Hack, вдохновлённая Вечным Воителем Муркока и обречёнными антигероями вроде Элрика. Бесклассовые герои, определяемые Происхождением и Предысторией, ставят судьбу на Кость Рока — она тает, пока ты опираешься на удачу. Мультивселенная вечной борьбы Хаоса и Закона со встроенными инструментами генерации мира.",
+    "pickIf": [
+      "хотите обречённых антигероев в духе Элрика Муркока",
+      "группе нравится быстрая смертоносная игра, где все броски делают игроки",
+      "мастеру нужны генераторы, чтобы собирать гибнущую мультивселенную на лету"
+    ],
+    "skipIf": [
+      "хотите светлого героического фэнтези, где добро побеждает",
+      "игрокам нужны классы и понятный билд для оптимизации",
+      "хотите подробно прописанный готовый мир"
+    ],
     "setting": "Мрачная мультивселенная на грани катастрофы, где Хаос и Закон рвут реальность на части. Проклятые мечи, чуждые боги, гибнущие империи и герои, отмеченные роком. Тон — трагический пульп в духе Элрика: сила всегда с ценой, победа всегда с горчинкой. Генераторы в правилах соберут ваш умирающий мир на лету.",
     "vignette": "Наёмник загнан в угол cult-истами. Он призывает Кость Рока — d6 к броску, чтобы прорваться. Успех: клинок находит горло жреца. Но Кость Рока брошена — если выпала 1–2, она уменьшается (d6→d4). Ещё пара таких рывков — и Рок иссякнет. А когда он иссякает, вселенная взыскивает долг сполна.",
     "prep": "~10 мин",
@@ -108,6 +118,16 @@ registerSystem("black-sword-hack", {
     "tagShort": "Moorcockian sword-and-sorcery on The Black Hack",
     "tagline": "\"You are doomed. The only question is how much you get done before Doom catches up.\"",
     "description": "Black Sword Hack is a dark sword-and-sorcery OSR game on The Black Hack engine, drawing on Moorcock's Eternal Champion and doomed antiheroes like Elric. Classless heroes, defined by Origin and Background, stake their fate on a Doom Die that erodes as they lean on luck. A multiverse locked in the eternal struggle of Chaos and Law, with world-building tools baked into the rules.",
+    "pickIf": [
+      "you want doomed antiheroes in the vein of Moorcock's Elric",
+      "your group likes fast, lethal roll-under play where players make every roll",
+      "your GM wants generators to build a dying multiverse on the fly"
+    ],
+    "skipIf": [
+      "you want hopeful heroic fantasy where good wins",
+      "your players want classes and a clear build to optimise",
+      "you want a richly detailed, pre-written setting"
+    ],
     "setting": "A grim multiverse on the brink of catastrophe, where Chaos and Law tear reality apart. Cursed swords, alien gods, dying empires, and heroes marked by doom. The tone is tragic pulp in the Elric vein: power always has a price, victory always a bitter edge. Generator tables in the rules assemble your dying world on the fly.",
     "vignette": "The mercenary is cornered by cultists. He invokes the Doom Die — a d6 added to the roll to break free. Success: the blade finds the priest's throat. But the Doom Die is cast — on a 1–2 it shrinks (d6→d4). A few more such gambits and the Doom runs out. And when it does, the universe collects its debt in full.",
     "prep": "~10 min",

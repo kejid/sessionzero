@@ -78,6 +78,16 @@ registerSystem("alien", {
     "tagShort": "Sci-fi хоррор по «Чужому»",
     "tagline": "«В космосе никто не услышит ваш крик».",
     "description": "Официальная RPG по вселенной «Чужого». Year Zero Engine с уникальной механикой стресса: чем больше паникуете, тем больше бросаете кубиков. Больше кубиков = выше шанс успеха, НО и выше шанс панической атаки. Два режима: кампания (долгая игра в космосе) и кинематографичный (ваншот-ужастик (приключение на одну сессию), как в фильмах).",
+    "pickIf": [
+      "хотите кинематографичный sci-fi хоррор на один вечер с готовыми героями и тайными целями",
+      "группе по душе паника, предательство и персонажи, которые могут не выжить",
+      "фанаты фильмов хотят официальный лор всей франшизы"
+    ],
+    "skipIf": [
+      "игроки хотят побеждать монстров в бою",
+      "за столом не любят тайные цели, сталкивающие игроков друг с другом",
+      "хотите героические космические приключения, а не страх и выживание"
+    ],
     "setting": "2183 год. Корпорации колонизируют космос. Weyland-Yutani тянет щупальца к каждой обитаемой системе. За фасадом прогресса — рабочие-контрактники на забытых станциях, контрабандисты, колониальные морпехи и ксеноморфы, которые ждут в темноте. Лор охватывает все фильмы и расширяет вселенную.",
     "vignette": "Стресс: 4. Вы слышите что-то в вентиляции. Бросаете на Наблюдательность — 3 обычных кубика и 4 кубика стресса. Два успеха! Но на кубике стресса — значок лицехвата. Паника. Бросаете по таблице... «Вы хватаете ближайшее оружие и наводите его на союзника.» За переборкой — шум. Ваш скрытый приказ гласит: «Принеси образец живым.»",
     "prep": "~20 мин",
@@ -134,6 +144,16 @@ registerSystem("alien", {
     "tagShort": "Year Zero sci-fi horror RPG",
     "tagline": "\"In space no one can hear you scream.\"",
     "description": "The official RPG set in the Alien universe. Year Zero Engine with a unique stress mechanic: the more you panic, the more dice you roll. More dice = higher chance of success, BUT also higher chance of a panic attack. Two modes: campaign (long-form space game) and cinematic (one-shot horror, just like the movies).",
+    "pickIf": [
+      "you want cinematic sci-fi horror one-shots with pregens and secret agendas",
+      "your group enjoys panic, betrayal and characters who may not survive",
+      "fans of the films want official lore across the whole franchise"
+    ],
+    "skipIf": [
+      "your players want to win fights against the monsters",
+      "your table hates hidden agendas turning players against each other",
+      "you want heroic space adventure rather than dread and survival"
+    ],
     "setting": "Year 2183. Corporations colonize space. Weyland-Yutani extends its tentacles to every inhabited system. Behind the facade of progress — contract workers on forgotten stations, smugglers, colonial marines, and xenomorphs waiting in the dark. The lore covers all the films and expands the universe.",
     "vignette": "Stress: 4. You hear something in the vents. You roll Observation — 3 regular dice and 4 stress dice. Two successes! But a stress die shows the facehugger icon. Panic. You roll on the table... 'You grab the nearest weapon and aim it at an ally.' Behind the bulkhead — noise. Your secret order reads: 'Bring back the specimen alive.'",
     "prep": "~20 min",

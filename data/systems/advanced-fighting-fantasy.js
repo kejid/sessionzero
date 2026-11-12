@@ -66,6 +66,16 @@ registerSystem("advanced-fighting-fantasy", {
     "tagShort": "Ролёвка по книгам-игркам Fighting Fantasy",
     "tagline": "«SKILL, STAMINA и LUCK — легендарные книги-игры становятся полноценной RPG».",
     "description": "Advanced Fighting Fantasy — ролевая игра по классическим книгам-играм Fighting Fantasy и Sorcery! (Стив Джексон и Иан Ливингстон). Простая система на 2d6: три характеристики — Мастерство, Выносливость и Удача — плюс Магия во 2-й редакции. Издаётся Arion Games; действие — в любимом мире Титан (континент Аллансия). Ностальгия и живая система в одном.",
+    "pickIf": [
+      "ваша группа выросла на книгах-играх Fighting Fantasy и хочет в мир Титана",
+      "нужна простая система на 2d6 с парой основных характеристик",
+      "хотите классику — монстры, ловушки и мрачноватый юмор"
+    ],
+    "skipIf": [
+      "хотите глубокие билды с кучей опций для оптимизации",
+      "группе нужны нарративные механики, которые двигают сюжет",
+      "за столом никому не важны ностальгия по книгам-играм и мир Титана"
+    ],
     "setting": "Титан — фэнтезийный мир культовых книг-игр 1980-х: континент Аллансия, порт-город Блэксэнд, Ледяные пустоши и колдуны Крарта. Десятилетия лора из десятков геймбуков. Тон — героическое приключение с чудовищами, ловушками и мрачным юмором в духе оригинальных «Warlock of Firetop Mountain».",
     "vignette": "Ваш искатель приключений входит в логово орка. Проверка Мастерства: 2d6 против значения Мастерства, нужно меньше-равно. Начинается бой — оба бросают 2d6 плюс Мастерство; чей результат выше, тот ранит, снимая Выносливость. Удача на исходе — потратить её на смертельный удар или приберечь на спасение? Классика книг-игр за столом.",
     "prep": "~20 мин",
@@ -113,6 +123,16 @@ registerSystem("advanced-fighting-fantasy", {
     "tagShort": "The RPG of the Fighting Fantasy gamebooks",
     "tagline": "\"SKILL, STAMINA, and LUCK — the legendary gamebooks become a full RPG.\"",
     "description": "Advanced Fighting Fantasy is the RPG of the classic Fighting Fantasy and Sorcery! gamebooks (Steve Jackson and Ian Livingstone). A simple 2d6 system: three stats — SKILL, STAMINA, and LUCK — plus MAGIC in 2nd edition. Published by Arion Games and set in the beloved world of Titan (the continent of Allansia). Nostalgia and a living system in one.",
+    "pickIf": [
+      "your group grew up on Fighting Fantasy gamebooks and wants Titan at the table",
+      "you want a simple 2d6 system with just a few core stats",
+      "you want classic monster-and-trap adventures with a grim sense of humour"
+    ],
+    "skipIf": [
+      "you want deep character builds with many options to optimise",
+      "your table wants narrative mechanics that steer the story",
+      "nobody at the table cares about the gamebook nostalgia or the world of Titan"
+    ],
     "setting": "Titan — the fantasy world of the cult 1980s gamebooks: the continent of Allansia, the port-city of Port Blacksand, the Icefinger Mountains, and the sorcerers of Kakhabad. Decades of lore across dozens of gamebooks. The tone is heroic adventure with monsters, traps, and grim humor in the spirit of the original Warlock of Firetop Mountain.",
     "vignette": "Your adventurer enters an orc's lair. A SKILL test: 2d6 against your SKILL, rolling equal or under. Combat begins — both sides roll 2d6 plus SKILL; the higher result wounds, draining STAMINA. LUCK is running low — spend it for a killing blow, or save it to survive? The classic gamebook experience, at the table.",
     "prep": "~20 min",

@@ -40,6 +40,16 @@ registerSystem("curseborne", {
     "tagShort": "Городской хоррор о проклятом современном мире на Storypath Ultra",
     "tagline": "«В этом городе проклятие не редкость. Вопрос в том, кто его несёт».",
     "description": "Curseborne — городское хоррор-фэнтези от Onyx Path. Игра построена на Storypath Ultra, универсальной версии Storypath. Проект собрал деньги на Kickstarter в 2024 году. Основная книга продаётся на DriveThruRPG с конца 2025 года: 31 вид проклятых в пяти линиях и полные правила.",
+    "pickIf": [
+      "хотите городской хоррор наших дней, где проклятия носят сами персонажи",
+      "группе расследования и социальное давление интересны не меньше боёв",
+      "нравится сила, у которой цена растёт с каждым применением"
+    ],
+    "skipIf": [
+      "нужна линейка с годами дополнений — основная книга вышла только в конце 2025 года",
+      "группа хочет подземелий или тактических боёв",
+      "игроки не любят собирать и считать пулы d10"
+    ],
     "setting": "Современный мир, в котором проклятия настолько обычны, что с ними научились жить. Городские улицы, разрушающиеся районы и древние тени сплетены в один узор. Игроки расследуют странные события, сталкиваются с монстрами и решают, чем заплатить за помощь.",
     "vignette": "Ночью в старом районе пропадает ребёнок, а соседи делают вид, что ничего не случилось. Вы начинаете расследование: опрашиваете людей, ищете следы и считаете, сколько ещё можно выдержать. Рассказчик просит бросить пул Storypath Ultra, и каждый успех приближает вас к правде, а каждая ошибка — к новому проклятию.",
     "prep": "~60 мин",
@@ -65,6 +75,16 @@ registerSystem("curseborne", {
     "tagShort": "Urban horror in a cursed modern world on Storypath Ultra",
     "tagline": "\"In this city, curses are common. The question is who carries them.\"",
     "description": "Curseborne is Onyx Path's urban horror and fantasy game. It runs on Storypath Ultra, the generic version of the Storypath system. The project was funded on Kickstarter in 2024. The core rulebook has been on sale at DriveThruRPG since late 2025, with 31 kinds of Accursed across five Lineages and the full rules.",
+    "pickIf": [
+      "you want modern urban horror where the player characters carry the curses",
+      "your group enjoys investigation and social pressure as much as fights",
+      "you like powers whose rising cost makes every use a real choice"
+    ],
+    "skipIf": [
+      "you want a line with years of support — the core book only arrived in late 2025",
+      "your group wants dungeon crawls or tactical combat",
+      "your players dislike building and counting d10 dice pools"
+    ],
     "setting": "A modern world where curses are so common that people have learned to live beside them. City streets, decaying neighbourhoods and ancient shadows are woven into one pattern. Players investigate strange events, face monsters and decide what they are willing to pay for help.",
     "vignette": "A child goes missing in an old district overnight, and the neighbours act as if nothing happened. You start investigating: you question people, look for traces and count how much you can take. The Storyteller asks for a Storypath Ultra pool, and every success brings you closer to the truth while every failure brings you closer to a new curse.",
     "prep": "~60 min",

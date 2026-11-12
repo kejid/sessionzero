@@ -66,6 +66,15 @@ registerSystem("death-in-space", {
     "tagShort": "Грязный sci-fi survival RPG",
     "tagline": "«Добро пожаловать в коллапсирующую вселенную. Ваш экипаж — единственная семья.»",
     "description": "Death in Space — мрачная, рабочая sci-fi RPG о людях, которые пытаются выжить во вселенной, которая активно разваливается. Гнетущий промышленный ужас 80-х: Alien, Outland, Mad Max — перенесённые в пустоту между умирающими звёздами.",
+    "pickIf": [
+      "хотите рабочую фантастику про выживание, где всё держится на изоленте",
+      "команде нравится вести свой корабль или станцию — и дом, и обузу",
+      "нужны лёгкие правила и быстрая подготовка для мрачной космической песочницы"
+    ],
+    "skipIf": [
+      "нужна героическая космоопера с блестящими технологиями и большими битвами",
+      "игроки не любят следить за износом снаряжения, топливом и ремонтом"
+    ],
     "setting": "Система Тенебрис — разорённый войной рубеж рухнувших правительств и мёртвых корпораций. Каждая машина починена и перечинена. Таинственный Статик пронизывает электронику — шёпот на краю известного космоса. Пустота меняет людей.",
     "vignette": "Шлюз закрывается. Холод прогрызается сквозь скафандр. Внутри мёртвого корабля — кромешная тьма. В Статике коммуникатора что-то почти похожее на слова. Бросок Тех провален. Сканер на Состоянии 1. Топлива на один прыжок. Пилот: «Берём что нужно и уходим.» Вы идёте глубже.",
     "prep": "~15 мин",
@@ -115,6 +124,15 @@ registerSystem("death-in-space", {
     "tagShort": "grimy blue-collar sci-fi RPG",
     "tagline": "\"Welcome to a collapsing universe. Your crew is your only family.\"",
     "description": "Death in Space is a grimy, blue-collar sci-fi RPG about people trying to survive — and maybe turn a profit — in a universe that is actively falling apart. Created by Stockholm Kartell and published by Free League, it channels the gritty industrial dread of early 80s science fiction: Alien, Outland, and the original Mad Max transplanted into the void between dying stars.",
+    "pickIf": [
+      "you want blue-collar sci-fi survival where every machine is held together with tape",
+      "your crew likes running a ship or station that is both home and liability",
+      "you want light rules and quick prep for a grim space sandbox"
+    ],
+    "skipIf": [
+      "you want heroic space opera with shiny tech and big battles",
+      "your players dislike tracking gear condition, fuel and repairs"
+    ],
     "setting": "The Tenebris system is a war-torn frontier of collapsed interplanetary governments and dead corporations, where every machine is repaired, re-repaired, and held together with tape and desperation. A mysterious Static permeates all electronics — a signal between channels, a whisper at the edge of known space — and prolonged exposure to the void changes people in ways medicine cannot explain.",
     "vignette": "The airlock cycles. Cold from outside eats through your suit. The derelict's interior is dead-black except for the beam of your torch, and somewhere in the dark something is moving through the Static on your comms — not random noise, but something almost like words. Your Tech roll failed. Your scanner is now at Condition 1. You have fuel for one more jump. The pilot says: 'We take what we came for and we leave.' Nobody argues. You move deeper in.",
     "prep": "~15 min",

@@ -78,6 +78,16 @@ registerSystem("ashes-without-number", {
     "tagShort": "Постапокалипсис-песочница от автора SWN",
     "tagline": "«Старый мир сгорел. Осталось решить, что вы вынесете из пепла».",
     "description": "Ashes Without Number — постапокалиптическая RPG Кевина Кроуфорда (2025), четвёртая в семье Without Number и совместимая со Stars, Worlds и Cities. Олдскульный каркас: d20 в бою, 2d6 на навыки, грани (Edges) и фокус при создании героя. Но главное — инструментарий: из книги собирается свой конец света, от ядерной пустоши до зомби-чумы, с анклавами, фракциями и готовыми зацепками.",
+    "pickIf": [
+      "мастеру нужны инструменты для своего конца света: ядерного, зомби или мутантов",
+      "хотите олдскульную песочницу про анклавы, фракции и нехватку всего",
+      "группа уже знает Stars, Worlds или Cities Without Number"
+    ],
+    "skipIf": [
+      "хотите готовый постапокалипсис с заданным сюжетом",
+      "за столом предпочитают нарративные кубы, а не d20 и 2d6",
+      "группе интереснее киберпанк-город, чем руины и выживание"
+    ],
     "setting": "Конец света на ваш вкус. Книга поддерживает три жанра: «After the Fall» — распад общества, вторжение, глобальные катастрофы; «Deadlands» — орды зомби и осаждённые анклавы; «Mutant Wasteland» — постъядерная пустошь с мутантами и загадочными технологиями. Модули включаются и выключаются, так что можно смешивать или оставить только один.",
     "vignette": "Отряд добирается до анклава, собранного из двух тегов: «Chokepoint» и «Contaminated Land». Единственная тропа через заражённый район, и её держат рейдеры. Разведчица ищет обход: 2d6 + навык + модификатор атрибута — сумма перекрывает сложность, и группа выходит рейдерам во фланг. Короткая перестрелка, стрелок убивает человека. Теперь по таблице Stress он получает стресс: в этом мире даже оправданное убийство не проходит бесследно.",
     "prep": "~20 мин",
@@ -130,6 +140,16 @@ registerSystem("ashes-without-number", {
     "tagShort": "Post-apocalyptic sandbox from the SWN designer",
     "tagline": "\"The old world burned. All that's left is deciding what you'll carry out of the ashes.\"",
     "description": "Ashes Without Number is Kevin Crawford's 2025 post-apocalyptic RPG, the fourth in the Without Number family and compatible with Stars, Worlds and Cities. The old-school chassis is d20 for combat, 2d6 for skills, and Edges plus a Focus at character creation. The real draw is the toolkit: the book helps you build your own end of the world, from nuclear wasteland to zombie plague, with enclaves, factions and ready-made adventure hooks.",
+    "pickIf": [
+      "your GM wants tools to build a custom apocalypse: nuclear, zombie or mutant",
+      "you want an old-school sandbox around enclaves, factions and scarcity",
+      "your group already knows Stars, Worlds or Cities Without Number"
+    ],
+    "skipIf": [
+      "you want a ready-made post-apocalypse with a fixed story",
+      "your table prefers narrative dice over d20 and 2d6 checks",
+      "your group wants a cyberpunk city rather than ruins and survival"
+    ],
     "setting": "The apocalypse of your choice. The book supports three genres: After the Fall (social collapse, invasion and global disaster), Deadlands (zombie hordes and besieged enclaves) and Mutant Wasteland (post-nuclear wastes with mutants and mysterious tech). The modules switch on and off, so you can blend them or keep just one.",
     "vignette": "The party reaches an enclave rolled from two tags, Chokepoint and Contaminated Land: one path through the poisoned district, and raiders hold it. The scout looks for a way around: 2d6 + skill + attribute modifier, and the total beats the difficulty, so the group comes at the raiders from the flank. A short firefight, and the gunner kills a man. By the Stress chart he now takes stress, because in this world even a justified killing leaves a mark.",
     "prep": "~20 min",

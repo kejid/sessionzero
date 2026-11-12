@@ -1302,6 +1302,22 @@ body.browse-mode .setup-players-btn { display: flex; }
 }
 
 /* Setting block */
+/* "Pick it if / Skip it if" on system pages (SPA, static, comparisons) */
+.fit-block { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+.fit-col {
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 16px 18px; font-size: 15px; line-height: 1.55; color: var(--dim);
+}
+.fit-head { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+/* Lucide swaps the <i> for an <svg>, so style both. */
+.fit-head i[data-lucide], .fit-head svg { width: 18px; height: 18px; flex-shrink: 0; }
+.fit-pick .fit-head i[data-lucide], .fit-pick .fit-head svg { color: var(--green); }
+.fit-skip .fit-head i[data-lucide], .fit-skip .fit-head svg { color: var(--red); }
+.fit-col ul { margin: 0; padding-left: 18px; }
+.fit-col li + li { margin-top: 6px; }
+.cmp-col .fit-block { grid-template-columns: 1fr; }
+@media (max-width: 640px) { .fit-block { grid-template-columns: 1fr; } }
+
 .setting-block {
     background: var(--card);
     border: 1px solid var(--border);

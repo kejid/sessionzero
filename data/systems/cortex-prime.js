@@ -62,6 +62,16 @@ registerSystem("cortex-prime", {
     "tagShort": "Модульный универсальный движок из кубиков",
     "tagline": "«Собери свою игру: любой жанр — из одного набора деталей».",
     "description": "Cortex Prime — универсальный конструктор ролевых систем Кэма Бэнкса (изданный Dire Wolf Digital). Не готовая игра, а набор «модов»: берёшь нужные детали — Отличия, Активы, Осложнения, Очки сюжета — и собираешь механику под свой жанр и стол. На движке Cortex выходили Firefly, Marvel Heroic, Smallville. Дайспул d4–d12 вместо фиксированных статов.",
+    "pickIf": [
+      "вашему мастеру нравится собирать свои правила под конкретный мир",
+      "хотите играть в жанре, под который нет хорошей готовой игры",
+      "нравятся пулы, где черта — это размер кубика, а не бонус"
+    ],
+    "skipIf": [
+      "нужна готовая игра, которую можно открыть и сыграть сегодня вечером",
+      "мастеру не хочется выбирать и обкатывать модули",
+      "хотите готовый мир и приключения из коробки"
+    ],
     "setting": "Сеттинг-агностик по определению: Cortex ничего не навязывает. Хочешь нуар, супергероику, космооперу или семейную драму — собираешь под это свою версию правил. Сила системы — в том, что она подстраивается под тон истории, а не наоборот.",
     "vignette": "Героиня взламывает сейф под давлением. Ведущий и игрок собирают пул: кубик Атрибута (d8), кубик Навыка (d6), кубик Отличия (d8) и кубик Осложнения «Тревога» (d6, за него ведущий получит Очко сюжета). Бросок. Берёшь два кубика в сумму против сложности и один — как Effect Die, размер успеха. 8 против 7 — сейф открыт, но сигнализация уже воет.",
     "prep": "~20 мин",
@@ -105,6 +115,16 @@ registerSystem("cortex-prime", {
     "tagShort": "A modular, universal dice-pool engine",
     "tagline": "\"Build your game: any genre, from one box of parts.\"",
     "description": "Cortex Prime is Cam Banks's universal RPG construction kit (published by Dire Wolf Digital). Not a finished game but a set of 'mods': take the parts you want — Distinctions, Assets, Complications, Plot Points — and assemble mechanics to fit your genre and table. The Cortex engine powered Firefly, Marvel Heroic, and Smallville. Dice pools of d4–d12 instead of fixed stats.",
+    "pickIf": [
+      "your GM enjoys building a custom ruleset for one specific setting",
+      "you want to run a genre that no finished game covers well",
+      "your table likes dice pools where a trait is a die size, not a bonus"
+    ],
+    "skipIf": [
+      "you want a finished game you can open and play tonight",
+      "your GM has no appetite for choosing and testing optional mods",
+      "you want a ready-made world and adventures in the box"
+    ],
     "setting": "Setting-agnostic by design: Cortex imposes nothing. Want noir, superheroes, space opera, or family drama — you build your own version of the rules for it. The system's strength is that it bends to the tone of the story, not the other way around.",
     "vignette": "The hero cracks a safe under pressure. GM and player build a pool: an Attribute die (d8), a Skill die (d6), a Distinction die (d8), and a Complication 'Anxiety' die (d6, for which the GM earns a Plot Point). Roll. Take two dice for the total against the difficulty and one as the Effect Die, the size of success. An 8 beats 7 — the safe opens, but the alarm is already wailing.",
     "prep": "~20 min",

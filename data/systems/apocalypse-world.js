@@ -76,6 +76,16 @@ registerSystem("apocalypse-world", {
     "tagShort": "Постапокалипсис на 2d6 — родоначальник PbtA",
     "tagline": "«Мир мёртв. Правила просты. Истории — бесконечны».",
     "description": "Apocalypse World — настольная RPG от Lumpley Games (2-е издание, 2019), родоначальник системы Powered by the Apocalypse (PbtA). 2d6: 10+ — полный успех, 7–9 — частичный, 6- — MC решает. Геймплей через Playbooks (шаблоны персонажей) и Moves (ходы), активируемые из фикции. Нулевой пресесс — мир рождается за столом. Влияние: Dungeon World, Masks, Blades in the Dark и десятки других.",
+    "pickIf": [
+      "хотите попробовать ту самую первую PbtA, от которой пошли десятки игр",
+      "группе нравится вместе придумывать постапокалиптический мир на первой сессии",
+      "мастер любит импровизировать почти без подготовки"
+    ],
+    "skipIf": [
+      "мастеру нужен готовый мир и заранее написанные приключения",
+      "игроки хотят тактического боя с точными цифрами и позициями",
+      "игроки ждут, что мастер каждую сессию выдаст им понятный квест"
+    ],
     "setting": "Постапокалипсис без прописанного мира. Игроки создают мир вместе на первой сессии: что случилось, кто вы, что здесь происходит. Нет предwritten сеттинга — только архетипы и импровизация.",
     "vignette": "MC: «Вы подходите к дому. Дверь приоткрыта. Изнутри — запах горелого мяса. Что делаете?» Гангстер ( playbook: Driver): «Заглядываю внутрь, держа пистолет наготове.» Бросок 2d6 + Sharp: 4+2 = 6. Провал. MC: «Дверь захлопывается. Вы слышите щелчок замка. И цепь.» Мир мёртв. Правила просты. Истории — бесконечны.",
     "prep": "~5 мин (создание мира на первой сессии)",
@@ -128,6 +138,16 @@ registerSystem("apocalypse-world", {
     "tagShort": "Post-apocalyptic 2d6 — the PbtA originator",
     "tagline": "\"The world is dead. The rules are simple. The stories are infinite.\"",
     "description": "Apocalypse World is a tabletop RPG from Lumpley Games (2nd Edition, 2019), the originator of the Powered by the Apocalypse (PbtA) engine. 2d6: 10+ full success, 7–9 partial, 6- the MC decides. Gameplay through Playbooks (character archetypes) and Moves (actions triggered from fiction). Zero prep — the world is born at the table. Influence: Dungeon World, Masks, Blades in the Dark, and dozens more.",
+    "pickIf": [
+      "you want to try the original PbtA game that inspired dozens of others",
+      "your group likes building a post-apocalyptic world together in session one",
+      "your GM enjoys improvising with almost no prep"
+    ],
+    "skipIf": [
+      "your GM wants a ready-made setting and pre-written adventures",
+      "your players want tactical combat with precise numbers and positioning",
+      "your players want a clear quest handed to them each session"
+    ],
     "setting": "Post-apocalyptic with no pre-written world. Players create the world together in session 1: what happened, who you are, what's going on. No prewritten setting — only archetypes and improvisation.",
     "vignette": "MC: 'You approach the house. Door ajar. Inside — the smell of burnt meat. What do you do?' The Gangster (playbook: Driver): 'I peer inside, pistol ready.' Roll 2d6 + Sharp: 4+2 = 6. Miss. MC: 'The door slams shut. You hear a lock click. And a chain.' The world is dead. The rules are simple. The stories are infinite.",
     "prep": "~5 min (world creation in session 1)",

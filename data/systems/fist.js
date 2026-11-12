@@ -69,6 +69,16 @@ registerSystem("fist", {
     "tagShort": "Паранормальные наёмники Хол.войны",
     "tagline": "«Вы — расходный наёмник. Задание невыполнимо. Вы всё равно соглашаетесь.»",
     "description": "FIST — компактная TTRPG о паранормальных наёмниках Холодной войны. Механика 2d6, нишa между OSR и нарративными инди-играми. 216 черт и 36 ролей = 23 000+ уникальных билдов.",
+    "pickIf": [
+      "хотите паранормальные наёмничьи миссии времён холодной войны почти без подготовки",
+      "группе нравится за десять минут собирать странных персонажей",
+      "нужны быстрые броски 2d6 с частичным успехом, а не тактика на клетках"
+    ],
+    "skipIf": [
+      "нужен детальный тактический бой и расчёт снаряжения",
+      "за столом больше любят долгие личные драмы, чем миссию за миссией",
+      "хотите приземлённый реалистичный шпионский триллер"
+    ],
     "setting": "Примерно 1977 год. Сверхдержавы балансируют на грани, но настоящая война страннее — засекреченные базы со щупальцами, оккультные программы и враждебная структура Cyclops.",
     "vignette": "Разведка врёт. Вы прижаты к маслодавильному прессу, а оперативник Cyclops в экзоскелете зачищает зал. Напарник с щупальцами подкатывает Боевой Кубик. Вы добавляете его к броску. 11. Ловите руку, влетаете экзоскелетом в стену. В руках — блок наведения. Чистый успех.",
     "prep": "~10 мин",
@@ -116,6 +126,16 @@ registerSystem("fist", {
     "tagShort": "paranormal Cold War merc RPG",
     "tagline": "\"You are a disposable gun for hire. The mission is impossible. You take it anyway.\"",
     "description": "FIST (Freelance Infantry Strike Team) is a lean, punchy TTRPG about paranormal mercenaries navigating the shadowy underbelly of the Cold War. Built on a 2d6 spine descended from World of Dungeons, it lives in a rare sweet spot between OSR rulings-over-rules and narrative-forward indie design. Character creation takes ten minutes and spits out an astronaut werewolf, a cannibalistic weaponsmith, or a bullet-time wizard.",
+    "pickIf": [
+      "you want paranormal Cold War mercenary missions with almost no prep",
+      "your group likes rolling up weird characters in ten minutes",
+      "you want quick 2d6 rolls with partial successes, not tactical grids"
+    ],
+    "skipIf": [
+      "you want detailed tactical combat and gear math",
+      "your table prefers long personal drama to mission after mission",
+      "you want a grounded, realistic spy thriller"
+    ],
     "setting": "It's 1977, more or less. The superpowers are locked in nuclear détente, but the real war is stranger — eldritch compounds, disastrous science experiments, occult weapons programs, and the rival paramilitary Cyclops, who have more resources and fewer scruples than FIST ever will. The world is built at the table through the Intelligence Matrix, a battery of d66 tables that produce missions, NPCs, locations, and rewards.",
     "vignette": "Intel says the facility is lightly guarded. Intel is wrong. You're pinned behind a Cypriot olive press while a Cyclops operative in a powered exosuit sweeps the room. Your partner — the one with tentacles — slides you a War Die across the floor. You add it to your roll. 11. You catch the arm, ride the exosuit into the wall, and come out holding the targeting module. The referee nods. That's a clean success.",
     "prep": "~10 min",

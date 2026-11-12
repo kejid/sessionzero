@@ -41,6 +41,16 @@ registerSystem("apocalypse-keys", {
     "tagShort": "Чудовища спасают мир от апокалипсиса",
     "tagline": "«Даже у самых могущественных чудовищ есть сердце».",
     "description": "Детективная игра на движке Powered by the Apocalypse от Рэй Неджади. В 2020 году автор выпустила её сама на itch.io, а потом права купила Evil Hat Productions и собрала на Kickstarter новое издание (PDF — 2023). Игроки — Омены, чудовища на службе тайной организации DIVISION: они ищут Ключи, раскрывают замысел Предвестника и не дают ему отпереть Дверь Рока. Главный конфликт при этом внутри: сила, которая спасает мир, тянет самих героев к тому, чтобы стать следующим апокалипсисом.",
+    "pickIf": [
+      "хотите расследования «монстр недели» в духе «Хеллбоя» и «Роковой патруль»",
+      "игрокам нравится играть монстров, которые борются с собственной тьмой",
+      "группе нравится самой собирать разгадку тайны из найденных улик"
+    ],
+    "skipIf": [
+      "хотите детектив, где мастер заранее написал единственную разгадку",
+      "за столом избегают тяжёлых эмоций и драмы отношений",
+      "нужен тактический бой или детальные билды персонажей"
+    ],
     "setting": "Наш мир, в котором древние Двери Силы ждут своего часа, а Предвестники (Harbingers) охотятся за ними ради собственного возвышения. DIVISION — теневое агентство и одновременно найденная семья для монстров, которым больше некуда идти. Вдохновение — «Хеллбой», «Люди в чёрном», «Страшные сказки» и «Роковой патруль»: громкие силы, ещё более громкие чувства.",
     "vignette": "Библиотека, где книги переписывают сами себя. Ваш *Surge* ищет Ключи (Grasp Keys), не вкладывая жетонов: 4 + 4 = 8 — на 8–10 Мастер называет найденный Ключ. Из-за стеллажей выходит библиотекарь-культист. *Hungry* обрушивает на него Тьму (Unleash the Dark): у неё 6 жетонов Тьмы, она вкладывает один — 5 + 3 + 1 = 9, на 8–10 выбирает два пункта: пробить защиту и наложить Состояние, избежать ответного удара. Но после хода у неё всё ещё 5 жетонов, и она Разрывается (Torn Between). Вместо того чтобы отметить Разрушение, она тратит Связь с *Surge*: он помогает ей вернуть контроль. В конце сессии команда соединяет 4 Ключа с гранями тайны и отпирает Дверь Рока при сложности тайны 3: 3 + 5 + 4 − 3 = 9. Они точно знают, где Дверь и как её открыть.",
     "prep": "~30 мин",
@@ -69,6 +79,16 @@ registerSystem("apocalypse-keys", {
     "tagShort": "Monsters save the world from the apocalypse",
     "tagline": "\"Even the most powerful monsters have hearts.\"",
     "description": "A Powered by the Apocalypse mystery game by Rae Nedjadi. Nedjadi self-published it on itch.io in 2020; Evil Hat Productions then acquired the rights and crowdfunded a new edition on Kickstarter (PDF in 2023). You play Omens, monsters working for the secret agency DIVISION: you hunt Keys, piece together a Harbinger's plan and stop them from unlocking Doom's Door. The real conflict is inside — the power that saves the world keeps pulling your monster toward becoming the next apocalypse.",
+    "pickIf": [
+      "you want monster-of-the-week mysteries in the vein of Hellboy and Doom Patrol",
+      "your players like playing monsters wrestling with their own dark power",
+      "your group enjoys building the solution to a mystery from collected clues"
+    ],
+    "skipIf": [
+      "you want a GM-authored mystery with one fixed solution to uncover",
+      "your table avoids heavy emotional themes and relationship drama",
+      "you want tactical combat or detailed character builds"
+    ],
     "setting": "Our world, where ancient Doors of Power wait to be opened and Harbingers hunt them to claim that power for themselves. DIVISION is a shadowy agency and a found family for monsters with nowhere else to go. Inspirations include Hellboy, Men in Black, Penny Dreadful and Doom Patrol: big powers, bigger feelings.",
     "vignette": "A library where the books rewrite themselves. Your Surge Grasps Keys without committing any tokens: 4 + 4 = 8 — on an 8–10 the Keeper tells you what Key you've uncovered. A cultist librarian steps out from the stacks. The Hungry Unleashes the Dark: she has 6 Darkness Tokens and commits one — 5 + 3 + 1 = 9, so on an 8–10 she picks two: get past his defences and inflict a Condition, and avoid reprisals. But after the move she still holds 5 tokens, so she's Torn Between. Instead of marking Ruin, she spends a Bond with the Surge, who helps her regain control. At session's end the team connects 4 Keys to the Facets and tries to Unlock Doom's Door against a Mystery complexity of 3: 3 + 5 + 4 − 3 = 9. They know exactly where the Door is and how to unlock it.",
     "prep": "~30 min",

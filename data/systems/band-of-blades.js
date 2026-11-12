@@ -48,6 +48,16 @@ registerSystem("band-of-blades", {
     "tagShort": "Военное тёмное фэнтези об отступлении",
     "tagline": "«Война проиграна. Доведите Легион до крепости Скайдаггер, пока мёртвые не догнали».",
     "description": "Band of Blades — самостоятельная игра на движке Forged in the Dark в жанре военного тёмного фэнтези. Легион проиграл решающую битву с нежитью Пепельного Короля и отступает через Альдермарк к крепости Скайдаггер. Игроки проходят задания за новобранцев, солдат и специалистов, а затем командуют всем Легионом: выбирают миссии, делят припасы, считают погибших. Персонажи общие, потери неизбежны, а у кампании есть чёткий финал. Либо Легион дойдёт до крепости до зимы, либо сломается в пути.",
+    "pickIf": [
+      "хотите мрачную военную кампанию с чётким финалом: дойти до крепости или сломаться",
+      "группе нравится делить персонажей и вместе командовать всем Легионом",
+      "игроки готовы терять бойцов и делать горький выбор с припасами"
+    ],
+    "skipIf": [
+      "каждый хочет весь сезон вести одного любимого героя",
+      "вам нужны криминал и захват территорий, как в Blades in the Dark",
+      "группа хочет открытую кампанию без заданного финала"
+    ],
     "setting": "Альдермарк — земля, которую захватывают армии нежити Пепельного Короля. Легион, наёмный отряд из Восточных королевств, идёт вместе с одним из Избранных, человеком с силой бога, а Сломленные, Избранные, совращённые Пепельным Королём, гонят его к крепости Скайдаггер.",
     "vignette": "Ваш снайпер лежит в разрушенной мельнице, пока лейтенант Сломленной гонит гниющую пехоту к мосту, который должен удержать отряд. Вы тратите использование Прицеливания, берёте стресс ради лишнего кубика и бросаете четыре d6: старший результат — 5. Выстрел снимает лейтенанта, но вспышка выдаёт позицию, и ведущий запускает счётчик: орда разворачивается к мельнице. Двое новобранцев всё ещё на другом берегу.",
     "prep": "~30 мин",
@@ -77,6 +87,16 @@ registerSystem("band-of-blades", {
     "tagShort": "Military dark fantasy retreat",
     "tagline": "\"The war is lost. Get the Legion to Skydagger Keep before the dead catch up.\"",
     "description": "Band of Blades is a stand-alone Forged in the Dark game of dark military fantasy. The Legion lost the decisive battle against the Cinder King's undead and now retreats across Aldermark toward Skydagger Keep. Players run missions as Rookies, Soldiers and Specialists, then step back to command the whole Legion: choosing missions, rationing supplies, counting the dead. Characters are shared, casualties are expected, and the campaign has a defined end. Either the Legion reaches the keep before winter, or it breaks on the road.",
+    "pickIf": [
+      "you want a dark military campaign with a clear end: reach the keep or break",
+      "your group enjoys sharing characters and running the whole Legion together",
+      "players can handle losing soldiers and making grim supply choices"
+    ],
+    "skipIf": [
+      "players want to keep one beloved character for the whole campaign",
+      "you want the scoundrel crime and turf-building of Blades in the Dark",
+      "your table wants an open-ended campaign with no fixed finale"
+    ],
     "setting": "Aldermark, a land being overrun by the undead armies of the Cinder King. The Legion, a mercenary company from the Eastern Kingdoms, marches with one of the Chosen, a human carrying a god's power, while the Broken, Chosen corrupted by the Cinder King, hunt them toward Skydagger Keep.",
     "vignette": "Your Sniper lies in a ruined mill as a Broken lieutenant drives rotting infantry toward the bridge your squad must hold. You spend a use of Aim, push yourself for an extra die and roll four d6: highest is a 5. The shot drops the lieutenant, but the muzzle flash gives you away, and the GM starts a clock as the horde turns toward the mill. Two Rookies are still on the wrong side of the river.",
     "prep": "~30 min",

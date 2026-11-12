@@ -77,6 +77,16 @@ registerSystem("delta-green", {
     "tagShort": "Современный Ктулху-хоррор RPG",
     "tagline": "«Ктулху работает на правительство. И вы тоже».",
     "description": "Модерновый лавкрафтианский хоррор. Вы — федеральные агенты (ФБР, ЦРУ, АНБ, CDC), тайно борющиеся с космическим ужасом. Днём — бюрократия. Ночью — невозможные операции. Каждая миссия разрушает вашу личную жизнь: семью, друзей, рассудок. Механика отслеживает, как работа пожирает всё.",
+    "pickIf": [
+      "хотите современный космический ужас за федеральных агентов со значками",
+      "группе интересно смотреть, как работа съедает семьи и рассудок героев",
+      "нравятся операции с планированием, вылазкой и тяжёлыми последствиями"
+    ],
+    "skipIf": [
+      "нужны сыщики 1920-х — это скорее Call of Cthulhu",
+      "игроки хотят, чтобы герои восстанавливались и становились сильнее",
+      "группе медленные параноидальные расследования скучнее экшена"
+    ],
     "setting": "Современные США (или мир). За фасадом привычной реальности — инопланетные боги, культы, правительственные заговоры. Delta Green — нелегальная ячейка внутри спецслужб. Вы получаете SMS от неизвестного номера: «Ночная оперативка. Приезжайте по адресу...» И ваша жизнь никогда не будет прежней.",
     "vignette": "Вы — агент ФБР. На месте преступления — символы, которых нет ни в одной базе. Бросок Оккультизма: d100, нужно ниже 40. Выпало 38 — успех. Вы узнаёте знак. И теряете 1d6 Рассудка. Дома жена спрашивает, почему вы не пришли на ужин. Бросок на Связи — провал. Связь «Семья» падает с 12 до 10. Телефон вибрирует: новая операция.",
     "prep": "~30 мин",
@@ -132,6 +142,16 @@ registerSystem("delta-green", {
     "tagShort": "modern Lovecraftian agency RPG",
     "tagline": "\"Cthulhu works for the government. And so do you.\"",
     "description": "Modern Lovecraftian horror. You are federal agents (FBI, CIA, NSA, CDC) secretly fighting cosmic horror. By day — bureaucracy. By night — impossible operations. Every mission destroys your personal life: family, friends, sanity. The mechanics track how the job devours everything.",
+    "pickIf": [
+      "you want modern cosmic horror played as federal agents with badges",
+      "your group likes watching the job erode characters' families and sanity",
+      "you enjoy operations with planning, a field op and a grim aftermath"
+    ],
+    "skipIf": [
+      "you want 1920s investigators — Call of Cthulhu fits that better",
+      "your players want characters who recover and come out stronger",
+      "your group finds slow, paranoid investigation less fun than action"
+    ],
     "setting": "Modern-day USA (or the world). Behind the facade of everyday reality — alien gods, cults, government conspiracies. Delta Green is an illegal cell within the intelligence agencies. You get a text from an unknown number: 'Night op. Report to this address...' And your life will never be the same.",
     "vignette": "You're an FBI agent. At the crime scene — symbols that don't match any database. Occultism roll: d100, need under 40. Rolled 38 — success. You recognize the sign. And lose 1d6 Sanity. At home, your wife asks why you missed dinner. Bonds roll — failure. Bond 'Family' drops from 12 to 10. The phone buzzes: new operation.",
     "prep": "~30 min",

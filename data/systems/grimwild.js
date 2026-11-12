@@ -76,6 +76,16 @@ registerSystem("grimwild", {
     "tagShort": "Кинематографичное фэнтези на пуле d6",
     "tagline": "«Хватай самый высокий куб и надейся, что шипы промолчат».",
     "description": "Grimwild (2024) — героическое фэнтези от J. D. Maxwell и Oddity Press: знакомые классы вроде воина, плута и волшебника, но на движке в духе Blades in the Dark. Бросаете пул d6, смотрите на высший куб, мастер добавляет d8-«шипы» за сложность. Бесплатная редакция под CC BY 4.0 взяла золотой ENnie 2025 как лучший бесплатный продукт. Автор пропал со связи в 2025-м, и сообщество выпустило бесплатную Community Edition.",
+    "pickIf": [
+      "хотите классическое фэнтези с воином, плутом и волшебником на движке в духе Blades",
+      "группе нравится вместе рисовать карту мира по ходу игры",
+      "нужна бесплатная лёгкая система с быстрыми бросками пула d6"
+    ],
+    "skipIf": [
+      "хотите детальный тактический бой с точными цифрами",
+      "мастер предпочитает полностью подготовленный мир, а не совместное создание за столом",
+      "группа не любит, когда почти каждый бросок приносит осложнения"
+    ],
     "setting": "Без жёсткого сеттинга: классическое приключенческое фэнтези с подземельями, руинами и дикими землями. Карту региона, поселений и даже подземелий партия рисует вместе с мастером по ходу игры — узлами и тропами, как в пойнткроуле. Готовые модули и чужие сеттинги переносятся легко.",
     "vignette": "Плут лезет по стене башни, пока стража не обернулась. Ловкость 2 плюс одна искра — 3d6. Стена мокрая, и мастер добавляет за сложность один шип-d8. Выпало 6, 3, 2 — «идеально»… но на шипе 8, и результат срезается до «грязного». Плут на крыше, а мастер делает ход последствий: черепица с грохотом летит во двор. Мастер бросает пул «Тревога» из 4d6: 1, 5, 2, 6 — две кости ниже четвёрки уходят, в пуле осталось две. Когда опустеет — стража будет здесь.",
     "prep": "~20 мин",
@@ -116,6 +126,16 @@ registerSystem("grimwild", {
     "tagShort": "Cinematic heroic fantasy on a d6 pool",
     "tagline": "\"Grab the highest die and pray the thorns stay quiet.\"",
     "description": "Grimwild (2024) is a heroic fantasy RPG by J. D. Maxwell and Oddity Press: familiar classes like the fighter, rogue and wizard, run on a Blades in the Dark-style engine. Roll a pool of d6, read the highest die, and let the GM add d8 'thorns' for difficulty. The CC BY 4.0 Free Edition won the 2025 gold ENnie for Best Free Product. The designer went silent in 2025, and the community has since released a free Community Edition.",
+    "pickIf": [
+      "you want classic fighter-rogue-wizard fantasy on a Blades-style engine",
+      "your group likes drawing the world map together during play",
+      "you want a free, light system with quick d6-pool rolls"
+    ],
+    "skipIf": [
+      "you want detailed tactical combat with precise numbers",
+      "the GM prefers a fully prepared world to co-creating it at the table",
+      "your group dislikes complications landing on most rolls"
+    ],
     "setting": "No fixed setting: classic adventure fantasy with dungeons, ruins and wild country. The party and GM draw the region, settlements and even dungeons together during play, as nodes and paths in a pointcrawl. Published modules and other settings port in easily.",
     "vignette": "The rogue climbs the tower wall before the guards turn around. Agility 2 plus one spark — 3d6. The stones are slick, so the GM adds one d8 thorn for difficulty. The dice show 6, 3, 2 — perfect… but the thorn lands on 8 and cuts it to messy. The rogue reaches the roof, and the GM makes an impact move: a tile clatters into the courtyard. The GM rolls the 4d6 'Alarm' pool: 1, 5, 2, 6 — the two dice under 4 drop out, two remain. When the pool is empty, the guards arrive.",
     "prep": "~20 min",

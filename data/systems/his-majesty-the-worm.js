@@ -43,6 +43,16 @@ registerSystem("his-majesty-the-worm", {
     "tagShort": "данжен-кроулер на картах таро",
     "tagline": "«Спустись под Город на Краю Света».",
     "description": "404-страничный том о походах в подземелья: новые механики на старой школьной основе. Вместо одних кубов партия тянет карты из колоды таро — они решают бой, гадание и драму. Слотовый инвентарь, свет, еда и Узы между героями здесь не бухгалтерия, а сердце долгого метроидвания-спуска.",
+    "pickIf": [
+      "хотите долгую кампанию в мегаподземелье, где важны свет, еда и слоты",
+      "группе нравится, что бой и предзнаменования решает колода таро",
+      "игрокам важны Узы и отношения между персонажами"
+    ],
+    "skipIf": [
+      "хотите быстро начать, а основная книга — 404 страницы",
+      "группе скучно считать инвентарь и свет",
+      "хотите свободный данжен-кроул без чётких процедур"
+    ],
     "setting": "Искатели спускаются в подземелья под Городом на Краю Света — последним городом, окружённым тьмой. Таро вершит судьбу: карты для боя, для чтения знамений, для запутанных связей между героями. Труппная игра про отношения, где кого любит ваш герой важно не меньше, чем что он несёт.",
     "vignette": "Свет факела дрожит — вы тянете карту на встречу: Башня, перевёрнутая. Рефери улыбается. Слоты инвентаря почти забиты: верёвка, фонарь, реликвия без имени, — а свет на исходе. Кто-то должен что-то бросить или повернуть назад. Ваши Узы с вором говорят: вы его не оставите. Вы тянете снова.",
     "prep": "~30 мин",
@@ -71,6 +81,16 @@ registerSystem("his-majesty-the-worm", {
     "tagShort": "tarot-driven dungeon crawler",
     "tagline": "\"Descend beneath the City at the End of the World.\"",
     "description": "A 404-page dungeon-crawling tome with new-school mechanics and old-school sensibilities. Instead of dice alone, the party draws from a tarot deck that drives combat, divination, and drama. Slot-based inventory, light, food, and character Bonds aren't bookkeeping — they're the heart of a long, Metroidvania-like descent.",
+    "pickIf": [
+      "you want a long megadungeon campaign where light, food and slots matter",
+      "your group likes a tarot deck driving combat and omens",
+      "players care about Bonds and relationships between characters"
+    ],
+    "skipIf": [
+      "you want a quick start, since the core book is a 404-page tome",
+      "your group finds inventory and light tracking tedious",
+      "you want freeform dungeon play without set procedures"
+    ],
     "setting": "Adventurers delve the dungeons beneath the City at the End of the World — the last city, ringed by darkness. The tarot shapes fate: cards for combat, for reading omens, for the tangled bonds between characters. Troupe-style, relationship-driven play where who your character loves matters as much as what they carry.",
     "vignette": "Torchlight gutters as you draw for the encounter: the Tower, reversed. The Referee smiles. Your slot inventory is nearly full — rope, lantern, a relic you can't yet name — and the light is running out. Someone has to drop something, or turn back. Your Bond with the thief says you won't leave them behind. You draw again.",
     "prep": "~30 min",

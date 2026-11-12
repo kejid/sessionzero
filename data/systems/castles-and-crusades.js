@@ -72,6 +72,16 @@ registerSystem("castles-and-crusades", {
     "tagShort": "Стримлайн AD&D на едином движке SIEGE",
     "tagline": "«D&D, каким вы его помните — но с одной механикой проверок на всё».",
     "description": "Castles & Crusades — это ощущение AD&D на шасси d20, но с гениальным упрощением: движок SIEGE сводит все проверки к одной механике. Издаётся Troll Lord Games с 2004 года при участии авторов оригинальной D&D (Гэри Гайгэкс консультировал). Мост между старой школой и понятным современным дизайном; не строгий OSR, но с тем же духом.",
+    "pickIf": [
+      "хотите дух AD&D и одну простую механику d20 на все проверки",
+      "группа хочет водить старые модули AD&D и OSR почти без переделок",
+      "игрокам нужны классы и уровни без долгого планирования билдов"
+    ],
+    "skipIf": [
+      "хотите строгую олдскульную классику без современных правок d20",
+      "группе важнее сюжетные механики, чем подземелья и сокровища",
+      "игроки любят глубокую оптимизацию через черты и билды"
+    ],
     "setting": "Система-агностик с подразумеваемым классическим фэнтези (официальный сеттинг — Айзос/Aihrde). Рыцари, подземелья, драконы и древние руины. Дух — героическое приключение старой школы: исследуй, сражайся, богатей. Легко переносит любые модули AD&D и OSR почти без конвертации.",
     "vignette": "Замковый Хранитель описывает ров с обрушенным мостом. Дwarf-воин хочет перепрыгнуть. Сила — его прайм-атрибут, значит база сложности 12. Бросок d20 + уровень + модификатор Силы против 12 плюс уровень испытания. Выпало 15 — с запасом. Он приземляется на той стороне, меч наготове. Один бросок, одна механика — и снова в игру.",
     "prep": "~15 мин",
@@ -122,6 +132,16 @@ registerSystem("castles-and-crusades", {
     "tagShort": "Streamlined AD&D on the unified SIEGE engine",
     "tagline": "\"The game the way it used to be — with one check mechanic for everything.\"",
     "description": "Castles & Crusades is the feel of AD&D on a d20 chassis, with one brilliant simplification: the SIEGE engine resolves every check with a single mechanic. Published by Troll Lord Games since 2004 with input from original D&D authors (Gary Gygax consulted). A bridge between old-school play and clean modern design — not strict OSR, but cut from the same cloth.",
+    "pickIf": [
+      "you want the feel of AD&D with one simple d20 mechanic for every check",
+      "your group wants to run old AD&D and OSR modules with little conversion",
+      "players want classes and levels without long build planning"
+    ],
+    "skipIf": [
+      "you want strict old-school rules with no modern d20 touches",
+      "your table wants story-first mechanics over dungeons and treasure",
+      "players enjoy deep character optimisation with feats and builds"
+    ],
     "setting": "Setting-agnostic, with an implied classic fantasy (the official setting is Aihrde). Knights, dungeons, dragons, and ancient ruins. The spirit is old-school heroic adventure: explore, fight, grow rich. It runs virtually any AD&D or OSR module with almost no conversion.",
     "vignette": "The Castle Keeper describes a moat with a collapsed bridge. The dwarf fighter wants to leap it. Strength is his prime attribute, so the Challenge Base is 12. He rolls d20 + level + Strength mod against 12 plus the challenge level. He rolls a 15 — clears it easily, landing on the far side, sword ready. One roll, one mechanic, and back into the action.",
     "prep": "~15 min",

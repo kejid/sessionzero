@@ -75,6 +75,15 @@ registerSystem("fallout-2d20", {
     "tagShort": "Официальная ролёвка по Fallout на 2d20",
     "tagline": "«Война никогда не меняется. А вот ваш отряд выживших — ещё как».",
     "description": "Официальная настольная RPG по Fallout от Modiphius на движке 2d20. S.P.E.C.I.A.L., перки, Пип-Бой, ядер-кола и силовая броня — всё на месте. Вы собираете отряд из выходца из Убежища, гуля, супермутанта, Паладина Братства или даже робота мистера Помощника и выходите в Пустошь. Бои с картой зон и попаданиями по частям тела, выживание с голодом и радиацией, своё поселение.",
+    "pickIf": [
+      "группа любит игры Fallout и хочет Убежища, силовую броню и Nuka-Cola",
+      "хотите выживание в Пустоши с голодом, радиацией и своим поселением",
+      "нравятся пёстрые отряды: гули, супермутанты и роботы рядом с людьми"
+    ],
+    "skipIf": [
+      "нужно лёгкое выживание — пулы AP, кубики урона и локации попаданий требуют учёта",
+      "группе нужна мрачная серьёзность без чёрного юмора"
+    ],
     "setting": "Ретрофутуристическая Америка через двести лет после ядерной войны 2077 года. Базовая книга — Содружество времён Fallout 4: Даймонд-Сити, Братство Стали, Институт, рейдеры и болотники. Дополнения ведут в Аппалачию, а гайд по Нью-Вегасу — в Мохаве по следам Курьера. Тон — чёрный юмор, ржавый оптимизм пятидесятых и пустоши, где каждый патрон на счету.",
     "vignette": "Рейдер прячется за ржавым «Хайвейменом» на средней дистанции. Ваш житель Убежища стреляет из пистолета: AGI 7 + Лёгкое оружие 3 (отмеченный навык) — целевое число 10. Защита рейдера 1, но пистолет хорош вблизи, а здесь средняя дистанция — сложность 2. Тратите 1 AP из общего пула на третий d20. Выпало 2, 9 и 17: двойка не выше ранга отмеченного навыка — критический успех, он же два успеха; девятка — ещё один; итого 3 при сложности 2, лишний успех возвращается в пул как AP. Бросаете 4 боевых кубика урона: 1, 2, пусто и 1 с символом Эффекта — 4 урона, и рейдер валится в пыль.",
     "prep": "~30 мин",
@@ -129,6 +138,15 @@ registerSystem("fallout-2d20", {
     "tagShort": "The official Fallout RPG on the 2d20 System",
     "tagline": "\"War never changes. Your band of survivors, on the other hand, will.\"",
     "description": "Modiphius's official tabletop Fallout RPG, built on the 2d20 System. S.P.E.C.I.A.L., perks, the Pip-Boy, Nuka-Cola and power armor are all here. You build a party from a Vault Dweller, a Ghoul, a Super Mutant, a Brotherhood Initiate or even a Mister Handy robot and head into the Wasteland. Zone-based combat with hit locations, survival with hunger and radiation, and a settlement of your own.",
+    "pickIf": [
+      "your group loves the Fallout games and wants Vaults, power armor and Nuka-Cola",
+      "you want wasteland survival with hunger, radiation and a settlement to build",
+      "you like mixed parties: ghouls, super mutants and robots beside humans"
+    ],
+    "skipIf": [
+      "you want rules-light survival — AP pools, combat dice and hit locations add bookkeeping",
+      "your group wants grim seriousness without gallows humor"
+    ],
     "setting": "Retro-futuristic America two centuries after the nuclear war of 2077. The core book covers the Commonwealth of Fallout 4: Diamond City, the Brotherhood of Steel, the Institute, raiders and mirelurks. Supplements head to Appalachia, and the New Vegas Setting Guide follows the Courier into the Mojave. The tone is gallows humor, rusted 1950s optimism, and wastelands where every bullet counts.",
     "vignette": "A raider ducks behind a rusted Highwayman at Medium range. Your Vault Dweller fires a pistol: AGI 7 + Small Guns 3 (a Tag skill) gives a target number of 10. The raider's Defense is 1, but a pistol works best up close, so Medium range bumps the difficulty to 2. You spend 1 AP from the group pool for a third d20. You roll 2, 9 and 17: the 2 is at or under your Tag skill rank, a critical worth two successes; the 9 adds one more. Three successes against difficulty 2 — the spare success goes back into the pool as AP. You roll 4 Combat Dice for damage: 1, 2, a blank and a 1 with an Effect symbol — 4 damage, and the raider drops into the dust.",
     "prep": "~30 min",

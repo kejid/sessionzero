@@ -75,6 +75,16 @@ registerSystem("cain", {
     "tagShort": "Психики-экзорцисты против грехов",
     "tagline": "«Сотри пятно. Не думай слишком много».",
     "description": "CAIN (2024) — нарративный хоррор от Тома Блума, автора Lancer и Maleghast, изданный его импринтом CHASM. Вы — экзорцисты: психические солдаты на службе теневой сверхгосударственной организации CAIN, которые выслеживают и казнят «грехи» — чудовищ, рождённых из человеческой травмы. Чем сильнее вы становитесь, тем ближе к тому, чтобы самим превратиться в грех. Эстетика «стикеркора»: манга, коллаж, служебные записки и пропуска вместо врезок.",
+    "pickIf": [
+      "хотите аниме-хоррор в духе «Человека-бензопилы» или «Евангелиона»",
+      "группе нравятся миссии от расследования до жестокой казни",
+      "игрокам интересно становиться сильнее, приближаясь к превращению в монстра"
+    ],
+    "skipIf": [
+      "за столом хотят лёгкой игры без темы травмы",
+      "хотите уютный или героический тон вместо мрачного психического хоррора",
+      "мастер хочет обходиться почти без подготовки, а охота её требует"
+    ],
     "setting": "Человечество проклято: в нём бурлит психическое море, порождённое тёмными уголками души. Когда у чувствительного человека сила вырывается наружу на волне страданий, рождается грех. Организация CAIN держит экзорцистов на служебной земле и платит им служебными купонами: неделя отлучки под надзором стоит 15, казнь греха приносит 5. Отсылки — Chainsaw Man, Евангелион, SCP.",
     "vignette": "Охота третий день идёт плохо: мастер (здесь его зовут Admin) уже убил свидетеля и подослал мелких тварей. Экзорцистка наконец загоняет грех в его логово — заброшенную школу. Она рвётся сквозь стену из волос: пул 3d6, выпало 5, 2, 4 — две кости на 4+, у неё получается. Но Admin бросает отдельный кубик риска, и отдача накрывает её: две зарубки на талисмане казни. Талисман заполнен — следующий удар станет травмой. А уровень греха уже у предела: если в конце сцены он перельётся через край, ей придётся сопротивляться — или стать новым грехом.",
     "prep": "~45 мин",
@@ -115,6 +125,16 @@ registerSystem("cain", {
     "tagShort": "Psychic exorcists hunt trauma-born sins",
     "tagline": "\"Wipe out the stain. Don't think too much.\"",
     "description": "CAIN (2024) is a narrative horror RPG by Tom Bloom, creator of Lancer and Maleghast, published under his CHASM imprint. You play exorcists: psychic soldiers serving a supranational shadow organisation called CAIN, hunting and executing 'sins' — monsters born of human trauma. The stronger you get, the closer you come to becoming a sin yourself. The look is 'stickercore': manga screentone, collage, memos and ID cards in place of sidebars.",
+    "pickIf": [
+      "you want anime-flavoured horror like Chainsaw Man or Evangelion",
+      "your group likes missions that move from investigation to a brutal execution",
+      "players enjoy growing stronger while edging closer to becoming monsters"
+    ],
+    "skipIf": [
+      "your table wants low-stakes fun without trauma themes",
+      "you want a cozy or heroic tone instead of grim psychic horror",
+      "your GM wants nearly zero prep; hunts need preparation"
+    ],
     "setting": "Humanity is cursed with a roiling psychic sea born from the darkest parts of the soul. When a sensitive host's power bursts free through trauma and suffering, a sin appears. CAIN houses its exorcists on company land and pays them in scrip: a week of supervised absence costs 15, executing a sin earns 5. Think Chainsaw Man, Evangelion and the SCP Foundation.",
     "vignette": "Day three of the hunt is going badly: the Admin has already killed a witness and sent minions after the team. The exorcist finally corners the sin in its lair, an abandoned school. She tears through a wall of hair: a 3d6 pool comes up 5, 2, 4 — two dice at 4+, and she gets through. But the Admin rolls the separate risk die and the backlash lands: two slashes on her execution talisman. The talisman is full — the next hit becomes an injury. And her sin is near its limit: if it overflows at the end of the scene, she must resist — or become a sin herself.",
     "prep": "~45 min",

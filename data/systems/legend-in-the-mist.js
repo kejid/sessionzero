@@ -80,6 +80,16 @@ registerSystem("legend-in-the-mist", {
     "tagShort": "2d6 — «деревенское» фэнтези на тегах",
     "tagline": "«Ты всего лишь сборщик яблок. Пока что».",
     "description": "Legend in the Mist (2025) — фэнтезийная RPG от Son of Oak Game Studio, создателей City of Mist, на обновлённом Mist Engine. Никаких характеристик: герой собран из тегов, каждый подходящий тег даёт +1 к Силе броска 2d6. Вместо восьми базовых ходов City of Mist — один универсальный бросок, а тактические «эффекты» включаются по желанию. Герои начинают простыми людьми из глухой деревни и дорастают до легенд.",
+    "pickIf": [
+      "хотите деревенское фэнтези, где простые жители вырастают в легенды",
+      "группе нравится описывать героя тегами, а не характеристиками",
+      "хотите, чтобы темы персонажей менялись по ходу кампании"
+    ],
+    "skipIf": [
+      "нужны классические искатели приключений с характеристиками, классами и добычей",
+      "группа не любит спорить, какие теги подходят к броску",
+      "хотите высокое фэнтези с яркой магией"
+    ],
     "setting": "Жанр, который авторы называют «деревенским фэнтези»: хоббиты, а не паладины, магия редкая, странная и пугающая. Базовая книга не привязана к миру, а сопутствующий сеттинг Hearts of Ravensdale начинается в горных Долинах (the Dales) и деревне Равенхоум после падения древней цивилизации. Для одиночной и кооперативной игры во второй книге есть Оракул.",
     "vignette": "У ячменного поля из колосьев выползает болотный мертвец в ржавых латах. Знахарка хочет понять, что это за тварь. Мастер берёт детальный бросок. Подходят два тега — «повидала всякое» и «сумеречные встречи», Сила 2. 2d6 выпало 11, итог 13: успех без последствий. Знахарка тратит 2 Силы на эффект «узнать» — мастер обязан открыть две ценные детали: в теле сидит злой дух, и обережный знак может его изгнать. Но мертвец уже заносит клинок — в следующем ходу мастер наградит кого-то статусом «порез-3».",
     "prep": "~20 мин",
@@ -121,6 +131,16 @@ registerSystem("legend-in-the-mist", {
     "tagShort": "2d6 tag-based rustic fantasy",
     "tagline": "\"You're just an apple picker. For now.\"",
     "description": "Legend in the Mist (2025) is a fantasy RPG from Son of Oak Game Studio, the makers of City of Mist, built on an updated Mist Engine. There are no stats: a hero is made of tags, and every relevant tag adds +1 Power to a 2d6 roll. City of Mist's eight core moves are merged into a single roll, and the tactical 'Effects' layer is switched on only when you want it. Heroes start as ordinary folk from a remote village and grow into legends.",
+    "pickIf": [
+      "you want rustic fantasy where village folk grow into legends",
+      "your group likes describing heroes with tags instead of stats",
+      "you want characters whose themes change over the campaign"
+    ],
+    "skipIf": [
+      "you want classic adventurers with stats, classes and loot",
+      "your group dislikes debating which tags apply to a roll",
+      "you want high-magic fantasy with flashy spells"
+    ],
     "setting": "What the designers call 'rustic fantasy': hobbits rather than paladins, with rare, strange and frightening magic. The core rules are setting-agnostic; the companion setting, Hearts of Ravensdale, begins in a mountain community called the Dales and the village of Ravenhome, long after a great civilisation fell. The Narrator's book adds an Oracle for solo and co-op play.",
     "vignette": "A bog corpse in rusted armour lurches out of the barley. The Wise One wants to know what this thing is, so the Narrator calls for a detailed roll. Two tags apply — seen a thing or two and twilight encounters — for Power 2. The 2d6 come up 11, total 13: success with no Consequences. She spends 2 Power on the Discover effect, and the Narrator must reveal two valuable details: an evil spirit drives the body, and a ward of protection may expel it. But the corpse is already raising its blade — next turn, someone is taking a slashed-3 status.",
     "prep": "~20 min",

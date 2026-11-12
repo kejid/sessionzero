@@ -74,6 +74,15 @@ registerSystem("dungeon-world", {
     "tagShort": "Фэнтези на PbtA: D&D без миниатюр",
     "tagline": "«Простые правила, живая фантазия, драконы без инициативы».",
     "description": "Dungeon World — настольная RPG в жанре фэнтези на движке Powered by the Apocalypse (PbtA), созданная Сэйджем Латорра и Адамом Кёбелем (2012). D&D-трупы (классы, расы, данжины) с нарративными механиками: бросок 2d6, частичный успех, провал как XP. Правила отпущены по Creative Commons. Одна из самых influential PbtA-игр, породившая десятки хаков.",
+    "pickIf": [
+      "хотите классическое подземельное фэнтези на быстрых нарративных правилах PbtA",
+      "мастер любит импровизировать по ответам игроков, а не готовить мир заранее",
+      "нравится 2d6, где 7–9 — успех с ценой"
+    ],
+    "skipIf": [
+      "нужен тактический бой по клеткам и точное позиционирование",
+      "мастеру спокойно только с заранее готовым миром и приключением"
+    ],
     "setting": "Классическое фэнтезийное мира — подземелья, драконы, таверны. Не столько мир, сколько обстановка: GM описывает ситуацию, игроки решают, что делать. Мир рождается за столом через вопросы GM и ответы игроков.",
     "vignette": "Варвар ломится в дверь данжина. Бард начинает петь — 2d6+CHA, 10+! Песня воодушевляет стражу, и вор, пока все слушают, залезает в окно. Вдруг — крик! Дракон. Варвар кричит «Я прыгаю ему в пасть!» — 2d6+STR, 7. Частичный успех: прыгнул, но дракон захлопнул челюсти. Теперь нужно Defy Danger, чтобы выбраться. Провал = XP. Но и успех = история.",
     "prep": "~10 мин",
@@ -124,6 +133,15 @@ registerSystem("dungeon-world", {
     "tagShort": "PbtA fantasy — D&D without minis",
     "tagline": "\"Simple rules, living fantasy, dragons without initiative rolls.\"",
     "description": "Dungeon World is a fantasy tabletop RPG powered by the Apocalypse engine (PbtA), created by Sage LaTorra and Adam Koebel (2012). Classic D&D trappings — classes, races, dungeons — with narrative mechanics: roll 2d6, partial success, failure as XP. Rules released under Creative Commons. One of the most influential PbtA games, spawning dozens of hacks and derivatives.",
+    "pickIf": [
+      "you want classic dungeon fantasy on fast, narrative PbtA rules",
+      "your GM likes improvising from player answers instead of prepping a world",
+      "you like 2d6 rolls where a 7–9 means success at a cost"
+    ],
+    "skipIf": [
+      "you want tactical grid combat and precise positioning",
+      "your GM only feels comfortable with a prepared world and adventure"
+    ],
     "setting": "Classic fantasy — dungeons, dragons, taverns. Not so much a world as a situation: the GM describes the scene, players decide what to do. The world is born at the table through GM questions and player answers.",
     "vignette": "The barbarian kicks in the dungeon door. The bard starts a song — 2d6+CHA, 10+! The song inspires the guard, and the rogue slips through the window while everyone listens. Suddenly — a scream! A dragon. The barbarian shouts 'I jump into its maw!' — 2d6+STR, 7. Partial success: jumped in, but the dragon snaps its jaws shut. Now Defy Danger to get out. Failure = XP. But success = story.",
     "prep": "~10 min",

@@ -46,6 +46,16 @@ registerSystem("avatar-legends", {
     "tagShort": "PbtA по «Аватару» и «Легенде о Корре»",
     "tagline": "«Власть над стихией — ничто без равновесия внутри».",
     "description": "Avatar Legends: The Roleplaying Game — официальная ролевая игра Magpie Games по «Аватару: Легенде об Аанге» и «Легенде о Корре» на движке Powered by the Apocalypse. Вы и ваша группа собираете отряд юных героев в любой эпохе мира Аватара, покоряете четыре стихии и решаете конфликты словом не реже, чем кулаком. Игра о взрослении, дружбе и борьбе между двумя сторонами собственной личности.",
+    "pickIf": [
+      "группа любит «Аватар: Легенда об Аанге» или «Легенду о Корре»",
+      "хотите юных героев, которые решают конфликты словами не реже, чем магией стихий",
+      "игрокам нравятся персонажи, разрывающиеся между двумя принципами"
+    ],
+    "skipIf": [
+      "хотите мрачных смертельных схваток, где герои гибнут",
+      "за столом предпочитают кранчевый бой с кучей цифр",
+      "никто за столом не знает и не любит мир Аватара"
+    ],
     "setting": "Мир четырёх народов — Воды, Земли, Огня и Воздуха — во все эпохи, от романов о Киоши до индустриального Республиканского города Корры. Маги стихий и обычные люди живут среди войн, политики, духов и личных распрей. Вы выбираете эпоху и стартовый конфликт и рассказываете свою историю в живом мире боевых искусств и нравственного выбора.",
     "vignette": "Маг огня загоняет вашу магиню воды в угол на причале. Вы выбираете подход «Наступать и атаковать» и бросаете 2d6 + подход: выпадает 8. Успех с осложнением — вы наносите удар и накладываете Статус, но тратите Усталость на приём, и ведущий сдвигает ваше Равновесие к Страсти. Перешагнёте +3 — потеряете контроль; ещё один удар по чувствам — и вместо этого вы отмечаете состояние «Злость».",
     "prep": "~15 мин",
@@ -73,6 +83,16 @@ registerSystem("avatar-legends", {
     "tagShort": "PbtA in the world of Avatar and Korra",
     "tagline": "\"Power over the elements means nothing without balance within.\"",
     "description": "Avatar Legends: The Roleplaying Game is Magpie Games' official RPG for Avatar: The Last Airbender and The Legend of Korra, built on Powered by the Apocalypse. You and your group form a company of young heroes in any era of the Avatarverse, bending the four elements and settling conflicts as often with words as with fists. It's a game about growth, community, and the pull between two sides of who you are.",
+    "pickIf": [
+      "your group loves Avatar: The Last Airbender or The Legend of Korra",
+      "you want young heroes who settle conflicts with words as often as bending",
+      "players enjoy characters torn between two opposing principles"
+    ],
+    "skipIf": [
+      "you want grim, lethal fights where heroes die",
+      "your table prefers crunchy, number-heavy combat",
+      "nobody at the table knows or cares about the Avatar setting"
+    ],
     "setting": "The world of the four nations — Water, Earth, Fire, Air — across every era, from the Kyoshi novels to Korra's industrial Republic City. Benders and non-benders alike navigate war, politics, spirits, and personal rivalries. You pick an era and a starting conflict, then tell your own story in a lived-in world of martial-arts action and moral weight.",
     "vignette": "A firebending duelist corners your waterbender on the pier. You commit to the Advance & Attack approach and roll 2d6 + that approach: an 8. Success with a catch — you land the hit and inflict a Status, but you mark Fatigue to power it, and the GM shifts your Balance toward Passion. Push past +3 and you lose control; take one more blow to the heart and you're marking the Angry condition instead.",
     "prep": "~15 min",

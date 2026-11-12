@@ -69,6 +69,15 @@ registerSystem("draw-steel", {
     "tagShort": "Тактическое героическое фэнтези",
     "tagline": "«Каждый удар — кинематографичен. Промахов не существует. Вопрос лишь — насколько вы круты.»",
     "description": "Героическое фэнтези нового типа. Не толкиновское, не днд-шное. Мир Ордена — место, где герои действительно меняют историю. Демоны, рыцари, политика и надежда. Тон: оптимистично-героический. Каждое действие ВСЕГДА что-то делает — кубики определяют СКОЛЬКО, а не ДА/НЕТ. Промахов не существует.",
+    "pickIf": [
+      "хотите тактический бой с позиционированием, где любое действие что-то делает — промахов нет",
+      "игрокам нравится разгон: герои сильнее с каждой новой Victory",
+      "нужны отдельные правила переговоров, а не один бросок Убеждения"
+    ],
+    "skipIf": [
+      "хотите быстрые бои «в воображении» почти без позиций",
+      "группе ближе мрачное выживание слабых, обычных персонажей"
+    ],
     "setting": "Героическое фэнтези нового типа. Не толкиновское, не днд-шное. Мир Ордена — место, где герои действительно меняют историю. Демоны, рыцари, политика и надежда. Тон: оптимистично-героический.",
     "vignette": "Бой с некромантом. Ваш Тактик приказывает союзнику сместиться — бесплатное перемещение. Шедоу проскальзывает за спину врага. 2d10: 15, успех второго уровня! Критический удар + эффект «Ослепление». Некромант шатается. Ярость вашего Фьюри нарастает — каждая победа открывает новые способности. Следующий удар будет ЕЩЁ мощнее.",
     "prep": "~25 мин",
@@ -119,6 +128,15 @@ registerSystem("draw-steel", {
     "tagShort": "tactical heroic fantasy RPG",
     "tagline": "\"Every strike is cinematic. Misses don't exist. The only question is — how awesome are you.\"",
     "description": "Heroic fantasy of a new kind. Not Tolkien-esque, not D&D-esque. The world of the Order is a place where heroes truly change history. Demons, knights, politics, and hope. Tone: optimistically heroic. Every action ALWAYS does something — dice determine HOW MUCH, not YES/NO. There are no misses.",
+    "pickIf": [
+      "you want positional tactical combat where every action lands — no misses",
+      "your players like momentum: heroes get stronger as Victories pile up",
+      "you want structured negotiation rules, not a single Persuasion roll"
+    ],
+    "skipIf": [
+      "you want quick theatre-of-the-mind fights with little positioning",
+      "your group prefers gritty survival as weak, ordinary characters"
+    ],
     "setting": "A new kind of heroic fantasy. Not Tolkien, not D&D. The world of the Order is a place where heroes truly shape history. Demons, knights, politics, and hope. Tone: optimistically heroic.",
     "vignette": "Battle with a necromancer. Your Tactician commands an ally to reposition — free movement. The Shadow slips behind the enemy. 2d10: 15, tier 2 success! Critical hit + 'Blinded' effect. The necromancer staggers. Your Fury's rage builds — every victory unlocks new abilities. The next strike will be EVEN more powerful.",
     "prep": "~25 min",

@@ -42,6 +42,16 @@ registerSystem("godbound", {
     "tagShort": "OSR про полубогов",
     "tagline": "«Присвойте орудия исчезнувшего Бога и перепишите мир».",
     "description": "Godbound делает игроков юными богами в надломленном мире, покинутом Творцом. В основе — привычный движок OSR: бросок d20 на попадание, спасброски, Класс брони. Но поверх лежит божественный масштаб: атаки наносят фиксированный прямой урон, сметающий смертные армии, Слова Творения дают чудесные Дары, а вложенное Усилие питает чудеса. Между схватками Владычество позволяет вашим деяниям навсегда менять королевства, переписывать Факты реальности и вести за собой целые фракции.",
+    "pickIf": [
+      "хотите играть богами, которые громят армии и переписывают реальность",
+      "группе нравятся OSR-броски d20, но в божественном масштабе",
+      "хотите, чтобы поступки героев перекраивали королевства и фракции"
+    ],
+    "skipIf": [
+      "хотите жёсткое выживание, где героя может убить гоблин",
+      "игрокам нужен готовый список заклинаний, а не импровизированные чудеса",
+      "нужен камерный данжен-кроул небольшого масштаба"
+    ],
     "setting": "Мир по умолчанию, Арцем, — это падшее царство угасающих чудес и зыбких законов природы, оставшееся без владыки, когда его Бог исчез, а орудия творения выскользнули на свободу. Пустоты заполняют руины империй, враждующие теократии и интригующие небожители. В этот мир вы восходите как Godbound — смертный, внезапно наделённый осколком божественной власти, вольный спасти мир, править им или сжечь его дотла.",
     "vignette": "Отряд хобгоблинов заполоняет мост. Вы призываете Дар Меча, бросаете d20 против их вожака и попадаете — никаких костей урона, лишь неизменные 8 прямого урона вашей божественной силы, чтобы свалить его наповал. Вы вкладываете единицу Усилия, чтобы Дар горел до конца хода. Затем вы произносите своё Слово Огня: это чудо, а не готовая способность, и весь пролёт вспыхивает белым пламенем, отрезая остаток орды на дальнем берегу.",
     "prep": "~30 мин",
@@ -69,6 +79,16 @@ registerSystem("godbound", {
     "tagShort": "Demigod-tier OSR",
     "tagline": "\"Seize the tools of an absent God and rewrite the world.\"",
     "description": "Godbound casts players as nascent gods in a broken world abandoned by its Creator. It runs on a familiar OSR chassis — roll a d20 to hit, make saves, watch your Armor Class — but layers on divine scale: attacks deal fixed straight damage that shreds mortal armies, Words of Creation grant world-bending Gifts, and committed Effort powers miracles. Between fights, Dominion lets your deeds permanently reshape kingdoms, rewrite the Facts of reality, and steer whole factions across the campaign map.",
+    "pickIf": [
+      "you want to play gods who topple armies and rewrite reality",
+      "your group likes OSR d20 rolls but at divine scale",
+      "you want deeds that reshape kingdoms and factions across a campaign"
+    ],
+    "skipIf": [
+      "you want gritty survival where a goblin can kill you",
+      "your players need a fixed spell list rather than improvised miracles",
+      "you want a small, tight dungeon crawl"
+    ],
     "setting": "The default world of Arcem is a fallen realm of decaying wonders and uncertain natural law, left leaderless when its God vanished and the tools of creation slipped free. Ruined empires, warring theocracies, and scheming celestials fill the gaps. Into this you rise as a Godbound: a mortal suddenly graced with a shard of divine authority, free to save the world, rule it, or burn it down.",
     "vignette": "A hobgoblin warband floods the bridge. You call on your Sword Gift, roll a d20 against their leader, and connect — no damage dice, just the straight 8 your divine strength always deals, enough to drop him outright. You commit a point of Effort to keep the Gift burning through the turn. Then you speak your Word of Fire: a miracle, not a listed power, and the whole span erupts in white flame, stranding the rest of the host on the far bank.",
     "prep": "~30 min",

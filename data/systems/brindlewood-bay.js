@@ -47,6 +47,16 @@ registerSystem("brindlewood-bay", {
     "tagShort": "Уютные детективы с ноткой космического ужаса",
     "tagline": "«„Она написала убийство“ встречает Лавкрафта».",
     "description": "В Brindlewood Bay вы играете за Мавенов-детективов, книжный клуб остроумных пожилых дам, которые раскрывают убийства в тихом городке Новой Англии, пока под чашками чая шевелится космический культ. Движок Carved from Brindlewood устроен так, что у загадок нет заранее заданного решения: вы собираете улики, сплетаете их в теорию и бросаете 2d6, чтобы проверить догадку. Уютное расследование и ползучий лавкрафтианский ужас в равной мере.",
+    "pickIf": [
+      "хотите уютных детективов про убийства с ползучим космическим ужасом на фоне",
+      "группе нравится самой собирать разгадку из улик, без заранее известного убийцы",
+      "нужны дела с минимальной подготовкой, которые связывает медленно раскрываемый заговор"
+    ],
+    "skipIf": [
+      "игроки хотят классический детектив с единственным верным ответом",
+      "за столом ждут боёв, добычи или роста силы персонажей",
+      "хотите настоящего хоррора, а не чая, вязания и тихой жути"
+    ],
     "setting": "Приморская деревушка Бриндлвуд-Бей, современная Новая Англия: пастельные домики, церковные ярмарки выпечки и сплочённый книжный клуб. За открыточным покоем таится Тёмный Заговор, оккультный культ и космические сущности, которых Мавены раскрывают дело за делом, сессию за сессией.",
     "vignette": "Мавены собираются за остывшим ромашковым чаем: надорванный билет на паром, пропавший большой палец смотрителя маяка и соль, рассыпанная у крыльца вдовы, всё указывает в одну сторону. Рут заявляет, что регент хора утопил дьякона, скрывая контрабанду. Они считают четыре объяснённые улики, вычитают Сложность загадки и бросают 2d6, выпадает 9. Верно, но преступник ускользает с уличающим сборником гимнов.",
     "prep": "~15 мин",
@@ -75,6 +85,16 @@ registerSystem("brindlewood-bay", {
     "tagShort": "Cozy murder mysteries with a cosmic-horror undertow",
     "tagline": "\"Murder, She Wrote meets Lovecraft.\"",
     "description": "Brindlewood Bay casts you as the Murder Mavens, a book club of sharp-witted old ladies who solve killings in a quaint New England town while a cosmic cult stirs beneath the clam chowder. Built on the Carved from Brindlewood engine, its mysteries have no predetermined solution: you gather clues, weave them into a theory, and roll 2d6 to see if you cracked it. Cozy sleuthing and creeping Lovecraftian dread, in equal measure.",
+    "pickIf": [
+      "you want cozy murder mysteries with a creeping cosmic-horror undertow",
+      "your group likes building the solution itself from clues, with no fixed culprit",
+      "you want low-prep cases tied together by a slow-burning conspiracy"
+    ],
+    "skipIf": [
+      "your players want a real whodunit with one true answer to deduce",
+      "your table wants combat, loot or character power growth",
+      "you want full-on horror rather than tea, knitting and quiet dread"
+    ],
     "setting": "The seaside village of Brindlewood Bay, present-day New England: pastel cottages, church bake sales, and a tight-knit mystery book club. Under the postcard calm lurks the Dark Conspiracy, an occult cult and cosmic entities the Mavens uncover case by case, session by session.",
     "vignette": "The Mavens gather over lukewarm chamomile: the torn ferry ticket, the lighthouse-keeper's missing thumb, and the salt ringing the widow's porch all point one way. Ruth declares the choir director drowned the deacon to hide the smuggling. They tally four explained clues, subtract the mystery's Complexity, and roll 2d6, landing a 9. Correct, but the culprit slips away with the incriminating hymnal.",
     "prep": "~15 min",

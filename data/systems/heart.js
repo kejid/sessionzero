@@ -69,6 +69,16 @@ registerSystem("heart", {
     "tagShort": "Нарративный спуск",
     "tagline": "«Спускайтесь в живой подземный город, который исполняет желания — за чудовищную цену».",
     "description": "Нарративный (история и драма важнее точных правил) данжен-кроул наоборот. Вместо подъёма к сокровищам — спуск в Сердце, живой подземный мегаданжен, который реагирует на желания и страхи. Каждый класс имеет уникальную историю: от Зенита (входа) до Надира (финала). Персонаж буквально проходит нарративную арку.",
+    "pickIf": [
+      "хотите данжен-кроул, где каждый бросок решает, какую цену платить",
+      "группе нравится сюрреалистичный хоррор, меняющий тело и разум",
+      "игрокам важно, чтобы у героя была своя арка с финалом"
+    ],
+    "skipIf": [
+      "хотите тактических боёв и горы сокровищ",
+      "группа хочет, чтобы герои оставались целыми всю долгую кампанию",
+      "вам ближе приземлённое или светлое фэнтези"
+    ],
     "setting": "Под городом Спайр (из одноимённой игры) бьётся Сердце — немыслимое пространство, меняющее реальность. Рынки из костей, библиотеки из снов, леса из мяса. Чем глубже спускаешься — тем безумнее становится мир и ты сам.",
     "vignette": "Вы на Рынке Костей, третий ярус Сердца. Торговец продаёт воспоминания в стеклянных флаконах. Бросок d10 — 7, частичный успех. Вы получаете нужную карту, но берёте стресс на трек Эхо. Три отметки из пяти. Ещё одна — и Сердце заберёт ваш голос. Навсегда. Ваш Зенит: «Найти дорогу обратно.» Ваш Надир: «Забыть, зачем вы пришли.»",
     "prep": "~20 мин",
@@ -121,6 +131,16 @@ registerSystem("heart", {
     "tagShort": "weird descent RPG",
     "tagline": "\"Descend into a living underground city that grants wishes — for a monstrous price.\"",
     "description": "A narrative dungeon crawl in reverse. Instead of climbing toward treasure — a descent into the Heart, a living underground megadungeon that responds to desires and fears. Each class has a unique story arc: from Zenith (entry) to Nadir (finale). Characters literally progress through a narrative arc.",
+    "pickIf": [
+      "you want a dungeon crawl where every roll asks what it costs",
+      "your group enjoys surreal horror that transforms body and mind",
+      "players want each character to have a built-in arc toward an ending"
+    ],
+    "skipIf": [
+      "you want tactical fights and treasure hauls",
+      "your group wants characters to stay whole across a long campaign",
+      "you prefer grounded or lighthearted fantasy"
+    ],
     "setting": "Beneath the city of Spire beats the Heart — an inconceivable space that warps reality. Markets of bone, libraries of dreams, forests of flesh. The deeper you descend, the more insane the world — and you — become.",
     "vignette": "You're at the Bone Market, third tier of the Heart. A merchant sells memories in glass vials. Roll d10 — 7, partial success. You get the map you need, but take stress on the Echo track. Three marks out of five. One more — and the Heart takes your voice. Forever. Your Zenith: 'Find the way back.' Your Nadir: 'Forget why you came.'",
     "prep": "~20 min",

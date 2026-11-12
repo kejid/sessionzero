@@ -48,6 +48,16 @@ registerSystem("ars-magica", {
     "tagShort": "средневековая магическая сага",
     "tagline": "«Волшебники Мифической Европы, где легенды — правда».",
     "description": "Ars Magica делает вас могущественными волшебниками Мифической Европы — мира XIII века, где средневековые легенды буквально реальны. Знаменитая магическая система соединяет пять Техник (глаголы) с десятью Формами (существительными), позволяя импровизировать почти любой эффект. Игра ведётся «труппой»: каждый игрок водит мага, а также спутников и простых грогов, защищающих ковенант. Саги разворачиваются по сезонам — персонажи учатся, изобретают заклинания и растут десятилетиями. Глубокая, литературная и ни на что не похожая игра.",
+    "pickIf": [
+      "хотите свободную магию, где игроки сочиняют заклинания на ходу",
+      "группа готова к долгой саге на годы с общим ковенантом",
+      "игрокам нравится вести сразу мага, компаньонов и грогов"
+    ],
+    "skipIf": [
+      "нужны быстрые игры на вечер или ваншоты",
+      "группа не любит тяжёлые правила и учёт между приключениями",
+      "каждый хочет одного героя и динамичный экшен"
+    ],
     "setting": "Мифическая Европа — это наши 1220-е годы, переосмысленные так, что легенды стали правдой: феи населяют леса, ангелы и демоны ведут войну Божественного и Инфернального, драконы спят под горами, а Орден Гермеса прячет свои ковенанты от Церкви, сжигающей ведьм. Вы играете за нелюдимых магов, владеющих истинной силой, — и за простых людей, втянутых в их орбиту.",
     "vignette": "Грог кричит, когда ворота ковенанта раскалываются под топорами разбойников. У вашей маги нет готового заклинания, поэтому вы творите спонтанную магию: Рего Террам, чтобы подчинить землю. Складываете Рего 12 + Террам 8 + Выносливость 2 и бросаете стресс-кость — выпадает 7. Для спонтанной магии сумма делится пополам: 14 против уровня эффекта — достаточно. Булыжники двора встают стеной, и налётчики бросаются врассыпную.",
     "prep": "~45 мин",
@@ -77,6 +87,16 @@ registerSystem("ars-magica", {
     "tagShort": "medieval wizard saga",
     "tagline": "\"Wizards of Mythic Europe, where legend is literally true.\"",
     "description": "Ars Magica casts you as powerful wizards in Mythic Europe — a 13th-century world where medieval myth is real. Its celebrated magic pairs five Techniques (verbs) with ten Forms (nouns), letting you improvise almost any effect. Play is troupe-style: everyone runs a magus, plus the companions and common grogs who defend the covenant. Sagas unfold across seasons, with characters studying, inventing spells, and growing over decades. Deep, literary, and unlike anything else in the hobby.",
+    "pickIf": [
+      "you want a freeform magic system where players invent spells on the fly",
+      "your group wants a long saga spanning years, with a shared covenant to build",
+      "players enjoy troupe play, each running a magus, companions and grogs"
+    ],
+    "skipIf": [
+      "you want quick pick-up games or one-shots",
+      "your group avoids heavy rules and bookkeeping between adventures",
+      "players want one hero each and fast-paced action"
+    ],
     "setting": "Mythic Europe is our own 1220s reimagined so legend is real: faeries haunt the forests, angels and demons wage the Divine and Infernal war, dragons sleep beneath mountains, and the Order of Hermes hides its covenants from a Church that burns witches. You play the reclusive magi who wield true power — and the mundane folk caught in their orbit.",
     "vignette": "A grog screams as the covenant gate splinters under bandit axes. Your maga has no spell for this, so you cast spontaneously: Rego Terram to seize the earth. You total Rego 12 + Terram 8 + Stamina 2 and roll the stress die — a 7. Halved for spontaneous magic, that's 14 against the effect's level: enough. The courtyard cobbles rear up like a wall, and the raiders scatter.",
     "prep": "~45 min",

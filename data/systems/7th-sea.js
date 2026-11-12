@@ -48,6 +48,16 @@ registerSystem("7th-sea", {
     "tagShort": "Плащи, шпаги и магия",
     "tagline": "«Герои плаща и шпаги, дуэли и интриги в фэнтезийной Европе XVII века».",
     "description": "7th Sea Second Edition — ролевая игра плаща и шпаги о дуэлях, пиратстве, интригах и колдовстве в Тее, фэнтезийном отражении Европы XVII века. Игроки — Герои с большой буквы, которые почти никогда не проваливаются просто так: кубики решают не «получилось ли», а сколько всего удастся успеть за раз. Бросьте пул d10, соберите Подъёмы и потратьте их на действия, защиту от Последствий и Возможности. Развитие идёт не через опыт, а через Истории, которые игроки сами пишут своим Героям.",
+    "pickIf": [
+      "хотите плаща и шпаги: дуэли, люстры, пираты и придворные интриги",
+      "игрокам нравятся герои, которые почти не проваливаются и решают, сколько успеют",
+      "игроки хотят сами писать арки персонажей вместо набора опыта"
+    ],
+    "skipIf": [
+      "хотите жёсткого выживания, где неудачный бросок убивает героя",
+      "группе неудобно складывать кубы пула в наборы по десять",
+      "предпочитаете точный тактический бой с позиционированием"
+    ],
     "setting": "Тея — континент соперничающих держав, напоминающих Европу XVII века: мушкетёры и упадочные дворы Монтеня, разгул Инквизиции в Кастилии, ведьмы судьбы в Водачче, пиратские республики на морях, повсюду тайные общества и древние руины.",
     "vignette": "Бальный зал в Монтене горит, а письмо кардинала лежит на другом конце, за отрядом из четырёх стражников. Вы перелетаете зал на люстре: Ловкость 3 + Фехтование 3 и бонусный кубик за описание — семь d10. Выпало 10, 7, 3, 6, 4, 8, 2: четыре Подъёма. Один — пересечь зал, один — схватить письмо, два — уложить двоих стражников. Оставшиеся двое наносят в ответ две Раны.",
     "prep": "~30 мин",
@@ -77,6 +87,16 @@ registerSystem("7th-sea", {
     "tagShort": "Swashbuckling & sorcery",
     "tagline": "\"Swashbuckling heroes, duels and intrigue in a fantasy 17th-century Europe.\"",
     "description": "7th Sea Second Edition is a swashbuckling roleplaying game of duels, piracy, intrigue and sorcery set in Théah, a fantasy mirror of 17th-century Europe. Players are larger-than-life Heroes who almost never simply fail: instead of testing success, the dice decide how much they can accomplish at once. Roll a pool of d10s, build Raises, and spend them to act, dodge Consequences and seize Opportunities. Advancement comes not from experience points but from Stories that players write for their own Heroes.",
+    "pickIf": [
+      "you want swashbuckling heroics: duels, chandeliers, pirates and court intrigue",
+      "your players like heroes who rarely fail and decide how much they achieve",
+      "players want to write their own character arcs instead of earning XP"
+    ],
+    "skipIf": [
+      "you want gritty survival where a bad roll can kill a hero",
+      "your group dislikes adding up dice pools into sets of ten",
+      "you prefer tight tactical combat with precise positioning"
+    ],
     "setting": "Théah — a continent of rival nations echoing 17th-century Europe: musketeers and decadent courts in Montaigne, an Inquisition loose in Castille, fate witches in Vodacce, pirate republics on the seas, secret societies and ancient ruins everywhere.",
     "vignette": "The Montaigne ballroom is burning and the Cardinal's letter lies across the hall behind a squad of four guards. You swing over on the chandelier: Finesse 3 + Weaponry 3, plus a bonus die for the description — seven d10s. They come up 10, 7, 3, 6, 4, 8, 2: four Raises. One to cross the hall, one to snatch the letter, two to drop two guards. The last two brutes hit back for two Wounds.",
     "prep": "~30 min",

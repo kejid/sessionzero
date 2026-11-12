@@ -80,6 +80,16 @@ registerSystem("cairn", {
     "tagShort": "Ультралёгкая фолк-хоррор OSR",
     "tagline": "«Фольклорный хоррор без классов, уровней и ерунды».",
     "description": "Бесплатная, открытая, ультралёгкая система для тёмного фольклорного фэнтези. Основана на Into the Odd и Knave. Правила — 20 страниц. Нет классов, нет уровней. Персонаж — это его снаряжение и решения. Cairn 2e добавила процедуры путешествий, инвентарь на слотах и расширенные правила wilderness exploration.",
+    "pickIf": [
+      "хотите мрачного фольклорного леса, где важна каждая ячейка инвентаря",
+      "нужны бесплатные правила, которые учатся за минуты",
+      "нравятся персонажи без классов, которых определяют снаряжение и решения"
+    ],
+    "skipIf": [
+      "игроки хотят классы, уровни и стабильный рост персонажа",
+      "за столом не любят считать инвентарь, еду и факелы",
+      "хотите героического фэнтези, где герои выигрывают большинство боёв"
+    ],
     "setting": "Вдохновлён славянскими и кельтскими сказками. Лес здесь — живой, голодный и не прощает легкомыслия. Деревни жмутся к опушке. В чаще — духи, ведьмы и существа, которые были здесь задолго до людей. Атмосфера — братья Гримм до того, как сказки стали детскими.",
     "vignette": "В лесу — развилка. Факел занимает один слот, еда на два дня — ещё два. Вы уже несёте книгу заклинаний и верёвку. Места нет. Бросить факел — идти в темноте. Бросить еду — голодать. Слева тропа уходит к болоту, справа — дым. Спасбросок Воли, чтобы не побежать на запах еды. Провал — и вы уже в избе ведьмы.",
     "prep": "~5 мин",
@@ -135,6 +145,16 @@ registerSystem("cairn", {
     "tagShort": "ultralight folk-horror OSR",
     "tagline": "\"Folk horror without classes, levels, or nonsense.\"",
     "description": "A free, open, ultra-light system for dark folkloric fantasy. Built on Into the Odd and Knave. Rules — 20 pages. No classes, no levels. A character is their gear and their choices. Cairn 2e added travel procedures, slot-based inventory, and expanded wilderness exploration rules.",
+    "pickIf": [
+      "you want dark folk-horror forests where every inventory slot matters",
+      "your group wants rules light enough to learn in minutes, for free",
+      "you like classless characters defined by their gear and choices"
+    ],
+    "skipIf": [
+      "players want classes, levels and steady character growth",
+      "your table dislikes tracking inventory, food and torches",
+      "you want heroic fantasy where heroes win most fights"
+    ],
     "setting": "Inspired by Slavic and Celtic fairy tales. The forest here is alive, hungry, and unforgiving. Villages huddle at the tree line. Deep within — spirits, witches, and creatures that were here long before humans. The atmosphere — Brothers Grimm before the tales were sanitized for children.",
     "vignette": "A fork in the forest. The torch takes one slot, two days of food — two more. You're already carrying a spellbook and rope. No room. Drop the torch — walk in darkness. Drop the food — starve. Left path leads to a bog, right — smoke. Willpower save to resist running toward the smell of food. Failure — and you're already inside the witch's hut.",
     "prep": "~5 min",

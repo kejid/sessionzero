@@ -76,6 +76,16 @@ registerSystem("gurps", {
     "tagShort": "Универсальная симуляционная на 3d6",
     "tagline": "«Любой жанр, любая эпоха, любая реальность — один набор правил».",
     "description": "GURPS (Generic Universal RolePlaying System) — универсальная настольная RPG от Steve Jackson Games (4-е издание, 2004). Система 3d6: бросок под значение навыка/атрибута. Модульная: ядро простое, но опциональные правила (бой с позиционированием, попадания по локациям, магия, псионика) делают её одной из самых crunchy систем. 250+ книг по десяткам жанров. GURPS Lite — бесплатный 32-страничный квикстарт.",
+    "pickIf": [
+      "нужна одна система для любого жанра, от викингов до космоса",
+      "группе нравится собирать персонажа по очкам из преимуществ и недостатков",
+      "хотите симуляцию с зонами попадания и манёврами по желанию"
+    ],
+    "skipIf": [
+      "хотите начать играть уже сегодня без долгого чтения",
+      "за столом предпочитают нарративные ходы, а не подробные модификаторы",
+      "мастеру не хочется решать, какие опциональные правила включать"
+    ],
     "setting": "Жанр-agnostic. GURPS не привязана к миру — она создаёт мир из модулей. Фэнтези, sci-fi, хоррор, шпионаж, супергерои, история, постапокалипсис — всё в одном наборе правил. Infinite Worlds — встроенный сеттинг для путешествий во времени.",
     "vignette": "Три кубика. 4+5+3 = 12. Против 13 (Difficulty 12). Успех на 1. Один уровень успеха — минимальный. Варвар пролезает через окно, но ломает себе руку. «Ты мог выбрать Buy at 14,» — напоминает GM. «Мне не хватило очков,» — вздыхает игрок. Добро пожаловать в GURPS.",
     "prep": "~20 мин",
@@ -128,6 +138,16 @@ registerSystem("gurps", {
     "tagShort": "Universal simulationist RPG on 3d6",
     "tagline": "\"Any genre, any era, any reality — one ruleset.\"",
     "description": "GURPS (Generic Universal RolePlaying System) is a universal tabletop RPG from Steve Jackson Games (4th Edition, 2004). 3d6 system: roll under your skill/attribute value. Modular: core is learnable, but optional rules (combat maneuvering, hit locations, detailed magic/psionics) push it firmly into crunchy simulationist territory. 250+ sourcebooks spanning dozens of genres. GURPS Lite is a free 32-page quickstart.",
+    "pickIf": [
+      "you want one ruleset for any genre, from Vikings to space",
+      "your group enjoys point-buy builds with advantages and disadvantages",
+      "you want simulation with optional hit locations and combat maneuvers"
+    ],
+    "skipIf": [
+      "you want to start playing tonight without much reading",
+      "your table prefers narrative moves to detailed modifiers",
+      "the GM doesn't want to pick and choose optional rules"
+    ],
     "setting": "Genre-agnostic by design. GURPS doesn't tie to a world — it builds worlds from modules. Fantasy, sci-fi, horror, espionage, superheroes, historical, post-apocalyptic — all in one ruleset. Infinite Worlds is the built-in setting for timeline-hopping.",
     "vignette": "Three dice. 4+5+3 = 12. Against 13 (Difficulty 12). Success by 1. One level of success — bare minimum. The barbarian squeezes through the window but breaks his arm. 'You could have bought at 14,' the GM reminds. 'I didn't have the points,' the player sighs. Welcome to GURPS.",
     "prep": "~20 min",

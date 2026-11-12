@@ -75,6 +75,15 @@ registerSystem("dnd-5e", {
     "tagShort": "Классическая d20-система",
     "tagline": "«Ролевые игры для каждого — мечта, книга и дракон».",
     "description": "Dungeons & Dragons 5th Edition — пятое издание самой популярной настольной ролевой игры в мире, вышедшее в 2014 году. d20-система с advantage/disadvantage, 12 классов, 13 рас, сотни заклинаний и монстров. SRD доступен бесплатно под Creative Commons. Игра, вернувшая RPG в массовую культуру благодаря Critical Role, Stranger Things и Baldur's Gate 3.",
+    "pickIf": [
+      "хотите фэнтези «по умолчанию», о котором новички уже слышали",
+      "группе нравятся сборки по классам с новыми заклинаниями и умениями на каждом уровне",
+      "нужен огромный выбор официальных миров — от Forgotten Realms до Eberron"
+    ],
+    "skipIf": [
+      "хотите коротких смертельных сессий почти без учёта ресурсов",
+      "игроков пугают длинные списки заклинаний и вариантов классов"
+    ],
     "setting": "Средневековое фэнтези с бесконечными вариациями: Forgotten Realms, Dragonlance, Eberron, Ravenloft, Spelljammer, Planescape. Мир, где эльфы, дварфы и тифлинги делят стол с людьми, а драконы — не всегда враги.",
     "vignette": "Гоблин-вождь орёт команду, но Лира-волшебница уже шепчет заклинание. Огонь озаряет пещеру — advantage на бросок! Боец Торин рвётся вперёд, а плут Кэй подкрадывается сзади. Дракон зашевелился. Инициатива решает, кто первым окажется перед его клыками.",
     "prep": "~15 мин",
@@ -125,6 +134,15 @@ registerSystem("dnd-5e", {
     "tagShort": "The world's most popular d20 RPG",
     "tagline": "\"The game that brought tabletop RPGs back to the mainstream.\"",
     "description": "Dungeons & Dragons 5th Edition is the fifth and most popular edition of the world's first tabletop roleplaying game, released in 2014. A d20 system with the elegant advantage/disadvantage mechanic, 12 classes, 13 ancestries, hundreds of spells and monsters. The SRD is free under Creative Commons. The game that brought RPGs back into pop culture through Critical Role, Stranger Things, and Baldur's Gate 3.",
+    "pickIf": [
+      "you want the default fantasy game your new players have already heard of",
+      "your group enjoys class builds with new spells and abilities every level",
+      "you want a huge choice of official worlds, from Forgotten Realms to Eberron"
+    ],
+    "skipIf": [
+      "you want short, lethal sessions with minimal bookkeeping",
+      "your players find long spell lists and class options overwhelming"
+    ],
     "setting": "Medieval fantasy with endless variations: Forgotten Realms, Dragonlance, Eberron, Ravenloft, Spelljammer, Planescape. A world where elves, dwarves, and tieflings share tables with humans, and dragons aren't always enemies.",
     "vignette": "The goblin chief barks orders, but Lyra the wizard is already whispering the incantation. Fire illuminates the cave — advantage on the roll! Fighter Thorin surges forward while the rogue Cay creeps up behind. The dragon stirs. Initiative decides who faces its fangs first.",
     "prep": "~15 min",

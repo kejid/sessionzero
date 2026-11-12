@@ -48,6 +48,16 @@ registerSystem("kids-on-bikes", {
     "tagShort": "Дети, велосипеды и странности маленького городка",
     "tagline": "«Садись на велик. Взрослые всё равно не поверят».",
     "description": "Kids on Bikes — лёгкая ролевая игра Джонатана Гилмора и Дага Левандовски о простых людях (чаще всего детях и подростках), которые сталкиваются со страшными силами, которые не могут ни победить, ни понять. Город, его тайны и связи между героями придумывает вся группа вместе. Каждой характеристике соответствует свой кубик — от d4 до d20, а провалы копят жетоны Невзгод на будущее. Второе издание (2024, Hunters Books и Renegade Game Studios) уточнило правила Сверхъестественного персонажа и расширило раздел мастера. У игры есть сестра — Kids on Brooms о юных волшебниках в магической школе.",
+    "pickIf": [
+      "хотите историю в духе Stranger Things: дети против сил, которые им не одолеть",
+      "группе нравится вместе придумывать город и его тайны",
+      "нужна лёгкая игра для новичков, где у каждой характеристики свой кубик"
+    ],
+    "skipIf": [
+      "хотите умелых героев, которые побеждают монстра в бою",
+      "группе нужен тактический бой",
+      "мастер предпочитает заранее и в одиночку подготовить тайну"
+    ],
     "setting": "Маленький американский городок, где за школой лес, на окраине заброшенная фабрика, а по ночам на шоссе мигают странные огни. Время и место выбираете сами — восьмидесятые в духе «Очень странных дел», девяностые или сегодняшний день. Город строится вопросами за столом: кто здесь главный, что все знают, но молчат, и почему никто не ходит к старой водонапорной башне.",
     "vignette": "Фургон без номеров набирает скорость, и ваш подросток жмёт на педали к мосту. Бегство — d10, мастер ставит сложность 9. Выпадает 7 — не хватает двух. Вы тратите два жетона Невзгод, накопленные за прошлые провалы: +2, итог 9. Вы ныряете под шлагбаум, а фургон с визгом тормозит у самой реки. Будь на кубике 10, он бы «взорвался»: перебрасываете и прибавляете.",
     "prep": "~15 мин",
@@ -79,6 +89,16 @@ registerSystem("kids-on-bikes", {
     "tagShort": "Kids, bikes and small-town weirdness",
     "tagline": "\"Grab your bike. The grown-ups won't believe you anyway.\"",
     "description": "Kids on Bikes is a rules-light RPG by Jonathan Gilmour and Doug Levandowski about everyday people, usually kids and teens, facing terrifying forces they can't defeat, control or even fully understand. The whole group builds the town, its secrets and the ties between the characters together. Each stat gets its own die from d4 to d20, and failures bank Adversity Tokens for later. The 2024 second edition from Hunters Books and Renegade Game Studios refines the Powered Character rules and expands the GM section. Its sibling game, Kids on Brooms, takes the same engine to a school of magic.",
+    "pickIf": [
+      "you want Stranger Things-style kids facing forces they can't defeat",
+      "your group likes building the town and its secrets together",
+      "you want a light game for newcomers with one die per stat"
+    ],
+    "skipIf": [
+      "you want competent heroes who beat the monster in a fight",
+      "your group wants tactical combat",
+      "the GM prefers to prepare the mystery alone in advance"
+    ],
     "setting": "A small American town with woods behind the school, an abandoned factory on the outskirts and strange lights over the highway at night. You pick the era: Stranger Things eighties, the nineties or today. The town is built by questions around the table: who really runs it, what everyone knows but won't say, and why nobody goes near the old water tower.",
     "vignette": "An unmarked van picks up speed and your teen pedals hard for the bridge. Flight is a d10 and the GM sets the difficulty at 9. You roll a 7, two short. You spend two Adversity Tokens banked from earlier failures: +2, total 9. You duck under the barrier while the van screeches to a halt at the river's edge. Had the die shown a 10, it would have exploded: roll again and add.",
     "prep": "~15 min",

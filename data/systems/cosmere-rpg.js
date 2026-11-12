@@ -78,6 +78,16 @@ registerSystem("cosmere-rpg", {
     "tagShort": "Ролёвка по «Буресвету» Брендона Сандерсона",
     "tagline": "«Жизнь прежде смерти. Сила прежде слабости. Путь прежде цели».",
     "description": "Официальная RPG по Космеру Брендона Сандерсона от Brotherwise Games. Своя d20-система, не клон D&D: вместо классов — гибкие пути из деревьев талантов, вместо одного КД — три защиты, а особый кубик сюжета подкидывает возможности и осложнения. Начинается с Рошара из «Хроник Буресвета», затем открывает «Рождённого туманом» и другие миры Космера.",
+    "pickIf": [
+      "группа любит «Архив Буресвета» и хочет играть Сияющими рыцарями",
+      "нравится d20-бой, но короткий, где важен каждый выбор хода",
+      "игроки хотят свободно брать таланты, а не запираться в одном классе"
+    ],
+    "skipIf": [
+      "за столом никто не знает и не любит Космер Сандерсона",
+      "хочется мрачной игры, где герои так и остаются простыми людьми",
+      "нужны лёгкие правила — три защиты и несколько ресурсов требуют учёта"
+    ],
     "setting": "Рошар — каменный мир, который выметают великие бури. Спрены, осколочные клинки, светсферы и Сияющие рыцари, возвращающиеся после веков забвения. Алеткар воюет на Расколотых равнинах, певцы вспоминают свои древние формы. Позже к линейке присоединился Скадриал из «Рождённого туманом» — с алломантией и пеплом над Лютаделем.",
     "vignette": "Певец-воин на краю плато. Вы атакуете копьём: бросок d20 + модификатор навыка против Физической защиты врага 13. Ставка высока — ведущий просит поднять ставки, и вы добавляете кубик сюжета. На d20 выпало 11, +3 — итого 14, попадание: кубики урона плюс модификатор навыка. Кубик сюжета показывает Возможность — враг теряет опору, и ваш союзник получает преимущество. На следующем ходу 9 + 3 = 12, промах. Но вы тратите 1 сосредоточенность и наносите скользящий удар: урон по кубикам, только без модификатора.",
     "prep": "~45 мин",
@@ -135,6 +145,16 @@ registerSystem("cosmere-rpg", {
     "tagShort": "Brandon Sanderson's Stormlight world, at your table",
     "tagline": "\"Life before death. Strength before weakness. Journey before destination.\"",
     "description": "The official RPG of Brandon Sanderson's Cosmere from Brotherwise Games. An original d20 system, not a D&D clone: flexible talent-tree paths instead of classes, three defenses instead of one AC, and a special plot die that throws in opportunities and complications. It starts on Roshar from The Stormlight Archive, then opens up Mistborn and the other worlds of the Cosmere.",
+    "pickIf": [
+      "your group loves The Stormlight Archive and wants to play Knights Radiant",
+      "you like d20 combat but want short fights where every turn choice matters",
+      "your players want to mix talents freely instead of locking into a class"
+    ],
+    "skipIf": [
+      "nobody at the table knows or cares about Sanderson's Cosmere",
+      "you want grim, low-power play where heroes stay ordinary people",
+      "your group wants a light ruleset — three defenses and several resources need tracking"
+    ],
     "setting": "Roshar is a world of stone scoured by highstorms. Spren, Shardblades, spheres of Stormlight and the Knights Radiant returning after centuries of absence. Alethkar wages war on the Shattered Plains while the singers remember their ancient forms. The line later added Scadrial from Mistborn — Allomancy and ash falling over Luthadel.",
     "vignette": "A singer warrior holds the edge of a plateau. You attack with your spear: d20 + skill modifier against the enemy's Physical defense of 13. It matters, so the GM asks you to raise the stakes and you add the plot die. The d20 shows 11, +3 makes 14 — a hit: damage dice plus your skill modifier. The plot die lands on an Opportunity — the enemy loses their footing and your ally gains an advantage. Next turn you roll 9 + 3 = 12, a miss. But you spend 1 focus to graze: you deal the damage dice anyway, just without the modifier.",
     "prep": "~45 min",

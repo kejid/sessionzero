@@ -43,6 +43,16 @@ registerSystem("liminal-horror", {
     "tagShort": "лёгкий современный космический хоррор",
     "tagline": "«Обычные люди против того, что таится в темноте».",
     "description": "Лёгкая хоррор-игра на движке Into the Odd (через Cairn). Обычные люди расследуют ползучий космический ужас — и опасность не только в смерти, но и в распаде личности. По мере роста напряжения копится СТРЕСС, персонаж ломается и получает Fallout — сверхъестественные последствия, которые остаются с ним до конца истории.",
+    "pickIf": [
+      "хотите лёгкий современный космический хоррор про обычных людей",
+      "группе нравится, как герои постепенно ломаются от STRESS и Fallout",
+      "хотите быстрых смертельных боёв в духе Into the Odd, которых лучше избегать"
+    ],
+    "skipIf": [
+      "нужны подробные правила расследования и проверки навыков",
+      "группа хочет сражаться с монстрами и побеждать",
+      "игрокам нужны чёткие правила, а не решения мастера"
+    ],
     "setting": "Наши дни, отделённые от чего-то неправильного одной тонкой мембраной. Пустые парковки, лиминальные офисные коридоры, городки с гнилью под кожей. Никаких бестиариев для зубрёжки — ужас уникален, а из инструментов только любопытство, нервы и готовность говорить.",
     "vignette": "Вы загоняете тварь в подвал. Броска на попадание нет — удар просто проходит, d6 урона, а когда Hit Protection кончается, кости вгрызаются в СИЛУ. Комнату вы пережили. Но проверка СТРЕССА провалена, срабатывает Critical Fallout — и теперь отражение отстаёт от вас на полсекунды. И идёт за вами домой.",
     "prep": "~10 мин",
@@ -70,6 +80,16 @@ registerSystem("liminal-horror", {
     "tagShort": "rules-light modern cosmic horror",
     "tagline": "\"Normal people against the things that go bump in the night.\"",
     "description": "A rules-light modern horror game built on the Into the Odd engine (by way of Cairn). Ordinary characters investigate creeping, cosmic dread — and the danger isn't just dying, it's coming apart. As the pressure mounts, STRESS accumulates and characters break down, gaining supernatural Fallout that lingers on them for the rest of the story.",
+    "pickIf": [
+      "you want rules-light modern cosmic horror about ordinary people",
+      "your group likes characters slowly coming apart through STRESS and Fallout",
+      "you want fast, lethal Into the Odd-style fights you'd rather avoid"
+    ],
+    "skipIf": [
+      "you want detailed investigation rules and skill checks",
+      "your group wants to fight monsters and win",
+      "players prefer clear-cut rules to GM rulings"
+    ],
     "setting": "The modern day, one thin membrane away from something wrong. Empty parking garages, liminal office corridors, small towns with a rot underneath. There are no monster manuals to memorize — the horror is bespoke, and the only tools are curiosity, nerve, and a willingness to talk it through.",
     "vignette": "You corner the thing in the basement. There is no attack roll — the strike simply lands, d6 damage, and once your Hit Protection is gone the dice bite into STRENGTH. You survive the room. But the STRESS check fails, Critical Fallout triggers, and now your reflection lags a half-second behind you. That follows you home.",
     "prep": "~10 min",

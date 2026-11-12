@@ -44,6 +44,15 @@ registerSystem("exalted", {
     "tagShort": "Эпическое фэнтези о полубогах на пулах d10",
     "tagline": "«Вы рождены, чтобы править Творением. Мир называет вас Анафемой».",
     "description": "Exalted — эпическое фэнтези от Onyx Path. Вы играете Возвышенными: смертными, в которых вселилась частица божественной силы, способной рубить горы и спорить с богами. Третья редакция (2016) — это книга на 650+ страниц: пулы d10, где успех на 7+, а десятка считается за два, бой на Инициативе вместо хитов, и сотни Чар, складывающихся в личный боевой стиль. Сеттинг — Творение, огромный мир, который сочетает уся, аниме и мифологию. Если Ex3 кажется тяжеловатым, есть Exalted: Essence — облегчённое ядро в одной книге, где можно играть Возвышенными любого типа.",
+    "pickIf": [
+      "хотите эпических полубогов, которые рассекают горы и торгуются с богами",
+      "игрокам нравится красочно описывать трюки и получать за это кубики",
+      "группа готова осваивать большую боевую систему с сотнями Чармов"
+    ],
+    "skipIf": [
+      "нужно что-то, что осваивается за вечер, — тогда начните с Exalted: Essence",
+      "группе ближе приземлённые слабые герои, которым трудно выжить"
+    ],
     "setting": "Творение — плоский мир, окружённый хаосом Вильда и подземным царством мёртвых. Полторы тысячи лет назад Возвышенные Драконьей Крови свергли Солнечных и объявили их демонами. Теперь Алая Императрица, правившая Царством, исчезла, империя трещит по швам, а Солнечные снова возвращаются в мир — и на них уже ведётся Охота Вильда. Шёлковые дворцы, руины Первой Эпохи, мёртвые лорды и падшие боги: всё это ждёт тех, кто осмелится взять мир в свои руки.",
     "vignette": "Пылающий паланкин падает в пропасть, а ваш Солнечный Касты Рассвета прыгает с него прямо на генерала. Описание впечатляет стол, и Рассказчик даёт трюк на два очка: +2 куба и единица Силы воли обратно. У вас 14 Инициативы, пора бить решающим ударом. Ловкость 5 + Ближний бой 5, ещё 2 куба за трюк и 4 куба от Совершенства за 4 частицы Сущности — всего 16 кубов против Защиты 4. Успехов с запасом. Урон — сама ваша Инициатива: бросаете 14 кубов, и каждый успех — уровень ранения без поглощения. Генерал падает, а ваша Инициатива сбрасывается до 3.",
     "prep": "~60 мин",
@@ -73,6 +82,15 @@ registerSystem("exalted", {
     "tagShort": "Epic demigod fantasy on a d10 dice pool",
     "tagline": "\"You were born to rule Creation. The world calls you Anathema.\"",
     "description": "Exalted is epic fantasy from Onyx Path. You play the Exalted: mortals touched by a shard of divine power that lets them cleave mountains and bargain with gods. The Third Edition (2016) is a 650+ page book: d10 pools where 7+ succeeds and 10s count double, initiative-driven combat instead of hit-point attrition, and hundreds of Charms that build into a personal fighting style. The setting, Creation, mixes wuxia, anime and myth on a vast scale. If Ex3 feels heavy, Exalted: Essence is the lighter one-book core where any kind of Exalt is playable.",
+    "pickIf": [
+      "you want epic demigods who cleave mountains and bargain with gods",
+      "your players love describing flashy stunts and getting dice for it",
+      "your group enjoys mastering a big, crunchy combat system with hundreds of Charms"
+    ],
+    "skipIf": [
+      "you want something learnable in one evening — start with Exalted: Essence instead",
+      "your group prefers grounded, low-power heroes who struggle to survive"
+    ],
     "setting": "Creation is a flat world ringed by the chaos of the Wyld and the shadowlands of the dead. Fifteen centuries ago the Dragon-Blooded overthrew the Solar Exalted and branded them demons. Now the Scarlet Empress who ruled the Realm has vanished, her empire is cracking, and the Solars are returning — with the Wyld Hunt already on their trail. Silk palaces, First Age ruins, Deathlords and fallen gods wait for anyone bold enough to seize the world.",
     "vignette": "A burning palanquin tips into the gorge and your Dawn Caste Solar leaps from it straight at the general. The table loves the description: a two-point stunt, +2 dice and a Willpower back. You sit at 14 Initiative — time for a decisive attack. Dexterity 5 + Melee 5, plus 2 stunt dice and 4 more from your Excellency for 4 motes of Essence: 16 dice against Defense 4. Successes to spare. Damage is your Initiative itself: roll 14 dice, each success a level of damage with no soak. The general falls, and your Initiative resets to 3.",
     "prep": "~60 min",

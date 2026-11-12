@@ -69,6 +69,16 @@ registerSystem("lancer", {
     "tagShort": "Тактический sci-fi мех-RPG",
     "tagline": "«В галактике много пилотов, но ты — один.»",
     "description": "LANCER — научно-фантастическая тактическая RPG о пилотах мехов, сражающихся за лучшее будущее на переднем крае постдефицитной утопии. Глубокая модульная тактика боёв на мехах + лёгкие нарративные правила.",
+    "pickIf": [
+      "хотите глубокую настройку мехов и тактический бой на сетке",
+      "группе нравится продумывать билды от уровня к уровню",
+      "хотите светлую фантастику, где пилоты сражаются за утопию"
+    ],
+    "skipIf": [
+      "хотите решать бой парой бросков без сетки",
+      "группа не любит возиться с оптимизацией сборок",
+      "нужна в основном ролевая игра с редкими стычками"
+    ],
     "setting": "Через десять тысяч лет человечество выстроило Союз — посткапиталистическое межзвёздное правительство. Золотой век реален для Ядра; для фронтира — обещание, написанное выхлопом мехов и огнём рельсотронов.",
     "vignette": "В 3:00 туман сходит с эстуария, IFF мигает красным. Твой SSC Dusk Wing затаился в мангровых зарослях. NHP нашёптывает решение для стрельбы через нейросвязь. «Лансер-Актуал — оружие свободно». Мангры исчезают в белой вспышке плазмы.",
     "prep": "~30 мин",
@@ -116,6 +126,16 @@ registerSystem("lancer", {
     "tagShort": "tactical sci-fi mech combat RPG",
     "tagline": "\"There are many pilots in the galaxy, but only one of you.\"",
     "description": "LANCER is a science fiction tactical RPG about mech pilots — lancers — who fight for a better future on the bleeding edge of a post-scarcity utopia still being born. It blends gritty, deeply customizable mech combat with rules-light narrative roleplay, giving equal weight to what you do in the cockpit and who you are outside it.",
+    "pickIf": [
+      "you want deep mech customization and tactical grid combat",
+      "your group enjoys theorycrafting builds from level to level",
+      "you want hopeful sci-fi where pilots fight for a utopia"
+    ],
+    "skipIf": [
+      "you want fights settled in a few rolls without a grid",
+      "your group dislikes heavy build optimization",
+      "you want mostly roleplay with only occasional combat"
+    ],
     "setting": "Ten thousand years from now, humanity survived ecological collapse, spread to the stars, and built Union — a communal, post-capital interstellar government working toward a genuine utopia. The golden age is real for the Galactic Core; for the frontier worlds, it is still a promise written in mech exhaust and railgun fire. Megacorporate manufacturers supply the frames that lancers ride into a galaxy where the work of liberation is never quite finished.",
     "vignette": "The fog rolls off the estuary at 0300 when ANANSI's IFF pings red. Your mech, a SSC Dusk Wing, is already crouching in the mangroves — legs locked, passive sensors drinking in the heat of twelve colonial militia walkers moving in column. Your NHP whispers a firing solution across the neural link, patient as mathematics. 'Lancer-Actual, this is Able Flight — we are weapons free.' The mangroves vanish in a white bloom of plasma.",
     "prep": "~30 min",

@@ -65,6 +65,16 @@ registerSystem("beyond-the-wall", {
     "tagShort": "Олдскул о юных героях родной деревни",
     "tagline": "«Каждой деревне нужны свои герои».",
     "description": "Beyond the Wall and Other Adventures от Flatland Games — олдскульная фэнтезийная игра на костяке классического D&D, созданная для партий без подготовки. Персонажи — друзья детства из одной деревни, и создаются они вместе, по буклетам с таблицами юности. За один вечер группа успевает собрать героев, деревню и приключение — и сыграть его.",
+    "pickIf": [
+      "мастер хочет водить олдскульное фэнтези почти без подготовки",
+      "группе нравится вместе создавать героев-друзей детства и их деревню",
+      "хотите тёплую историю взросления в духе «Земноморья» или «Хроник Придайна»"
+    ],
+    "skipIf": [
+      "хотите жестоких подземелий, где персонажи часто гибнут",
+      "игроки хотят эпических героев с первой сессии",
+      "за столом не любят, когда персонажей определяют броски по таблицам"
+    ],
     "setting": "Тихая деревня на краю неизведанного: за стеной — феи в лесу, злые люди и чудовища, а местные почти никогда не уходят далеко от дома. Дух — подростковое фэнтези в духе «Земноморья» Урсулы Ле Гуин и «Хроник Придайна» Ллойда Александера: юные, неопытные, но готовые защищать своё.",
     "vignette": "Создание персонажей: вы берёте буклет «Маг-самоучка» и бросаете d12 по таблице детства — отец был суровым, но честным стражником, и пара характеристик растёт. Вы добавляете на карту деревни старую мельницу, сосед — трактирщика, с которым у всех счёты. А через час ваш маг крадётся мимо часового-фейри: Ловкость 14 плюс 2 за навык Скрытности, нужно 16 или меньше на d20. Выпало 17. Вы тратите очко удачи на переброс — 9. Он проскальзывает в холм.",
     "prep": "~10 мин",
@@ -113,6 +123,16 @@ registerSystem("beyond-the-wall", {
     "tagShort": "Old-school fantasy about a village's young heroes",
     "tagline": "\"Every home needs its heroes.\"",
     "description": "Beyond the Wall and Other Adventures from Flatland Games is an old-school fantasy game on a classic D&D chassis, built to be played with no prep. The characters are childhood friends from one village, created together through playbooks full of tables about their youth. In a single evening the group builds its heroes, its village and an adventure — and plays it.",
+    "pickIf": [
+      "your GM wants to run old-school fantasy with almost no prep",
+      "your group likes making childhood-friend heroes and their village together",
+      "you want a gentle coming-of-age tone like Earthsea or Prydain"
+    ],
+    "skipIf": [
+      "you want brutal dungeon crawls with high character death",
+      "your players want epic heroes from the first session",
+      "your table dislikes random tables shaping characters"
+    ],
     "setting": "A quiet village at the edge of the unknown: beyond the wall lie faeries in the forest, wicked men and monsters, and the locals rarely stray far from home. The spirit is young-adult fantasy in the vein of Ursula K. Le Guin's Earthsea and Lloyd Alexander's Prydain: young, untested, and ready to protect what matters.",
     "vignette": "Character creation: you take the Self-Taught Mage playbook and roll a d12 on the childhood table — your father was a stern but fair watchman, and a couple of your attributes rise. You add the old mill to the village map; your neighbour adds the innkeeper everyone has a grudge against. An hour later your mage creeps past a faerie sentry: Dexterity 14 plus 2 for the Stealth skill, so 16 or under on a d20. A 17. You spend a Fortune Point to reroll — 9. He slips into the hill.",
     "prep": "~10 min",

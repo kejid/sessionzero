@@ -75,6 +75,16 @@ registerSystem("blades", {
     "tagShort": "Криминальная FitD-RPG",
     "tagline": "«Вы — банда отчаянных в тёмном городе, который никогда не спит».",
     "description": "RPG про криминальную банду в тёмном индустриальном городе. Революционная система: никакого планирования операций заранее — вместо этого флешбэки во время дела. «Что-то идёт не так? Я УЖЕ подкупил охранника вчера». Между делами — фаза даунтайма (отдых между приключениями): лечение, тренировки, развитие базы.",
+    "pickIf": [
+      "хотите ограблений без многочасового планирования — спасают флешбэки",
+      "группе нравится растить банду, её территорию и список врагов",
+      "игрокам по душе мрачная индустриальная готика с призраками и фракциями"
+    ],
+    "skipIf": [
+      "игроки обожают продумывать каждую деталь плана заранее",
+      "хотите военную кампанию с финалом — тут лучше подойдёт Band of Blades",
+      "группе нужны тактические карты и точные цифры в бою"
+    ],
     "setting": "Досквол — город, освещённый электрическими барьерами от призраков. Вокруг — мёртвые земли, населённые духами. Внутри — фракции, контролирующие районы: от Серых Плащей (полиция) до Духовных Стражей. Индустриальная готика, демоны и кровь на булыжниках.",
     "vignette": "Вы в хранилище Серых Плащей. Замок — выше ваших навыков. «Флешбэк,» — говорит Вор. «Вчера я подкупил слесаря, он оставил дверь открытой.» Бросок — 4 на лучшем из двух d6. Частичный успех: дверь открыта, но слесарь оставил записку начальнику. Позиция: отчаянная. Эффект: обычный. Часы «Тревога» заполняются на 2 из 6.",
     "prep": "~10 мин",
@@ -124,6 +134,16 @@ registerSystem("blades", {
     "tagShort": "FitD heist & crime RPG",
     "tagline": "\"You're a gang of scoundrels in a dark city that never sleeps.\"",
     "description": "An RPG about a criminal gang in a dark industrial city. A revolutionary system: no planning operations in advance — instead, flashbacks during the job. 'Something goes wrong? I ALREADY bribed the guard yesterday.' Between jobs — a downtime phase: healing, training, upgrading your lair.",
+    "pickIf": [
+      "you want heists without hours of planning, thanks to flashbacks",
+      "your group likes growing a criminal crew, its turf and its enemies",
+      "players enjoy dark industrial gothic with ghosts and faction politics"
+    ],
+    "skipIf": [
+      "your players love meticulously planning every detail before acting",
+      "you want a military campaign with a fixed end; Band of Blades fits better",
+      "your table wants tactical maps and precise combat numbers"
+    ],
     "setting": "Doskvol — a city lit by electric barriers against ghosts. Beyond — dead lands inhabited by spirits. Within — factions controlling districts: from the Bluecoats (police) to the Spirit Wardens. Industrial gothic, demons, and blood on the cobblestones.",
     "vignette": "You're in the Bluecoats' vault. The lock is beyond your skills. 'Flashback,' says the Lurk. 'Yesterday I bribed the locksmith — he left the door open.' Roll — 4 on the best of two d6. Partial success: the door is open, but the locksmith left a note to his boss. Position: desperate. Effect: standard. The 'Alert' clock fills 2 of 6.",
     "prep": "~10 min",

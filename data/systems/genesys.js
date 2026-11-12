@@ -48,6 +48,16 @@ registerSystem("genesys", {
     "tagShort": "Повествовательные кости для любого жанра",
     "tagline": "«Одна книга правил, любой мир — на повествовательных костях».",
     "description": "Genesys — жанрово-нейтральный инструментарий на основе Системы повествовательных костей. Вместо чисел вы собираете пул костей Усиления, Способности и Мастерства против костей Помехи, Сложности и Вызова, а затем читаете символы: чистый Успех или Провал вместе с Преимуществом или Угрозой, плюс редкие Триумф и Отчаяние. Эти побочные результаты превращают каждый бросок в сюжетный момент. С модульными правилами магии и техники и шестью примерами сеттингов одна книга водит фэнтези, киберпанк, фантастику или хоррор.",
+    "pickIf": [
+      "нужен один движок под собственный сеттинг любого жанра",
+      "группе нравится читать символы на кубах и придумывать побочные эффекты",
+      "вам понравились кубы Star Wars от FFG и хочется играть на них в другие жанры"
+    ],
+    "skipIf": [
+      "хотите готовый мир и приключения прямо из коробки",
+      "группа не любит особые кубы, которые не заменить обычными",
+      "мастеру не хочется собирать правила магии и техники из модулей"
+    ],
     "setting": "Никакого и все сразу. У Genesys нет мира по умолчанию — вместо него вы получаете жанрово-нейтральный движок и шесть примеров сеттингов: от меча-и-магии до киберпанка, странной войны и далёкого будущего, с модульными правилами магии и техники, которые вы собираете под свою кампанию.",
     "vignette": "Вы прыгаете к отчаливающему дирижаблю, бросая две зелёные кости Способности и жёлтую кость Мастерства против фиолетовой кости Сложности мастера. Символы выпадают: два чистых Успеха, три Преимущества и золотой Триумф. Вы цепляетесь за поручень (Успех), ваш плащ зацепляет стражника и сбивает его с ног (Преимущество), а Триумф заклинивает лебёдку — и трап за вами уже не поднять.",
     "prep": "~30 мин",
@@ -77,6 +87,16 @@ registerSystem("genesys", {
     "tagShort": "Any-genre narrative dice",
     "tagline": "\"One rulebook, every world — powered by narrative dice.\"",
     "description": "Genesys is a setting-agnostic toolkit built on the Narrative Dice System. Instead of numbers, you assemble a pool of Boost, Ability, and Proficiency dice against Setback, Difficulty, and Challenge dice, then read the symbols: net Success or Failure alongside Advantage or Threat, plus rare Triumph and Despair. Those side results turn every roll into a story beat. With modular rules for magic and technology and six sample settings, one core book runs fantasy, cyberpunk, sci-fi, or horror.",
+    "pickIf": [
+      "you want one engine for your own homebrew setting in any genre",
+      "your group enjoys reading dice symbols and improvising side effects",
+      "you liked FFG's Star Wars dice and want them in other genres"
+    ],
+    "skipIf": [
+      "you want a ready-made world with adventures out of the box",
+      "your group hates custom dice that ordinary dice can't replace",
+      "the GM doesn't want to assemble magic and tech rules from modules"
+    ],
     "setting": "None and all of them. Genesys ships no default world; it hands you a genre-neutral engine plus six sample settings — from swords-and-sorcery fantasy to cyberpunk, weird war, and far-future sci-fi — with modular rules for magic and technology you bolt on to build your own campaign.",
     "vignette": "You leap for the departing airship, rolling two green Ability dice and a yellow Proficiency against the GM's purple Difficulty. The symbols land: two net Success, three Advantage, and a golden Triumph. You catch the rail (Success), your cloak snags a guard and drags them off balance (Advantage), and the Triumph jams the winch so no one can raise the ramp behind you.",
     "prep": "~30 min",

@@ -72,6 +72,16 @@ registerSystem("lotfp", {
     "tagShort": "Вирд-хоррор OSR в реальной Европе XVII века",
     "tagline": "«Раннее Новое время, куда прорывается космический ужас».",
     "description": "Lamentations of the Flame Princess — OSR-игра вирд-хоррора Джеймса Эдварда Рагги IV. Правила — производная от B/X D&D, но подача другая: мрачное, взрослое, часто шокирующее фэнтези ужасов. Магия здесь опасна и чужеродна, а сокровища — проклятия. Знаменита сильнейшими самостоятельными модулями и бескомпромиссным тоном.",
+    "pickIf": [
+      "хотите странного хоррора в реальной Европе XVII века",
+      "группе нравятся правила B/X, где сокровища и магия приносят беду",
+      "хотите водить знаменитые отдельные модули этой линейки"
+    ],
+    "skipIf": [
+      "кому-то за столом некомфортен шокирующий взрослый контент",
+      "хотите героического фэнтези с надёжными заклинаниями",
+      "вам ближе классический данжен-кроул без исторической привязки"
+    ],
     "setting": "Не выдуманный мир, а реальная Европа примерно XVII века — грязная, суеверная, жестокая — куда вторгается лавкрафтовский и хоуардовский космический ужас. Магия редка и извращает мир; сверхъестественное всегда чуждо и неправильно. Играбельно и как исторический хоррор, и как гримдарк-фэнтези с зубами.",
     "vignette": "Специалист вскрывает замок древнего сундука — d6 против навыка, у профессионала шанс выше среднего. Успех. Внутри — не золото, а книга в переплёте из кожи. Маг распознаёт заклинание: оно работает, но цена в тексте написана мелким шрифтом. В LotFP находка сокровища — это чаще начало беды, чем награда.",
     "prep": "~15 мин",
@@ -121,6 +131,16 @@ registerSystem("lotfp", {
     "tagShort": "Weird-horror OSR in real 17th-century Europe",
     "tagline": "\"The early modern era, into which cosmic horror breaks through.\"",
     "description": "Lamentations of the Flame Princess is James Edward Raggi IV's weird-horror OSR game. The rules are a B/X D&D derivative, but the presentation is different: dark, adult, often shocking horror fantasy. Magic here is dangerous and alien, and treasure is a curse. Famous for its outstanding standalone modules and uncompromising tone.",
+    "pickIf": [
+      "you want weird horror in a real 17th-century Europe",
+      "your group enjoys B/X rules where treasure and magic bring trouble",
+      "you want to run its famous standalone modules"
+    ],
+    "skipIf": [
+      "anyone at your table is uncomfortable with shocking adult content",
+      "you want heroic high fantasy with reliable spells",
+      "you prefer a setting-neutral classic dungeon crawl"
+    ],
     "setting": "Not an invented world but a real, roughly 17th-century Europe — filthy, superstitious, brutal — into which Lovecraftian and Howardian cosmic horror intrudes. Magic is rare and warps the world; the supernatural is always alien and wrong. It plays as historical horror or as grimdark fantasy with teeth.",
     "vignette": "The Specialist picks the lock on an ancient chest — d6 against a skill, better than even odds for a pro. Success. Inside isn't gold but a book bound in skin. The magic-user identifies the spell: it works, but the price is written in the fine print. In LotFP, finding treasure is more often the start of trouble than a reward.",
     "prep": "~15 min",

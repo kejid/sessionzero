@@ -31,6 +31,16 @@ registerSystem("at-the-gates", {
     "tagShort": "Высокое фэнтези в духе JRPG на Storypath Ultra",
     "tagline": "«Вы стоите у врат, сдерживая прилив и меняя ход истории».",
     "description": "At the Gates — высокое фэнтези от Onyx Path, вдохновлённое японскими ролевыми играми, вторая линия цикла Earthbane. Семь стран континента Эверенд столетиями хранили хрупкий мир, пока одна из них не призвала демонов из Пустоты. Теперь все спешат заполучить ту же силу, а герои пытаются остановить войну и спасти мир. Книга вышла в сентябре 2026 года в PDF и печати на DriveThruRPG.",
+    "pickIf": [
+      "группа обожает японские RPG-видеоигры и хочет этого духа за столом",
+      "хотите умелых героев, которые останавливают войну и спасают мир",
+      "игрокам интересно торговаться с демонами, а не только драться"
+    ],
+    "skipIf": [
+      "хотите мрачное приземлённое фэнтези, где герои еле выживают",
+      "мастеру нужно мало подготовки и много готовых приключений",
+      "хотите давно устоявшуюся линейку с горой дополнений"
+    ],
     "setting": "В мире Гайя магия есть во всём, от пшеничных полей до тех, кто их засевает. Там, где Пустота встречается с миром, растут Внешние земли: искажённые края, а в них врата, настоящие разрывы реальности. Звери там превращаются в чудовищ, а простые люди живут в страхе перед войной и силой, которую не могут понять.",
     "vignette": "Луг у вашей деревни теперь чёрный, а из разлома в нём выходит демон. Ваша Воительница встаёт перед ним, а Маг ищет слабое место в заклятии. Вы собираете пул d10 и считаете каждую 8 и выше: успехов хватает, чтобы задержать тварь, но не убить. Придётся решать: добивать её здесь или попробовать договориться.",
     "prep": "~60 мин",
@@ -52,6 +62,16 @@ registerSystem("at-the-gates", {
     "tagShort": "High fantasy in the spirit of JRPGs, on Storypath Ultra",
     "tagline": "\"You stand at the gates, holding back the tide, changing the course of history.\"",
     "description": "At the Gates is Onyx Path's high fantasy game inspired by Japanese RPG video games, and the second line in the Earthbane Cycle. The seven nations of the continent of Everend kept a fragile peace for centuries, until one of them called forth daemons from the Void. Now all rush to gain the same power, while the heroes try to stop the war and save the world. The book came out in September 2026 in PDF and print on DriveThruRPG.",
+    "pickIf": [
+      "your group loves Japanese RPG video games and wants that feel at the table",
+      "you want competent heroes stopping a war and saving the world",
+      "players like bargaining with daemons, not only fighting them"
+    ],
+    "skipIf": [
+      "you want gritty low fantasy where heroes barely survive",
+      "your GM wants little prep and lots of ready-made adventures",
+      "you want a long-established line with many supplements"
+    ],
     "setting": "In the world of Gaia, magic is in everything, from fields of wheat to the people who sow them. Where the Void meets the world, Outlands grow: warped places holding gates that are literal tears in reality. Wildlife there turns into ravenous beasts, while common folk live in fear of war and of a power they cannot comprehend.",
     "vignette": "The meadow by your village is black now, and a daemon is climbing out of a rift in it. Your Warrior steps in front of it while the Mage looks for a weak point in the spell. You build a pool of d10s and count every 8 or higher: there are enough successes to hold the thing back, but not to kill it. Now you must decide whether to finish it here or try to bargain.",
     "prep": "~60 min",

@@ -76,6 +76,16 @@ registerSystem("fiasco", {
     "tagShort": "Гм-лессный коэн-бродвей на d6",
     "tagline": "«Планируй ограбление. Получи фиаско. Расскажи историю».",
     "description": "Fiasco — настольная RPG от Bully Pulpit Games (2-е издание, 2021), вдохновлённая фильмами братьев Коэн. Гм-лессная, без пресесса, на д6-пуле (Classic) или колоде карт (2E). Игроки создают персонажей через «Playset» (тему/место), связаны отношениями, и разыгрывают 3 акта: Setup, Tilt, Aftermath. Каждый бросок — either something good (на чётных) or something bad (на нечётных). Итог — трагикомедия.",
+    "pickIf": [
+      "нужен ваншот без подготовки и без мастера",
+      "группа обожает планы в духе братьев Коэн, которые идут прахом",
+      "игрокам нравится самим вести героев к катастрофе"
+    ],
+    "skipIf": [
+      "хотите долгую кампанию с развитием персонажей",
+      "за столом хотят побеждать, а не смотреть, как рушатся планы",
+      "игроки теряются, когда без мастера надо самим придумывать сцены"
+    ],
     "setting": "Без сеттинга. Каждая сессия — новый Playset: мафиозный Чикаго, космическая станция, подростковый лагерь, средневековая деревня. 500+ playsets на fiascoplaysets.com.",
     "vignette": "Setup: Два брата,OWNER заброшенной фермы. Связь: «Один из нас — вор». Tilt: Странный человек с топором ломится в дверь. Aftermath: Ферма горит. Один брат мёртв. Второй в тюрьме. Третий — владелец фермы, но фермы больше нет. Фиаско.",
     "prep": "~0 мин (Playset определяет тему)",
@@ -128,6 +138,16 @@ registerSystem("fiasco", {
     "tagShort": "GM-less Coen Brothers d6 — burn it all down",
     "tagline": "\"Plan the heist. Get the fiasco. Tell the story.\"",
     "description": "Fiasco is a tabletop RPG from Bully Pulpit Games (2nd Edition, 2021), inspired by the films of the Coen Brothers. GM-less, zero prep, d6 pool (Classic) or playing cards (2E). Players create characters through a Playset (theme/location), linked by relationships, and play through 3 acts: Setup, Tilt, Aftermath. Each roll is either something good (evens) or something bad (odds). The result is always a tragicomedy.",
+    "pickIf": [
+      "you want a one-shot with zero prep and no GM",
+      "your group loves Coen-style plans that go horribly wrong",
+      "players enjoy steering their own characters toward disaster"
+    ],
+    "skipIf": [
+      "you want a long campaign with character growth",
+      "your table wants to win, not watch its schemes collapse",
+      "players freeze when asked to invent scenes without a GM"
+    ],
     "setting": "Setting-less. Each session is a new Playset: 1930s mobsters, a space station, a teenage camp, a medieval village. 500+ playsets at fiascoplaysets.com.",
     "vignette": "Setup: Two brothers, owners of an abandoned farm. Relationship: 'One of us is a thief.' Tilt: A strange man with an axe pounds on the door. Aftermath: The farm burns. One brother is dead. The other is in prison. The third owns the farm — but the farm is gone. Fiasco.",
     "prep": "~0 min (Playset defines the theme)",

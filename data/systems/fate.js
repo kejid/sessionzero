@@ -73,6 +73,16 @@ registerSystem("fate", {
     "tagShort": "Универсальная нарративная на 4dF",
     "tagline": "«Аспекты, инвоки, фейт-поинты — подходят под любой мир».",
     "description": "Fate Core — универсальная настольная RPG от Evil Hat Productions (2013), последняя версия системы Fate (обновлена в Fate Condensed, 2020). Использует 4dF (Fate-кубики: +, -, пусто). Персонажи — набор аспектов (коротких фраз), стант и навыков. Фейт-поинты позволяют менять сюжет. Лицензия CC BY 3.0 — правила полностью бесплатны.",
+    "pickIf": [
+      "хотите одну бесплатную готовую систему под любой жанр и придуманный мир",
+      "игрокам нравится описывать героев короткими фразами и менять сцены за фейт-поинты",
+      "нужны лёгкая подготовка и сцены, где главное — история"
+    ],
+    "skipIf": [
+      "нужен тактический бой с цифрами и снаряжением",
+      "игроки не любят придумывать аспекты и торговаться о компелах",
+      "хотите готовый мир — в Fate Core его нет"
+    ],
     "setting": "Жанр-agnostic. Fate не привязана к миру — она создаёт мир из аспектов. Популярные сеттинги: Dresden Files (городское фэнтези), Spirit of the Century (папп 1920-х), Fate of Cthulhu (хоррор), Interface Zero (киберпанк), Atomic Robo (научные герои).",
     "vignette": "Герой врывается в лабораторию злодея. Аспект «Бывший оперативник ЦРУ» даёт бонус. Три кубика 4dF: ++- = +1. Успех! Но злодей активирует «Плотная охрана» — аспект меняет ситуацию. Герой тратит фейт-поинт, инвокает «Я знаю эти трюки» и переписывает реальность.",
     "prep": "~10 мин",
@@ -122,6 +132,16 @@ registerSystem("fate", {
     "tagShort": "Universal narrative RPG on 4dF",
     "tagline": "\"Aspects, invokes, fate points — any world you can imagine.\"",
     "description": "Fate Core is a universal tabletop RPG from Evil Hat Productions (2013), the latest version of the Fate system (refreshed in Fate Condensed, 2020). Uses 4dF (Fate dice: +, -, blank). Characters are built from Aspects (short phrases), Stunts, and Skills. Fate Points let you rewrite the story. Licensed CC BY 3.0 — rules are completely free.",
+    "pickIf": [
+      "you want one free, finished system for any genre or world you invent",
+      "your players like defining characters in short phrases and bending scenes with Fate Points",
+      "you want light prep and story-first scenes"
+    ],
+    "skipIf": [
+      "you want crunchy tactical combat with gear and numbers",
+      "your players dislike inventing aspects and negotiating compels",
+      "you want a ready-made world — Fate Core ships without one"
+    ],
     "setting": "Genre-agnostic. Fate doesn't tie to a world — it builds worlds from Aspects. Popular settings: Dresden Files (urban fantasy), Spirit of the Century (pulp 1920s), Fate of Cthulhu (horror), Interface Zero (cyberpunk), Atomic Robo (science-heroes).",
     "vignette": "The hero bursts into the villain's lab. The Aspect 'Former CIA Operative' grants a bonus. Three 4dF dice: ++- = +1. Success! But the villain activates 'Heavy Security' — the Aspect shifts the situation. The hero spends a Fate Point, invokes 'I Know These Tricks', and rewrites reality.",
     "prep": "~10 min",

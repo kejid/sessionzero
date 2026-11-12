@@ -47,6 +47,16 @@ registerSystem("dresden-files-accelerated", {
     "tagShort": "Вселенная Дрездена на Fate Accelerated",
     "tagline": "«Чародеи, вампиры и неоплаченные долги на улицах города, который не задаёт вопросов».",
     "description": "Dresden Files Accelerated — быстрая ролевая игра от Evil Hat по «Досье Дрездена» Джима Батчера на движке Fate Accelerated. Она наследует более тяжёлой Dresden Files RPG (Your Story / Our World), но играется быстрее: бросьте четыре кубика Fate, прибавьте один из шести Подходов и тратьте жетоны судьбы на Аспекты. Мантии — чародей, вампир Белой Коллегии, Рыцарь Креста, осведомлённый смертный — собирают Трюки и Состояния в готовые роли, а Масштаб позволяет полицейскому и владыке фейри играть за одним столом.",
+    "pickIf": [
+      "группа любит «Досье Дрездена» Батчера и хочет играть в этом мире",
+      "нужна быстрая игра на Fate с готовыми ролями — волшебник, вампир, рыцарь Креста",
+      "в отряде разные весовые категории: полицейский рядом с владыкой фей"
+    ],
+    "skipIf": [
+      "хотите вариант потяжелее и подробнее — для этого есть прежняя Dresden Files RPG",
+      "игроки не любят нарративную валюту, компелы и придумывание аспектов",
+      "нужен любой жанр с нуля — гибче будет обычный Fate Core"
+    ],
     "setting": "Современный мир, за фасадом которого прячется сверхъестественное. Чародеи Белого Совета следят за Законами Магии, вампирские Коллегии враждуют, сидхе торгуют услугами, а фоморы занимают опустевшие ниши. Группа выбирает город, населяет его фракциями и их лицами и играет за тех — смертных и не только, — кто стоит между ними.",
     "vignette": "Гуль вышибает дверь морга. Вашему чародею не до тонкостей: вы атакуете Силой, бросаете 4dF и получаете +1, прибавляете Силу +3 и за жетон судьбы призываете аспект «Короткий запал, длинный посох» — ещё +2. Итого 6 против 2 у гуля. Удар впечатывает тварь в стену, но за такую мощь вы отмечаете ячейку состояния «Истощён», а в сцене появляется аспект «Сработала пожарная тревога».",
     "prep": "~20 мин",
@@ -75,6 +85,16 @@ registerSystem("dresden-files-accelerated", {
     "tagShort": "Dresdenverse on Fate Accelerated",
     "tagline": "\"Wizards, vampires and bad debts on the streets of a city that never asks questions.\"",
     "description": "Dresden Files Accelerated is Evil Hat's pick-up-and-play RPG set in Jim Butcher's Dresdenverse, built on Fate Accelerated. It follows the heavier Dresden Files RPG (Your Story / Our World) with a faster engine: roll four Fate dice, add one of six Approaches, and spend Fate points on Aspects. Mantles — wizard, White Court vampire, Knight of the Cross, clued-in mortal — bundle Stunts and Conditions into ready-made roles, while Scale lets a cop and a fae lord share one table.",
+    "pickIf": [
+      "your group loves Jim Butcher's Dresden Files and wants to play in that world",
+      "you want fast Fate play with ready-made roles like wizard or vampire",
+      "your party mixes power levels — a cop alongside a fae lord"
+    ],
+    "skipIf": [
+      "you want a heavier, more detailed take — the older Dresden Files RPG covers that",
+      "your players dislike narrative currency, compels and inventing aspects",
+      "you want to build any genre from scratch — plain Fate Core is more flexible"
+    ],
     "setting": "The modern world, with the supernatural hiding just behind it. Wizards of the White Council enforce the Laws of Magic, vampire Courts feud, the Sidhe trade in favors, and the Fomor move into the gaps. Your group picks a city, fills it with factions and their faces, and plays the people — mortal or otherwise — who stand between them.",
     "vignette": "A ghoul crashes through the morgue door. Your wizard has no time for subtlety: you attack with Force, roll 4dF for +1, add Force +3, and invoke your aspect Short Fuse, Long Staff with a Fate point for +2 — a total of 6 against the ghoul's 2. The blast pins it to the wall, but to push the spell that hard you mark a box on your Exhausted condition, and the fire alarm is now a scene aspect.",
     "prep": "~20 min",

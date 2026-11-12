@@ -69,6 +69,16 @@ registerSystem("fellowship", {
     "tagShort": "Братство героев против игрока-Властелина",
     "tagline": "«Один из вас хочет уничтожить мир. Остальные — братство, которое его остановит».",
     "description": "Fellowship — игра на движке Apocalypse World в духе «Властелина колец» и «Невероятных приключений ДжоДжо». Один игрок — Властелин, безумное существо, ставшее Угрозой миру; остальные — братство героев, каждый из которых — защитник своего народа. Сила игры — в узах между героями и в том, что каждый игрок сам решает, каков его народ. Второе издание выпущено Liberi Gothica Games; автор указан как Vel Mini (Kickstarter 2019 года шёл под именем Jacob Randolph).",
+    "pickIf": [
+      "хотите поход в духе «Властелина колец» против одного великого злодея",
+      "кто-то из группы хочет играть Владыку-злодея, а не нейтрального мастера",
+      "группе нравится придумывать свои народы и связи между героями"
+    ],
+    "skipIf": [
+      "мастеру ближе роль нейтрального судьи, а не злодея",
+      "хотите ходить по подземельям за добычей и тактическими боями",
+      "игроки не любят на ходу придумывать культуру и историю своего народа"
+    ],
     "setting": "Мир каждый раз собирается заново: играешь Эльфа — и именно ты решаешь, что такое эльфы, во что они верят и как ладят с остальными. Властелин создаёт своего персонажа наравне со всеми, командует силами зла и строит Генеральный план: захватить источник силы, уничтожить общину. Игра — о долгом пути, о встреченных народах и о спасении мира.",
     "vignette": "Генерал Властелина прижат к стене: Гном и Орк, связанные Узами, бьются плечом к плечу — по ходу The Bonds That Bind Us они бросают с Надеждой (3d6, берём два лучших). Орк хочет обратить врага в бегство: Finish Them через Отвагу (+1). Выпало 2, 5 и 6 — берём 5 и 6, итог 12: генерал отступает и не скоро вернётся. Но Властелин делает Мягкий срез: с утёса на Эльфа катятся валуны — «Что делаешь?» Overcome через Кровь, итог 8: частичный успех, и Эльф платит цену — получает урон и отмечает Грацию. Пока стат повреждён, любой бросок по нему идёт с Отчаянием.",
     "prep": "~20 мин",
@@ -120,6 +130,16 @@ registerSystem("fellowship", {
     "tagShort": "A fellowship of heroes against a player Overlord",
     "tagline": "\"One of you wants to destroy the world. Everyone else is the fellowship that stops them.\"",
     "description": "Fellowship is an Apocalypse Engine game in the vein of The Lord of the Rings and JoJo's Bizarre Adventure: Stardust Crusaders. One player is the Overlord, a maniacal being who has become a Threat to the World; everyone else is a fellowship of heroes, each a champion of their own people. Its heart is the bonds between heroes and the fact that every player decides who their people are. The second edition comes from Liberi Gothica Games and credits Vel Mini as author (its 2019 Kickstarter ran under the name Jacob Randolph).",
+    "pickIf": [
+      "you want a Lord of the Rings-style quest against a single great villain",
+      "one player would love to be the villainous Overlord instead of a neutral GM",
+      "your group likes inventing their own peoples and building bonds between heroes"
+    ],
+    "skipIf": [
+      "your GM prefers to be a neutral referee rather than the villain",
+      "you want dungeon crawling for loot with tactical fights",
+      "your players dislike making up their people's culture and lore on the spot"
+    ],
     "setting": "The world is built fresh each time: play the Elf and you decide what elves are, what they value and how they relate to everyone else. The Overlord creates a character just like everyone else, commands the forces of evil and pursues a Master Plan — seize a source of power, destroy a community. The game is about the journey, the peoples you meet and saving the day.",
     "vignette": "The Overlord's General is cornered: the Dwarf and the Orc, who share Bonds, fight side by side — under The Bonds That Bind Us they roll with Hope (3d6, keep the best two). The Orc wants to drive the enemy off: Finish Them with Courage (+1). You roll 2, 5 and 6 — keep 5 and 6, total 12: the General backs off and won't be back anytime soon. But the Overlord makes a Soft Cut: boulders tumble down toward the Elf — \"So what do you do?\" Overcome with Blood, total 8: a partial success, and the Elf pays the price by taking damage and marking Grace. While a stat is damaged, every roll with it is made in Despair.",
     "prep": "~20 min",

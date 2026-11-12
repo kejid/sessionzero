@@ -81,6 +81,15 @@ registerSystem("dragonbane", {
     "tagShort": "Шведское героическое фэнтези",
     "tagline": "«Классическое фэнтези без балласта. Лёгкое, как меч в руке мастера».",
     "description": "Переосмысление классического шведского RPG «Drakar och Demoner» (1982). Лёгкая, быстрая фэнтези-система: бросай d20, попади ниже навыка. Бои на картах инициативы, магия с риском срыва, рост через провалы. «D&D, если бы его сделали шведы в 2023 году».",
+    "pickIf": [
+      "хотите лёгкое быстрое фэнтези, в которое можно сесть прямо из коробки",
+      "нравятся инициатива по картам и броски под навык",
+      "по душе светлое фэнтези с тёмными нотками — и утки среди героев"
+    ],
+    "skipIf": [
+      "нужны глубокие сборки персонажей и длинные списки заклинаний",
+      "группа не любит магию, которая может взорваться в руках у мага"
+    ],
     "setting": "Мисгард — светлое фэнтези с тёмными нотками. Драконы, рыцари, подземелья — но с нордическим колоритом. Утиные людины, оркоподобные полуорки, классические эльфы и дварфы. Стартовый бокс включает готовый регион, карту и кампанию.",
     "vignette": "Карты инициативы раздаются. Вы — утиный рыцарь с мечом и щитом. Ваша карта — 3, гоблин — 7. Вы бьёте первым! Бросок на Мечи: d20, нужно 13 или ниже. Выпало 1 — критический успех, он же «Дракон»! Двойной урон. Гоблин падает. Но маг пробует заклинание — провал, магический срыв. Бросок по таблице: его посох взрывается. Отмечаете галочку провала — навык вырастет в конце сессии.",
     "prep": "~15 мин",
@@ -139,6 +148,15 @@ registerSystem("dragonbane", {
     "tagShort": "Swedish heroic fantasy RPG",
     "tagline": "\"Classic fantasy without the bloat. Light as a sword in a master's hand.\"",
     "description": "A reimagining of the classic Swedish RPG 'Drakar och Demoner' (1982). A light, fast fantasy system: roll d20, get under your skill. Combat on initiative cards, magic with misfire risk, growth through failure. 'D&D, if the Swedes made it in 2023.'",
+    "pickIf": [
+      "you want light, fast fantasy you can start straight from the box",
+      "your table likes card-drawn initiative and roll-under skill checks",
+      "you want bright fantasy with dark undertones — and duck-folk heroes"
+    ],
+    "skipIf": [
+      "you want deep character builds and long spell lists",
+      "your group dislikes magic that can blow up in the caster's face"
+    ],
     "setting": "Misgarth — bright fantasy with dark undertones. Dragons, knights, dungeons — but with a Nordic flavor. Ducklings (duck-folk), orc-like half-orcs, classic elves and dwarves. The starter box includes a ready region, map, and campaign.",
     "vignette": "Initiative cards are dealt. You're a duck knight with sword and shield. Your card is 3, the goblin's is 7. You strike first! Swords roll: d20, need 13 or under. Rolled a 1 — critical success, a.k.a. 'Dragon'! Double damage. The goblin falls. But the mage tries a spell — failure, magic mishap. Roll on the table: his staff explodes. Mark a failure checkbox — the skill grows at session's end.",
     "prep": "~15 min",

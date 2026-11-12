@@ -43,6 +43,16 @@ registerSystem("candela-obscura", {
     "tagShort": "Готический хоррор тайного общества",
     "tagline": "«Магия просачивается в мир. Кто-то должен держать свечу».",
     "description": "Candela Obscura — первая ролевая игра Darrington Press, издательства Critical Role, и первая на движке Illuminated Worlds. Игроки — Круг следователей тайного общества Candela Obscura, которые расследуют сверхъестественные происшествия, выслеживают тварей и запечатывают опасные артефакты. Короткие задания на одну-две сессии, пул d6, Мастер, который не бросает кубики, и травмы, навсегда меняющие героя.",
+    "pickIf": [
+      "хотите готические хоррор-расследования на одну-две сессии",
+      "группе нравится, когда мастер не бросает кубы и всё решают игроки",
+      "хотите ран и шрамов, которые меняют персонажей навсегда"
+    ],
+    "skipIf": [
+      "нужна долгая песочница с развитием банды и даунтаймом",
+      "игроки хотят побеждать монстров грубой силой",
+      "за столом предпочитают медленный смертельный тон классического лавкрафтовского хоррора"
+    ],
     "setting": "Фейрленды — мир в духе Позолоченного века: газовые фонари, железные дороги, послевоенная усталость. В центре — Ньюфейр, город, выросший прямо на руинах древнего Олдфейра. Из иного измерения, Вспышки, в мир сочится магия, порождая чудовищ и порчу. Общество Candela Obscura хранит тайну и защищает людей, даже если это стоит его следователям рассудка и тела.",
     "vignette": "Ваш детектив крадётся по складу в районе Стил. Действие Скрытность — 2, вы тратите 1 Хитрость и бросаете 3d6: 6, 6, 2. Две шестёрки — критический успех: вы не только прошли незамеченным, но и нашли журнал контрабандиста. Медиум ощущает присутствие у алтаря: Чутьё — 2, и оно позолочено, поэтому одна из костей особого цвета. Выпадает 4 и позолоченная 5 — частичный успех, а выбор позолоченной кости возвращает 1 Интуицию. Цена — 2 метки Порчи. Их уже было две, значит, это четвёртая метка: медиум падает без сил и получает шрам, перенося очко из одного действия в другое.",
     "prep": "~30 мин",
@@ -73,6 +83,16 @@ registerSystem("candela-obscura", {
     "tagShort": "Secret-society gothic horror",
     "tagline": "\"Magick bleeds into the world. Someone has to hold the candle.\"",
     "description": "Candela Obscura is the first roleplaying game from Darrington Press, Critical Role's publishing arm, and the debut of the Illuminated Worlds engine. You play a Circle of investigators for the secret society Candela Obscura, looking into supernatural incidents, hunting creatures and sealing away dangerous artifacts. Short one-or-two-session assignments, a d6 dice pool, a GM who never rolls, and injuries that change your character for good.",
+    "pickIf": [
+      "you want gothic horror investigations that fit into one or two sessions",
+      "your group likes a GM who never rolls and players driving the dice",
+      "you want injuries and scars that change characters for good"
+    ],
+    "skipIf": [
+      "you want a long sandbox with crew growth and downtime",
+      "your players want to defeat monsters through sheer power",
+      "your table prefers the slow, lethal tone of classic Lovecraftian horror"
+    ],
     "setting": "The Fairelands — a Gilded Age-inspired world of gas lamps, railways and post-war weariness. At its heart is Newfaire, a city built over the ruins of ancient Oldfaire. Magick seeps in from another plane called the Flare, breeding monsters and corruption. The Candela Obscura keeps the secret and protects the public, even when it costs its investigators their minds and bodies.",
     "vignette": "Your Detective slips through a warehouse in the Steel. Hide is rated 2, you spend 1 Cunning and roll 3d6: 6, 6, 2. Two sixes — a critical success: you go unseen and find the smuggler's ledger too. The Medium senses something at the altar: Sense is rated 2 and gilded, so one die is a different color. It comes up 4 and a gilded 5 — a mixed success, and taking the gilded die earns back 1 Intuition. The cost is 2 Bleed. She already had two, so that's a fourth mark: the Medium drops incapacitated and takes a scar, shifting a point from one action to another.",
     "prep": "~30 min",

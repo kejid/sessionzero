@@ -72,6 +72,16 @@ registerSystem("13th-age", {
     "tagShort": "d20-фэнтези от ведущих дизайнеров 3-й и 4-й D&D",
     "tagline": "«Всё как в d20, но каждый раунд битва разгоняется — в буквальном смысле».",
     "description": "13th Age — d20-фэнтези Роба Хейнсу (ведущий 4-й редакции D&D) и Джонатана Твита (ведущий 3-й). Берёт тактический бой d20 и оживляет его «кубиком эскалации», который каждый раунд повышает всем шанс попасть. Плюс сюжетные инструменты: 13 Икон и «Одна уникальная черта». Кранч и нарратив в одном флаконе, в сеттинге Империи Драконов.",
+    "pickIf": [
+      "любите тактические бои d20, но хотите, чтобы они не затягивались",
+      "нужны классы в духе D&D плюс сюжетные крючки — Иконы и Уникальная черта",
+      "игрокам нравится самим придумывать детали мира через предыстории"
+    ],
+    "skipIf": [
+      "хотите лёгкие правила, где бой уходит на второй план",
+      "ваша группа ждёт подробный, заранее прописанный официальный мир",
+      "хотите приземлённых слабых героев, для которых каждый бой — риск смерти"
+    ],
     "setting": "Империя Драконов — классическое высокое фэнтези, но живое и своё. Тринадцать Икон (Император, Личь-Король, Три и др.) — сверхсилы мира, с которыми связан каждый герой. Никаких серых километров лора: детали появляются через твою «Одну уникальную черту» и связи с Иконами, прямо в игре.",
     "vignette": "Второй раунд боя с орочьим вожаком — кубик эскалации показывает +1, и он растёт. Файтер бьёт: d20 + бонус атаки + эскалация против AC. Раунд за раундом попадать всё легче — бой ускоряется, а не вязнет. На +4 воин совершает то, что было невозможно вначале. Иконный бросок: связь с Личь-Королём внезапно осложняет сцену — из тьмы поднимаются мертвецы.",
     "prep": "~30 мин",
@@ -122,6 +132,16 @@ registerSystem("13th-age", {
     "tagShort": "d20 fantasy from the lead designers of D&D 3E and 4E",
     "tagline": "\"It's d20, but every round the fight literally speeds up.\"",
     "description": "13th Age is a d20 fantasy game by Rob Heinsoo (D&D 4E lead) and Jonathan Tweet (D&D 3E lead). It takes tactical d20 combat and enlivens it with the escalation die, which raises everyone's to-hit each round. Add story-first tools: the 13 Icons and the One Unique Thing. Crunch and narrative in one package, in the Dragon Empire setting.",
+    "pickIf": [
+      "your group loves d20 tactical fights but wants them to end faster",
+      "you want D&D-style classes plus story hooks like Icons and One Unique Thing",
+      "players enjoy inventing world details through their own backgrounds"
+    ],
+    "skipIf": [
+      "you want rules-light play where combat stays in the background",
+      "your table expects a deep, fully mapped official setting up front",
+      "you want gritty, low-power adventurers who fear every fight"
+    ],
     "setting": "The Dragon Empire — classic high fantasy, but living and its own. Thirteen Icons (the Emperor, the Lich King, the Three, and more) are the world's superpowers, and every hero is tied to some of them. No gray miles of lore: details emerge through your One Unique Thing and your Icon relationships, right at the table.",
     "vignette": "Round two of the fight with the orc warlord — the escalation die shows +1, and it's climbing. The fighter swings: d20 + attack bonus + escalation against AC. Round by round, hitting gets easier — the fight accelerates instead of grinding. At +4 the warrior pulls off what was impossible at the start. An Icon roll: a tie to the Lich King suddenly complicates the scene — the dead rise from the dark.",
     "prep": "~30 min",

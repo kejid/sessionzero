@@ -67,6 +67,16 @@ registerSystem("labyrinth-lord", {
     "tagShort": "Точный ретроклон B/X, опора OSR",
     "tagline": "«D&D Basic/Expert 1981 года — верно, полно и бесплатно».",
     "description": "Labyrinth Lord — верный ретроклон D&D Basic/Expert (B/X) 1981 года от Дэниела Проктора (Goblinoid Games, 2007). Один из первых и самых уважаемых клонов OSR, десятилетиями служащий эталоном совместимости. «Advanced Edition Companion» добавляет опции в духе AD&D (классы, расы, заклинания). Бесплатная версия без иллюстраций — на все правила.",
+    "pickIf": [
+      "хотите водить модули эпохи B/X без переделки",
+      "группе нравятся раса-как-класс и классический ранний D&D",
+      "нужна бесплатная полная система для старта"
+    ],
+    "skipIf": [
+      "хотите новых механик, а не верного клона 1981 года",
+      "игроки ждут, что эльф или дварф сможет выбрать любой класс",
+      "группе важнее сюжет, чем поиск сокровищ в подземельях"
+    ],
     "setting": "Система-агностик в духе классического подземельного фэнтези. Раса-как-класс (Эльф, Дварф, Полурослик), демихьюманы с лимитами уровней, картирование по клеточкам, реакции монстров и жажда сокровищ. Любой модуль эпохи B/X идёт без конвертации — Labyrinth Lord создан именно ради этой совместимости.",
     "vignette": "Партия у развилки в подземелье. Ведущий кидает реакцию монстра — из тьмы выходит отряд кобольдов, но бросок 2d6 показывает «нерешительность»: они колеблются. Клерик пытается договориться. Не выйдет — боец бьёт: d20 против AC, классическая таблица атак. Золото ждёт за дверью, и партия чует его запах.",
     "prep": "~20 мин",
@@ -116,6 +126,16 @@ registerSystem("labyrinth-lord", {
     "tagShort": "A faithful B/X retroclone, an OSR cornerstone",
     "tagline": "\"1981 D&D Basic/Expert — faithful, complete, and free.\"",
     "description": "Labyrinth Lord is Daniel Proctor's faithful retroclone of 1981 D&D Basic/Expert (B/X), from Goblinoid Games (2007). One of the earliest and most respected OSR clones, it has served as the compatibility benchmark for decades. The 'Advanced Edition Companion' adds AD&D-style options (classes, races, spells). A free no-art version covers the full rules.",
+    "pickIf": [
+      "you want to run B/X-era modules exactly as written",
+      "your group likes race-as-class and classic early D&D",
+      "you want a free, complete ruleset to start with"
+    ],
+    "skipIf": [
+      "you want new mechanics rather than a faithful 1981 clone",
+      "players expect an elf or dwarf to take any class",
+      "your group wants story-driven play over treasure-hunting crawls"
+    ],
     "setting": "Setting-agnostic in the classic dungeon-fantasy mold. Race-as-class (Elf, Dwarf, Halfling), demihuman level limits, graph-paper mapping, monster reactions, and the lust for treasure. Any B/X-era module runs without conversion — Labyrinth Lord was built for exactly that compatibility.",
     "vignette": "The party halts at a dungeon fork. The GM rolls a monster reaction — a kobold band emerges from the dark, but a 2d6 result reads 'uncertain': they hesitate. The cleric tries to parley. If it fails, the fighter swings: d20 against AC on the classic attack matrix. Gold waits behind the door, and the party can smell it.",
     "prep": "~20 min",

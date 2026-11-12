@@ -45,6 +45,16 @@ registerSystem("dread", {
     "tagShort": "Бескубиковый хоррор: судьбу решает башня из Дженги",
     "tagline": "«Тянешь блок или отказываешься — но башня рано или поздно рухнет».",
     "description": "Dread — бескубиковый хоррор Эпидайи Равачола и Натаниэля Бармора на один вечер. Здесь нет ни кубиков, ни характеристик: единственный генератор случайности — башня из деревянных брусков. Когда персонаж рискует, вы вытягиваете блок. Откажетесь — действие проваливается; вытянете — получится, пока держатся нервы и башня. Опрокинете её — и персонаж выбывает, обычно погибая. Игра рассчитана на один напряжённый хоррор-вечер.",
+    "pickIf": [
+      "хотите один напряжённый хоррор-вечер без правил, которые надо учить",
+      "в группе новички, которые ни за что не стали бы читать книгу правил",
+      "нравится настоящее физическое напряжение — все смотрят, как качается башня"
+    ],
+    "skipIf": [
+      "нужна долгая кампания с ростом персонажей",
+      "игрокам обидно выбыть посреди игры и досидеть до конца зрителем",
+      "ведущему не хочется самому писать сценарий и личные опросники"
+    ],
     "setting": "У Dread нет фиксированного сеттинга. Ведущий сам выбирает ужас — дом с привидениями, брошенный космический корабль, летний лагерь со слэшером, культ в лесу — и пишет под него сценарий. Готовые приключения ведут от оборотней в полнолуние до обречённого звездолёта и маскарада, обернувшегося кошмаром. Где бы ни разворачивалась история, обещание одно: обычные люди, нарастающий ужас и ночь, которую большинство из них не переживёт.",
     "vignette": "Тварь уже в коридоре, и вы решаете рвануть к двери. «Тяни», — говорит Ведущий. Вы осторожно высвобождаете брусок — башня вздрагивает, но стоит, и вы проскакиваете. Позже, загнанный в угол, вы тянетесь заложить дверь: теперь три вытягивания. На втором вся башня с грохотом рассыпается по столу. Тишина. Ваш персонаж мёртв, и вы описываете его последний страшный миг, прежде чем выйти из игры.",
     "prep": "~30 мин",
@@ -71,6 +81,16 @@ registerSystem("dread", {
     "tagShort": "Diceless one-shot horror resolved by a Jenga tower",
     "tagline": "\"Pull a block, or refuse — but the tower always falls in the end.\"",
     "description": "Dread is a diceless one-shot horror RPG by Epidiah Ravachol and Nathaniel Barmore. There are no dice and no stats: a wooden block tower is the only randomizer. When your character attempts something risky, you pull a block. Refuse and you fail; pull and you succeed — until your nerve or the tower gives out. Knock it over and your character is gone, usually dead. Built for a single tense evening of horror.",
+    "pickIf": [
+      "you want one tense horror evening with no rules to learn",
+      "your group includes newcomers who would never read a rulebook",
+      "you like physical tension — everyone watches the tower wobble"
+    ],
+    "skipIf": [
+      "you want an ongoing campaign with character growth",
+      "your players hate being knocked out mid-game and sitting out the rest",
+      "your Host doesn't want to write a scenario and personal questionnaires"
+    ],
     "setting": "Dread has no fixed setting. The Host chooses the horror — a haunted house, a derelict spaceship, a slasher's summer camp, a cult in the woods — and writes a scenario to fit. The sample adventures range from werewolves under a full moon to a doomed starship and a masquerade gone wrong. Wherever it's set, the promise is the same: ordinary people, mounting dread, and a night most of them will not survive.",
     "vignette": "The thing is in the hallway and you decide to run for the door. \"Pull,\" says the Host. You ease a block free — the tower shivers but holds, and you make it through. Later, cornered, you reach to bar the door: three pulls this time. On the second, the whole tower clatters across the table. Silence. Your character is dead, and you narrate their last terrible moment before leaving the game.",
     "prep": "~30 min",

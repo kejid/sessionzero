@@ -48,6 +48,16 @@ registerSystem("alice-is-missing", {
     "tagShort": "Безмолвный детектив в переписке",
     "tagline": "«Девяносто минут, ни слова вслух, а девушка пропала».",
     "description": "Alice is Missing — безмолвная ролевая игра на один вечер для трёх–пяти игроков. Старшеклассница Элис Брайарвуд исчезла из городка Сайлент-Фолс, а вы играете самых близких ей людей. После 45 минут подготовки никто больше не произносит ни слова: полтора часа под саундтрек с таймером всё происходит в общем чате и личных сообщениях. Карты улик открываются в заданные минуты, выводят на подозреваемых и места, пока правда об Элис не придёт вам на телефон.",
+    "pickIf": [
+      "хотите насыщенную, эмоциональную ваншот-историю на один вечер",
+      "группа готова молча отыгрывать всё через переписку в телефонах",
+      "нужна приземлённая детективная драма маленького городка без магии и монстров"
+    ],
+    "skipIf": [
+      "ищете долгую кампанию с развитием персонажей",
+      "игроки не любят телефоны за столом или отыгрыш текстом",
+      "вас больше пяти или вы играете вдвоём"
+    ],
     "setting": "Сайлент-Фолс — сонный городок посреди зимы. Наши дни, никакой магии и чудовищ: только объявления о пропаже, несколько местных, которые знают больше, чем говорят, и друзья и родные Элис.",
     "vignette": "Таймер показывает 70. Вы переворачиваете свою карту улики: откройте подозреваемого — он стоит у вашей двери и задаёт странные вопросы об Элис. Вы бросаете взгляд на остальных за молчащим столом и пишете в общий чат: «ребят. он у меня на крыльце. всё спрашивает, не оставляла ли элис что-нибудь у меня». Вибрируют три телефона. Кто-то отвечает уже в личке.",
     "prep": "~45 мин",
@@ -77,6 +87,16 @@ registerSystem("alice-is-missing", {
     "tagShort": "Silent text-message mystery",
     "tagline": "\"Ninety minutes, no one speaks, and a girl is gone.\"",
     "description": "Alice is Missing is a silent one-shot RPG for three to five players. Alice Briarwood, a high school junior, has vanished from the small town of Silent Falls, and you play the people closest to her. After about 45 minutes of setup, nobody speaks again: for 90 minutes, paced by a soundtrack timer, everything happens in group and private text messages. Clue cards flip at fixed minute marks, pulling in Suspects and Locations until the truth about Alice lands on your phone.",
+    "pickIf": [
+      "you want an intense, emotional one-shot that fits into a single evening",
+      "your group is fine roleplaying entirely by text messages in silence",
+      "you want a grounded small-town mystery with no magic or monsters"
+    ],
+    "skipIf": [
+      "you are looking for an ongoing campaign with character growth",
+      "your players dislike phones at the table or typing to roleplay",
+      "you need more than five players or a game for two"
+    ],
     "setting": "Silent Falls, a sleepy small town in the dead of winter. Present day, no magic, no monsters: just missing-person posters, a handful of locals who know more than they say, and the friends and family Alice left behind.",
     "vignette": "The timer hits 70. You flip your Clue card: reveal a Suspect, they are at your door asking strange questions about Alice. You glance at the others across the silent table, then type into the group chat: \"guys. he's on my porch. he keeps asking if alice left anything with me.\" Three phones buzz. Someone answers in a private thread instead.",
     "prep": "~45 min",
